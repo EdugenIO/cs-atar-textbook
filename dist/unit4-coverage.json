@@ -4,11 +4,11 @@
   "source": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0013/1211323/_Computer-Science-ATAR-Year-12-Syllabus-for-teaching-from-January-2026.PDF",
   "scope": "Unit 4 printed pages 17–21 (PDF pages 21–25); 51 grouped editorial checks, not official IDs or certification.",
   "counts": {
-    "Draft mapped": 44,
+    "Draft mapped": 45,
     "Practical evidence": 5,
     "Practice gap": 0,
     "Convention check": 1,
-    "Partial": 1
+    "Partial": 0
   },
   "rows": [
     {
@@ -367,9 +367,9 @@
       "syllabus_page": "20",
       "focus": "Five quality factors",
       "route": "unit4-project",
-      "evidence": "Cleaning practice and references to currency/authenticity/relevance/accuracy/outliers; limited dedicated application of all five.",
-      "status": "Partial",
-      "next_action": "Add a dated source-comparison/outlier exercise requiring evidence for every factor; reuse earlier quality clinic as prerequisite, not proof of Year 12 application."
+      "evidence": "Five-factor data-quality worksheet: six dated source cards, twelve raw rows, reference counts, evidence matrix, twelve explained questions and row decision log.",
+      "status": "Draft mapped",
+      "next_action": "Written resource added 14 October 2026. Independent review remains pending; illustrative cleaning is not learner achievement or operational inventory evidence."
     },
     {
       "id": "D16",
@@ -478,5 +478,16 @@
     "Convention check": 1,
     "Partial": 1
   },
-  "resource_update": "14 October 2026: D09 interpretation worksheet added. Original audit edition/date retained; this is a written-resource update, not a new full review."
+  "resource_update": "14 October 2026: D15 five-factor data-quality worksheet added. This updates written-resource coverage only; original audit edition/date and pending independent review are retained.",
+  "before_data_quality_counts": {
+    "Draft mapped": 44,
+    "Practical evidence": 5,
+    "Practice gap": 0,
+    "Convention check": 1,
+    "Partial": 1
+  },
+  "resource_updates": [
+    "14 October 2026: D09 interpretation worksheet added. Original audit edition/date retained; this is a written-resource update, not a new full review.",
+    "14 October 2026: D15 five-factor data-quality worksheet added. This updates written-resource coverage only; original audit edition/date and pending independent review are retained."
+  ]
 }

@@ -3,3 +3,6 @@ Investigate: stakeholder questions, exact scope, R1–R7 acceptance criteria. De
 Develop: implement one tested slice at a time; record SQL/source version, expected/actual and repair. Use raw CSV with mapping log, don't silently invent missing names. Test known/full/duplicate/unknown/invalid-date bookings, attendance pair/0-or1, all-or-none imports. Explain join-grain outputs after valid changes.
 Recover: saved known-good database/source; actual backup method/location; restore into separate destination; reopen; integrity/references/counts/reports comparison. In-memory teacher demo does not satisfy this evidence alone.
 Evaluate: R1–R7 met/partly/not with actual evidence. Demonstrate a fresh workflow, rejected request and restore. Record assistance/sources/ownership and a realistic next improvement. Use synthetic IDs; no real learner/person records.
+
+
+Optional data-quality worksheet: unit4-data-quality-workbook.md applies all five factors to dated fictional source evidence, units, duplicates, missing values and outliers. Explained answers and a decision-log example are available for self-checking; there is no grading or submission.

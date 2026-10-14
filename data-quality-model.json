@@ -1,0 +1,459 @@
+{
+  "purpose": "Prepare a preliminary report on equipment owned by the fictional Harbour Learning Centre, using evidence available on 14 October 2026. Use one row per EquipmentID, quantities in individual items, non-negative whole-number quantities and explicit observation dates. This is an inventory report, not a supplier-stock list, price comparison or guarantee that equipment will be available for a future session.",
+  "premise": "All organisations, records, dates and verification notes in this exercise are fictional. Treat the source-card checks as supplied scenario facts, not real authentication evidence. The raw CSV is a manually compiled working copy and can contain copying errors even when its cited source is genuine. Blank means unknown, not zero. A’s reference counts are the best supplied inventory observations, but stock movements after 10 October are not documented.",
+  "factors": [
+    [
+      "Accuracy",
+      "Do the values agree with the best available evidence?",
+      "Compare with the source record; explain any mismatch."
+    ],
+    [
+      "Currency",
+      "Are the observations recent enough for this purpose?",
+      "Separate observation date from download date; consider changes since collection."
+    ],
+    [
+      "Relevance",
+      "Does the data describe what this decision needs?",
+      "Check population, location, time period, units and intended use."
+    ],
+    [
+      "Authenticity",
+      "Is the source or record what it claims to be?",
+      "Check provenance through an established channel; a filename or plausible format is insufficient."
+    ],
+    [
+      "Outliers",
+      "Which unusual values need investigation in their context?",
+      "Check units, source and circumstances; retain genuine extremes and flag unresolved ones."
+    ]
+  ],
+  "sources": [
+    [
+      "A",
+      "Centre stocktake",
+      "2026-10-10",
+      "2026-10-11",
+      "Approved centre folder and staff receipt checked",
+      "Counts of eight equipment types owned by the centre; reference rows supplied below."
+    ],
+    [
+      "B",
+      "Archived centre stock list",
+      "2025-11-01",
+      "2026-10-14",
+      "Approved archive; origin checked",
+      "Historical stock. Newly downloading an old file does not make its observations current."
+    ],
+    [
+      "C",
+      "Supplier catalogue",
+      "2026-10-13",
+      "2026-10-14",
+      "Catalogue obtained from the established supplier channel",
+      "Supplier stock and product information, not equipment owned by the centre."
+    ],
+    [
+      "D",
+      "Sensor-kit pack specification",
+      "2026-02-01",
+      "2026-10-11",
+      "Established supplier specification; batch/model matched",
+      "Four individual kits per sealed pack. A records three sealed packs for E05."
+    ],
+    [
+      "E",
+      "Chair recount note",
+      "2026-10-12",
+      "2026-10-12",
+      "Approved centre folder; counter and receipt checked",
+      "E06 independently recounted as 240 chairs held for a community event."
+    ],
+    [
+      "U",
+      "Inventory_FINAL_verified.csv",
+      "Claimed: 2026-10-13",
+      "2026-10-13",
+      "Unknown uploader; no original record or trusted origin supplied",
+      "Claims to be centre stock; scope and authenticity remain unverified."
+    ]
+  ],
+  "reference": [
+    [
+      "E01",
+      "Laptop",
+      12
+    ],
+    [
+      "E02",
+      "Projector",
+      4
+    ],
+    [
+      "E03",
+      "Microphone",
+      8
+    ],
+    [
+      "E04",
+      "Tablet",
+      7
+    ],
+    [
+      "E05",
+      "Sensor kit",
+      12
+    ],
+    [
+      "E06",
+      "Folding chair",
+      240
+    ],
+    [
+      "E07",
+      "Webcam",
+      12
+    ],
+    [
+      "E08",
+      "Extension lead",
+      9
+    ]
+  ],
+  "raw": [
+    [
+      "R01",
+      "E01",
+      "Laptop",
+      "12",
+      "items",
+      "2026-10-10",
+      "A",
+      "Centre"
+    ],
+    [
+      "R02",
+      "E02",
+      "Projector",
+      "4",
+      "items",
+      "2026-10-10",
+      "A",
+      "Centre"
+    ],
+    [
+      "R03",
+      "E03",
+      "Microphone",
+      "80",
+      "items",
+      "2026-10-10",
+      "A",
+      "Centre"
+    ],
+    [
+      "R04",
+      "E04",
+      "Tablet",
+      "6",
+      "items",
+      "2025-11-01",
+      "B",
+      "Centre"
+    ],
+    [
+      "R05",
+      "E05",
+      "Sensor kit",
+      "3",
+      "packs",
+      "2026-10-10",
+      "A",
+      "Centre"
+    ],
+    [
+      "R06",
+      "E06",
+      "Folding chair",
+      "240",
+      "items",
+      "2026-10-10",
+      "A",
+      "Centre"
+    ],
+    [
+      "R07",
+      "E07",
+      "Webcam",
+      "-2",
+      "items",
+      "2026-10-10",
+      "A",
+      "Centre"
+    ],
+    [
+      "R08",
+      "E08",
+      "Extension lead",
+      "",
+      "items",
+      "2026-10-10",
+      "A",
+      "Centre"
+    ],
+    [
+      "R09",
+      "E09",
+      "Drone",
+      "5",
+      "items",
+      "2026-10-13",
+      "U",
+      "Claimed centre"
+    ],
+    [
+      "R10",
+      "E10",
+      "Printer",
+      "999",
+      "items",
+      "2026-10-13",
+      "C",
+      "Supplier warehouse"
+    ],
+    [
+      "R11",
+      "E02",
+      "Projector",
+      "4",
+      "items",
+      "2026-10-10",
+      "A",
+      "Centre"
+    ],
+    [
+      "R12",
+      "E11",
+      "3D printer",
+      "120",
+      "items",
+      "2026-10-13",
+      "U",
+      "Claimed centre"
+    ]
+  ],
+  "decisions": [
+    [
+      "R01",
+      "Keep",
+      "A:E01",
+      "12 items",
+      "Matches the supplied centre count."
+    ],
+    [
+      "R02",
+      "Keep",
+      "A:E02",
+      "4 items",
+      "Matches the supplied centre count."
+    ],
+    [
+      "R03",
+      "Correct",
+      "A:E03",
+      "8 items",
+      "80 is a transcription mismatch against the reference count of 8."
+    ],
+    [
+      "R04",
+      "Supersede",
+      "A:E04; B archive",
+      "7 items; observed 2026-10-10; source A",
+      "Replace the historical observation with the supplied current observation; retain B as history."
+    ],
+    [
+      "R05",
+      "Convert units",
+      "A:E05; D pack specification",
+      "12 items",
+      "Three sealed packs × four kits per pack = 12 individual kits."
+    ],
+    [
+      "R06",
+      "Keep; annotate",
+      "A:E06; E recount",
+      "240 items",
+      "Large count is supported by the recount and event context. Preserve the original A observation date."
+    ],
+    [
+      "R07",
+      "Correct",
+      "A:E07",
+      "12 items",
+      "Negative physical stock violates the stated domain; use the supplied evidence, not a guessed zero."
+    ],
+    [
+      "R08",
+      "Complete from evidence",
+      "A:E08",
+      "9 items",
+      "Missing quantity is not zero; the reference supplies 9."
+    ],
+    [
+      "R09",
+      "Hold for verification",
+      "U provenance unresolved",
+      "Not in the planning report",
+      "Plausible quantity and a recent claimed date do not establish source identity or local stock."
+    ],
+    [
+      "R10",
+      "Exclude from this report",
+      "C supplier catalogue",
+      "Not centre-owned stock",
+      "Authentic, recent supplier data is irrelevant to this report; retain it for possible purchasing use."
+    ],
+    [
+      "R11",
+      "Suppress duplicate in report",
+      "R02; A:E02",
+      "No second E02 row",
+      "Same equipment, date, units, location and source as R02; retain the raw row and decision log."
+    ],
+    [
+      "R12",
+      "Hold for verification",
+      "U provenance unresolved",
+      "Not in the planning report",
+      "Unusual count needs context and an authentic original source; do not change 120 to 12 or silently delete it."
+    ]
+  ],
+  "clean": [
+    [
+      "E01",
+      "Laptop",
+      12,
+      "items",
+      "2026-10-10",
+      "A"
+    ],
+    [
+      "E02",
+      "Projector",
+      4,
+      "items",
+      "2026-10-10",
+      "A"
+    ],
+    [
+      "E03",
+      "Microphone",
+      8,
+      "items",
+      "2026-10-10",
+      "A"
+    ],
+    [
+      "E04",
+      "Tablet",
+      7,
+      "items",
+      "2026-10-10",
+      "A"
+    ],
+    [
+      "E05",
+      "Sensor kit",
+      12,
+      "items",
+      "2026-10-10",
+      "A"
+    ],
+    [
+      "E06",
+      "Folding chair",
+      240,
+      "items",
+      "2026-10-10",
+      "A"
+    ],
+    [
+      "E07",
+      "Webcam",
+      12,
+      "items",
+      "2026-10-10",
+      "A"
+    ],
+    [
+      "E08",
+      "Extension lead",
+      9,
+      "items",
+      "2026-10-10",
+      "A"
+    ]
+  ],
+  "questions": [
+    [
+      "Define fitness for purpose",
+      "What belongs in this inventory report? What remains uncertain even after cleaning?",
+      "Use centre-owned stock, one row per EquipmentID, quantities in items and dated evidence. The cleaned example describes the supplied 10 October stocktake, not guaranteed stock on 14 or 20 October. Undocumented movements, condition and reservations remain uncertain. Data quality depends on this purpose."
+    ],
+    [
+      "Accuracy versus validation",
+      "Why is R03 inaccurate even though 80 is a non-negative integer? What evidence supports a correction?",
+      "Format/domain validation can accept 80. The supplied A:E03 reference says 8 microphones, establishing a copying mismatch. Correct to 8 with a decision-log entry; do not claim integer validation proved factual accuracy."
+    ],
+    [
+      "Currency and dates",
+      "R04 was downloaded on 14 October 2026. Is its value of 6 tablets current? Which supplied observation should the report use?",
+      "R04’s observation is from 1 November 2025; the recent download does not refresh it. A:E04 records 7 tablets on 10 October 2026. Use the newer observation with its actual date and source, preserving the old B record as history. Four-day-old evidence can still need a new stocktake for a time-critical decision."
+    ],
+    [
+      "Authenticity and provenance",
+      "Does the name Inventory_FINAL_verified.csv prove R09 and R12 are authentic? Name two checks you would request.",
+      "No. Request the original record through an established centre channel and confirm who supplied it and how it was produced. Reconcile it with an approved stocktake or responsible custodian. A checksum is useful only against a trusted expected value and does not prove the inventory facts are true. Hold both rows while provenance and scope remain unresolved."
+    ],
+    [
+      "Relevance is a separate decision",
+      "Source C is recent and obtained through an established supplier channel. Why is R10 excluded? Could C be relevant for another task?",
+      "R10 reports supplier warehouse stock, not equipment owned by the centre. Its provenance and age do not fix this scope mismatch. It could help investigate a purchasing decision, after checking product, unit, price and availability details for that new purpose."
+    ],
+    [
+      "Check units before comparing",
+      "R05 says 3 packs. Use A and D to express this quantity in the report’s unit. What would you do without D?",
+      "A records three sealed packs and D confirms four matching kits per pack: 3 × 4 = 12 individual kits. Record both evidence references. Without a verified matching pack size, retain the raw unit and hold conversion pending clarification; do not assume one pack equals one item."
+    ],
+    [
+      "Missing and impossible values",
+      "What should happen to R07’s −2 webcams and R08’s blank quantity? Why is replacing both with zero wrong?",
+      "Negative physical counts fail the specified domain; a blank is unknown. A:E07 supplies 12 webcams and A:E08 supplies 9 extension leads, so those corrections can be justified and logged. Zero would invent a fact. Without the references, hold the rows for clarification rather than guessing."
+    ],
+    [
+      "Handle a duplicate transparently",
+      "Should R02 and R11 both contribute to the projector count? Explain your decision and what you keep.",
+      "No: this report requires one row per equipment ID, and the records duplicate the same observation and source. Use R02 once, suppress R11 in the report and keep both original rows plus the decision log. Do not apply a universal delete-duplicates rule to unrelated transaction data, where repeated events may be legitimate."
+    ],
+    [
+      "Investigate two possible outliers",
+      "Compare R06’s 240 chairs with R12’s 120 3D printers. What should be retained, and what needs investigation?",
+      "Retain R06’s 240: A and the independent E recount support it, with a community-event explanation. Hold R12 because the source and context are unverified. Do not silently drop either row or change 120 to 12. Equipment categories have different typical quantities, so one numerical threshold across all categories would be misleading."
+    ],
+    [
+      "Apply all five factors",
+      "Complete a matrix with one piece of evidence, a conclusion or uncertainty, and a next action for each of the five factors.",
+      "Example: accuracy—R03 differs from A:E03, correct 80 to 8; currency—B is an old observation, use A:E04 and disclose its date; relevance—C describes supplier stock, exclude from this inventory report; authenticity—U has unknown provenance, obtain an approved original; outliers—E confirms 240 chairs, retain with annotation while holding the unverified printer count. These judgements can overlap; they are not five independent pass/fail scores."
+    ],
+    [
+      "Build a defensible decision log",
+      "For every raw row, choose keep, correct/convert, supersede, hold, exclude or suppress duplicate. Which eight equipment IDs appear in the illustrative report?",
+      "E01–E08 appear once each. Keep R01/R02; keep and annotate R06. Correct R03/R07, complete R08 from evidence, supersede R04 and convert R05. Hold R09/R12, exclude R10 for this purpose and suppress duplicate R11. The supplied decision-log CSV records references and reasons; the raw CSV remains unchanged."
+    ],
+    [
+      "Change the purpose",
+      "A coordinator wants to guarantee equipment availability for sessions on 20 October. Is the cleaned CSV enough? Apply all five factors to the new request.",
+      "No. Seek a sufficiently recent stock/condition check (currency), reconcile actual usable counts (accuracy), collect session requirements and existing reservations (relevance), use approved records and verified custodians (authenticity), and investigate unusual changes or quantities (outliers). The current inventory observations do not establish future availability. Report the uncertainty rather than converting this worksheet’s illustrative data into an operational guarantee."
+    ]
+  ]
+}

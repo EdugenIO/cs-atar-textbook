@@ -1,0 +1,7 @@
+"Source","Record","Observed","Received","Provenance premise","Scope / evidence"
+"A","Centre stocktake","2026-10-10","2026-10-11","Approved centre folder and staff receipt checked","Counts of eight equipment types owned by the centre; reference rows supplied below."
+"B","Archived centre stock list","2025-11-01","2026-10-14","Approved archive; origin checked","Historical stock. Newly downloading an old file does not make its observations current."
+"C","Supplier catalogue","2026-10-13","2026-10-14","Catalogue obtained from the established supplier channel","Supplier stock and product information, not equipment owned by the centre."
+"D","Sensor-kit pack specification","2026-02-01","2026-10-11","Established supplier specification; batch/model matched","Four individual kits per sealed pack. A records three sealed packs for E05."
+"E","Chair recount note","2026-10-12","2026-10-12","Approved centre folder; counter and receipt checked","E06 independently recounted as 240 chairs held for a community event."
+"U","Inventory_FINAL_verified.csv","Claimed: 2026-10-13","2026-10-13","Unknown uploader; no original record or trusted origin supplied","Claims to be centre stock; scope and authenticity remain unverified."

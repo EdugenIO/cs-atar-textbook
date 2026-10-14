@@ -6,7 +6,7 @@ Checked 14 October 2026 against [2026 SCSA Year 12 syllabus](https://senior-seco
 
 Draft mapped locates explanation and a practice opportunity; it does not certify depth, mastery, alignment or endorsement. Practice gap/Partial identify written-resource work; Convention check/Practical evidence identify unverified review/learner evidence. Independent teacher review remains pending for every row.
 
-Draft mapped: 44, Practical evidence: 5, Practice gap: 0, Convention check: 1, Partial: 1
+Draft mapped: 45, Practical evidence: 5, Practice gap: 0, Convention check: 1, Partial: 0
 
 |ID/page|Focus|Read|Evidence|Status / next action|
 |---|---|---|---|---|
@@ -49,7 +49,7 @@ Draft mapped: 44, Practical evidence: 5, Practice gap: 0, Convention check: 1, P
 |D12 / 20|Create dictionaries|[unit4-design](#unit4-design)|17-field supplied dictionary and learner design/project requirements|Practical evidence — Review independent dictionary reconciled with the learner schema, constraints and enforcement locations.|
 |D13 / 20|Resolve M:N|[unit4-design](#unit4-design)|Booking bridge with pair uniqueness and fresh Reservation transfer|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
 |D14 / 20|Integrity families|[unit4-design](#unit4-design)|Entity/referential/domain distinctions; actual PK/FK/CHECK probes and limits|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
-|D15 / 20|Five quality factors|[unit4-project](#unit4-project)|Cleaning practice and references to currency/authenticity/relevance/accuracy/outliers; limited dedicated application of all five.|Partial — Add a dated source-comparison/outlier exercise requiring evidence for every factor; reuse earlier quality clinic as prerequisite, not proof of Year 12 application.|
+|D15 / 20|Five quality factors|[data-quality worksheet](#unit4-project/heading-data-quality-five-factors-in-practice)|Five-factor data-quality worksheet: six dated source cards, twelve raw rows, reference counts, evidence matrix, twelve explained questions and row decision log.|Draft mapped — Written resource added 14 October 2026. Independent review remains pending; illustrative cleaning is not learner achievement or operational inventory evidence.|
 |D16 / 20|1NF/2NF/3NF|[unit4-design](#unit4-design)|Atomic domains, partial/transitive dependencies and surrogate-key caveat|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
 |D17 / 20|Normalise independently|[unit4-design](#unit4-design)|Fresh six-entity design and review A2 dependency task|Practical evidence — Collect and review independent candidate keys, dependencies, 3NF relational notation and justified decomposition.|
 |D18 / 21|Implement 5+ tables|[unit4-project](#unit4-project)|Six-table prototype and 16 embedded workshops; R1–R7|Practical evidence — Require learner-created working relational solution, demonstration, test evidence and evaluation; teacher reference database alone does not satisfy skill evidence.|
@@ -64,7 +64,7 @@ Draft mapped: 44, Practical evidence: 5, Practice gap: 0, Convention check: 1, P
 
 # Unit 4 audit follow-up — 14 October 2026
 1. D09 written resource added: ten-table model, worked example and 14 questions with explained answers. Read #unit4-design/heading-interpreting-a-ten-table-er-model; download unit4-er-interpretation-pack.zip. Independent review remains pending. The six-entity creation exercise is unchanged.
-2. Partial D15: strengthen Year 12 practice applying all five data-quality factors to dated source evidence/outliers. Existing CSV formatting/import is insufficient by itself. Do not silently delete genuine outliers or invent facts.
+2. D15 written resource added: five-factor worksheet with dated source evidence, missing/duplicate values, unit conversion, genuine/unverified outliers and explained decisions. Read #unit4-project/heading-data-quality-five-factors-in-practice; download unit4-data-quality-pack.zip. Independent review remains pending.
 3. D10: teacher visually verifies crow's-foot conventions/endpoints and learner diagram. Linked six-table SVG is illustrative until independently reviewed.
 4. D07/D12/D17/D18/D23: collect independent transaction/restore, dictionary, normalisation, 5+-table implementation and cleaning/import evidence. Supplied code/SQL checks show resource behaviour, not learner achievement or production/crash guarantees.
 5. All rows: independent teacher review, current legal context/source currency, realistic contact hours/assessment outline, and trial pacing.64lessons and 16 projectworkshops already embedded; 55minute lessons58h40, 50minute lessons53h20 versus notional55hours. No extra assessment inferred from formative samples.
@@ -72,4 +72,7 @@ Draft mapped: 44, Practical evidence: 5, Practice gap: 0, Convention check: 1, P
 Audit groups are local indexes and not a completion percentage. Reconcile evidence and update statuses after actual review; do not mark automatic referencePASS as practical completion.
 
 
-Written-resource update, 14 October 2026: the ten-table ER interpretation worksheet is now available. Original map edition/date retained; this update changes D09 written-resource status only. Independent review and the D15 data-quality work remain pending.
+Written-resource update, 14 October 2026: the ten-table ER interpretation worksheet is now available. Original map edition/date retained; this update changes D09 written-resource status only. Independent review remains pending; D15 has subsequently received its own written-resource update below.
+
+
+14 October 2026: D15 five-factor data-quality worksheet added. This updates written-resource coverage only; original audit edition/date and pending independent review are retained. Current counts: 45 draft mapped, 5 practical-evidence rows and 1 convention check; 0 written practice gaps and 0 partial rows. These are editorial resource counts, not learner scores.
