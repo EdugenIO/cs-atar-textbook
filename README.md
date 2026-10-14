@@ -1,42 +1,59 @@
-# Computer Science ATAR classroom textbook
+# Computer Science ATAR — The Classroom Textbook
 
-Working edition 0.48, 14 October 2026. Public classroom preview on GitHub Pages: 50 original draft chapters across WA ATAR Units 1–4. Python is the teaching language; database examples use SQLite. Independent resource; no SCSA or Department endorsement.
+A free, open textbook for WA Computer Science ATAR Units 1–4, using Python and SQLite. It includes 50 draft chapters, 182 glossary terms, worksheets, practice questions, quizzes and explained answers. No account is required to read the book.
 
-| Unit | Draft chapters | Scope |
-|---|---:|---|
-| 1 | 16 | Programming foundations, software development, networks, review and exam preparation |
-| 2 | 10 | Databases, cyber security, responsible data use, review and exam preparation |
-| 3 | 14 | Advanced programming, a software project, networks, review and exam preparation |
-| 4 | 10 | Relational design, advanced SQL, database development, security, ethics, integrated review, full-course consolidation and exam preparation |
+This is a learning resource: the website does not grade, collect submissions or track students. Revision and exam-style questions are optional practice. The book is independent and does not imply SCSA or Department endorsement.
 
-## Review and classroom use
+## Read the book
 
-Coverage & audits provides editorial maps for all four units and a Unit 3 convention/practical evidence clinic. Drafts and reference-code checks do not certify alignment or learner achievement. Independent teacher review, conventions, learner evidence, pacing and source/legal currency remain open. Audit editions/dates are historical snapshots; interface changes do not mark those checks complete.
+- [GitHub Pages](https://edugenio.github.io/cs-atar-textbook/)
+- [Sites edition](https://cs-atar-textbook-perth.stony-fir-8901.chatgpt.site/)
+- [Source repository](https://github.com/EdugenIO/cs-atar-textbook)
 
-Each semester has 18 weeks: 16 teaching weeks at four lessons per week (64 lessons), with two exam weeks blocked. Projects, assessment slots, feedback and revision fit within those lessons. The Unit 3 project has 12 embedded supervised lessons; Unit 4 has four foundation lessons and 16 embedded workshops. Confirm contact hours and the school assessment outline. Original practice papers are formative samples, not official full examinations or grade predictions. Teacher keys are separate but not access-protected; adapt and secure materials before summative use.
+| Unit | Chapters | Main topics |
+| --- | ---: | --- |
+| 1 | 16 | Programming foundations, software development and networks |
+| 2 | 10 | Databases, cyber security and responsible data use |
+| 3 | 14 | Advanced programming, software development and networks |
+| 4 | 10 | Relational design, SQL, database development, security, cryptography and ethics |
 
-Project starters are deliberately unfinished. Reference implementations illustrate the brief's classroom scope; they do not demonstrate production permissions, concurrency, recovery or deployment. Use synthetic data. See each brief/workbook for its limits.
+## Reuse and contribute
 
-## Preview and editing
+Original textbook content is **CC BY 4.0**. Original website code, tests and runnable Python/SQL example code are **MIT-licensed**. Educational prose embedded in JavaScript and HTML remains CC BY 4.0. See [LICENSE.md](LICENSE.md) for scope, attribution and third-party exceptions; full texts are in [LICENSE-CONTENT.txt](LICENSE-CONTENT.txt) and [LICENSE-CODE.txt](LICENSE-CODE.txt).
 
-No installation or build step is required. From this checkout run `python -m http.server 8765 --directory dist`, then open `http://localhost:8765/`. Push changes to `main` to run the regression checks and publish `dist/` through `.github/workflows/pages.yml`. GitHub Pages settings use GitHub Actions as the publishing source.
+Fork the repository to adapt the book. Credit Brett Sullivan and contributors, link to the source and CC BY 4.0 licence, and indicate changes to the content. Preserve the applicable software licence notices. External linked resources and official SCSA documents retain their own terms.
 
-- `dist/app.js`: unit catalogue, glossary, original selection lesson and About page.
-- `dist/chapters.js`, `project-chapter.js`, `network-chapters.js`, `audit-chapters.js`, `unit2-chapters.js`, `unit2-review-chapters.js`, `unit3-chapters.js`, `unit4-chapters.js`: chapter data and teaching content.
-- `dist/reader.js`: rendering, downloads, quizzes and teaching sequence.
-- `dist/coverage.js`, `*coverage.js`, `audit-hub.js`, `unit3-evidence.js`: editorial maps and evidence resources.
-- `dist/navigation.js`, `chapter-navigation.js`, `content-overflow.js`, `search.js`, `printing.js`: skip link, route focus, scrolling, indexed search and print modes.
-- `dist/style.css`, `print.css`, `index.html`: styling and navigation shell.
-- `dist/*.md`, `*.py`, `*.sql`, `*.csv`, `*.svg`, `*.zip`: downloadable resources. When a resource changes, update its matching ZIP members. Preserve original dates as provenance and label historical audit snapshots.
+Corrections and improvements can be proposed through GitHub issues or pull requests. Include the affected chapter or glossary term and an explanation or source for the proposed correction. Contributions should be original or appropriately licensed and submitted under the applicable content/software licences above.
 
-Run relevant Node checks: `node tests/navigation.test.mjs`, `node tests/chapter-navigation.test.mjs`, `node tests/search.test.mjs`, `node tests/printing.test.mjs`. Inspect changed routes/downloads in the browser. Actual screen-reader checks and native PDF pagination/print-dialog restoration remain pending; unit checks do not replace them.
+## Run locally
 
-An open reuse licence has not yet been assigned. Ownership, contribution rights and third-party permissions remain under review. Official syllabus authority: https://senior-secondary.scsa.wa.edu.au/syllabus-and-support-materials/technologies/computer-science . See `dist/resource-edition.md` for current status.
+No installation or build step is required. With Python installed:
 
-## Online copy
+```sh
+python -m http.server 8765 --directory dist
+```
 
-Website: https://EdugenIO.github.io/cs-atar-textbook/
+Open `http://localhost:8765/`. With Node installed, run the regression checks:
 
-Repository: https://github.com/EdugenIO/cs-atar-textbook
+```sh
+node --test tests/*.test.mjs
+```
 
-This is the GitHub publication checkout. The original Sites project remains separate. Historical resource and audit descriptions may record the earlier private development phase. Teacher answer downloads are included in this preview.
+GitHub Pages publishes `dist/` through the existing `.github/workflows/pages.yml` workflow after successful checks on `main`. Sites publishing uses its separate project checkout; a GitHub push does not automatically update the Sites edition.
+
+## Editing guide
+
+- `dist/app.js`: catalogue, selection lesson, About page and shared footer.
+- `dist/glossary.js`: alphabetised glossary definitions and chapter links.
+- `dist/*chapters.js`: lesson content and resource references.
+- `dist/reader.js`: lesson rendering, downloads, practice quizzes and teaching sequence.
+- `dist/navigation.js`, `chapter-navigation.js`, `content-overflow.js`, `search.js`, `printing.js`: reading navigation, search destinations, scrolling and print modes.
+- `dist/style.css`, `print.css`, `index.html`: site layout, print styles and script loading.
+- `dist/*.md`, `*.py`, `*.sql`, `*.csv`, `*.svg`, `*.zip`: downloadable classroom resources. Update matching ZIP members when their contents change, and retain the licence notices.
+- `dist/*coverage.js`, `audit-hub.js`, `unit3-evidence.js`: editorial coverage maps and historical review notes.
+
+## Editorial status
+
+Working content edition 0.48, with public licensing and interface updates made on 14 October 2026. Teacher review, technical/source currency, diagram conventions and classroom trials remain ongoing. Historical audit labels and resource dates are retained as provenance; later website or licence updates do not imply new curriculum sign-off. Starter files are deliberately unfinished; reference examples use synthetic data and are for learning rather than production deployment.
+
+Official curriculum documents: [SCSA Computer Science](https://senior-secondary.scsa.wa.edu.au/syllabus-and-support-materials/technologies/computer-science).

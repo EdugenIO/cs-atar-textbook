@@ -26,6 +26,11 @@ function buildSearchIndex() {
     const id = href.slice(1);
     const chapter = chapters.find(item => item.id === id);
     const headings = chapter?.sections.map(([heading]) => heading) || [];
+    if (id === 'selection') {
+      const holder = document.createElement('template');
+      holder.innerHTML = selection();
+      headings.push(...Array.from(holder.content.querySelectorAll('h2, h3'), heading => heading.textContent.replace(/^\d+\.\s*/, '')));
+    }
     const body = chapter
       ? [chapter.intro, ...chapter.objectives, ...chapter.sections.map(([, html]) => searchableText(html)), chapter.code || '', ...chapter.practice.map(([, question]) => question), chapter.task, chapter.recap].join(' ')
       : id === 'selection' ? searchableText(selection()) : '';
@@ -59,21 +64,33 @@ function findSearchResults(input, index) {
 }
 
 const textbookSearchIndex = buildSearchIndex();
-document.getElementById('search').addEventListener('input', event => {
+const searchPageSize = 12;
+let searchMatches = [];
+let visibleSearchCount = searchPageSize;
+
+function renderSearchResults(focusNewResult = false) {
   const results = document.getElementById('results');
   results.replaceChildren();
-  const input = event.target.value.trim();
+  const input = document.getElementById('search').value.trim();
   if (!input) return;
-  const matches = findSearchResults(input, textbookSearchIndex);
+  const matches = searchMatches;
+  const visibleCount = Math.min(visibleSearchCount, matches.length);
   const status = document.createElement('p');
   status.className = 'search-status';
   status.textContent = matches.length
-    ? `${matches.length} result${matches.length === 1 ? '' : 's'}${matches.length > 12 ? '; showing the first 12' : ''}.`
+    ? `${matches.length} result${matches.length === 1 ? '' : 's'}${visibleCount < matches.length ? `; showing ${visibleCount}` : '; showing all'}.`
     : 'No matching topic. Try a chapter title, heading or glossary term.';
   results.append(status);
-  matches.slice(0, 12).forEach(match => {
+  matches.slice(0, visibleCount).forEach((match, index) => {
     const link = document.createElement('a');
-    link.href = match.href;
+    const heading = match.matchedHeading || (match.href === '#glossary' ? match.title : null);
+    link.href = heading ? `${match.href}/${encodeURIComponent(textbookHeadingId(heading))}` : match.href;
+    link.addEventListener('click', event => {
+      if (link.hash === location.hash) {
+        event.preventDefault();
+        prepareChapterDestination();
+      }
+    });
     link.textContent = match.label;
     if (match.matchedHeading) {
       const context = document.createElement('small');
@@ -81,5 +98,23 @@ document.getElementById('search').addEventListener('input', event => {
       link.append(context);
     }
     results.append(link);
+    if (focusNewResult && index === visibleSearchCount - searchPageSize) link.focus();
   });
+  if (visibleCount < matches.length) {
+    const more = document.createElement('button');
+    more.type = 'button';
+    more.className = 'search-more';
+    more.textContent = `Show ${Math.min(searchPageSize, matches.length - visibleCount)} more results`;
+    more.addEventListener('click', () => {
+      visibleSearchCount += searchPageSize;
+      renderSearchResults(true);
+    });
+    results.append(more);
+  }
+}
+
+document.getElementById('search').addEventListener('input', event => {
+  searchMatches = findSearchResults(event.target.value, textbookSearchIndex);
+  visibleSearchCount = searchPageSize;
+  renderSearchResults();
 });

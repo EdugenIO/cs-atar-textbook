@@ -26,3 +26,9 @@ main figure{margin:24px 0;max-width:100%}main img{max-width:100%;height:auto}.di
 @media print{.bookshelf{display:none}}
 
 #results small{display:block;color:var(--muted)}.search-status{font-size:12px;color:var(--muted)}
+.glossary-alphabet{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+.glossary-alphabet a{display:flex;align-items:center;justify-content:center;min-width:40px;min-height:40px;padding:4px 10px;border:1px solid var(--line);border-radius:5px;background:white}
+.glossary-entry{padding:4px 0 18px;border-bottom:1px solid var(--line)}
+.glossary-entry h3 a{color:var(--ink);text-decoration:none}
+.glossary-entry h3 a:hover{text-decoration:underline}
+.glossary-context{font-size:14px;margin-top:8px}

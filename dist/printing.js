@@ -54,13 +54,13 @@ function setupChapterPrinting() {
   note.className = 'print-help';
   note.textContent = 'Student copy omits practice answers and teacher notes. Worked teaching examples remain in both copies. Choose Save as PDF in the print dialog if needed.';
   controls.parentElement.append(note);
-  const chapter = chapters.find(ch => ch.id === location.hash.slice(1));
+  const chapter = chapters.find(ch => ch.id === currentTextbookRoute());
   if (chapter) {
     const key = document.createElement('p');
     key.className = 'print-only print-answer-key';
     key.textContent = `Quick-check answer: ${chapter.quiz.options[chapter.quiz.answer]}. ${chapter.quiz.explanation}`;
     main.querySelector('#chapter-quiz').after(key);
-  } else if (location.hash === '#selection') {
+  } else if (currentTextbookRoute() === 'selection') {
     const key = document.createElement('p');
     key.className = 'print-only print-answer-key';
     key.textContent = 'Quick-check answer: total >= 50. Greater than or equal to includes the boundary value.';
