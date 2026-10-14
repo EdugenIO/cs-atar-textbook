@@ -4,7 +4,7 @@ chapters.push({
   "week": "13–14",
   "title": "Unit 2 integrated review",
   "badge": "REVIEW / PRACTICE",
-  "intro": "Repair data-quality and modelling gaps, then connect SQL, security and privacy in a new desk audit.",
+  "intro": "Bring the Unit 2 ideas together in a fresh equipment-desk example. You will check data quality, read a larger model and compare a planned design with what the database actually enforces.",
   "objectives": [
     "Diagnose a gap using actual evidence.",
     "Apply concepts to changed requirements and data.",
@@ -13,15 +13,15 @@ chapters.push({
   "sections": [
     [
       "Data-quality clinic",
-      "<p>Currency asks whether evidence is current; authenticity asks whether its source is genuine; relevance asks whether it serves the purpose; and accuracy asks whether it matches reality. Outlier checks investigate unusual values. A rare/extreme value is not automatically an error. Preserve the source and document authorised corrections.</p><p>Task A in the workbook supplies an old status, a valid but wrong date, an unverified message, unrelated health notes and an extreme cost. Explain a verification action and justified outcome for each.</p>"
+      "<p>Before changing a suspicious value, decide what needs checking:</p><ul><li><strong>Currency:</strong> is the evidence up to date?</li><li><strong>Authenticity:</strong> is its source genuine?</li><li><strong>Relevance:</strong> does it serve the purpose?</li><li><strong>Accuracy:</strong> does it match reality?</li><li><strong>Outliers:</strong> does an unusual value need investigation?</li></ul><p>An extreme value may be correct. Preserve the source and record any authorised correction rather than deleting it just because it looks unusual.</p><p>Task A in the workbook supplies an old status, a valid but wrong date, an unverified message, unrelated health notes and an extreme cost. Explain a verification action and justified outcome for each.</p>"
     ],
     [
       "Read a six-table extension",
-      "<figure class=\"model-figure\"><div class=\"diagram-scroll\" tabindex=\"0\"><img src=\"unit2-six-table-model.svg\" alt=\"Six conceptual tables: Category and Supplier link to Equipment; Borrower and Equipment link to Loan; Equipment links to Inspection. Each parent has zero or many children; each child exactly one parent.\"></div><figcaption>Original conceptual extension. Supplier and Inspection are not in the SQLite project starter.</figcaption></figure><p>Read each connection in both directions, locate the PKs/FKs and trace a loan to Category and Supplier. Then reread the earlier four-table diagram. Compare notation with the support booklet before drawing your own.</p>"
+      "<figure class=\"model-figure\"><div class=\"diagram-scroll\" tabindex=\"0\"><img src=\"unit2-six-table-model.svg\" alt=\"Six conceptual tables: Category and Supplier link to Equipment; Borrower and Equipment link to Loan; Equipment links to Inspection. Each parent has zero or many children; each child exactly one parent.\"></div><figcaption>Original conceptual extension. Supplier and Inspection are not in the SQLite project starter.</figcaption></figure><p>Work through the diagram in a fixed order:</p><ol><li>Locate the primary keys (PKs) and foreign keys (FKs).</li><li>Read each relationship in both directions, including its minimum and maximum participation.</li><li>Start at a Loan record and follow its references through Equipment to Category and Supplier.</li><li>Compare it with the earlier four-table diagram. Identify which two tables are new.</li></ol><p>Check the support booklet’s notation before drawing your own model.</p>"
     ],
     [
       "Create and reconcile a fresh model",
-      "<p>Model Member, Activity, Leader and Participation under the workbook rules. Resolve Member–Activity history using the three-part participation key and document the fields. Compare this with a separate optional one-to-one locker allocation: a foreign key needs an appropriate uniqueness rule to constrain one-to-one.</p><p>Check the conceptual dictionary against actual starter SQL. CategoryName is not UNIQUE, TEXT alone does not enforce specified lengths/identifier patterns, and Returned has no DEFAULT despite the earlier conceptual rule. Record intended versus implemented behaviour; justify enforcement or revised documentation. Dates/overlapping loans still need separate checks.</p>"
+      "<p>Model Member, Activity, Leader and Participation under the workbook rules. Resolve Member–Activity history using the three-part participation key and document the fields. Compare this with a separate optional one-to-one locker allocation: a foreign key needs an appropriate uniqueness rule to constrain one-to-one.</p><p>Now compare your conceptual data dictionary with the actual starter SQL. Look for these differences:</p><ul><li>CategoryName is not UNIQUE.</li><li>TEXT alone does not enforce the specified lengths or identifier patterns.</li><li>Returned has no DEFAULT, despite the earlier conceptual rule.</li></ul><p>For each difference, record the intended rule and what the code actually enforces. Then justify a constraint or a change to the documentation. Calendar dates and overlapping loans still need separate checks.</p>"
     ],
     [
       "Integrate and explain",
@@ -42,7 +42,7 @@ chapters.push({
   ],
   "task": "Complete the linked activity independently, record evidence of errors, explain corrections and retest with a changed example.",
   "solution": "Use the linked separate checkpoints/marking guide after attempting the task. Verify original data assumptions and distinguish proposed controls from actual evidence.",
-  "recap": "Use evidence to diagnose, correct and retest. Topic familiarity is not a substitute for independent modelling, query writing and justified security decisions.",
+  "recap": "Use the review to find specific gaps. Check data against suitable evidence, read each relationship in both directions and compare design rules with actual constraints. Explain a correction, then try a changed example to check that you understand it.",
   "lessons": [
     "13.1 quality checks; 13.2 six-table interpretation; 13.3 fresh four-table creation; 13.4 schema/dictionary comparison.",
     "14.1 SQL transfer; 14.2 security/privacy audit; 14.3 controlled theory practice; 14.4 correction and feedback. Eight lessons total."
@@ -66,7 +66,7 @@ chapters.push({
   "week": 15,
   "title": "Unit 2 consolidation",
   "badge": "REVIEW / PRACTICE",
-  "intro": "Identify what you need to improve, work through targeted activities and apply your knowledge to unfamiliar examples.",
+  "intro": "Choose what you need to practise by trying a short explanation first. Then use focused activities and new examples to strengthen the ideas you find hardest.",
   "objectives": [
     "Diagnose a gap using actual evidence.",
     "Apply concepts to changed requirements and data.",
@@ -75,15 +75,15 @@ chapters.push({
   "sections": [
     [
       "Diagnose without the answer key",
-      "<p>Explain a key/reference, 2NF versus 3NF, an inner join, CIA/AAA, authentication factors, a cipher and a privacy/testing boundary. Identify which explanations need more work and record what you need to clarify.</p>"
+      "<p>Without checking the answers, explain a key and its reference, 2NF versus 3NF, an inner join, CIA and AAA, authentication factors, a cipher, and a privacy or testing boundary.</p><p>Notice where you hesitate or rely on a label without explaining it. Write a precise question, such as “Why does an inner join leave out a borrower with no loans?” That question helps you choose useful practice.</p>"
     ],
     [
       "Work through targeted stations",
-      "<p>Choose two stations that address areas you need to practise: model/normalise a fresh club case; query the project with a row-count trap and rollback; justify a security control/limit; trace a cipher, then explain a data-quality or privacy decision. Use the linked earlier workbooks, then explain your corrections.</p>"
+      "<p>Choose two stations that match the gaps you identified:</p><ul><li><strong>Modelling:</strong> normalise a fresh club register.</li><li><strong>SQL:</strong> find a row-count trap and practise a controlled change with rollback.</li><li><strong>Security:</strong> explain a control and a situation it does not cover.</li><li><strong>Ciphers and responsible data:</strong> trace a cipher, then explain a data-quality or privacy decision.</li></ul><p>Use the earlier workbooks. Afterwards, explain what you corrected and why the new answer works.</p>"
     ],
     [
       "Retest with changed circumstances",
-      "<p>A borrower with no loans is omitted from an inner-join loan report; two cameras share a description; a returned loan has an early due date; a valid date is wrong; a suspicious message has not been clicked. Explain each before changing the model/query or making an incident claim.</p><p><a href=\"unit2-consolidation-workbook.md\" download>Consolidation workbook and revision log instructions</a> · <a href=\"#unit2-coverage\">Coverage map</a></p>"
+      "<p>Try a new example before deciding that a gap is fixed. Explain each situation:</p><ul><li>A borrower with no loans is omitted from an inner-join loan report.</li><li>Two cameras share a description.</li><li>A returned loan has an early due date.</li><li>A valid-looking date is factually wrong.</li><li>A suspicious message has not been clicked.</li></ul><p>Identify the relevant rule or evidence before changing the model or query, or claiming that an incident occurred.</p><p><a href=\"unit2-consolidation-workbook.md\" download>Consolidation workbook and revision log instructions</a> · <a href=\"#unit2-coverage\">Coverage map</a></p>"
     ]
   ],
   "practice": [
@@ -100,7 +100,7 @@ chapters.push({
   ],
   "task": "Complete the linked activity independently, record evidence of errors, explain corrections and retest with a changed example.",
   "solution": "Use the linked separate checkpoints/marking guide after attempting the task. Verify original data assumptions and distinguish proposed controls from actual evidence.",
-  "recap": "Use evidence to diagnose, correct and retest. Topic familiarity is not a substitute for independent modelling, query writing and justified security decisions.",
+  "recap": "Find a specific gap, choose practice that addresses it and explain your correction. Then try a new example with different conditions. Recognising a topic is useful, but explaining why an answer works gives stronger evidence of understanding.",
   "lessons": [
     "Lesson 1: independent diagnosis and priority selection.",
     "Lesson 2: two targeted stations with corrections.",
@@ -126,7 +126,7 @@ chapters.push({
   "week": 16,
   "title": "Unit 2 exam preparation",
   "badge": "REVIEW / PRACTICE",
-  "intro": "Try an original practice paper, check your reasoning and revisit areas that need more work.",
+  "intro": "Use an original practice paper to find what you can explain independently. Compare your reasoning with the guide, revisit unclear ideas and try a changed example.",
   "objectives": [
     "Diagnose a gap using actual evidence.",
     "Apply concepts to changed requirements and data.",
@@ -135,15 +135,15 @@ chapters.push({
   "sections": [
     [
       "Use the original 64-mark paper",
-      "<p><a class=\"button\" href=\"unit2-practice-paper.md\" download>Download student paper</a> <a class=\"button secondary\" href=\"unit2-practice-marking-guide.md\" download>Separate marking guide</a></p><p>Sixteen questions, four marks each. Suggested 80-minute attempt, or two 40-minute halves over two lessons. This is formative practice, not an official exam, prescribed duration or assessment weighting. Each question begins with unchanged project data.</p>"
+      "<p><a class=\"button\" href=\"unit2-practice-paper.md\" download>Download student paper</a> <a class=\"button secondary\" href=\"unit2-practice-marking-guide.md\" download>Separate marking guide</a></p><p>The paper has sixteen questions worth four marks each. You can try it in 80 minutes or split it into two 40-minute halves over two lessons.</p><p>Use it as optional practice. It is not an official exam, a prescribed duration or an assessment weighting. Every question starts with the original project data, so a change in one answer does not carry into the next question.</p>"
     ],
     [
       "Bring the specified stimulus",
-      "<p>Use the schema, loan rows and fictional costs included in the paper. Q4 uses the separate six-table conceptual diagram; do not assume those extension tables exist in the starter. SQL values use Returned 0/1 and supplied YYYY-MM-DD dates.</p><p><a href=\"unit2-six-table-model.svg\" download>Diagram for Q4</a> · <a href=\"database-project.sqlite\" download>Project database for checking after the attempt</a></p>"
+      "<p>Keep the supplied schema, loan rows and fictional costs beside you. In the SQL data, Returned uses 0/1 and dates use YYYY-MM-DD.</p><p>For Q4, use the separate six-table conceptual diagram. Supplier and Inspection are part of that diagram, but they are not tables in the project starter. Read the question’s supplied model before choosing which tables to discuss.</p><p><a href=\"unit2-six-table-model.svg\" download>Diagram for Q4</a> · <a href=\"database-project.sqlite\" download>Project database for checking after the attempt</a></p>"
     ],
     [
       "Mark, correct and explain limits",
-      "<p>Compare against the separate guide after attempting. Accept equivalent accurate queries and justified explanations; do not double-count points. Rewrite weak answers with the rule and evidence, then test a changed example.</p><p>The paper samples theory and written SQL; independent ER creation, practical implementation, tests and recovery require separate evidence. The suggested teaching sequence reserves weeks 17–18 for the school’s exam period; it adds no new teaching or project deadlines.</p>"
+      "<p>After you try a question, use the separate guide to check your reasoning:</p><ol><li>Compare the rule, query or explanation, allowing equivalent accurate answers.</li><li>Identify what was missing or incorrect. Do not count the same point twice.</li><li>Rewrite the answer using the rule and the evidence.</li><li>Try an example with changed data to see whether the correction transfers.</li></ol><p>The paper samples theory and written SQL; independent ER creation, practical implementation, tests and recovery require separate evidence. The suggested teaching sequence reserves weeks 17–18 for the school’s exam period; it adds no new teaching or project deadlines.</p>"
     ]
   ],
   "practice": [
@@ -160,7 +160,7 @@ chapters.push({
   ],
   "task": "Complete the linked activity independently, record evidence of errors, explain corrections and retest with a changed example.",
   "solution": "Use the linked separate checkpoints/marking guide after attempting the task. Verify original data assumptions and distinguish proposed controls from actual evidence.",
-  "recap": "Use evidence to diagnose, correct and retest. Topic familiarity is not a substitute for independent modelling, query writing and justified security decisions.",
+  "recap": "Start each question from the supplied original data. Use the guide after trying an answer, explain the correction and apply it to a changed example. Written questions sample your understanding; they do not replace hands-on modelling, database creation, testing or recovery practice.",
   "lessons": [
     "Lesson 1: Q1–8, up to 40 minutes plus setup/collection.",
     "Lesson 2: Q9–16, up to 40 minutes plus setup/collection.",
