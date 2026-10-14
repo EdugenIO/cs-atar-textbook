@@ -16,7 +16,7 @@
 
 ## Q4 (4 marks)
 
-1: LoanID PK with BorrowerID/EquipmentID FKs. 1: each equipment has one supplier; supplier zero/many items. 1: inspection requires one item; item zero/many inspections. 1: Loan.EquipmentID → Equipment.EquipmentID, then Equipment.CategoryID → Category.CategoryID.
+1: LoanID PK with BorrowerID/EquipmentID FKs. 1: each equipment item has one supplier; each supplier can have zero or many items. 1: inspection requires one item; item zero/many inspections. 1: Loan.EquipmentID → Equipment.EquipmentID, then Equipment.CategoryID → Category.CategoryID.
 
 ## Q5 (4 marks)
 

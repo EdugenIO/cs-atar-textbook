@@ -140,7 +140,7 @@ Unit 1: 10 design/build/test/evaluation lessons (4 in week 8, 2 in week 9, 4 in 
 
 ## Textbook writing order
 
-Unit 1 now has draft chapters through week 16 and an editorial coverage audit. Teacher review and classroom evidence remain pending. Write Unit 1 weeks 1–7 first. Split sequence, selection and iteration into separate student chapters; the existing selection lesson becomes the week 3 chapter. Then write design/testing/project guidance and the network chapters. Build Unit 2 database chapters before its security chapters, preserving cross-links. Use the same chapter IDs in the future coverage map, teaching schedule and website navigation.
+Draft chapters and editorial coverage maps are available for all four units. Independent teacher review and classroom evidence remain pending. The chapters introduce programming foundations before the Unit 1 project and networks, and database foundations before Unit 2 security. Preserve the existing chapter IDs when revising content so that links in coverage maps, the teaching schedule and website navigation continue to work.
 
 Before declaring complete alignment, audit every knowledge and skill point—including protocol lists, ethics/legal content, API concepts and DB modelling sizes—against the syllabus and support booklet. This document sets the sequence and available time; it does not replace that audit.
 

@@ -8,7 +8,7 @@ Original wording, diagrams, synthetic traces and worksheets drafted 14 October 2
 - IPv4: RFC 791, https://www.rfc-editor.org/rfc/rfc791.html
 - ARP: RFC 826, https://www.rfc-editor.org/rfc/rfc826.html
 - DNS supports TCP: RFC 7766, https://www.rfc-editor.org/rfc/rfc7766.html
-- HTTP3: RFC 9114, https://www.rfc-editor.org/rfc/rfc9114.html
+- HTTP/3: RFC 9114, https://www.rfc-editor.org/rfc/rfc9114.html
 - Documentation addresses: RFC 5737, https://www.rfc-editor.org/rfc/rfc5737.html
 Ethernet arithmetic is explicitly limited to an untagged Ethernet II model: 14-byte header,4-byte FCS,46-byte minimum data field,1500-byte IP MTU; options and physical signalling/gap excluded.
 

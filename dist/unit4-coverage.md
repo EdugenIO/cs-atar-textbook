@@ -10,7 +10,7 @@ Draft mapped: 45, Practical evidence: 5, Practice gap: 0, Convention check: 1, P
 
 |ID/page|Focus|Read|Evidence|Status / next action|
 |---|---|---|---|---|
-|C01 / 17|APP11 security|[unit4-ethics](#unit4-ethics)|APP11 design evidence section; case P4; review F1|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
+|C01 / 17|APP 11 security|[unit4-ethics](#unit4-ethics)|APP 11 design evidence section; case P4; review F1|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
 |C02 / 17|Federal breach scheme|[unit4-ethics](#unit4-ethics)|2017 amendment and NDB assessment/notification distinction; P6/P7|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
 |C03 / 17|Law/ethics case application|[unit4-ethics](#unit4-ethics)|Eight explicit entity/date case cards; workbook and checkpoints|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
 |C04 / 17|Phishing|[unit4-analysis](#unit4-analysis)|Mechanism table and C1 case; evidence alternatives|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
@@ -32,7 +32,7 @@ Draft mapped: 45, Practical evidence: 5, Practice gap: 0, Convention check: 1, P
 |C20 / 18|CIA/AAA application|[unit4-analysis](#unit4-analysis)|Separate goals/identity/permission/accounting; supplied incident hypothesis workbook|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
 |C21 / 19|Key roles|[unit4-crypto](#unit4-crypto)|Symmetric/public-key/signature/agreement table and explained questions|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
 |C22 / 19|Certificates/data protection|[unit4-crypto](#unit4-crypto)|Trust/name/private-possession distinction; fictional C1–C6 checks|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
-|C23 / 19|Secure connection|[unit4-crypto](#unit4-crypto)|Simplified authenticated TLS1.3 agreement and symmetric AEAD records; ordering cards|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
+|C23 / 19|Secure connection|[unit4-crypto](#unit4-crypto)|Simplified authenticated TLS 1.3 agreement and symmetric AEAD records; ordering cards|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
 |C24 / 19|Early/modern ciphers|[unit4-crypto](#unit4-crypto)|Historical mechanisms/weaknesses, offline Caesar trials and modern guidance limits|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
 |C25 / 19|Ethical/red-blue testing|[unit4-ethics](#unit4-ethics)|Team-role table, P8 and scoped paper exercise/report template|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
 |D01 / 19|Entities/relationships|[unit4-design](#unit4-design)|Six-table rules and optional 1:1/1:M/M:N bridge explanation|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
@@ -60,15 +60,15 @@ Draft mapped: 45, Practical evidence: 5, Practice gap: 0, Convention check: 1, P
 |D23 / 21|Clean/import|[unit4-project](#unit4-project)|Raw/clean synthetic CSV, normalisation/rejection rules and all-or-none import reference|Practical evidence — Collect learner mapping/correction/rejection log, independent import and expected/actual failure/rollback results; do not infer authenticity from formatting.|
 |D24 / 21|Responsible data/mining|[unit4-ethics](#unit4-ethics)|Purpose, minimisation, privacy, use, source reliability/acknowledgement, mining and suppression-limit activity|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
 |D25 / 21|Security/backup/control|[unit4-project](#unit4-project)|Privacy/control limits, restricted access concept and protected restore/evaluation requirements; ethics workbook|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
-|D26 / 21|APP5/8/10/11/12|[unit4-ethics](#unit4-ethics)|Five-principle table, collection/disclosure/quality/security/access cases with explicit jurisdiction/date|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
+|D26 / 21|APP 5/8/10/11/12|[unit4-ethics](#unit4-ethics)|Five-principle table, collection/disclosure/quality/security/access cases with explicit jurisdiction/date|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
 
 # Unit 4 audit follow-up — 14 October 2026
 1. D09 written resource added: ten-table model, worked example and 14 questions with explained answers. Read #unit4-design/heading-interpreting-a-ten-table-er-model; download unit4-er-interpretation-pack.zip. Independent review remains pending. The six-entity creation exercise is unchanged.
 2. D15 written resource added: five-factor worksheet with dated source evidence, missing/duplicate values, unit conversion, genuine/unverified outliers and explained decisions. Read #unit4-project/heading-data-quality-five-factors-in-practice; download unit4-data-quality-pack.zip. Independent review remains pending.
 3. D10: teacher visually verifies crow's-foot conventions/endpoints and learner diagram. Linked six-table SVG is illustrative until independently reviewed.
 4. D07/D12/D17/D18/D23: collect independent transaction/restore, dictionary, normalisation, 5+-table implementation and cleaning/import evidence. Supplied code/SQL checks show resource behaviour, not learner achievement or production/crash guarantees.
-5. All rows: independent teacher review, current legal context/source currency, realistic contact hours/assessment outline, and trial pacing.64lessons and 16 projectworkshops already embedded; 55minute lessons58h40, 50minute lessons53h20 versus notional55hours. No extra assessment inferred from formative samples.
-6. Public/open release: verify ownership/licences/third-party permissions and remove unapproved personal/student material; the site remains private. No SCSA/Department endorsement.
+5. All rows: independent teacher review, current legal context/source currency, realistic contact hours/assessment outline, and trial pacing.64lessons and 16 projectworkshops already embedded; 55minute lessons 58h40, 50minute lessons 53h20 versus notional55hours. No extra assessment inferred from formative samples.
+6. Public/open release: verify ownership/licences/third-party permissions and remove unapproved personal/student material; the site is public, with original content under CC BY 4.0 and code under the MIT licence, subject to stated third-party exceptions. No SCSA/Department endorsement.
 Audit groups are local indexes and not a completion percentage. Reconcile evidence and update statuses after actual review; do not mark automatic referencePASS as practical completion.
 
 

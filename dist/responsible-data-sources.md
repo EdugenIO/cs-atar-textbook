@@ -1,6 +1,6 @@
 # Responsible data use — source and currency record
 
-Checked 13 October 2026. Original classroom explanations/scenarios; linked official documents retain their own terms.
+Legal commencement and coverage guidance rechecked 15 October 2026; other source checks dated 13 October 2026. Original classroom explanations/scenarios; linked official documents retain their own terms.
 
 - 2026 SCSA Year 11 syllabus: https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF
 - Official APP text: https://www.oaic.gov.au/privacy/australian-privacy-principles/read-the-australian-privacy-principles

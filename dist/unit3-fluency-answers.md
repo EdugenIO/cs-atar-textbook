@@ -9,7 +9,7 @@ D4: outputs 11 then 10 (1); local parameter and returned value do not reassign t
 D5: last generated index is len(values), out of range (1); use range(len(values)), or iterate directly over values (1).
 D6: 0 is falsey but valid (1); reject only `value is None` (1).
 D7: w creates/truncates; a appends at the end, creating if absent (1); verify path and preserve a suitable backup before overwriting important existing work (1).
-D8: [] minimum5 → 0 (1); [4,5,6] minimum5 → 2 (1). Accept another precise empty/boundary example.
+D8: [] minimum 5 → 0 (1); [4,5,6] minimum 5 → 2 (1). Accept another precise empty/boundary example.
 
 ## Repair/transfer
 count_at_least([3,5,0,8],5)→2; []→0; [4,5,6],5→2; [5,5],5→2; [0],0→1. Duplicates represent separate observations. Inputs to this function are assumed non-negative integers; text/range validation happens at the input boundary. Parser: "0" accepted 0; "-1", "five", "5.0", "" rejected as None; surrounding whitespace on " 5 " is accepted by int.

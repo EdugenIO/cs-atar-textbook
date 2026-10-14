@@ -2,7 +2,7 @@
 
 > Resource packaged with textbook edition 0.48 (14 October 2026): 50 draft chapters across Units 1–4; all four editorial coverage maps are available. Independent review and learner evidence remain pending. Original authoring dates below are provenance, not new sign-off; teacher keys are separate but not access-protected.
 
-All examples are original classroom resources using synthetic records. No dependencies beyond Python3 standard library.
+All examples are original classroom resources using synthetic records. No dependencies beyond Python 3 standard library.
 Keep extracted files in one folder. project_reference.py and project_support.py are the unchanged teacher reference copied from the project chapter.
 - python test_booking_reliability.py -v : twelve automated component/integration tests; expected to pass the reference.
 - python fault_probe.py -v : two intentionally failing probes against the isolated fault_return_lab.py. Repair that lab, then rerun unchanged probes. Separate fault_return_lab_fixed.py illustrates the repair.

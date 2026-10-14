@@ -2,7 +2,7 @@
 
 Edition 0.8. Original classroom draft. Use the reservation starter and stage CSVs. This extends the equipment scenario; the earlier loan model is unchanged. No SQL setup is required.
 
-Rules: competing reservation requests are allowed. One request per borrower/item/date. BorrowerID identifies a label; EquipmentID identifies description and category; CategoryID identifies category name. ReservationStatus depends on the whole event key.
+Rules: competing reservation requests are allowed. One request per borrower/item/date. BorrowerID determines BorrowerLabel; EquipmentID determines EquipmentDescription and CategoryID; CategoryID determines CategoryName. ReservationStatus depends on the whole event key.
 
 1. Explain the repeating group in the starter. Give an alternative repeating-column layout that has the same problem.
 2. Explain an update, insert and delete anomaly using specific equipment facts.

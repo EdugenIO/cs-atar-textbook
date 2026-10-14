@@ -10,7 +10,7 @@ Edition 0.7. Original classroom draft. Use the four model CSVs and the worked ER
 6. Add a new historical event for borrower B001 and equipment E01. Explain why the borrowing pair alone is not unique and what assumptions prevent overlapping active loans.
 7. Diagnose duplicate LoanID L001, nonexistent borrower B999 and a missing required CategoryID. Describe the violated rule in each case.
 8. Compare one-to-one locker allocation, one-to-many loan history and many-to-many borrowing across time. State the rule, not just a relationship name.
-9. For WorkshopEnrolment, assume one enrolment per borrower/workshop pair. Is a repeat B001 allowed? Is repeat pair B001/W01 allowed? Explain a composite key.
+9. For WorkshopEnrolment, assume one enrolment per borrower/workshop pair. May B001 appear more than once? May the pair B001/W01 appear more than once? Explain a composite key.
 10. Create a Loan data dictionary: field name, conceptual type, size, meaning, format/default where applicable, and constraints. State which sizes are DBMS-dependent.
 11. Choose types for item count, measured mass, return status, borrower label and due date. Justify each.
 12. Explain why deleting a referenced borrower needs a deliberate policy. Propose a policy that preserves historical events.

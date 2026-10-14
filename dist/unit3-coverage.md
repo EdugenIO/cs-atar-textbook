@@ -38,7 +38,7 @@
 - N03 | Draft mapped | Protocol/layer associations and TCP/UDP comparison | Independent teacher review and learner evidence required
 - N04 | Draft mapped | TCP sequence/ack trace, UDP contrast and header-size model | Independent teacher review and learner evidence required
 - N05 | Draft mapped | 32/128-bit notation, compression, discovery and broadcast distinction | Independent teacher review and learner evidence required
-- N06 | Draft mapped | RFC1918/special scope, masks/CIDR and /27 plus /20 calculations | Independent teacher review and learner evidence required
+- N06 | Draft mapped | RFC 1918/special scope, masks/CIDR and /27 plus /20 calculations | Independent teacher review and learner evidence required
 - N07 | Draft mapped | Local/remote checks, candidate validation and actual-router caveat | Independent teacher review and learner evidence required
 - N08 | Draft mapped | DNS/ports and protocol caveats; troubleshooting cases | Independent teacher review and learner evidence required
 - N09 | Draft mapped | Data/segment/packet/frame/bits mapping and byte-sizing pack | Independent teacher review and learner evidence required

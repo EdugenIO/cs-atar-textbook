@@ -5,7 +5,7 @@ Edition 0.7. Original classroom draft. Accept equivalent answers consistent with
 1. Borrower is an entity type; B001 is an instance. BorrowerLabel is an attribute/column definition; Learner A is B001’s value. A row is a record. A loan is an event entity.
 2. PKs: BorrowerID, CategoryID, EquipmentID, LoanID in their respective tables. FKs: Equipment.CategoryID → Category.CategoryID; Loan.BorrowerID → Borrower.BorrowerID; Loan.EquipmentID → Equipment.EquipmentID. Camera occurs twice, so description does not uniquely identify an item.
 3. L003 → B001/Learner A and E03/Recorder → C03/Audio.
-4. Borrower → 0..many Loans; each Loan → exactly one Borrower. Equipment → 0..many Loans over time; each Loan → exactly one Equipment. Category → 0..many Equipment; each Equipment → exactly one Category.
+4. Borrower → 0..many Loans; each Loan → exactly one Borrower. Equipment → 0..many Loans over time; each Loan → exactly one equipment item. Category → zero or many equipment items; each equipment item → exactly one Category.
 5. Use the worked SVG as a checking reference. Two bars mean exactly one; circle plus crow’s foot means zero or many. A category with no items is allowed. Layout may differ, but endpoints, keys and rules must match.
 6. A new event can be L007/B001/E01 with its own due date/status. It must not overwrite L001. The pair repeats legitimately. Existing active loan checks and return/time rules are needed to prevent overlapping use; FK checks alone do not do this.
 7. Duplicate L001 violates primary-key uniqueness; B999 is an invalid borrower reference; missing CategoryID violates the mandatory category rule.

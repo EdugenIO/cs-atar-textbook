@@ -1,7 +1,12 @@
 # Unit4 week7 — controls/response workbook
-Two security lessons plus two separate database workshops. Original draft14October2026.
-A: for previous export/attendance/outage cases, select two controls, map CIA/AAA purpose, implementation/evidence, limitation and service impact. Cover logging,anti-malware,firewall,ACL,IPS,VPN,training,conduct and physical protection.
-B: manually predict VisitorsInternetTCP443;VisitorsInternalTCP443;StaffAppTCP443;StaffPrinterTCP631;VisitorsInternetUDP443;StaffInternalTCP22. Add an early Visitor-any allow and explain which deny is shadowed. No real deployment.
-C: predict Guestviewpublic,Learnerviewown,Learnerexportall,Facilitatorupdate_attendanceassigned,Facilitatorupdate_attendanceall,Registrarexportall. Explain why trustedidentity/scope must be established outside the model. Define server-side ownership/assignment checks conceptually.
-D: use response cards. Give evidence,alternative,hypothesis,authorisedcontainment,remediation,recoverycheck and residualrisk. Compare blanketblock vs narrowpolicy. Do not perform operational actions.
-E: complete positive/negative testrecord; statefalsepositive/falsenegative example and independentnextevidence. Link certificates/encryption to nextchapter withoutassumingport443 provesTLS.
+Two security lessons plus two separate database workshops. Original draft: 14 October 2026.
+
+A: For the earlier export, attendance and outage cases, choose two controls. Explain CIA/AAA purpose, implementation, evidence, limits and service impact. Cover logging, anti-malware, firewalls, ACLs, IPS, VPN, training, codes of conduct and physical protection.
+
+B: Predict these flows manually: Visitors → Internet TCP/443; Visitors → Internal TCP/443; Staff → App TCP/443; Staff → Printer TCP/631; Visitors → Internet UDP/443; Staff → Internal TCP/22. Add an early Visitor-to-any allow and explain which deny is shadowed. Do not deploy the rules.
+
+C: Predict Guest/view/public, Learner/view/own, Learner/export/all, Facilitator/update_attendance/assigned, Facilitator/update_attendance/all and Registrar/export/all. Explain why trusted identity and scope must be established outside the model. Describe server-side ownership and assignment checks conceptually.
+
+D: Use the response cards. Give evidence, an alternative, a hypothesis, authorised containment, remediation, a recovery check and residual risk. Compare blanket blocking with a narrow policy. Do not perform operational actions.
+
+E: Complete the permitted/prohibited test record. Give false-positive and false-negative examples and the next independent evidence needed. Connect certificates and encryption to the next chapter without assuming that port 443 proves TLS.

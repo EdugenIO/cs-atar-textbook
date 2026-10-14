@@ -140,8 +140,8 @@ Expected original rows:
 [["S01", 2, 2, 1], ["S02", 1, 0, null]]
 ```
 
-Transfer: SELECT s.SessionID,i.DisplayName FROM Session s JOIN Instructor i ON i.InstructorID=s.InstructorID ORDER BY s.SessionID ->S01GuideA,S02GuideB,S03GuideA.
-Member counts: SELECT m.MemberID,COUNT(b.SessionID) FROM Member m LEFT JOIN Booking b ON b.MemberID=m.MemberID GROUP BY m.MemberID ORDER BY m.MemberID ->M01:2,M02:1,M03:0.
-Workshop sessions/capacity: SELECT w.WorkshopID,COUNT(s.SessionID),SUM(s.Capacity) FROM Workshop w LEFT JOIN Session s ON s.WorkshopID=w.WorkshopID GROUP BY w.WorkshopID ORDER BY w.WorkshopID ->W01:2/5,W02:1/2. No-session workshop gives0/NULL; useCOALESCE only with explicit display meaning.
-Fault capacity forW01 afterBookingjoin7 vs correct5. A newW01sessioncapacity2 makes correct7 but DISTINCTcapacitystill5. AttendanceMemberonlyjoin incorrectly givesM01/S02present1. COUNT*leftgivesS03one instead ofzero. Empty aggregate produces one summary row0,NULL,NULL,NULL,NULL; empty grouped input produces no groups.
-SQLite bare nongrouped columns may return an arbitrary representative; do not teach that permissiveness as a reliable reporting rule. INNER excludes unmatched rows; LEFT preserves unmatched rows until filters remove them. Teacher reviews fresh queries and evidence; this pack does not claim completeUnit4coverage.
+Transfer: SELECT s.SessionID,i.DisplayName FROM Session s JOIN Instructor i ON i.InstructorID=s.InstructorID ORDER BY s.SessionID → S01 Guide A, S02 Guide B, S03 Guide A.
+Member counts: SELECT m.MemberID,COUNT(b.SessionID) FROM Member m LEFT JOIN Booking b ON b.MemberID=m.MemberID GROUP BY m.MemberID ORDER BY m.MemberID → M01: 2, M02: 1, M03: 0.
+Workshop sessions/capacity: SELECT w.WorkshopID,COUNT(s.SessionID), SUM(s.Capacity) FROM Workshop w LEFT JOIN Session s ON s.WorkshopID=w.WorkshopID GROUP BY w.WorkshopID ORDER BY w.WorkshopID → W01: 2/5, W02: 1/2. A workshop with no sessions gives 0/NULL; use COALESCE only with explicit display meaning.
+Fault capacity for W01 after joining Booking is 7, versus the correct 5. A new W01 session with capacity 2 makes the correct total 7, but SUM(DISTINCT Capacity) still gives 5. Joining Attendance only by MemberID incorrectly gives M01/S02 a Present value of 1. COUNT(*) after LEFT JOIN gives S03 one booking instead of zero. Empty aggregate produces one summary row: 0, NULL, NULL, NULL, NULL; empty grouped input produces no groups.
+SQLite bare nongrouped columns may return an arbitrary representative; do not teach that permissiveness as a reliable reporting rule. INNER excludes unmatched rows; LEFT preserves unmatched rows until filters remove them. Teacher reviews fresh queries and evidence; this pack does not claim complete Unit 4 coverage.

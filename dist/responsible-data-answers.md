@@ -58,7 +58,7 @@ Course lens: Ethical hacking authorisation
 
 Decision: Do not treat a peer invitation as system-owner authority; use an explicitly authorised local lab.
 
-Limit: A good intention does not supply permission.
+Limit: Good intentions do not provide authorisation.
 
 ## R06
 
@@ -107,7 +107,7 @@ F: within the agreed reporting route, using minimal synthetic evidence and appli
 Ethical testing aims to improve security within valid authorisation. Penetration testing assesses exploitable weaknesses/impact under an agreed scope. Good intention alone does not authorise activity; findings are limited by what was tested.
 
 ## Evaluation checkpoints
-Require criterion-by-criterion met/partly/not met conclusions with actual evidence. Baseline project counts: four borrowers, three categories, five equipment items, six loans; active loans four; inventory total 1400. A tested restored copy should match planned baseline/report checks. Negative-cost rejection demonstrates that constraint only. A proposed login/role system must not be labelled implemented if the actual file remains accessible.
+Evaluate each criterion as met, partly met or not met, using actual evidence. Baseline project counts: four borrowers, three categories, five equipment items, six loans; active loans four; inventory total 1400. A tested restored copy should match planned baseline/report checks. Negative-cost rejection demonstrates that constraint only. A proposed login/role system must not be labelled implemented if the actual file remains accessible.
 
 Ask students to justify fields and recipients, identify coded-ID linkage risks, explain quality/correction and lawful retention qualifications, and distinguish APP study from actual organisational coverage. Do not require an operational legal conclusion from incomplete facts. Accept alternative decisions when evidence and conditions support them.
 

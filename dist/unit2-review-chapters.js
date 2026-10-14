@@ -13,7 +13,7 @@ chapters.push({
   "sections": [
     [
       "Data-quality clinic",
-      "<p>Currency asks whether evidence is current; authenticity whether its source is genuine; relevance whether the fact serves the purpose; accuracy whether it matches reality; outlier checks investigate unusual values. A rare/extreme value is not automatically an error. Preserve the source and document authorised corrections.</p><p>Task A in the workbook supplies an old status, a valid but wrong date, an unverified message, unrelated health notes and an extreme cost. Explain a verification action and justified outcome for each.</p>"
+      "<p>Currency asks whether evidence is current; authenticity asks whether its source is genuine; relevance asks whether it serves the purpose; and accuracy asks whether it matches reality. Outlier checks investigate unusual values. A rare/extreme value is not automatically an error. Preserve the source and document authorised corrections.</p><p>Task A in the workbook supplies an old status, a valid but wrong date, an unverified message, unrelated health notes and an extreme cost. Explain a verification action and justified outcome for each.</p>"
     ],
     [
       "Read a six-table extension",
@@ -66,7 +66,7 @@ chapters.push({
   "week": 15,
   "title": "Unit 2 consolidation",
   "badge": "REVIEW / PRACTICE",
-  "intro": "Use diagnosis, targeted stations and unfamiliar transfer to choose what to practise next.",
+  "intro": "Identify what you need to improve, work through targeted activities and apply your knowledge to unfamiliar examples.",
   "objectives": [
     "Diagnose a gap using actual evidence.",
     "Apply concepts to changed requirements and data.",
@@ -75,15 +75,15 @@ chapters.push({
   "sections": [
     [
       "Diagnose without the answer key",
-      "<p>Explain a key/reference, 2NF versus 3NF, an inner join, CIA/AAA, authentication factors, a cipher and a privacy/testing boundary. Record the weakest explanations rather than only a total score.</p>"
+      "<p>Explain a key/reference, 2NF versus 3NF, an inner join, CIA/AAA, authentication factors, a cipher and a privacy/testing boundary. Identify which explanations need more work and record what you need to clarify.</p>"
     ],
     [
       "Work through targeted stations",
-      "<p>Choose two weak stations: model/normalise a fresh club case; query the project with a row-count trap and rollback; justify a security control/limit; trace a cipher and data-quality/privacy decision. Use the linked earlier workbooks, then explain your corrections.</p>"
+      "<p>Choose two stations that address areas you need to practise: model/normalise a fresh club case; query the project with a row-count trap and rollback; justify a security control/limit; trace a cipher, then explain a data-quality or privacy decision. Use the linked earlier workbooks, then explain your corrections.</p>"
     ],
     [
       "Retest with changed circumstances",
-      "<p>An unused borrower disappears from an inner join; two cameras share a description; a returned loan has an early due date; a valid date is wrong; a suspicious message has not been clicked. Explain each before changing the model/query or making an incident claim.</p><p><a href=\"unit2-consolidation-workbook.md\" download>Consolidation workbook and revision log instructions</a> · <a href=\"#unit2-coverage\">Coverage map</a></p>"
+      "<p>A borrower with no loans is omitted from an inner-join loan report; two cameras share a description; a returned loan has an early due date; a valid date is wrong; a suspicious message has not been clicked. Explain each before changing the model/query or making an incident claim.</p><p><a href=\"unit2-consolidation-workbook.md\" download>Consolidation workbook and revision log instructions</a> · <a href=\"#unit2-coverage\">Coverage map</a></p>"
     ]
   ],
   "practice": [
@@ -113,11 +113,11 @@ chapters.push({
     "q": "What gives stronger evidence that a misconception was repaired?",
     "options": [
       "Rereading the answer",
-      "Correctly explaining a fresh changed example",
+      "Correctly explaining a new example with changed conditions",
       "Recognising the topic title"
     ],
     "answer": 1,
-    "explanation": "Transfer to a changed example tests independent understanding."
+    "explanation": "Applying the idea to a new example with changed conditions checks independent understanding."
   }
 });
 chapters.push({
@@ -126,7 +126,7 @@ chapters.push({
   "week": 16,
   "title": "Unit 2 exam preparation",
   "badge": "REVIEW / PRACTICE",
-  "intro": "Attempt an original sampled paper, mark the reasoning and repair gaps before the exam block.",
+  "intro": "Try an original practice paper, check your reasoning and revisit areas that need more work.",
   "objectives": [
     "Diagnose a gap using actual evidence.",
     "Apply concepts to changed requirements and data.",
@@ -143,7 +143,7 @@ chapters.push({
     ],
     [
       "Mark, correct and explain limits",
-      "<p>Compare against the separate guide after attempting. Accept equivalent accurate queries and justified explanations; do not double-count points. Rewrite weak answers with the rule and evidence, then test a changed example.</p><p>The paper samples theory and written SQL; independent ER creation, practical implementation, tests and recovery require separate evidence. Weeks 17–18 remain the blocked exam period, with no new teaching or project deadlines.</p>"
+      "<p>Compare against the separate guide after attempting. Accept equivalent accurate queries and justified explanations; do not double-count points. Rewrite weak answers with the rule and evidence, then test a changed example.</p><p>The paper samples theory and written SQL; independent ER creation, practical implementation, tests and recovery require separate evidence. The suggested teaching sequence reserves weeks 17–18 for the school’s exam period; it adds no new teaching or project deadlines.</p>"
     ]
   ],
   "practice": [
