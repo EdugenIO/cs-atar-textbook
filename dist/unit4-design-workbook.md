@@ -5,3 +5,6 @@ B: read all five relationships both ways, including optional parent participatio
 C: reconcile every dictionary field with SQL. Predict duplicate pair, orphan session/member, attendance without booking,Present2,capacity0/1.5,emptyname and malformeddate outcomes. Run the offline checker after prediction. Explain foreign_keys per connection and default/cascade deletion policies. Name at least three unenforced rules.
 D: independently model Artist,Exhibit,Visitor,Reservation,CheckIn,Venue under the chapter rules. Six entities; resolveM:N, composite CheckIn reference and optional1:1. Produce dependencies, notation, dictionary, crow’s-foot diagram, constraints and one business-rule implementation plan. Record revision after feedback.
 No real people or production DB changes. Independent symbol fidelity and learner evidence remain pending until reviewed.
+
+
+E: extend your interpretation practice with the ten-table model in unit4-er-interpretation-workbook.md. Read the diagram, try the questions and use unit4-er-interpretation-answers.md for self-checking. This is optional practice; the six-entity creation exercise above remains unchanged.

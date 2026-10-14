@@ -6,7 +6,7 @@ Checked 14 October 2026 against [2026 SCSA Year 12 syllabus](https://senior-seco
 
 Draft mapped locates explanation and a practice opportunity; it does not certify depth, mastery, alignment or endorsement. Practice gap/Partial identify written-resource work; Convention check/Practical evidence identify unverified review/learner evidence. Independent teacher review remains pending for every row.
 
-Draft mapped: 43, Practical evidence: 5, Practice gap: 1, Convention check: 1, Partial: 1
+Draft mapped: 44, Practical evidence: 5, Practice gap: 0, Convention check: 1, Partial: 1
 
 |ID/page|Focus|Read|Evidence|Status / next action|
 |---|---|---|---|---|
@@ -43,7 +43,7 @@ Draft mapped: 43, Practical evidence: 5, Practice gap: 1, Convention check: 1, P
 |D06 / 19–20|Connectivity/ODBC|[unit4-project](#unit4-project)|Application/API/driver distinction; review C2 and consolidation connectivity questions|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
 |D07 / 20|ACID|[unit4-project](#unit4-project)|Transaction explanation/reference rollback and booking checks; recovery workbook|Practical evidence — Collect independent transaction/concurrent-last-place evidence and saved backup/restore/reopen results; in-memory demo cannot establish crash durability.|
 |D08 / 20|Design documentation|[unit4-design](#unit4-design)|Dictionary, relational notation and original crow’s-foot SVG with legend|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
-|D09 / 20|Interpret larger ER models|[unit4-design](#unit4-design)|Located models/transfer centre on six tables; no dedicated ten-table interpretation stimulus found.|Practice gap — Existing six-table interpretation is inside the allowed range. Add upper-range transfer approaching ten tables with an explained key; this does not mean every task must use ten tables.|
+|D09 / 20|Interpret larger ER models|[ten-table worksheet](#unit4-design/heading-interpreting-a-ten-table-er-model)|Ten-table workshop interpretation model, worked path, 14 questions and explained answers; standalone worksheet and pack.|Draft mapped — Written interpretation resource added 14 October 2026. Independent teacher review and symbol checks remain pending; no learner achievement is inferred.|
 |D10 / 20|Create ER models|[unit4-design](#unit4-design)|Six-table example and fresh six-entity creation task fit 3–8 range.|Convention check — Visually verify crow’s-foot symbols/endpoints against support booklet and review independent learner-created diagram; textual rules alone are insufficient.|
 |D11 / 20|Relational notation|[unit4-design](#unit4-design)|Composite notation and joint-reference explanation; workbook B/D|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
 |D12 / 20|Create dictionaries|[unit4-design](#unit4-design)|17-field supplied dictionary and learner design/project requirements|Practical evidence — Review independent dictionary reconciled with the learner schema, constraints and enforcement locations.|
@@ -63,10 +63,13 @@ Draft mapped: 43, Practical evidence: 5, Practice gap: 1, Convention check: 1, P
 |D26 / 21|APP5/8/10/11/12|[unit4-ethics](#unit4-ethics)|Five-principle table, collection/disclosure/quality/security/access cases with explicit jurisdiction/date|Draft mapped — Independent teacher review and fresh learner evidence remain pending.|
 
 # Unit 4 audit follow-up — 14 October 2026
-1. Practice gap D09: add a larger ER interpretation stimulus approaching ten tables; existing creation tasks fit the separate three-to-eight range. Include question/answer evidence, not only table labels.
+1. D09 written resource added: ten-table model, worked example and 14 questions with explained answers. Read #unit4-design/heading-interpreting-a-ten-table-er-model; download unit4-er-interpretation-pack.zip. Independent review remains pending. The six-entity creation exercise is unchanged.
 2. Partial D15: strengthen Year 12 practice applying all five data-quality factors to dated source evidence/outliers. Existing CSV formatting/import is insufficient by itself. Do not silently delete genuine outliers or invent facts.
 3. D10: teacher visually verifies crow's-foot conventions/endpoints and learner diagram. Linked six-table SVG is illustrative until independently reviewed.
 4. D07/D12/D17/D18/D23: collect independent transaction/restore, dictionary, normalisation, 5+-table implementation and cleaning/import evidence. Supplied code/SQL checks show resource behaviour, not learner achievement or production/crash guarantees.
 5. All rows: independent teacher review, current legal context/source currency, realistic contact hours/assessment outline, and trial pacing.64lessons and 16 projectworkshops already embedded; 55minute lessons58h40, 50minute lessons53h20 versus notional55hours. No extra assessment inferred from formative samples.
 6. Public/open release: verify ownership/licences/third-party permissions and remove unapproved personal/student material; the site remains private. No SCSA/Department endorsement.
 Audit groups are local indexes and not a completion percentage. Reconcile evidence and update statuses after actual review; do not mark automatic referencePASS as practical completion.
+
+
+Written-resource update, 14 October 2026: the ten-table ER interpretation worksheet is now available. Original map edition/date retained; this update changes D09 written-resource status only. Independent review and the D15 data-quality work remain pending.

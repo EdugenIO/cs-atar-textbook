@@ -32,3 +32,6 @@ main figure{margin:24px 0;max-width:100%}main img{max-width:100%;height:auto}.di
 .glossary-entry h3 a{color:var(--ink);text-decoration:none}
 .glossary-entry h3 a:hover{text-decoration:underline}
 .glossary-context{font-size:14px;margin-top:8px}
+
+.diagram-scroll img.er-ten-model{width:1100px}
+@media print{.diagram-scroll img.er-ten-model{width:100%!important}}

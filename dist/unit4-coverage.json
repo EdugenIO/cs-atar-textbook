@@ -4,9 +4,9 @@
   "source": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0013/1211323/_Computer-Science-ATAR-Year-12-Syllabus-for-teaching-from-January-2026.PDF",
   "scope": "Unit 4 printed pages 17–21 (PDF pages 21–25); 51 grouped editorial checks, not official IDs or certification.",
   "counts": {
-    "Draft mapped": 43,
+    "Draft mapped": 44,
     "Practical evidence": 5,
-    "Practice gap": 1,
+    "Practice gap": 0,
     "Convention check": 1,
     "Partial": 1
   },
@@ -313,9 +313,9 @@
       "syllabus_page": "20",
       "focus": "Interpret larger ER models",
       "route": "unit4-design",
-      "evidence": "Located models/transfer centre on six tables; no dedicated ten-table interpretation stimulus found.",
-      "status": "Practice gap",
-      "next_action": "Existing six-table interpretation is inside the allowed range. Add upper-range transfer approaching ten tables with an explained key; this does not mean every task must use ten tables."
+      "evidence": "Ten-table workshop interpretation model, worked path, 14 questions and explained answers; standalone worksheet and pack.",
+      "status": "Draft mapped",
+      "next_action": "Written interpretation resource added 14 October 2026. Independent teacher review and symbol checks remain pending; no learner achievement is inferred."
     },
     {
       "id": "D10",
@@ -470,5 +470,13 @@
       "status": "Draft mapped",
       "next_action": "Independent teacher review and fresh learner evidence remain pending."
     }
-  ]
+  ],
+  "previous_counts": {
+    "Draft mapped": 43,
+    "Practical evidence": 5,
+    "Practice gap": 1,
+    "Convention check": 1,
+    "Partial": 1
+  },
+  "resource_update": "14 October 2026: D09 interpretation worksheet added. Original audit edition/date retained; this is a written-resource update, not a new full review."
 }

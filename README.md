@@ -46,6 +46,7 @@ GitHub Pages publishes `dist/` through the existing `.github/workflows/pages.yml
 - `dist/app.js`: catalogue, selection lesson, About page and shared footer.
 - `dist/glossary.js`: alphabetised glossary definitions and chapter links.
 - `dist/*chapters.js`: lesson content and resource references.
+- `dist/unit4-er-interpretation.js`, `unit4-er-interpretation.html`, `unit4-er-ten-table.svg` and `er-model.json`: ten-table interpretation worksheet, diagram and 14 explained questions. The standalone pack includes printable questions/answers and licences.
 - `dist/reader.js`: lesson rendering, downloads, practice quizzes and teaching sequence.
 - `dist/navigation.js`, `chapter-navigation.js`, `content-overflow.js`, `search.js`, `printing.js`: reading navigation, search destinations, scrolling and print modes.
 - `dist/style.css`, `print.css`, `index.html`: site layout, print styles and script loading.
