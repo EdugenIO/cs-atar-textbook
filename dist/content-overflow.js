@@ -2,6 +2,12 @@
 function prepareContentScrollAreas() {
   const main = document.getElementById('main');
   main.querySelectorAll('table').forEach(table => {
+    // Only promote an unambiguous all-header first row. Leave complex tables intact.
+    const firstRow = table.rows[0];
+    if (!table.tHead && firstRow && [...firstRow.cells].every(cell => cell.tagName === 'TH')) {
+      table.createTHead().append(firstRow);
+    }
+    table.querySelectorAll('thead th:not([scope])').forEach(cell => cell.setAttribute('scope', 'col'));
     if (!table.parentElement.classList.contains('table-scroll')) {
       const wrapper = document.createElement('div');
       wrapper.className = 'table-scroll';

@@ -36,7 +36,7 @@ function setupChapterPrinting() {
     if (/^show /i.test(summary)) detail.classList.add('print-answer-only');
   });
   main.querySelectorAll('a').forEach(link => {
-    if (/teacher|explained key|marking key/i.test(link.textContent)) link.classList.add('print-teacher');
+    if (/teacher|explained (?:key|answers|decision log)|marking key|illustrative cleaned/i.test(link.textContent)) link.classList.add('print-teacher');
   });
   const oldButton = main.querySelector('#chapter-print, #print');
   if (!oldButton) return;

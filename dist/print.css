@@ -12,7 +12,7 @@
   details>*{display:block}
   .table-scroll,.diagram-scroll{overflow:visible;border:0}
   .table-scroll table{min-width:0;width:100%;table-layout:auto}
-  .table-scroll td,.table-scroll th{font-size:9pt;overflow-wrap:normal;padding:5pt}
+  .table-scroll td,.table-scroll th{font-size:9pt;overflow-wrap:anywhere;padding:5pt}
   thead{display:table-header-group}
   tr{break-inside:avoid}
   pre{white-space:pre-wrap;overflow-wrap:anywhere;overflow:visible;font-size:9pt;padding:10pt}

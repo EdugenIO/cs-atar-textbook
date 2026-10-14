@@ -35,3 +35,9 @@ main figure{margin:24px 0;max-width:100%}main img{max-width:100%;height:auto}.di
 
 .diagram-scroll img.er-ten-model{width:1100px}
 @media print{.diagram-scroll img.er-ten-model{width:100%!important}}
+
+/* Visible control boundaries and focus on the light reading surfaces. */
+input,textarea,.button.secondary{border-color:#63736a}
+:focus-visible{outline-color:#875f16}
+.lesson h1{font-size:clamp(32px,5vw,49px)}
+summary{min-height:24px}
