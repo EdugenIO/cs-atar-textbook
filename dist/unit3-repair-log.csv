@@ -1,0 +1,5 @@
+Topic,DiagnosticEvidence,Correction,ExpectedResult,ActualResult,FreshRetest,NextAction
+Threshold boundary,,,,,,
+Input zero versus rejection,,,,,,
+Iteration and scope,,,,,,
+Version restoration,,,,,,

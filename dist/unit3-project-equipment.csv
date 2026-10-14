@@ -1,0 +1,4 @@
+equipment_id,name,total,type,extra
+E01,Camera,2,Camera,20
+E02,Projector,1,Projector,999
+E03,Tripod,3,Equipment,

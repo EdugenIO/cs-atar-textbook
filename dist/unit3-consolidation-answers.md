@@ -1,0 +1,14 @@
+# Teacher consolidation answers — separate, not access-protected
+Mapping counts camera2/projector1; snapshot camera3/projector9. Nested-list copy shares the value: T1 both mappings contain kits[2,4,6]. For general independence use an appropriate deeper copy or reconstruct the required nested data. Independent grid rows: [[0]*3 for _ in range(2)].
+StationB: X01,X03,X02; strict > insertion preserves equal-key order. Bubble implementation swapping only > is stable; ordinary selection swapping minimum into position can move equals out of order. Judge the given implementation, not a universal label. ID binary search requires ascending ID order. Reference returns index or-1 under unique-ID contract and preserves input for sorting.
+StationC: stock never negative; reject without unintended state change; return each active loan once. Check active status before restoring stock. Polymorphic methods dispatch through the actual object; inheritance supports shared behaviour/interface. Record expected/actual and regression version.
+StationD:.130/28 -> mask255.255.255.240; network.128,broadcast.143,hosts.129–.142,14usable; gateway.129 is candidate only, not proof of router availability; destination.145 is in.144/28.9+1=10requires/28,not/29(capacity6). Remote IP remains, local frame targets gateway MAC without NAT. IPv6 no broadcast subtract-two formula.
+StationE:16x6=96Mbit/s fits100 ideally with4spare;300MBx8/80=30seconds. Rules must actually control the routed path; preserve narrow infrastructure services. ICMP reply is not web success; missing traceroute reply is not complete forwarding failure. Retain alternative explanations.
+Fresh transfer:
+T1 both kits[2,4,6], shared list reference.
+T2 K07,K09,K08; wrong ID order. Ascending-ID view K07,K08,K09 returns index2 forK09; empty/absent ->-1, matching one-item ->0.
+T3 stock2 ->1 ->2 ->2; second return rejected/no-op according to contract; no double restoration. Component checks one unit; acceptance checks agreed end-to-end workflow.
+T4 mask255.255.255.224; network192.168.70.64,broadcast.95,hosts.65–.94,30usable. Gateway.65 fits but must be a reachable router; destination.100 outside local.64/27.28+1=29fits/27(capacity30);/28too small(14).
+T5 demand108Mbit/s >100; ideal share100/12≈8.33Mbit/s before overhead;400MB at80 ->40seconds ideal. Actual throughput may be lower.
+T6 central routed boundary rules plus any relevant bypass controls; allow narrow required guest internet service and deny guest internal new sessions. Failed ping only evidences one probe type; test required service policy, examine configuration/logs and allowed/denied outcomes.
+Use qualitative feedback rather than declaring an official grade. Four lessons with embedded tasks. Practical skills/symbol fidelity and independent review remain pending where evidence is unavailable.

@@ -1,0 +1,7 @@
+# Unit4 week6 — analysis workbook
+Two security lessons plus two separate database workshops. Original draft14October2026.
+A: assets/weakness/threat/risk/control distinctions. ApplyC/I/Atoexport,wrongattendance,outage; explain overlap. Applyauthentication/authorisation/accountingtoeachlogaction. Stateaccountversuspersonlimit.
+B: use12scenario cards and16-category reference. Classifymechanismwithjustification; namealternativeandspecificnextevidence. Coverinternalcredential/device/misuserisksandexternalthreats; categoriesmayoverlap.
+C: manuallytimeline8CSVevents. Baseline20requests/min,200ms;observed400/min,2500ms. Compute20xthebaselinecountand12.5xthebaselineRTT,withoutclaimingthroughputcausalityorstatisticaltrend. Countauth/permissionevents; explainrecordedexport500doesnotproverecipients. Compareofflinehelperaftermanualcount.
+D: threecaseresponses:observation,asset,CIA,AAA,hypothesis,alternative,evidence,authorisedresponse,controllimit. Preserveoriginallogsandtimestamps; paperanalysisdoesnotauthoriseoperationalactions.
+E: transfer: a sharedaccountperformsacceptedattendanceupdateandexportfromanotherdevice. Explainattributionlimitationsandtwodiscriminatingchecks. Recordwhatremainsunknownandlinknextchaptercontrols.

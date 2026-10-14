@@ -1,0 +1,419 @@
+{
+  "date": "14 October 2026",
+  "edition": "0.30",
+  "source": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0013/1211323/_Computer-Science-ATAR-Year-12-Syllabus-for-teaching-from-January-2026.PDF",
+  "scope": "Unit3 printed pages10–16; grouped editorial checklist, not official line-item numbering or certification",
+  "counts": {
+    "Convention check": 3,
+    "Draft mapped": 38,
+    "Environment evidence": 1,
+    "Practical evidence": 3
+  },
+  "rows": [
+    {
+      "id": "P01",
+      "syllabus_page": "10–11",
+      "focus": "Execution paths and loop forms",
+      "route": "unit3-fluency",
+      "evidence": "Fixed/pre/post-test comparison; n=0/3 traces and prompt transfer workbook",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner demonstration required"
+    },
+    {
+      "id": "P02",
+      "syllabus_page": "10–11",
+      "focus": "Primitive values and operator reasoning",
+      "route": "unit3-fluency",
+      "evidence": "Type/operator retrieval, eight-row Boolean truth table and parsing/precision cases",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner demonstration required"
+    },
+    {
+      "id": "P03",
+      "syllabus_page": "11",
+      "focus": "Function contracts, scope and argument behaviour",
+      "route": "unit3-structures",
+      "evidence": "Global/local scope and Python argument binding; scalar/list mutation/rebinding transfer",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner demonstration required"
+    },
+    {
+      "id": "P04",
+      "syllabus_page": "11",
+      "focus": "Array and mapping design",
+      "route": "unit3-structures",
+      "evidence": "2D grid traversal and ID dictionary; workbook and Python pack",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P05",
+      "syllabus_page": "11",
+      "focus": "Formal algorithm representations",
+      "route": "unit3-structures",
+      "evidence": "Language-neutral grid pseudocode and Python tasks; source-checked convention clinic E1",
+      "status": "Convention check",
+      "next_action": "Independent formal pseudocode creation and teacher review pending; textual guidance checked"
+    },
+    {
+      "id": "P06",
+      "syllabus_page": "11–12",
+      "focus": "Investigation and measurable requirements",
+      "route": "unit3-project",
+      "evidence": "Problem scope and R1–R9 acceptance mapping",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P07",
+      "syllabus_page": "11",
+      "focus": "Scheduling and dependencies",
+      "route": "unit3-project",
+      "evidence": "Worked twelve-workshop Gantt SVG, editable planned/actual CSV and dependencies",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner demonstration required"
+    },
+    {
+      "id": "P08",
+      "syllabus_page": "11",
+      "focus": "Design structures and test algorithms",
+      "route": "unit3-project",
+      "evidence": "Class/API design, search/report algorithm and design checkpoint",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P09",
+      "syllabus_page": "11–13",
+      "focus": "Implementation and debugging",
+      "route": "unit3-project",
+      "evidence": "Issue/return/report implementation; expected/actual and repair log",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P10",
+      "syllabus_page": "11–13",
+      "focus": "Acceptance and retrospective",
+      "route": "unit3-project",
+      "evidence": "Requirement-linked demonstration, evaluation and retrospective guide",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P11",
+      "syllabus_page": "12",
+      "focus": "Process choices",
+      "route": "unit3-fluency",
+      "evidence": "Linear/iterative comparison and changed-threshold requirement",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P12",
+      "syllabus_page": "12–13",
+      "focus": "Validation, modules and stubs",
+      "route": "unit3-fluency",
+      "evidence": "Parser returns value/None; unfinished scaffold; separate processing/mainline",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P13",
+      "syllabus_page": "12–13",
+      "focus": "Maintenance, versions and recovery",
+      "route": "unit3-reliability",
+      "evidence": "Review/regression/version/restore evidence tasks",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P14",
+      "syllabus_page": "12–13",
+      "focus": "Exceptions and return contracts",
+      "route": "unit3-fluency",
+      "evidence": "ValueError handling and return integer/None; project conversion layer",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P15",
+      "syllabus_page": "12–13",
+      "focus": "Ethics within development",
+      "route": "unit3-reliability",
+      "evidence": "Developer responsibilities and synthetic-data/source records",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P16",
+      "syllabus_page": "12–13",
+      "focus": "Modular functions/classes and parameter use",
+      "route": "unit3-project",
+      "evidence": "Model/support/console responsibilities and common interfaces",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P17",
+      "syllabus_page": "12–13",
+      "focus": "Search growth and prerequisites",
+      "route": "unit3-search",
+      "evidence": "Linear/binary traces, probe counts and O(n)/O(log n)",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P18",
+      "syllabus_page": "13",
+      "focus": "Sorting growth and implementation",
+      "route": "unit3-sort",
+      "evidence": "Bubble/insertion/selection passes, comparisons, stability and O(n²)",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P19",
+      "syllabus_page": "13",
+      "focus": "Written algorithm design",
+      "route": "unit3-search",
+      "evidence": "Search/sort pseudocode plus Python implementations; source-checked convention clinic E1",
+      "status": "Convention check",
+      "next_action": "Independent formal pseudocode creation and teacher review pending; textual guidance checked"
+    },
+    {
+      "id": "P20",
+      "syllabus_page": "13",
+      "focus": "Requirement-based acceptance",
+      "route": "unit3-reliability",
+      "evidence": "Acceptance log and functional requirement scenarios",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P21",
+      "syllabus_page": "13",
+      "focus": "Realistic testing environment",
+      "route": "unit3-reliability",
+      "evidence": "Synthetic mixed operations, file/data volume and response-time/load exercises",
+      "status": "Environment evidence",
+      "next_action": "Collect teacher-approved representative deployment/environment evidence; synthetic load is not live operational proof; use the linked six-activity evidence pack"
+    },
+    {
+      "id": "P22",
+      "syllabus_page": "13",
+      "focus": "Test design and output comparison",
+      "route": "unit3-reliability",
+      "evidence": "Component tests, boundary/rejection cases, expected/actual records",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P23",
+      "syllabus_page": "13–14",
+      "focus": "Fault types and isolation",
+      "route": "unit3-reliability",
+      "evidence": "Syntax/logic/runtime cases including index/division; repeat-return fault lab",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P24",
+      "syllabus_page": "13–14",
+      "focus": "Trace and debugger evidence",
+      "route": "unit3-reliability",
+      "evidence": "Trace/print/breakpoint instructions",
+      "status": "Practical evidence",
+      "next_action": "Collect learner breakpoint/stepping evidence; written instructions alone do not demonstrate use; use the linked six-activity evidence pack"
+    },
+    {
+      "id": "P25",
+      "syllabus_page": "14",
+      "focus": "Classes, instances and state",
+      "route": "unit3-objects",
+      "evidence": "Equipment objects, attributes/methods and instantiation tests",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P26",
+      "syllabus_page": "14",
+      "focus": "Abstraction and encapsulation",
+      "route": "unit3-objects",
+      "evidence": "Public interface, state guards and Python privacy limitations",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P27",
+      "syllabus_page": "14",
+      "focus": "Inheritance and polymorphism",
+      "route": "unit3-inheritance",
+      "evidence": "Camera/Projector hierarchy, super, overriding and mixed-object calls",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P28",
+      "syllabus_page": "14",
+      "focus": "Objects with internal logic",
+      "route": "unit3-project",
+      "evidence": "Validated stock transitions and object methods",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P29",
+      "syllabus_page": "14–15",
+      "focus": "Societal effects of software",
+      "route": "unit3-reliability",
+      "evidence": "Malware, reliance, sharing/cyber safety and information quality scenarios",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "P30",
+      "syllabus_page": "15",
+      "focus": "Developer obligations",
+      "route": "unit3-reliability",
+      "evidence": "IP/permission/credit, quality/user feedback, conduct, ergonomics/inclusion/privacy",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "N01",
+      "syllabus_page": "15–16",
+      "focus": "Comparing layered models",
+      "route": "unit3-network-models",
+      "evidence": "OSI/DoD four-layer mapping and roles diagram",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "N02",
+      "syllabus_page": "15",
+      "focus": "Switching versus routing",
+      "route": "unit3-network-models",
+      "evidence": "MAC/IP role and two-link frame/packet trace",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "N03",
+      "syllabus_page": "15–16",
+      "focus": "Protocol/device placement",
+      "route": "unit3-network-models",
+      "evidence": "Protocol/layer associations and TCP/UDP comparison",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "N04",
+      "syllabus_page": "15",
+      "focus": "Transport structure and behaviour",
+      "route": "unit3-network-models",
+      "evidence": "TCP sequence/ack trace, UDP contrast and header-size model",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "N05",
+      "syllabus_page": "15–16",
+      "focus": "IPv4 versus IPv6",
+      "route": "unit3-addressing",
+      "evidence": "32/128-bit notation, compression, discovery and broadcast distinction",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "N06",
+      "syllabus_page": "15–16",
+      "focus": "Address scope and prefixes",
+      "route": "unit3-addressing",
+      "evidence": "RFC1918/special scope, masks/CIDR and /27 plus /20 calculations",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "N07",
+      "syllabus_page": "16",
+      "focus": "Gateway selection",
+      "route": "unit3-addressing",
+      "evidence": "Local/remote checks, candidate validation and actual-router caveat",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "N08",
+      "syllabus_page": "16",
+      "focus": "Name lookup and service endpoints",
+      "route": "unit3-network-models",
+      "evidence": "DNS/ports and protocol caveats; troubleshooting cases",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "N09",
+      "syllabus_page": "16",
+      "focus": "Encapsulation units",
+      "route": "unit3-network-models",
+      "evidence": "Data/segment/packet/frame/bits mapping and byte-sizing pack",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "N10",
+      "syllabus_page": "16",
+      "focus": "Design an address allocation",
+      "route": "unit3-addressing",
+      "evidence": "Four-group VLSM worked/blank plan and overlap/capacity checks",
+      "status": "Practical evidence",
+      "next_action": "Collect independent learner address-plan creation/application evidence; use the linked six-activity evidence pack"
+    },
+    {
+      "id": "N11",
+      "syllabus_page": "16",
+      "focus": "Media and intermediary equipment",
+      "route": "unit3-secure-networks",
+      "evidence": "Media/modem/router/gateway/switch/AP/firewall role table",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "N12",
+      "syllabus_page": "16",
+      "focus": "Topology, capacity and segmentation",
+      "route": "unit3-secure-networks",
+      "evidence": "Physical/logical design, VLAN/broadcast domains, policy and demand calculations",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "N13",
+      "syllabus_page": "16",
+      "focus": "Network diagnostic interpretation",
+      "route": "unit3-secure-networks",
+      "evidence": "Synthetic ping/tracert scenarios and evidence limits",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and learner evidence required"
+    },
+    {
+      "id": "N14",
+      "syllabus_page": "16",
+      "focus": "Operate diagnostic tools",
+      "route": "unit3-secure-networks",
+      "evidence": "Teacher-assigned lab instructions; synthetic-log alternative",
+      "status": "Practical evidence",
+      "next_action": "Collect actual authorised ping/traceroute execution and interpretation evidence; use the linked six-activity evidence pack"
+    },
+    {
+      "id": "N15",
+      "syllabus_page": "16",
+      "focus": "Create/interpret specified network diagrams",
+      "route": "unit3-secure-networks",
+      "evidence": "Original concept SVGs and Cisco-convention redraw task; source placement note and E5 redraw checklist",
+      "status": "Convention check",
+      "next_action": "Visual symbol fidelity and independent learner diagram remain pending; source text checked"
+    }
+  ]
+}

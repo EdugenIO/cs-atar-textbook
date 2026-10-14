@@ -1,0 +1,68 @@
+[
+  {
+    "BorrowerID": "B001",
+    "BorrowerLabel": "Learner A",
+    "Reservations": [
+      {
+        "EquipmentID": "E01",
+        "EquipmentDescription": "Camera",
+        "CategoryID": "C01",
+        "CategoryName": "Imaging",
+        "ReservationDate": "2026-05-01",
+        "ReservationStatus": "Confirmed"
+      },
+      {
+        "EquipmentID": "E02",
+        "EquipmentDescription": "Tripod",
+        "CategoryID": "C02",
+        "CategoryName": "Support",
+        "ReservationDate": "2026-05-01",
+        "ReservationStatus": "Requested"
+      },
+      {
+        "EquipmentID": "E01",
+        "EquipmentDescription": "Camera",
+        "CategoryID": "C01",
+        "CategoryName": "Imaging",
+        "ReservationDate": "2026-05-08",
+        "ReservationStatus": "Requested"
+      }
+    ]
+  },
+  {
+    "BorrowerID": "B002",
+    "BorrowerLabel": "Learner B",
+    "Reservations": [
+      {
+        "EquipmentID": "E01",
+        "EquipmentDescription": "Camera",
+        "CategoryID": "C01",
+        "CategoryName": "Imaging",
+        "ReservationDate": "2026-05-02",
+        "ReservationStatus": "Confirmed"
+      },
+      {
+        "EquipmentID": "E01",
+        "EquipmentDescription": "Camera",
+        "CategoryID": "C01",
+        "CategoryName": "Imaging",
+        "ReservationDate": "2026-05-01",
+        "ReservationStatus": "Requested"
+      }
+    ]
+  },
+  {
+    "BorrowerID": "B003",
+    "BorrowerLabel": "Learner C",
+    "Reservations": [
+      {
+        "EquipmentID": "E03",
+        "EquipmentDescription": "Recorder",
+        "CategoryID": "C03",
+        "CategoryName": "Audio",
+        "ReservationDate": "2026-05-02",
+        "ReservationStatus": "Confirmed"
+      }
+    ]
+  }
+]

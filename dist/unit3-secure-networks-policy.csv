@@ -1,0 +1,8 @@
+source,destination,service,predicted_action
+Media,Internet,web_tcp443,allow
+Staff,Internet,web_tcp443,allow
+Visitors,Internet,web_tcp443,allow
+Staff,Devices,printer_tcp631,allow
+Visitors,Staff,web_tcp443,deny
+Devices,Staff,printer_tcp631,deny
+Media,Devices,printer_tcp631,deny

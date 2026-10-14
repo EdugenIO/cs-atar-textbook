@@ -1,0 +1,46 @@
+id,syllabus_page,focus,route,evidence,status,next_action
+P01,10–11,Execution paths and loop forms,unit3-fluency,Fixed/pre/post-test comparison; n=0/3 traces and prompt transfer workbook,Draft mapped,Independent teacher review and fresh learner demonstration required
+P02,10–11,Primitive values and operator reasoning,unit3-fluency,"Type/operator retrieval, eight-row Boolean truth table and parsing/precision cases",Draft mapped,Independent teacher review and fresh learner demonstration required
+P03,11,"Function contracts, scope and argument behaviour",unit3-structures,Global/local scope and Python argument binding; scalar/list mutation/rebinding transfer,Draft mapped,Independent teacher review and fresh learner demonstration required
+P04,11,Array and mapping design,unit3-structures,2D grid traversal and ID dictionary; workbook and Python pack,Draft mapped,Independent teacher review and learner evidence required
+P05,11,Formal algorithm representations,unit3-structures,Language-neutral grid pseudocode and Python tasks; source-checked convention clinic E1,Convention check,Independent formal pseudocode creation and teacher review pending; textual guidance checked
+P06,11–12,Investigation and measurable requirements,unit3-project,Problem scope and R1–R9 acceptance mapping,Draft mapped,Independent teacher review and learner evidence required
+P07,11,Scheduling and dependencies,unit3-project,"Worked twelve-workshop Gantt SVG, editable planned/actual CSV and dependencies",Draft mapped,Independent teacher review and fresh learner demonstration required
+P08,11,Design structures and test algorithms,unit3-project,"Class/API design, search/report algorithm and design checkpoint",Draft mapped,Independent teacher review and learner evidence required
+P09,11–13,Implementation and debugging,unit3-project,Issue/return/report implementation; expected/actual and repair log,Draft mapped,Independent teacher review and learner evidence required
+P10,11–13,Acceptance and retrospective,unit3-project,"Requirement-linked demonstration, evaluation and retrospective guide",Draft mapped,Independent teacher review and learner evidence required
+P11,12,Process choices,unit3-fluency,Linear/iterative comparison and changed-threshold requirement,Draft mapped,Independent teacher review and learner evidence required
+P12,12–13,"Validation, modules and stubs",unit3-fluency,Parser returns value/None; unfinished scaffold; separate processing/mainline,Draft mapped,Independent teacher review and learner evidence required
+P13,12–13,"Maintenance, versions and recovery",unit3-reliability,Review/regression/version/restore evidence tasks,Draft mapped,Independent teacher review and learner evidence required
+P14,12–13,Exceptions and return contracts,unit3-fluency,ValueError handling and return integer/None; project conversion layer,Draft mapped,Independent teacher review and learner evidence required
+P15,12–13,Ethics within development,unit3-reliability,Developer responsibilities and synthetic-data/source records,Draft mapped,Independent teacher review and learner evidence required
+P16,12–13,Modular functions/classes and parameter use,unit3-project,Model/support/console responsibilities and common interfaces,Draft mapped,Independent teacher review and learner evidence required
+P17,12–13,Search growth and prerequisites,unit3-search,"Linear/binary traces, probe counts and O(n)/O(log n)",Draft mapped,Independent teacher review and learner evidence required
+P18,13,Sorting growth and implementation,unit3-sort,"Bubble/insertion/selection passes, comparisons, stability and O(n²)",Draft mapped,Independent teacher review and learner evidence required
+P19,13,Written algorithm design,unit3-search,Search/sort pseudocode plus Python implementations; source-checked convention clinic E1,Convention check,Independent formal pseudocode creation and teacher review pending; textual guidance checked
+P20,13,Requirement-based acceptance,unit3-reliability,Acceptance log and functional requirement scenarios,Draft mapped,Independent teacher review and learner evidence required
+P21,13,Realistic testing environment,unit3-reliability,"Synthetic mixed operations, file/data volume and response-time/load exercises",Environment evidence,Collect teacher-approved representative deployment/environment evidence; synthetic load is not live operational proof; use the linked six-activity evidence pack
+P22,13,Test design and output comparison,unit3-reliability,"Component tests, boundary/rejection cases, expected/actual records",Draft mapped,Independent teacher review and learner evidence required
+P23,13–14,Fault types and isolation,unit3-reliability,Syntax/logic/runtime cases including index/division; repeat-return fault lab,Draft mapped,Independent teacher review and learner evidence required
+P24,13–14,Trace and debugger evidence,unit3-reliability,Trace/print/breakpoint instructions,Practical evidence,Collect learner breakpoint/stepping evidence; written instructions alone do not demonstrate use; use the linked six-activity evidence pack
+P25,14,"Classes, instances and state",unit3-objects,"Equipment objects, attributes/methods and instantiation tests",Draft mapped,Independent teacher review and learner evidence required
+P26,14,Abstraction and encapsulation,unit3-objects,"Public interface, state guards and Python privacy limitations",Draft mapped,Independent teacher review and learner evidence required
+P27,14,Inheritance and polymorphism,unit3-inheritance,"Camera/Projector hierarchy, super, overriding and mixed-object calls",Draft mapped,Independent teacher review and learner evidence required
+P28,14,Objects with internal logic,unit3-project,Validated stock transitions and object methods,Draft mapped,Independent teacher review and learner evidence required
+P29,14–15,Societal effects of software,unit3-reliability,"Malware, reliance, sharing/cyber safety and information quality scenarios",Draft mapped,Independent teacher review and learner evidence required
+P30,15,Developer obligations,unit3-reliability,"IP/permission/credit, quality/user feedback, conduct, ergonomics/inclusion/privacy",Draft mapped,Independent teacher review and learner evidence required
+N01,15–16,Comparing layered models,unit3-network-models,OSI/DoD four-layer mapping and roles diagram,Draft mapped,Independent teacher review and learner evidence required
+N02,15,Switching versus routing,unit3-network-models,MAC/IP role and two-link frame/packet trace,Draft mapped,Independent teacher review and learner evidence required
+N03,15–16,Protocol/device placement,unit3-network-models,Protocol/layer associations and TCP/UDP comparison,Draft mapped,Independent teacher review and learner evidence required
+N04,15,Transport structure and behaviour,unit3-network-models,"TCP sequence/ack trace, UDP contrast and header-size model",Draft mapped,Independent teacher review and learner evidence required
+N05,15–16,IPv4 versus IPv6,unit3-addressing,"32/128-bit notation, compression, discovery and broadcast distinction",Draft mapped,Independent teacher review and learner evidence required
+N06,15–16,Address scope and prefixes,unit3-addressing,"RFC1918/special scope, masks/CIDR and /27 plus /20 calculations",Draft mapped,Independent teacher review and learner evidence required
+N07,16,Gateway selection,unit3-addressing,"Local/remote checks, candidate validation and actual-router caveat",Draft mapped,Independent teacher review and learner evidence required
+N08,16,Name lookup and service endpoints,unit3-network-models,DNS/ports and protocol caveats; troubleshooting cases,Draft mapped,Independent teacher review and learner evidence required
+N09,16,Encapsulation units,unit3-network-models,Data/segment/packet/frame/bits mapping and byte-sizing pack,Draft mapped,Independent teacher review and learner evidence required
+N10,16,Design an address allocation,unit3-addressing,Four-group VLSM worked/blank plan and overlap/capacity checks,Practical evidence,Collect independent learner address-plan creation/application evidence; use the linked six-activity evidence pack
+N11,16,Media and intermediary equipment,unit3-secure-networks,Media/modem/router/gateway/switch/AP/firewall role table,Draft mapped,Independent teacher review and learner evidence required
+N12,16,"Topology, capacity and segmentation",unit3-secure-networks,"Physical/logical design, VLAN/broadcast domains, policy and demand calculations",Draft mapped,Independent teacher review and learner evidence required
+N13,16,Network diagnostic interpretation,unit3-secure-networks,Synthetic ping/tracert scenarios and evidence limits,Draft mapped,Independent teacher review and learner evidence required
+N14,16,Operate diagnostic tools,unit3-secure-networks,Teacher-assigned lab instructions; synthetic-log alternative,Practical evidence,Collect actual authorised ping/traceroute execution and interpretation evidence; use the linked six-activity evidence pack
+N15,16,Create/interpret specified network diagrams,unit3-secure-networks,Original concept SVGs and Cisco-convention redraw task; source placement note and E5 redraw checklist,Convention check,Visual symbol fidelity and independent learner diagram remain pending; source text checked

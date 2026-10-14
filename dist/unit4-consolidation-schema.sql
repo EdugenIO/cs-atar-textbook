@@ -1,0 +1,11 @@
+PRAGMA foreign_keys=ON;
+CREATE TABLE Category(CategoryID TEXT NOT NULL PRIMARY KEY,Name TEXT NOT NULL);
+CREATE TABLE Resource(ResourceID TEXT NOT NULL PRIMARY KEY,Label TEXT NOT NULL,CategoryID TEXT NOT NULL REFERENCES Category(CategoryID));
+CREATE TABLE Member(MemberID TEXT NOT NULL PRIMARY KEY,Name TEXT NOT NULL);
+CREATE TABLE Loan(LoanID TEXT NOT NULL PRIMARY KEY,ResourceID TEXT NOT NULL REFERENCES Resource(ResourceID),MemberID TEXT NOT NULL REFERENCES Member(MemberID),StartDate TEXT NOT NULL,ReturnDate TEXT);
+CREATE TABLE Inspection(InspectionID TEXT NOT NULL PRIMARY KEY,ResourceID TEXT NOT NULL REFERENCES Resource(ResourceID),InspectionDate TEXT NOT NULL,Passed INTEGER NOT NULL CHECK(typeof(Passed)='integer' AND Passed IN(0,1)));
+INSERT INTO Category VALUES('C01','Media'),('C02','Network');
+INSERT INTO Resource VALUES('R01','Camera','C01'),('R02','Microphone','C01'),('R03','Router','C02'),('R04','Switch','C02');
+INSERT INTO Member VALUES('M01','Person A'),('M02','Person B'),('M03','Person C');
+INSERT INTO Loan VALUES('L01','R01','M01','2026-10-01',NULL),('L02','R01','M02','2026-09-01','2026-09-05'),('L03','R02','M01','2026-10-02',NULL),('L04','R03','M03','2026-09-02','2026-09-04');
+INSERT INTO Inspection VALUES('X01','R01','2026-09-20',1),('X02','R02','2026-09-21',0);

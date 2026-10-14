@@ -1,0 +1,29 @@
+.print-controls{display:inline-flex;gap:8px;flex-wrap:wrap}
+.print-help{font-size:13px;color:var(--muted)}
+.print-only{display:none}
+@media print{
+  @page{size:A4;margin:18mm}
+  main,.lesson{max-width:none;width:100%;padding:0}
+  body{font-size:11pt;line-height:1.5}
+  .lesson h1{font-size:28pt}
+  h2{font-size:19pt;break-after:avoid}
+  h3,summary{break-after:avoid}
+  details{break-inside:auto}
+  details>*{display:block}
+  .table-scroll,.diagram-scroll{overflow:visible;border:0}
+  .table-scroll table{min-width:0;width:100%;table-layout:auto}
+  .table-scroll td,.table-scroll th{font-size:9pt;overflow-wrap:normal;padding:5pt}
+  thead{display:table-header-group}
+  tr{break-inside:avoid}
+  pre{white-space:pre-wrap;overflow-wrap:anywhere;overflow:visible;font-size:9pt;padding:10pt}
+  .diagram-scroll img{min-width:0;max-width:100%;width:100%}
+  figure{break-inside:avoid}
+  .quiz-option,#quiz button{display:block;background:none;color:black;border:0;padding:3pt 0;text-align:left}
+  #chapter-feedback,#quiz-feedback{display:none}
+  body:not([data-print-mode="answers"]) .print-teacher,
+  body:not([data-print-mode="answers"]) .print-answer-only,
+  body:not([data-print-mode="answers"]) .print-answer>:not(summary),
+  body:not([data-print-mode="answers"]) .print-answer-key{display:none!important}
+  body[data-print-mode="answers"] .print-only{display:block}
+  .print-controls,.print-help{display:none}
+}

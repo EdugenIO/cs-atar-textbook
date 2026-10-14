@@ -1,0 +1,8 @@
+# Fresh retries and mixed transfer
+Attempt after correction without the key; later use another changed example. Menu fits Week15lesson4 andWeek16lesson3,not extra homework.
+R1 Write/trace summarise on[['Security',1],['Python',0],['Security',4]],emptylist,negative/bool counts. Explain keyidentity,validation and expected results.
+R2 Trace binarysearch sorted[1,4,7,10,13,16]for12; state sorted precondition/comparison bound and separate preparationcost. Compare a one-off unsorted search; justify choice in context.
+R3 Fresh exam seed addL04,R04,M02,2026-10-03,NULL. Predict ALL-resource total/active report,writeSQL,and explain why anunloanedresource wasn't alreadyactive. Explain duplicate child joins and rule/evidence for oneactiveLoan.
+R4 Fresh subnet192.168.90.0/24for70and20TOTALhosts includinggateway. Largestfirst; network/prefix/range/broadcast/gateway. Explain first-hopframe and a discriminatingDNS/gateway check; diagram conventions need teacherreview.
+R5 Contrast original suspicion with explicitly established eligiblebreach in coveredprivateprovider,noexception/effectiveremedialprevention. Explain required authorised action and why notification doesn'twait30daysbydefault. Remove entity/date assumptions and identify neededfacts; compare WApublicsector context. No operational actions/notices.
+R6 Mixed unfamiliar case(15–20min): a loop aliases 2Drows, loanreportdropszeroresources, capacityguardpermitsoneextra, guestnetworkruleallowsanyinternaltraffic. Give cause,one justifiedrepair,one test and remaininglimit for each. Avoid claiming referencePASS orsecureTLSfixesallfour. Record priorerror->freshreasoning->remaininggap.

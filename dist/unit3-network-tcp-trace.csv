@@ -1,0 +1,6 @@
+Step,Sender,Receiver,Flags,Sequence,Acknowledgement,TCP payload bytes,Meaning
+1,Client,Server,SYN,1000,not valid (ACK flag unset),0,Start connection; SYN consumes one sequence number
+2,Server,Client,SYN ACK,5000,1001,0,Acknowledge client SYN and send server SYN
+3,Client,Server,ACK,1001,5001,0,Acknowledge server SYN; no sequence consumed by pure ACK
+4,Client,Server,ACK,1001,5001,40,40 transport payload bytes; next client byte sequence is 1041
+5,Server,Client,ACK,5001,1041,0,Cumulative acknowledgement of the 40 bytes

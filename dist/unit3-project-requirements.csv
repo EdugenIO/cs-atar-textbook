@@ -1,0 +1,10 @@
+ID,Requirement,Acceptance evidence
+R1,Show a synthetic catalogue and available units,"Initial availability E01=2, E02=1, E03=3"
+R2,Find equipment by ID without rearranging the catalogue,E01 found; E99 missing; catalogue order unchanged
+R3,Issue a uniquely identified loan to a known borrower,L001/B001/E01/quantity 1 succeeds; availability falls by 1
+R4,Reject invalid or impossible requests without state change,"Unknown IDs, duplicate loan ID, invalid quantity and insufficient stock"
+R5,Return an active loan once and restore its stored quantity,First return succeeds; repeated return fails without increasing stock
+R6,Report active loans in ascending loan-ID order,New report is ordered; retained history stays in issue order
+R7,Use a common interface across purposeful equipment subclasses,Mixed preparation report uses overridden methods
+R8,Provide a repeatable console workflow with clear feedback,Catalogue/search/issue/return/report/quit; bad menu/input recovers
+R9,"Provide evidence of testing, versions and evaluation","Expected/actual logs, repairs, restore check and requirement evaluation"

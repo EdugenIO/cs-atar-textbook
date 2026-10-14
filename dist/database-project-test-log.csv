@@ -1,0 +1,6 @@
+TestID,Requirement,InputOrAction,ExpectedOutcome,ActualEvidence,PassFail,Correction
+T01,Baseline counts,Fresh project database,4 borrowers / 3 categories / 5 equipment / 6 loans,,,
+T02,Active report,Original Returned values,Four correctly joined rows,,,
+T03,Cost domain,Negative estimate,Rejected without changing original row,,,
+T04,Reference integrity,Loan using B999,Rejected with FK enforcement on,,,
+T05,Recovery,Rehearsal then rollback,Original rows restored,,,

@@ -1,0 +1,5 @@
+Case,Input,Target,Expected index,Expected probes,Actual,Pass,Explanation
+Empty,[],5,None,0,,,
+First,"[101,104,108,112,117,123,130]",101,0,,,,
+Between,"[101,104,108,112,117,123,130]",119,None,,,,
+Duplicates,"[2,2,2]",2,linear0 or binary matching index,,,,

@@ -1,0 +1,7 @@
+BookingID,MemberCode,Workshop,Day
+B01,F01,Python,Monday
+B02,F02,Python,Monday
+B03,F03,Python,Tuesday
+B04,F01,Networks,Tuesday
+B05,F04,Networks,Tuesday
+B06,F05,Security,Friday

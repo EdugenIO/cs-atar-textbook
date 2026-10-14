@@ -1,0 +1,4 @@
+EquipmentID,EquipmentDescription,CategoryID,CategoryName
+E01,Camera,C01,Imaging
+E02,Tripod,C02,Support
+E03,Recorder,C03,Audio

@@ -1,0 +1,7 @@
+Instructor(InstructorID PK, DisplayName)
+Workshop(WorkshopID PK, Title)
+Session(SessionID PK, WorkshopID FK, InstructorID FK, SessionDate, Capacity)
+Member(MemberID PK, DisplayName)
+Booking(MemberID PK/FK, SessionID PK/FK, BookedOn)
+Attendance(MemberID PK/FK, SessionID PK/FK, Present)
+Attendance(MemberID,SessionID) jointly references Booking(MemberID,SessionID).

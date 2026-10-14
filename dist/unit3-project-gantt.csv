@@ -1,0 +1,9 @@
+task,start_workshop,end_workshop,predecessor,actual_start,actual_end,change_reason
+Investigate,7.1,7.2,none,,,
+Design,7.3,7.4,Investigate,,,
+Core build,8.3,8.4,Design,,,
+Integrate,9.3,9.4,Core build,,,
+Acceptance,10.1,10.1,Integrate,,,
+Repair/restore,10.2,10.2,Acceptance,,,
+Demonstrate,10.3,10.3,Repair/restore,,,
+Evaluate,10.4,10.4,Demonstrate,,,

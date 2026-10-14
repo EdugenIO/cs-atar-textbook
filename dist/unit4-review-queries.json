@@ -1,0 +1,7 @@
+{
+  "Q1": "SELECT m.MemberID, m.DisplayName || ' / ' || w.Title AS BookingLabel, s.SessionID\nFROM Member AS m INNER JOIN Booking AS b ON m.MemberID=b.MemberID\nINNER JOIN Session AS s ON b.SessionID=s.SessionID\nINNER JOIN Workshop AS w ON s.WorkshopID=w.WorkshopID\nORDER BY s.SessionID,m.MemberID;",
+  "Q2": "SELECT s.SessionID,COUNT(b.MemberID) AS Bookings,\ns.Capacity-COUNT(b.MemberID) AS PlacesLeft\nFROM Session AS s LEFT JOIN Booking AS b ON s.SessionID=b.SessionID\nGROUP BY s.SessionID,s.Capacity ORDER BY s.SessionID;",
+  "Q3": "SELECT b.MemberID,b.SessionID,a.Present\nFROM Booking AS b LEFT JOIN Attendance AS a\nON b.MemberID=a.MemberID AND b.SessionID=a.SessionID\nORDER BY b.SessionID,b.MemberID;",
+  "Q4": "SELECT s.SessionID,COUNT(b.MemberID) AS Bookings,s.Capacity\nFROM Session AS s INNER JOIN Booking AS b ON s.SessionID=b.SessionID\nGROUP BY s.SessionID,s.Capacity HAVING COUNT(b.MemberID)>=s.Capacity\nORDER BY s.SessionID;",
+  "Q5": "SELECT w.WorkshopID,SUM(s.Capacity) AS TotalCapacity\nFROM Workshop AS w INNER JOIN Session AS s ON w.WorkshopID=s.WorkshopID\nGROUP BY w.WorkshopID ORDER BY w.WorkshopID;"
+}

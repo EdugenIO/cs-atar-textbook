@@ -1,0 +1,42 @@
+{
+  "Q1": {
+    "title": "Four-table booking report",
+    "sql": "SELECT b.MemberID, m.DisplayName, s.SessionID, w.Title, s.SessionDate\nFROM Booking AS b\nINNER JOIN Member AS m ON m.MemberID = b.MemberID\nINNER JOIN Session AS s ON s.SessionID = b.SessionID\nINNER JOIN Workshop AS w ON w.WorkshopID = s.WorkshopID\nORDER BY s.SessionID, b.MemberID;"
+  },
+  "Q2": {
+    "title": "Capacity summary at session grain",
+    "sql": "SELECT COUNT(*) AS SessionCount, SUM(Capacity) AS TotalPlaces,\n       AVG(Capacity) AS MeanPlaces, MIN(Capacity) AS Smallest,\n       MAX(Capacity) AS Largest\nFROM Session;"
+  },
+  "Q3": {
+    "title": "Booked sessions only",
+    "sql": "SELECT s.SessionID, COUNT(*) AS Bookings\nFROM Session AS s\nINNER JOIN Booking AS b ON b.SessionID = s.SessionID\nGROUP BY s.SessionID\nORDER BY s.SessionID;"
+  },
+  "Q4": {
+    "title": "All sessions including zero bookings",
+    "sql": "SELECT s.SessionID, COUNT(b.MemberID) AS Bookings\nFROM Session AS s\nLEFT JOIN Booking AS b ON b.SessionID = s.SessionID\nGROUP BY s.SessionID\nORDER BY s.SessionID;"
+  },
+  "Q5": {
+    "title": "Calculated capacity and percentage",
+    "sql": "SELECT s.SessionID, s.Capacity, COUNT(b.MemberID) AS Bookings,\n       s.Capacity - COUNT(b.MemberID) AS Remaining,\n       ROUND(100.0 * COUNT(b.MemberID) / s.Capacity, 1) AS FillPercent\nFROM Session AS s\nLEFT JOIN Booking AS b ON b.SessionID = s.SessionID\nGROUP BY s.SessionID, s.Capacity\nORDER BY s.SessionID;"
+  },
+  "Q6": {
+    "title": "Concatenated labels",
+    "sql": "SELECT b.MemberID, s.SessionID,\n       m.DisplayName || ' / ' || w.Title AS BookingLabel\nFROM Booking AS b\nINNER JOIN Member AS m ON m.MemberID = b.MemberID\nINNER JOIN Session AS s ON s.SessionID = b.SessionID\nINNER JOIN Workshop AS w ON w.WorkshopID = s.WorkshopID\nORDER BY s.SessionID, b.MemberID;"
+  },
+  "Q7": {
+    "title": "Optional attendance by the whole key",
+    "sql": "SELECT b.MemberID, b.SessionID, a.Present\nFROM Booking AS b\nLEFT JOIN Attendance AS a\n ON a.MemberID = b.MemberID AND a.SessionID = b.SessionID\nORDER BY b.SessionID, b.MemberID;"
+  },
+  "Q8": {
+    "title": "Filter groups with HAVING",
+    "sql": "SELECT s.SessionID, COUNT(b.MemberID) AS Bookings\nFROM Session AS s\nLEFT JOIN Booking AS b ON b.SessionID = s.SessionID\nGROUP BY s.SessionID\nHAVING COUNT(b.MemberID) >= 2\nORDER BY s.SessionID;"
+  },
+  "Q9": {
+    "title": "Rows with recorded presence",
+    "sql": "SELECT b.MemberID, b.SessionID\nFROM Booking AS b\nLEFT JOIN Attendance AS a\n ON a.MemberID = b.MemberID AND a.SessionID = b.SessionID\nWHERE a.Present = 1\nORDER BY b.SessionID, b.MemberID;"
+  },
+  "Q10": {
+    "title": "Recorded attendance totals, not unknown-as-absent",
+    "sql": "SELECT b.SessionID, COUNT(*) AS Bookings,\n       COUNT(a.Present) AS Recorded,\n       SUM(a.Present) AS PresentCount\nFROM Booking AS b\nLEFT JOIN Attendance AS a\n ON a.MemberID = b.MemberID AND a.SessionID = b.SessionID\nGROUP BY b.SessionID\nORDER BY b.SessionID;"
+  }
+}

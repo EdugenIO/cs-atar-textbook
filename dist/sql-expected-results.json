@@ -1,0 +1,203 @@
+[
+  {
+    "title": "All equipment fields",
+    "sql": "SELECT * FROM Equipment ORDER BY EquipmentID;",
+    "columns": [
+      "EquipmentID",
+      "EquipmentDescription",
+      "CategoryID"
+    ],
+    "rows": [
+      [
+        "E01",
+        "Camera",
+        "C01"
+      ],
+      [
+        "E02",
+        "Tripod",
+        "C02"
+      ],
+      [
+        "E03",
+        "Recorder",
+        "C03"
+      ],
+      [
+        "E04",
+        "Camera",
+        "C01"
+      ],
+      [
+        "E05",
+        "Microphone",
+        "C03"
+      ]
+    ]
+  },
+  {
+    "title": "Choose fields",
+    "sql": "SELECT EquipmentID, EquipmentDescription FROM Equipment ORDER BY EquipmentID;",
+    "columns": [
+      "EquipmentID",
+      "EquipmentDescription"
+    ],
+    "rows": [
+      [
+        "E01",
+        "Camera"
+      ],
+      [
+        "E02",
+        "Tripod"
+      ],
+      [
+        "E03",
+        "Recorder"
+      ],
+      [
+        "E04",
+        "Camera"
+      ],
+      [
+        "E05",
+        "Microphone"
+      ]
+    ]
+  },
+  {
+    "title": "Camera items",
+    "sql": "SELECT EquipmentID, EquipmentDescription FROM Equipment WHERE EquipmentDescription = 'Camera' ORDER BY EquipmentID;",
+    "columns": [
+      "EquipmentID",
+      "EquipmentDescription"
+    ],
+    "rows": [
+      [
+        "E01",
+        "Camera"
+      ],
+      [
+        "E04",
+        "Camera"
+      ]
+    ]
+  },
+  {
+    "title": "Active loans",
+    "sql": "SELECT LoanID, DueDate FROM Loan WHERE Returned = 0 ORDER BY DueDate ASC, LoanID ASC;",
+    "columns": [
+      "LoanID",
+      "DueDate"
+    ],
+    "rows": [
+      [
+        "L001",
+        "2026-04-06"
+      ],
+      [
+        "L006",
+        "2026-04-07"
+      ],
+      [
+        "L002",
+        "2026-04-08"
+      ],
+      [
+        "L004",
+        "2026-04-10"
+      ]
+    ]
+  },
+  {
+    "title": "Overdue at 8 April",
+    "sql": "SELECT LoanID, BorrowerID, DueDate FROM Loan WHERE Returned = 0 AND DueDate < '2026-04-08' ORDER BY DueDate ASC, LoanID ASC;",
+    "columns": [
+      "LoanID",
+      "BorrowerID",
+      "DueDate"
+    ],
+    "rows": [
+      [
+        "L001",
+        "B001",
+        "2026-04-06"
+      ],
+      [
+        "L006",
+        "B004",
+        "2026-04-07"
+      ]
+    ]
+  },
+  {
+    "title": "Audio or imaging items",
+    "sql": "SELECT EquipmentID, CategoryID FROM Equipment WHERE CategoryID = 'C03' OR CategoryID = 'C01' ORDER BY EquipmentID;",
+    "columns": [
+      "EquipmentID",
+      "CategoryID"
+    ],
+    "rows": [
+      [
+        "E01",
+        "C01"
+      ],
+      [
+        "E03",
+        "C03"
+      ],
+      [
+        "E04",
+        "C01"
+      ],
+      [
+        "E05",
+        "C03"
+      ]
+    ]
+  },
+  {
+    "title": "Grouped conditions",
+    "sql": "SELECT LoanID FROM Loan WHERE Returned = 0 AND (BorrowerID = 'B001' OR BorrowerID = 'B002') ORDER BY LoanID;",
+    "columns": [
+      "LoanID"
+    ],
+    "rows": [
+      [
+        "L001"
+      ],
+      [
+        "L002"
+      ]
+    ]
+  },
+  {
+    "title": "Distinct descriptions",
+    "sql": "SELECT DISTINCT EquipmentDescription FROM Equipment ORDER BY EquipmentDescription;",
+    "columns": [
+      "EquipmentDescription"
+    ],
+    "rows": [
+      [
+        "Camera"
+      ],
+      [
+        "Microphone"
+      ],
+      [
+        "Recorder"
+      ],
+      [
+        "Tripod"
+      ]
+    ]
+  },
+  {
+    "title": "Empty result",
+    "sql": "SELECT EquipmentID FROM Equipment WHERE CategoryID = 'C99' ORDER BY EquipmentID;",
+    "columns": [
+      "EquipmentID"
+    ],
+    "rows": []
+  }
+]

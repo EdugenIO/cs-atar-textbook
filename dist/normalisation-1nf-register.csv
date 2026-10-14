@@ -1,0 +1,7 @@
+BorrowerID,BorrowerLabel,EquipmentID,EquipmentDescription,CategoryID,CategoryName,ReservationDate,ReservationStatus
+B001,Learner A,E01,Camera,C01,Imaging,2026-05-01,Confirmed
+B001,Learner A,E02,Tripod,C02,Support,2026-05-01,Requested
+B002,Learner B,E01,Camera,C01,Imaging,2026-05-02,Confirmed
+B001,Learner A,E01,Camera,C01,Imaging,2026-05-08,Requested
+B003,Learner C,E03,Recorder,C03,Audio,2026-05-02,Confirmed
+B002,Learner B,E01,Camera,C01,Imaging,2026-05-01,Requested

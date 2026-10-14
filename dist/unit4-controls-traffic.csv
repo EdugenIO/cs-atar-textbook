@@ -1,0 +1,5 @@
+rule,source,destination,protocol,port,action
+R1,Visitors,Internet,TCP,443,allow
+R2,Staff,App,TCP,443,allow
+R3,Staff,Printer,TCP,631,allow
+R4,Visitors,Internal,any,any,deny

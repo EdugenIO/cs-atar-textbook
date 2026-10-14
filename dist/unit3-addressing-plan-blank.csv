@@ -1,0 +1,5 @@
+Group,Endpoint count,Gateway count,Required addresses,Subnet,Mask,First host,Last host,Broadcast,Usable capacity,Chosen gateway
+Media,50,1,51,,,,,,,
+Staff,25,1,26,,,,,,,
+Devices,12,1,13,,,,,,,
+Visitors,6,1,7,,,,,,,

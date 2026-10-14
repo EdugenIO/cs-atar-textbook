@@ -1,0 +1,2 @@
+Version/change,Trigger,Requirement,Observed problem,Proposed correction,Focused test,Affected regression checks,Resolution/evidence
+,Second return,R5,Stock increases again,Guard inactive before mutation,Repeat result/state,Valid return; issue; report/history,

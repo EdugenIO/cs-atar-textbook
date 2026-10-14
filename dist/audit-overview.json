@@ -1,0 +1,38 @@
+{
+  "checked": "14 October 2026",
+  "scope": "Unit 4 newly mapped; existing Unit 1–3 map links/downloads and open actions rechecked. Prior content-audit dates retained.",
+  "units": [
+    {
+      "unit": 1,
+      "total": 30,
+      "route": "coverage",
+      "date": "13 October 2026",
+      "summary": "Original content map; symbol fidelity, teacher review, pacing and learner practical work still require verification.",
+      "download": "unit1-coverage-audit.md"
+    },
+    {
+      "unit": 2,
+      "total": 41,
+      "route": "unit2-coverage",
+      "date": "13 October 2026",
+      "summary": "Data-quality/diagram repairs are documented; dictionary versus starter-schema rules, teacher review and learner evidence remain open.",
+      "download": "unit2-coverage-audit.md"
+    },
+    {
+      "unit": 3,
+      "total": 45,
+      "route": "unit3-coverage",
+      "date": "14 October 2026",
+      "summary": "38 draft mapped; 3 convention checks; 3 practical evidence; 1 environment evidence. Clinic is available; results remain unverified.",
+      "download": "unit3-coverage-pack.zip"
+    },
+    {
+      "unit": 4,
+      "total": 51,
+      "route": "unit4-coverage",
+      "date": "14 October 2026",
+      "summary": "43 draft mapped; 1 practice gap; 1 partial; 1 convention check; 5 practical evidence. See the focused follow-up plan.",
+      "download": "unit4-coverage-pack.zip"
+    }
+  ]
+}

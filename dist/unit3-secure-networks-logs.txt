@@ -1,0 +1,12 @@
+SYNTHETIC classroom logs — no traffic was sent to these addresses.
+A: Media -> gateway 192.168.50.1, four ping probes:
+Reply time=2ms; Reply time=3ms; Request timed out; Reply time=7ms.
+Sent4 Received3. Explain the sample and calculate successful-reply mean RTT.
+B: tracert -d 198.51.100.20
+1 1ms 1ms 1ms 192.168.50.1
+2 * * * Request timed out
+3 12ms 13ms 12ms 198.51.100.20
+C: ping by assigned IP responds; ping by name says host could not be found.
+D: ping by server IP responds; TCP web connection fails.
+E: Visitors -> Staff ping times out; Visitors -> internet web works.
+For each distinguish observations from hypotheses. Documentation addresses in B are not a live lab target.

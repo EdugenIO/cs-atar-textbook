@@ -1,0 +1,176 @@
+[
+  {
+    "title": "Readable active loans",
+    "sql": "SELECT l.LoanID, b.BorrowerLabel, e.EquipmentDescription, l.DueDate\nFROM Loan AS l\nINNER JOIN Borrower AS b ON l.BorrowerID = b.BorrowerID\nINNER JOIN Equipment AS e ON l.EquipmentID = e.EquipmentID\nWHERE l.Returned = 0\nORDER BY l.DueDate, l.LoanID;",
+    "columns": [
+      "LoanID",
+      "BorrowerLabel",
+      "EquipmentDescription",
+      "DueDate"
+    ],
+    "rows": [
+      [
+        "L001",
+        "Learner A",
+        "Camera",
+        "2026-04-06"
+      ],
+      [
+        "L006",
+        "Learner D",
+        "Microphone",
+        "2026-04-07"
+      ],
+      [
+        "L002",
+        "Learner B",
+        "Tripod",
+        "2026-04-08"
+      ],
+      [
+        "L004",
+        "Learner C",
+        "Camera",
+        "2026-04-10"
+      ]
+    ]
+  },
+  {
+    "title": "Loan history with categories",
+    "sql": "SELECT l.LoanID, e.EquipmentID, c.CategoryName\nFROM Loan AS l\nINNER JOIN Equipment AS e ON l.EquipmentID = e.EquipmentID\nINNER JOIN Category AS c ON e.CategoryID = c.CategoryID\nORDER BY l.LoanID;",
+    "columns": [
+      "LoanID",
+      "EquipmentID",
+      "CategoryName"
+    ],
+    "rows": [
+      [
+        "L001",
+        "E01",
+        "Imaging"
+      ],
+      [
+        "L002",
+        "E02",
+        "Support"
+      ],
+      [
+        "L003",
+        "E03",
+        "Audio"
+      ],
+      [
+        "L004",
+        "E04",
+        "Imaging"
+      ],
+      [
+        "L005",
+        "E02",
+        "Support"
+      ],
+      [
+        "L006",
+        "E05",
+        "Audio"
+      ]
+    ]
+  },
+  {
+    "title": "Inventory summary",
+    "sql": "SELECT COUNT(*) AS ItemCount, SUM(ReplacementCost) AS TotalCost,\n       AVG(ReplacementCost) AS MeanCost, MIN(ReplacementCost) AS LowestCost,\n       MAX(ReplacementCost) AS HighestCost\nFROM Equipment;",
+    "columns": [
+      "ItemCount",
+      "TotalCost",
+      "MeanCost",
+      "LowestCost",
+      "HighestCost"
+    ],
+    "rows": [
+      [
+        5,
+        1400,
+        280.0,
+        80,
+        600
+      ]
+    ]
+  },
+  {
+    "title": "Borrowers represented in loan history",
+    "sql": "SELECT b.BorrowerID, b.BorrowerLabel, COUNT(*) AS LoanCount\nFROM Borrower AS b\nINNER JOIN Loan AS l ON b.BorrowerID = l.BorrowerID\nGROUP BY b.BorrowerID, b.BorrowerLabel\nORDER BY b.BorrowerID;",
+    "columns": [
+      "BorrowerID",
+      "BorrowerLabel",
+      "LoanCount"
+    ],
+    "rows": [
+      [
+        "B001",
+        "Learner A",
+        2
+      ],
+      [
+        "B002",
+        "Learner B",
+        2
+      ],
+      [
+        "B003",
+        "Learner C",
+        1
+      ],
+      [
+        "B004",
+        "Learner D",
+        1
+      ]
+    ]
+  },
+  {
+    "title": "Empty aggregate input",
+    "sql": "SELECT COUNT(*) AS ItemCount, SUM(ReplacementCost) AS TotalCost,\n       AVG(ReplacementCost) AS MeanCost, MIN(ReplacementCost) AS LowestCost,\n       MAX(ReplacementCost) AS HighestCost\nFROM Equipment WHERE CategoryID = 'C99';",
+    "columns": [
+      "ItemCount",
+      "TotalCost",
+      "MeanCost",
+      "LowestCost",
+      "HighestCost"
+    ],
+    "rows": [
+      [
+        0,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  },
+  {
+    "title": "Active history per borrower",
+    "sql": "SELECT BorrowerID, COUNT(*) AS ActiveCount\nFROM Loan WHERE Returned = 0\nGROUP BY BorrowerID ORDER BY BorrowerID;",
+    "columns": [
+      "BorrowerID",
+      "ActiveCount"
+    ],
+    "rows": [
+      [
+        "B001",
+        1
+      ],
+      [
+        "B002",
+        1
+      ],
+      [
+        "B003",
+        1
+      ],
+      [
+        "B004",
+        1
+      ]
+    ]
+  }
+]

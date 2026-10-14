@@ -1,0 +1,330 @@
+[
+  {
+    "id": "C01",
+    "page": "14",
+    "topic": "Testing authority / penetration / ethics",
+    "route": "responsible-data",
+    "evidence": "Scope A\u2013F; scenarios R05/R06; paper Q16",
+    "status": "Mapped"
+  },
+  {
+    "id": "C02",
+    "page": "14",
+    "topic": "Privacy Act / APP security",
+    "route": "responsible-data",
+    "evidence": "Dated jurisdiction note; selected APP decisions; R01\u2013R07",
+    "status": "Mapped"
+  },
+  {
+    "id": "C03",
+    "page": "14\u201315",
+    "topic": "Passwords / policy / factors / biometrics",
+    "route": "security-threats",
+    "evidence": "Access section; factor comparison; paper Q14",
+    "status": "Mapped"
+  },
+  {
+    "id": "C04",
+    "page": "15",
+    "topic": "Symmetric / public-key protection",
+    "route": "security-threats",
+    "evidence": "Key-role table; project limits; Q14",
+    "status": "Mapped"
+  },
+  {
+    "id": "C05",
+    "page": "15",
+    "topic": "Deception / phishing",
+    "route": "security-threats",
+    "evidence": "Mechanism table; S01; consolidation retrieval",
+    "status": "Mapped"
+  },
+  {
+    "id": "C06",
+    "page": "15",
+    "topic": "Service disruption",
+    "route": "security-threats",
+    "evidence": "DoS distinction; S04; controls and limits",
+    "status": "Mapped"
+  },
+  {
+    "id": "C07",
+    "page": "15",
+    "topic": "Bypass access path",
+    "route": "security-threats",
+    "evidence": "Back-door mechanism and maintenance-account example",
+    "status": "Mapped"
+  },
+  {
+    "id": "C08",
+    "page": "15",
+    "topic": "Source-address falsification",
+    "route": "security-threats",
+    "evidence": "IP spoofing versus identity; control matching",
+    "status": "Mapped"
+  },
+  {
+    "id": "C09",
+    "page": "15",
+    "topic": "Database-command injection",
+    "route": "security-threats",
+    "evidence": "SQL injection versus XSS; parameters; Q11",
+    "status": "Mapped"
+  },
+  {
+    "id": "C10",
+    "page": "15",
+    "topic": "Interception / browser injection",
+    "route": "security-threats",
+    "evidence": "MITM and XSS distinctions; S06; Q11",
+    "status": "Mapped"
+  },
+  {
+    "id": "C11",
+    "page": "15",
+    "topic": "Host infection / self-spread / disguise",
+    "route": "security-threats",
+    "evidence": "Virus/worm/Trojan mechanisms; comparison workbook; Q11",
+    "status": "Mapped"
+  },
+  {
+    "id": "C12",
+    "page": "15",
+    "topic": "Monitoring malware / adverts / extortion",
+    "route": "security-threats",
+    "evidence": "Spyware/adware/ransomware; S03; Q12",
+    "status": "Mapped"
+  },
+  {
+    "id": "C13",
+    "page": "15",
+    "topic": "Physical exposure / newly unknown flaw",
+    "route": "security-threats",
+    "evidence": "Physical and zero-day cases; S07/S08",
+    "status": "Mapped"
+  },
+  {
+    "id": "C14",
+    "page": "15",
+    "topic": "Security goals and incident analysis",
+    "route": "security-threats",
+    "evidence": "CIA worked incident; eight scenarios; Q12",
+    "status": "Mapped"
+  },
+  {
+    "id": "C15",
+    "page": "15",
+    "topic": "Identity / permission / activity audit",
+    "route": "security-threats",
+    "evidence": "AAA and shared-account analysis; Q13",
+    "status": "Mapped"
+  },
+  {
+    "id": "C16",
+    "page": "16",
+    "topic": "Cryptography / readable-encrypted text",
+    "route": "security-threats",
+    "evidence": "Plaintext/ciphertext and historical/modern distinction",
+    "status": "Mapped"
+  },
+  {
+    "id": "C17",
+    "page": "16",
+    "topic": "Fixed rotation / shuffled substitution",
+    "route": "security-threats",
+    "evidence": "Traced mapping, reverse mapping; cipher workbook",
+    "status": "Mapped"
+  },
+  {
+    "id": "C18",
+    "page": "16",
+    "topic": "Changing alphabets / cipher application",
+    "route": "security-threats",
+    "evidence": "Vigen\u00e8re KEY convention; encrypt/decrypt; Q15",
+    "status": "Mapped"
+  },
+  {
+    "id": "C19",
+    "page": "16",
+    "topic": "Key trials / language-frequency reasoning",
+    "route": "security-threats",
+    "evidence": "Brute-force/frequency explanation; ambiguity limits",
+    "status": "Mapped"
+  },
+  {
+    "id": "D01",
+    "page": "16",
+    "topic": "Data interpreted as information",
+    "route": "database-foundations",
+    "evidence": "Fixed-date overdue question and six source records; Q2",
+    "status": "Mapped"
+  },
+  {
+    "id": "D02",
+    "page": "16",
+    "topic": "Flat / related organisation",
+    "route": "database-foundations",
+    "evidence": "Maintenance simulation; relational reconstruction",
+    "status": "Mapped"
+  },
+  {
+    "id": "D03",
+    "page": "16",
+    "topic": "Management software / access / independence",
+    "route": "database-foundations",
+    "evidence": "DBMS versus data; index/column examples; Q2",
+    "status": "Mapped"
+  },
+  {
+    "id": "D04",
+    "page": "16\u201317",
+    "topic": "Entity / attribute / field-record-table",
+    "route": "entities-relationships",
+    "evidence": "Entity-instance hierarchy and worked dictionary",
+    "status": "Mapped"
+  },
+  {
+    "id": "D05",
+    "page": "16\u201317",
+    "topic": "Relationship varieties / linking M:N",
+    "route": "entities-relationships",
+    "evidence": "One-to-one example; borrowing history and enrolment bridge",
+    "status": "Mapped"
+  },
+  {
+    "id": "D06",
+    "page": "16\u201317",
+    "topic": "Conceptual numeric / Boolean / text / date types",
+    "route": "entities-relationships",
+    "evidence": "Type choices; SQLite mapping; review schema comparison",
+    "status": "Mapped"
+  },
+  {
+    "id": "D07",
+    "page": "17",
+    "topic": "Identifiers / references / multi-part keys",
+    "route": "entities-relationships",
+    "evidence": "Counterexamples and repeat events; normalisation key; Q3",
+    "status": "Mapped"
+  },
+  {
+    "id": "D08",
+    "page": "17",
+    "topic": "Maintenance anomalies",
+    "route": "normalisation",
+    "evidence": "Insert/update/delete examples; workbook",
+    "status": "Mapped"
+  },
+  {
+    "id": "D09",
+    "page": "17",
+    "topic": "Diagram / dictionary documentation",
+    "route": "entities-relationships",
+    "evidence": "Four-table SVG and dictionary; independent redraw",
+    "status": "Mapped"
+  },
+  {
+    "id": "D10",
+    "page": "17",
+    "topic": "Diagram interpretation: 3\u20136 tables",
+    "route": "unit2-review",
+    "evidence": "Four-table reread plus new six-table extension; Q4",
+    "status": "Expanded"
+  },
+  {
+    "id": "D11",
+    "page": "17",
+    "topic": "Four-table diagram / M:N resolution",
+    "route": "unit2-review",
+    "evidence": "Fresh club design and dictionary; explicit key/rule checklist",
+    "status": "Expanded"
+  },
+  {
+    "id": "D12",
+    "page": "17",
+    "topic": "Currency / source / relevance / accuracy / outliers",
+    "route": "unit2-review",
+    "evidence": "Five evidence-based checks and non-destructive cleaning task; Q1",
+    "status": "Expanded"
+  },
+  {
+    "id": "D13",
+    "page": "17",
+    "topic": "Validity versus factual accuracy",
+    "route": "unit2-review",
+    "evidence": "Valid wrong date and outlier case; correction evidence",
+    "status": "Expanded"
+  },
+  {
+    "id": "D14",
+    "page": "17",
+    "topic": "1NF \u2192 2NF \u2192 3NF",
+    "route": "normalisation",
+    "evidence": "Six-event lossless decomposition; club transfer; Q5",
+    "status": "Mapped"
+  },
+  {
+    "id": "D15",
+    "page": "18",
+    "topic": "Relational implementation",
+    "route": "database-solution",
+    "evidence": "Four-table creation/run/explain; minimum-table scope exceeded",
+    "status": "Mapped"
+  },
+  {
+    "id": "D16",
+    "page": "18",
+    "topic": "Reading / ordering queries",
+    "route": "sql-basics",
+    "evidence": "Nine checked examples; Q6",
+    "status": "Mapped"
+  },
+  {
+    "id": "D17",
+    "page": "18",
+    "topic": "Insert / update / delete",
+    "route": "database-solution",
+    "evidence": "Targeted rehearsal and rollback; Q9/Q10",
+    "status": "Mapped"
+  },
+  {
+    "id": "D18",
+    "page": "18",
+    "topic": "Inner matching / numeric summaries",
+    "route": "database-solution",
+    "evidence": "Six reports; row-level trap; Q7/Q8",
+    "status": "Mapped"
+  },
+  {
+    "id": "D19",
+    "page": "18",
+    "topic": "Collection / privacy / permitted purpose",
+    "route": "responsible-data",
+    "evidence": "Synthetic versus coded-real; R01\u2013R04; Q16",
+    "status": "Mapped"
+  },
+  {
+    "id": "D20",
+    "page": "18",
+    "topic": "Protect / recover / restrict",
+    "route": "database-solution",
+    "evidence": "Constraints and restore evidence requirements; AAA/file limits",
+    "status": "Mapped"
+  },
+  {
+    "id": "D21",
+    "page": "18",
+    "topic": "Developer responsibilities",
+    "route": "responsible-data",
+    "evidence": "Applicability/retention qualifications; testing scope",
+    "status": "Mapped"
+  },
+  {
+    "id": "T01",
+    "page": "14",
+    "topic": "Investigate / design / develop / evaluate",
+    "route": "database-solution",
+    "evidence": "14-lesson project; criteria, design, build and evidence evaluation",
+    "status": "Mapped"
+  }
+]

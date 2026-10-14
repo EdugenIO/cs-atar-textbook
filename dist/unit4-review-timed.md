@@ -1,0 +1,10 @@
+# Original controlled formative sample — 24 indicative marks
+Suggested55minutes including5minutes reading and5minutes checking (~1.9minutes/mark working time). School may adapt; this is not an SCSA exam. It replaces the Week12 lesson3 slot. If used for the planned school theory assessment, teacher must adapt/approve coverage, marking, timing and authentication; do not add another summative task. Default closed-answer/notes for formative attempt, paper SQL permitted.
+Fresh facts: same six-table design, S04 now has M02 and M05 bookings, no Attendance for those pairs; capacity remains4. Other seed unchanged. The hypothetical app still trusts browser role strings. Federal entity/date assumptions match review case; eligibility has not been established.
+R1 (4): explain Booking key and Attendance composite reference; state one permitted and one rejected pair operation, with reason (1mark each).
+R2 (6): write a report including ALL sessions, booking count and remaining places. Criteria: LEFTJOIN1, correct link1, COUNT(non-null child)1, grouping1, calculated field/aliases1, correct S04 output2/2 and deterministic sort1.
+R3 (4): an insert-booking then invalid Present2 fails. Explain explicit transaction/rollback, expected booking effect, domain constraint and why this doesn't prove crash durability (1each).
+R4 (4): learner-labelled allow250 then deny event. Give observed fact1, alternative explanation/unknown1, server-side control1, legitimate/prohibited test pair1. No blame or notification verdict from counts alone.
+R5 (3): identify certificate public binding/server private proof1, authenticated agreement secret derivation1, symmetric authenticated records plus a remaining authorisation/endpoint limit1. No RSA transport claim.
+R6 (3): name relevant security principle APP11 and context1; give missing eligibility fact/need for prompt assessment1; explain that30days isn't a notification waiting period and a WA public-sector counterfactual needs separate coverage/date analysis1.
+Use supplied marking checkpoints and record one fresh retry after feedback; default formative sample is not an extra school assessment.

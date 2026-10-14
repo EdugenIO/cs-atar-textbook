@@ -1,0 +1,18 @@
+entity,field,key_role,SQLite_storage,meaning,enforcement
+Instructor,InstructorID,PK,TEXT,Synthetic identifier,NOT NULL;key/reference as indicated;ID format not checked
+Instructor,DisplayName,,TEXT,Human-readable label; duplicates permitted,NOT NULL;trimmed length1–60
+Workshop,WorkshopID,PK,TEXT,Synthetic identifier,NOT NULL;key/reference as indicated;ID format not checked
+Workshop,Title,,TEXT,Human-readable label; duplicates permitted,NOT NULL;trimmed length1–80
+Session,SessionID,PK,TEXT,Synthetic identifier,NOT NULL;key/reference as indicated;ID format not checked
+Session,WorkshopID,FK,TEXT,Synthetic identifier,NOT NULL;key/reference as indicated;ID format not checked
+Session,InstructorID,FK,TEXT,Synthetic identifier,NOT NULL;key/reference as indicated;ID format not checked
+Session,SessionDate,,TEXT,Conceptual date; YYYY-MM-DD intended,NOT NULL;calendar validation not enforced
+Session,Capacity,,INTEGER,Positive session places,NOT NULL;positive stored integer
+Member,MemberID,PK,TEXT,Synthetic identifier,NOT NULL;key/reference as indicated;ID format not checked
+Member,DisplayName,,TEXT,Human-readable label; duplicates permitted,NOT NULL;trimmed length1–60
+Booking,MemberID,PK/FK,TEXT,Synthetic identifier,NOT NULL;key/reference as indicated;ID format not checked
+Booking,SessionID,PK/FK,TEXT,Synthetic identifier,NOT NULL;key/reference as indicated;ID format not checked
+Booking,BookedOn,,TEXT,Conceptual date; YYYY-MM-DD intended,NOT NULL;calendar validation not enforced
+Attendance,MemberID,PK/FK pair,TEXT,Synthetic identifier,NOT NULL;key/reference as indicated;ID format not checked
+Attendance,SessionID,PK/FK pair,TEXT,Synthetic identifier,NOT NULL;key/reference as indicated;ID format not checked
+Attendance,Present,,INTEGER,Boolean presence recorded;0absent/1present,NOT NULL;stored integer0or1

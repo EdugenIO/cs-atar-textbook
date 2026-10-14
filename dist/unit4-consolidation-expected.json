@@ -1,0 +1,36 @@
+{
+  "all_resources": [
+    [
+      "R01",
+      2,
+      1
+    ],
+    [
+      "R02",
+      1,
+      1
+    ],
+    [
+      "R03",
+      1,
+      0
+    ],
+    [
+      "R04",
+      0,
+      0
+    ]
+  ],
+  "active_labels": [
+    [
+      "M01",
+      "Person A / Camera",
+      "Media"
+    ],
+    [
+      "M01",
+      "Person A / Microphone",
+      "Media"
+    ]
+  ]
+}

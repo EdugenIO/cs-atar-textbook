@@ -1,0 +1,5 @@
+Observation,IP source,IP destination,TCP source port,TCP destination port,TTL,Frame source,Frame destination
+C sends on LAN A,192.0.2.10,198.51.100.20,51500,443,64,C,RA
+After switch A,192.0.2.10,198.51.100.20,51500,443,64,C,RA
+R sends on LAN B,192.0.2.10,198.51.100.20,51500,443,63,RB,S
+After switch B,192.0.2.10,198.51.100.20,51500,443,63,RB,S

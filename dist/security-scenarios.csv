@@ -1,0 +1,9 @@
+ScenarioID,Scenario
+S01,A message urges the technician to enter credentials at an unfamiliar sign-in link. No one has clicked yet.
+S02,A loan status changes without approval; everyone uses the same account.
+S03,The desk database is encrypted by malware; a recent isolated backup exists.
+S04,The loan portal becomes unreachable during a request flood.
+S05,A web search inserts user text directly into SQL statement text.
+S06,A note is displayed as executable content in a borrower’s browser.
+S07,A laptop with an accessible database is stolen from an unlocked room.
+S08,A new app vulnerability is disclosed; no patch is available and the exposed feature can be disabled.

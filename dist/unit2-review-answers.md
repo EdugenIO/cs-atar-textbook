@@ -1,0 +1,13 @@
+# Unit 2 integrated review — explained checkpoints
+
+A: currency checks whether the status evidence is current; authenticity verifies the source; relevance asks whether health notes are needed for the loan purpose; accuracy compares the due date with authoritative evidence; outlier checking investigates 8000 without automatic deletion. Valid format is not proof of truth. Preserve originals/change history and verify any correction.
+
+B: PKs: CategoryID, EquipmentID, SupplierID, BorrowerID, LoanID, InspectionID in their named tables. FKs: Equipment.CategoryID/SupplierID; Loan.BorrowerID/EquipmentID; Inspection.EquipmentID. Each parent can have zero/many children; each child has one parent. An unused supplier is allowed; an unlinked inspection is not. Multiple inspections per item are allowed. Supplier and Inspection are conceptual extensions, not in the starter.
+
+C: Member(MemberID PK, MemberLabel); Leader(LeaderID PK, LeaderLabel); Activity(ActivityID PK, ActivityName, LeaderID FK); Participation(MemberID PK/FK, ActivityID PK/FK, Term PK, AttendanceCount). Participation uses the three-part key under the stated rule. Parent ends exactly one, child ends zero/many. Draw from both directions; choose/document sizes and count range. Separate 1:1 comparison: a borrower has zero/one locker and a locker zero/one borrower under the added rule; implementation needs an appropriate uniqueness restriction. A foreign key alone does not make a relation 1:1.
+
+D: CategoryName is NOT NULL but not UNIQUE in the starter. Text size and identifier-pattern rules are not enforced by TEXT alone. Returned has NOT NULL and CHECK 0/1 but no DEFAULT in the creation statement. Dates are TEXT; calendar validation and overlapping-loan checks are not provided. A design document and code must be reconciled; record actual behaviour before proposing constraints. Do not assert a dictionary is an exact implemented contract when it is only conceptual.
+
+E: active L001,L002,L004,L006; overdue L001,L006; L002 is due on the reference date and excluded; returned L005 is excluded. Inventory: 5 items, total 1400, mean 280, min 80, max 600. A history join repeats E02. CIA integrity applies to an unapproved status change; shared identity and missing logs weaken AAA attribution. Public coded IDs may still identify people. Test a restored copy against baseline and queries; proposed controls need status labels.
+
+Accept alternative justified models/decisions that meet stated rules. Review original crow's-foot symbols visually against the support booklet. Actual student diagrams, practical evidence and independent teacher review remain required.

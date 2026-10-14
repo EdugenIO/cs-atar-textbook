@@ -1,0 +1,5 @@
+Test,Requirement,Type,Setup/input,Expected result/state,Actual result/state,Outcome,Defect/retest
+T01,R3,Component,Fresh E01/quantity2,True/availability0/one loan,,,
+T02,R4,Boundary,Fresh E01/quantity3,False/unchanged,,,
+T03,R5,Regression,Repeat complete return,False/stock unchanged,,,
+T04,R8,Acceptance,Non-numeric console quantity,Clear feedback/recover/no mutation,,,

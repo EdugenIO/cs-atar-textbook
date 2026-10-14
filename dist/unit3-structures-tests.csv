@@ -1,0 +1,8 @@
+Case,Input,Expected,Actual,Pass,Explanation
+Ordinary grid,"[[2,0,1],[0,4,0]]","rows [3,4]; days [2,4,1]",,,
+Empty grid,[],Empty results,,,
+Zero columns,"[[],[]]","row totals [0,0]; day totals []",,,
+Duplicate labels,"Python;Python",ValueError,,,
+Negative index,-1,ValueError and unchanged grid,,,
+Out of range,2,ValueError and unchanged grid,,,
+Negative places,-1,ValueError and unchanged grid,,,

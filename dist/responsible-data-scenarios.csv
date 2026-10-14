@@ -1,0 +1,9 @@
+ScenarioID,Scenario
+R01,A prototype desk database adds phone numbers and health notes because they might be useful later.
+R02,"Borrower names are removed from a public export, but IDs, exact dates and rare item loans remain."
+R03,A developer sends the loan register to an external service for debugging without checking approval or data handling.
+R04,An incorrect return status leads to an unfair overdue accusation.
+R05,A classmate says it is fine to scan the production school portal to find weaknesses.
+R06,A tester discovers a fault outside the agreed test system and wants to explore it further.
+R07,"A student proposes deleting all project records immediately after demonstration, including material the school must retain."
+R08,The project report claims implemented role-based access although only a visual login screen exists over an accessible SQLite file.

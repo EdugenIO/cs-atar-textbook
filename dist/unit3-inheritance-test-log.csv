@@ -1,0 +1,6 @@
+Case,Before,Operation,Expected,Actual,Pass,Explanation
+Camera boundary,charge19,set_charge(20),Check the lens,,,
+Invalid charge,charge20,set_charge(101),ValueError/unchanged,,,
+Projector boundary,hours999,add_usage(1),Arrange a projector check,,,
+Inherited lend,total2/loan0,lend(2),True/available0,,,
+Mixed report,three classes,preparation_report,subtype messages,,,

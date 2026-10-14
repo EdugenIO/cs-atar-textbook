@@ -1,0 +1,6 @@
+Test,Requirement,Setup/input,Expected result/state,Actual result/state,Pass,Repair/retest
+T01,R3,Fresh; L002/B001/E01/1,True; E01available1; one active record,,,
+T02,R4,Repeat L002,False; state unchanged,,,
+T03,R5,Return L002 twice,True then False; E01available2,,,
+T04,R6,Issue L002 then L001,"ReportL001,L002; historyL002,L001",,,
+T05,R4,Quantity0 or bool,ValueError; unchanged,,,

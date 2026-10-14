@@ -1,0 +1,6 @@
+Case,Before,Operation,Expected result,Expected after,Actual,Pass,Explanation
+All units,total2/loan0,lend(2),True,loan2,,,
+Excess request,total2/loan1,lend(2),False,loan1,,,
+Repeated return,total2/loan0,return_units(1),False,loan0,,,
+Invalid quantity,total2/loan0,lend(0),ValueError,loan0,,,
+Alias,total2/loan0,alias.lend(),True,original loan1,,,

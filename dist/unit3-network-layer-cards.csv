@@ -1,0 +1,8 @@
+OSI layer,Responsibility,TCP/IP group
+7 Application,Network services for application processes,Application
+6 Presentation,"Represent data: encoding, format, compression/security-related transformations",Application
+5 Session,Organise dialogue/session coordination,Application
+4 Transport,"End-to-end transport, ports and protocol-specific delivery behaviour",Transport
+3 Network,Logical addressing and forwarding between networks,Internet
+2 Data link,"Local framing, media access and link addressing",Network / link
+1 Physical,Carry bits as signals over a medium,Network / link

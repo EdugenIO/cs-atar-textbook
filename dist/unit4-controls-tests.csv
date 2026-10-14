@@ -1,0 +1,6 @@
+scenario,expected,observed_or_prediction,evidence,limitation,next_action
+traffic_allowed,,,,,
+traffic_denied,,,,,
+role_allowed,,,,,
+role_denied,,,,,
+shadowed_rule,,,,,

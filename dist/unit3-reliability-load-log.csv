@@ -1,0 +1,3 @@
+Source version,Python/environment,Records,Transaction mix,File bytes if used,Report repeats,Correctness,Issue seconds,Mixed seconds,Report median seconds,Report max seconds,CSV write/read seconds,Agreed criterion,Interpretation
+,,100,Issue all; return every4; duplicate; 2 searches; reports,,3,,,,,,,,
+,,1000,Same mix and conditions,,3,,,,,,,,

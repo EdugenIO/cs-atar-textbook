@@ -1,0 +1,7 @@
+BorrowerID,EquipmentID,ReservationDate,ReservationStatus
+B001,E01,2026-05-01,Confirmed
+B001,E01,2026-05-08,Requested
+B001,E02,2026-05-01,Requested
+B002,E01,2026-05-01,Requested
+B002,E01,2026-05-02,Confirmed
+B003,E03,2026-05-02,Confirmed

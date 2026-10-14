@@ -1,0 +1,6 @@
+# Original response cards
+R1: permitted account exports500records; user says the task was not theirs. Existingdelete denied. Compareauthentication,authorisation,accountinggap; corroborate attribution and exportdestination.
+R2: bookingserverfilesunreadable plus disclosure demand. A backupexistsbutlastrestoretestisunknown. Planverifiedrecoveryandlimitswithoutdeclaringconfidentialityresolved.
+R3: newIPSruleblockslegitimatebookingworkflow. Disablingallrulesrestoresaccess. Comparefocusedtuning/exception with blanketdisable and residualrisk.
+R4: laptoplost, cachedrecordsandactivesessionpossible. Encryptionstatusuncertain. Identifyevidenceandauthorisedresponse ratherthanassumedexposure/noexposure.
+Allfictional;analysisdoesnotauthoriseaccount/networkchanges. For eachstateasset,CIA/AAA,evidence,alternatives,controls,test,limit,response.

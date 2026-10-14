@@ -1,0 +1,7 @@
+role,action,scope
+Guest,view,public
+Learner,view,own
+Facilitator,view,assigned
+Facilitator,update_attendance,assigned
+Registrar,view,all
+Registrar,export,all

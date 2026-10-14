@@ -1,0 +1,474 @@
+{
+  "date": "14 October 2026",
+  "edition": "0.41",
+  "source": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0013/1211323/_Computer-Science-ATAR-Year-12-Syllabus-for-teaching-from-January-2026.PDF",
+  "scope": "Unit 4 printed pages 17–21 (PDF pages 21–25); 51 grouped editorial checks, not official IDs or certification.",
+  "counts": {
+    "Draft mapped": 43,
+    "Practical evidence": 5,
+    "Practice gap": 1,
+    "Convention check": 1,
+    "Partial": 1
+  },
+  "rows": [
+    {
+      "id": "C01",
+      "syllabus_page": "17",
+      "focus": "APP11 security",
+      "route": "unit4-ethics",
+      "evidence": "APP11 design evidence section; case P4; review F1",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C02",
+      "syllabus_page": "17",
+      "focus": "Federal breach scheme",
+      "route": "unit4-ethics",
+      "evidence": "2017 amendment and NDB assessment/notification distinction; P6/P7",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C03",
+      "syllabus_page": "17",
+      "focus": "Law/ethics case application",
+      "route": "unit4-ethics",
+      "evidence": "Eight explicit entity/date case cards; workbook and checkpoints",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C04",
+      "syllabus_page": "17",
+      "focus": "Phishing",
+      "route": "unit4-analysis",
+      "evidence": "Mechanism table and C1 case; evidence alternatives",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C05",
+      "syllabus_page": "17",
+      "focus": "DoS/DDoS",
+      "route": "unit4-analysis",
+      "evidence": "Distributed exhaustion distinction, outage baseline/logs and C5",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C06",
+      "syllabus_page": "17",
+      "focus": "Back door",
+      "route": "unit4-analysis",
+      "evidence": "Undocumented access mechanism and C9",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C07",
+      "syllabus_page": "17",
+      "focus": "IP spoofing",
+      "route": "unit4-analysis",
+      "evidence": "Address falsification vs identity and C10",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C08",
+      "syllabus_page": "17",
+      "focus": "SQL injection",
+      "route": "unit4-analysis",
+      "evidence": "Command construction vs bound data; C8; project parameters",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C09",
+      "syllabus_page": "18",
+      "focus": "Interception",
+      "route": "unit4-analysis",
+      "evidence": "MITM table entry; authenticated connection clinic in crypto",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C10",
+      "syllabus_page": "18",
+      "focus": "Browser injection",
+      "route": "unit4-analysis",
+      "evidence": "XSS vs SQL injection; C7",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C11",
+      "syllabus_page": "18",
+      "focus": "Virus/worm",
+      "route": "unit4-analysis",
+      "evidence": "Host-attached versus self-propagating mechanisms; classification practice",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C12",
+      "syllabus_page": "18",
+      "focus": "Other malware",
+      "route": "unit4-analysis",
+      "evidence": "Trojan/spyware/adware/ransomware entries; C11/C12 and controls response cards",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C13",
+      "syllabus_page": "18",
+      "focus": "Physical/zero-day",
+      "route": "unit4-analysis",
+      "evidence": "Physical exposure and previously unknown flaw distinction; no inferred zero-day verdict",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C14",
+      "syllabus_page": "18",
+      "focus": "Internal threats",
+      "route": "unit4-analysis",
+      "evidence": "Credential compromise, loss and employee misuse; C2/C3/C6",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C15",
+      "syllabus_page": "18",
+      "focus": "Logs/anti-malware",
+      "route": "unit4-controls",
+      "evidence": "Control purpose/limits matrix; earlier synthetic log correlation",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C16",
+      "syllabus_page": "18",
+      "focus": "Firewall/ACL/IPS",
+      "route": "unit4-controls",
+      "evidence": "First-match offline rules, scoped roles, positive/negative test workbook",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C17",
+      "syllabus_page": "18",
+      "focus": "VPN",
+      "route": "unit4-controls",
+      "evidence": "Tunnel purpose/limits; endpoint distinction in crypto",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C18",
+      "syllabus_page": "18",
+      "focus": "People/physical controls",
+      "route": "unit4-controls",
+      "evidence": "Training, conduct and physical security in matrix and comparison task",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C19",
+      "syllabus_page": "18",
+      "focus": "Mitigation application",
+      "route": "unit4-controls",
+      "evidence": "Response cards, two competing proposals and residual-risk/test evidence",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C20",
+      "syllabus_page": "18",
+      "focus": "CIA/AAA application",
+      "route": "unit4-analysis",
+      "evidence": "Separate goals/identity/permission/accounting; supplied incident hypothesis workbook",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C21",
+      "syllabus_page": "19",
+      "focus": "Key roles",
+      "route": "unit4-crypto",
+      "evidence": "Symmetric/public-key/signature/agreement table and explained questions",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C22",
+      "syllabus_page": "19",
+      "focus": "Certificates/data protection",
+      "route": "unit4-crypto",
+      "evidence": "Trust/name/private-possession distinction; fictional C1–C6 checks",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C23",
+      "syllabus_page": "19",
+      "focus": "Secure connection",
+      "route": "unit4-crypto",
+      "evidence": "Simplified authenticated TLS1.3 agreement and symmetric AEAD records; ordering cards",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C24",
+      "syllabus_page": "19",
+      "focus": "Early/modern ciphers",
+      "route": "unit4-crypto",
+      "evidence": "Historical mechanisms/weaknesses, offline Caesar trials and modern guidance limits",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "C25",
+      "syllabus_page": "19",
+      "focus": "Ethical/red-blue testing",
+      "route": "unit4-ethics",
+      "evidence": "Team-role table, P8 and scoped paper exercise/report template",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D01",
+      "syllabus_page": "19",
+      "focus": "Entities/relationships",
+      "route": "unit4-design",
+      "evidence": "Six-table rules and optional 1:1/1:M/M:N bridge explanation",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D02",
+      "syllabus_page": "19",
+      "focus": "Fields/records",
+      "route": "unit4-design",
+      "evidence": "Relational notation, 17 dictionary fields and runnable schema/rows",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D03",
+      "syllabus_page": "19",
+      "focus": "Five data types",
+      "route": "unit4-design",
+      "evidence": "Conceptual integer, float, Boolean, text, date versus SQLite storage/affinity section",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D04",
+      "syllabus_page": "19",
+      "focus": "Keys/composite keys",
+      "route": "unit4-design",
+      "evidence": "Booking pair PK and Attendance joint FK; constraint comparisons",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D05",
+      "syllabus_page": "19",
+      "focus": "Three anomalies",
+      "route": "unit4-design",
+      "evidence": "Insertion/update/deletion scenarios and flat-sheet dependency clinic",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D06",
+      "syllabus_page": "19–20",
+      "focus": "Connectivity/ODBC",
+      "route": "unit4-project",
+      "evidence": "Application/API/driver distinction; review C2 and consolidation connectivity questions",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D07",
+      "syllabus_page": "20",
+      "focus": "ACID",
+      "route": "unit4-project",
+      "evidence": "Transaction explanation/reference rollback and booking checks; recovery workbook",
+      "status": "Practical evidence",
+      "next_action": "Collect independent transaction/concurrent-last-place evidence and saved backup/restore/reopen results; in-memory demo cannot establish crash durability."
+    },
+    {
+      "id": "D08",
+      "syllabus_page": "20",
+      "focus": "Design documentation",
+      "route": "unit4-design",
+      "evidence": "Dictionary, relational notation and original crow’s-foot SVG with legend",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D09",
+      "syllabus_page": "20",
+      "focus": "Interpret larger ER models",
+      "route": "unit4-design",
+      "evidence": "Located models/transfer centre on six tables; no dedicated ten-table interpretation stimulus found.",
+      "status": "Practice gap",
+      "next_action": "Existing six-table interpretation is inside the allowed range. Add upper-range transfer approaching ten tables with an explained key; this does not mean every task must use ten tables."
+    },
+    {
+      "id": "D10",
+      "syllabus_page": "20",
+      "focus": "Create ER models",
+      "route": "unit4-design",
+      "evidence": "Six-table example and fresh six-entity creation task fit 3–8 range.",
+      "status": "Convention check",
+      "next_action": "Visually verify crow’s-foot symbols/endpoints against support booklet and review independent learner-created diagram; textual rules alone are insufficient."
+    },
+    {
+      "id": "D11",
+      "syllabus_page": "20",
+      "focus": "Relational notation",
+      "route": "unit4-design",
+      "evidence": "Composite notation and joint-reference explanation; workbook B/D",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D12",
+      "syllabus_page": "20",
+      "focus": "Create dictionaries",
+      "route": "unit4-design",
+      "evidence": "17-field supplied dictionary and learner design/project requirements",
+      "status": "Practical evidence",
+      "next_action": "Review independent dictionary reconciled with the learner schema, constraints and enforcement locations."
+    },
+    {
+      "id": "D13",
+      "syllabus_page": "20",
+      "focus": "Resolve M:N",
+      "route": "unit4-design",
+      "evidence": "Booking bridge with pair uniqueness and fresh Reservation transfer",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D14",
+      "syllabus_page": "20",
+      "focus": "Integrity families",
+      "route": "unit4-design",
+      "evidence": "Entity/referential/domain distinctions; actual PK/FK/CHECK probes and limits",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D15",
+      "syllabus_page": "20",
+      "focus": "Five quality factors",
+      "route": "unit4-project",
+      "evidence": "Cleaning practice and references to currency/authenticity/relevance/accuracy/outliers; limited dedicated application of all five.",
+      "status": "Partial",
+      "next_action": "Add a dated source-comparison/outlier exercise requiring evidence for every factor; reuse earlier quality clinic as prerequisite, not proof of Year 12 application."
+    },
+    {
+      "id": "D16",
+      "syllabus_page": "20",
+      "focus": "1NF/2NF/3NF",
+      "route": "unit4-design",
+      "evidence": "Atomic domains, partial/transitive dependencies and surrogate-key caveat",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D17",
+      "syllabus_page": "20",
+      "focus": "Normalise independently",
+      "route": "unit4-design",
+      "evidence": "Fresh six-entity design and review A2 dependency task",
+      "status": "Practical evidence",
+      "next_action": "Collect and review independent candidate keys, dependencies, 3NF relational notation and justified decomposition."
+    },
+    {
+      "id": "D18",
+      "syllabus_page": "21",
+      "focus": "Implement 5+ tables",
+      "route": "unit4-project",
+      "evidence": "Six-table prototype and 16 embedded workshops; R1–R7",
+      "status": "Practical evidence",
+      "next_action": "Require learner-created working relational solution, demonstration, test evidence and evaluation; teacher reference database alone does not satisfy skill evidence."
+    },
+    {
+      "id": "D19",
+      "syllabus_page": "21",
+      "focus": "CREATE/modify/constraints",
+      "route": "unit4-project",
+      "evidence": "Controlled change lab uses CREATE/ALTER; explicit constraints and foreign_keys checks",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D20",
+      "syllabus_page": "21",
+      "focus": "DROP/CRUD/cascade",
+      "route": "unit4-project",
+      "evidence": "Rollback lab CREATE/INSERT/UPDATE/DELETE/DROP; paired Attendance cascade verification",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D21",
+      "syllabus_page": "21",
+      "focus": "SELECT/order/joins/groups",
+      "route": "unit4-sql",
+      "evidence": "Four-table inner report, deterministic ordering, grouping and changed-data review",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D22",
+      "syllabus_page": "21",
+      "focus": "Aggregate/calculation/labels",
+      "route": "unit4-sql",
+      "evidence": "COUNT/SUM/AVG/MIN/MAX explanation; calculated/concatenated aliases; expected query outputs",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D23",
+      "syllabus_page": "21",
+      "focus": "Clean/import",
+      "route": "unit4-project",
+      "evidence": "Raw/clean synthetic CSV, normalisation/rejection rules and all-or-none import reference",
+      "status": "Practical evidence",
+      "next_action": "Collect learner mapping/correction/rejection log, independent import and expected/actual failure/rollback results; do not infer authenticity from formatting."
+    },
+    {
+      "id": "D24",
+      "syllabus_page": "21",
+      "focus": "Responsible data/mining",
+      "route": "unit4-ethics",
+      "evidence": "Purpose, minimisation, privacy, use, source reliability/acknowledgement, mining and suppression-limit activity",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D25",
+      "syllabus_page": "21",
+      "focus": "Security/backup/control",
+      "route": "unit4-project",
+      "evidence": "Privacy/control limits, restricted access concept and protected restore/evaluation requirements; ethics workbook",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    },
+    {
+      "id": "D26",
+      "syllabus_page": "21",
+      "focus": "APP5/8/10/11/12",
+      "route": "unit4-ethics",
+      "evidence": "Five-principle table, collection/disclosure/quality/security/access cases with explicit jurisdiction/date",
+      "status": "Draft mapped",
+      "next_action": "Independent teacher review and fresh learner evidence remain pending."
+    }
+  ]
+}

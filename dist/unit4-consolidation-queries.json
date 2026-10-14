@@ -1,0 +1,4 @@
+{
+  "all_resources": "SELECT r.ResourceID,COUNT(l.LoanID) AS TotalLoans,\nCOUNT(CASE WHEN l.ReturnDate IS NULL THEN l.LoanID END) AS ActiveLoans\nFROM Resource r LEFT JOIN Loan l ON r.ResourceID=l.ResourceID\nGROUP BY r.ResourceID ORDER BY r.ResourceID;",
+  "active_labels": "SELECT m.MemberID,m.Name || ' / ' || r.Label AS LoanLabel,c.Name AS Category\nFROM Member m INNER JOIN Loan l ON m.MemberID=l.MemberID\nINNER JOIN Resource r ON l.ResourceID=r.ResourceID\nINNER JOIN Category c ON r.CategoryID=c.CategoryID\nWHERE l.ReturnDate IS NULL ORDER BY m.MemberID,r.ResourceID;"
+}

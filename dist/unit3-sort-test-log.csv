@@ -1,0 +1,6 @@
+Algorithm,Case,Input,Expected output,Expected key comparisons,Actual,Pass,Explanation
+Bubble,Four items,"[5,2,4,1]","[1,2,4,5]",6,,,
+Insertion,Four items,"[5,2,4,1]","[1,2,4,5]",6,,,
+Selection,Four items,"[5,2,4,1]","[1,2,4,5]",6,,,
+All,Duplicates,"[2,1,2]","[1,2,2]",,,,
+All,Empty,[],[],0,,,

@@ -1,0 +1,92 @@
+[
+  [
+    "Social engineering / phishing",
+    "Manipulates a person into revealing information or taking an unsafe action; phishing uses deceptive messages or sites.",
+    "Fake equipment-desk sign-in request.",
+    "Independent verification, reporting practice and MFA; training alone does not eliminate deception."
+  ],
+  [
+    "Denial of service",
+    "Exhausts or disrupts resources so legitimate users cannot use a service; distributed DoS involves multiple sources.",
+    "Loan portal overwhelmed by requests.",
+    "Traffic filtering/rate limits and provider support; ordinary backups do not keep the live service reachable."
+  ],
+  [
+    "Back door",
+    "A concealed or unintended route that bypasses normal access controls.",
+    "Undocumented maintenance account bypasses normal login.",
+    "Remove unnecessary access paths, review accounts/configuration and monitor use."
+  ],
+  [
+    "IP spoofing",
+    "Falsifies a packet\u2019s source IP address; this does not prove the sender can receive replies or has authenticated.",
+    "Traffic claims to come from a trusted address.",
+    "Use authenticated communication and appropriate ingress/egress filtering; do not treat an IP address alone as identity."
+  ],
+  [
+    "SQL injection",
+    "Untrusted input is treated as SQL structure by an application.",
+    "A search form builds a query by concatenating input.",
+    "Parameterised statements and least database privilege; field validation is an additional check."
+  ],
+  [
+    "Man-in-the-middle",
+    "An intermediary intercepts and may alter communication between parties.",
+    "A false network intermediary relays portal traffic.",
+    "Authenticated encrypted connections, verified endpoints and certificate checks."
+  ],
+  [
+    "Cross-site scripting (XSS)",
+    "Untrusted content becomes executable script in a user\u2019s browser through a vulnerable application.",
+    "A portal displays submitted notes as active page content.",
+    "Context-appropriate output encoding, safe DOM/template practices and sanitisation where HTML is allowed. SQL parameters do not prevent browser script execution."
+  ],
+  [
+    "Virus",
+    "Malicious code attaches to a host such as a file/program and spreads when the host executes.",
+    "Infected program copied between desk devices.",
+    "Trusted software, updates and endpoint protection."
+  ],
+  [
+    "Worm",
+    "Malware that can propagate between systems without attaching to a host file.",
+    "Malware spreads between vulnerable devices.",
+    "Patching, segmentation and endpoint protection."
+  ],
+  [
+    "Trojan horse",
+    "Malicious software disguised as a useful or legitimate program; the label describes deception, not self-replication.",
+    "Fake inventory utility installs unwanted code.",
+    "Approved software sources, application controls and limited privilege."
+  ],
+  [
+    "Spyware",
+    "Covertly collects information or monitors activity.",
+    "Software records desk activity or credentials.",
+    "Endpoint protection, permissions review and trusted software."
+  ],
+  [
+    "Adware",
+    "Software that displays advertising; unwanted or malicious variants can track users or disrupt work.",
+    "Unwanted advertising bundled with a utility.",
+    "Review installations, permissions and trusted sources; not every advertising-supported application is malware."
+  ],
+  [
+    "Ransomware",
+    "Malware that blocks access, often by encrypting data, and demands payment; attacks may also steal data.",
+    "Loan database becomes unreadable and an extortion message appears.",
+    "Prevention controls plus protected, tested backups and an incident plan; restoring data does not undo a disclosure."
+  ],
+  [
+    "Physical security threat",
+    "Physical access, theft, damage or environmental disruption can compromise a system.",
+    "Unlocked desk laptop is stolen; a power loss interrupts service.",
+    "Restricted access, locked storage, screen locks, suitable power protection and recovery arrangements."
+  ],
+  [
+    "Zero-day vulnerability",
+    "A previously unknown vulnerability may be exploited before defenders have a practical fix. It is a weakness, not a malware category.",
+    "A newly disclosed application flaw has no patch available yet.",
+    "Reduce exposure, use temporary mitigations and monitoring, then apply a verified fix when available."
+  ]
+]
