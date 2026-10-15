@@ -1,0 +1,511 @@
+{
+  "unit": 1,
+  "week": 3,
+  "chapter": "selection",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#selection",
+  "references": [
+    "https://docs.python.org/3/reference/compound_stmts.html#if",
+    "https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not",
+    "https://docs.python.org/3/reference/expressions.html#operator-precedence"
+  ],
+  "lessons": [
+    {
+      "id": "u1-w03-l01",
+      "lesson": 1,
+      "title": "Comparisons and two-way decisions",
+      "chapter": "selection",
+      "prepare": "Python editor, paper trace grids and the selection chapter.",
+      "slides": [
+        {
+          "title": "Comparisons and two-way decisions",
+          "strategy": "Learning intention",
+          "notes": "Success: predict a Boolean comparison, trace an if/else branch and justify a boundary test. Connect selection to Week 1 sequence. This lesson assumes suitable non-negative numeric input.",
+          "body": [
+            "Unit 1 · Week 3 · Lesson 1",
+            "Use a condition to choose which instructions run."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: assignment and types",
+          "strategy": "Individual retrieval and pair comparison",
+          "notes": "One minute without notes, then compare. Expected count becomes 5 and input returns str. = assigns while == compares. Ask everyone to identify which symbol tests equality. If confusion remains, show count = 4 followed by count == 4, which evaluates True without updating count.",
+          "body": [
+            "Trace count = 4, then count = count + 1.",
+            "What type does input() return?",
+            "What does = do in Python?",
+            "Compare your answers before opening your notes."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Comparisons produce Boolean results",
+          "strategy": "Worked examples and guided prediction",
+          "notes": "Model the first two rows, then learners explain why 50 >= 50 is True while 50 > 50 is False. Cover the result column or use a fresh example: 12 <= 12 is True. = assigns, == compares. True and False have capital initial letters in Python.",
+          "table": [
+            [
+              "Comparison",
+              "Meaning",
+              "Example result"
+            ],
+            [
+              "== and !=",
+              "Equal / not equal",
+              "5 == 5 is True"
+            ],
+            [
+              "< and >",
+              "Less / greater than",
+              "5 > 8 is False"
+            ],
+            [
+              "<=",
+              "Less than or equal",
+              "5 <= 5 is True"
+            ],
+            [
+              ">=",
+              "Greater than or equal",
+              "50 >= 50 is True"
+            ]
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "A delivery rule with a boundary",
+          "strategy": "Think, pair, share",
+          "notes": "Read the rule together, then allow two minutes of silent predictions. Expected delivery charges: 35 gives $5, 50 gives $0, 80 gives $0. Invite pairs to explain why the boundary belongs to the free-delivery branch. Assume order total is a valid number of zero or more. This is a teaching example, not a robust payment application.",
+          "body": [
+            "Orders of $50 or more have free delivery.",
+            "Smaller orders have a $5 delivery charge.",
+            "Predict the charge for totals 35, 50 and 80.",
+            "Explain which comparison matches “$50 or more”."
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "Two branches, one chosen path",
+          "strategy": "Teacher think-aloud and code annotation",
+          "notes": "Trace order_total 35: condition False, else assigns 5, final print runs and displays Delivery: $5.00. Repeat for 50: True, if assigns 0, output Delivery: $0.00. Colon introduces a suite and indentation groups its instructions. Ask learners to mark the two branches and circle the final print outside them. Invalid input handling comes later.",
+          "body": [
+            "Trace once for 35, then for 50.",
+            "Which line runs after either branch?"
+          ],
+          "code": "order_total = float(input(\"Order total: \"))\nif order_total >= 50:\n    delivery = 0\nelse:\n    delivery = 5\nprint(f\"Delivery: ${delivery:.2f}\")",
+          "minutes": 10
+        },
+        {
+          "title": "A trace before each run",
+          "strategy": "Paired prediction, run and explanation",
+          "notes": "Driver enters an input while navigator checks the prior prediction and explains the selected branch. Swap after the first run. Expected 49.99 False/else/$5.00; 50 True/if/$0.00; 50.01 True/if/$0.00. Every learner records their own trace. Support: supply condition and branch headings. Stretch: explain which test detects > instead of >=.",
+          "table": [
+            [
+              "Order total",
+              "Condition",
+              "Branch and charge"
+            ],
+            [
+              "49.99",
+              "Predict first",
+              "Trace, then run"
+            ],
+            [
+              "50.00",
+              "Predict first",
+              "Trace, then run"
+            ],
+            [
+              "50.01",
+              "Predict first",
+              "Trace, then run"
+            ]
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "Which condition includes the boundary?",
+          "strategy": "All-student hinge question",
+          "notes": "Take simultaneous responses. Correct B is >= 50. A excludes exactly 50 and C excludes all larger orders. If several choose A, mark 50 on a number line and retest with exactly 50 before moving on. Ask a learner choosing B to explain the equality part.",
+          "body": [
+            "Which condition matches “at least 50”?",
+            "A: total > 50     B: total >= 50     C: total == 50",
+            "Choose alone and show your answer together.",
+            "Name an input that exposes each wrong choice."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: a new decision",
+          "strategy": "Independent transfer check",
+          "notes": "Museum rule: under 16 costs $8, otherwise $12. Expected age 15 gives $8, 16 gives $12, 17 gives $12. Correct condition age < 16 for the cheaper branch. Collect the condition and one trace, without partner help. Revisit equality or branch tracing next lesson if needed.",
+          "body": [
+            "A museum charges $8 for ages under 16.",
+            "Everyone else pays $12.",
+            "Write the condition for the cheaper branch.",
+            "Predict prices at ages 15, 16 and 17."
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w03-l02",
+      "lesson": 2,
+      "title": "Combining Boolean conditions",
+      "chapter": "selection",
+      "prepare": "Python editor, paper response cards and a four-row truth-table frame.",
+      "slides": [
+        {
+          "title": "Combining Boolean conditions",
+          "strategy": "Learning intention",
+          "notes": "Success: explain and/or/not, evaluate a combined rule and use parentheses to make grouping explicit. Use supplied Boolean values rather than parsing yes/no input.",
+          "body": [
+            "Unit 1 · Week 3 · Lesson 2",
+            "Explain when a combined condition becomes True."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: the equality boundary",
+          "strategy": "Individual retrieval with correction",
+          "notes": "Expected False, True and True. Ask for one minute of individual work, then paired explanations. If > and >= remain confused, return to the number-line boundary before combining conditions.",
+          "body": [
+            "Predict 50 > 50 and 50 >= 50.",
+            "Predict 15 < 16.",
+            "Explain one answer to a partner.",
+            "Correct any disagreement using the comparison’s meaning."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Both, either and the opposite",
+          "strategy": "Worked truth table",
+          "notes": "Model the first row and ask learners to predict the remaining rows before revealing them or checking with Python. and requires both True, or needs at least one True and includes both, not reverses a Boolean. Here P and Q stand for Boolean values. A common error is interpreting or as exactly one.",
+          "table": [
+            [
+              "P",
+              "Q",
+              "P and Q",
+              "P or Q"
+            ],
+            [
+              "True",
+              "True",
+              "True",
+              "True"
+            ],
+            [
+              "True",
+              "False",
+              "False",
+              "True"
+            ],
+            [
+              "False",
+              "True",
+              "False",
+              "True"
+            ],
+            [
+              "False",
+              "False",
+              "False",
+              "False"
+            ]
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "An eligibility rule",
+          "strategy": "Teacher modelling and paired variation",
+          "notes": "Rule: eligibility requires age at least 16 AND permission. With supplied values age 16 and has_permission False, result is False. Ask learners to predict changing permission to True, then age to 15. Expected True then False. has_permission is already bool. bool(\"False\") is True because the string is non-empty, so do not use it to parse input.",
+          "body": [
+            "Predict before running.",
+            "Change one value, then explain the new result."
+          ],
+          "code": "age = 16\nhas_permission = False\neligible = age >= 16 and has_permission\nprint(eligible)",
+          "minutes": 10
+        },
+        {
+          "title": "Grouping changes which rule you test",
+          "strategy": "Guided prediction and peer explanation",
+          "notes": "Use the stated values to evaluate both expressions. A is True because and binds more tightly than or. B is False because the parenthesised or is True but not suspended is False. Explain Python Boolean operator precedence: not, then and, then or. Comparisons here evaluate before these Boolean combinations. Ask learners to annotate sub-results. If confusion remains, replace each sub-expression with True/False on paper.",
+          "body": [
+            "member = True, guest = False, suspended = True",
+            "A: member or guest and not suspended",
+            "B: (member or guest) and not suspended",
+            "Predict each result and explain the grouping."
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "Testing every Boolean combination",
+          "strategy": "Paired investigation with role changes",
+          "notes": "Use supplied booleans rather than text input. Learners implement allowed = (member or guest) and not suspended and choose cases before running. Expected True/False/False gives True; False/True/False gives True; True/True/True gives False; False/False/False gives False. These cover key paths but not all eight combinations. Stretch: test all eight and justify coverage. Support: add intermediate (member or guest) results.",
+          "body": [
+            "Rule: a member or guest may enter if not suspended.",
+            "Write the condition with explicit parentheses.",
+            "Choose cases for each route to entry and refusal.",
+            "Predict, run and compare, then swap roles."
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "What does or allow?",
+          "strategy": "All-student misconception check",
+          "notes": "Collect responses before discussion. Correct B: True or True is True. Explain inclusive or allows both. If learners choose A, use the truth-table first row and recheck True or False. Ask them to contrast and, which requires both.",
+          "body": [
+            "Predict True or True.",
+            "A: False     B: True",
+            "Show your choice, then explain it.",
+            "How would and differ when only one value is True?"
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: a combined decision",
+          "strategy": "Independent exit ticket",
+          "notes": "Rule: both age >= 16 and has_permission, reversed permission with not. Expected age 16/permission False gives False for eligibility, age 15/permission True gives False and age 16/permission True gives True. not False is True. Collect without Python first. Group follow-up support by comparison, conjunction or negation errors.",
+          "body": [
+            "Rule: age >= 16 and has_permission.",
+            "Predict for (16, False), (15, True), (16, True).",
+            "Predict not False.",
+            "Explain why one unsuccessful case fails."
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w03-l03",
+      "lesson": 3,
+      "title": "Several choices with if and elif",
+      "chapter": "selection",
+      "prepare": "Python editor and paper trace tables. Use the chapter’s supplied score-band rule.",
+      "slides": [
+        {
+          "title": "Several choices with if and elif",
+          "strategy": "Learning intention",
+          "notes": "Success: implement a three-way decision, trace the first matching branch and explain why order matters. This lesson uses the supplied score-band example from the chapter.",
+          "body": [
+            "Unit 1 · Week 3 · Lesson 3",
+            "Choose the first matching branch in an ordered decision."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: two-way selection",
+          "strategy": "Individual retrieval and peer explanation",
+          "notes": "Ask learners to sketch if/else structure and mark indentation. Expected one of the two branches runs and a print after the decision runs either way. == compares while = assigns. Revisit structural errors before adding elif.",
+          "body": [
+            "Sketch an if/else decision from memory.",
+            "What determines which branch runs?",
+            "Where could you print a result after either branch?",
+            "Compare the indentation with a partner."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "A supplied score-band rule",
+          "strategy": "Requirement annotation",
+          "notes": "Assume a suitable whole-number score from 0 to 100. Model 85 as High. Ask learners independently for 65 Pass and 40 Developing. Have them underline the inclusive boundary at 80 and 50. These are example program categories, not official ATAR grade boundaries.",
+          "table": [
+            [
+              "Score",
+              "Band"
+            ],
+            [
+              "80 to 100",
+              "High"
+            ],
+            [
+              "50 to 79",
+              "Pass"
+            ],
+            [
+              "0 to 49",
+              "Developing"
+            ]
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "An ordered decision in Python",
+          "strategy": "Teacher think-aloud and guided trace",
+          "notes": "For 80 the first comparison is True, so High runs and the remaining branches are skipped. For 65 the first is False, the elif is True and Pass runs. For 40 both comparisons are False and else runs. elif belongs to the same chain. Colon and indentation matter. Learners annotate the checked conditions, not only the output.",
+          "body": [
+            "Trace scores 80, 65 and 40."
+          ],
+          "code": "score = 80\nif score >= 80:\n    band = \"High\"\nelif score >= 50:\n    band = \"Pass\"\nelse:\n    band = \"Developing\"\nprint(band)",
+          "minutes": 10
+        },
+        {
+          "title": "Why the order matters",
+          "strategy": "Hinge question and error analysis",
+          "notes": "Take predictions before running. With 85, the first >= 50 comparison is True, so band becomes Pass and the elif is skipped. This is a logic error for the stated rule. Learners reorder the >= 80 check before >= 50 and test 85 again. If several still expect High automatically, trace line by line and cross out skipped branches.",
+          "body": [
+            "Which band does this code assign?",
+            "Explain the fault, then correct the branch order."
+          ],
+          "code": "score = 85\nif score >= 50:\n    band = \"Pass\"\nelif score >= 80:\n    band = \"High\"\nelse:\n    band = \"Developing\"",
+          "minutes": 10
+        },
+        {
+          "title": "Your own implementation and test record",
+          "strategy": "Independent coding with optional scaffolds",
+          "notes": "Learners implement the correct ordered rule and record predictions before runs. Expected 49 Developing, 50 Pass, 79 Pass, 80 High. Support: provide a skeleton with blank conditions, then ask learners to explain their choices. Stretch: compare an ordered chain with two independent if statements and investigate whether later assignments overwrite a result. Keep the supplied 0–100 valid-input assumption.",
+          "body": [
+            "Implement the supplied score-band rule.",
+            "Predict bands for 49, 50, 79 and 80.",
+            "Run each case and retain your expected results.",
+            "Explain any correction using a trace."
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "One chain or separate decisions?",
+          "strategy": "Paired prediction and whole-class check",
+          "notes": "Trace this deliberate fault at score 85: first if assigns High; second independent if is also True and overwrites band with Pass. Output Pass. Contrast with the correct if/elif chain, which prints High. If learners expect High, ask which assignment runs last. This is about separate if statements, not a claim that all if statements should use elif.",
+          "body": [
+            "Predict the output before discussing it.",
+            "How does a second if differ from elif?"
+          ],
+          "code": "score = 85\nif score >= 80:\n    band = \"High\"\nif score >= 50:\n    band = \"Pass\"\nprint(band)",
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: branch and reason",
+          "strategy": "Independent exit ticket",
+          "notes": "Expected 79 Pass, 80 High and 50 Pass. 80 belongs to High because the >= 80 branch is checked first and includes equality. Use responses to select a short first-match tracing starter for Lesson 4.",
+          "body": [
+            "State the bands for scores 79, 80 and 50.",
+            "Which condition matches first for score 80?",
+            "Explain why checking >= 50 first causes a fault.",
+            "Save your code and test evidence."
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w03-l04",
+      "lesson": 4,
+      "title": "Boundary tests and debugging",
+      "chapter": "selection",
+      "prepare": "Python editor, a clean delivery example and a blank expected/actual test log.",
+      "slides": [
+        {
+          "title": "Boundary tests and debugging",
+          "strategy": "Learning intention",
+          "notes": "Success: derive tests from a requirement, identify a boundary fault, correct it and rerun the relevant tests. Expected results must come from the stated rule rather than the faulty code.",
+          "body": [
+            "Unit 1 · Week 3 · Lesson 4",
+            "Use expected results to find and explain a decision fault."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: where do results change?",
+          "strategy": "Individual retrieval and pair comparison",
+          "notes": "Ask learners to identify the two score boundaries 50 and 80, then the delivery boundary 50. Rehearse below/at/above with valid integer scores: 49,50,51 and 79,80,81. For delivery totals to cents use 49.99,50.00,50.01. Distinguish the input domains rather than assuming every task uses the same step.",
+          "body": [
+            "Where do the score-band decisions change?",
+            "Where does the free-delivery decision change?",
+            "Choose a value just below one boundary.",
+            "Compare your reasoning with a partner."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "A test record keeps expectation separate",
+          "strategy": "Worked example and guided completion",
+          "notes": "Delivery rule stays $0 for totals >= 50 and $5 otherwise. Model 49.99 with condition False and expected $5.00. Learners complete expected values for 50 and 50.01 before running. Actual and pass/fail remain blank until execution. Expected $0.00 for both. If learners copy actual into expected, revisit the requirement and preserve an independent prediction.",
+          "table": [
+            [
+              "Input total",
+              "Expected charge",
+              "Actual / result"
+            ],
+            [
+              "49.99",
+              "$5.00",
+              "Record after run"
+            ],
+            [
+              "50.00",
+              "Predict from rule",
+              "Record after run"
+            ],
+            [
+              "50.01",
+              "Predict from rule",
+              "Record after run"
+            ]
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "A fault that ordinary tests can miss",
+          "strategy": "Predict, run, investigate",
+          "notes": "Run this deliberately faulty example with 10 and 100: both match the stated rule. Then 50 prints Delivery: $5.00 but expectation is $0.00. The condition > excludes the boundary. Ask learners to record the mismatch before editing. Keep suitable non-negative input; invalid input handling is separate.",
+          "body": [
+            "Predict from the requirement for 10, 100 and 50.",
+            "Run each case and locate the mismatch."
+          ],
+          "code": "order_total = float(input(\"Order total: \"))\nif order_total > 50:\n    delivery = 0\nelse:\n    delivery = 5\nprint(f\"Delivery: ${delivery:.2f}\")",
+          "minutes": 10
+        },
+        {
+          "title": "A correction needs an explanation",
+          "strategy": "Guided debugging and peer explanation",
+          "notes": "Learners explain that >= includes exactly 50, change the faulty comparison and rerun 49.99,50,50.01,10,100. Expected charges 5,0,0,5,0. Keep the earlier failed result alongside the corrected run. A successful test is evidence for tested cases, not proof for every possible input. Support: trace only the comparison at 50 first.",
+          "body": [
+            "Use a trace to explain the wrong charge at 50.",
+            "Correct the comparison and predict again.",
+            "Rerun below, at and above the boundary.",
+            "Retest ordinary cases and record the correction."
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "Transfer: museum ticket prices",
+          "strategy": "Independent design and testing",
+          "notes": "Rule age < 16 costs $8, otherwise $12; valid non-negative integer ages. Learners choose 15,16,17 plus an ordinary younger/older case before coding. Model solution: age = int(input(\"Age: \")); if age < 16: ticket = 8; else: ticket = 12; print(ticket), with proper indentation on separate lines. Expected 8,12,12. Support: supply an if/else skeleton. Stretch: show a <= fault and identify the detecting input. Partners may question the test evidence after independent work.",
+          "body": [
+            "Under 16 costs $8. Everyone else pays $12.",
+            "Design boundary tests before writing the program.",
+            "Implement, run and record expected versus actual.",
+            "Ask a partner to challenge one test choice."
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "What do passing tests show?",
+          "strategy": "All-student misconception check",
+          "notes": "Correct B: passing 10 and 100 does not establish that equality is handled. The > fault passes those two cases but fails 50. Collect responses before showing the faulty code again. If learners choose A, ask them to supply the missing boundary expectation. No finite small set proves all possible behaviours.",
+          "body": [
+            "Delivery tests at 10 and 100 both pass.",
+            "“This proves the boundary is correct.”",
+            "A: agree     B: disagree",
+            "Choose, then give a test that strengthens the evidence."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: justify a test set",
+          "strategy": "Independent exit ticket and reflection",
+          "notes": "For museum ages 15,16,17 expected 8,12,12. Age 16 detects <= 16 used for the cheaper branch, because that fault gives 8 instead of 12. Learners explain how they derived expectations and one correction. Collect evidence to identify comparison, branch-order or test-design support before Week 4 loops.",
+          "body": [
+            "Give museum tests just below, at and above 16.",
+            "Write the expected prices from the rule.",
+            "Which test detects age <= 16 as a fault?",
+            "Explain one check you will reuse in future programs."
+          ],
+          "minutes": 5
+        }
+      ]
+    }
+  ]
+}
