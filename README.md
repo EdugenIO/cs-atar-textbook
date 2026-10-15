@@ -72,3 +72,8 @@ Unit 1 Weeks 1–4 have sixteen eight-slide decks. Each planner lesson links to 
 
 
 
+
+## Link sharing
+
+The homepage includes static Open Graph and large-image card metadata for social previews. Share https://edugenio.github.io/cs-atar-textbook/ . Artwork is in dist/social-preview.svg with a 1200 x 630 PNG at dist/social-preview-v1.png. The SVG is editable; scripts/build-social-preview.mjs optionally rebuilds the PNG using sharp. Use a new versioned image filename when replacing artwork so existing social caches can be refreshed. Hash routes share the homepage preview.
+

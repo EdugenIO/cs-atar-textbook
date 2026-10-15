@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Computer Science ATAR: a free, open classroom textbook</title>
+  <desc id="desc">Green and cream textbook artwork for WA Units 1–4. Free to use, share and adapt with attribution.</desc>
+  <rect width="1200" height="630" fill="#FCFBF7"/>
+  <path d="M780 0H1200V630H780Z" fill="#285747"/>
+  <path d="M780 0H800V630H780Z" fill="#D8B66D"/>
+  <text x="64" y="77" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#285747">THE CLASSROOM TEXTBOOK</text>
+  <text x="60" y="208" font-family="Georgia,serif" font-size="76" fill="#18322D">Computer</text>
+  <text x="60" y="298" font-family="Georgia,serif" font-size="76" fill="#18322D">Science ATAR</text>
+  <text x="64" y="365" font-family="Arial,sans-serif" font-size="28" fill="#285747">A free, open textbook for WA teachers.</text>
+  <rect x="64" y="408" width="168" height="47" rx="5" fill="#285747"/>
+  <text x="148" y="439" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">UNITS 1–4</text>
+  <text x="64" y="520" font-family="Arial,sans-serif" font-size="25" fill="#18322D">Read. Teach. Share. Adapt.</text>
+  <text x="64" y="568" font-family="Arial,sans-serif" font-size="19" fill="#52645B">Python examples · Classroom activities · Teacher resources</text>
+  <g transform="translate(852 128) rotate(5 140 190)">
+    <rect x="12" y="15" width="264" height="383" rx="7" fill="#173E32"/>
+    <rect x="4" y="5" width="264" height="383" rx="5" fill="#DDDACE"/>
+    <rect width="264" height="383" rx="5" fill="#FCFBF7"/>
+    <rect width="14" height="383" fill="#D8B66D"/>
+    <text x="40" y="102" font-family="Consolas,monospace" font-size="65" fill="#285747">&lt;/&gt;</text>
+    <path d="M40 138H222" stroke="#D8B66D" stroke-width="3"/>
+    <text x="40" y="199" font-family="Georgia,serif" font-size="36" fill="#18322D">CS ATAR</text>
+    <text x="40" y="235" font-family="Arial,sans-serif" font-size="17" fill="#52645B">CLASSROOM TEXTBOOK</text>
+    <text x="40" y="318" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#285747">Free + open source</text>
+    <text x="40" y="349" font-family="Arial,sans-serif" font-size="16" fill="#52645B">WA Units 1–4</text>
+  </g>
+</svg>
