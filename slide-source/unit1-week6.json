@@ -1,0 +1,475 @@
+{
+  "unit": 1,
+  "week": 6,
+  "chapter": "arrays",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#arrays",
+  "references": [
+    "https://docs.python.org/3/tutorial/datastructures.html",
+    "https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range"
+  ],
+  "lessons": [
+    {
+      "id": "u1-w06-l01",
+      "lesson": 1,
+      "title": "Lists, indices and traversal",
+      "chapter": "arrays",
+      "prepare": "Python editor, paper index/value grids and the arrays chapter. Use suitable integer input.",
+      "slides": [
+        {
+          "title": "Lists, indices and traversal",
+          "strategy": "Learning intention",
+          "notes": "Success means load a list, identify a value by index and display each index/value pair. Explain that Python lists implement these array-style tasks. Lists can change size and hold mixed types, while some arrays have a fixed size/type. Use consistent integer values in this week’s exercises.",
+          "body": [
+            "Unit 1 · Week 6 · Lesson 1",
+            "Store related values and visit them by position."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: repeated input",
+          "strategy": "Individual retrieval and pair explanation",
+          "notes": "Allow a minute without notes, then compare. range(3) gives 0,1,2 and three passes. A running total combines inputs but does not retain each original value. Ask why storing all readings might help later. This leads to a list without suggesting lists and fixed-size arrays are identical.",
+          "body": [
+            "List the values in range(3).",
+            "What does a running total retain?",
+            "How could keeping every original input help?",
+            "Compare your explanation with a partner."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "A position differs from its value",
+          "strategy": "Worked example and guided prediction",
+          "notes": "Model scores=[12,7,19]. The first non-negative index is 0, scores[1] is 7 and len(scores) is 3. Ask for index of value 19:2. The last valid non-negative index is len(scores)-1. Python also supports negative indexing, which is outside this introductory convention. One-dimensional access uses one index.",
+          "table": [
+            [
+              "Index",
+              "0",
+              "1",
+              "2"
+            ],
+            [
+              "Value",
+              "12",
+              "7",
+              "19"
+            ]
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "Loading values with append",
+          "strategy": "Teacher think-aloud and code annotation",
+          "notes": "Trace suitable integer inputs 12,7,19. The empty list grows to [12], then [12,7], then [12,7,19]. append adds at the end. Initialising scores=[] happens once before repetition. int converts input text. Ask learners to mark repeated instructions and predict len(scores) after each pass:1,2,3.",
+          "body": [
+            "Trace inputs 12, 7 and 19.",
+            "Which instruction retains each new value?"
+          ],
+          "code": "scores = []\nfor index in range(3):\n    score = int(input(\"Score: \"))\n    scores.append(score)\nprint(scores)",
+          "minutes": 10
+        },
+        {
+          "title": "Traversal with each index",
+          "strategy": "Worked example and faded support",
+          "notes": "Expected output pairs 0 12,1 7,2 19. range(len(scores)) produces 0,1,2, so every stored element is visited once. Learners identify which expression is an index and which accesses a value. Support: provide a three-column trace. Stretch: explain why range(len(scores)+1) would attempt an invalid final index.",
+          "body": [
+            "Predict each index/value pair.",
+            "Explain why len(scores) is the stop value."
+          ],
+          "code": "scores = [12, 7, 19]\nfor index in range(len(scores)):\n    print(index, scores[index])",
+          "minutes": 10
+        },
+        {
+          "title": "Your loading and display program",
+          "strategy": "Paired programming with role changes",
+          "notes": "Pairs load four integers then print each index/value pair. Use 8,3,6,10: indices 0..3 and matching values. Driver types loading, navigator checks a trace, then swap for display. Every learner records predictions. Support: supply an empty list and loop headers. Stretch: replace a source value and explain why its index stays the same. Keep suitable input assumption explicit.",
+          "body": [
+            "Load four integers using append.",
+            "Display every index and its stored value.",
+            "Predict first for inputs 8, 3, 6 and 10.",
+            "Swap roles and check that all four values appear once."
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "Where is the last valid index?",
+          "strategy": "All-student hinge question",
+          "notes": "For [12,7,19], correct B is 2. A is last value 19, C is length 3. scores[3] raises IndexError. Collect simultaneous choices before discussion. If several choose C, label positions on paper and recheck a two-element list. Do not imply all out-of-range Python indices are positive.",
+          "body": [
+            "scores = [12, 7, 19]",
+            "Its last valid non-negative index is:",
+            "A: 19     B: 2     C: 3",
+            "Choose alone and explain index versus value."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: access and explain",
+          "strategy": "Independent exit ticket",
+          "notes": "For values=[8,3,6], values[1]=3, length 3 and last valid non-negative index 2. Access uses square brackets; append adds one value. Collect individual answers to identify indexing or length support for accumulator traversal next lesson.",
+          "body": [
+            "For values = [8, 3, 6], find values[1].",
+            "State the length and last non-negative index.",
+            "Explain what append does when loading input.",
+            "Describe how a traversal visits every value."
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w06-l02",
+      "lesson": 2,
+      "title": "Totals with list traversal",
+      "chapter": "arrays",
+      "prepare": "Python editor, paper accumulator traces and suitable integer lists.",
+      "slides": [
+        {
+          "title": "Totals with list traversal",
+          "strategy": "Learning intention",
+          "notes": "Success means initialise an accumulator, add every list value once and test empty, negative and ordinary cases. Link to Week 4 running totals, now processing retained values.",
+          "body": [
+            "Unit 1 · Week 6 · Lesson 2",
+            "Accumulate a total by visiting every stored value."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: index or value?",
+          "strategy": "Individual retrieval and paired correction",
+          "notes": "For values=[4,-2,6], values[1]=-2, len 3 and non-negative indices 0,1,2. Ask learners to retrieve individually then compare. Revisit position versus value before a loop adds values rather than indices.",
+          "body": [
+            "values = [4, -2, 6]",
+            "Find values[1] and len(values).",
+            "List its non-negative indices.",
+            "Compare your answers with a partner."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "A running total through the values",
+          "strategy": "Teacher think-aloud and guided prediction",
+          "notes": "Trace total 0, then 4, then 2, then 8. for value in values supplies each stored value, not each index. += in the chapter is shorthand for total=total+value; use expanded form here. Final print outside loop runs once. Ask learners to explain why total starts before traversal.",
+          "body": [
+            "Predict total after each pass.",
+            "Which name receives a stored value?"
+          ],
+          "code": "values = [4, -2, 6]\ntotal = 0\nfor value in values:\n    total = total + value\nprint(total)",
+          "minutes": 6
+        },
+        {
+          "title": "The accumulator trace",
+          "strategy": "Guided practice with faded support",
+          "notes": "Model first row 0+4=4, learners complete total before/after:4 and 2 for -2, then 2 and 8 for 6. Pair explanations should identify negative addition reducing the running total. Support: give one completed row. Stretch: write an indexed traversal yielding the same total and explain why adding index would give a different result.",
+          "table": [
+            [
+              "Value",
+              "Total before",
+              "Total after"
+            ],
+            [
+              "4",
+              "0",
+              "4"
+            ],
+            [
+              "-2",
+              "Complete",
+              "Complete"
+            ],
+            [
+              "6",
+              "Complete",
+              "Complete"
+            ]
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "An empty traversal still has a total",
+          "strategy": "Guided variation and peer explanation",
+          "notes": "With values=[], body runs zero times and initial total 0 prints. With[-8,-3], total becomes-8 then-11. With[5], one pass gives 5. Learners predict before running. This total algorithm safely handles an empty list because it does not read values[0]. Distinguish this from finding an empty list’s maximum next lesson.",
+          "body": [
+            "Keep the same total algorithm.",
+            "Predict for [], [-8, -3] and [5].",
+            "Run each case and compare.",
+            "Explain why an empty list needs no index access here."
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "Repairing a reset inside the loop",
+          "strategy": "Paired debugging and role changes",
+          "notes": "This deliberately faulty code outputs 6 rather than intended 8 for[4,-2,6]. Each pass resets total, discarding previous values. Move total=0 before the loop. Swap roles and test[],[5],[-8,-3],[4,-2,6], expecting 0,5,-11,8. Faulty version with empty list would have no total binding in a fresh run; repair before testing it. Support: mark indentation. Stretch: explain why[0,0] alone hides the reset fault.",
+          "body": [
+            "Predict this version’s output.",
+            "Repair it and test empty, single and negative cases."
+          ],
+          "code": "values = [4, -2, 6]\nfor value in values:\n    total = 0\n    total = total + value\nprint(total)",
+          "minutes": 12
+        },
+        {
+          "title": "Does the loop add values or indices?",
+          "strategy": "All-student misconception check",
+          "notes": "For values=[10,20,30], summing indices 0+1+2 gives 3. Correct B. The required value total is 60. Collect simultaneous responses; if several choose A, place index and value columns side by side. range(len(values)) supplies indices, so an indexed accumulator must add values[index].",
+          "body": [
+            "values = [10, 20, 30]",
+            "A loop adds index for index in range(len(values)).",
+            "Its total is A: 60     B: 3",
+            "Choose and explain how to total the stored values."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: totals and evidence",
+          "strategy": "Independent exit ticket",
+          "notes": "For[3,-1,2], running totals 3,2,4. Empty list total 0. Initialising before loop preserves earlier values. An unequal nonzero list exposes a reset error better than all zeros. Collect a trace and one justified test; use errors for a short accumulator refresher next lesson.",
+          "body": [
+            "Trace the total for [3, -1, 2].",
+            "State the expected total for an empty list.",
+            "Explain where initialisation belongs.",
+            "Choose a test that exposes a reset inside the loop."
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w06-l03",
+      "lesson": 3,
+      "title": "Minimum and maximum positions",
+      "chapter": "arrays",
+      "prepare": "Python editor and index/value/best-index trace grids. Establish non-empty input before inspecting index0.",
+      "slides": [
+        {
+          "title": "Minimum and maximum positions",
+          "strategy": "Learning intention",
+          "notes": "Success means retain the position of a best value, explain first-occurrence ties and state empty-list assumptions. Use non-empty integer lists for the main algorithm, then explicitly discuss the empty case.",
+          "body": [
+            "Unit 1 · Week 6 · Lesson 3",
+            "Keep a best value’s index while traversing a list."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: location and value",
+          "strategy": "Individual retrieval and pair explanation",
+          "notes": "For values=[4,9,9], maximum value 9 appears at indices 1 and 2. Ask learners for both, then why saying 9 does not locate an occurrence. Retrieve zero-based indexing and length before deciding a tie rule.",
+          "body": [
+            "values = [4, 9, 9]",
+            "What is the maximum value?",
+            "At which indices does it occur?",
+            "Explain why a value alone does not identify its position."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "The first maximum index",
+          "strategy": "Teacher modelling and guided trace",
+          "notes": "This example assumes non-empty values. Start best_index 0, comparing actual values via indexing. At index 1,9>4 updates best_index 1; at index 2,9>9 is False so retain 1. Output 1 9. State first-occurrence tie rule. best_index 0 means a valid position, not a guessed maximum value of zero.",
+          "body": [
+            "Assume the list is non-empty.",
+            "Trace which index the algorithm retains."
+          ],
+          "code": "values = [4, 9, 9]\nbest_index = 0\nfor index in range(1, len(values)):\n    if values[index] > values[best_index]:\n        best_index = index\nprint(best_index, values[best_index])",
+          "minutes": 6
+        },
+        {
+          "title": "A trace of the best position",
+          "strategy": "Worked example with reduced support",
+          "notes": "Model initial best_index 0/value 4. For index 1 compare 9>4 True and update 1; index 2 compare 9>9 False and retain 1. Learners complete rows independently before pair checking. For a fresh[8,2,7], best_index stays 0. Support: write both compared values. Stretch: explain why a one-element list makes no loop-body passes but still has maximum index 0.",
+          "table": [
+            [
+              "Current index",
+              "Comparison",
+              "Best index after"
+            ],
+            [
+              "Start",
+              "Use first stored value",
+              "0"
+            ],
+            [
+              "1",
+              "9 > 4",
+              "Complete"
+            ],
+            [
+              "2",
+              "9 > 9",
+              "Complete"
+            ]
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "Negative values and ties",
+          "strategy": "Guided variation and all-student checks",
+          "notes": "For[-8,-3], first maximum index 1/value-3. A guessed maximum value 0 is wrong because 0 is not present; best_index 0 correctly refers to real value-8. For[4,9,9], > retains first index 1 while >= updates to last index 2. Ask learners to commit predictions then explain the equality check. Support: label index/value separately.",
+          "body": [
+            "Predict the first maximum position in [-8, -3].",
+            "Why could a guessed maximum value of 0 fail?",
+            "For [4, 9, 9], compare using > and using >=.",
+            "Which comparison keeps the first occurrence?"
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "Adapting the search for a minimum",
+          "strategy": "Independent coding with optional scaffolds",
+          "notes": "Change > to < and keep non-empty assumption. For[-2,4,-5,-5], first minimum index 2/value-5. For[7], index 0/value 7. Learners code and trace independently then compare evidence in pairs. Strict < preserves first equal minimum, <= gives last. Support: supply header and index loop. Stretch: implement max_index as a Week 5 function returning an index for non-empty input.",
+          "body": [
+            "Adapt the algorithm to find the first minimum.",
+            "Predict for [-2, 4, -5, -5] and [7].",
+            "Implement and compare expected with actual.",
+            "Explain your tie rule."
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "What about an empty list?",
+          "strategy": "Hinge question and error analysis",
+          "notes": "Correct B: no maximum position exists. Accessing values[0] on[] raises IndexError. Check len(values)==0 first, reporting no maximum, and use the algorithm only in the non-empty branch. If several choose A, ask what element index 0 would refer to. A total of 0 for an empty list does not imply maximum index 0.",
+          "body": [
+            "values = []",
+            "What is its maximum position?",
+            "A: 0     B: no maximum position exists",
+            "Choose alone. What must happen before reading values[0]?"
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: index, value and tie rule",
+          "strategy": "Independent exit ticket",
+          "notes": "For[-4,-1,-1], first maximum index 1/value-1; >= would retain 2. First minimum is index 0/value-4. Empty list needs a guard before accessing index 0. Collect individual explanations to identify tie-rule, sign or index confusion before the temperature task.",
+          "body": [
+            "Find the first maximum in [-4, -1, -1].",
+            "Give both its index and value.",
+            "Which comparison keeps the first maximum?",
+            "State the empty-list check needed before index 0."
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w06-l04",
+      "lesson": 4,
+      "title": "The temperature list task",
+      "chapter": "arrays",
+      "prepare": "Python editor and blank test log. Load exactly four suitable integer temperatures per run.",
+      "slides": [
+        {
+          "title": "The temperature list task",
+          "strategy": "Learning intention and transfer",
+          "notes": "Success means load four temperatures, display indices/values, find first minimum without min and defend test coverage. This is formative chapter transfer practice. Exact four-input contract guarantees non-empty data before the minimum search.",
+          "body": [
+            "Unit 1 · Week 6 · Lesson 4",
+            "Load temperatures and find the first minimum position."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: a first occurrence",
+          "strategy": "Individual retrieval and peer explanation",
+          "notes": "For[-2,4,-5,-5], minimum value-5 at indices 2 and 3, first index 2. Strict < keeps the earlier equal value. Ask learners to retrieve individually then compare. Revisit position versus value if they answer only-5.",
+          "body": [
+            "For [-2, 4, -5, -5], identify the minimum.",
+            "Give its first index and the other equal index.",
+            "Which comparison preserves the first minimum?",
+            "Compare your explanation with a partner."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Loading and displaying four readings",
+          "strategy": "Teacher modelling and guided prediction",
+          "notes": "Trace input-2,4,-5,-5 into the list. The four accepted integer inputs guarantee length 4 and indices 0..3. Display is a separate traversal after loading. print pairs 0 -2,1 4,2 -5,3 -5. Input validation is outside this core task. Ask learners to mark the two distinct loops.",
+          "body": [
+            "Predict the four index/value pairs.",
+            "Why do loading and display use separate traversals?"
+          ],
+          "code": "temperatures = []\nfor index in range(4):\n    temperatures.append(int(input(\"Temperature: \")))\nfor index in range(len(temperatures)):\n    print(index, temperatures[index])",
+          "minutes": 6
+        },
+        {
+          "title": "Tests before the minimum search",
+          "strategy": "Independent prediction and pair comparison",
+          "notes": "Expected first minimum indices/values: [-2,4,-5,-5] ->2/-5; [6,3,8,9] ->1/3; [2,2,2,2] ->0/2. Learners predict from requirements before running. Last tied minimum would be 3 in first case, so this catches <=. Support: label indices on paper. Stretch: choose a four-value case whose minimum occurs last, e.g.[3,2,1,0] ->3/0.",
+          "table": [
+            [
+              "Four temperatures",
+              "First minimum index",
+              "Minimum value"
+            ],
+            [
+              "-2, 4, -5, -5",
+              "Predict first",
+              "Predict first"
+            ],
+            [
+              "6, 3, 8, 9",
+              "Predict first",
+              "Predict first"
+            ],
+            [
+              "2, 2, 2, 2",
+              "Predict first",
+              "Predict first"
+            ]
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "Finding the first minimum",
+          "strategy": "Teacher modelling with faded support",
+          "notes": "This fragment follows the four-input loading code. Start lowest_index 0 at a real element. Strict < changes only for a smaller temperature. For main test, trace best indices 0,0,2,2. Final output 2 -5. If reusing this algorithm for a variable-length list, check empty input before index 0. Support: retain index/value trace columns.",
+          "body": [
+            "Use this after loading four temperatures.",
+            "Trace the repeated minimum before running."
+          ],
+          "code": "lowest_index = 0\nfor index in range(1, len(temperatures)):\n    if temperatures[index] < temperatures[lowest_index]:\n        lowest_index = index\nprint(lowest_index, temperatures[lowest_index])",
+          "minutes": 10
+        },
+        {
+          "title": "Your program and test record",
+          "strategy": "Independent implementation and peer feedback",
+          "notes": "Learners combine loading, display and minimum search without using min. Run all predicted four-reading cases and preserve expected results. Partner challenges a tie-rule or index explanation after individual coding. Support: provide a blank loop skeleton. Stretch: separately test a reusable search with a one-element list and an empty-list guard, distinguishing those from the exactly-four-input interface.",
+          "body": [
+            "Combine loading, display and first-minimum search.",
+            "Run each predicted test set without using min.",
+            "Record any fault, correction and rerun.",
+            "Ask a partner to challenge one index or tie-rule decision."
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "Index 2 or the third reading?",
+          "strategy": "All-student hinge question",
+          "notes": "Correct B: index 2 is the third reading for Python zero-based indexing. In[-2,4,-5,-5], first minimum is index 2/value-5. Displaying human position lowest_index+1 is fine, but keep zero-based index internally for access. If several choose A, label indices 0..3 above item numbers 1..4.",
+          "body": [
+            "The first minimum has Python index 2.",
+            "It is A: the second reading     B: the third reading",
+            "Choose alone and explain.",
+            "How could you display a human-friendly reading number?"
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: defend the evidence",
+          "strategy": "Independent exit ticket and reflection",
+          "notes": "For[3,1,1,4], first minimum index 1/value 1. Strict < keeps it, while <= returns 2. Equal values test the tie rule and negative values expose an unsafe guessed best value 0. Fixed four inputs ensure non-empty data; reusable search needs a guard. Collect an individual explanation before Week 7 files and reliable input.",
+          "body": [
+            "For [3, 1, 1, 4], give first minimum index and value.",
+            "Explain which comparison your program uses.",
+            "Name a test that checks repeated equal values.",
+            "Why is the four-input list safe to inspect at index 0?"
+          ],
+          "minutes": 5
+        }
+      ]
+    }
+  ]
+}
