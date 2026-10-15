@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,zipfile,xml.etree.ElementTree as ET
 root=Path(__file__).resolve().parents[1]
-data=json.loads((root/'slide-source/unit1-week1.json').read_text(encoding='utf-8'))
+data={'lessons':[lesson for file in sorted((root/'slide-source').glob('unit*-week*.json')) for lesson in json.loads(file.read_text(encoding='utf-8'))['lessons']]}
 ns={'p':'http://schemas.openxmlformats.org/presentationml/2006/main','a':'http://schemas.openxmlformats.org/drawingml/2006/main'}
 for lesson in data['lessons']:
     with zipfile.ZipFile(root/'dist/slides'/f'{lesson["id"]}.pptx') as deck:
@@ -22,4 +22,5 @@ for lesson in data['lessons']:
             notes=ET.fromstring(deck.read(f'ppt/notesSlides/notesSlide{number}.xml'))
             assert source['notes'] in ''.join(node.text or '' for node in notes.findall('.//a:t',ns))
             assert source['strategy'] in ''.join(node.text or '' for node in notes.findall('.//a:t',ns))
-print('32 native slide titles, editable text/tables and speaker notes verified.')
+print('64 native slide titles, editable text/tables and speaker notes verified.')
+

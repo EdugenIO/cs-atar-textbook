@@ -1,5 +1,5 @@
 const query = new URLSearchParams(location.search);
-const deck = weekOneSlides.lessons.find(item => item.id === query.get('lesson'));
+const deck = lessonSlides.lessons.find(item => item.id === query.get('lesson'));
 const main = document.getElementById('slides');
 let position = 0;
 let allSlides = false;
@@ -53,3 +53,4 @@ if (!deck) {
   });
   show();
 }
+

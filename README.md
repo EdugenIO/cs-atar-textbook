@@ -65,7 +65,8 @@ Official curriculum documents: [SCSA Computer Science](https://senior-secondary.
 The Teaching sequence page uses dist/teaching-planner-data.js for 256 allocated lessons. Each unit has 16 four-lesson teaching weeks and a separate two-week exam block. Edit lesson activities, objectives, checks and links there; keep teaching-lessons.csv and teaching-sequence.md aligned. The interface is in teaching-planner.js and teaching-planner.css. Project lesson counts are checked by tests/teaching-planner.test.mjs.
 
 
-## Lesson slides pilot
+## Lesson slides
 
-Unit 1 Week 1 has four eight-slide decks. Each planner lesson links to browser presentation, editable PowerPoint and teacher notes. Shared content lives in slide-source/unit1-week1.json; see slide-source/README.md for editing and regeneration. Run node scripts/build-slide-web.mjs after content changes; PowerPoint regeneration is separate. Later lesson buttons appear only when files exist.
+Unit 1 Weeks 1–2 have eight eight-slide decks. Each planner lesson links to browser presentation, editable PowerPoint and teacher notes. Shared content lives in the slide-source/unit*-week*.json files; see slide-source/README.md for editing and regeneration. Run node scripts/build-slide-web.mjs after content changes; PowerPoint regeneration is separate. Later lesson buttons appear only when files exist.
+
 
