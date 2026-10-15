@@ -15,7 +15,7 @@
   .table-scroll td,.table-scroll th{font-size:9pt;overflow-wrap:anywhere;padding:5pt}
   thead{display:table-header-group}
   tr{break-inside:avoid}
-  pre{white-space:pre-wrap;overflow-wrap:anywhere;overflow:visible;font-size:9pt;padding:10pt}
+  pre{white-space:pre-wrap;overflow-wrap:anywhere;overflow:visible;font-size:9pt;padding:10pt;break-inside:avoid}
   .diagram-scroll img{min-width:0;max-width:100%;width:100%}
   figure{break-inside:avoid}
   .quiz-option,#quiz button{display:block;background:none;color:black;border:0;padding:3pt 0;text-align:left}

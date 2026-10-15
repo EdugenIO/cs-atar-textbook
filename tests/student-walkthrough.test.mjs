@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 const root=new URL('../dist/',import.meta.url);
 const ctx=vm.createContext({source:'https://example.com',textbookHeadingId:s=>'heading-'+s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')});
 for(const file of ['chapters','audit-chapters','unit2-chapters','unit2-review-chapters','unit3-chapters','unit4-chapters'])vm.runInContext(fs.readFileSync(new URL(file+'.js',root),'utf8'),ctx);
+vm.runInContext(fs.readFileSync(new URL('prerequisites.js',root),'utf8'),ctx);
 vm.runInContext(fs.readFileSync(new URL('reader.js',root),'utf8').split('function downloadText')[0],ctx);
 const labels=vm.runInContext('textbookSectionLabels',ctx);
 for(const [old,label]of Object.entries(labels)){

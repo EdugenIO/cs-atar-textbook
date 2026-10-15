@@ -1,5 +1,14 @@
 // Original, concise classroom definitions. Related chapters provide the worked context.
 const glossaryEntries = [
+  ["Caller","The code that runs a function or method and receives its returned result.","functions"],
+  ["Ephemeral key agreement","Key agreement using temporary key material, as in this book’s simplified TLS connection.","unit4-crypto"],
+  ["Invariant","A rule that must remain true at the stated point in an algorithm or while an object is used.","unit3-objects"],
+  ["Key share","A public contribution used in key agreement; it is not the shared secret itself.","unit4-crypto"],
+  ["Loop body","The instructions repeated by a loop; Python uses indentation to mark its body.","loops"],
+  ["Multiset","A collection considered with the number of times each value occurs, rather than its order.","unit3-sort"],
+  ["Pass","One run through the work of an outer sorting loop in this textbook.","unit3-sort"],
+  ["Sorted prefix","The ordered region at the start of a list during a sorting algorithm.","unit3-sort"],
+  ["Sorted suffix","The ordered region at the end of a list during a sorting algorithm.","unit3-sort"],
   ['Accumulator', 'A variable that combines values during repeated processing, such as a running total.', 'loops'],
   ['ACID', 'Atomicity, consistency, isolation and durability: four properties used to reason about reliable database transactions.', 'unit4-project'],
   ['ACL', 'Access control list: rules specifying which subjects or network traffic may access a resource.', 'unit4-controls'],
@@ -84,7 +93,7 @@ const glossaryEntries = [
   ['HTTP', 'Hypertext Transfer Protocol: an application-layer protocol for exchanging web requests and responses.', 'unit3-network-models'],
   ['HTTPS', 'HTTP carried over a TLS-protected connection; it protects the connection, not the truthfulness of a website’s content.', 'unit4-crypto'],
   ['IDE', 'Integrated development environment: software combining tools such as an editor, execution controls and a debugger.', 'start'],
-  ['Index', 'In programming, a position used to access an element. Python sequence indexes begin at zero.', 'arrays'],
+  ['Index', 'In programming, a position used to access an element. Python sequence indices begin at zero.', 'arrays'],
   ['Information', 'Data interpreted or organised so that it conveys useful meaning in a context.', 'database-foundations'],
   ['Inheritance', 'Defining a class that extends or specialises behaviour from another class.', 'unit3-inheritance'],
   ['Inner join', 'An SQL join that returns combinations of rows satisfying its join condition.', 'sql-basics'],

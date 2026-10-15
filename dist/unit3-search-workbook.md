@@ -5,9 +5,9 @@ Four lessons; use synthetic integer IDs. Predict before executing.
 For [101,104,108,112,117,123,130], trace searches for 101, 117 and 999. Record index/value/match/result. Define not-found and duplicate behaviour. Explain why if result fails at index 0. Write pseudocode with explicit loop endpoints.
 
 ## B — Binary search
-Use the ascending list [101, 104, 108, 112, 117, 123, 130]. First write its indexes 0–6 separately from its stored values.
+Use the ascending list [101, 104, 108, 112, 117, 123, 130]. First write its indices 0–6 separately from its stored values.
 
-1. Start with low = 0 and high = 6. Both endpoint indexes are candidates.
+1. Start with low = 0 and high = 6. Both endpoint indices are candidates.
 2. Calculate mid = (low + high) // 2. Integer division floors the result: bounds 0 and 5 give index 2. Read the value at that index before comparing it with the target.
 3. Trace target 117, then target 119, using low/high/mid/value/action columns. Record bounds before each probe.
 4. Explain why low == high still leaves one candidate. End only when low > high.
