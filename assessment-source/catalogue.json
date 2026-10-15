@@ -1,0 +1,1006 @@
+{
+  "targetYear": 2027,
+  "checked": "15 October 2026",
+  "sources": {
+    "course": "https://senior-secondary.scsa.wa.edu.au/syllabus-and-support-materials/technologies/computer-science",
+    "y11": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+    "y12": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0005/1273190/Computer-Science-ATAR-Year-12-Syllabus-for-teaching-from-2027.PDF",
+    "sample11": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0012/11244/Computer_Science_Y11_Sample_Assessment-Outline_ATAR_2022.PDF",
+    "sample12": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0010/1092754/Computer_Science_Y12_Sample_Assessment-Outline_ATAR_2022.PDF",
+    "manual": "https://www.scsa.wa.edu.au/publications/wace-manual",
+    "policy": "https://senior-secondary.scsa.wa.edu.au/assessment/school-based-assessment",
+    "pygame": "https://www.pygame.org/docs/",
+    "quest": "https://developers.meta.com/vr/discover/platforms/",
+    "management": "https://developers.meta.com/vr/resources/qfb-private-apps-dist/"
+  },
+  "years": [
+    {
+      "year": 11,
+      "units": "1–2",
+      "weights": {
+        "Project": 40,
+        "Theory": 20,
+        "Practical": 10,
+        "Examination": 30
+      },
+      "tasks": [
+        {
+          "number": 1,
+          "type": "Project",
+          "weight": 20,
+          "title": "Modular Python solution",
+          "timing": "S1 W8–10: 10 existing project lessons; design W8, build W9, final W10.",
+          "sampleTiming": "S1 W5–12",
+          "scope": "Unit 1: modular software development, data/control structures, testing and evaluation",
+          "chapters": [
+            "design",
+            "files",
+            "arrays"
+          ],
+          "options": [
+            {
+              "id": "puzzle",
+              "title": "Pygame pattern puzzle",
+              "pitch": "Create a sequence-recall puzzle for a school activity club. Keep graphics simple and assess the Python logic.",
+              "requirements": [
+                "Store a target pattern and player attempts in one-dimensional lists. Use separate functions for round setup, input validation, scoring and summary.",
+                "Support a repeatable practice mode with a fixed pattern, increasing challenge and a clear restart/quit route.",
+                "Save a synthetic session summary to a text file. Keep event handling and display separate from assessable logic."
+              ],
+              "resources": [
+                "Python 3; optional school-approved Pygame installation; keyboard and screen.",
+                "Use coloured rectangles or original text, so no downloaded assets are necessary.",
+                "Included puzzle-logic.py contains unfinished function contracts; fixture data and expected cases accompany it."
+              ],
+              "tests": [
+                "Pattern [1,3,2], attempt [1,3,2]: 3 matching positions.",
+                "Pattern [1,3,2], attempt [1,2,3]: 1 matching position.",
+                "Reject symbols outside the permitted range; quit and restart leave a consistent state."
+              ],
+              "pack": true,
+              "routes": [
+                "Console or text interface: assess the same logic and evidence.",
+                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
+                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
+              ]
+            },
+            {
+              "id": "queue",
+              "title": "Python experiments: queue simulator",
+              "pitch": "Model a fictional service desk and compare two staffing configurations. Assess software quality rather than scientific sophistication.",
+              "requirements": [
+                "Represent queue lengths over discrete ticks in a one-dimensional list. Supply arrivals and service capacity as validated inputs.",
+                "Write functions for one simulation step, a complete run and a summary. Queue length cannot fall below zero.",
+                "Use deterministic input sequences for tests, then compare configurations and state the model’s assumptions. Save results as text."
+              ],
+              "resources": [
+                "Python 3 with standard library only; no headset or internet required.",
+                "Included arrivals.csv, queue-logic.py stubs and manual expected cases.",
+                "Optional Pygame graph comes after the tested console model."
+              ],
+              "tests": [
+                "Step rule: next queue = max(0, queue + arrivals - capacity).",
+                "Start 0, arrivals [2,0,3], capacity 1: queue trace [1,0,2].",
+                "No arrivals yields zero queue; negative arrivals/capacity must be rejected."
+              ],
+              "pack": true,
+              "routes": [
+                "Console or text interface: assess the same logic and evidence.",
+                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
+                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
+              ]
+            },
+            {
+              "id": "ecosystem",
+              "title": "Python experiments: a simple habitat model",
+              "pitch": "Develop a clearly labelled fictional population model for a science display.",
+              "requirements": [
+                "Store population at each step in a one-dimensional list. Use validated initial population, births and losses.",
+                "Separate update logic from display. Prevent negative population and define rounding explicitly.",
+                "Compare fixed parameter sets using repeatable runs, record assumptions and save a summary."
+              ],
+              "resources": [
+                "Python standard library and synthetic starting values.",
+                "Teacher supplies a simple update rule before issue; no biology knowledge marks.",
+                "Common requirements, schedule and testing templates included."
+              ],
+              "tests": [
+                "For rule max(0,population+births-losses), 10+2-3 gives 9.",
+                "Zero population and losses larger than population follow the declared rule.",
+                "Repeat identical inputs and check identical output."
+              ],
+              "pack": false,
+              "routes": [
+                "Console or text interface: assess the same logic and evidence.",
+                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
+                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
+              ]
+            },
+            {
+              "id": "club",
+              "title": "Club order manager",
+              "pitch": "Adapt the textbook’s familiar order context into a fresh client brief with individually assigned values.",
+              "requirements": [
+                "Validate invented order IDs and non-negative whole quantities. Use functions and a list for current-session orders.",
+                "Calculate integer-cent costs, append records and preserve existing runs. A save failure must not claim success.",
+                "Show totals, the first largest-order position and an empty-session message. Use a new price and scenario for an issued assessment."
+              ],
+              "resources": [
+                "Python standard library; existing project workbook and unfinished starter are public practice references.",
+                "Teacher must replace familiar worked values and require independent transfer.",
+                "Use the common evidence templates and a writable disposable folder."
+              ],
+              "tests": [
+                "Write expectations using the issued price, including a zero order.",
+                "Empty session and tied largest values follow the brief.",
+                "Two program runs retain both saved records."
+              ],
+              "pack": false,
+              "routes": [
+                "Console or text interface: assess the same logic and evidence.",
+                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
+                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
+              ]
+            },
+            {
+              "id": "trail",
+              "title": "Interactive trail challenge",
+              "pitch": "Build a text-based resource-management adventure for a fictional walking trail.",
+              "requirements": [
+                "Store route choices or resources in one-dimensional lists and implement branches and loops using functions.",
+                "Validate menu choices and update a resource total under explicitly defined rules.",
+                "Save a session summary and explain at least two alternative design choices."
+              ],
+              "resources": [
+                "Python standard library; teacher-written short scenario and simple rule sheet.",
+                "Console interface is sufficient; optional original illustrations earn no separate marks.",
+                "Common brief and test templates."
+              ],
+              "tests": [
+                "Invalid menu input allows recovery.",
+                "A resource boundary of zero has the agreed outcome.",
+                "Repeatable choices produce a hand-predicted final total."
+              ],
+              "pack": false,
+              "routes": [
+                "Console or text interface: assess the same logic and evidence.",
+                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
+                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
+              ]
+            }
+          ],
+          "budget": 10
+        },
+        {
+          "number": 2,
+          "type": "Practical",
+          "weight": 5,
+          "title": "Programming implementation test",
+          "timing": "S1 W7 L4: existing controlled practical slot; after functions, lists and files.",
+          "sampleTiming": "S1 W10",
+          "scope": "Unit 1: input validation, debugging, functions, one-dimensional lists and file handling",
+          "chapters": [
+            "files",
+            "functions"
+          ],
+          "options": [
+            {
+              "id": "standard",
+              "title": "Programming implementation test blueprint",
+              "pitch": "One standard assessment for this slot. The teacher prepares a fresh paper/prototype and item-level marking key using the blueprint.",
+              "requirements": [
+                "Use a 40-mark blueprint: diagnosis 8, corrected implementation 16, testing evidence 12, explanation 4.",
+                "Target functions, lists, input checks and file handling. Include ordinary, boundary and invalid cases.",
+                "Provide a resettable workspace and a deterministic dataset. Keep the issued faults and key private until release."
+              ],
+              "resources": [
+                "Python IDE or SQLite workspace matching the task; no new software on test day.",
+                "Teacher creates a new faulty prototype and validates a reference repair.",
+                "Included practical-test grid and test-record CSV; public textbook solutions are practice only."
+              ],
+              "tests": [
+                "The original prototype should reproduce each intended fault.",
+                "The reference repair must pass intended tests without breaking earlier cases."
+              ],
+              "pack": false
+            }
+          ],
+          "budget": 1
+        },
+        {
+          "number": 3,
+          "type": "Theory",
+          "weight": 10,
+          "title": "Programming and networking theory",
+          "timing": "S1 W14 L3: existing theory slot; after network design.",
+          "sampleTiming": "S1 W14",
+          "scope": "Unit 1: programming explanations, licensing and network communication/design",
+          "chapters": [
+            "network-review",
+            "software-responsibility"
+          ],
+          "options": [
+            {
+              "id": "standard",
+              "title": "Programming and networking theory blueprint",
+              "pitch": "One standard assessment for this slot. The teacher prepares a fresh paper/prototype and item-level marking key using the blueprint.",
+              "requirements": [
+                "Draft 30 marks of short responses and 20 marks of extended analysis within a 55-minute lesson.",
+                "Allocate items across: programming, ownership and networking. Prepare an item-level marking key and a new stimulus before issue.",
+                "Require explanation and application to the stimulus, including a labelled diagram or trace where relevant."
+              ],
+              "resources": [
+                "Teacher-authored network diagram, requirements/log extract or code trace as appropriate.",
+                "Plain text and accessible diagram version; school-approved permitted materials.",
+                "Included 50-mark planning grid and marking-key template."
+              ],
+              "tests": [
+                "Check every item has an explicit content reference and expected marking points.",
+                "Trial timing with a colleague and check the mark total is 50."
+              ],
+              "pack": false
+            }
+          ],
+          "budget": 1
+        },
+        {
+          "number": 4,
+          "type": "Examination",
+          "weight": 10,
+          "title": "Semester 1 examination",
+          "timing": "S1 W17–18 exam block, according to the school timetable.",
+          "sampleTiming": "S1 W16",
+          "scope": "Unit 1 representative sample",
+          "chapters": [
+            "exam-preparation"
+          ],
+          "options": [
+            {
+              "id": "standard",
+              "title": "Unit 1 exam blueprint",
+              "pitch": "An exam construction blueprint. Full papers and secure marking keys remain to be authored.",
+              "requirements": [
+                "Suggested school paper: 2.5 hours working as a local proposal; school sets reading time. Use a 40% short-answer and 60% extended-answer balance, with new original stimuli.",
+                "Sample the taught Unit 1 content. Build a content/demand/marks matrix and an item-specific key.",
+                "Prepare accessible diagrams, checking time and an independently moderated marking guide. The Year 12 external design specifies 10 minutes reading plus 3 hours working, 20–30 short questions and 4–6 extended questions."
+              ],
+              "resources": [
+                "Included exam blueprint CSV and paper-review checklist.",
+                "Current syllabus examination design brief and school examination procedures.",
+                "Existing open practice papers are revision resources, not secure full exams."
+              ],
+              "tests": [
+                "Check content coverage, question count, section totals and realistic timing.",
+                "Trial every code/SQL stimulus and verify all computed answers independently."
+              ],
+              "pack": false
+            }
+          ],
+          "budget": 0
+        },
+        {
+          "number": 5,
+          "type": "Theory",
+          "weight": 10,
+          "title": "Cybersecurity theory",
+          "timing": "S2 W12 L2 proposed: after security, ciphers and responsible data use; replace a review activity.",
+          "sampleTiming": "S2 W4",
+          "scope": "Unit 2: security threats/controls, security frameworks, ciphers and responsible data use",
+          "chapters": [
+            "security-threats",
+            "responsible-data"
+          ],
+          "options": [
+            {
+              "id": "standard",
+              "title": "Cybersecurity theory blueprint",
+              "pitch": "One standard assessment for this slot. The teacher prepares a fresh paper/prototype and item-level marking key using the blueprint.",
+              "requirements": [
+                "Draft 30 marks of short responses and 20 marks of extended analysis within a 55-minute lesson.",
+                "Allocate items across: security concepts, common ciphers and responsible data use. Prepare an item-level marking key and a new stimulus before issue.",
+                "Require explanation and application to the stimulus, including a labelled diagram or trace where relevant."
+              ],
+              "resources": [
+                "Teacher-authored network diagram, requirements/log extract or code trace as appropriate.",
+                "Plain text and accessible diagram version; school-approved permitted materials.",
+                "Included 50-mark planning grid and marking-key template."
+              ],
+              "tests": [
+                "Check every item has an explicit content reference and expected marking points.",
+                "Trial timing with a colleague and check the mark total is 50."
+              ],
+              "pack": false
+            }
+          ],
+          "budget": 1
+        },
+        {
+          "number": 6,
+          "type": "Project",
+          "weight": 20,
+          "title": "Relational database solution",
+          "timing": "S2 W7–12: 14 existing workshops, including design, build, testing and demonstration.",
+          "sampleTiming": "S2 W10–12",
+          "scope": "Unit 2: relational design, normalisation, SQL, integrity, evaluation and responsible data",
+          "chapters": [
+            "database-solution",
+            "entities-relationships"
+          ],
+          "options": [
+            {
+              "id": "equipment",
+              "title": "Equipment loans database",
+              "pitch": "Design a community equipment desk using invented borrowers and equipment.",
+              "requirements": [
+                "Design Borrower, Category, Equipment and Loan entities, including repeat loans and optional return dates.",
+                "Explain the normalisation decisions, document keys/domains and create the relational database.",
+                "Implement joined loan reports, aggregate inventory reports and safe insert/update/delete operations. Test constraints and recovery."
+              ],
+              "resources": [
+                "SQLite or school-approved RDBMS; DB Browser for SQLite is optional.",
+                "Included flat source CSV, relationship prompt and SQL TODO file.",
+                "Existing unit 2 workbook provides practice, not a private marking key."
+              ],
+              "tests": [
+                "Borrower B01 and equipment E01 can have repeated loans with different loan IDs.",
+                "A loan referring to missing equipment is rejected when foreign keys are enabled.",
+                "Returned loans disappear from the active-loans report, while history remains."
+              ],
+              "pack": true,
+              "routes": [
+                "SQL workspace and documented workflows: a complete RDBMS solution is the baseline.",
+                "Optional Python console interface using SQL, if already taught.",
+                "Optional approved desktop or local browser interface with the same database evidence."
+              ]
+            },
+            {
+              "id": "festival11",
+              "title": "Community festival bookings",
+              "pitch": "Manage fictional sessions, venues and participant bookings for a community festival.",
+              "requirements": [
+                "Design Participant, Venue, Session and Booking entities, resolving participant-to-session multiplicity.",
+                "Document a normalised design, keys, domains and field-level validation before implementation.",
+                "Create joined booking reports and attendance totals. Demonstrate changes and test invalid references."
+              ],
+              "resources": [
+                "SQLite; synthetic participants/session records; common design workbook.",
+                "Teacher supplies venue capacities and an unambiguous booking rule.",
+                "No online payments or real participant information."
+              ],
+              "tests": [
+                "One participant can book different sessions but cannot duplicate the same booking.",
+                "Unknown participant/session references fail.",
+                "A session with no bookings behaves as the report specification states."
+              ],
+              "pack": false,
+              "routes": [
+                "SQL workspace and documented workflows: a complete RDBMS solution is the baseline.",
+                "Optional Python console interface using SQL, if already taught.",
+                "Optional approved desktop or local browser interface with the same database evidence."
+              ]
+            },
+            {
+              "id": "repair11",
+              "title": "Repair café register",
+              "pitch": "Organise fictional repair appointments and equipment categories.",
+              "requirements": [
+                "Model CustomerAlias, DeviceType, Device and Appointment with a documented scope.",
+                "Use a four-entity design, keys, relationships and normalisation evidence.",
+                "Produce joined appointment lists, totals by repair category and tested data changes."
+              ],
+              "resources": [
+                "SQLite; invented records only; common test and data-dictionary templates.",
+                "No personal device contents, passwords or actual customer details.",
+                "Teacher supplies a small flat input table for normalisation."
+              ],
+              "tests": [
+                "A device can have multiple appointments.",
+                "Deleting a referenced device follows an explicitly chosen integrity rule.",
+                "Totals match a small hand-counted fixture."
+              ],
+              "pack": false,
+              "routes": [
+                "SQL workspace and documented workflows: a complete RDBMS solution is the baseline.",
+                "Optional Python console interface using SQL, if already taught.",
+                "Optional approved desktop or local browser interface with the same database evidence."
+              ]
+            },
+            {
+              "id": "quest11",
+              "title": "VR lab loans and bookings",
+              "pitch": "Use headset lending as a database context. Physical headsets are optional.",
+              "requirements": [
+                "Model DeviceType, Device, BorrowerAlias and Loan in a normalised design.",
+                "Track invented asset labels and current loans without collecting headset-account information.",
+                "Produce available-device and overdue reports, demonstrate SQL changes and test referential integrity."
+              ],
+              "resources": [
+                "SQLite plus a synthetic asset register; no Quest required.",
+                "Optional teacher demonstration of a real asset workflow.",
+                "Use the equipment pack structure with renamed fields and a fresh issued dataset."
+              ],
+              "tests": [
+                "A returned device becomes available under the agreed rule.",
+                "An unknown asset ID fails validation.",
+                "The overdue-date boundary matches the written specification."
+              ],
+              "pack": false,
+              "routes": [
+                "SQL workspace and documented workflows: a complete RDBMS solution is the baseline.",
+                "Optional Python console interface using SQL, if already taught.",
+                "Optional approved desktop or local browser interface with the same database evidence."
+              ]
+            }
+          ],
+          "budget": 14
+        },
+        {
+          "number": 7,
+          "type": "Practical",
+          "weight": 5,
+          "title": "SQL implementation test",
+          "timing": "S2 W14 L4 proposed controlled slot after SQL and database review.",
+          "sampleTiming": "S2 W14",
+          "scope": "Unit 2: implement and manipulate a database using SQL",
+          "chapters": [
+            "sql-basics",
+            "database-solution"
+          ],
+          "options": [
+            {
+              "id": "standard",
+              "title": "SQL implementation test blueprint",
+              "pitch": "One standard assessment for this slot. The teacher prepares a fresh paper/prototype and item-level marking key using the blueprint.",
+              "requirements": [
+                "Use a 40-mark blueprint: diagnosis 8, corrected implementation 16, testing evidence 12, explanation 4.",
+                "Target SQL changes, joins, ordering and aggregates. Include ordinary, boundary and invalid cases.",
+                "Provide a resettable workspace and a deterministic dataset. Keep the issued faults and key private until release."
+              ],
+              "resources": [
+                "Python IDE or SQLite workspace matching the task; no new software on test day.",
+                "Teacher creates a new faulty prototype and validates a reference repair.",
+                "Included practical-test grid and test-record CSV; public textbook solutions are practice only."
+              ],
+              "tests": [
+                "The original prototype should reproduce each intended fault.",
+                "The reference repair must pass intended tests without breaking earlier cases."
+              ],
+              "pack": false
+            }
+          ],
+          "budget": 1
+        },
+        {
+          "number": 8,
+          "type": "Examination",
+          "weight": 20,
+          "title": "Semester 2 examination",
+          "timing": "S2 W17–18 exam block, according to the school timetable.",
+          "sampleTiming": "S2 W16",
+          "scope": "Units 1–2 representative sample; make scope explicit before issue",
+          "chapters": [
+            "unit2-exam"
+          ],
+          "options": [
+            {
+              "id": "standard",
+              "title": "Year 11 final exam blueprint",
+              "pitch": "An exam construction blueprint. Full papers and secure marking keys remain to be authored.",
+              "requirements": [
+                "Suggested school paper: 3 hours working as a local proposal; school sets reading time. Use a 40% short-answer and 60% extended-answer balance, with new original stimuli.",
+                "Sample the declared Units 1–2 scope. Build a content/demand/marks matrix and an item-specific key.",
+                "Prepare accessible diagrams, checking time and an independently moderated marking guide. The Year 12 external design specifies 10 minutes reading plus 3 hours working, 20–30 short questions and 4–6 extended questions."
+              ],
+              "resources": [
+                "Included exam blueprint CSV and paper-review checklist.",
+                "Current syllabus examination design brief and school examination procedures.",
+                "Existing open practice papers are revision resources, not secure full exams."
+              ],
+              "tests": [
+                "Check content coverage, question count, section totals and realistic timing.",
+                "Trial every code/SQL stimulus and verify all computed answers independently."
+              ],
+              "pack": false
+            }
+          ],
+          "budget": 0
+        }
+      ]
+    },
+    {
+      "year": 12,
+      "units": "3–4",
+      "weights": {
+        "Project": 40,
+        "Theory": 10,
+        "Practical": 10,
+        "Examination": 40
+      },
+      "tasks": [
+        {
+          "number": 1,
+          "type": "Project",
+          "weight": 15,
+          "title": "Object-oriented Python solution",
+          "timing": "S1 W7–10: 12 existing workshops, after classes and inheritance.",
+          "sampleTiming": "S1 W5–8",
+          "scope": "Unit 3: object-oriented development, arrays/dictionaries, algorithms and testing",
+          "chapters": [
+            "unit3-project",
+            "unit3-objects",
+            "unit3-structures"
+          ],
+          "options": [
+            {
+              "id": "warehouse",
+              "title": "Pygame warehouse planner",
+              "pitch": "Build a warehouse training simulation for a fictional client using a grid and movable objects.",
+              "requirements": [
+                "Represent warehouse occupancy in a two-dimensional array. Define student-authored classes with attributes and methods, using inheritance where it serves the design.",
+                "Use a dictionary for item lookup and implement the selected search/sort behaviour in the core logic rather than only calling a library.",
+                "Separate model from rendering, validate commands and retain a repeatable command replay. Evaluate the client’s success criteria."
+              ],
+              "resources": [
+                "Python 3; Pygame optional; keyboard input and a simple original grid display.",
+                "Included warehouse-logic.py contracts, layout.csv, items.csv and command fixtures.",
+                "A console grid is an equivalent route to the same evidence."
+              ],
+              "tests": [
+                "Moving into a blocked grid cell leaves the object in its original cell.",
+                "Coordinates outside the grid fail safely.",
+                "Replay the same command sequence to reproduce the same final grid."
+              ],
+              "pack": true,
+              "routes": [
+                "Console or text interface: assess the same logic and evidence.",
+                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
+                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
+              ]
+            },
+            {
+              "id": "evacuation",
+              "title": "Python experiments: evacuation model",
+              "pitch": "Create a fictional grid simulation comparing route rules for a safety-training client.",
+              "requirements": [
+                "Use a two-dimensional environment and classes for agents or barriers. Document individual responsibilities and interactions.",
+                "Implement deterministic movement, conflict and exit rules and a dictionary of agent states.",
+                "Compare rule sets against repeatable fixtures. Distinguish simulation assumptions from claims about real emergency safety."
+              ],
+              "resources": [
+                "Python standard library; Pygame optional for display.",
+                "Teacher-supplied tiny grid and movement rules to limit scope.",
+                "No real movement tracking or real evacuation validation."
+              ],
+              "tests": [
+                "An agent never enters a blocked or out-of-bounds cell.",
+                "A defined simultaneous conflict has a deterministic result.",
+                "An empty agent list terminates with the stated summary."
+              ],
+              "pack": false,
+              "routes": [
+                "Console or text interface: assess the same logic and evidence.",
+                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
+                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
+              ]
+            },
+            {
+              "id": "timetable",
+              "title": "Club timetable optimiser",
+              "pitch": "Build a scheduling assistant for fictional club activities.",
+              "requirements": [
+                "Use a two-dimensional room/period table and classes for sessions and resources.",
+                "Use dictionary lookup and a student-written taught search or sort routine in a meaningful workflow.",
+                "Validate conflicts, expose unresolved scheduling cases and evaluate the chosen strategy with test fixtures."
+              ],
+              "resources": [
+                "Python standard library; synthetic room/session CSVs prepared by the teacher.",
+                "A bounded rule-based scheduler is sufficient; no advanced optimisation library required.",
+                "Common class/interface and trace templates."
+              ],
+              "tests": [
+                "Two sessions cannot occupy the same room and period.",
+                "A session too large for every room stays unassigned with a reason.",
+                "Tied priorities follow a documented deterministic rule."
+              ],
+              "pack": false,
+              "routes": [
+                "Console or text interface: assess the same logic and evidence.",
+                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
+                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
+              ]
+            },
+            {
+              "id": "robot",
+              "title": "Robot arena simulator",
+              "pitch": "Create a deterministic grid training arena for a robotics club without requiring a robot.",
+              "requirements": [
+                "Use a two-dimensional arena and classes for robots, with at least one justified specialisation or interface decision.",
+                "Store commands or robot lookup in a dictionary and process movement through tested methods.",
+                "Implement a bounded experiment and produce a client evaluation based on traceable results."
+              ],
+              "resources": [
+                "Python 3; Pygame optional; synthetic arena and command files.",
+                "No physical robot required and no marks for hardware expense.",
+                "Teacher supplies collision and turn-order rules before issue."
+              ],
+              "tests": [
+                "A robot at a boundary cannot leave the arena.",
+                "Commands for an unknown robot are rejected.",
+                "An empty command file ends without an infinite loop."
+              ],
+              "pack": false,
+              "routes": [
+                "Console or text interface: assess the same logic and evidence.",
+                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
+                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
+              ]
+            },
+            {
+              "id": "quest12",
+              "title": "Quest-inspired training replay",
+              "pitch": "Implement a Python grid-based training simulator from invented VR event records. The assessable program runs on a normal PC.",
+              "requirements": [
+                "Create a two-dimensional training environment and classes for participants or checkpoints.",
+                "Read synthetic event records, use dictionary lookup and validate coordinates and event sequences.",
+                "Evaluate outcomes through deterministic replay. Optional headset observation informs requirements but is not the assessed Python implementation."
+              ],
+              "resources": [
+                "Python 3; supplied invented event CSV with tick, alias, row, column and action.",
+                "Optional Quest observation/casting with approved app and IT setup.",
+                "Native Quest deployment would be a separate extension with a different toolchain."
+              ],
+              "tests": [
+                "Replay identical events to produce identical state.",
+                "An invalid coordinate is rejected and recorded.",
+                "Missing checkpoints produce the agreed incomplete-training outcome."
+              ],
+              "pack": false,
+              "routes": [
+                "Console or text interface: assess the same logic and evidence.",
+                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
+                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
+              ]
+            }
+          ],
+          "budget": 12
+        },
+        {
+          "number": 2,
+          "type": "Practical",
+          "weight": 5,
+          "title": "Programming implementation test",
+          "timing": "S1 W9 L2 proposed: after OOP and debugging; before that week’s two project workshops.",
+          "sampleTiming": "S1 W8",
+          "scope": "Unit 3: debugging, dictionaries and student-authored classes",
+          "chapters": [
+            "unit3-reliability",
+            "unit3-objects"
+          ],
+          "options": [
+            {
+              "id": "standard",
+              "title": "Programming implementation test blueprint",
+              "pitch": "One standard assessment for this slot. The teacher prepares a fresh paper/prototype and item-level marking key using the blueprint.",
+              "requirements": [
+                "Use a 40-mark blueprint: diagnosis 8, corrected implementation 16, testing evidence 12, explanation 4.",
+                "Target dictionaries, classes, methods and debugging. Include ordinary, boundary and invalid cases.",
+                "Provide a resettable workspace and a deterministic dataset. Keep the issued faults and key private until release."
+              ],
+              "resources": [
+                "Python IDE or SQLite workspace matching the task; no new software on test day.",
+                "Teacher creates a new faulty prototype and validates a reference repair.",
+                "Included practical-test grid and test-record CSV; public textbook solutions are practice only."
+              ],
+              "tests": [
+                "The original prototype should reproduce each intended fault.",
+                "The reference repair must pass intended tests without breaking earlier cases."
+              ],
+              "pack": false
+            }
+          ],
+          "budget": 1
+        },
+        {
+          "number": 3,
+          "type": "Theory",
+          "weight": 5,
+          "title": "Programming, ethics and law",
+          "timing": "S1 W14 L3 proposed: after project reflection and network teaching.",
+          "sampleTiming": "S1 W10",
+          "scope": "Unit 3: programming reasoning and software development issues; sample networking in exam",
+          "chapters": [
+            "unit3-review",
+            "unit3-reliability"
+          ],
+          "options": [
+            {
+              "id": "standard",
+              "title": "Programming, ethics and law blueprint",
+              "pitch": "One standard assessment for this slot. The teacher prepares a fresh paper/prototype and item-level marking key using the blueprint.",
+              "requirements": [
+                "Draft 30 marks of short responses and 20 marks of extended analysis within a 55-minute lesson.",
+                "Allocate items across: algorithms, OOP and ethical/legal software-development issues. Prepare an item-level marking key and a new stimulus before issue.",
+                "Require explanation and application to the stimulus, including a labelled diagram or trace where relevant."
+              ],
+              "resources": [
+                "Teacher-authored network diagram, requirements/log extract or code trace as appropriate.",
+                "Plain text and accessible diagram version; school-approved permitted materials.",
+                "Included 50-mark planning grid and marking-key template."
+              ],
+              "tests": [
+                "Check every item has an explicit content reference and expected marking points.",
+                "Trial timing with a colleague and check the mark total is 50."
+              ],
+              "pack": false
+            }
+          ],
+          "budget": 1
+        },
+        {
+          "number": 4,
+          "type": "Examination",
+          "weight": 15,
+          "title": "Semester 1 examination",
+          "timing": "S1 W17–18 exam block, according to the school timetable.",
+          "sampleTiming": "S1 W16",
+          "scope": "Unit 3 representative sample, including networking",
+          "chapters": [
+            "unit3-exam"
+          ],
+          "options": [
+            {
+              "id": "standard",
+              "title": "Unit 3 exam blueprint",
+              "pitch": "An exam construction blueprint. Full papers and secure marking keys remain to be authored.",
+              "requirements": [
+                "Suggested school paper: 10 minutes reading plus 3 hours working. Use a 40% short-answer and 60% extended-answer balance, with new original stimuli.",
+                "Sample the taught Unit 3 content. Build a content/demand/marks matrix and an item-specific key.",
+                "Prepare accessible diagrams, checking time and an independently moderated marking guide. The Year 12 external design specifies 10 minutes reading plus 3 hours working, 20–30 short questions and 4–6 extended questions."
+              ],
+              "resources": [
+                "Included exam blueprint CSV and paper-review checklist.",
+                "Current syllabus examination design brief and school examination procedures.",
+                "Existing open practice papers are revision resources, not secure full exams."
+              ],
+              "tests": [
+                "Check content coverage, question count, section totals and realistic timing.",
+                "Trial every code/SQL stimulus and verify all computed answers independently."
+              ],
+              "pack": false
+            }
+          ],
+          "budget": 0
+        },
+        {
+          "number": 5,
+          "type": "Theory",
+          "weight": 5,
+          "title": "Networks and cybersecurity",
+          "timing": "S2 W11 L4 proposed: after cryptography, security and ethics.",
+          "sampleTiming": "S2 W5",
+          "scope": "Unit 3 networking and Unit 4 cybersecurity case analysis",
+          "chapters": [
+            "unit3-secure-networks",
+            "unit4-analysis",
+            "unit4-crypto"
+          ],
+          "options": [
+            {
+              "id": "standard",
+              "title": "Networks and cybersecurity blueprint",
+              "pitch": "One standard assessment for this slot. The teacher prepares a fresh paper/prototype and item-level marking key using the blueprint.",
+              "requirements": [
+                "Draft 30 marks of short responses and 20 marks of extended analysis within a 55-minute lesson.",
+                "Allocate items across: subnets/segmentation, network performance, threats, CIA/AAA and secure communication. Prepare an item-level marking key and a new stimulus before issue.",
+                "Require explanation and application to the stimulus, including a labelled diagram or trace where relevant."
+              ],
+              "resources": [
+                "Teacher-authored network diagram, requirements/log extract or code trace as appropriate.",
+                "Plain text and accessible diagram version; school-approved permitted materials.",
+                "Included 50-mark planning grid and marking-key template."
+              ],
+              "tests": [
+                "Check every item has an explicit content reference and expected marking points.",
+                "Trial timing with a colleague and check the mark total is 50."
+              ],
+              "pack": false
+            }
+          ],
+          "budget": 1
+        },
+        {
+          "number": 6,
+          "type": "Project",
+          "weight": 25,
+          "title": "Integrated Python and database solution",
+          "timing": "S2 W5–10: 16 existing workshops after four foundation lessons in W4.",
+          "sampleTiming": "S2 W10–13",
+          "scope": "Unit 4: relational design, Python/SQL integration, integrity, transactions and evaluation",
+          "chapters": [
+            "unit4-project",
+            "unit4-design",
+            "unit4-sql"
+          ],
+          "options": [
+            {
+              "id": "questdb",
+              "title": "VR lab booking and maintenance system",
+              "pitch": "Develop an integrated Python/SQL system for a fictional shared-headset laboratory.",
+              "requirements": [
+                "Model five related entities: BorrowerAlias, DeviceModel, Device, Booking and Maintenance. Explain keys, relationships and normalisation.",
+                "Create a Python interface that executes parameterised SQL for bookings, updates and reports. Include meaningful multi-table joins, grouped totals and calculated output.",
+                "Test integrity, a transaction that rolls back on failure, backup restoration and role/privacy decisions. Use synthetic asset and borrower data."
+              ],
+              "resources": [
+                "Python sqlite3 and SQLite; no headset needed to earn any mark.",
+                "Included devices.csv, borrowers.csv, bookings.csv, schema-todo.sql and app-todo.py.",
+                "Optional headset observation only after school approval."
+              ],
+              "tests": [
+                "A booking for an unknown device fails referential integrity.",
+                "A duplicate/conflicting booking follows the specified rejection rule.",
+                "A failed multi-step update rolls back and leaves earlier data unchanged."
+              ],
+              "pack": true,
+              "routes": [
+                "Python console interface using SQL: the baseline integrated solution.",
+                "Optional Python desktop GUI using the same database core.",
+                "Optional Python-backed local browser interface if already taught; retain the same SQL evidence."
+              ]
+            },
+            {
+              "id": "festival12",
+              "title": "Festival operations platform",
+              "pitch": "Build integrated booking and reporting software for a fictional festival.",
+              "requirements": [
+                "Design ParticipantAlias, Venue, Session, Booking and TicketType entities, with justified integrity constraints.",
+                "Implement a Python interface, parameterised SQL and joined/grouped operational reports.",
+                "Provide evidence for transaction failure, imported-data checks, recovery and access decisions."
+              ],
+              "resources": [
+                "Python sqlite3, SQLite and synthetic data files.",
+                "No real payment or attendee data, and no live payment service.",
+                "Common normalisation, report-specification and recovery templates."
+              ],
+              "tests": [
+                "Unknown foreign keys fail.",
+                "Booking totals and calculated revenue match a hand-computed fixture.",
+                "Simulated transaction failure restores the previous consistent state."
+              ],
+              "pack": false,
+              "routes": [
+                "Python console interface using SQL: the baseline integrated solution.",
+                "Optional Python desktop GUI using the same database core.",
+                "Optional Python-backed local browser interface if already taught; retain the same SQL evidence."
+              ]
+            },
+            {
+              "id": "repair12",
+              "title": "Repair and parts service",
+              "pitch": "Integrate a repair queue, technician assignments and parts inventory.",
+              "requirements": [
+                "Model CustomerAlias, Device, RepairJob, Part and JobPart as at least five related entities.",
+                "Implement Python workflows and SQL reports for open jobs, part usage and grouped totals.",
+                "Demonstrate referential/domain constraints, a stock/job transaction and a tested backup/restore procedure."
+              ],
+              "resources": [
+                "Python and SQLite with synthetic job/stock data.",
+                "Teacher supplies stock rules and report requirements.",
+                "No actual customer devices, passwords or private customer data."
+              ],
+              "tests": [
+                "A job with no parts stays visible in the defined operational report.",
+                "Insufficient stock rejects the transaction consistently.",
+                "A failed stock update does not leave an incorrect job total."
+              ],
+              "pack": false,
+              "routes": [
+                "Python console interface using SQL: the baseline integrated solution.",
+                "Optional Python desktop GUI using the same database core.",
+                "Optional Python-backed local browser interface if already taught; retain the same SQL evidence."
+              ]
+            },
+            {
+              "id": "environment12",
+              "title": "Environmental experiment registry",
+              "pitch": "Manage fictional experiments, sensors and observations with a Python database interface.",
+              "requirements": [
+                "Model Site, SensorType, Sensor, Experiment and Observation entities with declared dependencies.",
+                "Import a small deliberately imperfect synthetic CSV, retain the raw original and justify corrections.",
+                "Implement validated CRUD and joined/grouped reports. Evaluate data quality, integrity, transactions and recovery."
+              ],
+              "resources": [
+                "Python, SQLite, teacher-created synthetic readings and common data-quality log.",
+                "No physical sensor is necessary.",
+                "Avoid inferring scientific validity from a working database."
+              ],
+              "tests": [
+                "Reject unknown sensor IDs and values outside the declared domain.",
+                "A legitimate unusual reading remains distinguishable from an invalid record.",
+                "Reimport policy prevents unintended duplicate observations."
+              ],
+              "pack": false,
+              "routes": [
+                "Python console interface using SQL: the baseline integrated solution.",
+                "Optional Python desktop GUI using the same database core.",
+                "Optional Python-backed local browser interface if already taught; retain the same SQL evidence."
+              ]
+            }
+          ],
+          "budget": 16
+        },
+        {
+          "number": 7,
+          "type": "Practical",
+          "weight": 5,
+          "title": "Relational database and SQL test",
+          "timing": "S2 W12 L4 proposed: after integration and database review.",
+          "sampleTiming": "S2 W14",
+          "scope": "Unit 4: schema/constraints, multi-table SQL, grouped/calculated output",
+          "chapters": [
+            "unit4-sql",
+            "unit4-project"
+          ],
+          "options": [
+            {
+              "id": "standard",
+              "title": "Relational database and SQL test blueprint",
+              "pitch": "One standard assessment for this slot. The teacher prepares a fresh paper/prototype and item-level marking key using the blueprint.",
+              "requirements": [
+                "Use a 40-mark blueprint: diagnosis 8, corrected implementation 16, testing evidence 12, explanation 4.",
+                "Target schema constraints, joins, grouping, calculated/concatenated output and SQL changes. Include ordinary, boundary and invalid cases.",
+                "Provide a resettable workspace and a deterministic dataset. Keep the issued faults and key private until release."
+              ],
+              "resources": [
+                "Python IDE or SQLite workspace matching the task; no new software on test day.",
+                "Teacher creates a new faulty prototype and validates a reference repair.",
+                "Included practical-test grid and test-record CSV; public textbook solutions are practice only."
+              ],
+              "tests": [
+                "The original prototype should reproduce each intended fault.",
+                "The reference repair must pass intended tests without breaking earlier cases."
+              ],
+              "pack": false
+            }
+          ],
+          "budget": 1
+        },
+        {
+          "number": 8,
+          "type": "Examination",
+          "weight": 25,
+          "title": "Semester 2 examination",
+          "timing": "S2 W17–18 exam block, according to the school timetable; external exam is separate.",
+          "sampleTiming": "S2 W16",
+          "scope": "Units 3–4 representative sample",
+          "chapters": [
+            "unit4-exam"
+          ],
+          "options": [
+            {
+              "id": "standard",
+              "title": "Year 12 final exam blueprint",
+              "pitch": "An exam construction blueprint. Full papers and secure marking keys remain to be authored.",
+              "requirements": [
+                "Suggested school paper: 10 minutes reading plus 3 hours working. Use a 40% short-answer and 60% extended-answer balance, with new original stimuli.",
+                "Sample Units 3–4. Build a content/demand/marks matrix and an item-specific key.",
+                "Prepare accessible diagrams, checking time and an independently moderated marking guide. The Year 12 external design specifies 10 minutes reading plus 3 hours working, 20–30 short questions and 4–6 extended questions."
+              ],
+              "resources": [
+                "Included exam blueprint CSV and paper-review checklist.",
+                "Current syllabus examination design brief and school examination procedures.",
+                "Existing open practice papers are revision resources, not secure full exams."
+              ],
+              "tests": [
+                "Check content coverage, question count, section totals and realistic timing.",
+                "Trial every code/SQL stimulus and verify all computed answers independently."
+              ],
+              "pack": false
+            }
+          ],
+          "budget": 0
+        }
+      ]
+    }
+  ]
+}

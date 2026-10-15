@@ -1,0 +1,2 @@
+# Decisions the client brief must settle
+Slots use integer labels, not actual dates. Define whether end slots are inclusive or exclusive. K02 is deliberately a booked device with unresolved maintenance: treat it as existing data requiring an explicitly justified response. Do not silently clean it away. Decide if unresolved maintenance blocks new bookings and how existing bookings are handled. Publish those rules before marking conflicts.

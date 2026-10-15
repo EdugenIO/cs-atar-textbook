@@ -77,6 +77,14 @@ Unit 1 Weeks 1–8 and Week 9 Lesson 1 have thirty-three eight-slide decks. Each
 
 The homepage includes static Open Graph and large-image card metadata for social previews. Share https://edugenio.github.io/cs-atar-textbook/ . Artwork is in dist/social-preview.svg with a 1200 x 630 PNG at dist/social-preview-v1.png. The SVG is editable; scripts/build-social-preview.mjs optionally rebuilds the PNG using sharp. Use a new versioned image filename when replacing artwork so existing social caches can be refreshed. Hash routes share the homepage preview.
 
+## Assessment planning library
+
+The Assessments navigation item opens `#assessments`. The 2027 planning catalogue provides two eight-task outlines with prescribed category totals, 18 project alternatives, eight standard controlled-test blueprints and four standard exam blueprints. Choice applies to projects only. Five project options include unfinished Python/SQL starters and synthetic fixtures; all resources are public drafts rather than secure issued papers or SCSA-approved tasks.
+
+Edit `assessment-source/catalogue.json`, then run `python scripts/build-assessments.py` to regenerate browser data, Markdown briefs, CSV templates and ZIP packs. The generator owns `dist/assessments/briefs` and removes stale generated briefs there. Interface code is in `dist/assessments.js` and `dist/assessments.css`. Run `node --test tests/*.test.mjs` before publishing. Keep actual tests, unreleased marking keys and student evidence in the school's private system.
+
+The source review identifies the 2027 Year 12 syllabus, the currently listed Year 11 syllabus effective from 2026 and the need to check the 2027 WACE Manual before issue. The linked content allocation is a family-level planning map; exact item mapping, final keys, moderation and school release review remain outstanding.
+
 
 
 

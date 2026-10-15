@@ -1,0 +1,4 @@
+-- Design five related tables: BorrowerAlias, DeviceModel, Device, Booking, Maintenance.
+-- TODO: enable and test foreign keys, keys, domains and relationship constraints.
+-- TODO: specify slot intervals and booking/maintenance conflict policy.
+-- TODO: create and verify fixture import and joined/grouped reports.

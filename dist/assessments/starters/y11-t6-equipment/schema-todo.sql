@@ -1,0 +1,3 @@
+-- Design four entities before implementing your SQL.
+-- TODO: enable foreign keys and define keys, domains and relationships.
+-- TODO: load synthetic fixtures and implement the required reports.
