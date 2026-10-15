@@ -1,5 +1,5 @@
-tick,alias,row,column,action
-0,P01,0,0,start
-1,P01,0,1,move
-2,P01,1,1,checkpoint
+tick,alias,row,column,action
+0,P01,0,0,start
+1,P01,0,1,move
+2,P01,1,1,checkpoint
 3,P01,1,2,finish

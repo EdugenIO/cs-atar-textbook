@@ -1,4 +1,4 @@
-LoanID,BorrowerID,BorrowerAlias,EquipmentID,EquipmentLabel,CategoryID,CategoryName,LoanDate,DueDate,ReturnDate
-L01,B01,Alias01,E01,Tripod,C01,Media,2027-03-01,2027-03-08,
-L02,B02,Alias02,E02,Microphone,C01,Media,2027-03-01,2027-03-08,2027-03-05
+LoanID,BorrowerID,BorrowerAlias,EquipmentID,EquipmentLabel,CategoryID,CategoryName,LoanDate,DueDate,ReturnDate
+L01,B01,Alias01,E01,Tripod,C01,Media,2027-03-01,2027-03-08,
+L02,B02,Alias02,E02,Microphone,C01,Media,2027-03-01,2027-03-08,2027-03-05
 L03,B01,Alias01,E01,Tripod,C01,Media,2027-03-10,2027-03-17,

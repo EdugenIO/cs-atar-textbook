@@ -5,9 +5,9 @@ root=Path(__file__).resolve().parents[1]
 data=json.loads((root/'assessment-source/catalogue.json').read_text(encoding='utf-8'))
 out=root/'dist/assessments';out.mkdir(exist_ok=True)
 def write(name,text):
-    p=out/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text.rstrip()+'\n',encoding='utf-8')
+    p=out/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text.rstrip()+'\n',encoding='utf-8',newline='\n')
 def csvtext(rows):
-    b=io.StringIO(newline='');csv.writer(b).writerows(rows);return b.getvalue()
+    b=io.StringIO(newline='');csv.writer(b,lineterminator='\n').writerows(rows);return b.getvalue()
 rubric=[('Investigation',15,'Measurable client requirements, assumptions, alternatives and feasible schedule.'),('Design',25,'Algorithms, data and interfaces accurately support the requirements. Desk-checks justify decisions.'),('Implementation',35,'Student-authored logic implements required behaviour. Structure, validation and error handling are clear.'),('Testing',15,'Independent expectations, actual results, useful boundary/invalid cases and corrections with retests.'),('Evaluation',10,'Evidence against client requirements, limitations, acceptance observations and a reasoned retrospective.')]
 write('project-rubric.md','''# Project marking guide template (100 marks)
 
