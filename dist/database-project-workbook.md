@@ -1,5 +1,7 @@
 # Database solution — practice workbook
 
+Before question 1, follow L001 by hand: match its BorrowerID to Borrower, EquipmentID to Equipment, then CategoryID to Category. Explain why matching IDs is safer than matching names. Predict whether L002 and L005 should both appear in a loan-history report.
+
 Use a fresh working copy of database-project.sqlite. Enable PRAGMA foreign_keys = ON before any transaction. Run each rehearsal separately. Report fixed date: 8 April 2026.
 
 1. Trace L002 through Loan, Borrower, Equipment and Category. State each join condition.

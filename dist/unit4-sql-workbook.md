@@ -1,4 +1,6 @@
 # Advanced SQL workbook — Unit4 weeks2–3
+
+Before A, follow one Booking through MemberID → Member, SessionID → Session, then Session.WorkshopID → Workshop. Before B, draw S03 with a NULL booking key: COUNT(*) sees one preserved row, while COUNT(b.MemberID) sees zero bookings. Explain the difference before running either query.
 Eight lessons, four each week. All reports start from unchanged design schema; data synthetic.
 A: write grain, required tables/keys and expected rows for Q1. Trace one booking through all four tables. Compare names-only output with key-bearing report.
 B: implement grouped bookings by session; explain excluded S03. Write all-session version and compare COUNT(*)/COUNT(b.MemberID). Predict empty-input COUNT/SUM/AVG/MIN/MAX.

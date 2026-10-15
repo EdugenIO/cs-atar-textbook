@@ -1,4 +1,6 @@
 # Unit 3 week 12 — Addressing and subnetting workbook
+
+For the 50-endpoint group, first add one gateway. Compare 2^5 − 2 with 2^6 − 2 usable addresses, then subtract the chosen host-bit count from 32 to find the prefix. The ^ here is maths notation for a power, not Python syntax.
 Original draft 14 October 2026. Four lessons; hypothetical paper/offline networks.
 A: compare 32/128-bit addresses, IPv4 decimal/IPv6 hex notation; list RFC 1918 ranges and special non-public counterexamples. Explain prefix/mask and private-address limitations.
 B: show binary AND and ranges for 192.168.50.70/27; give mask,network,broadcast,first/last ordinary host and capacity. Transfer to 10.1.18.200/20. Compare.94/.100 destinations from.70/27 and validate.65/.1/.64/.95/.70 gateway candidates. Distinguish membership/allocation/reachability.

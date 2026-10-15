@@ -1,4 +1,6 @@
 # Designing secure networks — student workbook
+
+For each proposed traffic rule, name the source, destination and service. Write one connection that should be allowed and one unrelated connection that should stay blocked. Predict both before trying the offline model.
 Lesson 1: classify media/modem/router/gateway/switch/AP/firewall roles; identify multifunction-device caveats. Compare star/hierarchical/redundant choices. Redraw the concept diagram using the teacher-specified Cisco symbols, representative clients/printer/AP, link labels, four prefixes/gateways and a legend.
 Lesson 2: explain subnet versus VLAN versus routing/filtering. Trace Staff -> printer and Visitors -> Staff through the policy boundary. Write positive and negative acceptance tests. Add precise DNS/DHCP and restricted management dependencies. Explain stateful return versus new reverse initiation. Predict model outputs before running.
 Lesson 3: calculate 20 x 8 demand, demand/capacity ratio and ideal share. Estimate 400 MB transfer at 100 Mbit/s. Compare local/internet traffic after a 1 Gbit/s uplink upgrade. State three real-world limits on the arithmetic. Justify copper/fibre/wireless choices from distance, mobility, load and cost.

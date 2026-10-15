@@ -1,4 +1,6 @@
 # Unit 3 week 11 — Network models and protocols
+
+Before the hop trace, separate three destination questions: which remote host (IP), which transport endpoint (port), and which interface on this local link (MAC)? In the routed example without NAT, identify the gateway MAC used on the first link.
 Original draft, 14 October 2026. Four lessons; paper/offline synthetic examples only.
 
 ## A — Layers and nested units
