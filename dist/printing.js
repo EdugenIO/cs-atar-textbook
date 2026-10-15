@@ -30,6 +30,7 @@ function setupChapterPrinting() {
   restoreChapterPrint();
   const main = document.getElementById('main');
   main.querySelectorAll('details').forEach(detail => {
+    if (detail.closest('.teacher-planner')) return;
     const summary = detail.querySelector('summary')?.textContent || '';
     const teacher = /suggested classroom sequence|teaching notes/i.test(summary);
     detail.classList.add(teacher ? 'print-teacher' : 'print-answer');

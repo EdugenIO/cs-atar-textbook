@@ -59,3 +59,8 @@ GitHub Pages publishes `dist/` through the existing `.github/workflows/pages.yml
 Working content edition 0.48, with public licensing and interface updates made on 14 October 2026. Teacher review, technical/source currency, diagram conventions and classroom trials remain ongoing. Historical audit labels and resource dates are retained as provenance; later website or licence updates do not imply new curriculum sign-off. Starter files are deliberately unfinished; reference examples use synthetic data and are for learning rather than production deployment.
 
 Official curriculum documents: [SCSA Computer Science](https://senior-secondary.scsa.wa.edu.au/syllabus-and-support-materials/technologies/computer-science).
+
+## Teacher lesson planner
+
+The Teaching sequence page uses dist/teaching-planner-data.js for 256 allocated lessons. Each unit has 16 four-lesson teaching weeks and a separate two-week exam block. Edit lesson activities, objectives, checks and links there; keep teaching-lessons.csv and teaching-sequence.md aligned. The interface is in teaching-planner.js and teaching-planner.css. Project lesson counts are checked by tests/teaching-planner.test.mjs.
+

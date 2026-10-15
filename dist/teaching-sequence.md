@@ -2,6 +2,8 @@
 
 Historical planning baseline: 13 October 2026. Resource status reconciled with textbook edition 0.48 on 14 October 2026. Python; SQLite recommended for this textbook. This is a recommended teaching design, not an official SCSA outline or certified alignment. Editorial maps for all four units are available; independent review and learner evidence remain pending.
 
+Lesson allocations reconciled with the teacher planner on 15 October 2026. [Download all 256 lessons as CSV](teaching-lessons.csv).
+
 ## Time assumptions
 
 Each semester has 18 weeks: 16 teaching weeks × 4 lessons = 64 available lessons, followed by two blocked exam weeks. Four units provide 256 teaching lessons over two years. Assessments, feedback, projects and revision fit inside the 64; they are not extra periods. Week numbers reset each semester. If exams occur earlier, move the blocked weeks to the school's calendar while preserving teaching-week order.
@@ -24,23 +26,23 @@ Include a brief retrieval prompt in every lesson. Use lesson 4 flexibly: a test 
 
 | Teaching week | Chapter focus | Four-lesson allocation and evidence |
 |---|---|---|
-| 1 | Getting started with Python | Diagnostic; environment; input/output; make a small calculator. Introduce requirements and testing. |
-| 2 | Values and representation | Types and conversion; arithmetic; binary/decimal/hexadecimal; character representation exercise. |
-| 3 | Making decisions | Comparisons; Boolean expressions; if/elif/else; boundary tests. |
-| 4 | Repetition | for and while; counters/accumulators; trace tables; independent loop task. |
-| 5 | Functions | Parameters/arguments; return values; scope; refactor a small program. |
-| 6 | Arrays in Python | List-based implementation of one-dimensional arrays; load/display; total; locate minimum/maximum. |
-| 7 | Text files and reliable input | Read/write/append/close; validation; exceptions; controlled programming practical (one lesson). |
-| 8 | Designing a solution | Project brief; requirements and Gantt chart; structure chart/stubs; design checkpoint. |
-| 9 | Building and testing | API concepts; debug and test; two project workshop lessons. Teach code attribution/licensing in the software-responsibility chapter. |
-| 10 | Evaluating software | Four project lessons: integration/tests, corrections, acceptance trial, demonstration and retrospective/submission. |
-| 11 | How networks communicate | Follow a message through TCP/IP; protocols; map components to layers; short explanations. |
-| 12 | Addressing and hardware | IP/subnet-mask roles; IPv4/IPv6; devices/media; diagram exercises. |
-| 13 | Designing a network | LAN/WLAN/WAN; CISCO conventions; security; performance trade-offs in a supplied scenario. |
-| 14 | Applying network knowledge | Design justification; integrated practice; controlled theory test; feedback. |
-| 15 | Consolidation and recovery | Targeted reteaching; code tracing; diagram interpretation; unfinished-learning buffer. |
-| 16 | Exam preparation | Timed mixed questions; marking and correction; independent transfer task; readiness check. |
-| 17–18 | Exam block | No new chapters or project deadlines. |
+| 1 | Your first Python program | 1. Diagnose prior knowledge and decompose the badge problem.<br>2. Set up the editor and run the example.<br>3. Trace, modify and test a sequential program.<br>4. Complete the book-cover task and explain the results. |
+| 2 | Values, types and operators | 1. Compare types, convert input and trace arithmetic.<br>2. Apply operators and precedence to short Python expressions.<br>3. Convert binary, decimal and hexadecimal using place values.<br>4. Explain code points and check character/number representations. |
+| 3 | Making decisions with selection | 1. Compare values and trace Boolean conditions.<br>2. Combine conditions with and, or and not; explain precedence.<br>3. Implement if, elif and else for a supplied decision.<br>4. Design boundary tests, run them and explain corrections. |
+| 4 | Repeating work with loops | 1. Model fixed repetition with for and range.<br>2. Introduce condition-controlled while loops.<br>3. Trace counters/accumulators and repair mistakes.<br>4. Complete and test the score task. |
+| 5 | Functions and scope | 1. Model function definitions and calls.<br>2. Trace parameters, arguments and returns.<br>3. Compare local and global names; refactor a program.<br>4. Complete boundary tests for delivery_charge. |
+| 6 | Working with one-dimensional arrays | 1. Load and display an array-style list.<br>2. Trace and implement an accumulator.<br>3. Locate minimum/maximum positions.<br>4. Test edge cases and complete the temperature task. |
+| 7 | Text files and reliable input | 1. Model read/write/append and file paths.<br>2. Add range validation and specific exception handling.<br>3. Combine file processing with a test table.<br>4. Controlled practical: adapt a fresh problem using weeks 1–7 skills. |
+| 8 | Designing and testing solutions | 1. agree requirements and acceptance criteria.<br>2. plan dependencies and the Gantt chart.<br>3. design modules, data and pseudocode.<br>4. desk-check the design and review the checkpoint. |
+| 9 | Designing and testing solutions | 1. learn API contracts and code/source attribution.<br>2. practise error classification and debugging.<br>3. implement and test calculation/input modules.<br>4. implement storage and review build evidence. |
+| 10 | Designing and testing solutions | 1. integrate the session summary.<br>2. execute tests, correct and retest.<br>3. conduct the organiser acceptance trial.<br>4. demonstrate, evaluate and write the retrospective. |
+| 11 | Network foundations | 1. Retrieve: identify resources shared on a school network; introduce protocols.<br>2. Model: build and annotate the four-layer stack.<br>3. Trace: explain a web request and compare TCP with UDP.<br>4. Apply: diagnose short scenarios, then complete an exit explanation. |
+| 12 | Addresses, devices and media | 1. Retrieve: layer functions; interpret IPv4 and IPv6 examples.<br>2. Model: network portion and /24 local-versus-remote comparisons.<br>3. Investigate: match device functions to traffic paths.<br>4. Apply: produce an addressing table and justify media choices. |
+| 13 | Designing and protecting a network | 1. Retrieve: addresses and devices; distinguish LAN/WLAN/WAN.<br>2. Design: draft a labelled logical network using course symbols.<br>3. Protect: map unauthorised-access threats to controls.<br>4. Evaluate: identify bottlenecks and revise the design. |
+| 14 | Network scenarios and review | 1. Retrieve: short mixed questions with explained feedback.<br>2. Apply: complete the library design and traffic traces.<br>3. Assess: teacher-selected theory questions under suitable conditions.<br>4. Respond: correct misconceptions and plan week 15 recovery. |
+| 15 | Unit 1 consolidation | 1. six-prompt diagnostic, explained feedback and station choices.<br>2. programming stations A–C; teacher models the most common misconception.<br>3. project/files/licensing and networking stations D–E.<br>4. fresh transfer questions, feedback and a personal revision plan. |
+| 16 | Unit 1 exam preparation | 1. reading and first paper attempt; continue in lesson 2 if needed.<br>2. finish the attempt, then self-mark with explanations.<br>3. fresh questions and teacher feedback on weak areas.<br>4. final retrieval, diagram/trace checks and a personal exam plan. Weeks 17–18 remain blocked for exams. |
+| 17–18 | Exam block | No new chapters or extra project deadlines; use school exam timetable. |
 
 Project: a console-based school-club order manager. Core features: functions, validated input, array processing, file storage and documented tests. Use synthetic data. No GUI requirement. A network design activity remains a learning activity inside the theory strand, not an additional summative project.
 
@@ -48,23 +50,23 @@ Project: a console-based school-club order manager. Core features: functions, va
 
 | Teaching week | Chapter focus | Four-lesson allocation and evidence |
 |---|---|---|
-| 1 | Relational database foundations | Data/information; flat-file maintenance; DBMS/related tables; independent workbook and feedback. |
-| 2 | Modelling entities and relationships | Entities/identifiers; keys/references; crow’s-foot relationships; data dictionary and feedback. |
-| 3 | Normalisation | Anomalies/1NF; partial dependencies/2NF; transitive dependencies/3NF; transfer and feedback. |
-| 4 | Getting started with SQL | Open/query; filters; Boolean logic and sorting; independent reports/feedback. |
-| 5 | Building a database solution: reports | Key joins; category joins; inventory aggregates; independent report queries and feedback. |
-| 6 | Building a database solution: implementation | Creation/constraints; INSERT/UPDATE; DELETE/recovery; controlled SQL practice. |
-| 7 | Database project | Brief and requirements; design workshop; data-quality decisions; design checkpoint. |
-| 8 | Security frameworks | CIA/AAA; apply to project; two build-workshop lessons. |
-| 9 | Threats and defences | Classify supplied incidents; match controls; two build-workshop lessons. |
-| 10 | Protecting access | Authentication/password policies; encryption; two build-workshop lessons. |
-| 11 | Cryptography in practice | Substitution/rotation/Vigenère; cracking weaknesses; two project testing lessons. |
-| 12 | Responsible data use | Privacy and ethical hacking case studies; two evaluation/demo lessons; project submission. |
-| 13 | Bringing security and data together | Audit a supplied system; justify access/backup decisions; mixed questions; explain trade-offs. |
-| 14 | Applying the unit | Database-design practice; security stimulus response; controlled theory test; feedback. |
-| 15 | Consolidation and recovery | Targeted SQL practice; normalisation repair; security retrieval; buffer. |
-| 16 | Exam preparation | Timed mixed questions; correction; transfer problem; readiness check. |
-| 17–18 | Exam block | No new chapters or project deadlines. |
+| 1 | Relational database foundations | 1. introduce the equipment desk; distinguish raw values from an answer and state the overdue rule.<br>2. inspect the flat register; simulate changing one repeated label and deleting an item’s last loan.<br>3. distinguish database/DBMS/RDBMS; sort facts into Borrower, Equipment and Loan; discuss independence and configured access.<br>4. complete the workbook independently, compare explained answers, then answer a new boundary case. |
+| 2 | Modelling entities and relationships | 1. retrieve the flat-register problems; distinguish entities, instances, fields and records; choose identifiers.<br>2. locate primary/foreign keys in the four datasets; test repeat events and invalid references; compare composite keys.<br>3. read relationships in both directions and model minimum/maximum participation; redraw the crow’s-foot diagram.<br>4. complete the Loan data dictionary and independent workbook; review counterexamples and corrections. |
+| 3 | Normalisation | 1. retrieve keys; state reservation rules; identify repeating groups and anomalies; flatten to 1NF.<br>2. read dependency statements; identify partial dependencies and form 2NF tables.<br>3. remove CategoryName’s transitive dependency; reconstruct records from the four-table 3NF design.<br>4. complete the club transfer problem independently, review explained answers and correct misconceptions. |
+| 4 | Getting started with SQL | 1. retrieve keys/table roles; open the starter; predict and run named-field SELECT queries.<br>2. filter text and Returned values; compare expected and actual rows; debug commas and quotes.<br>3. combine conditions; trace the overdue boundary; use parentheses and deterministic sorting.<br>4. complete the independent reports; peer-check results; explain errors and revise. |
+| 5 | Building a database solution | 1. trace key matches; build the active-loan inner join.<br>2. join categories; diagnose missing/wrong matches.<br>3. aggregate inventory; distinguish row counts and numeric summaries.<br>4. independent joined/category reports and feedback. |
+| 6 | Building a database solution | 1. inspect creation SQL; run it in a new database; test keys/checks.<br>2. INSERT and UPDATE with before/after evidence.<br>3. DELETE disposable records; transaction/recovery rehearsal.<br>4. controlled SQL practice; explain and repair errors. |
+| 7 | Building a database solution | 1. project requirements and acceptance criteria.<br>2. ER diagram/data dictionary and design checkpoint.<br>3. create/load a working database and first reports.<br>4. demonstrate the initial build and plan the ten later workshops. |
+| 8 | Threats and protective measures | 1. asset/threat/vulnerability/risk; CIA incident analysis.<br>2. AAA audit of shared accounts; define roles and evidence. Lessons 3–4 are project workshops.<br>3. Create related tables and enter synthetic records.<br>4. Check keys, domains and referential integrity against the design. |
+| 9 | Threats and protective measures | 1. compare people/network/application threats using mechanism cards.<br>2. malware/physical/zero-day scenarios; justify controls and limits. Lessons 3–4 are project workshops.<br>3. Build the required joined reports.<br>4. Test reports with ordinary, missing and boundary data. |
+| 10 | Threats and protective measures | 1. password policy, two-factor categories and biometric trade-offs.<br>2. symmetric/asymmetric encryption and key roles. Lessons 3–4 are project workshops.<br>3. Refine query outputs and document access decisions.<br>4. Record expected/actual results and repair a failed test. |
+| 11 | Threats and protective measures | 1. trace rotation and random-substitution ciphers; brute force and frequency reasoning.<br>2. Vigenère transfer and explained corrections. Lessons 3–4 are project testing/recovery workshops.<br>3. Run acceptance tests against the brief.<br>4. Test a safe recovery procedure and record its limits. |
+| 12 | Responsible data use | 1. privacy/security/ethics/law; personal information; selected APP and WA-context scenarios.<br>2. ethical hacking and penetration-test scope; evidence/disclosure/retention decisions and feedback.<br>3. project evaluation workshop; match acceptance criteria to report, constraint, recovery and privacy evidence.<br>4. project demonstration/submission, explain limitations and prioritise improvements. |
+| 13 | Unit 2 integrated review | 1. Apply five data-quality checks to supplied records.<br>2. Interpret a six-table relational diagram and justify keys.<br>3. Create a fresh four-table design from requirements.<br>4. Compare schema and dictionary; explain mismatches and repairs. |
+| 14 | Unit 2 integrated review | 1. Predict and write SQL for changed data.<br>2. Audit a security/privacy case and justify controls.<br>3. Complete the allocated controlled theory task.<br>4. Use feedback to correct errors and select two priorities. |
+| 15 | Unit 2 consolidation | 1. independent diagnosis and priority selection.<br>2. two targeted stations with corrections.<br>3. unfamiliar transfer and fresh retest.<br>4. evidence-based revision plan and teacher feedback. |
+| 16 | Unit 2 exam preparation | 1. Q1–8, up to 40 minutes plus setup/collection.<br>2. Q9–16, up to 40 minutes plus setup/collection.<br>3. mark with explanations and classify gaps.<br>4. targeted repair, fresh transfer and readiness check. |
+| 17–18 | Exam block | No new chapters or extra project deadlines; use school exam timetable. |
 
 Project: an equipment-loan database using synthetic borrowers and loans. Plan four related tables so modelling is sufficiently rich; check the exact syllabus specifications when writing the brief. Require queries, data dictionary, test evidence and a privacy/security justification. All scheduled security lessons must include deliberate instruction and practice; project documentation alone is not sufficient.
 
@@ -72,49 +74,49 @@ Project: an equipment-loan database using synthetic borrowers and loans. Plan fo
 
 | Teaching week | Chapter focus | Four-lesson allocation and evidence |
 |---|---|---|
-| 1 | Rebuilding fluency | Diagnostic; repair Year 11 gaps; compare development processes; practise version history/backups. |
-| 2 | Richer data structures | Two-dimensional arrays/dictionaries; functions and parameter behaviour; tracing; small application. |
-| 3 | Searching | Linear/binary search; trace; implement; compare growth using Big O. |
-| 4 | Sorting | Bubble/insertion/selection sort; trace; compare; choose an algorithm for a scenario. |
-| 5 | Objects and classes | Class/object/attribute/method; constructors; encapsulation; refactor an example. |
-| 6 | Extending object-oriented design | Inheritance; polymorphism/abstraction; guided implementation; controlled programming practical. |
-| 7 | Software project | Brief and requirements; modular design; class design; checkpoint. |
-| 8 | Reliable software | Unit/acceptance/load tests; debugging; two build-workshop lessons. |
-| 9 | Maintaining software | Code review; social/ethical responsibilities; two build-workshop lessons. |
-| 10 | Evaluating the solution | Two test-and-refine workshops; demonstration/authentication; project submission and retrospective. |
-| 11 | Network models and packets | OSI/TCP-IP comparison; switching/routing; TCP/UDP; follow a packet. |
-| 12 | Addressing and subnetting | Public/private addresses; masks/CIDR; guided calculations; independent address plan. |
-| 13 | Network design | Segmentation/security/performance; network services and protocols; diagrams; defend design choices. |
-| 14 | Applying the unit | Integrated scenarios; mixed algorithm retrieval; controlled theory test; feedback. |
-| 15 | Consolidation and recovery | Algorithm/OOP repair; subnetting practice; timed explanations; buffer. |
-| 16 | Exam preparation | Timed mixed questions; correction; unfamiliar stimulus task; readiness check. |
-| 17–18 | Exam block | No new chapters or project deadlines. |
+| 1 | Rebuilding Python fluency | 1. independent diagnostic, item-level feedback and count trace.<br>2. targeted repairs and independent ordinary/empty/boundary/invalid-input checks.<br>3. linear/iterative comparison, requirement change and transfer test.<br>4. version record, separate restore/retest and exit explanation. |
+| 2 | Advanced data structures | 1. retrieve 1D arrays; model row/column indexes; trace nested loops; complete workbook A.<br>2. choose keys; create/update/delete/traverse dictionaries; diagnose missing and duplicate keys; workbook B.<br>3. predict mutation/rebinding; run aliasing and copy experiments; explain results; workbook C.<br>4. build the booking report and day totals; test edge cases; peer-review contracts and submit evidence. This is a short formative practical, not an additional major project. |
+| 3 | Searching: linear and binary | 1. retrieve lists/functions; specify result contracts; model and trace linear search; complete workbook A.<br>2. model sorted intervals; trace binary search; diagnose final-candidate and bound-update faults; complete workbook B.<br>3. implement and test both algorithms; cover empty/singleton/duplicate/boundary cases; complete workbook C.<br>4. count probes and compare Big O growth; justify preparation costs and algorithm choices; peer-review evidence. The practical fits inside these four lessons. |
+| 4 | Sorting algorithms | 1. retrieve search/order prerequisites; model bubble passes and early exit; trace and implement bubble sort.<br>2. model insertion shifts and saved key; trace prefix growth; implement and compare sorted/reverse data.<br>3. model minimum selection; implement selection sort; test empty/singleton/duplicate/negative cases and mutation contracts.<br>4. compare key counts and Big O; discuss stability/movement; justify a scenario choice and connect to binary search. All practical work fits inside these four lessons. |
+| 5 | Objects and classes in Python | 1. retrieve dictionaries/functions; design state and responsibility table; distinguish class/instance; instantiate and inspect two objects.<br>2. explain __init__/self; implement queries and commands; trace boundaries and rejected operations.<br>3. encapsulation/abstraction; investigate aliases and shared class lists; refactor the procedural stock example.<br>4. independently complete/test the class, object lookup and report; peer-review contracts and evidence. Extension work can be scaled to diagnostic readiness; no extra major project is introduced. |
+| 6 | Extending object-oriented design | 1. retrieve Equipment and state contracts; design hierarchy versus composition; initialise subclasses with super(); trace inherited methods.<br>2. override preparation; trace mixed-object dispatch; distinguish inheritance, encapsulation, abstraction and polymorphism.<br>3. guided implementation and boundary testing; add a conforming subtype; rehearse the practical format and discuss feedback.<br>4. original controlled programming practical in the school’s allocated lesson. Suggested 40 minutes plus setup/submission time; adjust to actual period length and school conditions. No major new concept is introduced during the task. |
+| 7 | Developing a software solution | 1. Investigate the equipment-loan brief and constraints.<br>2. Specify requirements and acceptance criteria.<br>3. Design classes, records and algorithm contracts.<br>4. Desk-check the design and agree the checkpoint. |
+| 8 | Reliable software: testing and review | 1. test scope/data; worked unittest component checks; isolate and repair the return fault with trace/breakpoint evidence.<br>2. acceptance versus load; mixed transaction/CSV experiment; record workload, environment, correctness and timings. Week 8 lessons 3–4 remain project workshops.<br>3. Build catalogue/search behaviour.<br>4. Implement issue/return with state checks. |
+| 9 | Reliable software: testing and review | 1. peer review an affected contract; focused retest/regression; version and restore evidence.<br>2. developer impact/rights/responsibilities scenarios; user feedback and maintenance choices. Week 9 lessons 3–4 remain project workshops; week 10 project completion is unchanged.<br>3. Integrate modules and review affected contracts.<br>4. Run regression tests and record fixes. |
+| 10 | Developing a software solution | 1. Run acceptance tests against each requirement.<br>2. Repair faults, restore a version and retest.<br>3. Demonstrate independent operation and explain decisions.<br>4. Evaluate limitations and submit the project evidence. |
+| 11 | Network models and protocols | 1. retrieve Year 11 network knowledge; compare OSI/TCP-IP functions; assemble encapsulation units and explain boundaries.<br>2. ports/DNS/gateway/ARP; trace the two-LAN route; explain layer 2 switching and layer 3 routing with changed/unchanged fields.<br>3. compare TCP/UDP services and header architecture; desk-check connection and byte acknowledgements; justify scenarios.<br>4. packet/frame sizing and padding; unfamiliar trace/fault diagnosis; workbook feedback and retrieval. Four lessons in week 11; no new network project. |
+| 12 | Addressing and subnetting | 1. retrieve IP/MAC/gateway roles; IPv4/IPv6 and address scope; convert prefixes and masks.<br>2. bitwise AND, block boundaries and /27 worked range; transfer to /20 and local/remote gateway checks.<br>3. equal-size versus variable-length subnetting; four-group capacity/alignment/non-overlap plan and feedback.<br>4. IPv6 expansion/compression, addressing scenario diagnosis and independent plan verification. Four lessons in week 12; no extra network project. |
+| 13 | Designing secure networks | 1. requirements and components; interpret physical/logical topology; identify Cisco symbols and redraw the example.<br>2. VLANs/broadcast domains, gateways and service policy; test the simplified offline traffic matrix.<br>3. demand/bottleneck calculations, media/topology tradeoffs and capacity feedback.<br>4. interpret synthetic logs, practise ping/tracert in the assigned lab, evaluate and revise the design. Four lessons in week 13; practical work is embedded. |
+| 14 | Unit 3 integrated review | 1. closed-note diagnostic, confidence record and guided programming/state/algorithm correction.<br>2. integrated network case, diagram/policy/capacity reasoning and evidence interpretation.<br>3. 40-minute original controlled practice, followed by initial marking and feedback.<br>4. corrections, fresh transfer tasks and two evidence-based revision priorities. Four lessons in week 14; no additional project. |
+| 15 | Unit 3 consolidation | 1. retrieve week 14 evidence, attempt baseline questions and choose one programming plus one networking priority.<br>2. two targeted stations, teacher feedback and explained correction; extensions for secure skills.<br>3. fresh mixed transfer, marking and correction within the same lesson.<br>4. delayed retries, mixed retrieval and a concrete week 16 revision plan. Four lessons in week 15; no additional project. |
+| 16 | Unit 3 exam preparation | 1. assessment scope, commands, pacing and worked trace/contract rehearsal.<br>2. teacher setup, 40-minute original practice and initial reflection.<br>3. point-based marking, error diagnosis and targeted correction.<br>4. fresh independent retries, final readiness checklist and revision plan. Four lessons in week 16; weeks 17–18 remain blocked for examinations. |
+| 17–18 | Exam block | No new chapters or extra project deadlines; use school exam timetable. |
 
-Project: an object-oriented equipment-booking application. Require purposeful classes, searchable records, a justified algorithm choice and testing against requirements. Start with a console interface; assess computing knowledge rather than interface decoration.
+Project: an object-oriented equipment-loan application. Require purposeful classes, searchable records, a justified algorithm choice and testing against requirements. Start with a console interface; assess computing knowledge rather than interface decoration.
 
 ## Unit 4: Year 12 semester 2
 
 | Teaching week | Chapter focus | Four-lesson allocation and evidence |
 |---|---|---|
-| 1 | Database design refresher | Diagnostic; ER/relational notation; normalisation; extend a supplied model. |
-| 2 | Integrity and transactions | Constraints; referential/domain/entity integrity; ACID; explain failed transactions. |
-| 3 | Advanced SQL | Multi-table joins; grouping/aggregates; calculated/concatenated fields; report task. |
-| 4 | Database operations | Schema changes; cascading deletion; cleaning/importing; controlled SQL practical. |
-| 5 | Database project | Brief and requirements; five-plus-table design; data dictionary; checkpoint. |
-| 6 | Threat analysis | Internal/external threats; CIA/AAA; two database workshop lessons. |
-| 7 | Defensive systems | Logs and mitigation choices; control evaluation; two database workshop lessons. |
-| 8 | Secure communication | Certificates and encryption; connection/data-exchange model; two project workshop lessons. |
-| 9 | Security responsibilities | Privacy/breach case studies; red/blue teams; two project testing lessons. |
-| 10 | Evaluating the solution | Two refinement workshops; demonstration/authentication; submission and review. |
-| 11 | Integrated case studies | Database/program connectivity; security/data decisions; extended responses; mixed Unit 3 retrieval. |
-| 12 | Applying the unit | Unfamiliar stimulus practice; modelling/query review; controlled theory test; feedback. |
-| 13 | Full-course consolidation | Programming and algorithms; SQL; networking; security. |
-| 14 | Targeted repair | Use diagnostic results to reteach; individual practice; feedback; contingency buffer. |
-| 15 | Exam practice | Timed sections; marking; rewritten answers; second attempt on misconceptions. |
-| 16 | Final preparation | Full-course transfer tasks; personalised revision; readiness check; no project spillover. |
-| 17–18 | Exam block | No new chapters. School exams are scheduled separately from the external ATAR examination. |
+| 1 | Refining relational database designs | 1. retrieve relational/normalisation foundations; diagnose the flat booking relation and state dependencies.<br>2. read six-table crow’s-foot model, composite bridge and optional one-to-one; write notation.<br>3. dictionary/integrity/schema reconciliation; predict and check constraints in an offline database.<br>4. independent exhibition-model transfer and explained feedback. Four lessons in semester week 1; no extra project. |
+| 2 | Advanced SQL queries | 1. retrieve schema/keys and predict four-table joins.<br>2. implement joins/aliases and diagnose missing conditions.<br>3. aggregate at session/booking grain; grouped inner reports.<br>4. zero-booking LEFT JOIN/count clinic and feedback. |
+| 3 | Advanced SQL queries | 1. calculated percentages, concatenated labels and aliases.<br>2. composite attendance joins, NULL and row/group filtering.<br>3. repair multiplied totals and independently test changed data.<br>4. fresh report transfer, expected/actual evidence and feedback. Eight lessons across two weeks; no additional project. |
+| 4 | Database development and evaluation | 1. controlled CREATE/ALTER/data changes and rollback lab.<br>2. source mapping/cleaning and data-quality decisions.<br>3. transaction/ACID and parameterised booking reasoning.<br>4. test design, backup/recovery and project preparation. |
+| 5 | Database development and evaluation | 1. Investigate the booking database brief and scope.<br>2. Design the six-table model and key relationships.<br>3. Specify the dictionary, constraints and transaction requirements.<br>4. Desk-check the design and agree acceptance criteria. |
+| 6 | Cyber security analysis | 1. retrieve threat vocabulary, CIA/AAA worked case and mechanism classification; choose justified evidence.<br>2. synthetic log/case analysis, hypotheses and alternatives, manual/offline counts and explained feedback.<br>3. Create the six-table database and verify integrity constraints.<br>4. Implement core reports with expected/actual results. |
+| 7 | Security controls and responses | 1. control purpose/limits, ordered traffic rules and scoped role permissions; manual/offline predictions.<br>2. response scenarios, positive/negative acceptance tests, competing proposals and explained feedback.<br>3. Implement safe changes and parameterised operations.<br>4. Test positive and negative transaction cases. |
+| 8 | Secure communication and cryptography | 1. historical ciphers, key roles and fingerprints; predict/run/explain the offline Python activity.<br>2. certificate cards, TLS ordering and connection-risk explanation.<br>3. Implement atomic booking and attendance behaviour.<br>4. Test failed operations and rollback outcomes. |
+| 9 | Ethical and legal considerations | 1. entity/jurisdiction, five APPs and breach cases; manual predictions and explained feedback.<br>2. data-mining critique, paper red/blue-team scope and source/project decisions.<br>3. Map and clean import data using source evidence.<br>4. Test all-or-none import and recovery; preserve decision logs. |
+| 10 | Database development and evaluation | 1. Run the full acceptance suite and inspect failures.<br>2. Repair, restore/reopen and run regression checks.<br>3. Demonstrate independent implementation and justify decisions.<br>4. Evaluate against requirements and submit evidence. |
+| 11 | Unit 4 integrated review | 1. key/dependency/diagram retrieval and design repair.<br>2. manual report prediction, independent SQL and NULL/grain feedback.<br>3. transactions, connectivity and recovery evidence.<br>4. security/cryptography/privacy case response with brief Unit 3 retrieval. |
+| 12 | Unit 4 integrated review | 1. changed-data query transfer and explanation.<br>2. unfamiliar model and evidence-based extended response.<br>3. original controlled formative sample in the existing theory-test slot; teacher adaptation required for summative use.<br>4. marking, explained correction, fresh independent retry and consolidation priorities. |
+| 13 | Full-course consolidation | 1. diagnostic, prior-evidence review and two priorities.<br>2. programming/algorithm/object repair clinic and independent practice.<br>3. fresh database design/SQL/transaction repair clinic.<br>4. networking/security/responsibility clinic and explanation. |
+| 14 | Full-course consolidation | 1. priority 1 repair and changed independent attempt.<br>2. priority 2 repair and changed independent attempt.<br>3. mixed transfer and evidence-based feedback.<br>4. delayed retries, remaining support and Weeks 15–16 revision plan. |
+| 15 | Full-course exam preparation | 1. current instructions, command/source use and pacing plan.<br>2. original Set A timed attempt.<br>3. criterion marking, explained corrections and targeted repair.<br>4. fresh retries and short revision plan. |
+| 16 | Full-course exam preparation | 1. original Set B timed attempt.<br>2. marking and specific cause repair.<br>3. unfamiliar mixed transfer and later priority retry.<br>4. delayed retrieval, readiness/support plan and instruction/materials check. |
+| 17–18 | Exam block | No new chapters or extra project deadlines; use school exam timetable. |
 
-Project: the relational database behind the booking application, with at least five tables. Require realistic reporting queries, constraints, data cleaning, tests and justified security decisions. A small Python/database connection demonstration can link the two semesters without making a large integrated interface compulsory.
+Project: a workshop-booking relational database, with at least five tables. This uses a different synthetic context from the Unit 3 equipment-loan application. Require realistic reporting queries, constraints, data cleaning, tests and justified security decisions. A small Python/database connection demonstration can link the two semesters without making a large integrated interface compulsory.
 
 ## Proposed assessment skeleton
 
