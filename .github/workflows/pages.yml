@@ -21,7 +21,9 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Regression checks
-        run: node --test tests/*.test.mjs
+        run: |
+          node --test tests/*.test.mjs
+          python tests/lesson-slides-package.test.py
       - name: Version runtime assets
         run: node scripts/prepare-pages.mjs
       - uses: actions/configure-pages@v5

@@ -1,0 +1,1 @@
+const lessonSlideResources = {"u1-w01-l01":{"title":"Plan a badge-cost program","slides":8},"u1-w01-l02":{"title":"Run your first Python script","slides":8},"u1-w01-l03":{"title":"Trace, modify and test a sequence","slides":8},"u1-w01-l04":{"title":"Build a book-cover calculator","slides":8}};

@@ -1,0 +1,17 @@
+import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
+const root=new URL('../',import.meta.url);
+const data=JSON.parse(fs.readFileSync(new URL('slide-source/unit1-week1.json',root),'utf8'));
+assert.equal(data.lessons.length,4);
+const context=vm.createContext({});
+vm.runInContext(fs.readFileSync(new URL('dist/lesson-slide-resources.js',root),'utf8'),context);
+const registry=vm.runInContext('lessonSlideResources',context);
+for(const lesson of data.lessons){
+  assert.equal(lesson.slides.length,8);
+  assert.equal(lesson.slides.reduce((sum,slide)=>sum+slide.minutes,0),55);
+  assert.equal(registry[lesson.id].slides,8);
+  for(const slide of lesson.slides){assert.ok(slide.title&&slide.notes);assert.ok(slide.body||slide.code||slide.table);}
+  for(const file of [`dist/slides/${lesson.id}.pptx`,`dist/slides/notes/${lesson.id}.html`])assert.ok(fs.existsSync(new URL(file,root)));
+  assert.ok(fs.statSync(new URL(`dist/slides/${lesson.id}.pptx`,root)).size>10000);
+}
+assert.equal(Object.keys(registry).length,4);
+console.log('Four eight-slide lesson decks, notes, timings and planner availability passed.');
