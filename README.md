@@ -67,7 +67,7 @@ The Teaching sequence page uses dist/teaching-planner-data.js for 256 allocated 
 
 ## Lesson slides
 
-Unit 1 Weeks 1–8 have thirty-two eight-slide decks. Each planner lesson links to browser presentation, editable PowerPoint and teacher notes. Shared content lives in the slide-source/unit*-week*.json files; see slide-source/README.md for editing and regeneration. Run node scripts/build-slide-web.mjs after content changes; PowerPoint regeneration is separate. Later lesson buttons appear only when files exist.
+Unit 1 Weeks 1–8 and Week 9 Lesson 1 have thirty-three eight-slide decks. Each planner lesson links to browser presentation, editable PowerPoint and teacher notes. Shared content lives in the slide-source/unit*-week*.json files; see slide-source/README.md for editing and regeneration. Run node scripts/build-slide-web.mjs after content changes; PowerPoint regeneration is separate. Later lesson buttons appear only when files exist.
 
 
 

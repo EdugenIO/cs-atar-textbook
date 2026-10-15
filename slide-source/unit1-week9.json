@@ -1,0 +1,133 @@
+{
+  "unit": 1,
+  "week": 9,
+  "chapter": "design",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#design",
+  "references": [
+    "https://docs.python.org/3/library/csv.html#csv.writer",
+    "https://docs.python.org/3/library/functions.html#open",
+    "https://edugenio.github.io/cs-atar-textbook/licence.html"
+  ],
+  "lessons": [
+    {
+      "id": "u1-w09-l01",
+      "lesson": 1,
+      "title": "API contracts and source attribution",
+      "chapter": "design",
+      "prepare": "Official Python open/csv documentation, Python editor, disposable practice folder, week 8 module design and project-workbook.md section 7. Use synthetic data only.",
+      "slides": [
+        {
+          "title": "API contracts and source attribution",
+          "strategy": "Learning intention",
+          "notes": "Success means explain an API beyond web services, identify inputs, outputs, side effects and likely errors from documentation, then record a reused source and the learner’s own contribution. This is the scheduled API/attribution lesson, before two project build workshops later in week 9.",
+          "body": [
+            "Unit 1 · Week 9 · Lesson 1",
+            "Use a documented interface and explain reused work."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: module agreements",
+          "strategy": "Individual retrieval and paired explanation",
+          "notes": "Allow silent recall, then compare with the week 8 design. order_cost takes a valid quantity and returns integer cents. save_order changes persistent storage and needs an agreed failure signal. An unfinished stub deliberately raises NotImplementedError. Use responses to connect student-defined interfaces to library interfaces.",
+          "body": [
+            "What does order_cost receive and return?",
+            "Which module changes the saved file?",
+            "How should the caller learn that saving failed?",
+            "Compare your module contracts with a partner."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "An API is a software interface",
+          "strategy": "Worked comparison and classification",
+          "notes": "API means application programming interface. Programs use documented operations supplied by another component. Python’s open and the csv library are local examples. A web API adds remote communication, but this project needs no account, key or network service. The operation contract describes allowed inputs, results, side effects and errors. Ask learners to classify their own function contract and a library call without assuming all APIs use the internet.",
+          "table": [
+            [
+              "Interface",
+              "Caller supplies",
+              "Result or effect"
+            ],
+            [
+              "order_cost(quantity)",
+              "Valid quantity",
+              "Returns integer cents"
+            ],
+            [
+              "open(path, mode)",
+              "Path and file options",
+              "File object or exception"
+            ],
+            [
+              "csv.writer(file)",
+              "Writable file object",
+              "CSV writer object"
+            ]
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "Documentation detective",
+          "strategy": "Paired documentation reading and jigsaw explanation",
+          "notes": "Open the official open and csv.writer documentation linked in the teacher notes. One partner finds file mode, encoding and errors, the other finds writer creation, writerow and newline guidance. Partners explain and complete a four-part contract. Expected: append mode retains existing records, newline=\"\" lets csv control record newlines, encoding=\"utf-8\" makes encoding explicit, writerow receives a row sequence and writes it. Creation of a writer alone does not write a row. open can raise OSError, including PermissionError. Do not copy the entire documentation or memorise every optional parameter. Sources: https://docs.python.org/3/library/functions.html#open and https://docs.python.org/3/library/csv.html#csv.writer",
+          "body": [
+            "Find the required input and a useful option.",
+            "Identify the returned object and the file side effect.",
+            "Find a documented error or failure to handle.",
+            "Explain your findings to your partner."
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "A local API in use",
+          "strategy": "Predict, run, investigate and change",
+          "notes": "Use only a disposable practice folder. This original demonstration appends A01,2,600 as one CSV row. Predict before running, inspect the text file, then change the ID to A02 and quantity/cost to 0 and 0. Both rows should remain. Re-running the unchanged snippet appends a duplicate, so discuss who controls repeated calls. csv writes the record separator, so do not add a separate newline field. The API can quote commas, but the agreed project ID restrictions still apply. The snippet assumes valid values and a writable folder; it is not a complete save_order implementation and has no failure handler. Explain that validation, caller policy and exception handling remain project responsibilities. Sources: official csv and open documentation.",
+          "body": [
+            "Predict the saved row, then inspect the file.",
+            "Change the synthetic order and check both rows remain."
+          ],
+          "code": "import csv\nwith open(\"api-practice.csv\", \"a\",\n          newline=\"\", encoding=\"utf-8\") as file:\n    writer = csv.writer(file)\n    writer.writerow([\"A01\", 2, 600])",
+          "minutes": 10
+        },
+        {
+          "title": "A useful source log",
+          "strategy": "Worked example and independent source review",
+          "notes": "Model a real log entry for this lesson: Source: CS ATAR textbook, Unit 1 Week 9 Lesson 1, site URL and access date. Reused section: original csv practice snippet. Code licence: MIT, retaining the linked copyright/permission notice when distributing reused code. Changes: A01 to A02 and quantity/cost to zero. Own contribution: prediction, run evidence and interface explanation. Then record official Python documentation separately as a consulted reference, with URL, section, access date and what it informed; distinguish consulting documentation from copying its examples. Students audit one actual source from their work and record borrowed section, relevant permission/conditions, changes, own work and permitted assistance in workbook section 7. Follow school rules if used for assessment. If permission is unclear, use an approved source or ask the teacher before reusing. Crediting a source alone does not establish reuse permission.",
+          "body": [
+            "Record the author/title, URL and date accessed.",
+            "Identify what you used and its licence or permission.",
+            "Describe your changes and your own contribution.",
+            "Log one real source in workbook section 7."
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "Credit and permission",
+          "strategy": "All-student hinge question and scenario discussion",
+          "notes": "Correct B. Being publicly visible does not itself establish permission to copy and distribute. Naming the author is attribution, while the licence/permission sets conditions. Avoid a blanket judgement about all classroom copyright exceptions: here the question concerns publishing copied code in the shared textbook/project. Students should use an approved licensed alternative or seek guidance, then record required credit. This is a practical source review, not a new legal or assessment policy.",
+          "body": [
+            "You want to publish copied code with your project.",
+            "The page names its author but gives no reuse terms.",
+            "A: Naming the author alone settles permission.",
+            "B: Check permission and conditions before reuse."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: an interface you can justify",
+          "strategy": "Independent exit ticket",
+          "notes": "Collect a short contract for csv.writer/ writerow or open: supplied input, result/effect and a relevant failure. Students explain why csv does not enforce the project’s non-negative quantity rule or determine its save-failure policy. Check a completed source entry distinguishes reused material from original work. Next lesson is error classification and debugging; leave full project storage implementation to the scheduled build workshop.",
+          "body": [
+            "Describe one API call’s input and result or effect.",
+            "Name a failure your program must respond to.",
+            "Explain one rule the project must still enforce.",
+            "Submit your source entry and own contribution."
+          ],
+          "minutes": 5
+        }
+      ]
+    }
+  ]
+}
