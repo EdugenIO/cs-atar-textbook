@@ -22,7 +22,8 @@ for lesson in data['lessons']:
             notes=ET.fromstring(deck.read(f'ppt/notesSlides/notesSlide{number}.xml'))
             assert source['notes'] in ''.join(node.text or '' for node in notes.findall('.//a:t',ns))
             assert source['strategy'] in ''.join(node.text or '' for node in notes.findall('.//a:t',ns))
-print('192 native slide titles, editable text/tables and speaker notes verified.')
+print('224 native slide titles, editable text/tables and speaker notes verified.')
+
 
 
 

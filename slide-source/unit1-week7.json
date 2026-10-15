@@ -1,0 +1,472 @@
+{
+  "unit": 1,
+  "week": 7,
+  "chapter": "files",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#files",
+  "references": [
+    "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files",
+    "https://docs.python.org/3/tutorial/errors.html#handling-exceptions"
+  ],
+  "lessons": [
+    {
+      "id": "u1-w07-l01",
+      "lesson": 1,
+      "title": "Text files, modes and paths",
+      "chapter": "files",
+      "prepare": "Python editor, a dedicated disposable practice folder and a text editor. Keep original class data separate.",
+      "slides": [
+        {
+          "title": "Text files, modes and paths",
+          "strategy": "Learning intention",
+          "notes": "Success means choose read/write/append deliberately, explain relative paths and preserve one record per line. Use only disposable practice files when demonstrating write mode.",
+          "body": [
+            "Unit 1 · Week 7 · Lesson 1",
+            "Save records and read them in a later run."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: keeping values",
+          "strategy": "Individual retrieval and pair explanation",
+          "notes": "Allow one minute without notes then compare. A list retains values while that program is running; a saved text file can be read in a later run. Traversal visits each item. Ask what information must persist beyond program exit before naming the file format.",
+          "body": [
+            "What does a list retain during a program run?",
+            "What could preserve records after the program exits?",
+            "What does sequential traversal mean?",
+            "Compare your explanation with a partner."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Three file modes",
+          "strategy": "Worked comparison and guided prediction",
+          "notes": "Read r requires an existing file. Write w creates a missing file or truncates an existing file when opened. Append a creates a missing file or adds at its end. Use an existing practice file containing 2, then ask what w and a would do before executing. with closes the file when its block exits, including after an exception.",
+          "table": [
+            [
+              "Mode",
+              "Purpose",
+              "Existing file"
+            ],
+            [
+              "r",
+              "Read saved text",
+              "Contents stay unchanged"
+            ],
+            [
+              "w",
+              "Write new text",
+              "Old contents are replaced"
+            ],
+            [
+              "a",
+              "Append new text",
+              "Old contents remain"
+            ]
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "A path starts from a location",
+          "strategy": "Teacher demonstration and paired explanation",
+          "notes": "Explain a relative name is resolved from current working directory, which can differ from script location. Demonstrate the actual school editor setting and locate the practice folder. An absolute path specifies its full location; avoid machine-specific paths in shared examples. Learners point to their folder without editing important files. Missing file in r raises FileNotFoundError.",
+          "body": [
+            "A path identifies a file’s location.",
+            "\"practice.txt\" is relative to the working directory.",
+            "The script folder and working directory can differ.",
+            "Locate your disposable practice folder before running."
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "Two records, two lines",
+          "strategy": "Predict, run, investigate",
+          "notes": "In the practice folder, w writes 2 followed by newline, then a writes 5 followed by newline. The file contains two records, 2 and 5, not 25. UTF-8 makes text encoding explicit. Predict first, run, inspect with a text editor. Re-running the whole snippet resets the file first because w comes before a; running only append again adds another 5. Emphasise both cases.",
+          "body": [
+            "Predict the file contents before running.",
+            "What changes if only the append block runs again?"
+          ],
+          "code": "with open(\"practice.txt\", \"w\", encoding=\"utf-8\") as file:\n    file.write(\"2\\n\")\nwith open(\"practice.txt\", \"a\", encoding=\"utf-8\") as file:\n    file.write(\"5\\n\")",
+          "minutes": 10
+        },
+        {
+          "title": "Reading the records in order",
+          "strategy": "Paired coding with role changes",
+          "notes": "Expected displayed lines 2 and 5, with a third 5 if only append ran again. strip removes surrounding whitespace, including newline, from the string. Driver runs a read; navigator compares actual file contents, then swap and append 0 before reading again. Support: provide with header. Stretch: explain why a file with no final newline can join a later append onto the last record.",
+          "body": [
+            "Read and compare with the text editor.",
+            "Append a new record, then read again."
+          ],
+          "code": "with open(\"practice.txt\", \"r\", encoding=\"utf-8\") as file:\n    for line in file:\n        print(line.strip())",
+          "minutes": 12
+        },
+        {
+          "title": "Which mode preserves earlier records?",
+          "strategy": "All-student hinge question",
+          "notes": "Correct C:a. w replaces old text and r does not permit writing. Collect simultaneous choices then explain. If several choose w, compare opening w with opening a on two disposable copies. File mode choice matters before any write call.",
+          "body": [
+            "You need to retain old records and add one at the end.",
+            "A: r     B: w     C: a",
+            "Choose alone and justify your choice.",
+            "Why must the newline convention stay consistent?"
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: explain the file contract",
+          "strategy": "Independent exit ticket",
+          "notes": "Expected one non-negative integer per line, consistent UTF-8, newline after each record, a to add and r to read. A relative file path uses working directory. Collect individual explanations; use errors for a short mode/path reminder before validation.",
+          "body": [
+            "State a format for one quantity per line.",
+            "Choose modes for adding and reading records.",
+            "Explain what w does to an existing file.",
+            "Where does a relative path begin?"
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w07-l02",
+      "lesson": 2,
+      "title": "Conversion, range and retry",
+      "chapter": "files",
+      "prepare": "Python editor and a response/test table. Use whole-number quantities of zero or more.",
+      "slides": [
+        {
+          "title": "Conversion, range and retry",
+          "strategy": "Learning intention",
+          "notes": "Success means distinguish conversion failure from range failure, catch expected ValueError and retry until a suitable quantity is entered. Validation checks rules, not whether a plausible value is truthful.",
+          "body": [
+            "Unit 1 · Week 7 · Lesson 2",
+            "Convert input, check its value and respond clearly."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: text becoming a number",
+          "strategy": "Individual retrieval and paired explanation",
+          "notes": "Expected input returns str. int(\"12\") succeeds; int(\"2.5\") and int(\"three\") raise ValueError. int(\"-3\") succeeds as conversion but violates a non-negative quantity rule. Ask learners to commit before comparing.",
+          "body": [
+            "What type does input() return?",
+            "Predict int(\"12\") and int(\"2.5\").",
+            "Does int(\"-3\") satisfy a non-negative quantity rule?",
+            "Compare conversion and range in your explanation."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Different reasons to reject input",
+          "strategy": "Classification and think-pair-share",
+          "notes": "Students classify individually, compare in pairs then justify. \"0\" and \"12\" convert and satisfy range. \"-3\" converts but fails range. \"three\" and \"2.5\" fail integer-text conversion. Accept zero explicitly. Support: two stages on paper. Stretch: explain why conversion alone is insufficient.",
+          "table": [
+            [
+              "Text entered",
+              "Integer conversion",
+              "Non-negative rule"
+            ],
+            [
+              "\"0\"",
+              "Succeeds",
+              "Passes"
+            ],
+            [
+              "\"-3\"",
+              "Succeeds",
+              "Fails"
+            ],
+            [
+              "\"three\"",
+              "Fails",
+              "Not checked"
+            ],
+            [
+              "\"2.5\"",
+              "Fails",
+              "Not checked"
+            ]
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "Catching a specific conversion error",
+          "strategy": "Teacher modelling and guided prediction",
+          "notes": "With input three, int raises ValueError, so message prints. With 12, conversion succeeds and except does not run. Catch the expected error rather than bare except. This isolated fragment demonstrates conversion only: it does not yet retry or check range. Do not use quantity after failed conversion without a successful retry.",
+          "body": [
+            "Predict for inputs three and 12.",
+            "Which expected error does this handler catch?"
+          ],
+          "code": "try:\n    quantity = int(input(\"Quantity: \"))\nexcept ValueError:\n    print(\"Enter a whole number.\")",
+          "minutes": 10
+        },
+        {
+          "title": "A separate range check",
+          "strategy": "Guided variation and peer explanation",
+          "notes": "This fragment assumes conversion already succeeded. With-3 it prints Quantity cannot be negative. With 0 it prints Accepted:0. With 12 accepted 12. Learners change the literal, predict and run. A value can be the right type but outside the allowed range. Avoid claiming this literal example handles arbitrary input by itself.",
+          "body": [
+            "Predict again with quantity = 0.",
+            "Why does a successful conversion still need this check?"
+          ],
+          "code": "quantity = -3\nif quantity < 0:\n    print(\"Quantity cannot be negative.\")\nelse:\n    print(\"Accepted:\", quantity)",
+          "minutes": 10
+        },
+        {
+          "title": "A retry loop combines the checks",
+          "strategy": "Paired prediction and implementation",
+          "notes": "Trace inputs three, then-3, then 0. First ValueError prints whole-number message. Second converts but prints negative message. Third passes >=0 and break leaves the loop with quantity 0. while True makes retry explicit; break exits only after suitable input. Swap driver/navigator for 2.5 then 4. Catch ValueError specifically. Support: trace conversion, range and action columns.",
+          "body": [
+            "Trace three, then -3, then 0.",
+            "When does break allow the program to continue?"
+          ],
+          "code": "while True:\n    try:\n        quantity = int(input(\"Quantity: \"))\n        if quantity >= 0:\n            break\n        print(\"Quantity cannot be negative.\")\n    except ValueError:\n        print(\"Enter a whole number.\")",
+          "minutes": 12
+        },
+        {
+          "title": "Does valid mean truthful?",
+          "strategy": "All-student misconception check",
+          "notes": "Correct B: accepted 12 fits the declared type/range but could still be a wrong real-world quantity. Validation does not establish truth. Collect responses before discussion. Ask for a value that is plausible but mistyped, then contrast conversion/range rejection.",
+          "body": [
+            "The program accepts a quantity of 12.",
+            "“This proves the user entered the true quantity.”",
+            "A: agree     B: disagree",
+            "Choose and explain what the checks actually establish."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: choose useful input tests",
+          "strategy": "Independent exit ticket",
+          "notes": "Expected zero accepted, -1 range rejected, textword and decimal text conversion rejected, ordinary integer accepted. Handler ValueError. Explain retry with an unsuitable value followed by a suitable one. Use answers to decide conversion/range support before file processing.",
+          "body": [
+            "Give tests for zero, a negative and unsuitable text.",
+            "State the expected response to each.",
+            "Name the exception for invalid integer text.",
+            "Explain why a retry test needs a later suitable input."
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w07-l03",
+      "lesson": 3,
+      "title": "Sequential file processing and tests",
+      "chapter": "files",
+      "prepare": "Python editor, disposable quantities.txt copies and a test table. Main format: one non-negative integer on each line.",
+      "slides": [
+        {
+          "title": "Sequential file processing and tests",
+          "strategy": "Learning intention",
+          "notes": "Success means read records sequentially, calculate a total and test stated assumptions. Learners distinguish empty, missing and malformed files. The first model assumes all records are suitable; later activities add an explicit rejection policy.",
+          "body": [
+            "Unit 1 · Week 7 · Lesson 3",
+            "Test file contents as well as program calculations."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: two checks on each record",
+          "strategy": "Individual retrieval and paired correction",
+          "notes": "A line is text; strip removes whitespace; int converts suitable integer text; >=0 checks range. Invalid integer text raises ValueError. Ask learners to recall these steps individually then pair-check before processing multiple records.",
+          "body": [
+            "A record contains \"-3\\n\".",
+            "What do strip and int do to it?",
+            "Which check still rejects the resulting quantity?",
+            "Compare the steps with a partner."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "A total from valid records",
+          "strategy": "Teacher think-aloud and guided trace",
+          "notes": "Assume file exists and every line is a suitable non-negative integer. With lines 2,0,5, total moves 0,2,2,7 and output Total:7. Empty file body runs zero times, output 0. with handles closing. This model intentionally does not yet handle missing/malformed files, so state its assumptions before running.",
+          "body": [
+            "Assume every record is suitable.",
+            "Trace lines 2, 0 and 5, then an empty file."
+          ],
+          "code": "total = 0\nwith open(\"quantities.txt\", \"r\", encoding=\"utf-8\") as file:\n    for line in file:\n        quantity = int(line.strip())\n        total = total + quantity\nprint(\"Total:\", total)",
+          "minutes": 6
+        },
+        {
+          "title": "A test table from the file contract",
+          "strategy": "Independent prediction and paired review",
+          "notes": "Expected one-record 5 total 5;2,0,5 total 7; empty total 0. Missing file raises FileNotFoundError. Under a reject-file policy, a negative or malformed record rejects whole file and no successful total is displayed. Learners distinguish expectations of the initial assumed-valid model from required behaviour of an improved version. Support: separate calculation and invalid-file tests.",
+          "table": [
+            [
+              "File case",
+              "Expected under stated policy"
+            ],
+            [
+              "One valid record: 5",
+              "Total 5"
+            ],
+            [
+              "Valid records: 2, 0, 5",
+              "Predict total"
+            ],
+            [
+              "Existing empty file",
+              "Predict total"
+            ],
+            [
+              "Malformed or negative record",
+              "Reject file and report"
+            ]
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "A helper checks one record",
+          "strategy": "Worked example and guided prediction",
+          "notes": "This helper returns an integer 0 or more for a suitable record, otherwise None. Predict parse_quantity(\" 5\\n\")=5, \"-3\"=None, \"three\"=None and blank line=None. None is a distinct rejection signal because zero is valid. It does not itself read a file or decide how the caller reports failure. Strip/conversion/range combine Week 5 functions with Week 7 checks.",
+          "body": [
+            "Predict for \"5\", \"-3\" and \"three\".",
+            "Why is None a better rejection signal than 0 here?"
+          ],
+          "code": "def parse_quantity(text):\n    try:\n        quantity = int(text.strip())\n    except ValueError:\n        return None\n    if quantity < 0:\n        return None\n    return quantity",
+          "minutes": 10
+        },
+        {
+          "title": "An explicit policy for unsuitable records",
+          "strategy": "Independent coding with optional scaffolds",
+          "notes": "Policy for this exercise: stop at first unsuitable record, report file rejected and do not display a partial total as successful. Reference structure: initialise total 0 and file_valid=True; read each line; call parse_quantity; if value is None set file_valid=False and break, else accumulate; after traversal display total only if file_valid. Handle FileNotFoundError separately with a missing-file message. Support: provide this scaffold. Test valid, empty, malformed, negative and missing cases. Stretch: track and report the rejected line number. Partners review evidence after independent work.",
+          "body": [
+            "Use parse_quantity while reading each line.",
+            "Reject the file on the first unsuitable record.",
+            "Report failure instead of a successful partial total.",
+            "Run valid, empty, malformed, negative and missing cases."
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "Empty and missing are different",
+          "strategy": "All-student hinge question",
+          "notes": "Correct B: an existing empty file opens and produces total 0 in the model; a missing file raises FileNotFoundError. FileNotFoundError differs from conversion ValueError. If several choose A, use two practice paths, one to an empty file and one absent. Do not replace a missing input with a new empty file silently.",
+          "body": [
+            "One path refers to an empty file; another has no file.",
+            "“Reading both gives an empty traversal.”",
+            "A: agree     B: disagree",
+            "Choose and identify the missing-file exception."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: evidence for the policy",
+          "strategy": "Independent exit ticket",
+          "notes": "For lines 2,three,5, improved policy rejects on second line and displays no successful total; initial model would raise ValueError. Existing empty file total 0. Negative text converts but fails range. Ask learners to name a specific observed result for each policy test and retain it before controlled practical.",
+          "body": [
+            "Predict the required response to lines 2, three, 5.",
+            "Should a partial total count as a successful result?",
+            "Explain empty versus missing-file behaviour.",
+            "Save a test record with an expected and actual result."
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w07-l04",
+      "lesson": 4,
+      "title": "Controlled practical briefing",
+      "chapter": "files",
+      "prepare": "Teacher supplies the fresh task, permitted resources, assessment conditions, submission location and marking materials separately. Public deck contains process guidance only.",
+      "slides": [
+        {
+          "title": "Controlled practical briefing",
+          "strategy": "Teacher-led assessment orientation",
+          "notes": "This is the existing Week 7 planner practical slot. Use the teacher-issued task and school assessment arrangements; do not treat this public deck as a complete assessment instrument. Keep the fresh scenario and marking materials in the teacher-controlled distribution channel. Suggested timing is a 55-minute session; adjust to the issued task.",
+          "body": [
+            "Unit 1 · Week 7 · Lesson 4",
+            "Apply the skills from Weeks 1–7 to the teacher-issued task."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Task and conditions",
+          "strategy": "Teacher-led briefing",
+          "notes": "Issue the fresh problem separately. Confirm permitted resources, collaboration/help rules, time available and what evidence must be submitted. Explain how students can request clarification of wording without receiving a solution. Do not show a worked answer during the controlled attempt. This slide introduces no new marks or weighting.",
+          "body": [
+            "Read the task supplied by your teacher.",
+            "Confirm the time and permitted resources.",
+            "Check the rules for assistance and collaboration.",
+            "Identify the required files and evidence to submit."
+          ],
+          "minutes": 4
+        },
+        {
+          "title": "Requirements before code",
+          "strategy": "Individual task reading",
+          "notes": "Students independently identify required inputs, processing, outputs and data/file formats from the issued brief. They should distinguish task requirements from assumptions and seek permitted clarification. Apply only the features actually required by the task, rather than adding unnecessary file operations or algorithms.",
+          "body": [
+            "Identify the required inputs and outputs.",
+            "Note any type, range and file-format rules.",
+            "Separate stated requirements from assumptions.",
+            "Request permitted clarification of unclear wording."
+          ],
+          "minutes": 4
+        },
+        {
+          "title": "A plan you can explain",
+          "strategy": "Independent planning",
+          "notes": "Students prepare a brief plan or pseudocode using only conventions/resources allowed in the task. Ask them to decide where selection, repetition, list processing or functions serve the actual problem. They record independent expected results before implementation. Teacher observation follows the issued assessment conditions.",
+          "body": [
+            "Plan the main processing steps.",
+            "Choose suitable program structures for the task.",
+            "Select tests from the stated requirements.",
+            "Calculate expected results before running."
+          ],
+          "minutes": 7
+        },
+        {
+          "title": "Independent implementation",
+          "strategy": "Controlled individual work",
+          "notes": "Main implementation interval:20 suggested minutes. Students use the teacher-issued resources and follow its help rules. Teacher handles environment failures in accordance with the task conditions and keeps assessment observations separately. No model code or task-specific answers appear in the public deck.",
+          "body": [
+            "Implement your plan under the issued conditions.",
+            "Use clear names and consistent indentation.",
+            "Save your work in the required location.",
+            "Use the agreed process for technical difficulties."
+          ],
+          "minutes": 20
+        },
+        {
+          "title": "Testing against the requirements",
+          "strategy": "Independent verification",
+          "notes": "Suggested 10-minute testing interval. Students compare prior expectations with actual results, include applicable normal/boundary/invalid/file cases and record corrections honestly. Which tests are required comes from the issued task. Preserve evidence of a mismatch and rerun rather than replacing expectations to match an error.",
+          "body": [
+            "Compare actual results with your predictions.",
+            "Test relevant boundaries and unsuitable input.",
+            "Check file contents and repeat runs where required.",
+            "Record corrections and rerun the affected tests."
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "Submission check",
+          "strategy": "Individual submission review",
+          "notes": "Allow five suggested minutes for the issued submission procedure. Students verify their own final files open and the requested code/design/test evidence is included. Avoid adding criteria absent from the task. Keep original assessment evidence intact and follow the teacher’s submission directions.",
+          "body": [
+            "Follow the teacher’s submission instructions.",
+            "Check the final code and required data files.",
+            "Include the requested planning and test evidence.",
+            "Confirm the submitted version is the intended version."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Reflection after submission",
+          "strategy": "Individual reflection and teacher follow-up",
+          "notes": "After the controlled attempt ends, students reflect without changing submitted evidence. Teacher decides when task-specific feedback or solutions may be discussed, especially if other classes still need to complete it. Use observations to plan Week 8 design/testing support rather than adding another assessment.",
+          "body": [
+            "Which skill helped you solve the task?",
+            "Which test found or prevented a fault?",
+            "Name one skill to strengthen next.",
+            "Follow your teacher’s directions for later feedback."
+          ],
+          "minutes": 3
+        }
+      ]
+    }
+  ]
+}
