@@ -65,4 +65,4 @@ This is an editorial content map, not SCSA approval or proof of student mastery.
 
 ## Review pack
 
-The original 48-mark practice paper has 12 questions with point-based answer guidance. It samples the unit and deliberately does not claim complete examination coverage or official marks/grade calibration. Practical requirements must be checked using the evidence column above.
+The original practice paper has 12 questions with explained answers. It samples the unit rather than establishing complete coverage. Use the evidence column above to check practical skills.

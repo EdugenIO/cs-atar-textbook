@@ -61,5 +61,5 @@ Mapped means a draft explanation and practice opportunity were found. Expanded m
 ## Weeks 13–16
 13–14 integrated review: eight lessons including data-quality/model/schema repair, security transfer, controlled theory practice and feedback.
 15 consolidation: four lessons for diagnosis, stations, transfer and revision planning.
-16 exam preparation: four lessons for two practice halves, marking and targeted repair.
+16 exam preparation: four lessons for two practice halves, explained feedback and targeted repair.
 17–18 blocked exams: no new teaching or project deadlines. With weeks 1–12 this remains 64 teaching lessons; the 14 project lessons are already embedded.

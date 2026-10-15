@@ -5,4 +5,4 @@ B: choose types for item count, measured temperature, ID 007 and eligible flag. 
 C: make an eight-row Boolean table for not blocked and trained or supervisor versus not blocked and(trained or supervisor). Identify rows that differ. Write a rule that blocks everybody marked blocked and permits trained or supervisor; test it.
 D: trace scope example from chapter/reference; distinguish local rebinding, shared-list mutation, global read and returned result. Replace append with values=values+[number]; predict caller state. Make a fresh dictionary mutation/rebinding example and explain Python argument binding without the inaccurate int-by-value/list-by-reference claim.
 E: use Gantt chart/CSV. Identify all dependencies and twelve occupied workshops. Core build overruns; propose a documented scope/allocation response that retains acceptance and evaluation, with no invented extra workshop. Add planned/actual fields to your own schedule.
-Submit fresh independent answers, traces and schedule evidence. Source/teacher/learner review is still required.
+Keep fresh independent answers, traces and schedule evidence. Source/teacher/learner review is still required.

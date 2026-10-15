@@ -4,10 +4,12 @@ Edition 0.8. Original classroom draft. Use the reservation starter and stage CSV
 
 Rules: competing reservation requests are allowed. One request per borrower/item/date. BorrowerID determines BorrowerLabel; EquipmentID determines EquipmentDescription and CategoryID; CategoryID determines CategoryName. ReservationStatus depends on the whole event key.
 
+Before you start: a relation is written as TableName(Field1, Field2, ...). The names in brackets are fields, not stored values. Underline every field in the primary key; FK means foreign key. Use the stated business rules, rather than guessing dependencies from repeated values.
+
 1. Explain the repeating group in the starter. Give an alternative repeating-column layout that has the same problem.
 2. Explain an update, insert and delete anomaly using specific equipment facts.
 3. Flatten into 1NF: six atomic rows. Underline (BorrowerID, EquipmentID, ReservationDate). Explain why all three are needed.
-4. Write the functional dependencies and distinguish a partial dependency from a transitive dependency.
+4. Write the functional dependencies and distinguish a partial dependency from a transitive dependency. Start with BorrowerLabel: if you know B001 but cover the item and date, can you still find Learner A? Then ask whether B001 alone identifies a reservation status. Explain why the two facts need different keys.
 5. Form the three 2NF relations, identifying keys and FKs. State which facts moved and why.
 6. Explain why the 2NF Equipment relation still fails 3NF.
 7. Form four 3NF relations. Identify every PK and FK, including the three attributes forming Reservation’s PK.

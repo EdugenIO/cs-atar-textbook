@@ -1,5 +1,5 @@
-# Unit 3 week 11 — Teacher answers
-Original draft, 14 October 2026. Four explicit lessons; no extra project or task weighting. Teacher review/full-unit audit remain pending.
+# Unit 3 week 11 — Explained answers
+Original draft, 14 October 2026. Four explicit lessons; no extra project. Teacher review/full-unit audit remain pending.
 
 ## Layers and route
 OSI high→low: application,presentation,session,transport,network,data link,physical. TCP/IP application groups 5–7; transport 4; internet 3; network/link 1–2. Match functions, not a rigid real-protocol placement. Data encapsulates in transport then IP then local frame, carried as signals/bits. TCP is byte-stream transport; UDP retains datagram boundaries.

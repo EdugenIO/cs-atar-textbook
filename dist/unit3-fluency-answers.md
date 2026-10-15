@@ -1,15 +1,15 @@
 # Unit 3 Week 1 — diagnostic answers and repair checkpoints
 
-16 marks, two per item; accept equivalent correct reasoning. Do not turn this diagnostic into a mastery grade. Use item-level evidence to choose practice.
+Use the explanations to compare your reasoning. Equivalent correct methods are welcome. Choose further practice from the questions you found difficult.
 
-D1: integer 5 (1); "5.0" is not a valid integer string for int and raises ValueError (1).
-D2: two, 5 and 8 (1); strict > excludes 5 and leaves one (1).
-D3: counts 0,1,1,2 after the four iterations (1); final 2 (1).
-D4: outputs 11 then 10 (1); local parameter and returned value do not reassign the outside count binding (1).
-D5: last generated index is len(values), out of range (1); use range(len(values)), or iterate directly over values (1).
-D6: 0 is falsey but valid (1); reject only `value is None` (1).
-D7: w creates/truncates; a appends at the end, creating if absent (1); verify path and preserve a suitable backup before overwriting important existing work (1).
-D8: [] minimum 5 → 0 (1); [4,5,6] minimum 5 → 2 (1). Accept another precise empty/boundary example.
+D1: integer 5; "5.0" is not a valid integer string for int and raises ValueError.
+D2: two, 5 and 8; strict > excludes 5 and leaves one.
+D3: counts 0,1,1,2 after the four iterations; final 2.
+D4: outputs 11 then 10; local parameter and returned value do not reassign the outside count binding.
+D5: last generated index is len(values), out of range; use range(len(values)), or iterate directly over values.
+D6: 0 is falsey but valid; reject only `value is None`.
+D7: w creates/truncates; a appends at the end, creating if absent; verify path and preserve a suitable backup before overwriting important existing work.
+D8: [] minimum 5 → 0; [4,5,6] minimum 5 → 2. Accept another precise empty/boundary example.
 
 ## Repair/transfer
 count_at_least([3,5,0,8],5)→2; []→0; [4,5,6],5→2; [5,5],5→2; [0],0→1. Duplicates represent separate observations. Inputs to this function are assumed non-negative integers; text/range validation happens at the input boundary. Parser: "0" accepted 0; "-1", "five", "5.0", "" rejected as None; surrounding whitespace on " 5 " is accepted by int.

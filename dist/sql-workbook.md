@@ -18,4 +18,4 @@ For every query, record: requirement, SQL, predicted columns/rows/order, actual 
 
 Extension: explain why = NULL is not a suitable missing-value test. These starter fields are required and contain no NULLs.
 
-Teacher check: explain SELECT/FROM/WHERE/ORDER BY; defend one AND/OR decision and one boundary; demonstrate your actual results. Draft activity, not a summative assessment.
+Teacher check: explain SELECT/FROM/WHERE/ORDER BY; defend one AND/OR decision and one boundary; demonstrate your actual results. Optional practice with explained answers for self-review.

@@ -2,7 +2,7 @@
 Four lessons, original draft 14 October 2026.
 
 ## Diagnostic
-Record confidence before answering; mark only afterwards.
+Record confidence before answering; check the explanations only afterwards.
 D1: Trace the grid/alias/copy example below. Explain why only one grid changes after copy[0][0] = 9.
 D2: What goes wrong with [[0,0]] * 2 when one row is changed?
 D3: A dictionary maps unique equipment IDs to objects. What must happen before inserting a duplicate ID?
@@ -11,8 +11,8 @@ D5: May binary search by ID be applied to that quantity-sorted result?
 D6: Repair find_id and give a smallest revealing test.
 D7: Two objects inherit Equipment and override label(). What does calling item.label() through a mixed list illustrate?
 D8: A return operation increments stock twice when the same loan is returned twice. What test and guard are needed?
-D9: For host 192.168.50.70/27 give network, broadcast, ordinary capacity and a valid candidate gateway .
-D10: Explain IP destination versus next-hop MAC when .70/27 sends to 198.51.100.20 through .65, with no NAT.
+D9: For host 192.168.50.70/27 give network, broadcast, ordinary capacity and a valid candidate gateway.
+D10: Explain IP destination versus next-hop MAC when.70/27 sends to 198.51.100.20 through.65, with no NAT.
 D11: 20 clients each require 8 Mbit/s through a 100 Mbit/s uplink. Can it meet demand?
 D12: Traceroute has an unanswered middle hop but the destination responds. What can you conclude?
 
@@ -55,7 +55,7 @@ def find_id(records, target):
 ```
 
 ## Guided case
-Use Media .10/26 gateway .1; Staff .64/27, Devices .96/28 printer .98, Visitors .112/28 within 192.168.50.0/24. Draw the logical network with specified Cisco symbols, prefixes, gateways, policy boundary and representative end devices. Trace permitted Staff printing and denied Visitor initiation. Explain remote IP/next-hop MAC, TCP/UDP suitability and IPv6 notation. Calculate 20x8 demand through 100 Mbit/s and identify assumptions.
+Use Media.10/26 gateway.1; Staff.64/27, Devices.96/28 printer.98, Visitors.112/28 within 192.168.50.0/24. Draw the logical network with specified Cisco symbols, prefixes, gateways, policy boundary and representative end devices. Trace permitted Staff printing and denied Visitor initiation. Explain remote IP/next-hop MAC, TCP/UDP suitability and IPv6 notation. Calculate 20x8 demand through 100 Mbit/s and identify assumptions.
 ## Evidence cases
 A: assigned IP ping succeeds, name unresolved. B: ping succeeds, web fails. C: unanswered middle traceroute hop followed by destination response. D: guest-to-internal ping times out. For each give observation, two hypotheses, next test and a limited conclusion.
 ## Fresh transfer (after correction)

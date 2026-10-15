@@ -94,7 +94,7 @@ function renderSearchResults(focusNewResult = false) {
     link.textContent = match.label;
     if (match.matchedHeading) {
       const context = document.createElement('small');
-      context.textContent = `Section: ${match.matchedHeading}`;
+      context.textContent = `Section: ${typeof textbookSectionLabels !== 'undefined' ? (textbookSectionLabels[match.matchedHeading] || match.matchedHeading) : match.matchedHeading}`;
       link.append(context);
     }
     results.append(link);

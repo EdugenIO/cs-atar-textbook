@@ -12,4 +12,4 @@ Review a repeat-return or report-order change. Name trigger, requirement, incorr
 
 ## D — Responsibilities (week 9 lesson 2)
 Choose two chapter scenarios, including one effect on users and one source/authorship or quality-feedback issue. Identify stakeholders, risk/benefit, evidence and developer response. Explain why attribution alone is not permission and why a private prototype is not a real operational loan record. Give a maintenance decision with scope/testing consequences.
-Submit evidence to the existing project record; no new major assessment is added. Teacher determines sampling and feedback. Week 8/9 lessons 3–4 remain project workshops.
+Keep a local practice record and use feedback to choose your next attempt. Week 8/9 lessons 3–4 remain project workshops.

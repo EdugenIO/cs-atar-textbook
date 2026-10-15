@@ -111,4 +111,4 @@ Evaluate each criterion as met, partly met or not met, using actual evidence. Ba
 
 Ask students to justify fields and recipients, identify coded-ID linkage risks, explain quality/correction and lawful retention qualifications, and distinguish APP study from actual organisational coverage. Do not require an operational legal conclusion from incomplete facts. Accept alternative decisions when evidence and conditions support them.
 
-Four Week-12 lessons: privacy; ethical testing; evaluation workshop; demonstration/submission. This completes 14 planned project lessons when combined with week 7 and two workshops each week in weeks 8–11. Classroom evidence, independent review and full Unit 2 audit remain pending.
+Four Week-12 lessons: privacy; ethical testing; evaluation workshop; demonstration/self-review. This completes 14 planned project lessons when combined with week 7 and two workshops each week in weeks 8–11. Classroom evidence, independent review and full Unit 2 audit remain pending.

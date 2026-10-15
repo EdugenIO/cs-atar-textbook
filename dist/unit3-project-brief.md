@@ -23,4 +23,4 @@ project_support.py supplies validated equipment classes and synthetic preparatio
 
 ## Evidence and milestones
 Problem and stakeholder questions; R1–R9 evidence mapping; class/responsibility sketch and structure chart; data contracts; search/sort pseudocode and justification; schedule; code; expected/actual tests; repaired defects; useful versions and a restore check; individual demonstration; requirement evaluation and retrospective.
-Milestones: week 7 design checkpoint; week 8 state transitions; week 9 integration/review; week 10 acceptance/refinement/demo/submission. Teacher finalises local conditions, authentication, rubric and contribution through the school's outline. This brief samples programming skills and does not certify full-unit coverage.
+Milestones: week 7 design checkpoint; week 8 state transitions; week 9 integration/review; week 10 acceptance/refinement/demo/reflection. Use the milestones as a flexible practice plan. Review your own work against the requirements; no grade or submission is required. This brief samples programming skills and does not certify full-unit coverage.

@@ -9,5 +9,5 @@ Allocate twelve workshop milestones from the chapter. Add dependencies, estimate
 Build catalogue/search, issue/return, report/menu in slices. Record version, changes, tests and next action. Attribute supplied/external code and assistance. Save a recoverable version before a substantial change.
 ## Test
 Use the CSV log: requirement, setup/input, expected return/state, actual result/state, outcome, repair and retest. Cover success, invalid/rejected requests, duplicates/closed IDs, repeat return, empty report, report/history order, snapshots and polymorphic preparation. Include user acceptance scenarios separately from model tests.
-## Evaluate and authenticate
-For each R1–R9 choose met/partly/not met, cite evidence and remaining limitations. Demonstrate new test inputs under teacher observation, explain chosen algorithms and one override/reference. Restore a previous saved version and record its checked behaviour. Name a realistic next improvement and scope impact; distinguish a classroom prototype from real accountability/storage requirements.
+## Evaluate and explain your design
+For each R1–R9 choose met/partly/not met, cite evidence and remaining limitations. Demonstrate new test inputs using your own fresh inputs, explain chosen algorithms and one override/reference. Restore a previous saved version and record its checked behaviour. Name a realistic next improvement and scope impact; distinguish a classroom prototype from real accountability/storage requirements.

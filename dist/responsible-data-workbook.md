@@ -11,6 +11,6 @@ Unit 2 Week 12: two privacy/ethical-testing lessons and two project evaluation/d
 7. Explain the purpose of ethical hacking and penetration testing, required authorisation and handling of an unexpected out-of-scope finding.
 8. Complete responsible-data-review.csv: field purposes, access, disclosure, retention, actual evidence, implemented/tested/proposed status and improvement.
 9. Demonstrate project reports, targeted changes, invalid-input checks and a separate restored copy. Evaluate every acceptance criterion as met/partly met/not met, citing evidence.
-10. Submit and explain the database, SQL, ER/dictionary, tests, privacy/security decisions and evaluation. Use synthetic public examples; follow the teacher's approved submission/retention process.
+10. Review and explain the database, SQL, ER/dictionary, tests, privacy/security decisions and evaluation. Use synthetic public examples; follow the teacher’s approved storage/retention process.
 
 No live-system testing or personal-data collection is needed for this activity. Recheck the legal-context note before reuse; classroom reasoning is not an operational permission grant.

@@ -1,5 +1,5 @@
 # Unit 3 reliability — Teacher guide
-Draft 14 October 2026. Four explicit lessons across weeks 8–9, two each; existing project workshops and week 10 completion remain allocated. No new weighting or additional assessment.
+Draft 14 October 2026. Four explicit lessons across weeks 8–9, two each; existing project workshops and week 10 completion remain allocated. Use these as optional practice activities.
 
 ## Test and lab answers
 Fresh Equipment total 2: lend 2 succeeds/available 0; quantity 3 well-formed but excessive =>False/unchanged. Quantity 0/negative/text/bool =>ValueError at model boundary. Unknown IDs and historical duplicate reject without stock/history change. Component suite uses real cooperating objects, so includes integration checks; user acceptance needs the console/user task.

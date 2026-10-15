@@ -1,6 +1,6 @@
 # Unit 2 week 1 — explained answers
 
-Working edition 0.6. Classroom draft. Accept equivalent justified answers; these are learning criteria, not a weighted assessment rubric.
+Working edition 0.6. Classroom draft. Use these explanations to check your reasoning; equivalent justified answers can also work.
 
 1. Which items remain on loan and are overdue? Required facts: loan/item identity, DueDate, Returned, reference date and overdue rule.
 2. Active: L001, L002, L004, L006 (4). Overdue: L001, L006 (2). Filter returned records first; compare each remaining due date strictly before 8 April.

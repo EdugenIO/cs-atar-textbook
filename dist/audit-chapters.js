@@ -75,7 +75,7 @@ chapters.push(...[
     "sections": [
       [
         "Diagnose before choosing practice",
-        "<p>Try the six prompts without opening the answers. For each one, record “secure”, “unsure” or “revisit”. If you guessed correctly, still check that you can explain why. Use the results to choose a practice station.</p><section class=\"practice\"><p>D1. Represent character B (decimal code point 66) in binary and hexadecimal.</p><details><summary>Show answer and marking guidance</summary><p>1000010 (or 01000010 for eight-bit notation), and 42 hexadecimal. The number is unchanged.</p></details></section><section class=\"practice\"><p>D2. Evaluate <code>NOT False AND False OR True</code>.</p><details><summary>Show answer and marking guidance</summary><p>True. NOT first gives True; AND then gives False; OR True gives True. Grouping it as NOT (False AND False OR True) would instead give False.</p></details></section><section class=\"practice\"><p>D3. Trace [4, 9, 9] through a first-maximum algorithm.</p><details><summary>Show answer and marking guidance</summary><p>Initial best index 0; after index 1 best is 1; after index 2 it stays 1. Strict comparison preserves the first tie.</p></details></section><section class=\"practice\"><p>D4. Choose a file mode that retains yesterday’s records.</p><details><summary>Show answer and marking guidance</summary><p>Append, a. Read does not add records; write replaces existing content.</p></details></section><section class=\"practice\"><p>D5. Are 192.168.6.10 and 192.168.7.10 local under /24?</p><details><summary>Show answer and marking guidance</summary><p>No. Networks are 192.168.6.0 and 192.168.7.0. Routing is required between them.</p></details></section><section class=\"practice\"><p>D6. Does crediting copied code make every reuse permissible?</p><details><summary>Show answer and marking guidance</summary><p>No. Check the licence or permission independently of attribution.</p></details></section>"
+        "<p>Try the six prompts without opening the answers. For each one, record “secure”, “unsure” or “revisit”. If you guessed correctly, still check that you can explain why. Use the results to choose a practice station.</p><section class=\"practice\"><p>D1. Represent character B (decimal code point 66) in binary and hexadecimal.</p><details><summary>Show explained answer</summary><p>1000010 (or 01000010 for eight-bit notation), and 42 hexadecimal. The number is unchanged.</p></details></section><section class=\"practice\"><p>D2. Evaluate <code>NOT False AND False OR True</code>.</p><details><summary>Show explained answer</summary><p>True. NOT first gives True; AND then gives False; OR True gives True. Grouping it as NOT (False AND False OR True) would instead give False.</p></details></section><section class=\"practice\"><p>D3. Trace [4, 9, 9] through a first-maximum algorithm.</p><details><summary>Show explained answer</summary><p>Initial best index 0; after index 1 best is 1; after index 2 it stays 1. Strict comparison preserves the first tie.</p></details></section><section class=\"practice\"><p>D4. Choose a file mode that retains yesterday’s records.</p><details><summary>Show explained answer</summary><p>Append, a. Read does not add records; write replaces existing content.</p></details></section><section class=\"practice\"><p>D5. Are 192.168.6.10 and 192.168.7.10 local under /24?</p><details><summary>Show explained answer</summary><p>No. Networks are 192.168.6.0 and 192.168.7.0. Routing is required between them.</p></details></section><section class=\"practice\"><p>D6. Does crediting copied code make every reuse permissible?</p><details><summary>Show explained answer</summary><p>No. Check the licence or permission independently of attribution.</p></details></section>"
       ],
       [
         "Station A: Boolean expressions and types",
@@ -140,92 +140,92 @@ chapters.push(...[
     "badge": "UNIT 1 REVIEW",
     "objectives": [
       "Apply Unit 1 ideas to unfamiliar examples.",
-      "Use marking guidance to evaluate an answer.",
+      "Use explained answers to check your reasoning.",
       "Target remaining misconceptions with fresh practice."
     ],
     "sections": [
       [
         "Use the practice paper",
-        "<p>Use this original 48-mark paper as optional revision. It is not an official SCSA examination and does not test every skill. Allow 5 minutes to read and 55 minutes to work. If your lessons are shorter, spread the attempt across lessons 1–2.</p><p>Write Python and pseudocode answers without running the code on your first attempt. Try the questions before opening the answers below or downloading them separately. Any school assessment conditions, weighting and authorship checks are set separately by your teacher.</p><p><a class=\"button\" href=\"unit1-practice-paper.md\" download>Download questions only</a> <a class=\"button secondary\" href=\"unit1-practice-answers.md\" download>Download answers and marking guidance</a></p>"
+        "<p>Use this original practice paper as optional revision. It is not an official SCSA examination and does not test every skill. Allow 5 minutes to read and 55 minutes to work. If your lessons are shorter, spread the attempt across lessons 1–2.</p><p>Write Python and pseudocode answers without running the code on your first attempt. Try the questions before opening the answers below or downloading them separately. Use the answers to find a step you need to practise again.</p><p><a class=\"button\" href=\"unit1-practice-paper.md\" download>Download questions only</a> <a class=\"button secondary\" href=\"unit1-practice-answers.md\" download>Download explained answers</a></p>"
       ],
       [
         "Q1 · 3 marks",
-        "<section class=\"practice\"><p>Character C has decimal code point 67. Write its binary and hexadecimal values, then explain whether a code point always occupies one byte.</p><details><summary>Show answer and marking guidance</summary><p>1 mark: 1000011 or 01000011. 1: hexadecimal 43. 1: a code point identifies a character; byte length depends on encoding, so it is not always one byte.</p></details></section>"
+        "<section class=\"practice\"><p>Character C has decimal code point 67. Write its binary and hexadecimal values, then explain whether a code point always occupies one byte.</p><details><summary>Show explained answer</summary><p>1000011 or 01000011. hexadecimal 43. a code point identifies a character; byte length depends on encoding, so it is not always one byte.</p></details></section>"
       ],
       [
         "Q2 · 4 marks",
-        "<section class=\"practice\"><p>Evaluate 18 % 5. Evaluate not False and False or True, showing grouping. Explain the difference between = and == in Python.</p><details><summary>Show answer and marking guidance</summary><p>1: remainder 3. 1: Boolean result True. 1: ((not False) and False) or True, with NOT before AND before OR. 1: = assigns; == compares.</p></details></section>"
+        "<section class=\"practice\"><p>Evaluate 18 % 5. Evaluate not False and False or True, showing grouping. Explain the difference between = and == in Python.</p><details><summary>Show explained answer</summary><p>remainder 3. Boolean result True. ((not False) and False) or True, with NOT before AND before OR. = assigns; == compares.</p></details></section>"
       ],
       [
         "Q3 · 5 marks",
-        "<section class=\"practice\"><p>Given values = [6, -2, 6], trace a first-maximum algorithm initialised with best = 0 and updated only when values[i] > values[best]. State the final index, maximum and sum. Explain the empty-array precaution.</p><details><summary>Show answer and marking guidance</summary><p>1: at i=1, best remains 0. 1: at i=2, best remains 0 because 6 &gt; 6 is false. 1: index 0 and maximum 6. 1: sum 10. 1: check non-empty before accessing element zero; define an empty result. A correct alternative trace layout earns credit.</p></details></section>"
+        "<section class=\"practice\"><p>Given values = [6, -2, 6], trace a first-maximum algorithm initialised with best = 0 and updated only when values[i] > values[best]. State the final index, maximum and sum. Explain the empty-array precaution.</p><details><summary>Show explained answer</summary><p>at i=1, best remains 0. at i=2, best remains 0 because 6 &gt; 6 is false. index 0 and maximum 6. sum 10. check non-empty before accessing element zero; define an empty result. Other clear trace layouts are possible.</p></details></section>"
       ],
       [
         "Q4 · 4 marks",
-        "<section class=\"practice\"><p>Write a Python function admission(age, has_permission, is_escorted) returning (age >= 16 and has_permission) or is_escorted. Identify parameters and the arguments in admission(15, True, False), and give the result.</p><details><summary>Show answer and marking guidance</summary><p>1: valid function header with the three parameters. 1: correctly grouped return expression. 1: age/has_permission/is_escorted are parameters; 15/True/False are arguments. 1: False.</p></details></section>"
+        "<section class=\"practice\"><p>Write a Python function admission(age, has_permission, is_escorted) returning (age >= 16 and has_permission) or is_escorted. Identify parameters and the arguments in admission(15, True, False), and give the result.</p><details><summary>Show explained answer</summary><p>valid function header with the three parameters. correctly grouped return expression. age/has_permission/is_escorted are parameters; 15/True/False are arguments. False.</p></details></section>"
       ],
       [
         "Q5 · 4 marks",
-        "<section class=\"practice\"><p>A score must be a whole number from 0 to 100 inclusive. Give below/at/above tests for the upper boundary, a conversion-failure input, and state expected outcomes.</p><details><summary>Show answer and marking guidance</summary><p>1: 99 accepted. 1: 100 accepted. 1: 101 rejected. 1: text such as abc or 2.5 rejected as integer input. Award each point only when the expected outcome accompanies the input.</p></details></section>"
+        "<section class=\"practice\"><p>A score must be a whole number from 0 to 100 inclusive. Give below/at/above tests for the upper boundary, a conversion-failure input, and state expected outcomes.</p><details><summary>Show explained answer</summary><p>99 accepted. 100 accepted. 101 rejected. text such as abc or 2.5 rejected as integer input. State the expected outcome alongside each input.</p></details></section>"
       ],
       [
         "Q6 · 4 marks",
-        "<section class=\"practice\"><p>Yesterday’s file contains one line 2. A program adds today’s quantity 3 using w mode. Explain the failure, select the correct mode, explain reliable closure, and predict the sum after the corrected append-and-read operation.</p><details><summary>Show answer and marking guidance</summary><p>1: w replaces the earlier data. 1: use a to retain and append, with a newline record separator. 1: a with block closes the file when the block exits. 1: sum 5 after reading the two records; assume valid integer lines.</p></details></section>"
+        "<section class=\"practice\"><p>Yesterday’s file contains one line 2. A program adds today’s quantity 3 using w mode. Explain the failure, select the correct mode, explain reliable closure, and predict the sum after the corrected append-and-read operation.</p><details><summary>Show explained answer</summary><p>w replaces the earlier data. use a to retain and append, with a newline record separator. a with block closes the file when the block exits. sum 5 after reading the two records; assume valid integer lines.</p></details></section>"
       ],
       [
         "Q7 · 4 marks",
-        "<section class=\"practice\"><p>A project has a correct calculation but users cannot recover from an invalid quantity. Explain why it is incomplete, propose acceptance evidence, identify a unit test and describe a useful retrospective point.</p><details><summary>Show answer and marking guidance</summary><p>1: it fails an agreed recovery requirement despite correct calculation. 1: organiser enters invalid text then a valid quantity and continues without restarting. 1: isolated calculation call with known input and expected return. 1: evidence-based reflection about the development process and a future change, such as earlier validation testing.</p></details></section>"
+        "<section class=\"practice\"><p>A project has a correct calculation but users cannot recover from an invalid quantity. Explain why it is incomplete, propose acceptance evidence, identify a unit test and describe a useful retrospective point.</p><details><summary>Show explained answer</summary><p>it fails an agreed recovery requirement despite correct calculation. organiser enters invalid text then a valid quantity and continues without restarting. isolated calculation call with known input and expected return. evidence-based reflection about the development process and a future change, such as earlier validation testing.</p></details></section>"
       ],
       [
         "Q8 · 3 marks",
-        "<section class=\"practice\"><p>A public repository has visible source but no licence. Explain why visibility alone does not establish open-source status; distinguish plagiarism from copyright permission; name one item to record before reusing code.</p><details><summary>Show answer and marking guidance</summary><p>1: open source requires licence rights to use, modify and redistribute, not just visibility. 1: plagiarism concerns misrepresenting authorship; acknowledgement does not independently grant permission. 1: exact licence/permission and conditions, or creator/source/version with an explanation of its use.</p></details></section>"
+        "<section class=\"practice\"><p>A public repository has visible source but no licence. Explain why visibility alone does not establish open-source status; distinguish plagiarism from copyright permission; name one item to record before reusing code.</p><details><summary>Show explained answer</summary><p>open source requires licence rights to use, modify and redistribute, not just visibility. plagiarism concerns misrepresenting authorship; acknowledgement does not independently grant permission. exact licence/permission and conditions, or creator/source/version with an explanation of its use.</p></details></section>"
       ],
       [
         "Q9 · 4 marks",
-        "<section class=\"practice\"><p>For a protected web request using TCP, name the four DoD TCP/IP layers in order and give one responsibility or suitable protocol at each.</p><details><summary>Show answer and marking guidance</summary><p>1 each: Application — HTTPS/web service; Transport — TCP/ordered stream; Internet — IP/addressing and routing; Network — Ethernet or Wi-Fi/local frames. Both layer and role/example are required for each mark.</p></details></section>"
+        "<section class=\"practice\"><p>For a protected web request using TCP, name the four DoD TCP/IP layers in order and give one responsibility or suitable protocol at each.</p><details><summary>Show explained answer</summary><p>Application — HTTPS/web service; Transport — TCP/ordered stream; Internet — IP/addressing and routing; Network — Ethernet or Wi-Fi/local frames. Explain both the layer and its role or example.</p></details></section>"
       ],
       [
         "Q10 · 3 marks",
-        "<section class=\"practice\"><p>Compare IPv4 with IPv6. Are 192.168.8.10 and 192.168.9.10 local to each other under 255.255.255.0? Explain the mask’s role.</p><details><summary>Show answer and marking guidance</summary><p>1: IPv4 32 bits versus IPv6 128 bits (IPv6 has a larger address space). 1: no, their /24 network addresses differ. 1: the mask identifies the network portion used in that comparison.</p></details></section>"
+        "<section class=\"practice\"><p>Compare IPv4 with IPv6. Are 192.168.8.10 and 192.168.9.10 local to each other under 255.255.255.0? Explain the mask’s role.</p><details><summary>Show explained answer</summary><p>IPv4 32 bits versus IPv6 128 bits (IPv6 has a larger address space). no, their /24 network addresses differ. the mask identifies the network portion used in that comparison.</p></details></section>"
       ],
       [
         "Q11 · 6 marks",
-        "<section class=\"practice\"><p>Draw a logical diagram for eight wired PCs, six wireless laptops, a local server and Internet access. Use course Cisco-style conventions; include required addresses/masks and security. Justify one medium and one performance decision.</p><details><summary>Show answer and marking guidance</summary><p>1: switch with wired PCs and local server. 1: access point links wireless clients to the LAN. 1: router and appropriate provider/modem connection, with correctly connected course symbols. 1: coherent unique addresses/masks and firewall outside trusted network without IP label. 1: justified medium, such as UTP for fixed nearby PCs or fibre for a suitably described long link. 1: evidence-based performance choice, such as investigating wireless airtime/placement rather than assuming a faster switch fixes everything. Teacher visually checks symbol fidelity; alternative coherent layouts can earn credit.</p></details></section>"
+        "<section class=\"practice\"><p>Draw a logical diagram for eight wired PCs, six wireless laptops, a local server and Internet access. Use course Cisco-style conventions; include required addresses/masks and security. Justify one medium and one performance decision.</p><details><summary>Show explained answer</summary><p>switch with wired PCs and local server. access point links wireless clients to the LAN. router and appropriate provider/modem connection, with correctly connected course symbols. coherent unique addresses/masks and firewall outside trusted network without IP label. justified medium, such as UTP for fixed nearby PCs or fibre for a suitably described long link. evidence-based performance choice, such as investigating wireless airtime/placement rather than assuming a faster switch fixes everything. Teacher visually checks symbol fidelity; other coherent layouts are possible.</p></details></section>"
       ],
       [
         "Q12 · 4 marks",
-        "<section class=\"practice\"><p>Explain how a firewall and an operating system help prevent unauthorised access. Explain why broadcasts and shared-medium contention can affect performance.</p><details><summary>Show answer and marking guidance</summary><p>1: firewall permits/blocks traffic according to rules. 1: OS authentication, permissions or updates with a threat explanation. 1: broadcasts consume capacity/processing within the broadcast domain. 1: contention/collisions on shared media consume time; modern full-duplex switched Ethernet avoids old half-duplex collision behaviour.</p></details></section>"
+        "<section class=\"practice\"><p>Explain how a firewall and an operating system help prevent unauthorised access. Explain why broadcasts and shared-medium contention can affect performance.</p><details><summary>Show explained answer</summary><p>firewall permits/blocks traffic according to rules. OS authentication, permissions or updates with a threat explanation. broadcasts consume capacity/processing within the broadcast domain. contention/collisions on shared media consume time; modern full-duplex switched Ethernet avoids old half-duplex collision behaviour.</p></details></section>"
       ],
       [
         "Turn feedback into a plan",
-        "<p>Check one point at a time using the explained answers. Equivalent correct explanations and working are acceptable. The total is not a grade prediction. For each mistake, decide whether you needed more knowledge, made a tracing/calculation error, misread the question or did not explain your reasoning clearly.</p><p>Choose your three weakest questions. Change the data, try again and explain what you corrected. Written answers do not replace practical work. You still need opportunities to load arrays, process files, develop and debug programs, keep development records and draw LAN, WLAN and WAN diagrams. Use the coverage audit to see what remains to be checked.</p>"
+        "<p>Check one point at a time using the explained answers. Equivalent correct explanations and working are acceptable. For each mistake, decide whether you needed more knowledge, made a tracing/calculation error, misread the question or did not explain your reasoning clearly.</p><p>Choose your three weakest questions. Change the data, try again and explain what you corrected. Written answers do not replace practical work. You still need opportunities to load arrays, process files, develop and debug programs, keep development records and draw LAN, WLAN and WAN diagrams. Use the coverage audit to see what remains to be checked.</p>"
       ]
     ],
     "practice": [
       [
         "Interpret",
-        "Why does a correct layer name alone not earn its Q9 mark?",
+        "Why is a correct layer name alone not enough to answer Q9?",
         "The prompt requires both the layer and its role or a suitable protocol. Answer all parts of the requirement."
       ],
       [
         "Reflect",
-        "What should follow self-marking?",
-        "Identify why marks were lost and reattempt fresh variants; copying the answer is not evidence of learning."
+        "What should follow checking your answers?",
+        "Explain any errors, then try fresh examples without looking at the answers."
       ]
     ],
-    "task": "Try the 48-mark practice paper, then check the explanations and correct your mistakes. Choose three weak areas and try changed examples. Bring one question you can now explain and one you still want help with.",
-    "solution": "A useful submission has your unaided first attempt, point-by-point corrections, a reason for each significant error and independently completed transfer questions. Teacher review is needed for diagrams and equivalent answers.",
+    "task": "Try the practice paper, then check the explanations and correct your mistakes. Choose three weak areas and try changed examples. Bring one question you can now explain and one you still want help with.",
+    "solution": "Keep your first attempt, point-by-point corrections, a reason for each significant error and independently completed transfer questions. Teacher review is needed for diagrams and equivalent answers.",
     "lessons": [
       "Lesson 1: reading and first paper attempt; continue in lesson 2 if needed.",
-      "Lesson 2: finish the attempt, then self-mark with explanations.",
+      "Lesson 2: finish the attempt, then check using the explanations.",
       "Lesson 3: fresh questions and teacher feedback on weak areas.",
       "Lesson 4: final retrieval, diagram/trace checks and a personal exam plan. Weeks 17–18 remain blocked for exams."
     ],
     "quiz": {
-      "q": "What does a 48-mark revision score establish?",
+      "q": "What can checking this practice sample tell you?",
       "options": [
         "An official ATAR prediction",
-        "Performance on this sample, to guide further practice",
+        "Which parts of this sample need further practice",
         "That all syllabus skills are mastered"
       ],
       "answer": 1,

@@ -41,7 +41,7 @@ chapters.push({
     ]
   ],
   "task": "Complete the linked activity independently, record evidence of errors, explain corrections and retest with a changed example.",
-  "solution": "Use the linked separate checkpoints/marking guide after attempting the task. Verify original data assumptions and distinguish proposed controls from actual evidence.",
+  "solution": "Use the linked separate checkpoints/explained-answer guide after attempting the task. Verify original data assumptions and distinguish proposed controls from actual evidence.",
   "recap": "Use the review to find specific gaps. Check data against suitable evidence, read each relationship in both directions and compare design rules with actual constraints. Explain a correction, then try a changed example to check that you understand it.",
   "lessons": [
     "13.1 quality checks; 13.2 six-table interpretation; 13.3 fresh four-table creation; 13.4 schema/dictionary comparison.",
@@ -99,7 +99,7 @@ chapters.push({
     ]
   ],
   "task": "Complete the linked activity independently, record evidence of errors, explain corrections and retest with a changed example.",
-  "solution": "Use the linked separate checkpoints/marking guide after attempting the task. Verify original data assumptions and distinguish proposed controls from actual evidence.",
+  "solution": "Use the linked separate checkpoints/explained-answer guide after attempting the task. Verify original data assumptions and distinguish proposed controls from actual evidence.",
   "recap": "Find a specific gap, choose practice that addresses it and explain your correction. Then try a new example with different conditions. Recognising a topic is useful, but explaining why an answer works gives stronger evidence of understanding.",
   "lessons": [
     "Lesson 1: independent diagnosis and priority selection.",
@@ -135,7 +135,7 @@ chapters.push({
   "sections": [
     [
       "Use the original 64-mark paper",
-      "<p><a class=\"button\" href=\"unit2-practice-paper.md\" download>Download student paper</a> <a class=\"button secondary\" href=\"unit2-practice-marking-guide.md\" download>Separate marking guide</a></p><p>The paper has sixteen questions worth four marks each. You can try it in 80 minutes or split it into two 40-minute halves over two lessons.</p><p>Use it as optional practice. It is not an official exam, a prescribed duration or an assessment weighting. Every question starts with the original project data, so a change in one answer does not carry into the next question.</p>"
+      "<p><a class=\"button\" href=\"unit2-practice-paper.md\" download>Download student paper</a> <a class=\"button secondary\" href=\"unit2-practice-marking-guide.md\" download>Explained answers</a></p><p>The paper has sixteen original practice questions. You can try it in 80 minutes or split it into two 40-minute halves over two lessons.</p><p>Use it as an optional learning activity, with explained answers for self-review. Every question starts with the original project data, so a change in one answer does not carry into the next question.</p>"
     ],
     [
       "Bring the specified stimulus",
@@ -143,7 +143,7 @@ chapters.push({
     ],
     [
       "Mark, correct and explain limits",
-      "<p>After you try a question, use the separate guide to check your reasoning:</p><ol><li>Compare the rule, query or explanation, allowing equivalent accurate answers.</li><li>Identify what was missing or incorrect. Do not count the same point twice.</li><li>Rewrite the answer using the rule and the evidence.</li><li>Try an example with changed data to see whether the correction transfers.</li></ol><p>The paper checks a sample of theory and written SQL. You still need hands-on practice to draw ER models, create a database, test it and demonstrate recovery.</p><p>The suggested teaching sequence reserves weeks 17–18 for the school’s exam period. It adds no new teaching or project deadlines.</p>"
+      "<p>After you try a question, use the separate guide to check your reasoning:</p><ol><li>Compare the rule, query or explanation, allowing equivalent accurate answers.</li><li>Identify what was missing or incorrect. Focus on why each point matters.</li><li>Rewrite the answer using the rule and the evidence.</li><li>Try an example with changed data to see whether the correction transfers.</li></ol><p>The paper checks a sample of theory and written SQL. You still need hands-on practice to draw ER models, create a database, test it and demonstrate recovery.</p><p>The suggested teaching sequence reserves weeks 17–18 for the school’s exam period. It adds no new teaching or project deadlines.</p>"
     ]
   ],
   "practice": [
@@ -159,12 +159,12 @@ chapters.push({
     ]
   ],
   "task": "Complete the linked activity independently, record evidence of errors, explain corrections and retest with a changed example.",
-  "solution": "Use the linked separate checkpoints/marking guide after attempting the task. Verify original data assumptions and distinguish proposed controls from actual evidence.",
+  "solution": "Use the linked separate checkpoints/explained-answer guide after attempting the task. Verify original data assumptions and distinguish proposed controls from actual evidence.",
   "recap": "Start each question from the supplied original data. Use the guide after trying an answer, explain the correction and apply it to a changed example. Written questions sample your understanding; they do not replace hands-on modelling, database creation, testing or recovery practice.",
   "lessons": [
     "Lesson 1: Q1–8, up to 40 minutes plus setup/collection.",
     "Lesson 2: Q9–16, up to 40 minutes plus setup/collection.",
-    "Lesson 3: mark with explanations and classify gaps.",
+    "Lesson 3: compare explained answers and identify gaps.",
     "Lesson 4: targeted repair, fresh transfer and readiness check."
   ],
   "reference": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",

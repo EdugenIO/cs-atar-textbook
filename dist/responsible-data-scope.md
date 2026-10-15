@@ -6,7 +6,7 @@ Target: teacher-owned local training app with synthetic loan records, supplied a
 Permitted: read-only review of provided material; checks using supplied accounts according to teacher instructions.
 Excluded: production school portal, other students' devices, real personal data/credentials, disruptive tests, external publication.
 Window/contact/stop rule: defined by the teacher before any actual lab; stop when an unexpected out-of-scope system or data appears; report via the agreed contact.
-Evidence: minimum necessary synthetic screenshots/log extracts in the approved submission location; do not publish externally without separate authority.
+Evidence: minimum necessary synthetic screenshots/log extracts in the approved evidence-storage location; do not publish externally without separate authority.
 
 Classify and justify:
 A. Review the supplied training log.

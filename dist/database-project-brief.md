@@ -1,6 +1,6 @@
 # Equipment-desk database project
 
-Unit 2. Formative classroom draft; teacher review pending. No official weighting.
+Unit 2. Optional learning project; teacher review pending.
 
 ## Brief and limits
 Build a four-table equipment-loan database using synthetic data. Each loan is one item; history stays recorded when an item is returned. Use the existing Borrower/Category/Equipment/Loan model. The project edition adds fictional whole-dollar ReplacementCost estimates. A GUI/Python interface is optional. Use no real student personal data.
@@ -27,5 +27,5 @@ Build: run your creation script and explain table order and constraints; verify 
 Test: requirement, input/action, expected, actual, pass/fail, correction; isolate changes between tests.
 Evaluate: each criterion met/partly met/not met, evidence, limitation, realistic improvement. Compare predicted and actual outcomes.
 
-## Submission
-Database working file, creation/data SQL, saved report/modification SQL, ER/dictionary, test log, recovery evidence and evaluation. Keep the untouched starter separately. Explain your work in a teacher demonstration. A supplied file alone does not demonstrate database creation.
+## Self-review collection
+Database working file, creation/data SQL, saved report/modification SQL, ER/dictionary, test log, recovery evidence and evaluation. Keep the untouched starter separately. Explain your work aloud or to a study partner. A supplied file alone does not demonstrate database creation.

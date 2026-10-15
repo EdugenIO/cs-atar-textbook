@@ -38,7 +38,7 @@ const unit4LearningGuides = {
       {label: 'Roll back explicitly', detail: 'The error handler rolls back the logical operation, including the earlier booking insert.'},
       {label: 'Check the state', detail: 'M03/S02 is absent again and the earlier bookings remain. A failed statement alone would not guarantee that outcome.'}
     ],
-    caption: 'This demonstrates atomicity: the two-step change is all-or-nothing. It does not, by itself, prove crash durability, disk recovery or every business rule.',
+    caption: 'This illustrative flow needs one shared transaction. The supplied book() and set_attendance() functions each use their own transaction; calling them in sequence does not combine them. Atomicity alone does not prove crash durability or disk recovery.',
     predict: 'Why must you inspect Booking after the failed attendance insert, rather than checking only the error message?',
     answer: 'The message shows that attendance failed. You still need evidence that the earlier booking insert was undone and unrelated rows stayed unchanged. That checks the transaction boundary.',
     retry: 'Change the operation to a three-row import whose final insert fails. Explain which earlier inserts should remain after the agreed all-or-none rollback.'
@@ -151,7 +151,7 @@ const unit4LearningGuides = {
       {label: 'Connect to the requirement', detail: 'Counting the booking key reports 0 bookings for the preserved session, which matches the all-session requirement.'},
       {label: 'Check your explanation', detail: 'Use the actual source and requested scope. Do not add an unsupported claim that the query enforces booking capacity.'}
     ],
-    caption: 'An explanation joins a relevant fact to a mechanism and its effect. This is an ungraded practice example, not a marking formula.',
+    caption: 'An explanation joins a relevant fact to a mechanism and its effect. Use this ungraded example to practise explaining the mechanism.',
     predict: 'If the command changed from explain to identify, how would the expected response differ?',
     answer: 'Identify asks you to name the relevant point, such as counting a non-null booking key. Explain also needs the reason: the preserved outer-join row has NULL child fields, so COUNT(*) would incorrectly give one.',
     retry: 'Change the source to resources with no loans. Explain the same counting issue using Resource and LoanID rather than copying the session wording.'

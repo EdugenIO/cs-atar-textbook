@@ -28,6 +28,7 @@
 @media print{
   .learning-block{padding:10pt;border:1pt solid #555;background:white;break-inside:auto}
   .learning-block h3{font-size:13pt}
+  .learning-block>p,.learning-block>h3{break-after:avoid}
   .learning-nodes li{padding:7pt;background:white;border-color:#555}
   .learning-nodes li>span:not(.learning-arrow),.learning-visual figcaption{font-size:9pt}
   .learning-block .learning-label{font-size:8pt}

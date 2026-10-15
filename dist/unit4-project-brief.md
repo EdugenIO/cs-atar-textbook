@@ -7,4 +7,4 @@ R4: Record or update attendance only for booked pair; evidence: Joint-key refere
 R5: Clean and import a synthetic member batch atomically; evidence: Mapping/normalisation log; invalid/duplicate batch leaves all rows unchanged
 R6: Demonstrate controlled schema/data changes; evidence: CREATE/ALTER/INSERT/UPDATE/DELETE/cascade/DROP lab; safe transaction boundary
 R7: Demonstrate recovery and evaluate fitness; evidence: Known-good copy, integrity/reference checks, content/report comparison, limitations
-The core excludes a GUI, login, payments and production deployment; use a DBMS or console. School assessment outline controls weighting/conditions.
+The core excludes a GUI, login, payments and production deployment; use a DBMS or console. Use the requirements as an optional self-review checklist, without marks or submission.

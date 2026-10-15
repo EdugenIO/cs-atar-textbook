@@ -1,34 +1,34 @@
-# Teacher marking guide — separate, not access-protected
-Original draft 14 October 2026. Accept equivalent correct evidence; no official grade/weighting claim.
+# Explained answers — separate, not access-protected
+Original draft 14 October 2026. Accept equivalent correct evidence; Use the explanations for self-review.
 
-## S1 (4)
-stock A01:0,A02:0 (1); snapshot A01:2,A02:1 (1); a separate shallow mapping (1) of immutable integer values, replaced in stock rather than mutating nested values (1).
+## S1 
+stock A01:0,A02:0; snapshot A01:2,A02:1; a separate shallow mapping  of immutable integer values, replaced in stock rather than mutating nested values.
 
-## S2 (4)
-A01,A03,A02 (2;1 for correct quantity grouping); strict > shifts only larger values (1); not ID-ordered, so direct ID binary search precondition fails (1).
+## S2 
+A01,A03,A02; strict > shifts only larger values; not ID-ordered, so direct ID binary search precondition fails.
 
-## S3 (4)
-low <= high (1); one matching record (1) returns index 0 (1); ascending order by the same searched key (1).
+## S3 
+low <= high; one matching record  returns index 0; ascending order by the same searched key.
 
-## S4 (4)
-Subclass provides its own method implementation (1) while sharing the inherited interface/common behaviour (1); same call dispatches to actual object method (1); returning same active loan twice must not restore stock twice (1).
+## S4 
+Subclass provides its own method implementation  while sharing the inherited interface/common behaviour; same call dispatches to actual object method; returning same active loan twice must not restore stock twice.
 
-## S5 (4)
-255.255.255.224;192.168.80.32;192.168.80.63;30 ordinary usable (1 each).
+## S5 
+255.255.255.224;192.168.80.32;192.168.80.63;30 ordinary usable.
 
-## S6 (4)
-IP stays remote (1), local frame targets gateway MAC (1); TCP ordered reliable byte stream versus UDP without those delivery/order guarantees (1); neither protocol choice alone guarantees encryption (1).
+## S6 
+IP stays remote, local frame targets gateway MAC; TCP ordered reliable byte stream versus UDP without those delivery/order guarantees; neither protocol choice alone guarantees encryption.
 
-## S7 (4)
-120 Mbit/s (1) exceeds 100 shared link (1);24 seconds (1); overhead/other traffic/server/storage limit actual transfer (1).
+## S7 
+120 Mbit/s  exceeds 100 shared link;24 seconds; overhead/other traffic/server/storage limit actual transfer.
 
-## S8 (4)
-VLANs separate L2 broadcast domains (1); routing rules/actual enforcement determine inter-zone permission (1); missing probe response (1) is not proof of broken forwarding when destination responds (1).
+## S8 
+VLANs separate L2 broadcast domains; routing rules/actual enforcement determine inter-zone permission; missing probe response  is not proof of broken forwarding when destination responds.
 
-## E1 (8)
-Initialises output and traverses records (1), tests quantity>0 (1), appends correct ID preserving order (1), returns without input mutation (1). Empty->[] (1), all-zero->[] (1), mixed A01:0,A02:2,A03:1 ->[A02,A03] (1). Dictionary supports direct unique-key lookup; list retains an ordered view but may need traversal (1).
+## E1 
+Initialises output and traverses records, tests quantity>0, appends correct ID preserving order, returns without input mutation. Empty->[], all-zero->[], mixed A01:0,A02:2,A03:1 ->[A02,A03]. Dictionary supports direct unique-key lookup; list retains an ordered view but may need traversal.
 
-## E2 (10)
-Studio/26,Staff/27,Devices/28,Guests/29 (1 each:46,21,10,6 required). Example .0/26,.64/27,.96/28,.112/29: aligned (1), disjoint/inside the parent block (1). Gateways .1,.65,.97,.113 (2 all valid;1 if two/three correct; actual router interfaces required). Routed boundary firewall/filtering (1); narrow DNS/DHCP dependency (1).
+## E2 
+Studio/26,Staff/27,Devices/28,Guests/29 (needs: 46, 21, 10 and 6 usable addresses). Example.0/26,.64/27,.96/28,.112/29: aligned, disjoint/inside the parent block. Gateways.1,.65,.97,.113 (these must be actual router interfaces). Routed boundary firewall/filtering; narrow DNS/DHCP dependency.
 
-Fresh retry: .82/28 network .80,broadcast .95,hosts .81–.94,14 usable ; gateway .81 subject to actual configuration. Demand is 12 × 7 = 84 Mbit/s; 250 MB × 8 ÷ 80 Mbit/s gives an ideal 25-second transfer. IDs B02,B04, source unchanged.
+Fresh retry:.82/28 network.80,broadcast.95,hosts.81–.94,14 usable; gateway.81 subject to actual configuration. Demand is 12 × 7 = 84 Mbit/s; 250 MB × 8 ÷ 80 Mbit/s gives an ideal 25-second transfer. IDs B02,B04, source unchanged.
