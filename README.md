@@ -67,7 +67,7 @@ The Teaching sequence page uses dist/teaching-planner-data.js for 256 allocated 
 
 ## Lesson slides
 
-Unit 1 Weeks 1–4 have sixteen eight-slide decks. Each planner lesson links to browser presentation, editable PowerPoint and teacher notes. Shared content lives in the slide-source/unit*-week*.json files; see slide-source/README.md for editing and regeneration. Run node scripts/build-slide-web.mjs after content changes; PowerPoint regeneration is separate. Later lesson buttons appear only when files exist.
+Unit 1 Weeks 1–5 have twenty eight-slide decks. Each planner lesson links to browser presentation, editable PowerPoint and teacher notes. Shared content lives in the slide-source/unit*-week*.json files; see slide-source/README.md for editing and regeneration. Run node scripts/build-slide-web.mjs after content changes; PowerPoint regeneration is separate. Later lesson buttons appear only when files exist.
 
 
 
@@ -76,4 +76,5 @@ Unit 1 Weeks 1–4 have sixteen eight-slide decks. Each planner lesson links to 
 ## Link sharing
 
 The homepage includes static Open Graph and large-image card metadata for social previews. Share https://edugenio.github.io/cs-atar-textbook/ . Artwork is in dist/social-preview.svg with a 1200 x 630 PNG at dist/social-preview-v1.png. The SVG is editable; scripts/build-social-preview.mjs optionally rebuilds the PNG using sharp. Use a new versioned image filename when replacing artwork so existing social caches can be refreshed. Hash routes share the homepage preview.
+
 

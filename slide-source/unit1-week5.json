@@ -1,0 +1,524 @@
+{
+  "unit": 1,
+  "week": 5,
+  "chapter": "functions",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#functions",
+  "references": [
+    "https://docs.python.org/3/tutorial/controlflow.html#defining-functions",
+    "https://docs.python.org/3/tutorial/classes.html#python-scopes-and-namespaces"
+  ],
+  "lessons": [
+    {
+      "id": "u1-w05-l01",
+      "lesson": 1,
+      "title": "Function definitions and calls",
+      "chapter": "functions",
+      "prepare": "Python editor, the functions chapter and the familiar badge-cost calculation.",
+      "slides": [
+        {
+          "title": "Function definitions and calls",
+          "strategy": "Learning intention",
+          "notes": "Success means identify a definition, make a call and trace a returned result. Link to earlier badge programs so learners focus on function structure rather than a new calculation.",
+          "body": [
+            "Unit 1 · Week 5 · Lesson 1",
+            "Give a useful calculation a name and call it when needed."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: a familiar calculation",
+          "strategy": "Individual retrieval and pair comparison",
+          "notes": "Allow one minute without notes, then compare. Four badges at $3 cost $12. Quantity and price are inputs to the calculation; multiplication produces the result. Distinguish calculation from input prompts and printing. Revisit arithmetic if needed before introducing syntax.",
+          "body": [
+            "Four badges cost $3 each. What is the total?",
+            "Which values does the calculation need?",
+            "Which step calculates, and which step displays?",
+            "Compare your explanation with a partner."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "A function’s agreed task",
+          "strategy": "Requirement annotation and teacher modelling",
+          "notes": "Explain contract as agreed inputs, result and assumptions. Use non-negative whole-number quantities and whole-dollar prices in these introductory examples. The function returns quantity × unit_price. It does not prompt or print. The caller decides where values come from and how to use the result.",
+          "table": [
+            [
+              "Part of the contract",
+              "Badge example"
+            ],
+            [
+              "Name",
+              "badge_cost"
+            ],
+            [
+              "Inputs",
+              "quantity and unit_price"
+            ],
+            [
+              "Returned result",
+              "quantity × unit_price"
+            ],
+            [
+              "Responsibility",
+              "Calculate the cost"
+            ]
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "A definition waits for a call",
+          "strategy": "Teacher think-aloud and guided prediction",
+          "notes": "def creates the function, but its body runs when badge_cost(4,3) is called. Parameters receive 4 and 3, return sends 12 back, cost receives 12 and print displays it. Mark the indented body and unindented caller. Ask why a file containing only this definition prints nothing.",
+          "body": [
+            "Predict what prints and when the body runs.",
+            "Identify the definition and the call."
+          ],
+          "code": "def badge_cost(quantity, unit_price):\n    return quantity * unit_price\n\ncost = badge_cost(4, 3)\nprint(cost)",
+          "minutes": 10
+        },
+        {
+          "title": "A trace across the call",
+          "strategy": "Worked example and faded support",
+          "notes": "Model 4,3 as arguments, local parameter bindings and returned 12 stored in cost. Learners independently trace badge_cost(6,3): result 18. Support: provide stage headings. Stretch: trace badge_cost(0,3) and explain why it needs no special branch.",
+          "table": [
+            [
+              "Stage",
+              "For badge_cost(4, 3)"
+            ],
+            [
+              "Caller supplies arguments",
+              "4 and 3"
+            ],
+            [
+              "Parameters receive values",
+              "quantity = 4, unit_price = 3"
+            ],
+            [
+              "Function returns",
+              "12"
+            ],
+            [
+              "Caller stores result",
+              "cost = 12"
+            ]
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "Several calls, one definition",
+          "strategy": "Paired prediction and coding",
+          "notes": "Keep one definition and make separate calls (0,3), (4,3), (4,5). Expected 0,12,20. Driver runs, navigator checks prior predictions and explains a call, then swap. Each learner records results. Support: supply one example call. Stretch: use a returned result in a later addition without changing the function.",
+          "body": [
+            "Keep one badge_cost definition.",
+            "Predict calls with (0, 3), (4, 3) and (4, 5).",
+            "Run each call and record the returned result.",
+            "Swap roles and explain how the same body serves each call."
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "Which line calls the function?",
+          "strategy": "All-student hinge question",
+          "notes": "Correct B invokes the function. A defines it and C refers to the function object without calling it. Take simultaneous choices. If several choose A, run a file containing only the definition and ask what triggers its body.",
+          "body": [
+            "A: def badge_cost(quantity, unit_price):",
+            "B: badge_cost(4, 3)",
+            "C: badge_cost",
+            "Choose the call and explain what triggers execution."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: define, call and predict",
+          "strategy": "Independent exit ticket",
+          "notes": "badge_cost(5,2) returns 10, stored with cost = badge_cost(5,2). Definition creates the function; a call invokes it. Collect individual calls and explanations. Use errors to group definition-versus-call support next lesson.",
+          "body": [
+            "Write a call for five badges at $2 each.",
+            "Predict the returned result.",
+            "Show how the caller could store that result.",
+            "Explain how a definition differs from a call."
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w05-l02",
+      "lesson": 2,
+      "title": "Parameters, arguments and returns",
+      "chapter": "functions",
+      "prepare": "Python editor, badge_cost definition and a paper call-trace template.",
+      "slides": [
+        {
+          "title": "Parameters, arguments and returns",
+          "strategy": "Learning intention",
+          "notes": "Success means map arguments to parameters, use a return value and distinguish returned results from displayed output.",
+          "body": [
+            "Unit 1 · Week 5 · Lesson 2",
+            "Trace values into a function and back to its caller."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: the first call",
+          "strategy": "Individual retrieval and peer explanation",
+          "notes": "Expected badge_cost(4,3) returns 12. The body runs on a call. A caller can assign its returned result to cost. Allow individual retrieval then pair comparison. Retrace the call if learners think def immediately computes a numeric result.",
+          "body": [
+            "Predict badge_cost(4, 3).",
+            "When does the indented function body run?",
+            "How can the caller keep the returned result?",
+            "Compare one answer with a partner."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Parameters and arguments",
+          "strategy": "Worked mapping and guided practice",
+          "notes": "Parameters width,height appear in def area(width,height). Arguments 5,2 appear in area(5,2). Positional binding maps first to first, second to second. Product 10 returns. Learners then map badge_cost(6,4): quantity 6, price 4, result 24. Support: align columns. Keyword and default arguments come later.",
+          "table": [
+            [
+              "Definition or call",
+              "What to identify"
+            ],
+            [
+              "def area(width, height):",
+              "Parameters: width and height"
+            ],
+            [
+              "area(5, 2)",
+              "Arguments: 5 and 2"
+            ],
+            [
+              "Inside this call",
+              "width = 5, height = 2"
+            ],
+            [
+              "Returned product",
+              "10"
+            ]
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "The caller can use the result",
+          "strategy": "Teacher think-aloud and guided prediction",
+          "notes": "cost is 12, payable 14 and output 14. Trace entry into the function, return to assignment, then caller addition. Packaging is a separate caller calculation. Ask learners to predict badge_cost(2,5) plus 2:12. A result can be stored, displayed or combined.",
+          "body": [
+            "Track cost, then payable.",
+            "Which calculation happens in the caller?"
+          ],
+          "code": "def badge_cost(quantity, unit_price):\n    return quantity * unit_price\n\ncost = badge_cost(4, 3)\npayable = cost + 2\nprint(payable)",
+          "minutes": 10
+        },
+        {
+          "title": "Displaying and returning differ",
+          "strategy": "Predict, run, investigate",
+          "notes": "This deliberately faulty calculation prints 12 inside the function, then caller prints None. Normal completion without an explicit return value returns None. Learners predict both lines, run and explain. Replace inner print with return quantity * unit_price. Corrected caller prints 12 once. A later numeric calculation needs a numeric returned result.",
+          "body": [
+            "Predict both lines of output.",
+            "What value does the caller store in cost?"
+          ],
+          "code": "def badge_cost(quantity, unit_price):\n    print(quantity * unit_price)\n\ncost = badge_cost(4, 3)\nprint(cost)",
+          "minutes": 10
+        },
+        {
+          "title": "A result the caller can reuse",
+          "strategy": "Paired debugging with role changes",
+          "notes": "Repair print to return. Test (0,3)->0, (4,3)->12, (4,5)->20. The last result plus caller packaging 2 gives 22. Driver repairs while navigator traces the return, then swap. Input and printing stay outside. Support: annotate return-to-assignment. Stretch: explain how an extra print inside would add output without changing a numeric return.",
+          "body": [
+            "Repair the function so it returns the product.",
+            "Test calls with (0, 3), (4, 3) and (4, 5).",
+            "Use the last result in a caller calculation that adds 2.",
+            "Swap roles and explain the path back to the caller."
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "What does the call return?",
+          "strategy": "All-student misconception check",
+          "notes": "Correct B: normal completion with no explicit return value gives None. Displaying 12 does not return 12. Take responses before discussion. If several choose A, assign a call result and inspect it separately. return ends that call; print displays output.",
+          "body": [
+            "A function prints 12 and reaches the end.",
+            "It has no explicit return statement.",
+            "What does the call return? A: 12     B: None",
+            "Choose alone and explain the difference."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: map and use the values",
+          "strategy": "Independent exit ticket",
+          "notes": "Parameters width,height receive arguments 7,2 and product 14 returns. Adding 3 in caller gives 17. Collect a labelled mapping and result. Revisit vocabulary or return/None according to errors.",
+          "body": [
+            "For def area(width, height) and area(7, 2):",
+            "Name the parameters and arguments.",
+            "Predict the returned product.",
+            "If the caller adds 3, what is its new result?"
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w05-l03",
+      "lesson": 3,
+      "title": "Local names and program structure",
+      "chapter": "functions",
+      "prepare": "Python editor and separate caller/function trace columns.",
+      "slides": [
+        {
+          "title": "Local names and program structure",
+          "strategy": "Learning intention",
+          "notes": "Success means distinguish local and module-level names, trace simple shadowing and refactor a calculation with explicit inputs and result. Global means module-level in these examples.",
+          "body": [
+            "Unit 1 · Week 5 · Lesson 3",
+            "Keep a function’s local work separate from its caller."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: a reusable result",
+          "strategy": "Individual retrieval and paired explanation",
+          "notes": "Parameters appear in definition, arguments in call, return sends a value to caller, print displays output. Retrieve individually then compare before a brief correction. This prepares scope without introducing a new calculation.",
+          "body": [
+            "What are parameters and arguments?",
+            "Why return a result that another calculation needs?",
+            "What does a call without an explicit return value return?",
+            "Compare and correct one explanation."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Where names belong",
+          "strategy": "Teacher think-aloud and guided trace",
+          "notes": "Output 12 then 2. Global quantity starts 2. Local parameter quantity receives 4 and unit_price 3; local result 12 returns and caller cost becomes 12. This does not rebind global quantity. Ask learners to annotate caller and local columns. Same spelling does not imply the same binding.",
+          "body": [
+            "Predict both printed values.",
+            "Which quantity belongs to the current call?"
+          ],
+          "code": "quantity = 2\ndef badge_cost(quantity, unit_price):\n    result = quantity * unit_price\n    return result\ncost = badge_cost(4, 3)\nprint(cost)\nprint(quantity)",
+          "minutes": 6
+        },
+        {
+          "title": "A scope record for one call",
+          "strategy": "Worked example with reduced support",
+          "notes": "Model global quantity 2 and local quantity 4, then learners complete local result 12 and caller cost 12. A fresh call badge_cost(6,5) returns 30 while global quantity stays 2. Parameters and assigned names inside this function are local. Module-level code cannot directly use its local result name.",
+          "table": [
+            [
+              "Name and location",
+              "Value for badge_cost(4, 3)"
+            ],
+            [
+              "quantity at module level",
+              "2"
+            ],
+            [
+              "quantity inside badge_cost",
+              "4"
+            ],
+            [
+              "unit_price inside badge_cost",
+              "3"
+            ],
+            [
+              "result inside badge_cost",
+              "Complete the trace"
+            ],
+            [
+              "cost after return to caller",
+              "Complete the trace"
+            ]
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "A local assignment",
+          "strategy": "Predict, run, investigate",
+          "notes": "Output 9 then 2. x=9 creates a local binding; global x remains 2. The caller receives 9 through return. A function can read global names, but local assignment does not automatically change a global. Global declarations are outside the core task. Avoid saying globals cannot be read inside functions.",
+          "body": [
+            "Predict before running.",
+            "Explain why the two outputs differ."
+          ],
+          "code": "x = 2\ndef local_demo():\n    x = 9\n    return x\nprint(local_demo())\nprint(x)",
+          "minutes": 10
+        },
+        {
+          "title": "Refactoring the badge calculation",
+          "strategy": "Independent refactoring and peer explanation",
+          "notes": "Write badge_cost(quantity,unit_price) returning product. Keep prompts and receipt output in caller. Test (0,3)->0, (4,3)->12, (4,5)->20 before interactive input. Explicit parameters make dependencies visible rather than relying on changing global prices. Support: provide a definition skeleton. Stretch: explain why a new price argument changes that call’s result. Peer checks compare behaviour before/after.",
+          "body": [
+            "Move the badge calculation into badge_cost.",
+            "Pass quantity and price as arguments.",
+            "Keep input prompts and receipt printing in the caller.",
+            "Test the calculation first, then the whole program."
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "Does the global value change?",
+          "strategy": "All-student hinge question",
+          "notes": "Correct A: module-level x stays 2 in local_demo. B is the returned local value 9. Take responses before discussion. If several choose B, use separate trace columns. Returning 9 differs from assigning a new global x.",
+          "body": [
+            "In local_demo, a local x is set to 9.",
+            "The module-level x started at 2.",
+            "After the call, module-level x is A: 2     B: 9",
+            "Choose alone and justify using scope."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: trace scope",
+          "strategy": "Independent exit ticket",
+          "notes": "With global quantity 2 and badge_cost(3,5), result 15 returns, local quantity 3 and global quantity 2. Caller receives the local calculation through return. Collect individual traces and use errors to plan support for the delivery function.",
+          "body": [
+            "Keep module-level quantity at 2.",
+            "Call badge_cost(3, 5) and predict its result.",
+            "State the local and module-level quantity values.",
+            "How can the caller receive a locally calculated result?"
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w05-l04",
+      "lesson": 4,
+      "title": "A delivery function with tests",
+      "chapter": "functions",
+      "prepare": "Python editor and input/expected/actual log. Assume suitable non-negative numeric order totals.",
+      "slides": [
+        {
+          "title": "A delivery function with tests",
+          "strategy": "Learning intention and transfer",
+          "notes": "Success means implement a contract, return the correct charge and test below/at/above 50. Formative transfer uses the chapter’s existing delivery rule.",
+          "body": [
+            "Unit 1 · Week 5 · Lesson 4",
+            "Test a focused function before adding input and output."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: the delivery boundary",
+          "strategy": "Individual retrieval and pair comparison",
+          "notes": "Totals 49.99,50,50.01 give charges 5,0,0. >=50 includes equality. return supplies a result, print displays output. Retrieve the Week 3 rule individually then compare before designing the function.",
+          "body": [
+            "Recall free delivery for orders of $50 or more.",
+            "Predict charges for 49.99, 50 and 50.01.",
+            "Which comparison includes exactly 50?",
+            "How does return differ from print?"
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "A small function contract",
+          "strategy": "Requirement annotation",
+          "notes": "Name delivery_charge, one parameter order_total, numeric returned charge. Assume suitable non-negative finite numbers. Invalid text/negative totals are outside this introductory contract. Input and print stay outside the function. Learners underline >=50 and identify caller operations.",
+          "table": [
+            [
+              "Part",
+              "Requirement"
+            ],
+            [
+              "Name",
+              "delivery_charge"
+            ],
+            [
+              "Parameter",
+              "order_total"
+            ],
+            [
+              "Return for total >= 50",
+              "0"
+            ],
+            [
+              "Return for smaller suitable totals",
+              "5"
+            ],
+            [
+              "Input prompts and output",
+              "Stay in the caller"
+            ]
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "An early return ends the call",
+          "strategy": "Teacher modelling and guided prediction",
+          "notes": "For 50, True returns 0 and ends the call, so return 5 does not run. For 49.99, False leads to return 5. print with 50 displays 0. Learners predict 50.01->0 before running. An explicit else returning 5 is also valid. Focus on returned charge rather than formatted receipt text.",
+          "body": [
+            "Trace totals 50 and 49.99.",
+            "Why does a successful call return only one charge?"
+          ],
+          "code": "def delivery_charge(order_total):\n    if order_total >= 50:\n        return 0\n    return 5\n\nprint(delivery_charge(50))",
+          "minutes": 10
+        },
+        {
+          "title": "Expectations come from the contract",
+          "strategy": "Independent prediction with guided review",
+          "notes": "Before running, calculate 49.99->5,50->0,50.01->0. These distinguish > from >=. Add ordinary 10->5 and 100->0. Support: mark the inclusive boundary on a number line. Stretch: explain why 10 and 100 alone miss equality faults.",
+          "table": [
+            [
+              "Order total",
+              "Expected charge",
+              "Actual / result"
+            ],
+            [
+              "49.99",
+              "Predict from rule",
+              "Record after run"
+            ],
+            [
+              "50.00",
+              "Predict from rule",
+              "Record after run"
+            ],
+            [
+              "50.01",
+              "Predict from rule",
+              "Record after run"
+            ]
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "Your implementation and caller",
+          "strategy": "Independent coding with optional scaffolds",
+          "notes": "Re-create from the contract before consulting the model. Make separate calls for boundary totals and 10,100, recording expected/actual. Then add total = float(input(\"Order total: \")), charge = delivery_charge(total), and print(charge) in caller. Support: header and blank branches. Stretch: store and reuse returned charge in another calculation. No input validation is claimed.",
+          "body": [
+            "Write delivery_charge from the contract.",
+            "Test boundary totals and ordinary totals 10 and 100.",
+            "Then add input and display in the caller.",
+            "Record any correction and rerun the test set."
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "Which test detects the equality fault?",
+          "strategy": "Hinge question and debugging explanation",
+          "notes": "A faulty >50 condition returns 5 at 50 instead of 0. Correct B. 49.99 and 100 still pass. Take simultaneous responses and explain why the repair needs rerunning other tests. If several choose A, compare > and >= at exactly 50 in a trace.",
+          "body": [
+            "A faulty function uses order_total > 50.",
+            "Which input reveals the error?",
+            "A: 49.99     B: 50     C: 100",
+            "Choose alone, explain and propose the correction."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: defend the function",
+          "strategy": "Independent exit ticket and reflection",
+          "notes": "For 50 charge 0; for 25 charge 5. Returning a number supports reuse. Strong evidence includes independent predictions below/at/above 50 with observed results. Collect individual code/test explanations to check calls, parameter mapping, return and scope before Week 6 arrays.",
+          "body": [
+            "State the returned charges for totals 50 and 25.",
+            "Explain why input stays outside the function.",
+            "Name the test that checks equality at the boundary.",
+            "Show how the caller can store and display a result."
+          ],
+          "minutes": 5
+        }
+      ]
+    }
+  ]
+}
