@@ -41,3 +41,16 @@ input,textarea,.button.secondary{border-color:#63736a}
 :focus-visible{outline-color:#875f16}
 .lesson h1{font-size:clamp(32px,5vw,49px)}
 summary{min-height:24px}
+
+/* Shared action controls; print styles retain their existing behaviour. */
+@media screen{
+  .button,button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;max-width:100%;padding:12px 16px;border:1px solid var(--green);border-radius:5px;font:inherit;line-height:1.4;text-align:center;vertical-align:middle;white-space:normal;text-decoration:none}
+  .button.secondary,.print-controls button+button{margin-left:0;background:transparent;color:var(--green);border-color:var(--green)}
+  .button:hover,button:hover{background:#1b4033;color:white;border-color:#1b4033}
+  .button:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+  button:disabled{opacity:.6;cursor:not-allowed}
+  .action-group{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;margin:12px 0}
+  .action-group .button{margin:0}
+  .quiz-option,#quiz button{text-align:left;justify-content:flex-start;margin:4px 0}
+  @media(max-width:500px){.action-group .button{flex:1 1 100%}}
+}
