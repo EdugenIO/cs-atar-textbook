@@ -26,7 +26,10 @@ if (!deck) {
     main.append(article);
   });
   const downloads = document.getElementById('downloads');
-  for (const [href, label] of [[`${deck.id}.pptx`, 'Download editable PowerPoint'], [`notes/${deck.id}.html`, 'Teacher notes'], ['unit1-all-lesson-slides.zip', 'Download all Unit 1 PowerPoints']]) {
+  const resources = [[`${deck.id}.pptx`, 'Download editable PowerPoint'], [`notes/${deck.id}.html`, 'Teacher notes']];
+  if (deck.id.startsWith('u1-')) resources.push(['unit1-all-lesson-slides.zip', 'Download all Unit 1 PowerPoints']);
+  if (deck.id.startsWith('u2-w01-')) resources.push(['unit2-week1-lesson-slides.zip', 'Download Unit 2 Week 1 PowerPoints']);
+  for (const [href, label] of resources) {
     const link = element('a', label, 'download'); link.href = href; if (href.endsWith('.pptx')) link.download = ''; downloads.append(link);
   }
   function show(moveFocus = false) {

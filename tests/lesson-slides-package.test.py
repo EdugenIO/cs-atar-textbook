@@ -22,7 +22,7 @@ for lesson in data['lessons']:
             notes=ET.fromstring(deck.read(f'ppt/notesSlides/notesSlide{number}.xml'))
             assert source['notes'] in ''.join(node.text or '' for node in notes.findall('.//a:t',ns))
             assert source['strategy'] in ''.join(node.text or '' for node in notes.findall('.//a:t',ns))
-print('512 native slide titles, editable text/tables and speaker notes verified.')
+print('544 native slide titles, editable text/tables and speaker notes verified.')
 
 
 
@@ -38,3 +38,11 @@ with zipfile.ZipFile(root / "dist/slides/unit1-all-lesson-slides.zip") as bundle
         assert bundle.read(name) == (root / "dist/slides" / name).read_bytes()
 print("Complete Unit 1 download matches all 64 published PowerPoints.")
 
+
+with zipfile.ZipFile(root / "dist/slides/unit2-week1-lesson-slides.zip") as bundle:
+    assert bundle.testzip() is None
+    names = [n for n in bundle.namelist() if n.endswith(".pptx")]
+    assert sorted(names) == [f"u2-w01-l0{n}.pptx" for n in range(1,5)]
+    for name in names:
+        assert bundle.read(name) == (root / "dist/slides" / name).read_bytes()
+print("Unit 2 Week 1 download matches all four published PowerPoints.")

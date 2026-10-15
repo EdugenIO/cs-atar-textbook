@@ -1,0 +1,515 @@
+{
+  "unit": 2,
+  "week": 1,
+  "chapter": "database-foundations",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#database-foundations",
+  "references": [
+    "https://www.postgresql.org/docs/current/tutorial-concepts.html",
+    "https://www.sqlite.org/about.html"
+  ],
+  "lessons": [
+    {
+      "id": "u2-w01-l01",
+      "lesson": 1,
+      "title": "Data and information",
+      "chapter": "database-foundations",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#database-foundations",
+      "prepare": "Open the database foundations chapter, equipment-loans-flat.csv, database-foundations-workbook.md and database-foundations-answers.md. Use paper or a school-approved spreadsheet. No SQL installation or student account is needed. Use the fixed reporting date of 8 April 2026. Teacher notes and explained answers are public.",
+      "slides": [
+        {
+          "title": "Data and information",
+          "body": [
+            "Unit 2 · Week 1 · Lesson 1",
+            "Use loan records to explain which items are overdue."
+          ],
+          "notes": "Introduce the equipment desk scenario. Use loan records to explain which items are overdue. Activities are ungraded. Use only the supplied fictional loan records. Suggested timings are flexible. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "The equipment desk question",
+          "body": [
+            "Which items are still on loan?",
+            "What extra facts would show which loans are overdue?"
+          ],
+          "notes": "Allow quiet thinking before discussion. Required facts include LoanID, DueDate, Returned and the reporting date. The item identifier is also needed to name the equipment. A due date alone cannot establish overdue status. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 5,
+          "strategy": "Individual recall, then partner explanation"
+        },
+        {
+          "title": "A record needs context",
+          "table": [
+            [
+              "Stored value",
+              "Meaning in this activity"
+            ],
+            [
+              "L001",
+              "A particular loan"
+            ],
+            [
+              "2026-04-06",
+              "Its due date"
+            ],
+            [
+              "Returned = False",
+              "The item has not been returned"
+            ],
+            [
+              "8 April 2026",
+              "Our fixed reporting date"
+            ]
+          ],
+          "notes": "These individual values are data. The conclusion that L001 is overdue is information derived from them using a stated rule. False is a text representation in the CSV and must be interpreted or converted appropriately when importing. The reporting date is fixed for this exercise, regardless of the actual date. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 6,
+          "strategy": "Worked table and discussion"
+        },
+        {
+          "title": "Data, information and the overdue rule",
+          "body": [
+            "Data are stored values. Information answers a question using them.",
+            "A loan is active when its item has not been returned.",
+            "It is overdue when it is active AND due before 8 April.",
+            "Under this rule, an item due on 8 April is not overdue."
+          ],
+          "notes": "Model L001: Returned=False, due 6 April, so active and overdue. Then model L002: Returned=False, due 8 April, so active but not overdue. Emphasise strictly before. Dates alone do not supply the full answer. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 10,
+          "strategy": "Teacher model with student predictions"
+        },
+        {
+          "title": "Four loans to compare",
+          "table": [
+            [
+              "Loan",
+              "Due date",
+              "Returned",
+              "Overdue?"
+            ],
+            [
+              "L001",
+              "6 April",
+              "False",
+              "Explain"
+            ],
+            [
+              "L002",
+              "8 April",
+              "False",
+              "Explain"
+            ],
+            [
+              "L003",
+              "7 April",
+              "True",
+              "Explain"
+            ],
+            [
+              "L006",
+              "7 April",
+              "False",
+              "Explain"
+            ]
+          ],
+          "notes": "Partners apply both checks before revealing results. L001 and L006 are overdue. L002 is due today. L003 has been returned. Swap the explaining role after two rows. This table is a four-row extract, not the complete six-loan dataset. All dates are in 2026. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 10,
+          "strategy": "Paired practice with exchanged roles"
+        },
+        {
+          "title": "The full six-loan report",
+          "body": [
+            "Open the supplied CSV. Check all six loan records.",
+            "List the active LoanIDs, then the overdue LoanIDs.",
+            "Write one sentence explaining each count."
+          ],
+          "notes": "Use workbook questions 1–4. Four active loans: L001, L002, L004 and L006. Two overdue loans: L001 and L006. Students should record the date and rule beside the counts. Do not remove L005 merely because E02 also occurs in L002. Offer the model as support, then ask for an independent explanation. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "A date is only one part",
+          "body": [
+            "L003 was due on 7 April and has been returned.",
+            "A: It is overdue because its due date has passed.",
+            "B: It is not overdue because it has been returned."
+          ],
+          "notes": "B follows the stated rule. Ask learners to name both conditions: an unreturned item and a due date before the reporting date. Collect reasons without recording scores. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 5,
+          "strategy": "Choice and explanation"
+        },
+        {
+          "title": "Data, rule and conclusion",
+          "body": [
+            "Name one stored value and one conclusion from today.",
+            "Explain how a wrong return status could change the report."
+          ],
+          "notes": "Example data: L001 has Returned=False and DueDate=2026-04-06. Example information: two loans are overdue on 8 April under the stated rule. If L003 were incorrectly recorded as unreturned, the report would wrongly include it. Correct calculations still depend on accurate records. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    },
+    {
+      "id": "u2-w01-l02",
+      "lesson": 2,
+      "title": "Repeated facts in a flat file",
+      "chapter": "database-foundations",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#database-foundations",
+      "prepare": "Open the database foundations chapter, equipment-loans-flat.csv, database-foundations-workbook.md and database-foundations-answers.md. Use paper or a school-approved spreadsheet. No SQL installation or student account is needed. Use the fixed reporting date of 8 April 2026. Teacher notes and explained answers are public.",
+      "slides": [
+        {
+          "title": "Repeated facts in a flat file",
+          "body": [
+            "Unit 2 · Week 1 · Lesson 2",
+            "Explain how repeated facts can create maintenance problems."
+          ],
+          "notes": "Introduce the equipment desk scenario. Explain how repeated facts can create maintenance problems. Activities are ungraded. Use only the supplied fictional loan records. Suggested timings are flexible. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "Rows and borrowing events",
+          "body": [
+            "Our flat register stores every loan in one table.",
+            "The same item appears in two loan records.",
+            "Does that prove one row is a mistake? Explain."
+          ],
+          "notes": "No. Each row represents a borrowing event. E02 occurs in L002 and L005, which have distinct LoanIDs and different return statuses. Ask what one row represents before judging repeated identifiers. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 5,
+          "strategy": "Individual recall, then partner explanation"
+        },
+        {
+          "title": "Two loans, one borrower",
+          "table": [
+            [
+              "LoanID",
+              "BorrowerID",
+              "Borrower label",
+              "Item"
+            ],
+            [
+              "L002",
+              "B002",
+              "Learner B",
+              "E02"
+            ],
+            [
+              "L005",
+              "B002",
+              "Learner B",
+              "E02"
+            ]
+          ],
+          "notes": "This extract repeats borrower and item details. In the full CSV, L002 is an active loan due on 8 April and L005 is a returned loan due on 4 April. The rows are legitimate history. Repeated labels create a maintenance risk when the label changes, even though repeated IDs may be necessary. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 6,
+          "strategy": "Worked table and discussion"
+        },
+        {
+          "title": "An incomplete update",
+          "body": [
+            "Change B002’s label to Learner Bee in L002 only.",
+            "L005 still says Learner B for the same borrower.",
+            "Now the register gives two labels for B002."
+          ],
+          "notes": "Demonstrate on a disposable copy or annotate the two rows on paper. The unchanged BorrowerID identifies the same borrower. Updating only one repeated label leaves an inconsistency. In a suitable relational design, one Borrower record stores the label and loans reference that borrower. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 10,
+          "strategy": "Teacher model with student predictions"
+        },
+        {
+          "title": "The final-loan deletion",
+          "body": [
+            "E05 is the microphone in loan L006.",
+            "Imagine deleting L006 from the flat register.",
+            "Which equipment fact would this register lose?"
+          ],
+          "notes": "Partners inspect the complete CSV. L006 is the only row describing E05 as a Microphone. Removing it loses this register’s only description of that item. Ask students to distinguish losing the loan event from losing an equipment fact. This is a paper simulation, not an instruction to delete the source dataset. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 10,
+          "strategy": "Paired practice with exchanged roles"
+        },
+        {
+          "title": "A separate home for each fact",
+          "table": [
+            [
+              "Table",
+              "Fact it keeps",
+              "Starter records"
+            ],
+            [
+              "Borrower",
+              "Who borrows",
+              "4"
+            ],
+            [
+              "Equipment",
+              "Which item",
+              "5"
+            ],
+            [
+              "Loan",
+              "Each borrowing event",
+              "6"
+            ]
+          ],
+          "notes": "Use workbook questions 5–7. Learners allocate BorrowerID and label to Borrower, EquipmentID and description to Equipment, and LoanID, borrower/item references, DueDate and Returned to Loan. The three sets have 4 borrowers, 5 items and 6 events. This is a responsibility sketch, not a formal ER diagram or the final project schema. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "A repeated identifier",
+          "body": [
+            "Someone deletes L005 because E02 already appears in L002.",
+            "What history disappears? What should identify each loan?"
+          ],
+          "notes": "The returned earlier E02 borrowing event disappears. LoanID distinguishes each event. BorrowerID and EquipmentID can legitimately recur in Loan. Separate tables reduce repeated descriptive facts when designed well, but poor links or constraints can still cause errors. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 5,
+          "strategy": "Choice and explanation"
+        },
+        {
+          "title": "A change to explain",
+          "body": [
+            "A borrower changes their display label.",
+            "Explain what you would update in each design."
+          ],
+          "notes": "Flat register: update every occurrence for that borrower consistently. Related design: update the borrower’s one descriptive record and keep the loans referencing its identifier. Ask why changing labels should not erase borrowing history. A CSV may remain adequate for a small temporary list with one editor and manageable checks. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    },
+    {
+      "id": "u2-w01-l03",
+      "lesson": 3,
+      "title": "Database software and related tables",
+      "chapter": "database-foundations",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#database-foundations",
+      "prepare": "Open the database foundations chapter, equipment-loans-flat.csv, database-foundations-workbook.md and database-foundations-answers.md. Use paper or a school-approved spreadsheet. No SQL installation or student account is needed. Use the fixed reporting date of 8 April 2026. Teacher notes and explained answers are public.",
+      "slides": [
+        {
+          "title": "Database software and related tables",
+          "body": [
+            "Unit 2 · Week 1 · Lesson 3",
+            "Distinguish stored records from the software that manages them."
+          ],
+          "notes": "Introduce the equipment desk scenario. Distinguish stored records from the software that manages them. Activities are ungraded. Use only the supplied fictional loan records. Suggested timings are flexible. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "A home for a fact",
+          "body": [
+            "Which table should hold an equipment description?",
+            "Which table should hold the due date of one loan?"
+          ],
+          "notes": "Equipment stores the item description. Loan stores an event’s due date. Ask learners to explain why an item can have different due dates in different borrowing events. Recall the separate responsibilities from Lesson 2. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 5,
+          "strategy": "Individual recall, then partner explanation"
+        },
+        {
+          "title": "Three terms, different roles",
+          "table": [
+            [
+              "Term",
+              "Meaning"
+            ],
+            [
+              "Database",
+              "An organised collection of stored data"
+            ],
+            [
+              "DBMS",
+              "Database management system software"
+            ],
+            [
+              "RDBMS",
+              "Relational DBMS: manages data in tables"
+            ]
+          ],
+          "notes": "DBMS means database management system. RDBMS means relational database management system. The equipment desk’s records are the database. A DBMS is the software that defines, retrieves and changes managed data. An RDBMS is a type of DBMS that uses relations, commonly introduced as tables. PostgreSQL is an example. Source: https://www.postgresql.org/docs/current/tutorial-concepts.html . Every RDBMS is a DBMS, but DBMS is the broader term. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 6,
+          "strategy": "Worked table and discussion"
+        },
+        {
+          "title": "A request to the software",
+          "body": [
+            "A staff member asks to record a returned item.",
+            "The application passes the request to the DBMS.",
+            "The DBMS applies configured rules and changes the data."
+          ],
+          "notes": "Describe the flow in words and ask students to label user/application, DBMS and stored database in a simple paper sketch. A system may check access and data constraints before an update. Facilities depend on the product and configuration. Do not imply that every DBMS automatically enforces the desk’s intended permissions. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 10,
+          "strategy": "Teacher model with student predictions"
+        },
+        {
+          "title": "The three-table sketch",
+          "body": [
+            "Place these facts: borrower label, item description, due date.",
+            "Include identifiers so a loan can refer to its borrower and item.",
+            "Explain why Loan still needs its own identifier."
+          ],
+          "notes": "Use workbook questions 7–9. Borrower holds the label, Equipment the description, Loan the due date and references. LoanID identifies an event because a borrower can borrow the same item again. Sketch labels and links only. Formal keys and relationship notation follow in later chapters. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 10,
+          "strategy": "Paired practice with exchanged roles"
+        },
+        {
+          "title": "One file, several related tables",
+          "body": [
+            "SQLite can keep several tables in one database file.",
+            "Explain why this can still be a relational database.",
+            "Then label database, DBMS and RDBMS in your sketch."
+          ],
+          "notes": "SQLite is an embedded SQL database engine and a single file can contain multiple tables. Source: https://www.sqlite.org/about.html . Flat-file organisation concerns the logical structure of records, not simply the number of physical files. Students should distinguish the SQLite software from the file of stored records. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "A file-count misconception",
+          "body": [
+            "A database file contains Borrower, Equipment and Loan tables.",
+            "A: One file means the design must be a flat register.",
+            "B: The logical organisation determines the design."
+          ],
+          "notes": "B. The existence of related tables is compatible with one physical database file. A CSV loan register and a SQLite database file need not have the same logical organisation. Ask learners to explain the distinction rather than choosing by file extension alone. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 5,
+          "strategy": "Choice and explanation"
+        },
+        {
+          "title": "A sentence for each term",
+          "body": [
+            "Explain database and DBMS using the equipment desk.",
+            "Then explain how RDBMS fits within the broader term DBMS."
+          ],
+          "notes": "Example: the organised equipment and loan records form the database. The DBMS software manages requests to those records. An RDBMS is a DBMS using the relational model. Accept equivalent explanations that keep data and software distinct. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    },
+    {
+      "id": "u2-w01-l04",
+      "lesson": 4,
+      "title": "Data independence and access",
+      "chapter": "database-foundations",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#database-foundations",
+      "prepare": "Open the database foundations chapter, equipment-loans-flat.csv, database-foundations-workbook.md and database-foundations-answers.md. Use paper or a school-approved spreadsheet. No SQL installation or student account is needed. Use the fixed reporting date of 8 April 2026. Teacher notes and explained answers are public.",
+      "slides": [
+        {
+          "title": "Data independence and access",
+          "body": [
+            "Unit 2 · Week 1 · Lesson 4",
+            "Explain which changes affect a report and who may change records."
+          ],
+          "notes": "Introduce the equipment desk scenario. Explain which changes affect a report and who may change records. Activities are ungraded. Use only the supplied fictional loan records. Suggested timings are flexible. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "A report that stays the same",
+          "body": [
+            "The DBMS adds an index to find loans faster.",
+            "Must a report now ask for different fields? Explain.",
+            "Physical data independence separates storage from requests."
+          ],
+          "notes": "In this example, no. The report can still request LoanID and DueDate while the DBMS changes how it finds stored records. Introduce physical data independence as separation between storage details and application requests. Do not claim all changes preserve compatibility. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 5,
+          "strategy": "Individual recall, then partner explanation"
+        },
+        {
+          "title": "Changes and report compatibility",
+          "table": [
+            [
+              "Change",
+              "Effect on the report"
+            ],
+            [
+              "Add a storage index",
+              "The same field request can still work"
+            ],
+            [
+              "Rename DueDate to DueOn",
+              "A request using DueDate may need editing"
+            ],
+            [
+              "Move to another DBMS",
+              "Conversion or query changes may be needed"
+            ]
+          ],
+          "notes": "An index illustrates physical data independence. Renaming a column changes the schema that the request uses. Moving systems may need conversion even when both are relational. A copied file does not guarantee compatibility with every DBMS. Use workbook question 10 to explain the limit. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 6,
+          "strategy": "Worked table and discussion"
+        },
+        {
+          "title": "Access follows a requirement",
+          "body": [
+            "Learners may view permitted equipment availability.",
+            "Authorised desk staff may record returns.",
+            "The system needs controls that enforce those permissions."
+          ],
+          "notes": "Discuss the minimum access needed for each role. A read-only availability report should not permit arbitrary edits or expose private borrower details. Product capabilities and configuration matter. SQLite relies on application and operating-system controls rather than server-style user accounts. Use the chapter’s stated scope. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 10,
+          "strategy": "Teacher model with student predictions"
+        },
+        {
+          "title": "A check for each permission",
+          "table": [
+            [
+              "Role",
+              "Attempt",
+              "Required result"
+            ],
+            [
+              "Learner",
+              "View permitted availability",
+              "Allowed"
+            ],
+            [
+              "Learner",
+              "Alter a loan’s return status",
+              "Refused"
+            ],
+            [
+              "Authorised staff",
+              "Record an authorised return",
+              "Allowed"
+            ]
+          ],
+          "notes": "These are proposed paper checks for the stated requirements, not a live system test. Partners explain what evidence would establish each result in an implemented system. Merely hiding an edit button is insufficient if another route still permits the edit. Never change live school records for this activity. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 10,
+          "strategy": "Paired practice with exchanged roles"
+        },
+        {
+          "title": "Workbook practice and corrections",
+          "body": [
+            "Complete questions 10–13, then revisit one earlier weak answer.",
+            "Compare with the public explained answers after your attempt.",
+            "Write the corrected rule and try a changed example."
+          ],
+          "notes": "Use database-foundations-workbook.md and database-foundations-answers.md linked from the chapter. Q10: storage changes can preserve requests, schema changes may require edits. Q11: appropriately configured learner read access and staff update access. Q12: a small temporary list may suit CSV; reusable related facts and growing history favour relational management. Q13: counts depend on accurate return status and the fixed date/rule. No scores or assessment records are required. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "A changed overdue rule",
+          "body": [
+            "New rule: unreturned items due TODAY also count as overdue.",
+            "Using 8 April 2026, which extra loan qualifies?",
+            "Explain whether the stored data or the rule changed."
+          ],
+          "notes": "L002 now also qualifies. The original records stay the same and the rule changes from DueDate < reporting date to DueDate <= reporting date, with Returned=False still required. There are now three overdue loans: L001, L002 and L006. Four loans remain active. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 5,
+          "strategy": "Choice and explanation"
+        },
+        {
+          "title": "A final explanation",
+          "body": [
+            "Give one storage change that can leave a report unchanged.",
+            "Explain why owning a DBMS does not prove access is restricted."
+          ],
+          "notes": "An added index can change storage access without changing the report’s field request. Access restrictions need suitable controls and correct configuration, with checks against the requirements. Invite a fresh example: if Returned is renamed to ReturnStatus, a request naming Returned may need updating. Students record one idea to revisit. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-foundations.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    }
+  ]
+}

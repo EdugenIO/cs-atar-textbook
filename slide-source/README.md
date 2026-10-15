@@ -17,3 +17,5 @@ Original text and table content CC BY 4.0; example code MIT. See the repository 
 Unit 1 completion update, 15 October 2026: 26 decks added for Week 9 Lessons 3–4 and Weeks 11–16. These use ungraded practice, public explained teacher notes and the established editable eight-slide format. Network drawings still need teacher checking against the linked SCSA symbol reference.
 
 Download the complete Unit 1 library: [64 editable PowerPoints](https://edugenio.github.io/cs-atar-textbook/slides/unit1-all-lesson-slides.zip).
+
+Unit 2 Week 1: [four editable PowerPoints](https://edugenio.github.io/cs-atar-textbook/slides/unit2-week1-lesson-slides.zip), covering data and information, flat-file maintenance, database software, data independence and access.
