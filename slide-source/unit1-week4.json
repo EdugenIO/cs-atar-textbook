@@ -1,0 +1,513 @@
+{
+  "unit": 1,
+  "week": 4,
+  "chapter": "loops",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#loops",
+  "references": [
+    "https://docs.python.org/3/tutorial/controlflow.html",
+    "https://docs.python.org/3/library/stdtypes.html#ranges",
+    "https://docs.python.org/3/reference/compound_stmts.html#while"
+  ],
+  "lessons": [
+    {
+      "id": "u1-w04-l01",
+      "lesson": 1,
+      "title": "Fixed repetition with for and range",
+      "chapter": "loops",
+      "prepare": "Python editor, paper trace grids and the loops chapter. Use whole-number donations for the example.",
+      "slides": [
+        {
+          "title": "Fixed repetition with for and range",
+          "strategy": "Learning intention",
+          "notes": "Success means identify what repeats, list range values and trace a fixed loop. Connect Week 3 selection, which chooses a path, with iteration, which repeats a body. Introduce the three-donation task from the chapter.",
+          "body": [
+            "Unit 1 · Week 4 · Lesson 1",
+            "Repeat a task a known number of times."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: sequence and selection",
+          "strategy": "Individual retrieval and pair comparison",
+          "notes": "One minute individually, then compare explanations. Expected sequence executes instructions in order, selection chooses a branch, >= includes equality and total = total + 5 uses the old total to calculate a new total. Revisit assignment if learners interpret it as mathematical equality.",
+          "body": [
+            "What does an if/else decision choose?",
+            "Why does >= include a boundary value?",
+            "Explain total = total + 5 in words.",
+            "Compare your explanation with a partner."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "What repeats in the donation task?",
+          "strategy": "Teacher modelling and requirement annotation",
+          "notes": "Model reading and adding one donation, then ask what should repeat for three donations. Initialise total once before repetition and display once afterwards. The loop body reads and adds. Assume suitable non-negative whole-number amounts. Use three counters or slips to act out passes before code.",
+          "body": [
+            "The club records three whole-number donations.",
+            "Read one amount and add it to a running total.",
+            "Repeat those steps for each donation.",
+            "Display the final total after all three."
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "range leaves out the stop value",
+          "strategy": "Worked examples and guided prediction",
+          "notes": "Model range(3) as 0,1,2 and range(1,4) as 1,2,3. Both produce three values. Ask everyone to predict range(2,6): 2,3,4,5, then check. In these positive-step examples stop is excluded. range(0) produces no values. Python for iterates over these values and assigns each to the loop variable.",
+          "table": [
+            [
+              "Expression",
+              "Values",
+              "Passes"
+            ],
+            [
+              "range(3)",
+              "0, 1, 2",
+              "3"
+            ],
+            [
+              "range(1, 4)",
+              "1, 2, 3",
+              "3"
+            ],
+            [
+              "range(2, 6)",
+              "Predict first",
+              "Count the values"
+            ],
+            [
+              "range(0)",
+              "No values",
+              "0"
+            ]
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "A running total across three passes",
+          "strategy": "Teacher think-aloud and code annotation",
+          "notes": "Think aloud through 5,7,3: total starts 0, then becomes 5,12,15. donation_number labels passes 1,2,3. Highlight the two indented lines as the body. final print is outside the loop and displays Total: $15 once. Ask learners to point to initialisation and the repeated update. The range ends repetition after the third value.",
+          "body": [
+            "Trace donations 5, 7 and 3.",
+            "Which lines repeat and which run once?"
+          ],
+          "code": "total = 0\nfor donation_number in range(1, 4):\n    donation = int(input(\"Donation: \"))\n    total = total + donation\nprint(f\"Total: ${total}\")",
+          "minutes": 10
+        },
+        {
+          "title": "Prediction before paired runs",
+          "strategy": "Paired programming with role changes",
+          "notes": "Driver runs the example while navigator checks the prior prediction and explains a pass, then swap roles for a second set. First set 5,7,3 gives 15; second 0,4,6 gives 10. Every learner records totals after each pass. Support: provide total-before and total-after columns. Stretch: change to four donations, predict a new input set and explain the changed range stop.",
+          "body": [
+            "Write the total after each input: 5, 7, 3.",
+            "Run the program and compare with your trace.",
+            "Swap roles and predict for 0, 4, 6.",
+            "Explain how the loop knows when to finish."
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "Which range gives four numbered passes?",
+          "strategy": "All-student hinge question",
+          "notes": "Correct B: range(1,5) produces 1,2,3,4. A produces three values and C produces five values 0 through 4. Collect simultaneous responses before discussion. If several choose A, list values explicitly and recheck range(1,3). Distinguish number of passes from the final stop argument.",
+          "body": [
+            "The passes must be numbered 1, 2, 3, 4.",
+            "A: range(1, 4)     B: range(1, 5)     C: range(5)",
+            "Choose alone, then list the values.",
+            "Explain why the two other choices do not fit."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: explain a fixed loop",
+          "strategy": "Independent exit ticket",
+          "notes": "Expected range(2,5) gives 2,3,4 and three passes. With donations 2,4,6, running totals are 2,6,12. Initialisation stays before the loop and final output after it. Collect individual traces to identify range-stop or accumulation support for Lesson 2.",
+          "body": [
+            "List the values in range(2, 5).",
+            "Trace totals for donations 2, 4 and 6.",
+            "Where should total start at zero?",
+            "Explain why the final print sits outside the loop."
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w04-l02",
+      "lesson": 2,
+      "title": "Condition-controlled while loops",
+      "chapter": "loops",
+      "prepare": "Python editor, paper trace grids and a known school-editor Stop command. Discuss non-termination on paper before running.",
+      "slides": [
+        {
+          "title": "Condition-controlled while loops",
+          "strategy": "Learning intention",
+          "notes": "Success means trace a pre-test while loop, identify initialisation and update, and explain how the condition becomes False. Begin with a small bounded counter so learners can compare with for.",
+          "body": [
+            "Unit 1 · Week 4 · Lesson 2",
+            "Repeat while a condition remains True."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: the range boundary",
+          "strategy": "Individual retrieval and paired explanation",
+          "notes": "Expected range(1,4) produces 1,2,3 and excludes 4. A final print outside the loop runs once. Initialising a total inside the loop discards earlier accumulated values. Ask learners to retrieve before notes, then correct their explanation.",
+          "body": [
+            "List the values in range(1, 4).",
+            "Why does the value 4 stay out?",
+            "Which instruction normally prints the final total once?",
+            "Compare your answers with a partner."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "A condition checked before every pass",
+          "strategy": "Teacher modelling and guided prediction",
+          "notes": "Trace count=1, condition True, print 1, update to 2. Continue through 3 then update to 4. At 4 the condition is False, so the body stops and Finished prints. Output 1,2,3,Finished on separate lines. Check the condition before entry and after each update. Ask a learner to narrate the last failed check.",
+          "body": [
+            "Predict the output before running.",
+            "What value makes the condition False?"
+          ],
+          "code": "count = 1\nwhile count <= 3:\n    print(count)\n    count = count + 1\nprint(\"Finished\")",
+          "minutes": 6
+        },
+        {
+          "title": "The final check belongs in the trace",
+          "strategy": "Worked trace with faded support",
+          "notes": "Model the first two rows, then learners complete rows for count 3 and 4. At 3, True prints 3 and updates to 4. At 4, False prints nothing inside the body and performs no update. Support: keep condition column headings. Stretch: explain why there are four condition checks but only three body executions.",
+          "table": [
+            [
+              "Count at check",
+              "count <= 3",
+              "Body and update"
+            ],
+            [
+              "1",
+              "True",
+              "Print 1, count becomes 2"
+            ],
+            [
+              "2",
+              "True",
+              "Print 2, count becomes 3"
+            ],
+            [
+              "3",
+              "Predict first",
+              "Complete the trace"
+            ],
+            [
+              "4",
+              "Predict first",
+              "Does the body run?"
+            ]
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "A while loop may run zero times",
+          "strategy": "Guided variation and peer explanation",
+          "notes": "Change the start value to 4. The first condition is False, so only Finished prints. For starts 3 and 1, outputs are 3 then Finished, and 1,2,3 then Finished. Ask learners to write predictions before editing. A pre-test loop can have zero body executions; reaching the while line does not guarantee a pass.",
+          "body": [
+            "Keep while count <= 3.",
+            "Predict when count starts at 4, then at 3.",
+            "Run each version and compare.",
+            "Explain why reaching a loop can produce no passes."
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "Zero, one and several passes",
+          "strategy": "Paired investigation and role changes",
+          "notes": "Pairs run the same bounded loop with starts 4,3,1 after individual predictions. Driver enters the starting value in source, navigator checks the condition trace, then swap roles. Every learner records number of passes: 0,1,3. Support: circle the start and update. Stretch: choose a new upper limit and design zero/one/several-pass tests without adding input validation.",
+          "table": [
+            [
+              "Starting count",
+              "Expected passes",
+              "Actual passes"
+            ],
+            [
+              "4",
+              "Predict first",
+              "Record after run"
+            ],
+            [
+              "3",
+              "Predict first",
+              "Record after run"
+            ],
+            [
+              "1",
+              "Predict first",
+              "Record after run"
+            ]
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "What would stop this repetition?",
+          "strategy": "Paper debugging and all-student check",
+          "notes": "Discuss without executing an unbounded loop. If count starts at 1 and while count <= 3 has no update, printing count never changes the condition. It remains True. Expected repair: count = count + 1 inside the body. Model the school editor Stop control before learners experiment, then run only the corrected bounded version. Recheck termination by tracing count=4.",
+          "body": [
+            "On paper: count starts at 1.",
+            "The body prints count but never changes it.",
+            "Will while count <= 3 ever become False?",
+            "Write an update that makes this example finish."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: the stopping check",
+          "strategy": "Independent exit ticket",
+          "notes": "For count=1, while count < 3 prints and increments, output is 1 and 2. Last update makes count 3, then condition False. Start at 3 gives zero passes. Ask for the final failed condition check rather than only the printed sequence. Use errors to revisit < versus <= next lesson.",
+          "body": [
+            "Start count at 1 and use while count < 3.",
+            "Print count, then add 1 on each pass.",
+            "State the output and the value at the stopping check.",
+            "What happens if count starts at 3?"
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w04-l03",
+      "lesson": 3,
+      "title": "Counters, totals and loop faults",
+      "chapter": "loops",
+      "prepare": "Python editor, paper trace grids and a clean three-donation program.",
+      "slides": [
+        {
+          "title": "Counters, totals and loop faults",
+          "strategy": "Learning intention",
+          "notes": "Success means distinguish counter from accumulator, trace both and explain a repair. Use the same donation example to reduce new context while learners reason about changing state.",
+          "body": [
+            "Unit 1 · Week 4 · Lesson 3",
+            "Track what changes and explain why a loop gives its result."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: the loop structure",
+          "strategy": "Individual retrieval and pair comparison",
+          "notes": "Expected initialise before repetition, update changing state inside the body and trace the failed condition for while. A fixed known number of passes often suits for/range. Ask learners to explain how an update changes termination, then compare with notes.",
+          "body": [
+            "Name something initialised before a loop.",
+            "What update can make a while condition become False?",
+            "When does a known pass count suit for/range?",
+            "Compare one explanation with a partner."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Counting passes and accumulating values",
+          "strategy": "Worked example and code annotation",
+          "notes": "Model inputs 5,7,3. count changes 0,1,2,3 while total changes 0,5,12,15. count increases by 1 per donation and total increases by the entered amount. final print displays 3 15. The name pass_number receives the values 0, 1 and 2; the separate count records completed inputs. Ask learners to mark both updates.",
+          "body": [
+            "Which variable counts passes?",
+            "Which variable combines the input amounts?"
+          ],
+          "code": "count = 0\ntotal = 0\nfor pass_number in range(3):\n    donation = int(input(\"Donation: \"))\n    count = count + 1\n    total = total + donation\nprint(count, total)",
+          "minutes": 6
+        },
+        {
+          "title": "A trace of two changing values",
+          "strategy": "Guided practice with reduced support",
+          "notes": "Learners complete independently: after 5 count1 total5; after 7 count2 total12; after 3 count3 total15. Ask them to compare the update rules in pairs. Support: model only the first row and provide columns. Stretch: trace a zero donation and explain why count changes even when total does not.",
+          "table": [
+            [
+              "Donation",
+              "Count after pass",
+              "Total after pass"
+            ],
+            [
+              "5",
+              "Complete the trace",
+              "Complete the trace"
+            ],
+            [
+              "7",
+              "Complete the trace",
+              "Complete the trace"
+            ],
+            [
+              "3",
+              "Complete the trace",
+              "Complete the trace"
+            ]
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "A total that forgets earlier values",
+          "strategy": "Predict, run, investigate",
+          "notes": "This deliberate fault resets total to zero during every pass. With 5,7,3, final total is 3. Learners predict from the intended requirement as 15, then trace the code’s actual 3, preserving the distinction. Repair by moving total = 0 before the loop. Do not change the expected result to match the faulty program.",
+          "body": [
+            "Predict the final value for 5, 7 and 3.",
+            "Explain where earlier donations disappear."
+          ],
+          "code": "for pass_number in range(3):\n    total = 0\n    donation = int(input(\"Donation: \"))\n    total = total + donation\nprint(total)",
+          "minutes": 10
+        },
+        {
+          "title": "A repair supported by tests",
+          "strategy": "Independent debugging and peer feedback",
+          "notes": "Learners repair reset placement and run input sets 5,7,3 ->15; 0,4,6 ->10; 0,0,0 ->0. Keep before/after traces. Ask why only testing zeros would hide the fault: both correct and faulty versions give 0. Support: show the indentation boundary. Stretch: add a counter and verify 3 even for all-zero inputs. Peer checks should challenge evidence without taking over code.",
+          "body": [
+            "Move the initialisation to the correct place.",
+            "Predict and test 5,7,3 and 0,4,6.",
+            "Also test three zeros.",
+            "Explain why one passing input set is weak evidence."
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "Which change affects which value?",
+          "strategy": "All-student misconception check",
+          "notes": "If donation=0, count still increases by 1 and total stays the same. Correct B. Collect simultaneous responses, then ask learners to point to the two update expressions. If several choose A, trace an initial count0,total0 with one zero donation. Counters track events and accumulators combine values, so they need not be equal.",
+          "body": [
+            "A donation is 0. What happens after that pass?",
+            "A: neither count nor total changes",
+            "B: count increases and total stays the same",
+            "Choose alone and justify from the update rules."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: a trace and a repair",
+          "strategy": "Independent exit ticket",
+          "notes": "For donations 2,0,4, final count3,total6. total starts at 0 before the loop, then becomes 2,2,6. Ask learners to explain why zero input still counts as a donation. A reset inside the loop would produce final total4. Use responses to decide whether to provide the score-task skeleton next lesson.",
+          "body": [
+            "Trace donations 2, 0 and 4.",
+            "State final count and total.",
+            "Explain why the zero donation still counts as a pass.",
+            "Where must total start at zero, and why?"
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w04-l04",
+      "lesson": 4,
+      "title": "A score total and mean",
+      "chapter": "loops",
+      "prepare": "Python editor and a blank expected/actual log. Assume four suitable whole-number scores.",
+      "slides": [
+        {
+          "title": "A score total and mean",
+          "strategy": "Learning intention and transfer",
+          "notes": "Success means plan and implement four inputs, accumulate their sum, calculate mean after repetition and justify tests. This is formative transfer practice from the chapter, not an extra summative assessment.",
+          "body": [
+            "Unit 1 · Week 4 · Lesson 4",
+            "Build and test a program that reads four scores."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: what repeats and what runs once?",
+          "strategy": "Individual retrieval and pair explanation",
+          "notes": "Expected input and total update repeat, total initialisation and final mean/output run once. For four passes range(4) gives 0,1,2,3. Allow individual answers before pairs discuss. Revisit accumulator placement if students put total=0 in the repeated body.",
+          "body": [
+            "Which donation instructions repeated each pass?",
+            "Which instructions ran once?",
+            "List the values produced by range(4).",
+            "Explain the accumulator’s starting value."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "The score task requirements",
+          "strategy": "Requirement annotation and guided planning",
+          "notes": "Exactly four whole-number scores, suitable input assumed. The program must display sum and arithmetic mean. Learners underline four, total and mean. Use for/range because pass count is known. Choose a non-negative integer score assumption for all class tests and keep invalid text outside the core task.",
+          "body": [
+            "Read exactly four whole-number scores.",
+            "Display their total and arithmetic mean.",
+            "Assume suitable non-negative scores.",
+            "Choose a loop and explain why it fits."
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "Expected results before implementation",
+          "strategy": "Independent prediction and pair comparison",
+          "notes": "Calculate independently before showing answers: 8+10+6+12=36, mean36/4=9.0. For 0,0,0,0 expect total0 mean0.0. For 5,5,5,5 expect20 and5.0. Ask learners for working, not Python output. Support: add the first two scores together before the next two. Stretch: choose inputs with a non-integer mean, such as 1,2,3,5 ->11 and2.75.",
+          "table": [
+            [
+              "Four scores",
+              "Expected total",
+              "Expected mean"
+            ],
+            [
+              "8, 10, 6, 12",
+              "Calculate by hand",
+              "Total divided by 4"
+            ],
+            [
+              "0, 0, 0, 0",
+              "Calculate by hand",
+              "Total divided by 4"
+            ],
+            [
+              "5, 5, 5, 5",
+              "Calculate by hand",
+              "Total divided by 4"
+            ]
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "A plan with a clear loop body",
+          "strategy": "Teacher modelling with faded support",
+          "notes": "Model the algorithm verbally, leaving Python implementation to students. Initialise total once, repeat read/add four times, then divide by four and display both results. In Python range(4) repeats four times. Explain that += is shorthand for assigning old total plus score, if learners use the chapter’s solution. Support: offer a blank loop skeleton. Stretch: explain why / preserves a fractional mean while // would discard its fraction for these non-negative inputs.",
+          "body": [
+            "Set the running total to zero.",
+            "Repeat: read one score and add it, four times.",
+            "After the loop, calculate total / 4.",
+            "Display the total and mean."
+          ],
+          "minutes": 10
+        },
+        {
+          "title": "Your implementation and test record",
+          "strategy": "Independent coding with optional scaffolds",
+          "notes": "Reference solution: total=0; for score_number in range(4): read score with int(input(\"Score: \")) then total=total+score; after the loop mean=total/4; print(total,mean). Use proper newlines and indentation. Learners run all three predicted sets, retaining expectations if actual differs. Support: provide the input line and blank loop boundaries. Stretch: use 1,2,3,5 to test a fractional mean. Ask each learner to explain a chosen line without partner help.",
+          "body": [
+            "Write the program from your plan.",
+            "Run each predicted input set and record actual results.",
+            "Trace the first wrong value if a result differs.",
+            "Save your code and evidence."
+          ],
+          "minutes": 12
+        },
+        {
+          "title": "Three scores or four?",
+          "strategy": "Hinge question and debugging explanation",
+          "notes": "A loop using range(3) reads only three scores. With 8,10,6, it accumulates24, then dividing by4 gives6.0. The intended four-score result is36 and9.0. Correct the range to four passes; dividing by3 alone would still violate the four-input requirement. Collect simultaneous responses before discussion and ask learners to cite the requirement.",
+          "body": [
+            "A version reads scores with range(3).",
+            "It then calculates mean = total / 4.",
+            "What requirement does it miss?",
+            "Which change fixes the input count?"
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: defend your solution",
+          "strategy": "Independent exit ticket and reflection",
+          "notes": "For 1,2,3,5, expected total11 and mean2.75. Learners identify exactly four passes and why mean runs afterwards. Ask what their tests can and cannot establish. Check understanding of counting, accumulation and integer versus real division before Week 5 functions. Save individual work for formative follow-up.",
+          "body": [
+            "Predict total and mean for 1, 2, 3 and 5.",
+            "Explain how your program reads exactly four scores.",
+            "Why calculate the final mean after the loop?",
+            "Name a test that helped you find or avoid a fault."
+          ],
+          "minutes": 5
+        }
+      ]
+    }
+  ]
+}
