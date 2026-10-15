@@ -13,6 +13,13 @@ for lesson in data['lessons']:
             assert ''.join(node.text or '' for node in title.findall('.//a:t',ns))==source['title']
             assert len(slide.findall('.//a:tbl',ns))==(1 if 'table' in source else 0)
             assert not slide.findall('.//p:pic',ns),'Content should remain native/editable'
+            text=''.join(node.text or '' for node in slide.findall('.//a:t',ns))
+            for line in source.get('body',[]):
+                assert line in text,'Student instructions must survive export'
+            for row in source.get('table',[]):
+                for cell in row:
+                    assert cell in text,'Table content must survive export'
             notes=ET.fromstring(deck.read(f'ppt/notesSlides/notesSlide{number}.xml'))
             assert source['notes'] in ''.join(node.text or '' for node in notes.findall('.//a:t',ns))
+            assert source['strategy'] in ''.join(node.text or '' for node in notes.findall('.//a:t',ns))
 print('32 native slide titles, editable text/tables and speaker notes verified.')

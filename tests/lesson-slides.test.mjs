@@ -5,6 +5,8 @@ assert.equal(data.lessons.length,4);
 const context=vm.createContext({});
 vm.runInContext(fs.readFileSync(new URL('dist/lesson-slide-resources.js',root),'utf8'),context);
 const registry=vm.runInContext('lessonSlideResources',context);
+vm.runInContext(fs.readFileSync(new URL('dist/slides/slide-data.js',root),'utf8'),context);
+assert.equal(JSON.stringify(vm.runInContext('weekOneSlides',context)),JSON.stringify(data),'Browser lessons must match the authored source');
 for(const lesson of data.lessons){
   assert.equal(lesson.slides.length,8);
   assert.equal(lesson.slides.reduce((sum,slide)=>sum+slide.minutes,0),55);
