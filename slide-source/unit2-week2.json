@@ -1,0 +1,561 @@
+{
+  "unit": 2,
+  "week": 2,
+  "chapter": "entities-relationships",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#entities-relationships",
+  "references": [
+    "https://www.postgresql.org/docs/current/ddl-constraints.html",
+    "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF#page=19"
+  ],
+  "lessons": [
+    {
+      "id": "u2-w02-l01",
+      "lesson": 1,
+      "title": "Entities, attributes and records",
+      "chapter": "entities-relationships",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#entities-relationships",
+      "prepare": "Open the entities and relationships chapter, relationships-workbook.md, relationships-answers.md, equipment-model.svg and the four model CSVs (Borrower, Category, Equipment, Loan). Use fictional data and a disposable copy or paper. No SQL setup or student account is required. Explained answers are public.",
+      "slides": [
+        {
+          "title": "Entities, attributes and records",
+          "body": [
+            "Unit 2 · Week 2 · Lesson 1",
+            "Explain what each table, row and field represents."
+          ],
+          "notes": "Use the equipment desk scenario from Week 1. Explain what each table, row and field represents. All activities are ungraded. Suggested timings can be adjusted. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "The facts that need a home",
+          "body": [
+            "Why did repeating a borrower’s label cause a problem?",
+            "What does one row in the Loan table represent?"
+          ],
+          "notes": "A label change could leave inconsistent labels for the same borrower in the flat register. A Loan row represents one borrowing event. Recall the separate homes for borrower, item and loan facts before introducing Category. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 5,
+          "strategy": "Recall and partner explanation"
+        },
+        {
+          "title": "Type, instance and attribute",
+          "table": [
+            [
+              "Term",
+              "Equipment desk example"
+            ],
+            [
+              "Entity type",
+              "Loan: the kind of event we record"
+            ],
+            [
+              "Entity instance",
+              "L001: one particular loan"
+            ],
+            [
+              "Attribute",
+              "DueDate: a property of a loan"
+            ],
+            [
+              "Attribute value",
+              "2026-04-06: L001’s due date"
+            ]
+          ],
+          "notes": "An entity is one distinguishable thing or event. An entity type groups similar entities. An attribute is a property. In this relational model, a table represents the entity type, a record represents an instance, and a column or field represents an attribute. The value 2026-04-06 is not the field definition itself. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 6,
+          "strategy": "Worked example with teacher explanation"
+        },
+        {
+          "title": "A row and its fields",
+          "body": [
+            "Loan L001 records one event for borrower B001 and item E01.",
+            "DueDate names a field. 2026-04-06 is L001’s value in it.",
+            "Another loan has its own row and its own values."
+          ],
+          "notes": "Show L001 in model-loans.csv and compare it with L002. Ask learners to point to an entire record, a column heading and one field value. Keep DueDate as a date property of an event, rather than a permanent property of an equipment item. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 10,
+          "strategy": "Prediction and teacher modelling"
+        },
+        {
+          "title": "The new Category table",
+          "table": [
+            [
+              "Table",
+              "What one record represents"
+            ],
+            [
+              "Borrower",
+              "One borrower"
+            ],
+            [
+              "Category",
+              "One item category, such as Audio"
+            ],
+            [
+              "Equipment",
+              "One physical item"
+            ],
+            [
+              "Loan",
+              "One borrowing event"
+            ]
+          ],
+          "notes": "Category extends Week 1’s three-table sketch. Category assignments are a new design decision: Camera is Imaging, Tripod is Support, Recorder and Microphone are Audio. Model categories has three records, borrowers four, equipment five and loans six. A category may exist before any equipment refers to it. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 10,
+          "strategy": "Paired practice with exchanged roles"
+        },
+        {
+          "title": "Annotated table definitions",
+          "body": [
+            "Open the four model CSVs. Label a table, row and field.",
+            "Choose one attribute and give a stored value for it.",
+            "Explain why an equipment description cannot identify every item."
+          ],
+          "notes": "Use workbook questions 1–2. E01 and E04 both have description Camera, so that description is not unique. EquipmentID distinguishes each physical item under the agreed rules. Ask for labelled examples rather than definitions copied without context. No SQL creation is needed. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "The column and the value",
+          "body": [
+            "A classmate says “2026-04-06 is an attribute name.”",
+            "Explain the difference between DueDate and that date."
+          ],
+          "notes": "DueDate is the attribute or column name. 2026-04-06 is the value of that attribute for L001. A record includes the values for one instance across its defined fields. Ask students to use a different Loan row as their fresh example. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 5,
+          "strategy": "Misconception check with reasons"
+        },
+        {
+          "title": "A fresh record",
+          "body": [
+            "A new item E06 also has the description Camera.",
+            "Explain why it needs its own record and identifier."
+          ],
+          "notes": "E06 represents another physical item even if its description matches E01 and E04. It requires a unique EquipmentID and a valid required CategoryID. No new loan is implied simply by registering an item. A sample’s unique-looking description does not establish a permanent uniqueness rule. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    },
+    {
+      "id": "u2-w02-l02",
+      "lesson": 2,
+      "title": "Primary, foreign and composite keys",
+      "chapter": "entities-relationships",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#entities-relationships",
+      "prepare": "Open the entities and relationships chapter, relationships-workbook.md, relationships-answers.md, equipment-model.svg and the four model CSVs (Borrower, Category, Equipment, Loan). Use fictional data and a disposable copy or paper. No SQL setup or student account is required. Explained answers are public.",
+      "slides": [
+        {
+          "title": "Primary, foreign and composite keys",
+          "body": [
+            "Unit 2 · Week 2 · Lesson 2",
+            "Choose keys that preserve valid borrowing history."
+          ],
+          "notes": "Use the equipment desk scenario from Week 1. Choose keys that preserve valid borrowing history. All activities are ungraded. Suggested timings can be adjusted. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "Matching descriptions",
+          "body": [
+            "E01 and E04 are both Camera.",
+            "Which field distinguishes the items? What rule must it follow?"
+          ],
+          "notes": "EquipmentID identifies each item. The chosen primary key must be unique and required. Descriptions and borrower display labels can repeat. A primary key may use one field or a group of fields. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 5,
+          "strategy": "Recall and partner explanation"
+        },
+        {
+          "title": "Keys and their jobs",
+          "table": [
+            [
+              "Key",
+              "Job in this model"
+            ],
+            [
+              "Candidate key",
+              "A minimal set that uniquely identifies a row"
+            ],
+            [
+              "Primary key (PK)",
+              "The candidate key chosen for identification"
+            ],
+            [
+              "Foreign key (FK)",
+              "A reference to a permitted key"
+            ],
+            [
+              "Composite key",
+              "A key containing more than one attribute"
+            ]
+          ],
+          "notes": "Minimal means no attribute can be removed without losing uniqueness under the agreed rules. Minimal does not mean shortest text. A composite key can be a primary key. A foreign key may refer to another table or the same table and its values may repeat. Our required foreign keys refer to existing parent primary keys. Source: https://www.postgresql.org/docs/current/ddl-constraints.html . Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 6,
+          "strategy": "Worked example with teacher explanation"
+        },
+        {
+          "title": "A loan uses three identifiers",
+          "table": [
+            [
+              "Loan field",
+              "Role",
+              "Example"
+            ],
+            [
+              "LoanID",
+              "PK: identifies this event",
+              "L003"
+            ],
+            [
+              "BorrowerID",
+              "FK to Borrower.BorrowerID",
+              "B001"
+            ],
+            [
+              "EquipmentID",
+              "FK to Equipment.EquipmentID",
+              "E03"
+            ]
+          ],
+          "notes": "Trace L003 to Borrower B001 (Learner A), Equipment E03 (Recorder), then Equipment.CategoryID C03 to Category C03 (Audio). Equipment.CategoryID is another required FK. The foreign keys identify the referenced borrower and item, not this loan event. BorrowerID repeats in Loan because borrowers can have multiple events. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 10,
+          "strategy": "Prediction and teacher modelling"
+        },
+        {
+          "title": "A pair that can repeat",
+          "body": [
+            "B002 borrowed E02 in L005 and again in L002.",
+            "The pair (BorrowerID, EquipmentID) repeats legitimately.",
+            "LoanID distinguishes these two borrowing events."
+          ],
+          "notes": "These are the two existing events in the dataset. L005 is returned, L002 is active. Do not use the borrower/item pair alone as Loan’s key. Adding a new future event needs a new LoanID and separate checks against overlapping active loans. An FK alone does not enforce that business rule. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 10,
+          "strategy": "Paired practice with exchanged roles"
+        },
+        {
+          "title": "Keys that reject the right errors",
+          "body": [
+            "Find every PK and FK in the four model tables.",
+            "Explain duplicate LoanID L001 and borrower reference B999.",
+            "Workshop rule: one enrolment per borrower/workshop pair.",
+            "Which fields together could identify an enrolment?"
+          ],
+          "notes": "Use workbook questions 2, 3, 6, 7 and 9 as selected practice. Duplicate L001 violates PK uniqueness. B999 is absent from Borrower, so a required FK must reject it. For the separate WorkshopEnrolment example, assume one enrolment per borrower/workshop pair: (BorrowerID, WorkshopID) can be a composite PK. Either field alone may repeat. Example pairs B001/W01, B001/W02 and B002/W01 are permitted, while another B001/W01 is not. The extension is not a fifth table in the equipment model. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "A repeated foreign key",
+          "body": [
+            "B001 appears in the BorrowerID field of two Loan rows.",
+            "Does this break key uniqueness? Explain which key matters."
+          ],
+          "notes": "No. BorrowerID is a foreign key in Loan and may repeat. LoanID is the chosen primary key of Loan and must remain unique. B001 must exist in Borrower for both references. A field can have different key roles in different tables. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 5,
+          "strategy": "Misconception check with reasons"
+        },
+        {
+          "title": "Rules beyond the sample",
+          "body": [
+            "A small dataset has no repeated borrower labels.",
+            "Explain why this alone does not make the label a candidate key."
+          ],
+          "notes": "Candidate-key status depends on the intended rules for all valid data, including future records. The school may register two borrowers with the same label. A sample can expose a failed uniqueness claim but cannot establish a permanent uniqueness requirement by itself. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    },
+    {
+      "id": "u2-w02-l03",
+      "lesson": 3,
+      "title": "Reading and drawing relationships",
+      "chapter": "entities-relationships",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#entities-relationships",
+      "prepare": "Open the entities and relationships chapter, relationships-workbook.md, relationships-answers.md, equipment-model.svg and the four model CSVs (Borrower, Category, Equipment, Loan). Use fictional data and a disposable copy or paper. No SQL setup or student account is required. Explained answers are public.",
+      "slides": [
+        {
+          "title": "Reading and drawing relationships",
+          "body": [
+            "Unit 2 · Week 2 · Lesson 3",
+            "Read relationship limits in both directions."
+          ],
+          "notes": "Use the equipment desk scenario from Week 1. Read relationship limits in both directions. All activities are ungraded. Suggested timings can be adjusted. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "One borrower, several events",
+          "body": [
+            "Borrower B001 appears in loans L001 and L003.",
+            "Does each loan still refer to exactly one borrower?"
+          ],
+          "notes": "Yes. The two directions have different counts. One borrower can have many Loan rows. Each Loan row has one required borrower reference. Ask students to state the direction before naming the relationship. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 5,
+          "strategy": "Recall and partner explanation"
+        },
+        {
+          "title": "Minimum and maximum participation",
+          "table": [
+            [
+              "Direction",
+              "Minimum",
+              "Maximum"
+            ],
+            [
+              "One borrower: how many loans?",
+              "0",
+              "Many"
+            ],
+            [
+              "One loan: how many borrowers?",
+              "1",
+              "1"
+            ],
+            [
+              "One category: how many items?",
+              "0",
+              "Many"
+            ],
+            [
+              "One item: how many categories?",
+              "1",
+              "1"
+            ]
+          ],
+          "notes": "Zero means optional participation. Exactly one means minimum one and maximum one. The Equipment–Loan rule follows the same pattern: an item can have zero or many loans over time, and each loan has exactly one item. Read the symbols at one end as the number there for one instance at the other end. Rules come from requirements, not only the observed sample. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 6,
+          "strategy": "Worked example with teacher explanation"
+        },
+        {
+          "title": "The four-table equipment model",
+          "body": [],
+          "notes": "Two bars mark exactly one. A circle and a crow’s foot mark zero or many. Read Category–Equipment, Borrower–Loan and Equipment–Loan in both directions. Each parent permits zero or many children; each child requires exactly one parent. PK means primary key and FK means foreign key. Primary keys are underlined. Original diagram source: https://edugenio.github.io/cs-atar-textbook/equipment-model.svg . Notation reference: SCSA support booklet, printed page 15 (PDF page 19). The diagram’s placements can change without changing its meaning. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 10,
+          "strategy": "Prediction and teacher modelling",
+          "diagram": {
+            "kind": "equipment-er",
+            "source": "equipment-model-slide.svg",
+            "alt": "Four-table equipment ER model. Category to Equipment, Equipment to Loan, and Borrower to Loan each allow zero or many children. Every child requires exactly one parent. PKs are underlined and FKs labelled.",
+            "labels": [
+              "Category",
+              "CategoryID (PK)",
+              "CategoryName",
+              "Equipment",
+              "EquipmentID (PK)",
+              "EquipmentDescription",
+              "CategoryID (FK)",
+              "Borrower",
+              "BorrowerID (PK)",
+              "BorrowerLabel",
+              "Loan",
+              "LoanID (PK)",
+              "BorrowerID (FK)",
+              "EquipmentID (FK)",
+              "DueDate",
+              "Returned"
+            ]
+          }
+        },
+        {
+          "title": "Three relationship patterns",
+          "table": [
+            [
+              "Pattern",
+              "Rule in an example"
+            ],
+            [
+              "One to one",
+              "Each borrower has at most one locker, and vice versa"
+            ],
+            [
+              "One to many",
+              "One item can have many loan events over time"
+            ],
+            [
+              "Many to many",
+              "Borrowers can use many items, and vice versa"
+            ]
+          ],
+          "notes": "The locker example states maximum participation only. Whether a borrower must have a locker is a separate minimum-participation rule. Borrowing across time is many to many between Borrower and Equipment; Loan resolves it into two one-to-many relationships and stores event facts. This does not permit two active loans for the same physical item simultaneously. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 10,
+          "strategy": "Paired practice with exchanged roles"
+        },
+        {
+          "title": "An independent four-table diagram",
+          "body": [
+            "Redraw the model with PKs underlined and FKs labelled.",
+            "State each connection in both directions.",
+            "Check the zero-or-many and exactly-one ends."
+          ],
+          "notes": "Use workbook questions 4, 5 and 8. Hide the worked model while learners draw, then compare. Category–Equipment, Equipment–Loan and Borrower–Loan all have optional-many at the child end and exactly-one at the parent end. Preserve all four tables and their fields. Ask partners to explain how the required FK is on the many side. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "A category with no items",
+          "body": [
+            "New category C04 has no equipment yet.",
+            "Does this break the model? What about an item with no category?"
+          ],
+          "notes": "C04 is allowed because a category may have zero items. An Equipment row with no CategoryID breaks the required category rule. Students should point to the appropriate end of the relationship instead of assuming all participation is mandatory. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 5,
+          "strategy": "Misconception check with reasons"
+        },
+        {
+          "title": "History and current availability",
+          "body": [
+            "One item has several Loan rows across its history.",
+            "Explain why this does not mean it can be on two active loans."
+          ],
+          "notes": "History records events over time. The minimum/maximum relationship does not by itself enforce the separate no-overlap rule for active loans. The application or database needs an appropriate additional check. Ask for one unreturned and one returned example rather than assuming every Loan row is current. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    },
+    {
+      "id": "u2-w02-l04",
+      "lesson": 4,
+      "title": "Data dictionaries and model checks",
+      "chapter": "entities-relationships",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#entities-relationships",
+      "prepare": "Open the entities and relationships chapter, relationships-workbook.md, relationships-answers.md, equipment-model.svg and the four model CSVs (Borrower, Category, Equipment, Loan). Use fictional data and a disposable copy or paper. No SQL setup or student account is required. Explained answers are public.",
+      "slides": [
+        {
+          "title": "Data dictionaries and model checks",
+          "body": [
+            "Unit 2 · Week 2 · Lesson 4",
+            "Document each field and test the design against examples."
+          ],
+          "notes": "Use the equipment desk scenario from Week 1. Document each field and test the design against examples. All activities are ungraded. Suggested timings can be adjusted. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "A diagram and a dictionary",
+          "body": [
+            "The diagram shows tables and their connections.",
+            "What else must a developer know before creating the fields?",
+            "A data dictionary defines each field’s type, size and rules."
+          ],
+          "notes": "A data dictionary records field names, types, sizes, meanings and constraints. It complements the diagram. Include required/optional status, key roles, formats and defaults where relevant. The model uses conceptual types before mapping to a chosen DBMS. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 5,
+          "strategy": "Recall and partner explanation"
+        },
+        {
+          "title": "Loan identifiers in the dictionary",
+          "table": [
+            [
+              "Field",
+              "Conceptual type / size",
+              "Constraint"
+            ],
+            [
+              "LoanID",
+              "Text / max 4 characters",
+              "PK; required; L + 3 digits"
+            ],
+            [
+              "BorrowerID",
+              "Text / max 4 characters",
+              "Required FK to Borrower"
+            ],
+            [
+              "EquipmentID",
+              "Text / max 3 characters",
+              "Required FK to Equipment"
+            ]
+          ],
+          "notes": "The dictionary gives maximum text lengths chosen for this exercise, not universal limits. BorrowerID follows B plus three digits and EquipmentID E plus two digits. Text preserves letters and leading zeros. Each FK refers to the matching identifier field in its parent table. The exact DBMS type and enforcement come later. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 6,
+          "strategy": "Worked example with teacher explanation"
+        },
+        {
+          "title": "Dates, return status and defaults",
+          "table": [
+            [
+              "Field",
+              "Conceptual type",
+              "Rule"
+            ],
+            [
+              "DueDate",
+              "Date",
+              "Required; display YYYY-MM-DD"
+            ],
+            [
+              "Returned",
+              "Boolean",
+              "Required; default False for a new loan"
+            ]
+          ],
+          "notes": "Date and Boolean storage sizes depend on the DBMS. A displayed date format is not necessarily the storage format. The False default applies when a new loan omits a status value; it does not reset historical loans. CSV values are text encodings until converted. Choose integer for counts, float for approximate measured mass, text for labels, date for due date and Boolean for return status. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 10,
+          "strategy": "Prediction and teacher modelling"
+        },
+        {
+          "title": "Counterexamples for a design",
+          "table": [
+            [
+              "Proposed data change",
+              "What to check"
+            ],
+            [
+              "Another LoanID L001",
+              "Primary-key uniqueness"
+            ],
+            [
+              "Loan with BorrowerID B999",
+              "Required valid borrower reference"
+            ],
+            [
+              "Delete referenced borrower B001",
+              "Policy preserving referenced history"
+            ],
+            [
+              "New category C04 with no items",
+              "Optional-many participation"
+            ]
+          ],
+          "notes": "Partners state allowed/refused and explain the specific rule. Duplicate L001 and nonexistent B999 are invalid. For this learning model, restrict deletion of B001 while loans refer to it until references are resolved deliberately. C04 with no equipment is allowed. Format checks alone cannot prove a stored fact is true. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 10,
+          "strategy": "Paired practice with exchanged roles"
+        },
+        {
+          "title": "Dictionary and workbook practice",
+          "body": [
+            "Write all five Loan field definitions, including constraints.",
+            "Complete the relevant workbook questions independently.",
+            "Compare the explained answers, then correct one weak rule."
+          ],
+          "notes": "Use workbook questions 10–12 and revisit question 7. Loan has LoanID, BorrowerID, EquipmentID, DueDate and Returned. Include type, maximum text size or DBMS-dependent size, meaning, key/reference, required status and relevant format/default. Identifiers are text. Default False applies to new loans. Ask for a justified deletion policy that keeps loan history. Support learners with the worked tables before a fresh independent example. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "A default is not a bulk update",
+          "body": [
+            "A returned historical loan has Returned=True.",
+            "The design specifies default False for new loans.",
+            "Does the default change that old loan? Explain."
+          ],
+          "notes": "No. A default supplies a value for a new record when omitted in the appropriate operation. It does not rewrite existing records. Changing an existing record needs an explicit update, which must also meet the configured constraints. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 5,
+          "strategy": "Misconception check with reasons"
+        },
+        {
+          "title": "A new requirement changes the model",
+          "body": [
+            "New rule: one loan event may contain several equipment items.",
+            "Can one EquipmentID field represent every item in that event?"
+          ],
+          "notes": "A single EquipmentID stores one item reference. Do not overwrite the field or store a comma-separated list while claiming the existing design is unchanged. Further modelling could separate the loan event from its item lines in a linking/detail table, with agreed item and return rules. Ask which facts belong to the whole event and which belong to each item. This is an extension discussion, not a silent change to the four-table dataset. Teaching source: https://edugenio.github.io/cs-atar-textbook/#entities-relationships.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    }
+  ]
+}

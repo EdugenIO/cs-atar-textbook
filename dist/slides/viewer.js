@@ -12,6 +12,7 @@ if (!deck) {
   deck.slides.forEach((slide, index) => {
     const article = element('article', undefined, 'slide' + (index === 0 ? ' cover' : ''));
     const heading = element('h1', slide.title); heading.tabIndex = -1; article.append(heading);
+    if (slide.diagram) { const figure = element('figure', undefined, 'lesson-diagram'); const img = element('img'); img.src = slide.diagram.source; img.alt = slide.diagram.alt; figure.append(img); article.append(figure); }
     if (slide.code) { const pre = element('pre'); pre.append(element('code', slide.code)); article.append(pre); }
     if (slide.table) {
       const table = element('table');
@@ -29,6 +30,7 @@ if (!deck) {
   const resources = [[`${deck.id}.pptx`, 'Download editable PowerPoint'], [`notes/${deck.id}.html`, 'Teacher notes']];
   if (deck.id.startsWith('u1-')) resources.push(['unit1-all-lesson-slides.zip', 'Download all Unit 1 PowerPoints']);
   if (deck.id.startsWith('u2-w01-')) resources.push(['unit2-week1-lesson-slides.zip', 'Download Unit 2 Week 1 PowerPoints']);
+  if (deck.id.startsWith('u2-w02-')) resources.push(['unit2-week2-lesson-slides.zip', 'Download Unit 2 Week 2 PowerPoints']);
   for (const [href, label] of resources) {
     const link = element('a', label, 'download'); link.href = href; if (href.endsWith('.pptx')) link.download = ''; downloads.append(link);
   }
