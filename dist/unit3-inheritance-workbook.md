@@ -1,4 +1,6 @@
 # Unit 3 week 6 — Inheritance workbook
+
+Before B, connect the class relationship diagram to the method-call trace. For each item.preparation() call, name the receiver’s class and selected implementation. Explain why inherited lend() still works and why adding AudioRecorder should not require a report branch.
 Lessons 1–3 guided learning; lesson 4 optional practical. Synthetic equipment and invented thresholds only.
 
 ## A — Model and initialise

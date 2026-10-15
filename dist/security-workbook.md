@@ -1,5 +1,7 @@
 # Threats and protective measures — student workbook
 
+Before the scenarios, connect each proposal to its mechanism: weakness → control action → expected benefit → remaining risk. Distinguish better authentication from narrower authorisation, and recovery from prevention. Predict both allowed and refused behaviour.
+
 Unit 2 weeks 8–11. Eight explicit security lessons and eight project workshops, within four lessons each week. Teacher-review draft.
 
 1. Define asset, threat, vulnerability, risk and incident using the equipment desk.

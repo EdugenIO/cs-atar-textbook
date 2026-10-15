@@ -1,4 +1,6 @@
 # Week 8 cryptography clinic
+
+Before 3, choose the operation first: confidential public-key encryption uses the recipient’s public/private pair; a signature uses the signer’s private/public pair. Explain why verifying a signature does not hide a message. Before 5, explain key share, ephemeral and authenticated encryption in your own words.
 Two security lessons plus two database workshops. Original classroom draft.
 1. Predict Caesar("Meet at 3, Room B!",3); reverse it and inspect 26 candidates. Explain why trying shifts is feasible. Compare substitution, Vigenere, Enigma, DES and AES without recommending historical algorithms.
 2. Fingerprint identical text, a trailing space, changed case and a non-ASCII character. Record exact inputs/outputs. Explain why a digest is not encryption or proof of author identity.

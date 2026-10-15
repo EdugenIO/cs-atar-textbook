@@ -1,4 +1,6 @@
 # Unit4 week7 — controls/response workbook
+
+Before B, trace Visitors → Internet TCP/443, Visitors → Internal TCP/443 and Visitors → Internet UDP/443 through R1–R4. Record the first match or default deny. Repeat after placing a Visitor-to-any allow first, then explain which restriction is lost.
 Two security lessons plus two separate database workshops. Original draft: 14 October 2026.
 
 A: For the earlier export, attendance and outage cases, choose two controls. Explain CIA/AAA purpose, implementation, evidence, limits and service impact. Cover logging, anti-malware, firewalls, ACLs, IPS, VPN, training, codes of conduct and physical protection.

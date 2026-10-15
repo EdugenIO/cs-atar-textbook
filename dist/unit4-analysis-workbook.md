@@ -1,4 +1,6 @@
 # Unit4 week6 — analysis workbook
+
+Start the log analysis with one exact observation: the server records an allowed export of 500 rows. Write a possible misuse explanation, a legitimate alternative and the next evidence that could distinguish them. Do not turn an account name into a claim about the human actor.
 Two security lessons plus two separate database workshops. Original draft: 14 October 2026.
 
 A: Distinguish assets, weaknesses, threats, risks and controls. Apply confidentiality, integrity and availability to the export, incorrect attendance and outage cases; explain overlaps. Apply authentication, authorisation and accounting to each logged action. Explain why an account label does not identify a person.

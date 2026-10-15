@@ -1,4 +1,6 @@
 # Unit 3 week 4 — Sorting workbook
+
+Before A–C, trace one inner pass by hand. For bubble sort, record every neighbouring comparison. For insertion, keep the saved key beside the temporarily shifted list. For selection, update the minimum index while leaving the list unchanged until the final swap. Then complete the existing full-pass traces.
 Four lessons. Synthetic integer lists; predict before executing.
 
 ## A — Bubble

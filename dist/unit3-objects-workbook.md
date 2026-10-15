@@ -1,4 +1,6 @@
 # Unit 3 week 5 — Objects and classes workbook
+
+Before C, draw camera → one Equipment object ← alias, with a separate tripod object. Put total/on-loan attributes inside each box and list the available methods. Predict the effect of alias.lend() on both objects before running it.
 Four lessons; synthetic stock only, no real borrower records.
 
 ## A — Design and instantiate
