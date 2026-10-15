@@ -1,0 +1,494 @@
+{
+  "unit": 1,
+  "week": 10,
+  "chapter": "design",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#design",
+  "references": [
+    "https://edugenio.github.io/cs-atar-textbook/project-workbook.md",
+    "https://docs.python.org/3/tutorial/datastructures.html",
+    "https://docs.python.org/3/tutorial/errors.html"
+  ],
+  "lessons": [
+    {
+      "id": "u1-w10-l01",
+      "lesson": 1,
+      "title": "Integrating the session summary",
+      "chapter": "design",
+      "prepare": "Bring working quantity/input, calculation and storage modules from the Week 9 build workshops, synthetic data copies and project workbook. These slides support the existing learning project. Any graded use follows the separately issued school task and conditions.",
+      "slides": [
+        {
+          "title": "Integrating the session summary",
+          "strategy": "Learning intention",
+          "notes": "Success means connect the session list to a summary, handle empty/tied cases and explain the distinction between current-session data and saved history. Assume the Week 9 implementation workshops have produced tested modules. Diagnose missing modules and use an isolated synthetic fixture for summary work rather than pretending integration is complete.",
+          "body": [
+            "Unit 1 · Week 10 · Lesson 1",
+            "Connect tested modules and check the complete workflow."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: the order contract",
+          "strategy": "Individual retrieval and paired explanation",
+          "notes": "Expected quantity zero is valid, cost is integer cents, saving must succeed before adding to the session list and the list contains this run’s accepted orders. Prior saved records remain in the file. Ask students to point to the relevant interface or requirement before discussing their implementation.",
+          "body": [
+            "When may a quantity enter the session list?",
+            "Why is zero a valid order?",
+            "Which values belong to this session’s summary?",
+            "Compare your answer with your module design."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Summary expectations",
+          "strategy": "Predict and justify",
+          "notes": "Students calculate before revealing/discussing. For [2,0,5], total 7, cost 2100 cents, first maximum index 2. For [5,5], total 10, cost 3000, index 0. Empty requires a clear message and no index access. Indices are zero-based. If presentation uses order number, distinguish index 0 from displayed order 1. Record expectations in workbook section 4.",
+          "table": [
+            [
+              "Session quantities",
+              "Total quantity",
+              "Cost cents",
+              "First max index"
+            ],
+            [
+              "[2, 0, 5]",
+              "7",
+              "2100",
+              "2"
+            ],
+            [
+              "[5, 5]",
+              "10",
+              "3000",
+              "0"
+            ],
+            [
+              "[]",
+              "Empty message",
+              "No total required",
+              "No index access"
+            ]
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "An empty list needs its own path",
+          "strategy": "Teacher modelling and paired trace",
+          "notes": "This language-neutral pseudocode isolates the empty case before initialising a best index. Strict greater-than preserves the first maximum on a tie. Learners trace [5,5] and then [] on paper. Agree a documented return/display interface with the mainline. The pseudocode names totals without supplying a complete implementation, so students use their own tested traversal or suitable taught operations.",
+          "body": [
+            "Trace [] and [5, 5] through your design.",
+            "Which operation must the empty branch avoid?"
+          ],
+          "code": "IF quantities is empty\n    REPORT empty session\nELSE\n    CALCULATE quantity and cost totals\n    FIND first largest-order index\n    REPORT totals and index",
+          "minutes": 8
+        },
+        {
+          "title": "The integration boundary",
+          "strategy": "Failure scenario and think-pair-share",
+          "notes": "Scenario: quantity 4 is valid but the append fails. Expected existing session [2,0,5] remains unchanged, totals still refer to saved orders, clear failure message and an agreed retry/cancel route. An integration test checks what happens between modules, beyond individual calculation checks. Ask students to locate the exact point their list changes. Work only with disposable data; simulate a failure deliberately through a test stub or teacher-controlled disposable setup.",
+          "body": [
+            "The quantity is valid, but saving the order fails.",
+            "Should the session list change? Explain why.",
+            "Where does the mainline learn whether saving succeeded?",
+            "Plan a safe test using disposable data."
+          ],
+          "minutes": 7
+        },
+        {
+          "title": "Integration workshop",
+          "strategy": "Independent implementation with peer explanation",
+          "notes": "Students connect summary to their existing mainline, keeping the agreed interfaces. Run normal [2,0,5], tied [5,5], empty, single zero and save-failure cases. Record actual evidence and corrections. Partner explains data movement, but each learner owns their implementation. Support: provide a synthetic list so summary logic can be tested separately. Extension: compare an isolated summary test with the complete workflow. If graded, apply the issued collaboration rules.",
+          "body": [
+            "Integrate the summary using your own module design.",
+            "Execute the normal, tie and empty-session cases.",
+            "Check that a failed save leaves session data unchanged.",
+            "Record actual results and explain one interface."
+          ],
+          "minutes": 17
+        },
+        {
+          "title": "Session or saved history?",
+          "strategy": "All-student hinge question",
+          "notes": "Correct B. The R5 summary concerns the current session list; R4 preserves the file across runs. Reading all historical quantities into today’s session would change the requirement. Ask for a two-run test that checks both properties independently. A different client requirement could permit a history report, but it would need explicit agreement.",
+          "body": [
+            "The file contains yesterday’s orders and today’s order.",
+            "R5 asks for a summary of the current session.",
+            "A: Include every saved order.   B: Use this run’s list.",
+            "Choose and justify the data source."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Checkpoint: an integrated workflow",
+          "strategy": "Independent exit ticket",
+          "notes": "Retain one normal result, an empty/tie result and one safe failure result linked to requirements. A prediction alone is insufficient execution evidence. Ask students to identify remaining gaps honestly. Carry open failures to the next testing workshop, prioritised by which required behaviours they block.",
+          "body": [
+            "Show actual normal and empty/tie results.",
+            "Explain one module-to-mainline data transfer.",
+            "Record the outcome of a save-failure check.",
+            "Name the highest-priority fault still open."
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w10-l02",
+      "lesson": 2,
+      "title": "Testing, correction and retesting",
+      "chapter": "design",
+      "prepare": "Bring an integrated practice program, a disposable folder, synthetic test fixtures and workbook section 4. Preserve a clean starting copy for each destructive or failure test.",
+      "slides": [
+        {
+          "title": "Testing, correction and retesting",
+          "strategy": "Learning intention",
+          "notes": "Success means execute a requirement-linked test set, record expected and actual results honestly, isolate failures and verify repairs with regression checks. This is the existing project testing workshop, not an extra weighted test.",
+          "body": [
+            "Unit 1 · Week 10 · Lesson 2",
+            "Use test evidence to decide what still needs repair."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: useful test evidence",
+          "strategy": "Individual retrieval and peer explanation",
+          "notes": "A desk-check predicts state; an executed test records actual behaviour. The expected result comes from the brief/independent calculation. A repair requires rerunning the failed case and earlier relevant cases. Distinguish unit tests of one module from integration tests of cooperating modules.",
+          "body": [
+            "What separates a planned test from an executed test?",
+            "Why calculate the expected result first?",
+            "Which earlier tests should run after a repair?",
+            "Give a unit test and an integration test."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "A test set follows requirements",
+          "strategy": "Test selection and prioritisation",
+          "notes": "Students assign IDs and precise expectations. R1 needs integer text conversion, range and retry cases, including zero. R2 ordinary/zero costs. R3 list order and zero retention. R4 separate records across two runs and a safe failure. R5 empty, single, several and tied maxima. This overview is not the complete test log. Ask for invalid ID cases: empty, comma and line break.",
+          "table": [
+            [
+              "Requirement",
+              "A useful test family"
+            ],
+            [
+              "R1–R2",
+              "Invalid input, zero and ordinary costs"
+            ],
+            [
+              "R3",
+              "Accepted quantities remain in entry order"
+            ],
+            [
+              "R4",
+              "Two runs, separate records, write failure"
+            ],
+            [
+              "R5",
+              "Empty, one, several and tied largest"
+            ]
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "Boundary and recovery cases",
+          "strategy": "Guided prediction and partner challenge",
+          "notes": "For the non-negative integer quantity rule, -1 rejects, 0 accepts, 1 accepts. three and 2.5 reject as integer text. A retry sequence three,-1,0 should finish with accepted zero and no rejected values saved. Ask students to add a blank ID and a comma-containing ID test, with a later valid value. Define the response before executing.",
+          "body": [
+            "Quantity boundary: -1, 0 and 1.",
+            "Conversion recovery: three, then -1, then 0.",
+            "ID checks: empty or comma-containing text.",
+            "Write expected responses before executing each case."
+          ],
+          "minutes": 8
+        },
+        {
+          "title": "Reproducing a failure",
+          "strategy": "Teacher think-aloud and minimal-case debugging",
+          "notes": "Use the chapter tie case [5,5] returning index 1 instead of 0. Reproduce with the smallest two-item fixture, trace remembered best index, identify >= versus >, then correct and rerun the tie case. Also rerun [2,0,5], a single item and empty. Students must identify the cause rather than changing several unrelated lines. The example is a debugging illustration, not claimed evidence about their own program.",
+          "body": [
+            "A tied session returns index 1 instead of index 0.",
+            "Reduce the case to [5, 5].",
+            "Trace the remembered index before changing code.",
+            "Repair the cause, then rerun the relevant earlier tests."
+          ],
+          "minutes": 7
+        },
+        {
+          "title": "Evidence workshop",
+          "strategy": "Independent testing with teacher conferences",
+          "notes": "Students execute their planned tests using resettable fixtures, log results, repair one priority fault and retest. Columns: test ID, requirement, setup/input, expected, actual, pass/fail, correction and retest evidence. Do not mark unexecuted cases as passed. Support: teacher models one record and provides a trace template. Extension: inject a known failure in a private copy to see whether the tests expose it. Use only disposable files for file-mode and failure trials.",
+          "body": [
+            "Execute the requirement-linked tests in your workbook.",
+            "Record actual outputs and evidence locations.",
+            "Isolate and repair one priority fault.",
+            "Retest it and check for regressions."
+          ],
+          "minutes": 17
+        },
+        {
+          "title": "An honest result record",
+          "strategy": "All-student hinge question",
+          "notes": "Correct B. The learner has only predicted or desk-checked, so the log should show planned/not executed. A screenshot of code is not evidence that the particular test ran. Discuss why an honest open failure is more informative than a false pass. Ask for the exact additional evidence needed to change the status.",
+          "body": [
+            "You predicted that a second run keeps both records.",
+            "You have not yet performed the second run.",
+            "A: Mark pass.   B: Record planned / not executed.",
+            "Choose and state the missing evidence."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Checkpoint: readiness for a user trial",
+          "strategy": "Independent readiness decision",
+          "notes": "Retain completed logs and explain whether the core workflow can be trialled safely. If core defects remain, specify them and fix before an unassisted trial, or clearly scope the trial and record the limitation. Do not invent successful results. Teacher checks that saved sample files use synthetic data and tests cover the agreed requirements.",
+          "body": [
+            "Show a completed test with independent expectations.",
+            "Show one correction and its retest.",
+            "Identify any unresolved requirement or failure.",
+            "Decide whether the core workflow is ready for a trial."
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w10-l03",
+      "lesson": 3,
+      "title": "The organiser acceptance trial",
+      "chapter": "design",
+      "prepare": "Prepare a working practice build and clean synthetic file, an organiser scenario card and workbook section 5. Partner roles represent a fictional organiser; record a role label rather than a real name.",
+      "slides": [
+        {
+          "title": "The organiser acceptance trial",
+          "strategy": "Learning intention",
+          "notes": "Success means observe whether a user can complete agreed tasks, collect evidence without leading the user and prioritise improvements against requirements. Use the existing learning project and issued collaboration rules if it forms part of a school assessment.",
+          "body": [
+            "Unit 1 · Week 10 · Lesson 3",
+            "Observe whether the organiser can use the solution."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: who judges what?",
+          "strategy": "Individual retrieval and comparison",
+          "notes": "A unit test checks a small module, integration checks cooperation, and acceptance checks the agreed client workflow. Passing calculations alone does not show whether the organiser can recover from bad input or recognise a failed save. Ask students to choose one acceptance criterion already written in week 8.",
+          "body": [
+            "What does a unit test establish?",
+            "What extra question does an acceptance trial ask?",
+            "Choose one agreed organiser acceptance criterion.",
+            "Explain how you would observe it."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "A scenario with observable outcomes",
+          "strategy": "Worked trial plan",
+          "notes": "Provide a clean practice folder and one synthetic ID per order. Script: create order of 2, enter invalid quantity then recover with 0, inspect the records and request the summary. Current-session totals are 2 and 600 cents; first largest index 0. For persistence, restart and add quantity 1 under a new ID; previous records remain while new-session summary is 1 and 300 cents, index 0. Empty and tied cases were tested previously and may be included if time permits. Agree exact success criteria without giving click-by-click prompts.",
+          "table": [
+            [
+              "Organiser action",
+              "Observe"
+            ],
+            [
+              "Create a synthetic order",
+              "Prompts and accepted result"
+            ],
+            [
+              "Recover from unsuitable quantity",
+              "Message and successful retry"
+            ],
+            [
+              "Inspect saved record",
+              "Correct separate fields/record"
+            ],
+            [
+              "Request the session summary",
+              "Correct totals and clear output"
+            ]
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "Roles and observation",
+          "strategy": "Role rehearsal and teacher modelling",
+          "notes": "One learner acts as organiser, another as developer/observer. The organiser has a goal and synthetic data; the observer has the acceptance criteria. Record actions, output, hesitation and requests for help without collecting unnecessary personal details. A screenshot or short written record of the relevant output is sufficient if school rules allow it. If the developer intervenes, record the intervention honestly. In a controlled assessment, follow permitted collaboration conditions.",
+          "body": [
+            "Organiser: attempt the goal using the supplied data.",
+            "Observer: record actions, outputs and requests for help.",
+            "Let the organiser try before giving guidance.",
+            "Record any intervention and its reason."
+          ],
+          "minutes": 8
+        },
+        {
+          "title": "Feedback linked to a requirement",
+          "strategy": "Classify evidence and discuss",
+          "notes": "Compare vague praise with a useful observation. “R1: after three, the message appeared, but the prompt did not return” identifies a failed recovery. “R5: totals correct, but cents label absent” identifies an interpretation/usability issue. Record whether each concerns a requirement failure, clarity issue or optional enhancement. Do not let requested extras such as avatars expand the assessed scope automatically.",
+          "body": [
+            "“Looks good” gives little evidence.",
+            "“After three, I could not enter a new quantity” is specific.",
+            "Link feedback to a requirement or clarity issue.",
+            "Separate required repairs from optional extra features."
+          ],
+          "minutes": 7
+        },
+        {
+          "title": "Acceptance workshop",
+          "strategy": "Paired user trial and role exchange",
+          "notes": "Use the scenario from slide 3 with synthetic inputs, allow an initial attempt without coaching and record the result for each acceptance criterion. Exchange roles so each learner observes their own implementation being used. Support: give a short goal card and observation table. Extension: ask the organiser to explain the session/history distinction in their own words. If software is incomplete, record a scoped trial and its limits rather than claim full acceptance. Allocate about eight minutes per direction and one minute to identify priorities.",
+          "body": [
+            "Run the agreed scenario without leading the organiser.",
+            "Record outcomes and specific feedback.",
+            "Swap roles and trial the second solution.",
+            "Identify the most important required improvement."
+          ],
+          "minutes": 17
+        },
+        {
+          "title": "A change needs another check",
+          "strategy": "All-student hinge question",
+          "notes": "Correct B. Record what changed, retest relevant functional cases, then repeat the affected acceptance action. A clearer prompt should not accidentally change validation or stored data. Learners explain whether the change affects just the interface or the underlying behaviour. Keep both observations as evidence of improvement.",
+          "body": [
+            "You change a confusing quantity prompt after feedback.",
+            "A: Assume acceptance now passes.",
+            "B: Retest the affected behaviour and repeat the user action.",
+            "Choose and explain which evidence to retain."
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Checkpoint: an acceptance record",
+          "strategy": "Independent exit ticket",
+          "notes": "Retain the scenario, role label, criterion-level observations, interventions, feedback and one prioritised action. Include the repeated trial if a repair is already complete; otherwise record the next action. Use this evidence in the final evaluation, avoiding claims that every requirement was met if the trial did not examine it.",
+          "body": [
+            "Keep the scenario and observed outcomes.",
+            "Link one observation to an agreed requirement.",
+            "Record one justified change or remaining limitation.",
+            "Carry the evidence into your evaluation."
+          ],
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "id": "u1-w10-l04",
+      "lesson": 4,
+      "title": "Demonstration, evaluation and retrospective",
+      "chapter": "design",
+      "prepare": "Bring code, synthetic data, project workbook and honest test/acceptance records. Use the existing learning-project checkpoint. Any grading, authorship checks or submission rules come from the separately issued school task.",
+      "slides": [
+        {
+          "title": "Demonstration, evaluation and retrospective",
+          "strategy": "Learning intention",
+          "notes": "Success means demonstrate required behaviour, judge requirements using actual evidence, explain limitations and reflect on the development process. No new marks, weights or assessment conditions are introduced by these slides.",
+          "body": [
+            "Unit 1 · Week 10 · Lesson 4",
+            "Demonstrate the solution and evaluate the evidence."
+          ],
+          "minutes": 2
+        },
+        {
+          "title": "Retrieval: a claim needs evidence",
+          "strategy": "Individual retrieval and paired challenge",
+          "notes": "An evaluation refers to the requirement and actual test/observation. “All tests passed” is insufficient if missing tests leave a requirement unexamined. Predicted results are planning. A retrospective concerns the development process, whereas product evaluation judges the solution. Ask for one actual example from each learner’s workbook.",
+          "body": [
+            "What evidence supports “R4 is met”?",
+            "Can an unexecuted test justify a success claim?",
+            "How does product evaluation differ from a retrospective?",
+            "Share one claim and let a partner ask for evidence."
+          ],
+          "minutes": 4
+        },
+        {
+          "title": "A focused demonstration",
+          "strategy": "Teacher modelling of evidence selection",
+          "notes": "Students plan a short demonstration: ordinary order, unsuitable input recovery, retained records across a restart and empty/tied summaries. Use synthetic values and prepared resettable fixtures. The demonstration supplements the test log; it cannot cover every possible case. Identify the actual version shown. Where time is tight, use two-minute peer demos and selected teacher conferences rather than a whole-class presentation by every student.",
+          "body": [
+            "Identify the version and synthetic test data.",
+            "Show the core workflow and input recovery.",
+            "Demonstrate persistence and empty/tied behaviour.",
+            "Point to the matching workbook evidence."
+          ],
+          "minutes": 6
+        },
+        {
+          "title": "Evaluation against requirements",
+          "strategy": "Worked evidence comparison",
+          "notes": "These are illustrative statements, not evidence about a student’s work. R2 met: recorded 0,300,1200 cents for quantities 0,1,4. R4 partly met: two-run persistence passed but save-failure recovery remains unhandled. R5 not yet evidenced if empty/tie cases are unexecuted. Distinguish not met from not tested. Students use met/partly met/not met and explicitly record evidence gaps without converting untested into a pass.",
+          "table": [
+            [
+              "Requirement",
+              "Judgement",
+              "Evidence / limitation"
+            ],
+            [
+              "R2: badge cost",
+              "Met in tested cases",
+              "0, 1, 4 gave 0, 300, 1200"
+            ],
+            [
+              "R4: save records",
+              "Partly met",
+              "Two runs pass; failure recovery open"
+            ],
+            [
+              "R5: summary",
+              "Evidence incomplete",
+              "Empty/tie tests not executed"
+            ]
+          ],
+          "minutes": 8
+        },
+        {
+          "title": "The developer retrospective",
+          "strategy": "Individual reflection with paired challenge",
+          "notes": "Ask students to compare planned and actual milestones, identify a concrete delay and support one improvement with evidence. Example: mixed file writing with input logic made unit testing difficult; next time separate those responsibilities earlier. Retrospective concerns how the learner worked, not another generic product feature list. Include source/assistance log and explain own contribution under school rules.",
+          "body": [
+            "Compare the planned schedule with actual progress.",
+            "Explain one decision that helped or delayed testing.",
+            "Propose one process change and justify it.",
+            "State your own contribution and acknowledge assistance."
+          ],
+          "minutes": 7
+        },
+        {
+          "title": "Demonstration and evaluation workshop",
+          "strategy": "Peer demonstration, independent writing and teacher conference",
+          "notes": "Allow about six minutes for paired demonstrations and questions, nine minutes for individual evaluation/retrospective, three minutes to assemble evidence. Each learner retains their own code, data and reasoning. Teacher conferences prioritise unresolved authorship or requirement questions; apply school conditions if assessed. Support: requirement, judgement, evidence, limitation sentence frame. Extension: explain a design trade-off and the test that could evaluate an improvement.",
+          "body": [
+            "Demonstrate your solution using a small scenario.",
+            "Write requirement-by-requirement evaluation.",
+            "Complete the retrospective and source log.",
+            "Assemble code, synthetic data and the evidence workbook."
+          ],
+          "minutes": 18
+        },
+        {
+          "title": "An honest handover",
+          "strategy": "Peer checklist and independent verification",
+          "notes": "Check actual files exist, open in the intended environment and correspond to the version demonstrated. The handover includes code, synthetic saved data and workbook with tests, acceptance, evaluation and sources. Record known limitations and how to start the program. Do not publish student data, accounts or a peer’s work to the public textbook. These are learning handover checks, not additional school submission rules.",
+          "body": [
+            "Does the delivered version match the demonstration?",
+            "Can another person find the start instructions?",
+            "Are tests, acceptance evidence and sources included?",
+            "Are remaining faults and limitations clearly recorded?"
+          ],
+          "minutes": 5
+        },
+        {
+          "title": "Exit ticket: one justified next step",
+          "strategy": "Independent synthesis",
+          "notes": "Collect a final requirement claim with its evidence, a limitation and one justified process improvement. Teacher uses patterns to plan feedback and future recovery work. The textbook moves to networking next; unfinished practice tasks need a realistic agreed recovery action rather than silently adding new project deadlines to the exam block.",
+          "body": [
+            "Name one requirement and its actual evidence.",
+            "State one remaining limitation.",
+            "Explain one process improvement for the next project.",
+            "Keep the completed workbook for future reference."
+          ],
+          "minutes": 5
+        }
+      ]
+    }
+  ]
+}

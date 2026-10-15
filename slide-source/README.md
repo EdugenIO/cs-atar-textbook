@@ -1,6 +1,6 @@
 # Lesson slide source
 
-Available: Unit 1, Weeks 1–8 and Week 9 Lessons 1–2, thirty-four lessons. Each lesson has eight slides and a suggested 55-minute sequence. Adapt timings to local classes.
+Available: Unit 1, Weeks 1–8, Week 9 Lessons 1–2 and Week 10, thirty-eight lessons. Each lesson has eight slides and a suggested 55-minute sequence. Adapt timings to local classes.
 
 The `unit*-week*.json` files are the shared content sources: slide titles, editable code/tables, student prompts, teacher notes, preparation and timings. `node scripts/build-slide-web.mjs` rebuilds browser data, the availability registry and teacher-note pages using Node alone. PowerPoint files in `dist/slides/` are editable native presentations with speaker notes; they were generated from this JSON using the Codex presentation runtime. To revise the shared course, update this source and regenerate both formats; keep downloaded personal PowerPoint customisations separately. Browser regeneration alone does not update the PowerPoint files.
 
