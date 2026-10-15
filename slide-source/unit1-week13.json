@@ -1,0 +1,472 @@
+{
+  "unit": 1,
+  "week": 13,
+  "chapter": "network-design",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#network-design",
+  "references": [
+    "https://www.rfc-editor.org/rfc/rfc1122",
+    "https://www.rfc-editor.org/rfc/rfc1918",
+    "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+  ],
+  "lessons": [
+    {
+      "id": "u1-w13-l01",
+      "lesson": 1,
+      "title": "LAN, WLAN and WAN",
+      "chapter": "network-design",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#network-design",
+      "prepare": "Open the network-design chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "LAN, WLAN and WAN",
+          "body": [
+            "Unit 1 · Week 13 · Lesson 1",
+            "Distinguish network scale from connection method."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Distinguish network scale from connection method. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "How does a wireless client join a LAN?",
+            "What job does a router perform?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "An access point provides wireless access. Routing connects IP networks. Wireless describes a connection method, not necessarily geographic scale. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Network descriptions",
+          "table": [
+            [
+              "Term",
+              "Meaning",
+              "Example"
+            ],
+            [
+              "LAN",
+              "Local area network",
+              "A library site"
+            ],
+            [
+              "WLAN",
+              "Wireless local area network",
+              "Library Wi-Fi"
+            ],
+            [
+              "WAN",
+              "Larger-area network links",
+              "Connections between distant sites"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "A WLAN can be part of a site LAN. Do not make these three exclusive categories for every installation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "One site, several connections",
+          "body": [
+            "Fixed desktops use wired local links.",
+            "Visiting devices use a wireless access point.",
+            "The site also has a provider connection."
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "Identify local wired and wireless components, then the wider connection. The presence of Wi-Fi does not make the site a WAN. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Physical and logical views",
+          "body": [
+            "Describe where devices sit.",
+            "Then describe how they communicate.",
+            "Explain what each drawing helps you understand."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "A physical view focuses on locations and links. A logical view focuses on communication organisation and addressing. They answer related but different questions. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Describe a school site using LAN and WLAN.",
+            "Add a justified larger-area connection.",
+            "Explain scale and media separately."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "Use the chapter’s scenario rather than real infrastructure details. Require an example and a reason for each term. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "A room uses wireless laptops.",
+            "A: Wireless alone makes it a WAN.",
+            "B: It can be a WLAN within the local site network."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "B. Geographic reach and the transmission method are different characteristics. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Give a setting that contains both LAN and WLAN.",
+            "Explain when WAN is a useful description."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "Accept local site with wireless access plus wider-area connectivity. Avoid treating every Internet-connected client itself as a WAN. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        }
+      ]
+    },
+    {
+      "id": "u1-w13-l02",
+      "lesson": 2,
+      "title": "A logical network design",
+      "chapter": "network-design",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#network-design",
+      "prepare": "Open the network-design chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "A logical network design",
+          "body": [
+            "Unit 1 · Week 13 · Lesson 2",
+            "Connect device roles, addresses and course symbols."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Connect device roles, addresses and course symbols. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "Which device connects wireless clients?",
+            "Which device connects different IP networks?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "Access point and router respectively. Ask learners to label roles before choosing the course symbols. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Diagram checklist",
+          "table": [
+            [
+              "Include",
+              "Check"
+            ],
+            [
+              "Devices",
+              "Correct role and course symbol"
+            ],
+            [
+              "Links",
+              "Connected to the intended device"
+            ],
+            [
+              "Addresses",
+              "Unique host allocations and mask"
+            ],
+            [
+              "Gateway",
+              "Router interface on the LAN"
+            ],
+            [
+              "Boundary",
+              "Course firewall convention"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "Open the linked SCSA support booklet. Follow its Cisco-style symbol conventions. For the course perimeter diagram, the firewall sits outside the trusted network without an IP label; real deployment addressing varies. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A desktop request to a local server",
+          "body": [
+            "Identify desktop, switch and server.",
+            "Trace the local communication path.",
+            "Then contrast a remote destination."
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "A basic switch handles local frames. A remote IP destination needs the gateway/router path. The conceptual trace does not replace the required symbol diagram. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Diagram peer review",
+          "body": [
+            "Trace a wireless client’s route to the server.",
+            "Check the access point connection.",
+            "Check the router interface and mask."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "Use the actual support booklet for symbols. Partners should name one precise correction, not simply say the diagram looks good. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Draw the fictional library’s logical network.",
+            "Use the supplied course symbol reference.",
+            "Annotate links, addresses and a traffic trace."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "No copied real network configuration is needed. Check server placement, wireless access, local switching and external routing. Teacher checks visual conventions. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "A text chain lists the devices in order.",
+            "A: It replaces every required course symbol drawing.",
+            "B: It helps plan the later symbol drawing."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "B. A conceptual chain supports reasoning, while the course diagram still needs the specified symbols and labels. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Explain one complete local path.",
+            "Identify one remaining symbol or address correction."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "Check the explanation agrees with the learner’s drawing rather than a memorised generic chain. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        }
+      ]
+    },
+    {
+      "id": "u1-w13-l03",
+      "lesson": 3,
+      "title": "Access controls in a network design",
+      "chapter": "network-design",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#network-design",
+      "prepare": "Open the network-design chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "Access controls in a network design",
+          "body": [
+            "Unit 1 · Week 13 · Lesson 3",
+            "Match controls to unauthorised-access risks."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Match controls to unauthorised-access risks. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "Should reading resources also permit changing staff files?",
+            "What does a firewall rule decide?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "Read access does not imply write permission. A firewall applies configured traffic rules, while application/file permissions control other operations. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Threat and control links",
+          "table": [
+            [
+              "Need or risk",
+              "Useful control",
+              "Limit"
+            ],
+            [
+              "Students read resources",
+              "Limited individual permissions",
+              "Configuration must be checked"
+            ],
+            [
+              "Guest isolation",
+              "Separate network and policy",
+              "Separation alone is insufficient"
+            ],
+            [
+              "Unwanted traffic",
+              "Narrow firewall rules",
+              "Allowed traffic can still be harmful"
+            ],
+            [
+              "Software flaws",
+              "Managed updates",
+              "New flaws may remain"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "Introduce least privilege as giving only required access. Distinguish permitted connectivity from permission to edit a resource. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A shared administrator login",
+          "body": [
+            "Several learners use one administrator account.",
+            "Explain excessive privilege and weak accountability.",
+            "Propose a narrower access arrangement."
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "Separate limited accounts reduce unnecessary power and improve activity attribution. Logs still need integrity and context. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A rule with a purpose",
+          "body": [
+            "State a required connection.",
+            "State an unwanted operation.",
+            "Choose controls at the relevant boundaries."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "A web connection rule does not grant export or file-edit permission. Ask learners where each decision is enforced. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Choose two controls for the library.",
+            "Explain the threat each addresses.",
+            "Write one allowed and one refused test."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "Use paper predictions. Keep legitimate student reading available while protecting staff changes. No live rule deployment. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "Guest devices use a separate network.",
+            "A: No further access policy is needed.",
+            "B: Rules must still enforce the intended boundary."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "B. Separation structures communication but its configured forwarding and permissions determine access. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Explain least privilege using the library.",
+            "State a limitation of one proposed control."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "Require a particular role, operation and resource, not merely the word security. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        }
+      ]
+    },
+    {
+      "id": "u1-w13-l04",
+      "lesson": 4,
+      "title": "Bottlenecks and network performance",
+      "chapter": "network-design",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#network-design",
+      "prepare": "Open the network-design chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "Bottlenecks and network performance",
+          "body": [
+            "Unit 1 · Week 13 · Lesson 4",
+            "Use evidence to distinguish capacity, rate and delay."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Use evidence to distinguish capacity, rate and delay. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "What might make Wi-Fi slower at busy times?",
+            "Does a faster switch fix every slow download?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "Shared airtime, interference and service/link load are possibilities. A change helps only if it addresses the limiting resource. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Three performance measures",
+          "table": [
+            [
+              "Measure",
+              "Meaning",
+              "Example question"
+            ],
+            [
+              "Bandwidth",
+              "Capacity",
+              "What rate can this link support?"
+            ],
+            [
+              "Throughput",
+              "Achieved transfer rate",
+              "What rate do users actually get?"
+            ],
+            [
+              "Latency",
+              "Delay",
+              "How long does a response take?"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "These measures are related but not interchangeable. Do not treat a latency measurement as a bulk-throughput test. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "An ideal transfer",
+          "body": [
+            "Data size: 80 megabits.",
+            "Available constant rate: 20 megabits per second.",
+            "Calculate time, then state the assumptions."
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "80 / 20 = 4 seconds in the ideal model. Real transfers include overhead, delay and competing demand. A byte has eight bits. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A busy wireless room",
+          "body": [
+            "Collect client count and signal observations.",
+            "Compare wired and wireless experiences.",
+            "Explain which result would support your hypothesis."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "A wireless-only slowdown suggests investigating the radio link, but does not prove a single cause. A busy remote service could affect both. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Calculate 120 megabits at 20 megabits per second.",
+            "Investigate a fictional slowdown with two hypotheses.",
+            "Justify a targeted improvement."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "Ideal time is 6 seconds. Check units and whether the proposed evidence distinguishes local wireless, uplink or service limitations. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "An overloaded remote service limits a download.",
+            "A: A new local switch must double its speed.",
+            "B: The remote limit may remain unchanged."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "B. Increasing capacity outside the bottleneck need not improve the end-to-end result. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Distinguish bandwidth, throughput and latency.",
+            "Link one improvement to one observed constraint."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "A valid recommendation connects evidence, cause and effect without promising universal speed gains. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-design. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        }
+      ]
+    }
+  ]
+}

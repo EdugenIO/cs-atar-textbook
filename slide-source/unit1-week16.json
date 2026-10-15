@@ -1,0 +1,462 @@
+{
+  "unit": 1,
+  "week": 16,
+  "chapter": "exam-preparation",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#exam-preparation",
+  "references": [
+    "https://docs.python.org/3/tutorial/controlflow.html",
+    "https://docs.python.org/3/tutorial/inputoutput.html",
+    "https://www.rfc-editor.org/rfc/rfc1122",
+    "https://www.rfc-editor.org/rfc/rfc1918",
+    "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+  ],
+  "lessons": [
+    {
+      "id": "u1-w16-l01",
+      "lesson": 1,
+      "title": "Written practice and clear reasoning",
+      "chapter": "exam-preparation",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#exam-preparation",
+      "prepare": "Open the exam-preparation chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "Written practice and clear reasoning",
+          "body": [
+            "Unit 1 · Week 16 · Lesson 1",
+            "Explain your method on an original revision sample."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Explain your method on an original revision sample. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "What do explain and trace ask you to show?",
+            "How can you predict an output before running code?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "Explain links a mechanism to an outcome. Trace records changing state in order. Use the supplied task instructions and current course guidance. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "A written response plan",
+          "table": [
+            [
+              "Prompt",
+              "Useful response"
+            ],
+            [
+              "Predict",
+              "Expected output with assumptions"
+            ],
+            [
+              "Trace",
+              "Ordered variable states"
+            ],
+            [
+              "Explain",
+              "Mechanism and consequence"
+            ],
+            [
+              "Justify",
+              "Choice linked to requirements"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "Use the original Unit 1 practice paper as optional revision. It is not an official paper or a grade predictor. No marks need recording. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "The Q3 maximum trace",
+          "body": [
+            "Read [6, -2, 6].",
+            "Track first-maximum index, value and sum.",
+            "State what happens for empty input."
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "Index 0, maximum 6 and total 10. Equality keeps the first maximum. Empty input requires checking before reading element zero. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Reading a compound question",
+          "body": [
+            "Underline each requested result.",
+            "Separate calculation, trace and explanation.",
+            "Predict the result before viewing the answer."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "Q3 requests more than a largest value. Model checking every requested part without implying a marking allocation. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Attempt a chosen section of the original practice paper.",
+            "Show reasoning and use the chapter examples if needed.",
+            "Keep unanswered steps visible for the next lesson."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "Use questions-only file first and explained answers afterwards. Timing is optional and should fit class needs. No scoring or submission requirement. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "A maximum value is correct but its position is missing.",
+            "A: Every part of a position question is answered.",
+            "B: The requested index still needs explaining."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "B. Answer the actual requirement. A value and its location are different outputs. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Identify one response you can explain confidently.",
+            "Name one step you want to revisit."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "Use the specific question and missing reasoning step to plan feedback, not a numeric ranking. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        }
+      ]
+    },
+    {
+      "id": "u1-w16-l02",
+      "lesson": 2,
+      "title": "Explained answers and corrections",
+      "chapter": "exam-preparation",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#exam-preparation",
+      "prepare": "Open the exam-preparation chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "Explained answers and corrections",
+          "body": [
+            "Unit 1 · Week 16 · Lesson 2",
+            "Use explanations to identify why a response needs repair."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Use explanations to identify why a response needs repair. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "How can a correct result have an unclear explanation?",
+            "Why should you preserve your first attempt?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "A first attempt shows the original reasoning. A correction should identify what changed and why, not simply replace it with the answer. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "A correction record",
+          "table": [
+            [
+              "Record",
+              "Purpose"
+            ],
+            [
+              "Original reasoning",
+              "Shows the starting misconception"
+            ],
+            [
+              "Explained comparison",
+              "Locates the mistaken step"
+            ],
+            [
+              "Corrected rule",
+              "States the repair"
+            ],
+            [
+              "Fresh example",
+              "Checks independent transfer"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "Use the public explained answers. Equivalent valid reasoning is acceptable. Avoid scores and grade predictions. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "The boundary at 50",
+          "body": [
+            "The rule gives free delivery for totals at least 50.",
+            "Compare > 50 with >= 50.",
+            "Test 49.99, 50 and 50.01."
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "Correct charges are 5, 0, 0. The strict greater-than version fails only the exact-boundary case among these three. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "A response with missing evidence",
+          "body": [
+            "Q9 asks for a layer and its role or example.",
+            "Compare a name-only response with a fuller explanation."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "A suitable example pairs Application with a web protocol or service role. A label alone may leave part of the prompt unanswered. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Finish the chosen practice questions.",
+            "Compare with the explained answers.",
+            "Correct two reasoning gaps and try changed examples."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "Use teacher feedback for course diagram symbols and coherent alternative designs. Self-checking cannot certify every drawing convention. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "A learner copies the full model answer.",
+            "A: A changed example can check understanding.",
+            "B: Copying alone proves the skill is secure."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "A. Ask the learner to explain the rule in their own words before trying fresh data. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Explain one original error and the corrected rule.",
+            "Show a fresh example that uses the rule."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "A good response identifies the cause and demonstrates the repair with changed values or conditions. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        }
+      ]
+    },
+    {
+      "id": "u1-w16-l03",
+      "lesson": 3,
+      "title": "Targeted practice with fresh examples",
+      "chapter": "exam-preparation",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#exam-preparation",
+      "prepare": "Open the exam-preparation chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "Targeted practice with fresh examples",
+          "body": [
+            "Unit 1 · Week 16 · Lesson 3",
+            "Test a repaired idea beyond the original question."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Test a repaired idea beyond the original question. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "Which correction needs a fresh test?",
+            "What feature should change while the rule stays the same?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "Keep the underlying concept and change data or context. Examples include different negative values, a changed threshold or a new destination subnet. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Changed-data choices",
+          "table": [
+            [
+              "Concept",
+              "Fresh example"
+            ],
+            [
+              "First maximum",
+              "[-9, -2, -2]"
+            ],
+            [
+              "Input boundary",
+              "Accept 0 through 10 inclusive"
+            ],
+            [
+              "Append records",
+              "A second run with quantity 4"
+            ],
+            [
+              "Local network",
+              "192.168.40.8/24 to 192.168.41.8"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "Expected first maximum index 1/value -2; boundary checks -1,0,10,11; previous file records remain; remote subnet needs routing. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "A first-maximum transfer",
+          "body": [
+            "Trace [-9, -2, -2] using a strict > update.",
+            "Keep the index separate from the stored value."
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "Best index changes from 0 to 1 and stays 1 at equality. Starting maximum value at zero would fail for this all-negative list. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "The new boundary",
+          "body": [
+            "The allowed whole-number range is 0 to 10.",
+            "Choose tests just outside and at both ends."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "Useful tests are -1,0,1,9,10,11 and invalid text. Distinguish conversion failure from range rejection. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Choose two earlier weak ideas.",
+            "Create fresh tests and predict answers.",
+            "Complete them independently, then check explanations."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "A partner can change values after the learner’s first prediction. Keep a concrete error/correction record for any remaining gap. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "Only positive lists were used to test a maximum search.",
+            "A: That proves an initial-zero algorithm is correct.",
+            "B: An all-negative case can reveal another fault."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "B. Test families should challenge different assumptions, not repeat the same ordinary case. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Give one changed case and its result.",
+            "Explain why it checks your earlier misconception."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "The explanation should connect the new data to the original faulty assumption or boundary. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        }
+      ]
+    },
+    {
+      "id": "u1-w16-l04",
+      "lesson": 4,
+      "title": "Unit 1 review and future practice",
+      "chapter": "exam-preparation",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#exam-preparation",
+      "prepare": "Open the exam-preparation chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "Unit 1 review and future practice",
+          "body": [
+            "Unit 1 · Week 16 · Lesson 4",
+            "Explain key ideas and choose a realistic next step."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Explain key ideas and choose a realistic next step. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "Explain one function result and one network path.",
+            "Name a reliable method for checking your reasoning."
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "Use short independent explanations. Accept traces, tests and requirement-based comparisons with clear assumptions. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Evidence across the unit",
+          "table": [
+            [
+              "Area",
+              "A useful demonstration"
+            ],
+            [
+              "Programming",
+              "Trace and test a changed case"
+            ],
+            [
+              "Files",
+              "Retain records across two runs"
+            ],
+            [
+              "Design",
+              "Connect requirement, implementation and test"
+            ],
+            [
+              "Networks",
+              "Explain path, control and limitation"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "These examples support learning review. They do not certify complete syllabus coverage or predict a result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "A realistic next action",
+          "body": [
+            "Priority: distinguish local and remote traffic.",
+            "Action: trace two changed /24 destinations.",
+            "Later check: explain the gateway decision unaided."
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "A small specific action is easier to follow than revising everything. Use evidence from the earlier practice to choose it. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Peer explanation",
+          "body": [
+            "Explain one corrected misconception without notes.",
+            "Invite a partner to change an assumption.",
+            "Revise the explanation if the change matters."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "Example: change a mask, a tie rule or a file mode. Check the learner notices which conclusion depends on that assumption. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Complete a short mixed retrieval activity.",
+            "Write one independent programming explanation.",
+            "Write one network explanation and a later practice plan."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "Use the textbook’s current practice questions. Any official examination instructions or school scheduling must come from the current authorised source, not this slide deck. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "One successful sample means every skill is mastered.",
+            "A: Further changed examples can reveal gaps.",
+            "B: No further checking is useful."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "A. Sampling gives limited evidence. Practical implementation, diagrams and later retrieval check different aspects. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Name one idea you can explain clearly.",
+            "Choose one next practice action and when to retry it."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "End with concrete progress and a realistic plan. Weeks 17–18 remain the planner’s examination block, with no new textbook lessons added here. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+        }
+      ]
+    }
+  ]
+}

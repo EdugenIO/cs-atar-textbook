@@ -1,0 +1,474 @@
+{
+  "unit": 1,
+  "week": 12,
+  "chapter": "addressing",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#addressing",
+  "references": [
+    "https://www.rfc-editor.org/rfc/rfc1122",
+    "https://www.rfc-editor.org/rfc/rfc1918",
+    "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+  ],
+  "lessons": [
+    {
+      "id": "u1-w12-l01",
+      "lesson": 1,
+      "title": "IP addresses and network interfaces",
+      "chapter": "addressing",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#addressing",
+      "prepare": "Open the addressing chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "IP addresses and network interfaces",
+          "body": [
+            "Unit 1 · Week 12 · Lesson 1",
+            "Interpret IPv4 and IPv6 addresses and their roles."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Interpret IPv4 and IPv6 addresses and their roles. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "Which device role moves packets between networks?",
+            "Which layer uses IP?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "A router performs IP forwarding between networks. IP belongs to the Internet layer in the DoD model. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Address families",
+          "table": [
+            [
+              "Feature",
+              "IPv4",
+              "IPv6"
+            ],
+            [
+              "Length",
+              "32 bits",
+              "128 bits"
+            ],
+            [
+              "Common notation",
+              "Four decimal groups",
+              "Hexadecimal groups"
+            ],
+            [
+              "Example context",
+              "192.168.40.12",
+              "2001:db8::12"
+            ],
+            [
+              "Identifies",
+              "Network interface",
+              "Network interface"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "An interface can have multiple addresses. Do not describe an IP as a permanent unique label for an entire person or device. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "An interface address",
+          "body": [
+            "Read 192.168.40.12 as four decimal groups.",
+            "Each group ranges from 0 to 255.",
+            "The /24 describes the network-prefix length."
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "Keep address and prefix separate. The larger IPv6 space follows from its larger address length, not from hexadecimal notation alone. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Address claims",
+          "body": [
+            "Explain why 192.168.40.300 is invalid IPv4 text.",
+            "Compare a numeric address with a website name."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "300 exceeds one octet’s range. A website name is not an IP address, though DNS may provide address records for it. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Compare IPv4 and IPv6 without copying the table.",
+            "Explain address, interface and prefix.",
+            "Give one invalid IPv4 example and its reason."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "Check 32 versus 128 bits, correct common notation and a reasoned invalid-octet example. Use only synthetic examples. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "IPv6 has a larger address space mainly because it uses",
+            "A: 128 bits instead of 32.",
+            "B: letters instead of decimal digits."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "A. Notation represents values. Address length determines the number of available bit patterns. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Explain the role of an IP address.",
+            "State why its subnet information also matters."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "It identifies an interface for IP communication. The sender uses its mask/prefix to judge whether a destination is local. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        }
+      ]
+    },
+    {
+      "id": "u1-w12-l02",
+      "lesson": 2,
+      "title": "Masks and local destinations",
+      "chapter": "addressing",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#addressing",
+      "prepare": "Open the addressing chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "Masks and local destinations",
+          "body": [
+            "Unit 1 · Week 12 · Lesson 2",
+            "Compare network addresses under a /24 mask."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Compare network addresses under a /24 mask. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "What does /24 identify?",
+            "How many bits are in an IPv4 address?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "The first 24 of 32 bits form the prefix here. The corresponding mask is 255.255.255.0. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A host at 192.168.40.12/24",
+          "table": [
+            [
+              "Destination",
+              "Network under /24",
+              "Decision"
+            ],
+            [
+              "192.168.40.80",
+              "192.168.40.0",
+              "Local"
+            ],
+            [
+              "192.168.41.80",
+              "192.168.41.0",
+              "Routing needed"
+            ],
+            [
+              "192.168.40.200",
+              "192.168.40.0",
+              "Local"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "Apply the sender’s mask to its own address and the destination. Comparing the first three groups is a shortcut specific to /24, not every mask. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A local-versus-remote comparison",
+          "body": [
+            "Write the sender’s network: 192.168.40.0.",
+            "Find the destination network using the same mask.",
+            "Compare the two network addresses."
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "For destination 192.168.41.80, network 192.168.41.0 differs. The ordinary host sends off-subnet traffic towards its configured local gateway. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Three destinations",
+          "body": [
+            "Classify 192.168.40.20 and 192.168.41.20. Also check 192.168.40.250.",
+            "Write the full address and network each time."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "Under the stated /24: local, remote, local. Do not accept a decision with no mask or assumption. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Create two local and two remote examples.",
+            "Use the same sender and /24 mask.",
+            "Explain one decision in a complete sentence."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "Check unique examples and full network values. Extension: explain why a different mask changes the comparison method, without adding unintroduced subnet arithmetic. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "Two addresses share their first three groups.",
+            "A: They must be local under every mask.",
+            "B: The configured mask is still needed."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "B. The simple comparison was based on /24. Other prefixes can make a different boundary. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Is 192.168.41.12 local to 192.168.40.12/24?",
+            "State the two network addresses."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "No. They are 192.168.41.0 and 192.168.40.0 under the sender’s /24 mask. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        }
+      ]
+    },
+    {
+      "id": "u1-w12-l03",
+      "lesson": 3,
+      "title": "Devices and connection media",
+      "chapter": "addressing",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#addressing",
+      "prepare": "Open the addressing chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "Devices and connection media",
+          "body": [
+            "Unit 1 · Week 12 · Lesson 3",
+            "Choose equipment by the job it needs to perform."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Choose equipment by the job it needs to perform. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "What happens when the destination is off-subnet?",
+            "What links wireless clients to the LAN?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "The host uses its local gateway. A wireless access point links wireless clients to the network. A router handles crossing IP networks. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Device responsibilities",
+          "table": [
+            [
+              "Device",
+              "Role"
+            ],
+            [
+              "Switch",
+              "Forward local frames"
+            ],
+            [
+              "Router",
+              "Forward IP packets between networks"
+            ],
+            [
+              "Access point",
+              "Connect wireless clients"
+            ],
+            [
+              "Firewall",
+              "Apply traffic rules"
+            ],
+            [
+              "Modem",
+              "Adapt signals for provider technology"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "One physical home device can combine roles. This course table describes basic roles, not every product configuration. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A fixed desk and a mobile tablet",
+          "body": [
+            "A desk needs a reliable nearby wired connection.",
+            "A tablet needs mobility around the room.",
+            "Explain media and device choices for each."
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "UTP and a switch can fit a nearby fixed desk. Wi-Fi and an access point support mobility. Judge distance, interference and capacity before choosing. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A second building",
+          "body": [
+            "Compare copper, fibre and wireless.",
+            "Ask about distance and electromagnetic interference.",
+            "State a missing fact before choosing."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "Fibre can suit longer inter-building links and resists electromagnetic interference. Installation and supported distances still matter. Do not invent distances or prices. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Recommend connections for a library and nearby building.",
+            "Name each device’s job.",
+            "Explain a trade-off and an assumption."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "Separate the local switch, routing boundary and access point roles. A media recommendation must fit stated distance, mobility and reliability requirements. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "A wireless client reaches a wired server on its LAN.",
+            "A: An access point provides the wireless link.",
+            "B: A modem replaces every local device."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "A. A provider-connection modem performs a different role. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Distinguish switch, router and access point.",
+            "Choose one medium and justify its use."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "Look for local frames, between-network packets and wireless access, followed by a scenario-specific media justification. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        }
+      ]
+    },
+    {
+      "id": "u1-w12-l04",
+      "lesson": 4,
+      "title": "A consistent address plan",
+      "chapter": "addressing",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#addressing",
+      "prepare": "Open the addressing chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "A consistent address plan",
+          "body": [
+            "Unit 1 · Week 12 · Lesson 4",
+            "Allocate usable addresses without duplicates."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Allocate usable addresses without duplicates. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "Which address is the network for 192.168.40.12/24?",
+            "Why must interface allocations be unique?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "The network is 192.168.40.0. Duplicate addresses on the network make delivery and ownership ambiguous. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Library practice plan",
+          "table": [
+            [
+              "Role",
+              "Address"
+            ],
+            [
+              "Network",
+              "192.168.40.0/24"
+            ],
+            [
+              "Gateway",
+              "192.168.40.1"
+            ],
+            [
+              "Server",
+              "192.168.40.10"
+            ],
+            [
+              "Desktop range",
+              "192.168.40.20–31"
+            ],
+            [
+              "Broadcast",
+              "192.168.40.255"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "For this ordinary /24, do not allocate .0 or .255 to hosts. The twelve desktops need twelve distinct addresses. This is a paper plan, not a deployment instruction. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A gateway mismatch",
+          "body": [
+            "Client: 192.168.40.12/24",
+            "Configured gateway: 192.168.41.1",
+            "Explain the mismatch before correcting the plan."
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "The gateway is outside the client’s stated /24 local subnet. In this ordinary directly connected example, choose the intended reachable local gateway .40.1. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Allocating mobile clients",
+          "body": [
+            "Keep server and gateway addresses reserved.",
+            "Add invented wireless-client allocations.",
+            "Check every address against the table."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "Use distinct unused host addresses, such as .40.40 onwards. Note that operational DHCP needs configuration; a paper allocation does not configure it. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Plan addresses for 12 desks, 18 clients and a server.",
+            "State the common mask and gateway.",
+            "Check uniqueness and special addresses."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "Accept a different coherent allocation. Count all required interfaces and document reservations. Avoid changing any school device configuration. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "The server already uses 192.168.40.10.",
+            "A: A desktop can reuse it because names differ.",
+            "B: The desktop needs a different host address."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "B. Different labels do not resolve a duplicate interface address on the same subnet. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Give a valid server and client allocation.",
+            "Explain the role of the gateway and mask."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "Check distinct usable host addresses, local gateway and the /24 network comparison. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#addressing. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        }
+      ]
+    }
+  ]
+}

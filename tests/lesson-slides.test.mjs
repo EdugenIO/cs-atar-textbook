@@ -2,7 +2,9 @@ import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:asser
 const root=new URL('../',import.meta.url);
 const weeks=fs.readdirSync(new URL('slide-source/',root)).filter(name=>/^unit\d+-week\d+\.json$/.test(name)).sort().map(name=>JSON.parse(fs.readFileSync(new URL('slide-source/'+name,root),'utf8')));
 const data={lessons:weeks.flatMap(week=>week.lessons)};
-assert.equal(data.lessons.length,38);
+assert.equal(data.lessons.length,64);
+const expectedIds=Array.from({length:16},(_,w)=>Array.from({length:4},(_,l)=>`u1-w${String(w+1).padStart(2,'0')}-l${String(l+1).padStart(2,'0')}`)).flat();
+assert.deepEqual(data.lessons.map(l=>l.id).sort(),expectedIds.sort(),'Every Unit 1 teaching lesson has exactly one deck');
 const context=vm.createContext({});
 vm.runInContext(fs.readFileSync(new URL('dist/lesson-slide-resources.js',root),'utf8'),context);
 const registry=vm.runInContext('lessonSlideResources',context);
@@ -16,8 +18,8 @@ for(const lesson of data.lessons){
   for(const file of [`dist/slides/${lesson.id}.pptx`,`dist/slides/notes/${lesson.id}.html`])assert.ok(fs.existsSync(new URL(file,root)));
   assert.ok(fs.statSync(new URL(`dist/slides/${lesson.id}.pptx`,root)).size>10000);
 }
-assert.equal(Object.keys(registry).length,38);
-console.log('Thirty-eight eight-slide lesson decks, notes, timings and planner availability passed.');
+assert.equal(Object.keys(registry).length,64);
+console.log('Sixty-four eight-slide lesson decks, notes, timings and planner availability passed.');
 
 
 

@@ -1,0 +1,467 @@
+{
+  "unit": 1,
+  "week": 14,
+  "chapter": "network-review",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#network-review",
+  "references": [
+    "https://www.rfc-editor.org/rfc/rfc1122",
+    "https://www.rfc-editor.org/rfc/rfc1918",
+    "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+  ],
+  "lessons": [
+    {
+      "id": "u1-w14-l01",
+      "lesson": 1,
+      "title": "Traffic paths and network explanations",
+      "chapter": "network-review",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#network-review",
+      "prepare": "Open the network-review chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "Traffic paths and network explanations",
+          "body": [
+            "Unit 1 · Week 14 · Lesson 1",
+            "Explain a path using addressing and device functions."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Explain a path using addressing and device functions. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "Which job belongs to a switch?",
+            "When does a client use its gateway?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "A basic switch forwards local frames. The client ordinarily uses the gateway for off-subnet destinations under its mask. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Two library destinations",
+          "table": [
+            [
+              "Client",
+              "Destination",
+              "Path requirement"
+            ],
+            [
+              "192.168.40.20/24",
+              "192.168.40.10",
+              "Local switching"
+            ],
+            [
+              "192.168.40.20/24",
+              "198.51.100.20",
+              "Local gateway and routing"
+            ],
+            [
+              "Wireless local client",
+              "192.168.40.10",
+              "Access point plus local network"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "Use full addresses in the spoken explanation. A remote example such as 198.51.100.20 is fictional documentation data, not a live target. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A complete explanation",
+          "body": [
+            "Need: retrieve a file from a remote network.",
+            "Address comparison: destination is not local.",
+            "Role: the gateway forwards towards that network."
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "Model the link between the requirement, mask comparison and routing action. A device name alone does not explain the outcome. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Local and remote traces",
+          "body": [
+            "Trace one wired request to the local server.",
+            "Trace one wireless request to a remote service.",
+            "Compare the roles that differ."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "The wireless trace adds the access point. The remote destination adds the gateway/routing role. Keep the physical drawing consistent with the explanation. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Write two traffic-path explanations.",
+            "State addresses, mask and relevant devices.",
+            "Have a partner identify an unsupported step."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "Use need, device, action and outcome as a writing scaffold. Learners then revise independently. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "Two hosts are on the same stated subnet.",
+            "A: Basic local communication can use switching.",
+            "B: Every local frame must cross the Internet."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "A. Do not confuse the presence of a router with a requirement to route every local exchange. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Explain why one destination is remote.",
+            "Name the routing action that follows."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "Require the actual network comparison and gateway role. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        }
+      ]
+    },
+    {
+      "id": "u1-w14-l02",
+      "lesson": 2,
+      "title": "The library design workshop",
+      "chapter": "network-review",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#network-review",
+      "prepare": "Open the network-review chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "The library design workshop",
+          "body": [
+            "Unit 1 · Week 14 · Lesson 2",
+            "Combine addressing, media and access decisions."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Combine addressing, media and access decisions. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "Which /24 addresses have special roles?",
+            "What must remain unique in an address plan?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "For the ordinary practice /24, .0 is network and .255 broadcast. Host interface allocations must be distinct, including the gateway and server. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Library requirements",
+          "table": [
+            [
+              "Requirement",
+              "Evidence to produce"
+            ],
+            [
+              "12 desks and 18 mobile clients",
+              "Device and address plan"
+            ],
+            [
+              "Local server access",
+              "Traffic traces"
+            ],
+            [
+              "Neighbouring building",
+              "Justified media choice"
+            ],
+            [
+              "Protect staff files",
+              "Role and permission tests"
+            ],
+            [
+              "Busy-time slowdown",
+              "Hypothesis and measurement plan"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "Use the chapter’s unchanged fictional brief. Do not invent a precise building distance or price. State assumptions where the scenario lacks facts. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A server allocation",
+          "body": [
+            "Reserve 192.168.40.1 for the gateway.",
+            "Reserve 192.168.40.10 for the server.",
+            "Check proposed desktop addresses against both."
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "An allocation such as .40.20–31 gives twelve desktop addresses without reusing .1 or .10. Other coherent plans are acceptable. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A design critique",
+          "body": [
+            "Check a partner’s wireless connection and gateway.",
+            "Trace a local and remote request.",
+            "Challenge one untested performance claim."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "Require specific feedback about a link, address, access rule or evidence gap. Teacher checks the course diagram symbols. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Complete the library design and address table.",
+            "Explain two controls and a media choice.",
+            "Plan one test of a slowdown hypothesis."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "Look for complete coverage of the brief. Allow alternate justified designs. This is ungraded practice with public explained answers. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "A proposal gives fast equipment but no staff-file controls.",
+            "A: Speed alone meets every requirement.",
+            "B: The access requirement still needs evidence."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "B. Performance and access protection are separate requirements. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Name one requirement your design supports.",
+            "Show the drawing, address or test that supports it."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "Check concrete evidence against the brief rather than a general statement that the design works. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        }
+      ]
+    },
+    {
+      "id": "u1-w14-l03",
+      "lesson": 3,
+      "title": "Network scenario reasoning",
+      "chapter": "network-review",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#network-review",
+      "prepare": "Open the network-review chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "Network scenario reasoning",
+          "body": [
+            "Unit 1 · Week 14 · Lesson 3",
+            "Support each recommendation with a mechanism and limit."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Support each recommendation with a mechanism and limit. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "What evidence supports an access-control claim?",
+            "What does a ping reply establish?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "Use a specific permitted/refused operation test. Ping establishes an ICMP response for that test, not web-service correctness. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "An explanation structure",
+          "table": [
+            [
+              "Part",
+              "What to write"
+            ],
+            [
+              "Need",
+              "The required outcome"
+            ],
+            [
+              "Mechanism",
+              "Device, protocol or control action"
+            ],
+            [
+              "Evidence",
+              "Observation or predicted test"
+            ],
+            [
+              "Limit",
+              "What remains uncertain"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "Replace the old assessment slot with independent scenario practice. No mark allocation, submission condition or new graded task is introduced. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "An access recommendation",
+          "body": [
+            "Need: students read resources without editing staff files.",
+            "Control: individual roles and narrow permissions.",
+            "Evidence: a read succeeds and an unauthorised write fails."
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "Explain where the rule operates. A firewall alone may not control a permitted application’s file operations. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Three short scenarios",
+          "body": [
+            "Correct a gateway outside its client’s /24 subnet.",
+            "Explain an ICMP reply with a failed web service.",
+            "Investigate slower wireless transfers at busy times."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "Expected: check intended local gateway; investigate service/name/access factors separately; gather radio and load evidence. Keep alternative explanations visible. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Answer two unfamiliar network scenarios.",
+            "Use need, mechanism, evidence and limit.",
+            "Compare with the explained answers and revise."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "Support with a writing frame, then remove it for a fresh scenario. Accept equivalent technically coherent reasoning. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "A download is slow and the cause is unknown.",
+            "A: Buy the fastest router immediately.",
+            "B: Gather evidence about the limiting link or service."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "B. A diagnosis should justify the location and purpose of a change. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Write a recommendation for a fresh slowdown.",
+            "State one observation that could change your mind."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "Look for a testable hypothesis and a genuine alternative rather than unsupported certainty. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        }
+      ]
+    },
+    {
+      "id": "u1-w14-l04",
+      "lesson": 4,
+      "title": "Network corrections and fresh transfer",
+      "chapter": "network-review",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#network-review",
+      "prepare": "Open the network-review chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "Network corrections and fresh transfer",
+          "body": [
+            "Unit 1 · Week 14 · Lesson 4",
+            "Use feedback to improve an explanation independently."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Use feedback to improve an explanation independently. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "Which network error have you corrected this week?",
+            "What evidence showed that it was wrong?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "Let students choose an addressing, device-role, access or performance error. An exact correction is more useful than a confidence rating alone. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Common corrections",
+          "table": [
+            [
+              "Claim",
+              "More accurate reasoning"
+            ],
+            [
+              "Wi-Fi means WAN",
+              "Media and geographic scale differ"
+            ],
+            [
+              "Switch removes broadcasts",
+              "Basic switches still forward broadcasts"
+            ],
+            [
+              "Ping proves web access",
+              "ICMP and application tests differ"
+            ],
+            [
+              "More capacity fixes delay",
+              "Find the actual constraint"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "Use only errors present in learners’ work. Broadcasts consume resources within a broadcast domain, while routers ordinarily separate those domains. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A corrected explanation",
+          "body": [
+            "Original: a new switch fixes all slow downloads.",
+            "Correction: locate the bottleneck first.",
+            "Transfer: what if only wireless users are affected?"
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "The transfer suggests a wireless-specific investigation, while other evidence may still change the hypothesis. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Explain the correction",
+          "body": [
+            "Show your original reasoning.",
+            "Name the exact mistaken rule.",
+            "Try changed data without the worked answer."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "Partners explain the rule rather than copy corrected sentences. Example: change a destination network while keeping the sender mask fixed. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Complete a fresh address and traffic-path case.",
+            "Add an access-control test and a performance limit.",
+            "Choose one priority for consolidation."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "Collect a short independent explanation for teacher planning. It remains an ungraded practice record. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "You copied the explained answer accurately.",
+            "A: That alone shows transfer to a new situation.",
+            "B: A changed example is needed to check understanding."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "B. Accurate copying does not show that the underlying decision rule can be applied independently. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Explain one corrected rule from memory.",
+            "Write a changed example to revisit next week."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "Check the new example exercises the same concept with different data or conditions. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#network-review. Technical/course references: https://www.rfc-editor.org/rfc/rfc1122 https://www.rfc-editor.org/rfc/rfc1918 https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF"
+        }
+      ]
+    }
+  ]
+}

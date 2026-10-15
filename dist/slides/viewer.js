@@ -26,7 +26,7 @@ if (!deck) {
     main.append(article);
   });
   const downloads = document.getElementById('downloads');
-  for (const [href, label] of [[`${deck.id}.pptx`, 'Download editable PowerPoint'], [`notes/${deck.id}.html`, 'Teacher notes']]) {
+  for (const [href, label] of [[`${deck.id}.pptx`, 'Download editable PowerPoint'], [`notes/${deck.id}.html`, 'Teacher notes'], ['unit1-all-lesson-slides.zip', 'Download all Unit 1 PowerPoints']]) {
     const link = element('a', label, 'download'); link.href = href; if (href.endsWith('.pptx')) link.download = ''; downloads.append(link);
   }
   function show(moveFocus = false) {

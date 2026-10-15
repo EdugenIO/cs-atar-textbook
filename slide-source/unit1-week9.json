@@ -243,6 +243,227 @@
           "minutes": 5
         }
       ]
+    },
+    {
+      "id": "u1-w09-l03",
+      "lesson": 3,
+      "title": "Calculation and input workshop",
+      "chapter": "design",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#design",
+      "prepare": "Open the design chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "Calculation and input workshop",
+          "body": [
+            "Unit 1 · Week 9 · Lesson 3",
+            "Connect validated input to a tested cost calculation."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Connect validated input to a tested cost calculation. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "What should quantity zero mean?",
+            "Where should input conversion happen?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "Zero is valid and costs zero cents. Conversion and range checks belong at the input boundary. A calculation function receives a validated quantity. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "The order contract",
+          "table": [
+            [
+              "Part",
+              "Expected behaviour"
+            ],
+            [
+              "Input",
+              "Whole quantity of zero or more"
+            ],
+            [
+              "Calculation",
+              "quantity × 300 cents"
+            ],
+            [
+              "Rejected input",
+              "Explain and ask again"
+            ],
+            [
+              "Accepted input",
+              "Return the validated quantity"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "Use the project requirements. Keep prices in integer cents. No need to add accounts or a new interface. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Predicted costs",
+          "body": [
+            "Predict costs for quantities 0, 1 and 4.",
+            "Identify the input and returned result."
+          ],
+          "code": "def order_cost(quantity):\n    return quantity * 300",
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "Expected costs are 0, 300 and 1200 cents. Ask learners to predict before running. The calculation assumes successful validation. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Retry trace",
+          "body": [
+            "Trace inputs \"three\", \"-1\", \"0\".",
+            "Which input reaches the calculation?"
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "Conversion fails for three. Negative one converts but fails the range rule. Zero is accepted and costs zero. Use driver/navigator roles, then swap. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Complete the input and calculation modules.",
+            "Test invalid text, a negative value, zero and four.",
+            "Record predicted and actual results."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "Use a separate project copy. Accept equivalent function names. Check the retry loop actually continues and the calculation returns a value. Support with the chapter example, then ask for an independent changed input. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "The function prints 1200 but returns no value.",
+            "A: The caller receives 1200.",
+            "B: The caller receives None."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "B. Printing displays text. A normally completed call without an explicit returned value gives None. Ask what cost = order_cost(4) would store. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Explain how zero travels through your modules.",
+            "Name one failed test and its correction."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "Look for successful conversion, accepted range, returned zero cost and actual retest evidence. Keep storage integration for the next workshop. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+        }
+      ]
+    },
+    {
+      "id": "u1-w09-l04",
+      "lesson": 4,
+      "title": "Storage and recovery workshop",
+      "chapter": "design",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#design",
+      "prepare": "Open the design chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "slides": [
+        {
+          "title": "Storage and recovery workshop",
+          "body": [
+            "Unit 1 · Week 9 · Lesson 4",
+            "Save accepted orders and preserve earlier records."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Explain the goal and the expected independent outcome. Save accepted orders and preserve earlier records. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Retrieval and explanation",
+          "body": [
+            "What does append mode retain?",
+            "When should an order enter the session list?"
+          ],
+          "minutes": 5,
+          "strategy": "Individual retrieval, then partner comparison",
+          "notes": "Append retains earlier file text. Follow the project contract: successful saving precedes adding the accepted order to the session list. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Storage checks",
+          "table": [
+            [
+              "Case",
+              "Expected result"
+            ],
+            [
+              "First successful save",
+              "One complete record"
+            ],
+            [
+              "Second run and save",
+              "Earlier record remains"
+            ],
+            [
+              "Write failure",
+              "Clear failure and no false success"
+            ],
+            [
+              "Empty session",
+              "No maximum-index access"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked table and teacher explanation",
+          "notes": "Use only disposable synthetic files. Check the agreed CSV fields and record separator in the starter. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Two runs, two records",
+          "body": [
+            "Predict the file after saving quantities 2 and 5.",
+            "Compare append with write mode."
+          ],
+          "minutes": 10,
+          "strategy": "Predict, model and explain",
+          "notes": "With the agreed newline format, append gives two records. Opening in w truncates existing contents. Demonstrate only in a disposable folder. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "A failed save",
+          "body": [
+            "A save function reports failure.",
+            "Trace whether the session list should change."
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice",
+          "notes": "It should remain unchanged under this project contract. Do not claim success or create a summary entry for an unsaved order. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Independent practice",
+          "body": [
+            "Connect storage to your accepted-order workflow.",
+            "Test two runs and a simulated save failure.",
+            "Keep a safe copy before changing files."
+          ],
+          "minutes": 12,
+          "strategy": "Independent application with optional support",
+          "notes": "Use a stub returning False or the supplied controlled failure fixture. Do not change OS permissions on important files. Check before/after session state and file contents. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "A choice to explain",
+          "body": [
+            "Only the newest order survives the second run.",
+            "A: Inspect the file mode and record-writing path.",
+            "B: Add more input prompts."
+          ],
+          "minutes": 5,
+          "strategy": "Whole-class response and justification",
+          "notes": "A addresses the reported storage failure. Verify a correction with two runs rather than changing unrelated interface behaviour. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+        },
+        {
+          "title": "Exit explanation",
+          "body": [
+            "Show the retained records from two runs.",
+            "Explain the outcome when saving fails."
+          ],
+          "minutes": 5,
+          "strategy": "Individual reflection and fresh explanation",
+          "notes": "Expected: both valid records remain and a failed save does not falsely enter session data. Unfinished work becomes a specific next action. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+        }
+      ]
     }
   ]
 }
