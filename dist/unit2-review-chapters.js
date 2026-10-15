@@ -21,7 +21,7 @@ chapters.push({
     ],
     [
       "Create and reconcile a fresh model",
-      "<p>Model Member, Activity, Leader and Participation under the workbook rules. Resolve Member–Activity history using the three-part participation key and document the fields. Compare this with a separate optional one-to-one locker allocation: a foreign key needs an appropriate uniqueness rule to constrain one-to-one.</p><p>Now compare your conceptual data dictionary with the actual starter SQL. Look for these differences:</p><ul><li>CategoryName is not UNIQUE.</li><li>TEXT alone does not enforce the specified lengths or identifier patterns.</li><li>Returned has no DEFAULT, despite the earlier conceptual rule.</li></ul><p>For each difference, record the intended rule and what the code actually enforces. Then justify a constraint or a change to the documentation. Calendar dates and overlapping loans still need separate checks.</p>"
+      "<p>Use the workbook rules to model Member, Activity, Leader and Participation. Participation records the link between a member, an activity and a term. Use that three-part key, then document its fields.</p><p>Compare this with an optional one-to-one locker allocation. A foreign key alone allows repeated references; an appropriate uniqueness rule is also needed to limit the relationship to one-to-one.</p><p>Now compare your conceptual data dictionary with the actual starter SQL. Look for these differences:</p><ul><li>CategoryName is not UNIQUE.</li><li>TEXT alone does not enforce the specified lengths or identifier patterns.</li><li>Returned has no DEFAULT, despite the earlier conceptual rule.</li></ul><p>For each difference, record the intended rule and what the code actually enforces. Then justify a constraint or a change to the documentation. Calendar dates and overlapping loans still need separate checks.</p>"
     ],
     [
       "Integrate and explain",
@@ -75,7 +75,7 @@ chapters.push({
   "sections": [
     [
       "Diagnose without the answer key",
-      "<p>Without checking the answers, explain a key and its reference, 2NF versus 3NF, an inner join, CIA and AAA, authentication factors, a cipher, and a privacy or testing boundary.</p><p>Notice where you hesitate or rely on a label without explaining it. Write a precise question, such as “Why does an inner join leave out a borrower with no loans?” That question helps you choose useful practice.</p>"
+      "<p>Without checking the answers, explain a key and its reference, 2NF versus 3NF, an inner join, CIA and AAA, authentication factors, a cipher, and a privacy or testing boundary.</p><p>Notice where you hesitate or can name a term without explaining it. Turn that gap into a question: “Why does an inner join leave out a borrower with no loans?”</p><p>Use your question to choose practice. Afterwards, answer it again without looking at the explanation.</p>"
     ],
     [
       "Work through targeted stations",
@@ -143,7 +143,7 @@ chapters.push({
     ],
     [
       "Mark, correct and explain limits",
-      "<p>After you try a question, use the separate guide to check your reasoning:</p><ol><li>Compare the rule, query or explanation, allowing equivalent accurate answers.</li><li>Identify what was missing or incorrect. Do not count the same point twice.</li><li>Rewrite the answer using the rule and the evidence.</li><li>Try an example with changed data to see whether the correction transfers.</li></ol><p>The paper samples theory and written SQL; independent ER creation, practical implementation, tests and recovery require separate evidence. The suggested teaching sequence reserves weeks 17–18 for the school’s exam period; it adds no new teaching or project deadlines.</p>"
+      "<p>After you try a question, use the separate guide to check your reasoning:</p><ol><li>Compare the rule, query or explanation, allowing equivalent accurate answers.</li><li>Identify what was missing or incorrect. Do not count the same point twice.</li><li>Rewrite the answer using the rule and the evidence.</li><li>Try an example with changed data to see whether the correction transfers.</li></ol><p>The paper checks a sample of theory and written SQL. You still need hands-on practice to draw ER models, create a database, test it and demonstrate recovery.</p><p>The suggested teaching sequence reserves weeks 17–18 for the school’s exam period. It adds no new teaching or project deadlines.</p>"
     ]
   ],
   "practice": [

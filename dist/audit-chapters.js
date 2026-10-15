@@ -41,7 +41,7 @@ chapters.push(...[
         "No. Price and licence rights are different. Inspect its licence and source rights."
       ]
     ],
-    "task": "Compare two teacher-selected software licences. Record whether each permits use, modification and redistribution, its obligations, and what you would acknowledge in a project.",
+    "task": "Compare two software licences chosen with your teacher. For each one, record whether you may use, modify and redistribute the code. List its conditions and explain what you would acknowledge in your own project.",
     "solution": "A suitable answer quotes or paraphrases each selected licence accurately, links the exact licence/version, separates permissions from obligations, and describes reused material honestly. Do not guess the terms from a product name or price.",
     "lessons": [
       "Week 9, lesson 1: share the existing API lesson with licensing and source-log practice; use the project’s real sources.",
@@ -110,7 +110,7 @@ chapters.push(...[
         "All-negative data exposes incorrect zero initialisation; tied positives test the chosen tie policy."
       ]
     ],
-    "task": "Complete your weakest two stations, retain a trace or test record from each, then answer a fresh teacher-selected transfer question. Write a three-item revision plan.",
+    "task": "Choose the two stations you most need to practise. Keep a trace or test record from each. Then try a fresh transfer question chosen with your teacher. Write three specific things to practise next.",
     "solution": "A strong record names the misconception, shows corrected working, contains actual evidence and demonstrates success on a fresh question. Network drawings must be reviewed against the support-booklet symbols.",
     "lessons": [
       "Lesson 1: six-prompt diagnostic, explained feedback and station choices.",
@@ -213,7 +213,7 @@ chapters.push(...[
         "Identify why marks were lost and reattempt fresh variants; copying the answer is not evidence of learning."
       ]
     ],
-    "task": "Attempt the 48-mark paper, annotate corrections, then solve three fresh variants chosen from your weakest areas. Bring one question you can now explain and one that remains uncertain.",
+    "task": "Try the 48-mark practice paper, then check the explanations and correct your mistakes. Choose three weak areas and try changed examples. Bring one question you can now explain and one you still want help with.",
     "solution": "A useful submission has your unaided first attempt, point-by-point corrections, a reason for each significant error and independently completed transfer questions. Teacher review is needed for diagrams and equivalent answers.",
     "lessons": [
       "Lesson 1: reading and first paper attempt; continue in lesson 2 if needed.",

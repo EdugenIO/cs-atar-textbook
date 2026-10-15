@@ -40,7 +40,7 @@ chapters.push(...[
         "DNS is a sensible first investigation because name resolution differs between the two tests. This is evidence to investigate, not proof of the cause."
       ]
     ],
-    "task": "Draw a four-layer stack and trace a request to a school website. Name one protocol at each layer and explain its contribution.",
+    "task": "Draw the four-layer DoD stack. Follow a request to a school website through the layers. For each layer, name a suitable protocol and explain the job it does.",
     "solution": "Application: HTTPS carries a protected web request. Transport: TCP transfers the stream in order. Internet: IP addresses and routes packets. Network: Ethernet or Wi-Fi delivers frames across the local link. Responses travel through corresponding layers in reverse.",
     "recap": "The Internet layer supports IP addressing and routing; the network access layer handles the local link.",
     "lessons": [
@@ -100,7 +100,7 @@ chapters.push(...[
         "A wireless access point provides that connection. A router is needed when traffic must cross between IP networks."
       ]
     ],
-    "task": "Assign unique private IPv4 addresses to three classroom computers and a gateway on a /24 network. State the mask, network address and one address on a different network. Choose media for classroom desks and a link between buildings.",
+    "task": "Plan addresses for three classroom computers and a gateway on the same private /24 network. Give each interface a unique address. State the mask and network address, then give an address on a different network. Choose connections for classroom desks and a link between buildings.",
     "solution": "Example: PCs 192.168.30.10, .11 and .12; gateway 192.168.30.1; mask 255.255.255.0; network 192.168.30.0. 192.168.31.10 is on a different /24 network. UTP may suit fixed desks. Fibre may suit the building link because distance and electromagnetic interference matter. Confirm actual distance and equipment requirements before a real installation.",
     "recap": "A subnet mask identifies the network portion; compare network addresses to decide whether a destination is local.",
     "lessons": [
@@ -159,7 +159,7 @@ chapters.push(...[
         "Shared administration gives unnecessary privileges and weakens accountability. Individual accounts with limited permissions reduce unauthorised changes."
       ]
     ],
-    "task": "Plan a school lab with 20 wired computers, 10 wireless laptops, a file server and Internet access. Include a logical diagram, an addressing table, two security controls and two performance decisions.",
+    "task": "Plan a school lab with 20 wired computers, 10 wireless laptops, a file server and Internet access. Draw the logical network and make an addressing table. Explain two security controls and two choices intended to improve performance.",
     "solution": "Connect wired clients and the file server to a switch, and connect an access point for laptops. Include routing to the provider and a firewall in the course diagram outside the trusted network. Use a labelled /24 private network and unique addresses. Restrict server permissions and update operating systems. Use wired links for stationary devices and assess access-point placement and concurrent wireless demand. Justify choices against the stated requirements; several designs may be valid.",
     "recap": "A basic switch forwards local frames. Broadcasts remain within the broadcast domain, while routers connect and separate IP networks.",
     "lessons": [
@@ -219,7 +219,7 @@ chapters.push(...[
         "80 ÷ 20 = 4 seconds. This assumes the full rate is available and ignores overhead and delay. Megabits are not megabytes."
       ]
     ],
-    "task": "Complete the library scenario independently, then compare your reasoning with the illustrative answer. Mark corrections in a different colour and write one explanation of a mistake you corrected.",
+    "task": "Try the library scenario before opening the illustrative answer. Compare your choices and reasoning with it. Note your corrections, then explain one mistake and why your revised answer is better.",
     "solution": "Example addressing: gateway .1, server .2, desktops .10–.21, with a non-overlapping DHCP pool such as .100–.150 for clients; all on 192.168.40.0/24, mask 255.255.255.0. A switch supports wired links and an access point supports wireless clients. The router handles remote destinations. Use course symbols, placing the firewall outside the trusted network without an IP label. UTP may suit desks; fibre may suit the building link depending on distance. Apply file permissions and updated authenticated accounts. Investigate wireless airtime, placement, interference and utilisation before adding equipment. Local server traffic uses local delivery; external traffic uses the gateway.",
     "recap": "Identify the limiting link or service, then justify a change that addresses the evidence. A coherent design connects requirements, devices, security and performance.",
     "lessons": [
