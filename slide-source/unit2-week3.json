@@ -1,0 +1,549 @@
+{
+  "unit": 2,
+  "week": 3,
+  "chapter": "normalisation",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#normalisation",
+  "references": [
+    "https://learn.microsoft.com/en-us/office/troubleshoot/access/database-normalization-description",
+    "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF#page=21"
+  ],
+  "lessons": [
+    {
+      "id": "u2-w03-l01",
+      "lesson": 1,
+      "title": "Repeating groups and first normal form",
+      "chapter": "normalisation",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#normalisation",
+      "prepare": "Open the normalisation chapter, normalisation-workbook.md, normalisation-answers.md and the normalisation-pack.zip stage datasets. Use fictional data on paper or in a school-approved spreadsheet. No SQL setup or student account is required. Keep original copies. Suggested 55-minute timings are flexible. Explained answers are public.",
+      "slides": [
+        {
+          "title": "Repeating groups and first normal form",
+          "body": [
+            "Unit 2 · Week 3 · Lesson 1",
+            "Give every reservation its own row and a justified key."
+          ],
+          "notes": "Use the reservation extension of the equipment desk. These are reservation requests, not issued loans. Keep the earlier Loan datasets unchanged. All activities are ungraded. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "A reservation has its own rules",
+          "body": [
+            "One borrower may request an item again on another date.",
+            "Different borrowers may request the same item on the same date.",
+            "At most one request is recorded per borrower/item/date."
+          ],
+          "notes": "Recall that keys follow requirements. These reservation rules differ from the single-item Loan model. Competing requests can exist. Requested or Confirmed is the exercise status, and separate availability/approval rules must resolve conflicts. Ask students which combination distinguishes one request. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 5,
+          "strategy": "Recall and partner explanation"
+        },
+        {
+          "title": "Three maintenance problems",
+          "table": [
+            [
+              "Anomaly",
+              "Problem in the combined register"
+            ],
+            [
+              "Update",
+              "Changing one E01 description leaves others unchanged"
+            ],
+            [
+              "Insert",
+              "An unused item has no reservation row to store it in"
+            ],
+            [
+              "Delete",
+              "Removing E03’s only request loses its description"
+            ]
+          ],
+          "notes": "An anomaly is a maintenance problem caused by the way facts are stored together. The starter repeats equipment descriptions and category facts inside reservation entries. Do not invent a borrower/date just to register an unused item. The delete example concerns this register’s only stored copy of E03 facts. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 6,
+          "strategy": "Worked example"
+        },
+        {
+          "title": "A repeating group becomes rows",
+          "body": [
+            "The starter puts several reservations inside one borrower row.",
+            "First normal form (1NF) gives each reservation its own row.",
+            "Each field holds one value for its defined purpose."
+          ],
+          "notes": "Open normalisation-starter.json. Nested JSON is a teaching representation, not inherently an invalid format. Item1/Date1, Item2/Date2 columns create a similar repeating layout. Atomic means one value for the attribute’s purpose: Learner A can remain one label. Flatten all six events without discarding repeated IDs. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 10,
+          "strategy": "Prediction and teacher model"
+        },
+        {
+          "title": "Why all three key fields matter",
+          "table": [
+            [
+              "Borrower",
+              "Item",
+              "Date in 2026",
+              "Status"
+            ],
+            [
+              "B001",
+              "E01",
+              "1 May",
+              "Confirmed"
+            ],
+            [
+              "B001",
+              "E01",
+              "8 May",
+              "Requested"
+            ],
+            [
+              "B002",
+              "E01",
+              "1 May",
+              "Requested"
+            ],
+            [
+              "B001",
+              "E02",
+              "1 May",
+              "Requested"
+            ]
+          ],
+          "notes": "This is a four-row extract from the six reservations. The first two need the date to distinguish them, first and third need borrower, first and fourth need item. The rules justify PK (BorrowerID, EquipmentID, ReservationDate). Underline all three components. A sample alone cannot prove a permanent key rule. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 10,
+          "strategy": "Guided paired practice"
+        },
+        {
+          "title": "Six rows in 1NF",
+          "body": [
+            "Flatten the full starter into six reservation rows.",
+            "Underline BorrowerID, EquipmentID and ReservationDate together.",
+            "Keep the labels, item/category facts and status for every row."
+          ],
+          "notes": "Use workbook questions 1–3 and the 1NF register CSV as a check after an independent attempt. Eight fields: BorrowerID, EquipmentID, ReservationDate, BorrowerLabel, EquipmentDescription, CategoryID, CategoryName, ReservationStatus. There are six rows. Repeating descriptive values can remain in 1NF. Do not confuse one value per field with eliminating all repeated values. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "A label with two words",
+          "body": [
+            "A classmate splits Learner A into separate rows for each word.",
+            "Does 1NF require this? Explain what the field represents."
+          ],
+          "notes": "No. BorrowerLabel represents one display label, so Learner A is one value for this purpose. Atomicity depends on the attribute’s meaning and use. Multiple reservation events in one field are the repeating-group problem in this exercise. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 5,
+          "strategy": "Misconception check with reasons"
+        },
+        {
+          "title": "A new reservation date",
+          "body": [
+            "B001 requests E01 on 15 May 2026.",
+            "Explain why this is a new row rather than an edit to 1 May."
+          ],
+          "notes": "The new date creates a distinct request under the three-part key rule. Keep both requests and their own statuses. A duplicate of the exact same borrower/item/date is prohibited. Normalisation does not approve a request or confirm availability. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    },
+    {
+      "id": "u2-w03-l02",
+      "lesson": 2,
+      "title": "Partial dependencies and second normal form",
+      "chapter": "normalisation",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#normalisation",
+      "prepare": "Open the normalisation chapter, normalisation-workbook.md, normalisation-answers.md and the normalisation-pack.zip stage datasets. Use fictional data on paper or in a school-approved spreadsheet. No SQL setup or student account is required. Keep original copies. Suggested 55-minute timings are flexible. Explained answers are public.",
+      "slides": [
+        {
+          "title": "Partial dependencies and second normal form",
+          "body": [
+            "Unit 2 · Week 3 · Lesson 2",
+            "Separate facts that depend on only part of the reservation key."
+          ],
+          "notes": "Use the reservation extension of the equipment desk. These are reservation requests, not issued loans. Keep the earlier Loan datasets unchanged. All activities are ungraded. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "The key and a borrower’s label",
+          "body": [
+            "The reservation key has borrower, item and date.",
+            "Which of those do you need to find Learner A’s label?"
+          ],
+          "notes": "BorrowerID alone determines BorrowerLabel under the stated requirements. Cover item and date to demonstrate. A functional dependency means a value or combination determines one value of another attribute under the rules. It describes a data rule, not a physical cause. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 5,
+          "strategy": "Recall and partner explanation"
+        },
+        {
+          "title": "What each identifier determines",
+          "table": [
+            [
+              "Known identifier(s)",
+              "Fact determined"
+            ],
+            [
+              "BorrowerID",
+              "BorrowerLabel"
+            ],
+            [
+              "EquipmentID",
+              "EquipmentDescription and CategoryID"
+            ],
+            [
+              "CategoryID",
+              "CategoryName"
+            ],
+            [
+              "BorrowerID + EquipmentID + date",
+              "ReservationStatus"
+            ]
+          ],
+          "notes": "These dependencies come from the exercise rules. BorrowerLabel and equipment facts depend on only parts of the composite reservation key, so the combined register has partial dependencies. ReservationStatus belongs to the whole reservation. CategoryID determines CategoryName, which creates a further chain handled at 3NF. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 6,
+          "strategy": "Worked example"
+        },
+        {
+          "title": "The partial-dependency test",
+          "body": [
+            "Cover EquipmentID and ReservationDate.",
+            "BorrowerID still tells you the borrower’s label.",
+            "It cannot identify the status of one particular reservation."
+          ],
+          "notes": "Model B001: the label is Learner A, but B001 has several requests with different statuses. In this exercise, 2NF requires 1NF plus removal of partial dependencies of non-key facts on a candidate key. Move those facts into tables with appropriate keys. Do not remove legitimate reservation events. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 10,
+          "strategy": "Prediction and teacher model"
+        },
+        {
+          "title": "The three tables at 2NF",
+          "table": [
+            [
+              "Table",
+              "Primary key",
+              "Facts kept with it"
+            ],
+            [
+              "Borrower",
+              "BorrowerID",
+              "BorrowerLabel"
+            ],
+            [
+              "Equipment",
+              "EquipmentID",
+              "Description, CategoryID and CategoryName"
+            ],
+            [
+              "Reservation",
+              "BorrowerID + EquipmentID + date",
+              "ReservationStatus"
+            ]
+          ],
+          "notes": "The Reservation composite key is (BorrowerID, EquipmentID, ReservationDate). BorrowerID and EquipmentID also act as FKs to their parent tables. EquipmentDescription is shortened to Description in this summary only. Equipment still contains CategoryName at this stage. Each split follows the stated dependency. Three borrowers, three equipment items and six reservations remain. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 10,
+          "strategy": "Guided paired practice"
+        },
+        {
+          "title": "A split to explain",
+          "body": [
+            "Form the three 2NF relations from your 1NF register.",
+            "Mark PKs and the two Reservation foreign keys.",
+            "Explain why each moved field belongs with its new key."
+          ],
+          "notes": "Use workbook questions 4–6. Write field names in relation notation and underline PK attributes, not example values. Equipment fields are EquipmentID, EquipmentDescription, CategoryID and CategoryName. Reservation retains the three-part key and status. Check the stage CSVs only after explaining the split. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "A stage still has a problem",
+          "body": [
+            "Equipment has one-field key EquipmentID.",
+            "Does that alone prove the table is already in 3NF?"
+          ],
+          "notes": "No. In these straightforward keys, there is no partial dependency on part of a single-field key, but EquipmentID determines CategoryID and CategoryID determines CategoryName. This transitive chain remains. Adding an ID does not automatically cure all dependency problems. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 5,
+          "strategy": "Misconception check with reasons"
+        },
+        {
+          "title": "A fresh borrower label",
+          "body": [
+            "B002 changes their display label.",
+            "Explain which 2NF table changes and which event keys stay."
+          ],
+          "notes": "Update the B002 record in Borrower. The reservation key values and event statuses remain with their Reservation rows. Related records retrieve the new label through BorrowerID. The label is stored once for that borrower rather than once per request. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    },
+    {
+      "id": "u2-w03-l03",
+      "lesson": 3,
+      "title": "Transitive dependencies and third normal form",
+      "chapter": "normalisation",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#normalisation",
+      "prepare": "Open the normalisation chapter, normalisation-workbook.md, normalisation-answers.md and the normalisation-pack.zip stage datasets. Use fictional data on paper or in a school-approved spreadsheet. No SQL setup or student account is required. Keep original copies. Suggested 55-minute timings are flexible. Explained answers are public.",
+      "slides": [
+        {
+          "title": "Transitive dependencies and third normal form",
+          "body": [
+            "Unit 2 · Week 3 · Lesson 3",
+            "Separate category facts and reconstruct the original reservations."
+          ],
+          "notes": "Use the reservation extension of the equipment desk. These are reservation requests, not issued loans. Keep the earlier Loan datasets unchanged. All activities are ungraded. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "The remaining dependency chain",
+          "body": [
+            "EquipmentID identifies an item and its CategoryID.",
+            "CategoryID identifies that category’s name.",
+            "Which table should store CategoryName?"
+          ],
+          "notes": "Category should store CategoryName with CategoryID. This is the chain left in the 2NF Equipment table. We remove the dependency through a non-key attribute to reach this example’s intended 3NF design under the supplied dependencies. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 5,
+          "strategy": "Recall and partner explanation"
+        },
+        {
+          "title": "A category fact gets its own home",
+          "table": [
+            [
+              "Stage",
+              "Equipment fields"
+            ],
+            [
+              "2NF",
+              "EquipmentID, description, CategoryID, CategoryName"
+            ],
+            [
+              "3NF",
+              "EquipmentID, description, CategoryID (FK)"
+            ],
+            [
+              "New Category table",
+              "CategoryID (PK), CategoryName"
+            ]
+          ],
+          "notes": "Description abbreviates EquipmentDescription in this summary. Create Category, move CategoryName out of Equipment, and keep CategoryID in Equipment as the reference. CategoryID determines CategoryName. The EquipmentID primary key and original item facts remain. Show Category C01 as Imaging. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 6,
+          "strategy": "Worked example"
+        },
+        {
+          "title": "Four tables, defined responsibilities",
+          "table": [
+            [
+              "Table",
+              "Primary key",
+              "Reference(s)"
+            ],
+            [
+              "Borrower",
+              "BorrowerID",
+              "None in this exercise"
+            ],
+            [
+              "Category",
+              "CategoryID",
+              "None in this exercise"
+            ],
+            [
+              "Equipment",
+              "EquipmentID",
+              "CategoryID to Category"
+            ],
+            [
+              "Reservation",
+              "BorrowerID + EquipmentID + date",
+              "Borrower and Equipment"
+            ]
+          ],
+          "notes": "ReservationDate is the full date-field name. BorrowerLabel stays in Borrower, EquipmentDescription in Equipment, CategoryName in Category and ReservationStatus in Reservation. The table count does not establish a normal form. Under the stated dependencies, these tables remove the partial and transitive dependencies demonstrated here. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 10,
+          "strategy": "Prediction and teacher model"
+        },
+        {
+          "title": "A reconstructed request",
+          "table": [
+            [
+              "Lookup",
+              "Fact recovered for B001 / E01 / 1 May 2026"
+            ],
+            [
+              "Reservation",
+              "Confirmed"
+            ],
+            [
+              "Borrower B001",
+              "Learner A"
+            ],
+            [
+              "Equipment E01",
+              "Camera and category C01"
+            ],
+            [
+              "Category C01",
+              "Imaging"
+            ]
+          ],
+          "notes": "Start with the whole composite key to find the request. Then match identifiers to recover the descriptive facts. This reconstructs the original 1NF row. Compare B002/E01/1 May: Learner B and Requested, while the same equipment/category facts remain. Competing requests are allowed by the exercise rules. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 10,
+          "strategy": "Guided paired practice"
+        },
+        {
+          "title": "All six requests must survive",
+          "body": [
+            "Reconstruct all six 1NF rows through the four 3NF tables.",
+            "Check for missing rows or extra combinations.",
+            "Explain one anomaly the split reduces."
+          ],
+          "notes": "Use workbook questions 7–10. Final counts: 3 borrowers, 3 categories, 3 items and 6 reservations. Match IDs, not descriptions. Compare the reconstructed set of eight-field rows with the original 1NF CSV, regardless of row order. New unused equipment can exist, descriptions update once per item, and deleting a reservation need not delete item facts. Constraints and deliberate deletion policies still matter. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "A repeated foreign key",
+          "body": [
+            "E01 still appears in several Reservation rows.",
+            "Does this repetition mean the design failed normalisation?"
+          ],
+          "notes": "No. The repeated FK represents distinct requests. The descriptive Camera fact belongs once with the Equipment record. Deleting reservation rows merely to remove repeated E01 values would lose legitimate events. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 5,
+          "strategy": "Misconception check with reasons"
+        },
+        {
+          "title": "A limit of normalisation",
+          "body": [
+            "A request contains a date that looks valid but is factually wrong.",
+            "Can the 3NF design prove the date is correct? Explain."
+          ],
+          "notes": "No. Normalisation organises dependencies. Validation checks permitted forms and values, while factual accuracy requires appropriate evidence and checks. Approval/availability and conflicting confirmations also need separate rules. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    },
+    {
+      "id": "u2-w03-l04",
+      "lesson": 4,
+      "title": "Normalisation on a fresh problem",
+      "chapter": "normalisation",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#normalisation",
+      "prepare": "Open the normalisation chapter, normalisation-workbook.md, normalisation-answers.md and the normalisation-pack.zip stage datasets. Use fictional data on paper or in a school-approved spreadsheet. No SQL setup or student account is required. Keep original copies. Suggested 55-minute timings are flexible. Explained answers are public.",
+      "slides": [
+        {
+          "title": "Normalisation on a fresh problem",
+          "body": [
+            "Unit 2 · Week 3 · Lesson 4",
+            "Explain each split and show that the original facts survive."
+          ],
+          "notes": "Use the reservation extension of the equipment desk. These are reservation requests, not issued loans. Keep the earlier Loan datasets unchanged. All activities are ungraded. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "The three stages",
+          "body": [
+            "1NF: one event per row, with one value per field.",
+            "2NF: remove partial dependencies in this example.",
+            "3NF: remove the remaining non-key dependency chain."
+          ],
+          "notes": "Ask learners to recall an equipment example for each stage before introducing the club scenario. Preserve earlier normal-form conditions when moving forward. Avoid identifying the stage from the number of tables or columns alone. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 5,
+          "strategy": "Recall and partner explanation"
+        },
+        {
+          "title": "The club’s dependency rules",
+          "table": [
+            [
+              "Known value(s)",
+              "Fact determined"
+            ],
+            [
+              "MemberID",
+              "MemberLabel"
+            ],
+            [
+              "ActivityID",
+              "ActivityName and LeaderID"
+            ],
+            [
+              "LeaderID",
+              "LeaderLabel"
+            ],
+            [
+              "MemberID + ActivityID + Term",
+              "AttendanceCount"
+            ]
+          ],
+          "notes": "The starter has a repeating list of activities for each member. One member may join the same activity once per term and rejoin next term. Each activity has one assigned leader under these fixed exercise rules, and a leader may lead several activities. State these assumptions before choosing a key. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 6,
+          "strategy": "Worked example"
+        },
+        {
+          "title": "The club’s event key",
+          "body": [
+            "Participation records one member, activity and term.",
+            "Keep all three fields in the key.",
+            "Explain what happens if the member rejoins next term."
+          ],
+          "notes": "PK is (MemberID, ActivityID, Term). A later term is a new participation event, with its own AttendanceCount. MemberID and ActivityID also serve as FKs after separation. This is a fresh problem analogous to Reservation, not a rename of the equipment dataset. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 10,
+          "strategy": "Prediction and teacher model"
+        },
+        {
+          "title": "A dependency to classify",
+          "table": [
+            [
+              "Fact",
+              "Why it needs a separate home"
+            ],
+            [
+              "MemberLabel",
+              "Depends on MemberID, part of the event key"
+            ],
+            [
+              "Activity facts",
+              "Depend on ActivityID, part of the event key"
+            ],
+            [
+              "LeaderLabel",
+              "Depends on LeaderID through ActivityID"
+            ]
+          ],
+          "notes": "Pairs classify the first two as partial dependencies in the flattened register. At 2NF, Member and Activity separate from Participation. Activity still contains LeaderLabel through LeaderID. At 3NF, create Leader(LeaderID, LeaderLabel) and retain LeaderID as an Activity FK. Do not reveal the complete relations until learners explain the reasoning. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 10,
+          "strategy": "Guided paired practice"
+        },
+        {
+          "title": "Independent club transformation",
+          "body": [
+            "Show the 1NF, 2NF and 3NF relations with keys and FKs.",
+            "Explain each partial or transitive dependency removed.",
+            "Rebuild one example event from your final design."
+          ],
+          "notes": "Use workbook question 12 before viewing explained answers. 1NF: MemberID, MemberLabel, ActivityID, ActivityName, LeaderID, LeaderLabel, Term, AttendanceCount, with three-part PK. 2NF: Member, Activity (including LeaderLabel) and Participation. 3NF: add Leader, remove LeaderLabel from Activity, retain LeaderID FK. Participation has MemberID PK/FK, ActivityID PK/FK, Term PK and AttendanceCount. Learners may choose a clearly labelled fictional example consistent with the rules for reconstruction. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "A column-count shortcut",
+          "body": [
+            "“There are four tables, so the design must be in 3NF.”",
+            "Explain what evidence this statement is missing."
+          ],
+          "notes": "It needs justified keys, the functional dependencies and evidence that each relation meets the relevant conditions. Four tables can still repeat inappropriate dependent facts. Ask for the ActivityID to LeaderID to LeaderLabel chain as a concrete counterexample. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 5,
+          "strategy": "Misconception check with reasons"
+        },
+        {
+          "title": "A correction that transfers",
+          "body": [
+            "Record one mistaken step and the rule that corrects it.",
+            "Try a new term or a new leader example to check the correction."
+          ],
+          "notes": "If Term was omitted, a member rejoining the same activity next term exposes the key error. If LeaderLabel remained in Activity, one leader serving multiple activities exposes repeated leader facts. Keep the stated one-leader-per-activity rule fixed. Revisit any dependency that the learner cannot explain independently. Teaching source: https://edugenio.github.io/cs-atar-textbook/#normalisation.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    }
+  ]
+}
