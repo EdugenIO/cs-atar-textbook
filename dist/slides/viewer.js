@@ -32,6 +32,7 @@ if (!deck) {
   if (deck.id.startsWith('u2-w01-')) resources.push(['unit2-week1-lesson-slides.zip', 'Download Unit 2 Week 1 PowerPoints']);
   if (deck.id.startsWith('u2-w02-')) resources.push(['unit2-week2-lesson-slides.zip', 'Download Unit 2 Week 2 PowerPoints']);
   if (deck.id.startsWith('u2-w03-')) resources.push(['unit2-week3-lesson-slides.zip', 'Download Unit 2 Week 3 PowerPoints']);
+  if (deck.id.startsWith('u2-w04-')) resources.push(['unit2-week4-lesson-slides.zip', 'Download Unit 2 Week 4 PowerPoints']);
   for (const [href, label] of resources) {
     const link = element('a', label, 'download'); link.href = href; if (href.endsWith('.pptx')) link.download = ''; downloads.append(link);
   }

@@ -1,6 +1,6 @@
 # Lesson slide source
 
-Available: all 64 Unit 1 lessons across Weeks 1–16, plus twelve Unit 2 lessons across Weeks 1–3. Each lesson has eight slides and a suggested 55-minute sequence. Adapt timings to local classes.
+Available: all 64 Unit 1 lessons across Weeks 1–16, plus sixteen Unit 2 lessons across Weeks 1–4. Each lesson has eight slides and a suggested 55-minute sequence. Adapt timings to local classes.
 
 The `unit*-week*.json` files are the shared content sources: slide titles, editable code/tables, student prompts, teacher notes, preparation and timings. `node scripts/build-slide-web.mjs` rebuilds browser data, the availability registry and teacher-note pages using Node alone. PowerPoint files in `dist/slides/` are editable native presentations with speaker notes; they were generated from this JSON using the Codex presentation runtime. To revise the shared course, update this source and regenerate both formats; keep downloaded personal PowerPoint customisations separately. Browser regeneration alone does not update the PowerPoint files.
 
@@ -23,3 +23,5 @@ Unit 2 Week 1: [four editable PowerPoints](https://edugenio.github.io/cs-atar-te
 Unit 2 Week 2: [four editable PowerPoints](https://edugenio.github.io/cs-atar-textbook/slides/unit2-week2-lesson-slides.zip) with the model datasets, ER diagram, workbook and explained answers. The PowerPoint ER diagram uses editable native shapes and text; the browser version uses a wider SVG adaptation of the same model with an accessible description.
 
 Unit 2 Week 3: [four editable PowerPoints](https://edugenio.github.io/cs-atar-textbook/slides/unit2-week3-lesson-slides.zip) covering normalisation from 1NF to 3NF, preservation of reservation facts and a fresh club problem. Includes starter JSON, all eight stage CSVs, workbook and explained answers.
+
+Unit 2 Week 4: [four editable PowerPoints](https://edugenio.github.io/cs-atar-textbook/slides/unit2-week4-lesson-slides.zip) for SELECT, WHERE, Boolean conditions, ordering, duplicates and empty results. Includes the SQLite starter, setup/worked SQL, expected results, workbook and explained answers. Worked slide queries are executed against the read-only starter in the package checks.

@@ -1,0 +1,555 @@
+{
+  "unit": 2,
+  "week": 4,
+  "chapter": "sql-basics",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#sql-basics",
+  "references": [
+    "https://www.sqlite.org/lang_select.html",
+    "https://www.sqlite.org/lang_expr.html"
+  ],
+  "lessons": [
+    {
+      "id": "u2-w04-l01",
+      "lesson": 1,
+      "title": "Tables and SELECT results",
+      "chapter": "sql-basics",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#sql-basics",
+      "prepare": "Open a working copy of sql-starter.sqlite in a school-approved SQLite-capable application and locate its SQL editor. Alternatively execute sql-setup.sql once in a new empty database. Run one SELECT at a time. Use sql-workbook.md, sql-answers.md, sql-worked-queries.sql and sql-expected-results.json. The data are fictional. DueDate is valid YYYY-MM-DD TEXT and Returned is INTEGER 0/1 in this SQLite starter. Fixed reporting date: 8 April 2026. Teacher notes and answers are public.",
+      "slides": [
+        {
+          "title": "Tables and SELECT results",
+          "body": [
+            "Unit 2 · Week 4 · Lesson 1",
+            "Choose result columns without changing the stored records."
+          ],
+          "notes": "Return to the earlier single-item Loan model. The reservation model was a separate normalisation exercise. This week uses SELECT queries to read data. Activities are ungraded. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "The database we are using",
+          "body": [
+            "Borrower has 4 rows. Equipment has 5 items.",
+            "Loan has 6 borrowing events. Category has 3 rows.",
+            "Which table stores an item’s description?"
+          ],
+          "notes": "Equipment stores EquipmentDescription. The starter is the earlier four-table Loan model, not the separate reservation register used in Week 3. Open the SQLite file as a database, not as a CSV import. Use the SQL editor, not a Python prompt. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 5,
+          "strategy": "Recall and prediction"
+        },
+        {
+          "title": "Parts of a query",
+          "table": [
+            [
+              "SQL part",
+              "Purpose"
+            ],
+            [
+              "SELECT",
+              "Choose the result columns"
+            ],
+            [
+              "FROM",
+              "Name the source table"
+            ],
+            [
+              "ORDER BY",
+              "Choose the result order"
+            ]
+          ],
+          "notes": "SQL means Structured Query Language. A query asks the DBMS for a result. This week reads data with SELECT. Later chapters cover changes, joins and aggregates. A named-field SELECT returns requested columns without deleting other stored columns. Keywords are uppercase here for readability. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 6,
+          "strategy": "Worked example"
+        },
+        {
+          "title": "A named-field query",
+          "body": [
+            "Predict the column headings and the number of rows."
+          ],
+          "notes": "Expect two columns and five rows. A comma separates the two field names. FROM names Equipment. ORDER BY makes the item-ID order explicit. The semicolon ends the statement. Compare the results with the stored table, which still has CategoryID. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "code": "SELECT EquipmentID, EquipmentDescription\nFROM Equipment\nORDER BY EquipmentID;",
+          "expectedRows": [
+            [
+              "E01",
+              "Camera"
+            ],
+            [
+              "E02",
+              "Tripod"
+            ],
+            [
+              "E03",
+              "Recorder"
+            ],
+            [
+              "E04",
+              "Camera"
+            ],
+            [
+              "E05",
+              "Microphone"
+            ]
+          ],
+          "minutes": 10,
+          "strategy": "Teacher model with predictions"
+        },
+        {
+          "title": "The complete query result",
+          "table": [
+            [
+              "EquipmentID",
+              "EquipmentDescription"
+            ],
+            [
+              "E01",
+              "Camera"
+            ],
+            [
+              "E02",
+              "Tripod"
+            ],
+            [
+              "E03",
+              "Recorder"
+            ],
+            [
+              "E04",
+              "Camera"
+            ],
+            [
+              "E05",
+              "Microphone"
+            ]
+          ],
+          "notes": "Five rows represent five physical items. E01 and E04 are different items with the same description. CategoryID remains in stored Equipment, even though it is absent from these selected columns. SELECT * requests every field, whereas naming fields makes the intended output clear. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 10,
+          "strategy": "Guided paired practice"
+        },
+        {
+          "title": "A first independent report",
+          "body": [
+            "List BorrowerID and BorrowerLabel from Borrower.",
+            "Sort by BorrowerID. Predict before running.",
+            "Compare the headings, four rows and order with your prediction."
+          ],
+          "notes": "Use workbook question 1. Expected query: SELECT BorrowerID, BorrowerLabel FROM Borrower ORDER BY BorrowerID; rows B001 Learner A, B002 Learner B, B003 Learner C, B004 Learner D. Keep requirement, SQL, prediction and actual result for self-review. Offer the Equipment model if needed, then ask for an independent explanation. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "A result is not a table edit",
+          "body": [
+            "A query selects only EquipmentID.",
+            "What happens to EquipmentDescription in the stored table?"
+          ],
+          "notes": "It remains stored. SELECT controls the returned columns, not the table definition. Learners can inspect Equipment again to verify all three columns remain. Do not confuse a query result with deleting fields or records. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 5,
+          "strategy": "Misconception check with reasons"
+        },
+        {
+          "title": "An asterisk to explain",
+          "body": [
+            "How would SELECT * change the result columns?",
+            "Explain why naming the fields can make a report clearer."
+          ],
+          "notes": "In this Equipment table, * includes EquipmentID, EquipmentDescription and CategoryID. The named-field example includes only the first two. Neither query changes the stored data. Naming columns states the intended output and avoids relying on every field in a changing schema. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    },
+    {
+      "id": "u2-w04-l02",
+      "lesson": 2,
+      "title": "Filtering rows with WHERE",
+      "chapter": "sql-basics",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#sql-basics",
+      "prepare": "Open a working copy of sql-starter.sqlite in a school-approved SQLite-capable application and locate its SQL editor. Alternatively execute sql-setup.sql once in a new empty database. Run one SELECT at a time. Use sql-workbook.md, sql-answers.md, sql-worked-queries.sql and sql-expected-results.json. The data are fictional. DueDate is valid YYYY-MM-DD TEXT and Returned is INTEGER 0/1 in this SQLite starter. Fixed reporting date: 8 April 2026. Teacher notes and answers are public.",
+      "slides": [
+        {
+          "title": "Filtering rows with WHERE",
+          "body": [
+            "Unit 2 · Week 4 · Lesson 2",
+            "Choose rows using text and return status conditions."
+          ],
+          "notes": "Return to the earlier single-item Loan model. The reservation model was a separate normalisation exercise. This week uses SELECT queries to read data. Activities are ungraded. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "Columns and matching rows",
+          "body": [
+            "SELECT chooses which columns appear.",
+            "Which part of a query could keep only camera items?"
+          ],
+          "notes": "Introduce WHERE as a filter for rows satisfying a condition. Retrieve the two separate Camera items, E01 and E04. A filter changes the result, not the stored Equipment rows. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 5,
+          "strategy": "Recall and prediction"
+        },
+        {
+          "title": "Two camera items",
+          "body": [
+            "Text values use single quotes in this query."
+          ],
+          "notes": "Expect E01 Camera and E04 Camera. Use = for equality. EquipmentDescription is a field name and Camera is the text literal. Case/collation rules depend on the DBMS and configuration; use the exact supplied value in this exercise. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "code": "SELECT EquipmentID, EquipmentDescription\nFROM Equipment\nWHERE EquipmentDescription = 'Camera'\nORDER BY EquipmentID;",
+          "expectedRows": [
+            [
+              "E01",
+              "Camera"
+            ],
+            [
+              "E04",
+              "Camera"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked example"
+        },
+        {
+          "title": "Unreturned loans",
+          "body": [
+            "In this SQLite file, Returned = 0 means still on loan."
+          ],
+          "notes": "Returned uses INTEGER 0 for false and 1 for true. Expect L001, L006, L002 and L004 in the shown order. This identifies active loans, not only overdue loans. SQLite stores DueDate as valid fixed-width YYYY-MM-DD text in this starter. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "code": "SELECT LoanID, DueDate\nFROM Loan\nWHERE Returned = 0\nORDER BY DueDate ASC, LoanID ASC;",
+          "expectedRows": [
+            [
+              "L001",
+              "2026-04-06"
+            ],
+            [
+              "L006",
+              "2026-04-07"
+            ],
+            [
+              "L002",
+              "2026-04-08"
+            ],
+            [
+              "L004",
+              "2026-04-10"
+            ]
+          ],
+          "minutes": 10,
+          "strategy": "Teacher model with predictions"
+        },
+        {
+          "title": "Active loans in due-date order",
+          "table": [
+            [
+              "LoanID",
+              "DueDate"
+            ],
+            [
+              "L001",
+              "2026-04-06"
+            ],
+            [
+              "L006",
+              "2026-04-07"
+            ],
+            [
+              "L002",
+              "2026-04-08"
+            ],
+            [
+              "L004",
+              "2026-04-10"
+            ]
+          ],
+          "notes": "ASC means ascending, so earliest dates come first. LoanID is the second sort key if dates tie. L003 and L005 are returned, so the filter excludes them. Four active loans are stored across these dates, including dates on and after 8 April. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 10,
+          "strategy": "Guided paired practice"
+        },
+        {
+          "title": "Audio equipment report",
+          "body": [
+            "Find the equipment with CategoryID equal to C03.",
+            "Return its ID and description, ordered by ID.",
+            "Predict the matching rows, then run your query."
+          ],
+          "notes": "Use workbook question 2. SELECT EquipmentID, EquipmentDescription FROM Equipment WHERE CategoryID = 'C03' ORDER BY EquipmentID; expected E03 Recorder and E05 Microphone. Partners compare the field names, text literal, selected columns and actual result. Filtering CategoryID does not require it to appear in the selected columns. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "A comma can change the meaning",
+          "body": [
+            "Compare SELECT LoanID DueDate with SELECT LoanID, DueDate.",
+            "Without the comma, DueDate can become the heading for LoanID."
+          ],
+          "notes": "In SQLite, SELECT LoanID DueDate FROM Loan treats DueDate as an alias for LoanID, rather than selecting two fields. A statement can run and still answer the wrong question. Workbook question 7 also compares Returned with text False, which does not match this starter’s 0/1 values. Repair both the comma and the comparison. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 5,
+          "strategy": "Misconception check with reasons"
+        },
+        {
+          "title": "The comparison matches the data",
+          "body": [
+            "Why does Returned = 0 fit this starter?",
+            "Explain why you should inspect the schema before copying a filter."
+          ],
+          "notes": "This SQLite schema restricts Returned to integer 0 or 1. The CSV and conceptual model used different representations. Use the implemented types and values rather than assuming the text False is stored. Facilities and representations vary across DBMSs. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    },
+    {
+      "id": "u2-w04-l03",
+      "lesson": 3,
+      "title": "Conditions, boundaries and sorting",
+      "chapter": "sql-basics",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#sql-basics",
+      "prepare": "Open a working copy of sql-starter.sqlite in a school-approved SQLite-capable application and locate its SQL editor. Alternatively execute sql-setup.sql once in a new empty database. Run one SELECT at a time. Use sql-workbook.md, sql-answers.md, sql-worked-queries.sql and sql-expected-results.json. The data are fictional. DueDate is valid YYYY-MM-DD TEXT and Returned is INTEGER 0/1 in this SQLite starter. Fixed reporting date: 8 April 2026. Teacher notes and answers are public.",
+      "slides": [
+        {
+          "title": "Conditions, boundaries and sorting",
+          "body": [
+            "Unit 2 · Week 4 · Lesson 3",
+            "Apply the overdue rule and make the result order deliberate."
+          ],
+          "notes": "Return to the earlier single-item Loan model. The reservation model was a separate normalisation exercise. This week uses SELECT queries to read data. Activities are ungraded. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "The overdue rule",
+          "body": [
+            "Reporting date: 8 April 2026 for this exercise.",
+            "An overdue item is unreturned AND due before that date.",
+            "Does a loan due on 8 April qualify?"
+          ],
+          "notes": "No under the stated strict-before rule. L002 is active but due exactly on the reporting date. L005 has an older due date but was returned. The fixed date is independent of the actual classroom date. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 5,
+          "strategy": "Recall and prediction"
+        },
+        {
+          "title": "An overdue query",
+          "body": [
+            "Both conditions must be true for a row to remain."
+          ],
+          "notes": "Expect L001 B001 2026-04-06 and L006 B004 2026-04-07. In the supplied valid, fixed-format date text, chronological and text ordering align. TEXT alone does not validate calendar dates. Replacing AND with OR would include returned older loans and active loans due later. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "code": "SELECT LoanID, BorrowerID, DueDate\nFROM Loan\nWHERE Returned = 0 AND DueDate < '2026-04-08'\nORDER BY DueDate ASC, LoanID ASC;",
+          "expectedRows": [
+            [
+              "L001",
+              "B001",
+              "2026-04-06"
+            ],
+            [
+              "L006",
+              "B004",
+              "2026-04-07"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked example"
+        },
+        {
+          "title": "Boundary and return checks",
+          "table": [
+            [
+              "Loan",
+              "Relevant fact",
+              "Overdue?"
+            ],
+            [
+              "L001",
+              "Unreturned; due 6 April",
+              "Yes"
+            ],
+            [
+              "L002",
+              "Unreturned; due 8 April",
+              "No"
+            ],
+            [
+              "L005",
+              "Returned; due 4 April",
+              "No"
+            ],
+            [
+              "L006",
+              "Unreturned; due 7 April",
+              "Yes"
+            ]
+          ],
+          "notes": "All dates are in 2026. Model the two comparisons separately. AND requires both. If the requirement changed to include due-today loans, <= would add L002. It would not add returned L005. State the boundary rather than guessing from the word overdue. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 10,
+          "strategy": "Teacher model with predictions"
+        },
+        {
+          "title": "Grouping borrower alternatives",
+          "body": [
+            "Keep the active condition for either named borrower."
+          ],
+          "notes": "The result is L001 and L002. Without the parentheses, AND has higher precedence than OR and returned B002 loan L005 also qualifies. Trace L005 to show the difference. Parentheses express the intended grouping. OR means either alternative may hold, including both. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "code": "SELECT LoanID FROM Loan\nWHERE Returned = 0\nAND (BorrowerID = 'B001' OR BorrowerID = 'B002')\nORDER BY LoanID;",
+          "expectedRows": [
+            [
+              "L001"
+            ],
+            [
+              "L002"
+            ]
+          ],
+          "minutes": 10,
+          "strategy": "Guided paired practice"
+        },
+        {
+          "title": "Newest due date first",
+          "body": [
+            "List active LoanIDs and dates with the newest due date first.",
+            "Use descending DueDate, then ascending LoanID for ties.",
+            "Predict the order before running your query."
+          ],
+          "notes": "Use workbook questions 3, 5, 8 and 10 as selected practice. Query: SELECT LoanID, DueDate FROM Loan WHERE Returned = 0 ORDER BY DueDate DESC, LoanID ASC; expected L004, L002, L006, L001. To study a genuine tie, use all loans: L003 and L006 share 7 April, and ascending LoanID places L003 first. Without ORDER BY, no particular row order is guaranteed. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "A tie needs another field",
+          "body": [
+            "L003 and L006 share the due date 7 April 2026.",
+            "Does ORDER BY DueDate alone decide which comes first?"
+          ],
+          "notes": "No. Equal values remain tied on that sort key. Adding unique LoanID ASC decides L003 then L006 for that date. Sorting every field DESC is not required: the primary and tie-break directions can differ. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 5,
+          "strategy": "Misconception check with reasons"
+        },
+        {
+          "title": "A changed boundary",
+          "body": [
+            "Change the overdue comparison from < to <=.",
+            "Which extra loan appears, and why does L005 stay excluded?"
+          ],
+          "notes": "L002 now qualifies because its date equals 8 April. L005 remains excluded by Returned = 0. A boundary change affects the rule, not the stored rows. Ask students to justify the result from the two conditions separately. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    },
+    {
+      "id": "u2-w04-l04",
+      "lesson": 4,
+      "title": "Query checks and independent reports",
+      "chapter": "sql-basics",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#sql-basics",
+      "prepare": "Open a working copy of sql-starter.sqlite in a school-approved SQLite-capable application and locate its SQL editor. Alternatively execute sql-setup.sql once in a new empty database. Run one SELECT at a time. Use sql-workbook.md, sql-answers.md, sql-worked-queries.sql and sql-expected-results.json. The data are fictional. DueDate is valid YYYY-MM-DD TEXT and Returned is INTEGER 0/1 in this SQLite starter. Fixed reporting date: 8 April 2026. Teacher notes and answers are public.",
+      "slides": [
+        {
+          "title": "Query checks and independent reports",
+          "body": [
+            "Unit 2 · Week 4 · Lesson 4",
+            "Check duplicates, empty results and plausible query mistakes."
+          ],
+          "notes": "Return to the earlier single-item Loan model. The reservation model was a separate normalisation exercise. This week uses SELECT queries to read data. Activities are ungraded. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "A result that needs checking",
+          "body": [
+            "A query runs without an error.",
+            "What would you still compare with the report requirement?"
+          ],
+          "notes": "Check result columns, matching rows, counts and order. A missing comma can become an alias. A wrong Boolean condition can return plausible extra rows. Successful execution alone does not establish that the query meets the requirement. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 5,
+          "strategy": "Recall and prediction"
+        },
+        {
+          "title": "Distinct result values",
+          "body": [
+            "Predict how many descriptions this returns."
+          ],
+          "notes": "The result contains Camera, Microphone, Recorder and Tripod, four distinct description values. E01 and E04 still exist as separate stored items. DISTINCT applies to all selected result columns together, not just one chosen field. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "code": "SELECT DISTINCT EquipmentDescription\nFROM Equipment\nORDER BY EquipmentDescription;",
+          "expectedRows": [
+            [
+              "Camera"
+            ],
+            [
+              "Microphone"
+            ],
+            [
+              "Recorder"
+            ],
+            [
+              "Tripod"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked example"
+        },
+        {
+          "title": "Four description values",
+          "table": [
+            [
+              "EquipmentDescription"
+            ],
+            [
+              "Camera"
+            ],
+            [
+              "Microphone"
+            ],
+            [
+              "Recorder"
+            ],
+            [
+              "Tripod"
+            ]
+          ],
+          "notes": "The complete description result has four rows while Equipment contains five item records. If EquipmentID is selected as well, all five ID/description pairs differ and survive DISTINCT. DISTINCT does not delete stored records or fix a modelling problem. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 10,
+          "strategy": "Teacher model with predictions"
+        },
+        {
+          "title": "A valid empty result",
+          "body": [
+            "No supplied item belongs to category C99."
+          ],
+          "notes": "This valid query returns zero rows, with an EquipmentID result column. Compare with a misspelt field such as EquipmentIdentifer, which is an error. First inspect whether any data should satisfy the condition. Missing values use IS NULL or IS NOT NULL, not = NULL; required starter fields contain no NULLs. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "code": "SELECT EquipmentID FROM Equipment\nWHERE CategoryID = 'C99'\nORDER BY EquipmentID;",
+          "expectedRows": [],
+          "minutes": 10,
+          "strategy": "Guided paired practice"
+        },
+        {
+          "title": "Four independent reports",
+          "body": [
+            "Complete workbook reports 1–4 without the explained answers.",
+            "Predict each result, run it and compare the actual output.",
+            "Explain a filter, a sort direction and any correction."
+          ],
+          "notes": "Reports: borrower IDs/labels by ID; C03 equipment IDs/descriptions by ID; active loans newest due date first with LoanID ASC ties; active B002 LoanIDs by ID. Expected: B001–B004 labels; E03 Recorder and E05 Microphone; L004, L002, L006, L001; L002 only. Exact SQL and results are in sql-answers.md. Then complete workbook questions 6–10 for duplicate, empty and boundary checks. No scores or assessment records are required. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "A query that looks plausible",
+          "body": [
+            "A report should show unreturned B002 loans only.",
+            "It also contains L005. Which conditions would you inspect?"
+          ],
+          "notes": "L005 belongs to B002 but Returned=1. Require Returned=0 AND BorrowerID='B002'. Check for a missing return-status condition, OR in place of AND or ungrouped OR alternatives. Compare expected L002 only with the actual result before editing. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 5,
+          "strategy": "Misconception check with reasons"
+        },
+        {
+          "title": "An explanation with evidence",
+          "body": [
+            "Choose one corrected query and name the original mistake.",
+            "Give a changed case that would reveal the same mistake."
+          ],
+          "notes": "Examples: equal dates expose missing tie-break ordering; a returned row exposes an OR/filter error; selecting EquipmentID with a description exposes misunderstanding of DISTINCT; an empty match separates a valid query from a misspelt field. Record the SQL and predicted/actual outcome for self-review. Querying here remains single-table and read-only. Teaching source: https://edugenio.github.io/cs-atar-textbook/#sql-basics.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    }
+  ]
+}
