@@ -30,7 +30,7 @@ for lesson in data['lessons']:
             notes=ET.fromstring(deck.read(f'ppt/notesSlides/notesSlide{number}.xml'))
             assert source['notes'] in ''.join(node.text or '' for node in notes.findall('.//a:t',ns))
             assert source['strategy'] in ''.join(node.text or '' for node in notes.findall('.//a:t',ns))
-print('640 native slide titles, editable text/tables and speaker notes verified.')
+print('672 native slide titles, editable text/tables and speaker notes verified.')
 
 
 
@@ -78,14 +78,23 @@ with zipfile.ZipFile(root / "dist/slides/unit2-week4-lesson-slides.zip") as bund
     for name in names:
         assert bundle.read(name) == (root / "dist/slides" / name).read_bytes()
 checked=0
-connection=sqlite3.connect((root / "dist/sql-starter.sqlite").as_uri()+"?mode=ro", uri=True)
+connections={name:sqlite3.connect((root / "dist" / name).as_uri()+"?mode=ro", uri=True) for name in ["sql-starter.sqlite","database-project.sqlite"]}
 for lesson in data["lessons"]:
+    connection=connections[lesson.get("queryDatabase","sql-starter.sqlite")]
     for slide in lesson["slides"]:
         if "expectedRows" in slide:
             assert slide["code"].lstrip().upper().startswith("SELECT ")
             actual=[list(row) for row in connection.execute(slide["code"]).fetchall()]
             assert actual==slide["expectedRows"], lesson["id"]+": "+slide["title"]
             checked+=1
-connection.close()
-assert checked==7
-print("Unit 2 Week 4 pack matches four decks; all seven worked SQL results verified.")
+for connection in connections.values(): connection.close()
+assert checked==11
+print("Unit 2 Week 4 pack matches four decks; all eleven worked SQL results across Weeks 4–5 verified.")
+
+with zipfile.ZipFile(root / "dist/slides/unit2-week5-lesson-slides.zip") as bundle:
+    assert bundle.testzip() is None
+    names = [n for n in bundle.namelist() if n.endswith(".pptx")]
+    assert sorted(names) == [f"u2-w05-l0{n}.pptx" for n in range(1,5)]
+    for name in names:
+        assert bundle.read(name) == (root / "dist/slides" / name).read_bytes()
+print("Unit 2 Week 5 pack matches four published PowerPoints.")

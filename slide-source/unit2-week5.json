@@ -1,0 +1,611 @@
+{
+  "unit": 2,
+  "week": 5,
+  "chapter": "database-solution",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#database-solution",
+  "references": [
+    "https://www.sqlite.org/lang_select.html",
+    "https://www.sqlite.org/lang_aggfunc.html"
+  ],
+  "lessons": [
+    {
+      "id": "u2-w05-l01",
+      "lesson": 1,
+      "title": "Joining loans to readable labels",
+      "chapter": "database-solution",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#database-solution",
+      "queryDatabase": "database-project.sqlite",
+      "prepare": "Open a fresh working copy of database-project.sqlite in a school-approved SQLite tool. Keep sql-starter.sqlite unchanged. The project edition adds Equipment.ReplacementCost. Review database-project-setup.sql and use database-project-workbook.md, database-project-answers.md and database-project-reports.sql. Use fictional data and public explained answers. No cloud account is required. These 55-minute timings are flexible.",
+      "slides": [
+        {
+          "title": "Joining loans to readable labels",
+          "body": [
+            "Unit 2 · Week 5 · Lesson 1",
+            "Match primary and foreign keys to explain an active-loan report."
+          ],
+          "notes": "Use the separate database-project.sqlite edition of the equipment desk. ReplacementCost contains fictional whole-dollar teaching estimates, not current prices. Activities are ungraded. This week practises joins and summaries; controlled changes follow in Week 6. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "A report needs facts from several tables",
+          "body": [
+            "Loan stores BorrowerID and EquipmentID.",
+            "Borrower stores the borrower’s label.",
+            "Equipment stores the item’s description."
+          ],
+          "notes": "Recall that each Loan row is one borrowing event. BorrowerID and EquipmentID are FKs. The result should show readable labels without copying them into stored Loan rows. Introduce the separate project database and its cost field; retain four Borrower, three Category, five Equipment and six Loan rows. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 5,
+          "strategy": "Recall and prediction"
+        },
+        {
+          "title": "One loan, two key matches",
+          "table": [
+            [
+              "Start in L001",
+              "Matching parent row",
+              "Readable fact"
+            ],
+            [
+              "BorrowerID B001",
+              "Borrower B001",
+              "Learner A"
+            ],
+            [
+              "EquipmentID E01",
+              "Equipment E01",
+              "Camera"
+            ]
+          ],
+          "notes": "Trace L001 by hand before showing SQL. The ON conditions must match corresponding identifiers. EquipmentDescription is unsuitable for identifying a physical item because E01 and E04 are both Camera. A join creates a query result without merging the stored tables. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 6,
+          "strategy": "Worked example"
+        },
+        {
+          "title": "A readable active-loan query",
+          "body": [
+            "l, b and e are short table labels called aliases."
+          ],
+          "notes": "An alias qualifies the source of a field: l.BorrowerID belongs to Loan labelled l. INNER JOIN keeps matching rows. ON supplies the key match. The four active events are L001, L006, L002, L004 in due-date order. DueDate can determine ordering without appearing in this selected result. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "code": "SELECT l.LoanID, b.BorrowerLabel, e.EquipmentDescription\nFROM Loan AS l\nINNER JOIN Borrower AS b ON l.BorrowerID = b.BorrowerID\nINNER JOIN Equipment AS e ON l.EquipmentID = e.EquipmentID\nWHERE l.Returned = 0\nORDER BY l.DueDate, l.LoanID;",
+          "expectedRows": [
+            [
+              "L001",
+              "Learner A",
+              "Camera"
+            ],
+            [
+              "L006",
+              "Learner D",
+              "Microphone"
+            ],
+            [
+              "L002",
+              "Learner B",
+              "Tripod"
+            ],
+            [
+              "L004",
+              "Learner C",
+              "Camera"
+            ]
+          ],
+          "minutes": 10,
+          "strategy": "Teacher model with predictions"
+        },
+        {
+          "title": "The complete active-loan result",
+          "table": [
+            [
+              "LoanID",
+              "BorrowerLabel",
+              "EquipmentDescription"
+            ],
+            [
+              "L001",
+              "Learner A",
+              "Camera"
+            ],
+            [
+              "L006",
+              "Learner D",
+              "Microphone"
+            ],
+            [
+              "L002",
+              "Learner B",
+              "Tripod"
+            ],
+            [
+              "L004",
+              "Learner C",
+              "Camera"
+            ]
+          ],
+          "notes": "These are four event rows, not a count of distinct descriptions. L001 and L004 have different item/borrower keys even though their descriptions match. The query reads l.DueDate for ordering. Compare all returned rows with the source records, not just the row count. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 10,
+          "strategy": "Guided paired practice"
+        },
+        {
+          "title": "A join to explain independently",
+          "body": [
+            "Trace L002 through the borrower and item keys.",
+            "Run the worked join and identify its row for L002.",
+            "Explain the purpose of each ON condition."
+          ],
+          "notes": "Use workbook question 1 for the key trace. L002 links to B002 Learner B and E02 Tripod, with due date 2026-04-08 and Returned=0. Learners should name both source and target fields. Optional support: follow L001 again, then explain L002 without the model. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "The tables stay separate",
+          "body": [
+            "Does INNER JOIN copy BorrowerLabel into the stored Loan table?",
+            "Explain where the value comes from when the query runs."
+          ],
+          "notes": "No. The DBMS matches Loan.BorrowerID to Borrower.BorrowerID and reads BorrowerLabel for the result. The stored relational structure remains separate. Later changing a label changes the managed borrower fact rather than every loan event. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 5,
+          "strategy": "Misconception check with reasons"
+        },
+        {
+          "title": "A new loan, an existing borrower",
+          "body": [
+            "A borrower takes another item in a later loan event.",
+            "Explain which identifier is new and which reference can repeat."
+          ],
+          "notes": "A distinct LoanID identifies the new event. BorrowerID can repeat across Loan rows, as can EquipmentID across history. A new current loan still needs valid references and a separate availability/overlap check. Do not remove legitimate repeated references. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    },
+    {
+      "id": "u2-w05-l02",
+      "lesson": 2,
+      "title": "Loan history and category joins",
+      "chapter": "database-solution",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#database-solution",
+      "queryDatabase": "database-project.sqlite",
+      "prepare": "Open a fresh working copy of database-project.sqlite in a school-approved SQLite tool. Keep sql-starter.sqlite unchanged. The project edition adds Equipment.ReplacementCost. Review database-project-setup.sql and use database-project-workbook.md, database-project-answers.md and database-project-reports.sql. Use fictional data and public explained answers. No cloud account is required. These 55-minute timings are flexible.",
+      "slides": [
+        {
+          "title": "Loan history and category joins",
+          "body": [
+            "Unit 2 · Week 5 · Lesson 2",
+            "Follow item keys to categories and diagnose incorrect matches."
+          ],
+          "notes": "Use the separate database-project.sqlite edition of the equipment desk. ReplacementCost contains fictional whole-dollar teaching estimates, not current prices. Activities are ungraded. This week practises joins and summaries; controlled changes follow in Week 6. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "A third key match",
+          "body": [
+            "Equipment E01 stores CategoryID C01.",
+            "Which table supplies the category name Imaging?"
+          ],
+          "notes": "Category supplies CategoryName through CategoryID. Recall the Loan to Equipment match first, then Equipment to Category. Category belongs to the item, not directly to a borrower. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 5,
+          "strategy": "Recall and prediction"
+        },
+        {
+          "title": "A category history query",
+          "body": [
+            "Each output row still represents one loan event."
+          ],
+          "notes": "The complete report has six rows: L001/E01/Imaging; L002/E02/Support; L003/E03/Audio; L004/E04/Imaging; L005/E02/Support; L006/E05/Audio. There is no Returned filter, so both active and returned history appears. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "code": "SELECT l.LoanID, e.EquipmentID, c.CategoryName\nFROM Loan AS l\nINNER JOIN Equipment AS e ON l.EquipmentID = e.EquipmentID\nINNER JOIN Category AS c ON e.CategoryID = c.CategoryID\nORDER BY l.LoanID;",
+          "expectedRows": [
+            [
+              "L001",
+              "E01",
+              "Imaging"
+            ],
+            [
+              "L002",
+              "E02",
+              "Support"
+            ],
+            [
+              "L003",
+              "E03",
+              "Audio"
+            ],
+            [
+              "L004",
+              "E04",
+              "Imaging"
+            ],
+            [
+              "L005",
+              "E02",
+              "Support"
+            ],
+            [
+              "L006",
+              "E05",
+              "Audio"
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked example"
+        },
+        {
+          "title": "A history extract to inspect",
+          "table": [
+            [
+              "LoanID",
+              "EquipmentID",
+              "CategoryName"
+            ],
+            [
+              "L002",
+              "E02",
+              "Support"
+            ],
+            [
+              "L003",
+              "E03",
+              "Audio"
+            ],
+            [
+              "L005",
+              "E02",
+              "Support"
+            ]
+          ],
+          "notes": "This is an extract from the six-row report, not the whole result. L002 and L005 both refer to E02 but represent different events and statuses. A one-to-many join can legitimately repeat an item’s values. Learners should preserve both history rows. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 10,
+          "strategy": "Teacher model with predictions"
+        },
+        {
+          "title": "Three questions for a join",
+          "body": [
+            "Which fields does ON match?",
+            "What does one result row represent?",
+            "Which rows can INNER JOIN leave out?"
+          ],
+          "notes": "ON must match Loan.EquipmentID to Equipment.EquipmentID and Equipment.CategoryID to Category.CategoryID. Result grain is a loan event. INNER JOIN omits rows lacking a match. Correct required FKs protect the supplied relationships when enforced. The join does not automatically report parent rows with no child events. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 10,
+          "strategy": "Guided paired practice"
+        },
+        {
+          "title": "A readable history report",
+          "body": [
+            "Trace L003 through its borrower, item and category.",
+            "Predict the six category-history rows, then run the query.",
+            "Explain why matching descriptions would be unreliable."
+          ],
+          "notes": "L003 links to B001 Learner A, E03 Recorder and C03 Audio. Compare all six rows in the worked report file. E01 and E04 share Camera as a description, so descriptions cannot uniquely identify an item. Missing ON conditions can combine unrelated rows. Repair the key match rather than adding DISTINCT to hide a problem. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "An unused borrower",
+          "body": [
+            "Imagine a valid borrower with no loan events.",
+            "Would an inner-joined loan report include that borrower?"
+          ],
+          "notes": "No. With no matching Loan row, the borrower has no result row. This can be reasoned through without inserting data this week. A report including every borrower, even with zero loans, requires a different query design. Do not invent a loan to make the borrower appear. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 5,
+          "strategy": "Misconception check with reasons"
+        },
+        {
+          "title": "A suspicious row count",
+          "body": [
+            "A six-event history query returns many more than six rows.",
+            "Which join conditions would you inspect first?"
+          ],
+          "notes": "Inspect missing or incorrect ON conditions and non-unique description matches. For the supplied six loans, unique referenced item/category keys give one matching item and category per loan. Repeated IDs across legitimate loan events are expected; unrelated combinations are not. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    },
+    {
+      "id": "u2-w05-l03",
+      "lesson": 3,
+      "title": "Inventory summaries with aggregates",
+      "chapter": "database-solution",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#database-solution",
+      "queryDatabase": "database-project.sqlite",
+      "prepare": "Open a fresh working copy of database-project.sqlite in a school-approved SQLite tool. Keep sql-starter.sqlite unchanged. The project edition adds Equipment.ReplacementCost. Review database-project-setup.sql and use database-project-workbook.md, database-project-answers.md and database-project-reports.sql. Use fictional data and public explained answers. No cloud account is required. These 55-minute timings are flexible.",
+      "slides": [
+        {
+          "title": "Inventory summaries with aggregates",
+          "body": [
+            "Unit 2 · Week 5 · Lesson 3",
+            "Calculate summaries from rows that represent the right thing."
+          ],
+          "notes": "Use the separate database-project.sqlite edition of the equipment desk. ReplacementCost contains fictional whole-dollar teaching estimates, not current prices. Activities are ungraded. This week practises joins and summaries; controlled changes follow in Week 6. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "What one input row represents",
+          "body": [
+            "For inventory value, should you start from Equipment or Loan?",
+            "Explain what each table counts once."
+          ],
+          "notes": "Equipment has one row per physical item. Loan has one row per event, so E02 occurs twice in its history. Starting with joined history can duplicate the cost for E02 or omit unused items. Choose input rows to match the question. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 5,
+          "strategy": "Recall and prediction"
+        },
+        {
+          "title": "Fictional replacement estimates",
+          "table": [
+            [
+              "Item",
+              "Estimate in whole dollars"
+            ],
+            [
+              "E01",
+              "600"
+            ],
+            [
+              "E02",
+              "80"
+            ],
+            [
+              "E03",
+              "150"
+            ],
+            [
+              "E04",
+              "450"
+            ],
+            [
+              "E05",
+              "120"
+            ]
+          ],
+          "notes": "These are fixed fictional teaching values, not market prices. Five items total 1400. Mean 280, minimum 80 and maximum 600. Ask learners to calculate by hand before SQL. ReplacementCost is added in database-project.sqlite, not the previous SQL-basics starter. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 6,
+          "strategy": "Worked example"
+        },
+        {
+          "title": "An inventory summary",
+          "body": [
+            "Predict the five summary values before running."
+          ],
+          "notes": "The complete single-row result is 5, 1400, 280.0, 80, 600. Each aggregate summarises the Equipment input rows. AS gives readable result headings. Numeric summaries should use meaningful numeric attributes, not arbitrary identifiers. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "code": "SELECT COUNT(*) AS ItemCount,\nSUM(ReplacementCost) AS TotalCost,\nAVG(ReplacementCost) AS MeanCost,\nMIN(ReplacementCost) AS LowestCost,\nMAX(ReplacementCost) AS HighestCost\nFROM Equipment;",
+          "expectedRows": [
+            [
+              5,
+              1400,
+              280.0,
+              80,
+              600
+            ]
+          ],
+          "minutes": 10,
+          "strategy": "Teacher model with predictions"
+        },
+        {
+          "title": "The five summary values",
+          "table": [
+            [
+              "Function",
+              "Question",
+              "Result (costs in $)"
+            ],
+            [
+              "COUNT(*)",
+              "How many item rows?",
+              "5"
+            ],
+            [
+              "SUM(ReplacementCost)",
+              "Total estimate?",
+              "1400"
+            ],
+            [
+              "AVG(ReplacementCost)",
+              "Mean estimate?",
+              "280.0"
+            ],
+            [
+              "MIN(ReplacementCost)",
+              "Lowest estimate?",
+              "80"
+            ],
+            [
+              "MAX(ReplacementCost)",
+              "Highest estimate?",
+              "600"
+            ]
+          ],
+          "notes": "Costs are whole-dollar estimates; the sum, mean, minimum and maximum carry dollar units. COUNT(*) is a row count. COUNT(field) counts non-NULL values of that field. SUM, AVG, MIN and MAX ignore NULL input values. Do not confuse a row count with a distinct item count after a join. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 10,
+          "strategy": "Guided paired practice"
+        },
+        {
+          "title": "A summary with evidence",
+          "body": [
+            "Complete workbook question 3 and compare with your hand calculation.",
+            "Explain why summing costs across loan history changes the question.",
+            "Try the empty category C99 from question 10."
+          ],
+          "notes": "Joined loan history has six rows and counts E02 cost 80 twice in the supplied data, yielding 1480 rather than inventory total 1400. For ungrouped aggregates over empty C99 input, expect one row: COUNT(*) 0, other four aggregates NULL. NULL is not automatically zero. A GROUP BY query with no input groups returns no rows. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "Zero rows and a NULL sum",
+          "body": [
+            "No item matches category C99.",
+            "Why can COUNT(*) be 0 while SUM(ReplacementCost) is NULL?"
+          ],
+          "notes": "COUNT counts zero input rows. SQLite SUM returns NULL when there are no non-NULL inputs. An ungrouped aggregate query still returns one summary row. Do not label NULL as a measured zero cost. The distinction affects how a report communicates missing or absent values. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 5,
+          "strategy": "Misconception check with reasons"
+        },
+        {
+          "title": "A repeated cost is not a repeated item",
+          "body": [
+            "Two different items could have the same replacement estimate.",
+            "Would SUM(DISTINCT ReplacementCost) always fix a bad inventory join?"
+          ],
+          "notes": "No. It removes repeated numeric values, which might belong to different real items. Correct the input rows and relationships instead. Compute inventory from Equipment, where each physical item is represented once. A repair must preserve two distinct items even if they have equal costs. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    },
+    {
+      "id": "u2-w05-l04",
+      "lesson": 4,
+      "title": "Independent joins and grouped reports",
+      "chapter": "database-solution",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#database-solution",
+      "queryDatabase": "database-project.sqlite",
+      "prepare": "Open a fresh working copy of database-project.sqlite in a school-approved SQLite tool. Keep sql-starter.sqlite unchanged. The project edition adds Equipment.ReplacementCost. Review database-project-setup.sql and use database-project-workbook.md, database-project-answers.md and database-project-reports.sql. Use fictional data and public explained answers. No cloud account is required. These 55-minute timings are flexible.",
+      "slides": [
+        {
+          "title": "Independent joins and grouped reports",
+          "body": [
+            "Unit 2 · Week 5 · Lesson 4",
+            "Check joined reports and summaries against clear requirements."
+          ],
+          "notes": "Use the separate database-project.sqlite edition of the equipment desk. ReplacementCost contains fictional whole-dollar teaching estimates, not current prices. Activities are ungraded. This week practises joins and summaries; controlled changes follow in Week 6. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 2,
+          "strategy": "Learning intention"
+        },
+        {
+          "title": "The report requirement comes first",
+          "body": [
+            "An active report needs labels, item ID, category and due date.",
+            "Which tables provide those facts?"
+          ],
+          "notes": "Loan provides LoanID, DueDate and Returned; Borrower provides BorrowerLabel; Equipment provides EquipmentID and CategoryID; Category provides CategoryName. Four tables are needed. Use matching keys, filter Returned=0 and sort oldest due date first, then LoanID. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 5,
+          "strategy": "Recall and prediction"
+        },
+        {
+          "title": "A summary for each category",
+          "body": [
+            "GROUP BY creates one summary for each category represented."
+          ],
+          "notes": "GROUP BY lists both displayed non-aggregate category fields. This inner join summarises categories having matching items. A category with no Equipment rows is absent. Source rows represent items, not loan events. Expected C01 Imaging 2 1050; C02 Support 1 80; C03 Audio 2 270. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "code": "SELECT c.CategoryID, c.CategoryName, COUNT(*) AS Items,\nSUM(e.ReplacementCost) AS TotalCost\nFROM Category AS c\nINNER JOIN Equipment AS e ON c.CategoryID = e.CategoryID\nGROUP BY c.CategoryID, c.CategoryName\nORDER BY c.CategoryID;",
+          "expectedRows": [
+            [
+              "C01",
+              "Imaging",
+              2,
+              1050
+            ],
+            [
+              "C02",
+              "Support",
+              1,
+              80
+            ],
+            [
+              "C03",
+              "Audio",
+              2,
+              270
+            ]
+          ],
+          "minutes": 6,
+          "strategy": "Worked example"
+        },
+        {
+          "title": "The complete category summary",
+          "table": [
+            [
+              "CategoryID",
+              "CategoryName",
+              "Items",
+              "TotalCost ($)"
+            ],
+            [
+              "C01",
+              "Imaging",
+              "2",
+              "1050"
+            ],
+            [
+              "C02",
+              "Support",
+              "1",
+              "80"
+            ],
+            [
+              "C03",
+              "Audio",
+              "2",
+              "270"
+            ]
+          ],
+          "notes": "Cross-check 2+1+2=5 items and 1050+80+270=1400 dollars. These totals match the ungrouped inventory report. The input is Category joined to Equipment, not Loan. This result does not establish the count of active loans. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 10,
+          "strategy": "Teacher model with predictions"
+        },
+        {
+          "title": "Checks for joined and summary reports",
+          "table": [
+            [
+              "Report",
+              "What one input row represents",
+              "Useful check"
+            ],
+            [
+              "Active loan report",
+              "A loan event",
+              "Four rows and correct labels"
+            ],
+            [
+              "Inventory summary",
+              "An equipment item",
+              "Five items and total 1400"
+            ],
+            [
+              "Category summary",
+              "An item within a category",
+              "Counts/totals agree with inventory"
+            ]
+          ],
+          "notes": "Ask partners to explain the row meaning before checking totals. A plausible result can use the wrong input grain. Acceptance criteria are conditions you can check against requirements. These are ungraded self-review checks; no assessment score or tracking is added. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 10,
+          "strategy": "Guided paired practice"
+        },
+        {
+          "title": "Two reports to build independently",
+          "body": [
+            "Complete workbook questions 2 and 4.",
+            "Predict the rows, columns and order before running.",
+            "Compare the results, explain differences and correct the SQL."
+          ],
+          "notes": "Question 2: SELECT l.LoanID, b.BorrowerLabel, e.EquipmentID, c.CategoryName, l.DueDate FROM Loan AS l INNER JOIN Borrower AS b ON l.BorrowerID=b.BorrowerID INNER JOIN Equipment AS e ON l.EquipmentID=e.EquipmentID INNER JOIN Category AS c ON e.CategoryID=c.CategoryID WHERE l.Returned=0 ORDER BY l.DueDate,l.LoanID; rows L001 Learner A E01 Imaging 2026-04-06; L006 Learner D E05 Audio 2026-04-07; L002 Learner B E02 Support 2026-04-08; L004 Learner C E04 Imaging 2026-04-10. Question 4 uses the category summary shown. Inspect creation SQL to identify PK, FK, NOT NULL and CHECK; creating/testing it and controlled data changes are taught next week. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 12,
+          "strategy": "Independent application"
+        },
+        {
+          "title": "A category with no items",
+          "body": [
+            "A new category has no Equipment rows.",
+            "Will the shown inner-join category summary display a zero for it?"
+          ],
+          "notes": "No. INNER JOIN supplies no input rows for that category, so it has no group in this query. Reporting all categories with zero counts needs a different query design. Do not confuse this with an ungrouped aggregate over empty input, which produces one summary row. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 5,
+          "strategy": "Misconception check with reasons"
+        },
+        {
+          "title": "A corrected report to explain",
+          "body": [
+            "Name one incorrect join or summary choice you corrected.",
+            "Give a new case that would expose the same mistake."
+          ],
+          "notes": "Examples: two items with the same description expose description matching; a repeated loan for one item exposes duplicated inventory costs; an unused parent exposes inner-join omission. Record expected and actual results for self-review. Week 6 continues creation/constraints and controlled INSERT, UPDATE and DELETE practice with recovery. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "minutes": 5,
+          "strategy": "Reflection and a fresh example"
+        }
+      ]
+    }
+  ]
+}
