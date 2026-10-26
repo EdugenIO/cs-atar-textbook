@@ -23,3 +23,7 @@ Edit `questions.js`: each set has a stable ID, revision, year, suggested minutes
 Run `node --test tests/*.test.mjs` from the repository root. Practice regression checks cover rubric totals, chapter links, state restore, timer expiry/overtime, reading transitions and criterion totals. Complete browser checks for saved drafts, reading/timing modes, finish/reveal, marks/corrections, downloads, print layout and storage failure before wider release. Try a student using only keyboard navigation and discuss ambiguous marking decisions with a teacher. Browser/device and classroom trials remain ongoing.
 
 Original questions/guides: CC BY 4.0. Software: MIT, as in the repository licences. Textbook chapters provide learning context; official syllabus and examination documents remain the authority for formal assessment requirements.
+
+## Language convention
+
+Use Australian English in all questions, marking guides, interface text and exports (for example, behaviour, initialise, parameterised, authorised and synchronised). Use practice as the noun and practise/practising as the verb. In computing, program is the correct Australian spelling. Preserve programming identifiers, standard HTML attributes, official titles and source URLs exactly. The practice page declares `lang="en-AU"`.
