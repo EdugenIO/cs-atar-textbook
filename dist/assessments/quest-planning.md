@@ -3,7 +3,7 @@
 Recommendation: start with a small school-approved pilot (for example two shared headsets), test a complete lesson workflow, then decide whether a larger set improves the assessable learning. This is a planning recommendation, not a product-price quote or a verified school deployment.
 
 ## Three practical contexts
-1. **Unit 3 Python replay simulator, Task 1 (15%).** Invent movement/checkpoint events and replay them on a 2D grid with classes and dictionaries. Optional headset observation helps refine requirements. The Python core and identical synthetic events remain usable without VR.
+1. **Task 1 revision, 26 October 2026.** Task 1 now uses the bounded common Pygame game contract. VR replay is retired as an assessment option. Any headset experience is ungraded enrichment and supplies no extra Task 1 marks.
 2. **Unit 4 booking and maintenance database, Task 6 (25%).** Manage fictional borrowers, models, devices, bookings and maintenance through Python/SQL. The supplied starter pack uses five entities. Headsets make the client scenario tangible but are not required to build, test or earn marks.
 3. **Ungraded network preparation.** Analyse a supplied shared-device lab diagram and synthetic incident logs as a learning activity. The scheduled theory test remains one standard assessment. Use supplied evidence rather than testing the school network.
 

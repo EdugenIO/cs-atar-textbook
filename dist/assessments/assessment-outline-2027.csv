@@ -1,5 +1,5 @@
 Year,Task,Type,Course weight percent,Title,Proposed local timing,SCSA sample timing (reference only),Content scope,Allocated project lessons
-11,1,Project,20,Modular Python solution,"S1 W8–10: 10 existing project lessons; design W8, build W9, final W10.",S1 W5–12,"Unit 1: modular software development, data/control structures, testing and evaluation",10
+11,1,Project,20,Pygame interactive game,"S1 W8–10: 10 existing project lessons; design W8, build W9, final W10.",S1 W5–12,"Unit 1: functions, one-dimensional lists, control/data structures, sequential files and tested development",10
 11,2,Practical,5,Programming implementation test,"S1 W7 L4: existing controlled practical slot; after functions, lists and files.",S1 W10,"Unit 1: input validation, debugging, functions, one-dimensional lists and file handling",
 11,3,Theory,10,Programming and networking theory,S1 W14 L3: existing theory slot; after network design.,S1 W14,"Unit 1: programming explanations, licensing and network communication/design",
 11,4,Examination,10,Semester 1 examination,"S1 W17–18 exam block, according to the school timetable.",S1 W16,Unit 1 representative sample,
@@ -7,7 +7,7 @@ Year,Task,Type,Course weight percent,Title,Proposed local timing,SCSA sample tim
 11,6,Project,20,Relational database solution,"S2 W7–12: 14 existing workshops, including design, build, testing and demonstration.",S2 W10–12,"Unit 2: relational design, normalisation, SQL, integrity, evaluation and responsible data",14
 11,7,Practical,5,SQL implementation test,S2 W14 L4 proposed controlled slot after SQL and database review.,S2 W14,Unit 2: implement and manipulate a database using SQL,
 11,8,Examination,20,Semester 2 examination,"S2 W17–18 exam block, according to the school timetable.",S2 W16,Units 1–2 representative sample; make scope explicit before issue,
-12,1,Project,15,Object-oriented Python solution,"S1 W7–10: 12 existing workshops, after classes and inheritance.",S1 W5–8,"Unit 3: object-oriented development, arrays/dictionaries, algorithms and testing",12
+12,1,Project,15,Object-oriented Pygame game,"S1 W7–10: 12 existing workshops, after classes and inheritance.",S1 W5–8,"Unit 3: classes/inheritance, two-dimensional arrays, dictionaries, common algorithms and tested development",12
 12,2,Practical,5,Programming implementation test,S1 W9 L2 proposed: after OOP and debugging; before that week’s two project workshops.,S1 W8,"Unit 3: debugging, dictionaries and student-authored classes",
 12,3,Theory,5,"Programming, ethics and law",S1 W14 L3 proposed: after project reflection and network teaching.,S1 W10,Unit 3: programming reasoning and software development issues; sample networking in exam,
 12,4,Examination,15,Semester 1 examination,"S1 W17–18 exam block, according to the school timetable.",S1 W16,"Unit 3 representative sample, including networking",

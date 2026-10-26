@@ -1,0 +1,4 @@
+hazard_id,axis,minimum,maximum,normal_interval_ms,challenge_interval_ms
+H1,x,180,260,1000,750
+H2,x,400,480,1000,750
+H3,x,600,680,1000,750

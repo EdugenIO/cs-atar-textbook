@@ -31,7 +31,7 @@ for(const year of data.years){
   assert.ok(html.includes(task.type==='Project'?'Choose one project context':'One standard assessment'));
  }
 }
-assert.equal(projects,18);assert.equal(standard,12);assert.equal(starters,5);
+assert.equal(projects,18);assert.equal(standard,12);assert.equal(starters,12);
 assert.equal(vm.runInContext('assessmentEscape("<script>&")',c),'&lt;script&gt;&amp;');
 const hub=vm.runInContext('assessmentHubPage()',c);
 for(const match of hub.matchAll(/href="(assessments\/[^"#]+)"/g))assert.ok(fs.existsSync(new URL('dist/'+match[1],root)),match[1]);
@@ -40,4 +40,21 @@ const index=fs.readFileSync(new URL('dist/index.html',root),'utf8');
 assert.ok(index.includes('href="#assessments">Assessments</a>'));
 assert.ok(index.indexOf('src="assessments.js"')<index.indexOf('src="reader.js"'));
 assert.equal(fs.readdirSync(new URL('dist/assessments/briefs/',root)).length,30);
-console.log('Two 100% outlines, 18 project choices, 12 standard assessments, five packs and all resource links passed.');
+console.log('Two 100% outlines, 18 project choices, 12 standard assessments, twelve packs and all resource links passed.');
+
+for(const year of data.years){
+ const task=year.tasks[0], contract=data.gameContracts.find(c=>c.year===year.year);
+ assert.ok(task.gameContract&&task.gameRubric);
+ assert.equal(task.options.length,5);
+ assert.deepEqual(Array.from(task.options,o=>o.id),['space','reef','castle','circuit','museum']);
+ assert.ok(contract.functional.length>=9&&contract.nonFunctional.length>=7);
+ assert.equal(contract.rubric.reduce((n,c)=>n+c.marks,0),100);
+ for(const row of contract.rubric)assert.equal(row.items.reduce((n,c)=>n+c.marks,0),row.marks);
+ for(const field of ['functional','nonFunctional'])assert.equal(new Set(contract[field].map(r=>r.id)).size,contract[field].length);
+ vm.runInContext(`assessmentYear=${year.year};assessmentTask='1'`,c);
+ const html=vm.runInContext('assessmentChoices()',c);
+ assert.ok(html.includes('Shared functional requirements')&&html.includes('Shared non-functional requirements'));
+ assert.ok(html.includes('Common marking guide')&&html.includes('AI-generated decorative'));
+ for(const match of html.matchAll(/href="(assessments\/[^"#]+)"/g))assert.ok(fs.existsSync(new URL('dist/'+match[1],root)),match[1]);
+ assert.ok(task.options.every(o=>o.pack&&o.routes.every(r=>!r.includes('Console'))));
+}

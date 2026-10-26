@@ -1,0 +1,2 @@
+# Fixture conventions
+All positions are top-left pixels. Start (40,60) is safe. On each patrol tick move 20 pixels in the current direction, reversing before crossing the configured endpoints. Use 1000/750 ms according to difficulty. Player movement speed is a student design constant; validate boundaries for the player rectangle. A fully deterministic test may supply movement commands directly to the state-update function.

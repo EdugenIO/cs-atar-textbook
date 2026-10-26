@@ -1,0 +1,15 @@
+Test ID,Requirement,Setup / action,Expected
+G01,FR1,Pause for 95 wall-clock seconds,Active-play timer and positions unchanged
+G02,FR1,Restart after collecting and taking a hit,"Score 0, lives 3, timer 90 and original objects"
+G03,FR2,Move outward at each boundary,No out-of-bounds position
+G04,FR3,Collect one item then overlap its former position,Score 10; second overlap adds nothing
+G05,FR4,"Hazard collisions at ticks 1000,1500,2000","Lives 2,2,1 with 1000 ms protection"
+G06,FR5,Exit and final item with time reaching zero,Loss takes precedence
+G07,NFR5,Launch from a different working directory; remove decoration,Relative resources resolve; shapes/text game works
+G08,NFR3,Pause key five times on declared reference PC,Visible pause within 250 ms; record actual observations
+Y12-01,FR7,Complete map 1 normally,Map 2 starts with fresh 90 seconds; lives/score retained
+Y12-02,FR7,Attempt wall and outside-map moves,Position unchanged
+Y12-03,FR7/FR10,"Bad dimensions, tile 9 or duplicate start",Useful error; invalid map does not start
+Y12-04,FR9,"Search [A,B,C] for B and Z",Index 1; documented not-found result
+Y12-05,FR9,"Sort [30,10,20,10], [], [20]","[10,10,20,30], [], [20]"
+Y12-06,FR7,Change map 1 in a test copy,Map 2 remains unchanged

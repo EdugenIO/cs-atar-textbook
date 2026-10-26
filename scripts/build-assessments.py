@@ -1,6 +1,7 @@
 """Build original public assessment planning resources from the editable catalogue."""
 from pathlib import Path
 import csv, io, json, zipfile
+from game_projects import build_game_resources
 root=Path(__file__).resolve().parents[1]
 data=json.loads((root/'assessment-source/catalogue.json').read_text(encoding='utf-8'))
 out=root/'dist/assessments';out.mkdir(exist_ok=True)
@@ -97,7 +98,7 @@ write('quest-planning.md','''# Quest 3: assessment uses and pilot plan
 Recommendation: start with a small school-approved pilot (for example two shared headsets), test a complete lesson workflow, then decide whether a larger set improves the assessable learning. This is a planning recommendation, not a product-price quote or a verified school deployment.
 
 ## Three practical contexts
-1. **Unit 3 Python replay simulator, Task 1 (15%).** Invent movement/checkpoint events and replay them on a 2D grid with classes and dictionaries. Optional headset observation helps refine requirements. The Python core and identical synthetic events remain usable without VR.
+1. **Task 1 revision, 26 October 2026.** Task 1 now uses the bounded common Pygame game contract. VR replay is retired as an assessment option. Any headset experience is ungraded enrichment and supplies no extra Task 1 marks.
 2. **Unit 4 booking and maintenance database, Task 6 (25%).** Manage fictional borrowers, models, devices, bookings and maintenance through Python/SQL. The supplied starter pack uses five entities. Headsets make the client scenario tangible but are not required to build, test or earn marks.
 3. **Ungraded network preparation.** Analyse a supplied shared-device lab diagram and synthetic incident logs as a learning activity. The scheduled theory test remains one standard assessment. Use supplied evidence rather than testing the school network.
 
@@ -118,6 +119,8 @@ quest-events.csv is an original mock format, not an export from Quest hardware o
 References:
 '''+f"\n- Meta development platforms: {data['sources']['quest']}\n- Managed app distribution: {data['sources']['management']}\n- SCSA course page and language rules: {data['sources']['course']}\n")
 write('quest-events.csv',csvtext([['tick','alias','row','column','action'],[0,'P01',0,0,'start'],[1,'P01',0,1,'move'],[2,'P01',1,1,'checkpoint'],[3,'P01',1,2,'finish']]))
+game_packs=build_game_resources(root,write,csvtext)
+data['gameContracts']=json.loads((root/'assessment-source/game-projects.json').read_text(encoding='utf-8'))['years']
 outline=[['Year','Task','Type','Course weight percent','Title','Proposed local timing','SCSA sample timing (reference only)','Content scope','Allocated project lessons']]
 for year in data['years']:
  for task in year['tasks']:
@@ -132,6 +135,8 @@ for year in data['years']:
    body+='\n\n## Initial acceptance checks / paper review\n\n'+'\n'.join('- '+x for x in op['tests'])
    if task['type']=='Project':
     body+='\n\n## Submission and criteria\n\nSubmit your requirements/schedule, design, code or database, synthetic data, expected/actual test records, source/assistance log and evaluation. Use student-workbook.md and test-record.csv. Checkpoints belong to this project.\n\nSuggested raw marks: investigation 15, design 25, implementation 35, testing 15, evaluation 10, total 100. The teacher must translate these categories into task-specific observable marking points and publish the final guide. Hardware/visual polish earns no separate marks.\n'
+   if task.get('gameContract'):
+    body+='\n## Binding common game contract\n\nAll scenario themes in this year have identical functional/non-functional requirements, test fixtures and item-level criteria. Only setting, labels and decorative assets vary.\n\n'+(root/'dist'/task['gameContract']).read_text(encoding='utf-8')+'\n\n'+(root/'dist'/task['gameRubric']).read_text(encoding='utf-8')
    body+='\n## Conditions to finalise before issue\n\nTeacher sets issue/due dates, permitted references/AI/assistance, supervised-work arrangements, individual-authorship evidence, approved adjustments and the item-level key. Record milestones and use an explanation or small change demonstration to authenticate the same task. Fresh controlled tests and exam keys must be developed privately. Public practice answers cannot establish assessment security.\n\nThis option does not add to the eight-task outline. A learner completes the selected alternative or an explicitly moderated equivalent. Refer to teacher-release-checklist.md and coverage-and-release.md before use.\n'
    if task['type']!='Project':
     body=body.replace('(one alternative in this slot)','(standard task for this slot)').replace('This option does not add to the eight-task outline. A learner completes the selected alternative or an explicitly moderated equivalent.','This is the standard task in its existing slot. It does not add another task to the eight-task outline.')
@@ -147,45 +152,10 @@ for name in ['LICENSE-CODE.txt','LICENSE-CONTENT.txt']:
 
 # Deliberately unfinished code contracts. These do not solve the assessed algorithms.
 packs={
- 'y11-t1-puzzle':{
- 'puzzle-logic.py':'''"""Unfinished assessment scaffold. Implement and test your own logic."""
-def validate_symbol(text, minimum, maximum):
-    raise NotImplementedError("Validate a symbol")
-def score_attempt(pattern, attempt):
-    """Return matching positions for equal-length validated lists."""
-    raise NotImplementedError("Compare the lists")
-def session_summary(scores):
-    raise NotImplementedError("Summarise a session including the empty case")
-''',
- 'patterns.csv':csvtext([['pattern_id','sequence'],['P01','1 3 2'],['P02','2 1 2']])},
- 'y11-t1-queue':{
- 'queue-logic.py':'''"""Unfinished deterministic simulator. Use the issued assumptions."""
-def next_queue(queue, arrivals, capacity):
-    raise NotImplementedError("Calculate and validate one step")
-def simulate(arrivals, capacity):
-    raise NotImplementedError("Return queue lengths after each step")
-def summarise(queue_lengths):
-    raise NotImplementedError("Summarise the trace, including an empty run")
-''',
- 'arrivals.csv':csvtext([['tick','arrivals'],[0,2],[1,0],[2,3]])},
  'y11-t6-equipment':{
  'flat-loans.csv':csvtext([['LoanID','BorrowerID','BorrowerAlias','EquipmentID','EquipmentLabel','CategoryID','CategoryName','LoanDate','DueDate','ReturnDate'],['L01','B01','Alias01','E01','Tripod','C01','Media','2027-03-01','2027-03-08',''],['L02','B02','Alias02','E02','Microphone','C01','Media','2027-03-01','2027-03-08','2027-03-05'],['L03','B01','Alias01','E01','Tripod','C01','Media','2027-03-10','2027-03-17','']]),
  'schema-todo.sql':'-- Design four entities before implementing your SQL.\n-- TODO: enable foreign keys and define keys, domains and relationships.\n-- TODO: load synthetic fixtures and implement the required reports.\n',
  'relationship-prompt.md':'# Relationships to investigate\nOne borrower can have many loans. One equipment item can have loans at different times. One category can classify many items. Decide minimum participation and how loans with no return date appear in reports. The flat fixture has sequential loans on E01, not simultaneous duplicate checkout. Use the supplied synthetic dates to define an explicit as-of date in tests.'},
- 'y12-t1-warehouse':{
- 'warehouse-logic.py':'''"""Unfinished core. Design your classes and algorithms before implementation."""
-class Warehouse:
-    def __init__(self, grid):
-        raise NotImplementedError("Create a validated independent grid")
-    def move(self, item_id, row, column):
-        raise NotImplementedError("Validate and apply a move")
-    def summary(self):
-        raise NotImplementedError("Return a testable state summary")
-# TODO: design your item classes, dictionary lookup and search/sort behaviour.
-''',
- 'layout.csv':csvtext([['row','column','cell'],[0,0,'free'],[0,1,'blocked'],[0,2,'free'],[1,0,'free'],[1,1,'free'],[1,2,'free']]),
- 'items.csv':csvtext([['item_id','row','column','priority'],['I01',0,0,2],['I02',1,2,1]]),
- 'commands.csv':csvtext([['item_id','target_row','target_column'],['I01',0,1],['I01',1,0],['I02',2,2]])},
  'y12-t6-questdb':{
  'models.csv':csvtext([['model_id','model_name'],['M01','Training headset model A']]),
  'devices.csv':csvtext([['device_id','model_id','asset_alias'],['D01','M01','Lab01'],['D02','M01','Lab02']]),
@@ -203,8 +173,21 @@ def restore_backup(backup_path, disposable_target):
 ''',
  'fixture-decisions.md':'# Decisions the client brief must settle\nSlots use integer labels, not actual dates. Define whether end slots are inclusive or exclusive. K02 is deliberately a booked device with unresolved maintenance: treat it as existing data requiring an explicitly justified response. Do not silently clean it away. Decide if unresolved maintenance blocks new bookings and how existing bookings are handled. Publish those rules before marking conflicts.'}
 }
+packs.update(game_packs)
+# Remove only obsolete generated files within the known assessment output tree.
+for old in ['y11-t1-puzzle','y11-t1-queue','y12-t1-warehouse']:
+ folder=(out/'starters'/old).resolve()
+ assert folder.is_relative_to((out/'starters').resolve())
+ if folder.exists():
+  for p in folder.iterdir():
+   assert p.is_file(),p
+   p.unlink()
+  folder.rmdir()
+ old_zip=out/f'{old}-starter.zip'
+ if old_zip.exists():old_zip.unlink()
 for key,files in packs.items():
- write(f'starters/{key}/README.md',f'# {key}: unfinished starter\n\nRead the task brief in the briefs folder and the common templates in the ZIP. All data is synthetic. Python functions deliberately raise NotImplementedError. SQL files contain TODOs, not a working schema. Design and implement your own solution.\n\nThe pack supplies an initial fixture only. Add normal, boundary, invalid and failure cases from your own requirements. Public fixtures are not a secure marking key. Original content CC BY 4.0; code MIT.\n')
+ description='display_shell.py runs a display-only Pygame window; student_game.py deliberately raises NotImplementedError until you implement the game. Read setup.md, common-requirements.md and common-marking-guide.md.' if key in game_packs else 'Python functions deliberately raise NotImplementedError. SQL files contain TODOs, not a working schema.'
+ write(f'starters/{key}/README.md',f'# {key}: unfinished starter\n\nRead the task brief in the briefs folder and the common templates in the ZIP. All data is synthetic. {description} Design and implement your own solution.\n\nThe pack supplies initial fixtures. Add normal, boundary, invalid and failure cases from the requirements. Public fixtures are not a secure marking key. Original content CC BY 4.0; code MIT.\n')
  for name,text in files.items():write(f'starters/{key}/{name}',text)
  with zipfile.ZipFile(out/f'{key}-starter.zip','w',zipfile.ZIP_DEFLATED) as z:
   for p in sorted((out/'starters'/key).glob('*')):z.write(p,f'starter/{p.name}')
@@ -212,7 +195,7 @@ for key,files in packs.items():
   for name in ['student-workbook.md','project-rubric.md','test-record.csv','source-log.csv','teacher-release-checklist.md','coverage-and-release.md','LICENSE-CODE.txt','LICENSE-CONTENT.txt']:z.write(out/name,name)
 write('README.md','''# Assessment library for 2027
 
-Thirty planning resources within sixteen slots (eight per year). Eighteen alternative project briefs, eight standard controlled-test blueprints and four standard exam blueprints. Choice applies to projects only. Five project options include unfinished starter packs with synthetic data. Full controlled papers, private keys and final school release decisions are not yet complete.
+Thirty planning resources within sixteen slots (eight per year). Eighteen alternative project briefs, eight standard controlled-test blueprints and four standard exam blueprints. Choice applies to projects only. Task 1 offers five equivalent Pygame game themes per year with a shared year-level contract and marking guide. All ten game themes and two database options have starter packs. Full controlled papers, private keys and final school release decisions are not yet complete.
 
 The catalogue is editable in assessment-source/catalogue.json. Regenerate with python scripts/build-assessments.py. Original material uses the site’s content/code licences. Official SCSA documents and third-party software retain their own terms and are linked rather than re-licensed.
 
@@ -222,4 +205,4 @@ Start with assessment-outline-2027.csv, coverage-and-release.md and teacher-rele
 with zipfile.ZipFile(out/'assessment-planning-2027.zip','w',zipfile.ZIP_DEFLATED) as z:
  for p in sorted(out.rglob('*')):
   if p.is_file() and p.suffix!='.zip':z.write(p,str(p.relative_to(out)))
-print('Built 30 briefs/blueprints, five starter ZIPs, outline, templates and planning collection.')
+print('Built 30 briefs/blueprints, twelve starter ZIPs, common game contracts and planning collection.')

@@ -1,0 +1,2 @@
+# Fixture conventions
+Tile positions are zero-based row/column indices. Use 40-pixel tiles, offset at (40,100) in the 800x600 window. Player moves one cell per directional KEYDOWN. Hazards patrol one adjacent column cell per 1000 active ms, reversing at a wall or map edge; no pathfinding. Each map has independent entity instances. Load item metadata into a dictionary keyed by ID. Validate map dimensions/codes and start/exit counts. Use the shared runtime configuration and loss-before-completion rule.

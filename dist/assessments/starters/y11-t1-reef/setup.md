@@ -1,0 +1,3 @@
+# Setup and ownership
+Use the school-approved Python 3 environment. The requirements file records the proposed Pygame version; teacher/IT must validate compatibility and the school installation before issue. Do not install software during a controlled assessment.
+Run display_shell.py to check the window, event loop, primitives and font. It is not a working game. student_game.py raises NotImplementedError until implemented. Mark supplied infrastructure in the source log; do not claim it as assessed work. Use the common requirements, marking guide, fixtures and scope ceiling. No external images or audio are needed.

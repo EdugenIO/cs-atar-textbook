@@ -28,10 +28,10 @@
           "number": 1,
           "type": "Project",
           "weight": 20,
-          "title": "Modular Python solution",
+          "title": "Pygame interactive game",
           "timing": "S1 W8–10: 10 existing project lessons; design W8, build W9, final W10.",
           "sampleTiming": "S1 W5–12",
-          "scope": "Unit 1: modular software development, data/control structures, testing and evaluation",
+          "scope": "Unit 1: functions, one-dimensional lists, control/data structures, sequential files and tested development",
           "chapters": [
             "design",
             "files",
@@ -39,137 +39,134 @@
           ],
           "options": [
             {
-              "id": "puzzle",
-              "title": "Pygame pattern puzzle",
-              "pitch": "Create a sequence-recall puzzle for a school activity club. Keep graphics simple and assess the Python logic.",
+              "id": "space",
+              "title": "Space salvage",
+              "pitch": "Recover five cargo pods in a damaged space station. Apply the shared year-level rules; only the setting, labels and decorative assets change.",
               "requirements": [
-                "Store a target pattern and player attempts in one-dimensional lists. Use separate functions for round setup, input validation, scoring and summary.",
-                "Support a repeatable practice mode with a fixed pattern, increasing challenge and a clear restart/quit route.",
-                "Save a synthetic session summary to a text file. Keep event handling and display separate from assessable logic."
+                "Use every functional and non-functional requirement in the shared year-level game contract.",
+                "Use the same item/hazard counts, timing, scoring and supplied fixtures as every other scenario in your year.",
+                "Theme labels: collectibles are cargo pods; hazards are security drones. Add no specialist mechanics such as flight, buoyancy or stealth."
+              ],
+              "routes": [
+                "Python 3 + Pygame interactive 2D game with keyboard controls. Primitive shapes/text are a complete submission route.",
+                "Optional AI-generated or original decorative artwork/audio; implement the same rules and preserve primitive fallbacks."
               ],
               "resources": [
-                "Python 3; optional school-approved Pygame installation; keyboard and screen.",
-                "Use coloured rectangles or original text, so no downloaded assets are necessary.",
-                "Included puzzle-logic.py contains unfinished function contracts; fixture data and expected cases accompany it."
+                "Scenario starter ZIP includes a runnable display-only shell, unfinished student interfaces, common fixture data and the full Year 11 contract/marking guide.",
+                "School-approved Python/Pygame installation and a named reference PC; no special hardware or paid assets.",
+                "Shared expected-case CSV, test log, source/AI-asset log and asset policy included."
               ],
               "tests": [
-                "Pattern [1,3,2], attempt [1,3,2]: 3 matching positions.",
-                "Pattern [1,3,2], attempt [1,2,3]: 1 matching position.",
-                "Reject symbols outside the permitted range; quit and restart leave a consistent state."
+                "Run the shared test IDs for state reset, collisions, scoring, timer boundaries and pause.",
+                "Demonstrate the year-level data/algorithm cases and all measurable quality checks.",
+                "Use the same marking guide and core test data for every theme."
               ],
-              "pack": true,
-              "routes": [
-                "Console or text interface: assess the same logic and evidence.",
-                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
-                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
-              ]
+              "pack": true
             },
             {
-              "id": "queue",
-              "title": "Python experiments: queue simulator",
-              "pitch": "Model a fictional service desk and compare two staffing configurations. Assess software quality rather than scientific sophistication.",
+              "id": "reef",
+              "title": "Reef rescue",
+              "pitch": "Collect five pieces of litter at an underwater research station. Apply the shared year-level rules; only the setting, labels and decorative assets change.",
               "requirements": [
-                "Represent queue lengths over discrete ticks in a one-dimensional list. Supply arrivals and service capacity as validated inputs.",
-                "Write functions for one simulation step, a complete run and a summary. Queue length cannot fall below zero.",
-                "Use deterministic input sequences for tests, then compare configurations and state the model’s assumptions. Save results as text."
+                "Use every functional and non-functional requirement in the shared year-level game contract.",
+                "Use the same item/hazard counts, timing, scoring and supplied fixtures as every other scenario in your year.",
+                "Theme labels: collectibles are litter tokens; hazards are moving currents. Add no specialist mechanics such as flight, buoyancy or stealth."
+              ],
+              "routes": [
+                "Python 3 + Pygame interactive 2D game with keyboard controls. Primitive shapes/text are a complete submission route.",
+                "Optional AI-generated or original decorative artwork/audio; implement the same rules and preserve primitive fallbacks."
               ],
               "resources": [
-                "Python 3 with standard library only; no headset or internet required.",
-                "Included arrivals.csv, queue-logic.py stubs and manual expected cases.",
-                "Optional Pygame graph comes after the tested console model."
+                "Scenario starter ZIP includes a runnable display-only shell, unfinished student interfaces, common fixture data and the full Year 11 contract/marking guide.",
+                "School-approved Python/Pygame installation and a named reference PC; no special hardware or paid assets.",
+                "Shared expected-case CSV, test log, source/AI-asset log and asset policy included."
               ],
               "tests": [
-                "Step rule: next queue = max(0, queue + arrivals - capacity).",
-                "Start 0, arrivals [2,0,3], capacity 1: queue trace [1,0,2].",
-                "No arrivals yields zero queue; negative arrivals/capacity must be rejected."
+                "Run the shared test IDs for state reset, collisions, scoring, timer boundaries and pause.",
+                "Demonstrate the year-level data/algorithm cases and all measurable quality checks.",
+                "Use the same marking guide and core test data for every theme."
               ],
-              "pack": true,
-              "routes": [
-                "Console or text interface: assess the same logic and evidence.",
-                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
-                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
-              ]
+              "pack": true
             },
             {
-              "id": "ecosystem",
-              "title": "Python experiments: a simple habitat model",
-              "pitch": "Develop a clearly labelled fictional population model for a science display.",
+              "id": "castle",
+              "title": "Castle courier",
+              "pitch": "Deliver five sealed messages through a castle courtyard. Apply the shared year-level rules; only the setting, labels and decorative assets change.",
               "requirements": [
-                "Store population at each step in a one-dimensional list. Use validated initial population, births and losses.",
-                "Separate update logic from display. Prevent negative population and define rounding explicitly.",
-                "Compare fixed parameter sets using repeatable runs, record assumptions and save a summary."
+                "Use every functional and non-functional requirement in the shared year-level game contract.",
+                "Use the same item/hazard counts, timing, scoring and supplied fixtures as every other scenario in your year.",
+                "Theme labels: collectibles are message tokens; hazards are patrolling guards. Add no specialist mechanics such as flight, buoyancy or stealth."
+              ],
+              "routes": [
+                "Python 3 + Pygame interactive 2D game with keyboard controls. Primitive shapes/text are a complete submission route.",
+                "Optional AI-generated or original decorative artwork/audio; implement the same rules and preserve primitive fallbacks."
               ],
               "resources": [
-                "Python standard library and synthetic starting values.",
-                "Teacher supplies a simple update rule before issue; no biology knowledge marks.",
-                "Common requirements, schedule and testing templates included."
+                "Scenario starter ZIP includes a runnable display-only shell, unfinished student interfaces, common fixture data and the full Year 11 contract/marking guide.",
+                "School-approved Python/Pygame installation and a named reference PC; no special hardware or paid assets.",
+                "Shared expected-case CSV, test log, source/AI-asset log and asset policy included."
               ],
               "tests": [
-                "For rule max(0,population+births-losses), 10+2-3 gives 9.",
-                "Zero population and losses larger than population follow the declared rule.",
-                "Repeat identical inputs and check identical output."
+                "Run the shared test IDs for state reset, collisions, scoring, timer boundaries and pause.",
+                "Demonstrate the year-level data/algorithm cases and all measurable quality checks.",
+                "Use the same marking guide and core test data for every theme."
               ],
-              "pack": false,
-              "routes": [
-                "Console or text interface: assess the same logic and evidence.",
-                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
-                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
-              ]
+              "pack": true
             },
             {
-              "id": "club",
-              "title": "Club order manager",
-              "pitch": "Adapt the textbook’s familiar order context into a fresh client brief with individually assigned values.",
+              "id": "circuit",
+              "title": "Circuit repair",
+              "pitch": "Collect five replacement components inside a fictional computer. Apply the shared year-level rules; only the setting, labels and decorative assets change.",
               "requirements": [
-                "Validate invented order IDs and non-negative whole quantities. Use functions and a list for current-session orders.",
-                "Calculate integer-cent costs, append records and preserve existing runs. A save failure must not claim success.",
-                "Show totals, the first largest-order position and an empty-session message. Use a new price and scenario for an issued assessment."
+                "Use every functional and non-functional requirement in the shared year-level game contract.",
+                "Use the same item/hazard counts, timing, scoring and supplied fixtures as every other scenario in your year.",
+                "Theme labels: collectibles are components; hazards are electrical pulses. Add no specialist mechanics such as flight, buoyancy or stealth."
+              ],
+              "routes": [
+                "Python 3 + Pygame interactive 2D game with keyboard controls. Primitive shapes/text are a complete submission route.",
+                "Optional AI-generated or original decorative artwork/audio; implement the same rules and preserve primitive fallbacks."
               ],
               "resources": [
-                "Python standard library; existing project workbook and unfinished starter are public practice references.",
-                "Teacher must replace familiar worked values and require independent transfer.",
-                "Use the common evidence templates and a writable disposable folder."
+                "Scenario starter ZIP includes a runnable display-only shell, unfinished student interfaces, common fixture data and the full Year 11 contract/marking guide.",
+                "School-approved Python/Pygame installation and a named reference PC; no special hardware or paid assets.",
+                "Shared expected-case CSV, test log, source/AI-asset log and asset policy included."
               ],
               "tests": [
-                "Write expectations using the issued price, including a zero order.",
-                "Empty session and tied largest values follow the brief.",
-                "Two program runs retain both saved records."
+                "Run the shared test IDs for state reset, collisions, scoring, timer boundaries and pause.",
+                "Demonstrate the year-level data/algorithm cases and all measurable quality checks.",
+                "Use the same marking guide and core test data for every theme."
               ],
-              "pack": false,
-              "routes": [
-                "Console or text interface: assess the same logic and evidence.",
-                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
-                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
-              ]
+              "pack": true
             },
             {
-              "id": "trail",
-              "title": "Interactive trail challenge",
-              "pitch": "Build a text-based resource-management adventure for a fictional walking trail.",
+              "id": "museum",
+              "title": "Museum recovery",
+              "pitch": "Recover five misplaced artefacts in a museum after closing. Apply the shared year-level rules; only the setting, labels and decorative assets change.",
               "requirements": [
-                "Store route choices or resources in one-dimensional lists and implement branches and loops using functions.",
-                "Validate menu choices and update a resource total under explicitly defined rules.",
-                "Save a session summary and explain at least two alternative design choices."
+                "Use every functional and non-functional requirement in the shared year-level game contract.",
+                "Use the same item/hazard counts, timing, scoring and supplied fixtures as every other scenario in your year.",
+                "Theme labels: collectibles are artefacts; hazards are cleaning robots. Add no specialist mechanics such as flight, buoyancy or stealth."
+              ],
+              "routes": [
+                "Python 3 + Pygame interactive 2D game with keyboard controls. Primitive shapes/text are a complete submission route.",
+                "Optional AI-generated or original decorative artwork/audio; implement the same rules and preserve primitive fallbacks."
               ],
               "resources": [
-                "Python standard library; teacher-written short scenario and simple rule sheet.",
-                "Console interface is sufficient; optional original illustrations earn no separate marks.",
-                "Common brief and test templates."
+                "Scenario starter ZIP includes a runnable display-only shell, unfinished student interfaces, common fixture data and the full Year 11 contract/marking guide.",
+                "School-approved Python/Pygame installation and a named reference PC; no special hardware or paid assets.",
+                "Shared expected-case CSV, test log, source/AI-asset log and asset policy included."
               ],
               "tests": [
-                "Invalid menu input allows recovery.",
-                "A resource boundary of zero has the agreed outcome.",
-                "Repeatable choices produce a hand-predicted final total."
+                "Run the shared test IDs for state reset, collisions, scoring, timer boundaries and pause.",
+                "Demonstrate the year-level data/algorithm cases and all measurable quality checks.",
+                "Use the same marking guide and core test data for every theme."
               ],
-              "pack": false,
-              "routes": [
-                "Console or text interface: assess the same logic and evidence.",
-                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
-                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
-              ]
+              "pack": true
             }
           ],
-          "budget": 10
+          "budget": 10,
+          "gameContract": "assessments/games/year11-requirements.md",
+          "gameRubric": "assessments/games/year11-marking-guide.md"
         },
         {
           "number": 2,
@@ -521,10 +518,10 @@
           "number": 1,
           "type": "Project",
           "weight": 15,
-          "title": "Object-oriented Python solution",
+          "title": "Object-oriented Pygame game",
           "timing": "S1 W7–10: 12 existing workshops, after classes and inheritance.",
           "sampleTiming": "S1 W5–8",
-          "scope": "Unit 3: object-oriented development, arrays/dictionaries, algorithms and testing",
+          "scope": "Unit 3: classes/inheritance, two-dimensional arrays, dictionaries, common algorithms and tested development",
           "chapters": [
             "unit3-project",
             "unit3-objects",
@@ -532,137 +529,134 @@
           ],
           "options": [
             {
-              "id": "warehouse",
-              "title": "Pygame warehouse planner",
-              "pitch": "Build a warehouse training simulation for a fictional client using a grid and movable objects.",
+              "id": "space",
+              "title": "Space salvage",
+              "pitch": "Recover five cargo pods in a damaged space station. Apply the shared year-level rules; only the setting, labels and decorative assets change.",
               "requirements": [
-                "Represent warehouse occupancy in a two-dimensional array. Define student-authored classes with attributes and methods, using inheritance where it serves the design.",
-                "Use a dictionary for item lookup and implement the selected search/sort behaviour in the core logic rather than only calling a library.",
-                "Separate model from rendering, validate commands and retain a repeatable command replay. Evaluate the client’s success criteria."
+                "Use every functional and non-functional requirement in the shared year-level game contract.",
+                "Use the same item/hazard counts, timing, scoring and supplied fixtures as every other scenario in your year.",
+                "Theme labels: collectibles are cargo pods; hazards are security drones. Add no specialist mechanics such as flight, buoyancy or stealth."
+              ],
+              "routes": [
+                "Python 3 + Pygame interactive 2D game with keyboard controls. Primitive shapes/text are a complete submission route.",
+                "Optional AI-generated or original decorative artwork/audio; implement the same rules and preserve primitive fallbacks."
               ],
               "resources": [
-                "Python 3; Pygame optional; keyboard input and a simple original grid display.",
-                "Included warehouse-logic.py contracts, layout.csv, items.csv and command fixtures.",
-                "A console grid is an equivalent route to the same evidence."
+                "Scenario starter ZIP includes a runnable display-only shell, unfinished student interfaces, common fixture data and the full Year 12 contract/marking guide.",
+                "School-approved Python/Pygame installation and a named reference PC; no special hardware or paid assets.",
+                "Shared expected-case CSV, test log, source/AI-asset log and asset policy included."
               ],
               "tests": [
-                "Moving into a blocked grid cell leaves the object in its original cell.",
-                "Coordinates outside the grid fail safely.",
-                "Replay the same command sequence to reproduce the same final grid."
+                "Run the shared test IDs for state reset, collisions, scoring, timer boundaries and pause.",
+                "Demonstrate the year-level data/algorithm cases and all measurable quality checks.",
+                "Use the same marking guide and core test data for every theme."
               ],
-              "pack": true,
-              "routes": [
-                "Console or text interface: assess the same logic and evidence.",
-                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
-                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
-              ]
+              "pack": true
             },
             {
-              "id": "evacuation",
-              "title": "Python experiments: evacuation model",
-              "pitch": "Create a fictional grid simulation comparing route rules for a safety-training client.",
+              "id": "reef",
+              "title": "Reef rescue",
+              "pitch": "Collect five pieces of litter at an underwater research station. Apply the shared year-level rules; only the setting, labels and decorative assets change.",
               "requirements": [
-                "Use a two-dimensional environment and classes for agents or barriers. Document individual responsibilities and interactions.",
-                "Implement deterministic movement, conflict and exit rules and a dictionary of agent states.",
-                "Compare rule sets against repeatable fixtures. Distinguish simulation assumptions from claims about real emergency safety."
+                "Use every functional and non-functional requirement in the shared year-level game contract.",
+                "Use the same item/hazard counts, timing, scoring and supplied fixtures as every other scenario in your year.",
+                "Theme labels: collectibles are litter tokens; hazards are moving currents. Add no specialist mechanics such as flight, buoyancy or stealth."
+              ],
+              "routes": [
+                "Python 3 + Pygame interactive 2D game with keyboard controls. Primitive shapes/text are a complete submission route.",
+                "Optional AI-generated or original decorative artwork/audio; implement the same rules and preserve primitive fallbacks."
               ],
               "resources": [
-                "Python standard library; Pygame optional for display.",
-                "Teacher-supplied tiny grid and movement rules to limit scope.",
-                "No real movement tracking or real evacuation validation."
+                "Scenario starter ZIP includes a runnable display-only shell, unfinished student interfaces, common fixture data and the full Year 12 contract/marking guide.",
+                "School-approved Python/Pygame installation and a named reference PC; no special hardware or paid assets.",
+                "Shared expected-case CSV, test log, source/AI-asset log and asset policy included."
               ],
               "tests": [
-                "An agent never enters a blocked or out-of-bounds cell.",
-                "A defined simultaneous conflict has a deterministic result.",
-                "An empty agent list terminates with the stated summary."
+                "Run the shared test IDs for state reset, collisions, scoring, timer boundaries and pause.",
+                "Demonstrate the year-level data/algorithm cases and all measurable quality checks.",
+                "Use the same marking guide and core test data for every theme."
               ],
-              "pack": false,
-              "routes": [
-                "Console or text interface: assess the same logic and evidence.",
-                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
-                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
-              ]
+              "pack": true
             },
             {
-              "id": "timetable",
-              "title": "Club timetable optimiser",
-              "pitch": "Build a scheduling assistant for fictional club activities.",
+              "id": "castle",
+              "title": "Castle courier",
+              "pitch": "Deliver five sealed messages through a castle courtyard. Apply the shared year-level rules; only the setting, labels and decorative assets change.",
               "requirements": [
-                "Use a two-dimensional room/period table and classes for sessions and resources.",
-                "Use dictionary lookup and a student-written taught search or sort routine in a meaningful workflow.",
-                "Validate conflicts, expose unresolved scheduling cases and evaluate the chosen strategy with test fixtures."
+                "Use every functional and non-functional requirement in the shared year-level game contract.",
+                "Use the same item/hazard counts, timing, scoring and supplied fixtures as every other scenario in your year.",
+                "Theme labels: collectibles are message tokens; hazards are patrolling guards. Add no specialist mechanics such as flight, buoyancy or stealth."
+              ],
+              "routes": [
+                "Python 3 + Pygame interactive 2D game with keyboard controls. Primitive shapes/text are a complete submission route.",
+                "Optional AI-generated or original decorative artwork/audio; implement the same rules and preserve primitive fallbacks."
               ],
               "resources": [
-                "Python standard library; synthetic room/session CSVs prepared by the teacher.",
-                "A bounded rule-based scheduler is sufficient; no advanced optimisation library required.",
-                "Common class/interface and trace templates."
+                "Scenario starter ZIP includes a runnable display-only shell, unfinished student interfaces, common fixture data and the full Year 12 contract/marking guide.",
+                "School-approved Python/Pygame installation and a named reference PC; no special hardware or paid assets.",
+                "Shared expected-case CSV, test log, source/AI-asset log and asset policy included."
               ],
               "tests": [
-                "Two sessions cannot occupy the same room and period.",
-                "A session too large for every room stays unassigned with a reason.",
-                "Tied priorities follow a documented deterministic rule."
+                "Run the shared test IDs for state reset, collisions, scoring, timer boundaries and pause.",
+                "Demonstrate the year-level data/algorithm cases and all measurable quality checks.",
+                "Use the same marking guide and core test data for every theme."
               ],
-              "pack": false,
-              "routes": [
-                "Console or text interface: assess the same logic and evidence.",
-                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
-                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
-              ]
+              "pack": true
             },
             {
-              "id": "robot",
-              "title": "Robot arena simulator",
-              "pitch": "Create a deterministic grid training arena for a robotics club without requiring a robot.",
+              "id": "circuit",
+              "title": "Circuit repair",
+              "pitch": "Collect five replacement components inside a fictional computer. Apply the shared year-level rules; only the setting, labels and decorative assets change.",
               "requirements": [
-                "Use a two-dimensional arena and classes for robots, with at least one justified specialisation or interface decision.",
-                "Store commands or robot lookup in a dictionary and process movement through tested methods.",
-                "Implement a bounded experiment and produce a client evaluation based on traceable results."
+                "Use every functional and non-functional requirement in the shared year-level game contract.",
+                "Use the same item/hazard counts, timing, scoring and supplied fixtures as every other scenario in your year.",
+                "Theme labels: collectibles are components; hazards are electrical pulses. Add no specialist mechanics such as flight, buoyancy or stealth."
+              ],
+              "routes": [
+                "Python 3 + Pygame interactive 2D game with keyboard controls. Primitive shapes/text are a complete submission route.",
+                "Optional AI-generated or original decorative artwork/audio; implement the same rules and preserve primitive fallbacks."
               ],
               "resources": [
-                "Python 3; Pygame optional; synthetic arena and command files.",
-                "No physical robot required and no marks for hardware expense.",
-                "Teacher supplies collision and turn-order rules before issue."
+                "Scenario starter ZIP includes a runnable display-only shell, unfinished student interfaces, common fixture data and the full Year 12 contract/marking guide.",
+                "School-approved Python/Pygame installation and a named reference PC; no special hardware or paid assets.",
+                "Shared expected-case CSV, test log, source/AI-asset log and asset policy included."
               ],
               "tests": [
-                "A robot at a boundary cannot leave the arena.",
-                "Commands for an unknown robot are rejected.",
-                "An empty command file ends without an infinite loop."
+                "Run the shared test IDs for state reset, collisions, scoring, timer boundaries and pause.",
+                "Demonstrate the year-level data/algorithm cases and all measurable quality checks.",
+                "Use the same marking guide and core test data for every theme."
               ],
-              "pack": false,
-              "routes": [
-                "Console or text interface: assess the same logic and evidence.",
-                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
-                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
-              ]
+              "pack": true
             },
             {
-              "id": "quest12",
-              "title": "Quest-inspired training replay",
-              "pitch": "Implement a Python grid-based training simulator from invented VR event records. The assessable program runs on a normal PC.",
+              "id": "museum",
+              "title": "Museum recovery",
+              "pitch": "Recover five misplaced artefacts in a museum after closing. Apply the shared year-level rules; only the setting, labels and decorative assets change.",
               "requirements": [
-                "Create a two-dimensional training environment and classes for participants or checkpoints.",
-                "Read synthetic event records, use dictionary lookup and validate coordinates and event sequences.",
-                "Evaluate outcomes through deterministic replay. Optional headset observation informs requirements but is not the assessed Python implementation."
+                "Use every functional and non-functional requirement in the shared year-level game contract.",
+                "Use the same item/hazard counts, timing, scoring and supplied fixtures as every other scenario in your year.",
+                "Theme labels: collectibles are artefacts; hazards are cleaning robots. Add no specialist mechanics such as flight, buoyancy or stealth."
+              ],
+              "routes": [
+                "Python 3 + Pygame interactive 2D game with keyboard controls. Primitive shapes/text are a complete submission route.",
+                "Optional AI-generated or original decorative artwork/audio; implement the same rules and preserve primitive fallbacks."
               ],
               "resources": [
-                "Python 3; supplied invented event CSV with tick, alias, row, column and action.",
-                "Optional Quest observation/casting with approved app and IT setup.",
-                "Native Quest deployment would be a separate extension with a different toolchain."
+                "Scenario starter ZIP includes a runnable display-only shell, unfinished student interfaces, common fixture data and the full Year 12 contract/marking guide.",
+                "School-approved Python/Pygame installation and a named reference PC; no special hardware or paid assets.",
+                "Shared expected-case CSV, test log, source/AI-asset log and asset policy included."
               ],
               "tests": [
-                "Replay identical events to produce identical state.",
-                "An invalid coordinate is rejected and recorded.",
-                "Missing checkpoints produce the agreed incomplete-training outcome."
+                "Run the shared test IDs for state reset, collisions, scoring, timer boundaries and pause.",
+                "Demonstrate the year-level data/algorithm cases and all measurable quality checks.",
+                "Use the same marking guide and core test data for every theme."
               ],
-              "pack": false,
-              "routes": [
-                "Console or text interface: assess the same logic and evidence.",
-                "Desktop interface: optional Pygame for games/simulations, or a school-approved GUI for tools.",
-                "Local browser interface: optional only if already taught; keep the Python/SQL core assessable."
-              ]
+              "pack": true
             }
           ],
-          "budget": 12
+          "budget": 12,
+          "gameContract": "assessments/games/year12-requirements.md",
+          "gameRubric": "assessments/games/year12-marking-guide.md"
         },
         {
           "number": 2,
@@ -1002,5 +996,6 @@
         }
       ]
     }
-  ]
+  ],
+  "programmingReview": "26 October 2026"
 }

@@ -1,0 +1,13 @@
+Test ID,Requirement,Setup / action,Expected
+G01,FR1,Pause for 95 wall-clock seconds,Active-play timer and positions unchanged
+G02,FR1,Restart after collecting and taking a hit,"Score 0, lives 3, timer 90 and original objects"
+G03,FR2,Move outward at each boundary,No out-of-bounds position
+G04,FR3,Collect one item then overlap its former position,Score 10; second overlap adds nothing
+G05,FR4,"Hazard collisions at ticks 1000,1500,2000","Lives 2,2,1 with 1000 ms protection"
+G06,FR5,Exit and final item with time reaching zero,Loss takes precedence
+G07,NFR5,Launch from a different working directory; remove decoration,Relative resources resolve; shapes/text game works
+G08,NFR3,Pause key five times on declared reference PC,Visible pause within 250 ms; record actual observations
+Y11-01,FR8,"History [20,0,50,50]","Count 4, total 120, first maximum index 2"
+Y11-02,FR8,Missing or empty history,Clear empty history; game still playable
+Y11-03,FR8,"Scores text: 20, bad, -1, 50","Warn and retain valid scores [20,50]"
+Y11-04,FR9,Normal then challenge menu selection,1000 ms then 750 ms hazard interval

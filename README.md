@@ -79,7 +79,7 @@ The homepage includes static Open Graph and large-image card metadata for social
 
 ## Assessment planning library
 
-The Assessments navigation item opens `#assessments`. The 2027 planning catalogue provides two eight-task outlines with prescribed category totals, 18 project alternatives, eight standard controlled-test blueprints and four standard exam blueprints. Choice applies to projects only. Five project options include unfinished Python/SQL starters and synthetic fixtures; all resources are public drafts rather than secure issued papers or SCSA-approved tasks.
+The Assessments navigation item opens `#assessments`. The 2027 planning catalogue provides two eight-task outlines with prescribed category totals, 18 project alternatives, eight standard controlled-test blueprints and four standard exam blueprints. Choice applies to projects only. Ten equivalent Pygame game themes and two database options include starters and synthetic fixtures; all resources are public drafts rather than secure issued papers or SCSA-approved tasks.
 
 Edit `assessment-source/catalogue.json`, then run `python scripts/build-assessments.py` to regenerate browser data, Markdown briefs, CSV templates and ZIP packs. The generator owns `dist/assessments/briefs` and removes stale generated briefs there. Interface code is in `dist/assessments.js` and `dist/assessments.css`. Run `node --test tests/*.test.mjs` before publishing. Keep actual tests, unreleased marking keys and student evidence in the school's private system.
 
@@ -88,3 +88,5 @@ The source review identifies the 2027 Year 12 syllabus, the currently listed Yea
 
 
 
+
+Programming Task 1 scope was revised on 26 October 2026: five identical-difficulty Pygame themes per year, common year-level functional/non-functional contracts, acceptance fixtures, item-level marking guides, AI/primitive asset policy and scope audit. Edit `assessment-source/game-projects.json` and the catalogue, then regenerate with `python scripts/build-assessments.py`. Game fixture/scaffold generation is in `scripts/game_projects.py`. Display shells are infrastructure only; core assessed behaviour remains unimplemented.
