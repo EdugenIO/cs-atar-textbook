@@ -17,4 +17,4 @@ Edition 0.7. Original classroom draft. Use the four model CSVs and the worked ER
 
 Transfer: a new rule allows one loan event to contain several equipment items. Does the current Loan table represent this without duplication? Explain what further modelling is needed; do not silently change the meaning of a row.
 
-Teacher review: check the four-table diagram, symbol meanings, key choices, valid references, dictionary and transfer reasoning against the requirements. Use the checklist to find what you understand and what to practise again.
+Teacher review: check the four-table diagram, symbol meanings, key choices, valid references, dictionary and transfer reasoning against the requirements. Use the checklist to find what you understand and what to practice again.

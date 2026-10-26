@@ -151,7 +151,7 @@ const unit4LearningGuides = {
       {label: 'Connect to the requirement', detail: 'Counting the booking key reports 0 bookings for the preserved session, which matches the all-session requirement.'},
       {label: 'Check your explanation', detail: 'Use the actual source and requested scope. Do not add an unsupported claim that the query enforces booking capacity.'}
     ],
-    caption: 'An explanation joins a relevant fact to a mechanism and its effect. Use this ungraded example to practise explaining the mechanism.',
+    caption: 'An explanation joins a relevant fact to a mechanism and its effect. Use this ungraded example to practice explaining the mechanism.',
     predict: 'If the command changed from explain to identify, how would the expected response differ?',
     answer: 'Identify asks you to name the relevant point, such as counting a non-null booking key. Explain also needs the reason: the preserved outer-join row has NULL child fields, so COUNT(*) would incorrectly give one.',
     retry: 'Change the source to resources with no loans. Explain the same counting issue using Resource and LoanID rather than copying the session wording.'

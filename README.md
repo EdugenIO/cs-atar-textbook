@@ -98,4 +98,4 @@ The Exam practice navigation item opens `practice/`. Six original sets (three pe
 
 ## Editorial language
 
-Use Australian English throughout student and teacher prose, including questions, answers, slides and downloads. Preserve code/API identifiers, standard markup attributes, official titles and source URLs. Use practice for the noun and practise/practising for the verb; use program for computer programs.
+Use Australian English throughout student and teacher prose, including questions, answers, slides and downloads. Preserve code/API identifiers, standard markup attributes, official titles and source URLs. Use practice/practicing throughout as the site owner’s preferred spelling, retaining Australian English for other words; use program for computer programs.

@@ -66,7 +66,7 @@ chapters.push({
   "week": 15,
   "title": "Unit 2 consolidation",
   "badge": "REVIEW / PRACTICE",
-  "intro": "Choose what you need to practise by trying a short explanation first. Then use focused activities and new examples to strengthen the ideas you find hardest.",
+  "intro": "Choose what you need to practice by trying a short explanation first. Then use focused activities and new examples to strengthen the ideas you find hardest.",
   "objectives": [
     "Diagnose a gap using actual evidence.",
     "Apply concepts to changed requirements and data.",
@@ -79,7 +79,7 @@ chapters.push({
     ],
     [
       "Work through targeted stations",
-      "<p>Choose two stations that match the gaps you identified:</p><ul><li><strong>Modelling:</strong> normalise a fresh club register.</li><li><strong>SQL:</strong> find a row-count trap and practise a controlled change with rollback.</li><li><strong>Security:</strong> explain a control and a situation it does not cover.</li><li><strong>Ciphers and responsible data:</strong> trace a cipher, then explain a data-quality or privacy decision.</li></ul><p>Use the earlier workbooks. Afterwards, explain what you corrected and why the new answer works.</p>"
+      "<p>Choose two stations that match the gaps you identified:</p><ul><li><strong>Modelling:</strong> normalise a fresh club register.</li><li><strong>SQL:</strong> find a row-count trap and practice a controlled change with rollback.</li><li><strong>Security:</strong> explain a control and a situation it does not cover.</li><li><strong>Ciphers and responsible data:</strong> trace a cipher, then explain a data-quality or privacy decision.</li></ul><p>Use the earlier workbooks. Afterwards, explain what you corrected and why the new answer works.</p>"
     ],
     [
       "Retest with changed circumstances",

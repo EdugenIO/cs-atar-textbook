@@ -14,7 +14,7 @@ const lessonPreparation = {
   addressing: ['Explain the jobs of the network layers.', ['networks']],
   'network-design': ['Distinguish local and routed traffic, device roles and connection media.', ['addressing']],
   'network-review': ['Explain addressing, security controls and possible bottlenecks.', ['network-design']],
-  consolidation: ['Review the programming and network skills you want to practise.', ['arrays','files','network-review']],
+  consolidation: ['Review the programming and network skills you want to practice.', ['arrays','files','network-review']],
   'exam-preparation': ['Use the consolidation activities to choose areas for revision.', ['consolidation']],
   'database-foundations': ['No earlier database lesson is required. Use the supplied fictional records.', []],
   'entities-relationships': ['Distinguish a table, a record and a field.', ['database-foundations']],
@@ -39,7 +39,7 @@ const lessonPreparation = {
   'unit3-secure-networks': ['Trace network traffic and calculate subnet requirements.', ['unit3-network-models','unit3-addressing']],
   'unit3-review': ['Revisit object design, algorithm traces and network decisions.', ['unit3-inheritance','unit3-sort','unit3-secure-networks']],
   'unit3-consolidation': ['Use the review to identify what needs more practice.', ['unit3-review']],
-  'unit3-exam': ['Choose and practise the skills identified during consolidation.', ['unit3-consolidation']],
+  'unit3-exam': ['Choose and practice the skills identified during consolidation.', ['unit3-consolidation']],
   'unit4-design': ['Read relationships and keys, and explain normalisation decisions.', ['entities-relationships','normalisation']],
   'unit4-sql': ['Read the workshop model and write joined and grouped reports.', ['unit4-design','database-solution']],
   'unit4-project': ['Interpret the workshop design and predict SQL report results.', ['unit4-design','unit4-sql']],
@@ -49,7 +49,7 @@ const lessonPreparation = {
   'unit4-ethics': ['Explain responsible data use and evidence-based security analysis.', ['responsible-data','unit4-analysis']],
   'unit4-review': ['Revisit design, queries, protective controls and cryptography.', ['unit4-sql','unit4-controls','unit4-crypto']],
   'unit4-consolidation': ['Use both Year 12 unit reviews to identify revision priorities.', ['unit3-review','unit4-review']],
-  'unit4-exam': ['Practise the priorities identified during full-course consolidation.', ['unit4-consolidation']]
+  'unit4-exam': ['Practice the priorities identified during full-course consolidation.', ['unit4-consolidation']]
 };
 
 function renderLessonPreparation(id) {

@@ -1,5 +1,5 @@
 # Set A — optional mixed practice
-If you want to practise pacing, try 50 minutes: 5 reading, 40 working and 5 checking. As a starting point, use about 16 working minutes for shorter responses and 24 for longer responses. You can also work at your own pace. These are original practice questions, not a reproduction of the official SCSA paper. Try them before reading the explanations; use notes or support when needed.
+If you want to practice pacing, try 50 minutes: 5 reading, 40 working and 5 checking. As a starting point, use about 16 working minutes for shorter responses and 24 for longer responses. You can also work at your own pace. These are original practice questions, not a reproduction of the official SCSA paper. Try them before reading the explanations; use notes or support when needed.
 Use the separate source booklet for all facts.
 A1: Trace a dictionary accumulator over supplied Python rows. State final mapping, show totals after each row, write a safe update for first/repeated keys, and state empty-input result with reason.
 A2: Write SQLite SQL returning ALL resources and total loan count, ordered ResourceID. Criteria: correct LEFT JOIN/link, non-null child count, grouping/alias/order, predicted ordered counts including zero resources.

@@ -225,7 +225,7 @@ chapters.push(...[
     "lessons": [
       "Retrieve: short mixed questions with explained feedback.",
       "Apply: complete the library design and traffic traces.",
-      "Practise: explain your choices using fresh theory questions.",
+      "Practice: explain your choices using fresh theory questions.",
       "Respond: correct misconceptions and plan week 15 recovery."
     ],
     "reference": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0003/1090875/Year-11_12_Computer-Science_ATAR_Additional-syllabus-support-booklet-.PDF",

@@ -65,7 +65,7 @@ chapters.push(...[
     "id": "consolidation",
     "week": 15,
     "title": "Unit 1 consolidation",
-    "intro": "Find one idea you are unsure about, practise it, then try a new example. Use your results to choose what to work on next.",
+    "intro": "Find one idea you are unsure about, practice it, then try a new example. Use your results to choose what to work on next.",
     "badge": "UNIT 1 REVIEW",
     "objectives": [
       "Diagnose gaps across programming and networking.",
@@ -110,7 +110,7 @@ chapters.push(...[
         "All-negative data exposes incorrect zero initialisation; tied positives test the chosen tie policy."
       ]
     ],
-    "task": "Choose the two stations you most need to practise. Keep a trace or test record from each. Then try a fresh transfer question chosen with your teacher. Write three specific things to practise next.",
+    "task": "Choose the two stations you most need to practice. Keep a trace or test record from each. Then try a fresh transfer question chosen with your teacher. Write three specific things to practice next.",
     "solution": "A strong record names the misconception, shows corrected working, contains actual evidence and demonstrates success on a fresh question. Network drawings must be reviewed against the support-booklet symbols.",
     "lessons": [
       "Lesson 1: six-prompt diagnostic, explained feedback and station choices.",
@@ -146,7 +146,7 @@ chapters.push(...[
     "sections": [
       [
         "Use the practice paper",
-        "<p>Use this original practice paper as optional revision. It is not an official SCSA examination and does not test every skill. Allow 5 minutes to read and 55 minutes to work. If your lessons are shorter, spread the attempt across lessons 1–2.</p><p>Write Python and pseudocode answers without running the code on your first attempt. Try the questions before opening the answers below or downloading them separately. Use the answers to find a step you need to practise again.</p><p><a class=\"button\" href=\"unit1-practice-paper.md\" download>Download questions only</a> <a class=\"button secondary\" href=\"unit1-practice-answers.md\" download>Download explained answers</a></p>"
+        "<p>Use this original practice paper as optional revision. It is not an official SCSA examination and does not test every skill. Allow 5 minutes to read and 55 minutes to work. If your lessons are shorter, spread the attempt across lessons 1–2.</p><p>Write Python and pseudocode answers without running the code on your first attempt. Try the questions before opening the answers below or downloading them separately. Use the answers to find a step you need to practice again.</p><p><a class=\"button\" href=\"unit1-practice-paper.md\" download>Download questions only</a> <a class=\"button secondary\" href=\"unit1-practice-answers.md\" download>Download explained answers</a></p>"
       ],
       [
         "Q1 · 3 marks",

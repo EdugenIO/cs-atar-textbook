@@ -1,5 +1,5 @@
 # Optional mixed-practice worksheet
-Allow around 55 minutes if you want to practise pacing, including 5 minutes reading and 5 checking, or work at your own pace. The worksheet can fit Week 12 lesson 3. Use paper SQL, notes or other support when helpful. Try a response before checking the explanations. This is optional, ungraded practice rather than an SCSA examination.
+Allow around 55 minutes if you want to practice pacing, including 5 minutes reading and 5 checking, or work at your own pace. The worksheet can fit Week 12 lesson 3. Use paper SQL, notes or other support when helpful. Try a response before checking the explanations. This is optional, ungraded practice rather than an SCSA examination.
 Fresh facts: same six-table design, S04 now has M02 and M05 bookings, no Attendance for those pairs; capacity remains 4. Other seed unchanged. The hypothetical app still trusts browser role strings. Federal entity/date assumptions match review case; eligibility has not been established.
 R1: explain Booking key and Attendance composite reference; state one permitted and one rejected pair operation, with reason.
 R2: write a report including ALL sessions, booking count and remaining places. Criteria: LEFT JOIN, correct link, COUNT(non-null child), grouping, calculated field/aliases, correct S04 output of 2 bookings and 2 remaining places and deterministic sort.

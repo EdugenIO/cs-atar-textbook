@@ -26,7 +26,7 @@ Original questions/guides: CC BY 4.0. Software: MIT, as in the repository licenc
 
 ## Language convention
 
-Use Australian English in all questions, marking guides, interface text and exports (for example, behaviour, initialise, parameterised, authorised and synchronised). Use practice as the noun and practise/practising as the verb. In computing, program is the correct Australian spelling. Preserve programming identifiers, standard HTML attributes, official titles and source URLs exactly. The practice page declares `lang="en-AU"`.
+Use Australian English in all questions, marking guides, interface text and exports (for example, behaviour, initialise, parameterised, authorised and synchronised). Use practice/practicing throughout as the site owner’s preferred spelling, retaining Australian English for other words. In computing, program is the correct Australian spelling. Preserve programming identifiers, standard HTML attributes, official titles and source URLs exactly. The practice page declares `lang="en-AU"`.
 
 ## Repeat attempts
 

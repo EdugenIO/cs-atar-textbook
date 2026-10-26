@@ -220,7 +220,7 @@ const unit3LearningGuides = {
   "unit3-reliability": {
     "anchor": "Isolate a fault before changing code",
     "title": "Repair the cause, then retest",
-    "lead": "Use the repeated-return fault to practise a small, explainable debugging cycle.",
+    "lead": "Use the repeated-return fault to practice a small, explainable debugging cycle.",
     "kind": "flow",
     "nodes": [
       {

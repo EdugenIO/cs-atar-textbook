@@ -17,4 +17,4 @@ Compare the earlier dictionary with database-project-setup.sql. Check CategoryNa
 Task E: integrated desk audit
 Use a fresh project copy. Reproduce active/overdue reports for 8 April 2026; explain the strict-date boundary; check inventory summaries use equipment rows. Diagnose shared access, unapproved modification and a proposed public screenshot using CIA/AAA and privacy reasoning. Demonstrate a separate restore and evaluate evidence/limits.
 
-Suggested lessons: 13.1 quality; 13.2 six-table reading; 13.3 fresh model/dictionary; 13.4 schema comparison. 14.1 SQL transfer; 14.2 security/privacy audit; 14.3 controlled theory practice; 14.4 explained feedback and correction. Use the explained checkpoints to review your understanding and decide what to practise next.
+Suggested lessons: 13.1 quality; 13.2 six-table reading; 13.3 fresh model/dictionary; 13.4 schema comparison. 14.1 SQL transfer; 14.2 security/privacy audit; 14.3 controlled theory practice; 14.4 explained feedback and correction. Use the explained checkpoints to review your understanding and decide what to practice next.
