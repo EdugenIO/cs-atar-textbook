@@ -94,7 +94,7 @@ Programming Task 1 scope was revised on 26 October 2026: five identical-difficul
 
 ## Static exam practice pilot
 
-The Exam practice navigation item opens `practice/`. Two original Year 11/12 sets each provide eight short answers and two extended responses (30 marks), optional reading/writing timers, local browser drafts, locked responses after finishing, criterion-based self-marking, separate corrections, teacher-discussion flags, text exports and print/PDF. No backend, account, API or student submission service is used. Guides are public and marks are student-awarded. Edit `dist/practice/questions.js`; increase a set revision after material content changes. See `dist/practice/README.md` for authoring, limitations and classroom review. Run `node --test tests/*.test.mjs` before publishing.
+The Exam practice navigation item opens `practice/`. Six original sets (three per year) each provide eight short answers and two extended responses (30 marks), optional reading/writing timers, local browser drafts, locked responses after finishing, criterion-based self-marking, separate corrections, teacher-discussion flags, text exports and print/PDF. No backend, account, API or student submission service is used. Guides are public and marks are student-awarded. Edit `dist/practice/questions.js`; increase a set revision after material content changes. See `dist/practice/README.md` for authoring, limitations and classroom review. Run `node --test tests/*.test.mjs` before publishing.
 
 ## Editorial language
 

@@ -1,6 +1,6 @@
 # Static exam practice pilot
 
-Two original 30-mark topic sets (Year 11 and Year 12), each with eight two-mark short answers and two seven-mark extended responses. These are formative samples, not complete examinations, official SCSA questions, a prescribed exam section ratio, certified syllabus coverage or grade predictions. The 45-minute writing allowance and optional five-minute reading period are adjustable local practice choices. Teachers should review suitability, content and workload before use.
+Six original 30-mark topic sets (three each for Year 11 and Year 12), each with eight two-mark short answers and two seven-mark extended responses. These are formative samples, not complete examinations, official SCSA questions, a prescribed exam section ratio, certified syllabus coverage or grade predictions. The 45-minute writing allowance and optional five-minute reading period are adjustable local practice choices. Teachers should review suitability, content and workload before use.
 
 ## Student workflow
 
@@ -31,3 +31,10 @@ Use Australian English in all questions, marking guides, interface text and expo
 ## Repeat attempts
 
 Use **Reset and sit again** at the top or bottom of any active or completed attempt. Confirm the inline reset prompt after downloading any work to keep. Reset removes only the selected set’s saved responses, marks, review flags, corrections and timing, returning to setup. Choose settings and start to receive a fresh timer, blank editable responses and hidden marking guides. The question set is unchanged and can be repeated without an attempt limit. Previous results are not archived automatically.
+
+## Available sets
+
+- Year 11: Foundations in context; Programming and problem-solving; Data, networks and security.
+- Year 12: Applying and explaining; Structures, algorithms and objects; Relational data and security.
+
+Each set has its own saved attempt and reset control. The original pilot IDs/revisions remain unchanged so existing saved work is retained. There are 60 original questions and 180 available self-assessed marks across the library. These are distinct topic samples; they do not claim complete syllabus coverage.

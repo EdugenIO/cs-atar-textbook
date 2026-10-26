@@ -5,7 +5,9 @@ const root=new URL('../dist/',import.meta.url);
 const c=vm.createContext({});
 for(const file of ['practice/questions.js','practice/practice-core.js'])vm.runInContext(fs.readFileSync(new URL(file,root),'utf8'),c);
 const sets=vm.runInContext('practiceSets',c),core=vm.runInContext('PracticeCore',c);
-assert.equal(sets.length,2);
+assert.equal(sets.length,6);
+for(const year of [11,12])assert.equal(sets.filter(s=>s.year===year).length,3);
+assert.equal(new Set(sets.map(s=>s.id)).size,sets.length);
 const chapterSource=fs.readdirSync(root).filter(f=>f.endsWith('.js')).map(f=>fs.readFileSync(new URL(f,root),'utf8')).join('\n');
 const ids=new Set();
 for(const set of sets){
@@ -55,7 +57,7 @@ assert.match(fs.readFileSync(new URL('index.html',root),'utf8'),/href="practice\
 const ui=fs.readFileSync(new URL('practice/practice.js',root),'utf8');
 assert.doesNotMatch(ui,/\bfetch\s*\(|XMLHttpRequest|sendBeacon/);
 assert.match(ui,/event\.target\.closest\('\.skip'\)/);
-console.log('20 original questions, 60 criterion marks, chapter links, restore, timing, reading transitions and self-marking totals passed.');
+console.log('60 original questions, 180 criterion marks, chapter links, restore, timing, reading transitions and self-marking totals passed.');
 
 // Exercise delegated UI events without a backend or browser-only dependencies.
 function interfaceHarness({brokenStorage=false,hash='#year11-pilot',saved=new Map()}={}){
@@ -103,8 +105,8 @@ const failure=interfaceHarness({brokenStorage:true});failure.start();
 assert.match(failure.node('save-status').textContent,/saving unavailable/);
 console.log('UI submission, locked responses, escaped drafts, self-awarded marks, correction exports and storage failure passed.');
 
-for(const year of [11,12]){
-  const setId=`year${year}-pilot`,questionId=`y${year}-1`;
+for(const set of sets){
+  const year=set.year,setId=set.id,questionId=set.questions[0].id;
   const ownKey='cs-atar-practice-v1-'+setId;
   const otherKey=`cs-atar-practice-v1-year${year===11?12:11}-pilot`;
   const attempt=interfaceHarness({hash:'#'+setId});attempt.start();
@@ -135,4 +137,4 @@ for(const year of [11,12]){
     assert.doesNotMatch(attempt.node('practice-main').innerHTML,/class="mark-guide"|Previous answer|Previous correction|readonly/);
   }
 }
-console.log('Both years: repeat completed/in-progress attempts, cancel reset, clear all attempt data, preserve other sets and restart full timers passed.');
+console.log('All six sets: repeat completed/in-progress attempts, cancel reset, clear all attempt data, preserve other sets and restart full timers passed.');
