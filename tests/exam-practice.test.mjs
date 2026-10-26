@@ -102,3 +102,37 @@ assert.match(reopened.node('total-score').textContent,/1\/30/);
 const failure=interfaceHarness({brokenStorage:true});failure.start();
 assert.match(failure.node('save-status').textContent,/saving unavailable/);
 console.log('UI submission, locked responses, escaped drafts, self-awarded marks, correction exports and storage failure passed.');
+
+for(const year of [11,12]){
+  const setId=`year${year}-pilot`,questionId=`y${year}-1`;
+  const ownKey='cs-atar-practice-v1-'+setId;
+  const otherKey=`cs-atar-practice-v1-year${year===11?12:11}-pilot`;
+  const attempt=interfaceHarness({hash:'#'+setId});attempt.start();
+  attempt.saved.set(otherKey,'unrelated saved attempt');
+  assert.equal((attempt.node('practice-main').innerHTML.match(/Reset and sit again/g)||[]).length,2);
+  for(const completed of [false,true]){
+    attempt.events.input({target:{dataset:{answer:questionId},value:'Previous answer'}});
+    if(completed){
+      attempt.action('confirm-finish');
+      attempt.events.change({target:{dataset:{criterion:questionId,index:'0'},checked:true}});
+      attempt.events.change({target:{dataset:{reviewed:questionId},checked:true}});
+      attempt.events.change({target:{dataset:{uncertain:questionId},checked:true}});
+      attempt.events.input({target:{dataset:{correction:questionId},value:'Previous correction'}});
+    }
+    const beforeReset=attempt.saved.get(ownKey);
+    attempt.action('clear');attempt.action('cancel');
+    assert.equal(attempt.saved.get(ownKey),beforeReset,'Cancelling reset preserves work');
+    attempt.action('clear');attempt.action('confirm-clear');
+    assert.equal(attempt.saved.has(ownKey),false,'Reset removes this attempt from storage');
+    assert.equal(attempt.saved.get(otherKey),'unrelated saved attempt');
+    assert.match(attempt.node('practice-main').innerHTML,/Choose your timing/);
+    attempt.start();
+    const fresh=JSON.parse(attempt.saved.get(ownKey));
+    assert.equal(fresh.phase,'answering');assert.equal(fresh.submittedAt,null);
+    for(const field of ['answers','awarded','reviewed','uncertain','corrections'])assert.deepEqual(fresh[field],{});
+    assert.equal(fresh.continued,false);
+    assert.equal(fresh.deadline-fresh.startedAt,45*60000);
+    assert.doesNotMatch(attempt.node('practice-main').innerHTML,/class="mark-guide"|Previous answer|Previous correction|readonly/);
+  }
+}
+console.log('Both years: repeat completed/in-progress attempts, cancel reset, clear all attempt data, preserve other sets and restart full timers passed.');

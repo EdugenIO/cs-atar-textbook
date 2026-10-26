@@ -27,3 +27,7 @@ Original questions/guides: CC BY 4.0. Software: MIT, as in the repository licenc
 ## Language convention
 
 Use Australian English in all questions, marking guides, interface text and exports (for example, behaviour, initialise, parameterised, authorised and synchronised). Use practice as the noun and practise/practising as the verb. In computing, program is the correct Australian spelling. Preserve programming identifiers, standard HTML attributes, official titles and source URLs exactly. The practice page declares `lang="en-AU"`.
+
+## Repeat attempts
+
+Use **Reset and sit again** at the top or bottom of any active or completed attempt. Confirm the inline reset prompt after downloading any work to keep. Reset removes only the selected set’s saved responses, marks, review flags, corrections and timing, returning to setup. Choose settings and start to receive a fresh timer, blank editable responses and hidden marking guides. The question set is unchanged and can be repeated without an attempt limit. Previous results are not archived automatically.
