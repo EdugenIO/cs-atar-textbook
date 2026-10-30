@@ -1,0 +1,15 @@
+Year,Phase,Slots,50-minute capacity,55-minute capacity,Evidence status
+11,Investigate,1,50,55,Capacity arithmetic only; no observed workload
+11,Design,1,50,55,Capacity arithmetic only; no observed workload
+11,Build,5,250,275,Capacity arithmetic only; no observed workload
+11,Test,1,50,55,Capacity arithmetic only; no observed workload
+11,Acceptance,1,50,55,Capacity arithmetic only; no observed workload
+11,Evaluate,1,50,55,Capacity arithmetic only; no observed workload
+11,TOTAL,10,500,550,No classroom timing supplied
+12,Investigate,1,50,55,Capacity arithmetic only; no observed workload
+12,Design,2,100,110,Capacity arithmetic only; no observed workload
+12,Build,6,300,330,Capacity arithmetic only; no observed workload
+12,Test,1,50,55,Capacity arithmetic only; no observed workload
+12,Acceptance,1,50,55,Capacity arithmetic only; no observed workload
+12,Evaluate,1,50,55,Capacity arithmetic only; no observed workload
+12,TOTAL,12,600,660,No classroom timing supplied

@@ -1,0 +1,19 @@
+Year,Resource,Public path,SHA256,Interpretation
+11,year11-requirements.md,assessments/games/year11-requirements.md,619a7490859f1951167dd7c678a89d6c5b6efdc0869bb01726ec9aebea601c40,Pack-build fingerprint; verify the actual downloaded copy before trial
+11,year11-marking-guide.md,assessments/games/year11-marking-guide.md,20ded342e7408834eb37612d1e462d729f6b04a526c2b3b8054b23cfbad4fbfe,Pack-build fingerprint; verify the actual downloaded copy before trial
+11,year11-acceptance.csv,assessments/games/year11-acceptance.csv,3b90012aebad9daef8f8238af8a45185f29aaf1a83386013b5e6c3d1164698c0,Pack-build fingerprint; verify the actual downloaded copy before trial
+11,y11-t1-space-starter.zip,assessments/y11-t1-space-starter.zip,58926705ee56bddd6c22beba32315ad48fefa92119d4aff8f18b0621e098abc6,Pack-build fingerprint; verify the actual downloaded copy before trial
+11,y11-t1-reef-starter.zip,assessments/y11-t1-reef-starter.zip,aa5a3e070e18d0e58d44434d0a5e79c395936867290fef57ef0a7adcca2bb250,Pack-build fingerprint; verify the actual downloaded copy before trial
+11,y11-t1-castle-starter.zip,assessments/y11-t1-castle-starter.zip,2793e7177453f769cdd375a257af119759bf2fcbb74533627f37ac441ef25d21,Pack-build fingerprint; verify the actual downloaded copy before trial
+11,y11-t1-circuit-starter.zip,assessments/y11-t1-circuit-starter.zip,c06d0f359c3b4ce287f40be396b11a51196dddfbc5ec777f54575077602913c3,Pack-build fingerprint; verify the actual downloaded copy before trial
+11,y11-t1-museum-starter.zip,assessments/y11-t1-museum-starter.zip,cabd527216e851a02e62328f6dce12890f23d4221167c5ba770c0932012ee471,Pack-build fingerprint; verify the actual downloaded copy before trial
+11,year11-candidate-marking.md,project-trial/year11-candidate-marking.md,979959cce94f8426bea7dace0de28f88704f524a86a6773aa6676249387b05c1,Pack-build fingerprint; verify the actual downloaded copy before trial
+12,year12-requirements.md,assessments/games/year12-requirements.md,afee0f56c0ae430c5f9571575b23d64995e8211651da9b40c49651e5805aa62e,Pack-build fingerprint; verify the actual downloaded copy before trial
+12,year12-marking-guide.md,assessments/games/year12-marking-guide.md,819264c958a458a6a87a66491e6983da3764934b5260102d008a84b34e78b7a3,Pack-build fingerprint; verify the actual downloaded copy before trial
+12,year12-acceptance.csv,assessments/games/year12-acceptance.csv,c0354e8f1f0d72883db3d10bd2d35bfd3f0a0133109aab9c2fa6ce06d96d47b3,Pack-build fingerprint; verify the actual downloaded copy before trial
+12,y12-t1-space-starter.zip,assessments/y12-t1-space-starter.zip,b1696e184f9faffdddd0245f5419ca165d0c0fd51c244c039938d93acbcb0153,Pack-build fingerprint; verify the actual downloaded copy before trial
+12,y12-t1-reef-starter.zip,assessments/y12-t1-reef-starter.zip,e36f68c01dd5978b02daa359358ac7fbd592521414649dfe460b39b653d6756b,Pack-build fingerprint; verify the actual downloaded copy before trial
+12,y12-t1-castle-starter.zip,assessments/y12-t1-castle-starter.zip,97e6c8bb4a4837a27f54d17d56fd6a238ab51a2d6a2801495ca5e05b48ddfafe,Pack-build fingerprint; verify the actual downloaded copy before trial
+12,y12-t1-circuit-starter.zip,assessments/y12-t1-circuit-starter.zip,ce7b980c50b7e12b77f3b40628d6b70c80e755a32d63d85fb175f7d94ea9e389,Pack-build fingerprint; verify the actual downloaded copy before trial
+12,y12-t1-museum-starter.zip,assessments/y12-t1-museum-starter.zip,f1db9d7f89356ec7d703359dfaf8ae6b437e7b6cc32594757f138c5a7933cf3e,Pack-build fingerprint; verify the actual downloaded copy before trial
+12,year12-candidate-marking.md,project-trial/year12-candidate-marking.md,c83983cdb88345b1a90689c101836cf4170c3b6477736f5090c8899d8bd5a494,Pack-build fingerprint; verify the actual downloaded copy before trial

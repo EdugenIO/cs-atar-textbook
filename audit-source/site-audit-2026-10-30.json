@@ -179,10 +179,14 @@
         "A01",
         "A02"
       ],
-      "status": "Open",
+      "status": "Prepared; live trial and independent moderation pending",
       "evidence": "Automated game-package checks verify fixture equality, syntax, map reachability and shell launch infrastructure; they do not implement or verify the students’ complete game. Classroom timing, requirement feasibility and independent moderation are still recorded as pending.",
       "action": "Trial one full common core per year, using the fixed requirements and stated school conditions. Record where learners need support and compare expected evidence against the shared marking guide. Confirm local assessment conditions and outline before issue.",
-      "completeWhen": "A dated trial records actual time, setup and observed outcomes against functional/non-functional requirements; a second teacher reviews scope, marking and theme equivalence. Any reduction or scaffold is applied equally across themes, and remaining limits are documented before formal use."
+      "completeWhen": "A dated trial records actual time, setup and observed outcomes against functional/non-functional requirements; a second teacher reviews scope, marking and theme equivalence. Any reduction or scaffold is applied equally across themes, and remaining limits are documented before formal use.",
+      "resolutionDate": "30 October 2026",
+      "resolution": "Completed an editorial desk review and published a trial/moderation pack. Includes exact 10/12-slot blank workload logs, 50/55-minute capacity arithmetic, all FR/NFR outcome records, original plus supplemental acceptance cases, assistance/response/theme checks, 100-point candidate interpretations per year preserving every existing item/category total and task weight, 200 blank double-mark records, synthetic calibration cases, adoption/discrepancy and release records. The current common guides/contracts remain unchanged; candidate interpretation requires school adoption before issue.",
+      "verification": "Document checks verify candidate totals and point IDs, per-requirement coverage, blank actual evidence/marking/sign-off fields, unchanged original acceptance cases, all-five-theme records and ZIP integrity/current-contract copies. No full game implementation, actual participant times, real marks or independent moderator sign-off have been supplied. User confirmed no results yet and requested the trial pack.",
+      "remainingVerification": "Run one complete fixed core per year under recorded conditions, obtain dated actual time/support and requirement outcomes, compare all five themes, double-mark actual frozen samples independently with a second teacher, resolve differences and record release/re-trial decisions. A03 remains open."
     },
     {
       "id": "A04",

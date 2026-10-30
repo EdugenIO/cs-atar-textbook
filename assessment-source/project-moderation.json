@@ -1,0 +1,1414 @@
+{
+  "version": "A03-candidate-1",
+  "date": "30 October 2026",
+  "status": "Candidate interpretation — not independently moderated or adopted",
+  "pointsPerYear": 100,
+  "years": [
+    {
+      "year": 11,
+      "items": [
+        {
+          "id": "I1",
+          "category": "Investigation",
+          "marks": 5,
+          "requirements": [
+            "NFR1"
+          ],
+          "points": [
+            {
+              "id": "I1.1",
+              "marks": 1,
+              "evidence": "Identify the intended player/audience."
+            },
+            {
+              "id": "I1.2",
+              "marks": 1,
+              "evidence": "Describe the player need/problem."
+            },
+            {
+              "id": "I1.3",
+              "marks": 1,
+              "evidence": "Describe one feasible design idea within the common scope."
+            },
+            {
+              "id": "I1.4",
+              "marks": 1,
+              "evidence": "Describe a distinct second design idea within the same scope."
+            },
+            {
+              "id": "I1.5",
+              "marks": 1,
+              "evidence": "Justify the selected idea against player need and the common constraints."
+            }
+          ]
+        },
+        {
+          "id": "I2",
+          "category": "Investigation",
+          "marks": 5,
+          "requirements": [
+            "ALL"
+          ],
+          "points": [
+            {
+              "id": "I2.1",
+              "marks": 1,
+              "evidence": "Identify every applicable functional requirement using the common IDs."
+            },
+            {
+              "id": "I2.2",
+              "marks": 1,
+              "evidence": "Identify every applicable non-functional requirement using the common IDs."
+            },
+            {
+              "id": "I2.3",
+              "marks": 1,
+              "evidence": "State observable success evidence for the functional requirements."
+            },
+            {
+              "id": "I2.4",
+              "marks": 1,
+              "evidence": "State measurable quality checks on a declared setup rather than aesthetic claims."
+            },
+            {
+              "id": "I2.5",
+              "marks": 1,
+              "evidence": "Trace the success criteria to planned design and test evidence."
+            }
+          ]
+        },
+        {
+          "id": "I3",
+          "category": "Investigation",
+          "marks": 5,
+          "requirements": [
+            "NFR7"
+          ],
+          "points": [
+            {
+              "id": "I3.1",
+              "marks": 1,
+              "evidence": "Allocate the exact 10/12 existing workshop slots to dated or numbered milestones."
+            },
+            {
+              "id": "I3.2",
+              "marks": 1,
+              "evidence": "Show a meaningful dependency between planned activities."
+            },
+            {
+              "id": "I3.3",
+              "marks": 1,
+              "evidence": "Include the planned investigation/design/build/test/evaluation checkpoints."
+            },
+            {
+              "id": "I3.4",
+              "marks": 1,
+              "evidence": "Plan a version/backup and restore checkpoint."
+            },
+            {
+              "id": "I3.5",
+              "marks": 1,
+              "evidence": "Identify a specific risk and a feasible response within the budget, without mandatory home coding."
+            }
+          ]
+        },
+        {
+          "id": "D1",
+          "category": "Design",
+          "marks": 8,
+          "requirements": [
+            "FR1",
+            "FR7",
+            "FR8",
+            "NFR4"
+          ],
+          "points": [
+            {
+              "id": "D1.1",
+              "marks": 1,
+              "evidence": "Design the title/instructions and start transition."
+            },
+            {
+              "id": "D1.2",
+              "marks": 1,
+              "evidence": "Design playing-to-paused and resume transitions."
+            },
+            {
+              "id": "D1.3",
+              "marks": 1,
+              "evidence": "Design result and full restart/quit transitions."
+            },
+            {
+              "id": "D1.4",
+              "marks": 1,
+              "evidence": "Define the movement/state function responsibilities."
+            },
+            {
+              "id": "D1.5",
+              "marks": 1,
+              "evidence": "Define collision/respawn/protection function responsibilities."
+            },
+            {
+              "id": "D1.6",
+              "marks": 1,
+              "evidence": "Define scoring/result function responsibilities."
+            },
+            {
+              "id": "D1.7",
+              "marks": 1,
+              "evidence": "Specify meaningful parameters and returned results for the proposed functions."
+            },
+            {
+              "id": "D1.8",
+              "marks": 1,
+              "evidence": "Separate game-rule updates from drawing and file access in the design."
+            }
+          ]
+        },
+        {
+          "id": "D2",
+          "category": "Design",
+          "marks": 8,
+          "requirements": [
+            "FR7",
+            "FR8",
+            "FR9",
+            "NFR4"
+          ],
+          "points": [
+            {
+              "id": "D2.1",
+              "marks": 1,
+              "evidence": "Represent the collectible data in a one-dimensional list."
+            },
+            {
+              "id": "D2.2",
+              "marks": 1,
+              "evidence": "Specify collected/active status so a collectible can score only once."
+            },
+            {
+              "id": "D2.3",
+              "marks": 1,
+              "evidence": "Specify the run state and its initial/reset values."
+            },
+            {
+              "id": "D2.4",
+              "marks": 1,
+              "evidence": "Represent score history as a one-dimensional integer list."
+            },
+            {
+              "id": "D2.5",
+              "marks": 1,
+              "evidence": "Define the sequential text record format."
+            },
+            {
+              "id": "D2.6",
+              "marks": 1,
+              "evidence": "Specify the missing/empty-history policy."
+            },
+            {
+              "id": "D2.7",
+              "marks": 1,
+              "evidence": "Specify malformed/out-of-range records and visible warning policy."
+            },
+            {
+              "id": "D2.8",
+              "marks": 1,
+              "evidence": "Use meaningful constants/names and document why the chosen representations suit the required scope."
+            }
+          ]
+        },
+        {
+          "id": "D3",
+          "category": "Design",
+          "marks": 9,
+          "requirements": [
+            "FR3",
+            "FR5",
+            "FR7",
+            "FR8",
+            "FR9"
+          ],
+          "points": [
+            {
+              "id": "D3.1",
+              "marks": 1,
+              "evidence": "Give coherent pseudocode for once-only collection and scoring."
+            },
+            {
+              "id": "D3.2",
+              "marks": 1,
+              "evidence": "Desk-check first/last or only remaining collectible."
+            },
+            {
+              "id": "D3.3",
+              "marks": 1,
+              "evidence": "Desk-check repeated contact without a second score."
+            },
+            {
+              "id": "D3.4",
+              "marks": 1,
+              "evidence": "Give coherent terminal-state pseudocode with loss before win."
+            },
+            {
+              "id": "D3.5",
+              "marks": 1,
+              "evidence": "Desk-check simultaneous timeout and exit completion."
+            },
+            {
+              "id": "D3.6",
+              "marks": 1,
+              "evidence": "Desk-check pause/resume or full restart state."
+            },
+            {
+              "id": "D3.7",
+              "marks": 1,
+              "evidence": "Specify and trace history count."
+            },
+            {
+              "id": "D3.8",
+              "marks": 1,
+              "evidence": "Specify and trace history total."
+            },
+            {
+              "id": "D3.9",
+              "marks": 1,
+              "evidence": "Specify and trace first-maximum position including a tie and empty-history outcome."
+            }
+          ]
+        },
+        {
+          "id": "C1",
+          "category": "Implementation",
+          "marks": 6,
+          "requirements": [
+            "FR1",
+            "NFR1",
+            "NFR3"
+          ],
+          "points": [
+            {
+              "id": "C1.1",
+              "marks": 1,
+              "evidence": "Start a run from usable title/instructions through documented valid input; invalid start input does not start play."
+            },
+            {
+              "id": "C1.2",
+              "marks": 1,
+              "evidence": "Pause enters a visibly distinct state without gameplay advancing."
+            },
+            {
+              "id": "C1.3",
+              "marks": 1,
+              "evidence": "Resume preserves the run and excludes paused wall-clock time."
+            },
+            {
+              "id": "C1.4",
+              "marks": 1,
+              "evidence": "Restart restores the complete initial run, not just score or screen text."
+            },
+            {
+              "id": "C1.5",
+              "marks": 1,
+              "evidence": "Quit works through the documented key."
+            },
+            {
+              "id": "C1.6",
+              "marks": 1,
+              "evidence": "The window-close event is handled cleanly during the game loop."
+            }
+          ]
+        },
+        {
+          "id": "C2",
+          "category": "Implementation",
+          "marks": 8,
+          "requirements": [
+            "FR2",
+            "FR3",
+            "FR4"
+          ],
+          "points": [
+            {
+              "id": "C2.1",
+              "marks": 1,
+              "evidence": "Move left/right using the documented controls."
+            },
+            {
+              "id": "C2.2",
+              "marks": 1,
+              "evidence": "Move up/down using the documented controls."
+            },
+            {
+              "id": "C2.3",
+              "marks": 1,
+              "evidence": "Keep the player in bounds at all four arena edges."
+            },
+            {
+              "id": "C2.4",
+              "marks": 1,
+              "evidence": "Run three predictable patrol hazards using the supplied fixtures."
+            },
+            {
+              "id": "C2.5",
+              "marks": 1,
+              "evidence": "A valid hazard hit removes one life."
+            },
+            {
+              "id": "C2.6",
+              "marks": 1,
+              "evidence": "A valid hazard hit returns the player to the safe start."
+            },
+            {
+              "id": "C2.7",
+              "marks": 1,
+              "evidence": "A collision during the 1000 ms protection period does not remove another life."
+            },
+            {
+              "id": "C2.8",
+              "marks": 1,
+              "evidence": "The protection boundary permits a new hit at expiry under the shared collision fixture."
+            }
+          ]
+        },
+        {
+          "id": "C3",
+          "category": "Implementation",
+          "marks": 6,
+          "requirements": [
+            "FR3",
+            "FR4",
+            "FR5",
+            "FR6"
+          ],
+          "points": [
+            {
+              "id": "C3.1",
+              "marks": 1,
+              "evidence": "Each of the five fixed collectibles awards 10 points once only."
+            },
+            {
+              "id": "C3.2",
+              "marks": 1,
+              "evidence": "The active-play timer begins at 90 seconds and decreases during playing only."
+            },
+            {
+              "id": "C3.3",
+              "marks": 1,
+              "evidence": "Zero time or zero lives produces a loss and freezes further scoring."
+            },
+            {
+              "id": "C3.4",
+              "marks": 1,
+              "evidence": "Exit completion requires all five collectibles; Year 12 uses the current map condition."
+            },
+            {
+              "id": "C3.5",
+              "marks": 1,
+              "evidence": "Loss takes precedence over completion in the same update."
+            },
+            {
+              "id": "C3.6",
+              "marks": 1,
+              "evidence": "The HUD/instructions/result feedback reports current score, lives, time and outcome legibly using shape/text as well as colour."
+            }
+          ]
+        },
+        {
+          "id": "C4",
+          "category": "Implementation",
+          "marks": 10,
+          "requirements": [
+            "FR7",
+            "FR8",
+            "FR9",
+            "NFR4"
+          ],
+          "points": [
+            {
+              "id": "C4.1",
+              "marks": 1,
+              "evidence": "Student-authored functions implement the state changes with clear responsibilities."
+            },
+            {
+              "id": "C4.2",
+              "marks": 1,
+              "evidence": "Student-authored functions implement collision consequences with clear responsibilities."
+            },
+            {
+              "id": "C4.3",
+              "marks": 1,
+              "evidence": "Student-authored functions implement scoring/results with clear responsibilities."
+            },
+            {
+              "id": "C4.4",
+              "marks": 1,
+              "evidence": "The student explains and uses meaningful parameters/returns without relying on a function count."
+            },
+            {
+              "id": "C4.5",
+              "marks": 1,
+              "evidence": "A one-dimensional list is processed to track first/last/remaining collectibles correctly."
+            },
+            {
+              "id": "C4.6",
+              "marks": 1,
+              "evidence": "History processing reports the count of valid scores."
+            },
+            {
+              "id": "C4.7",
+              "marks": 1,
+              "evidence": "History processing reports the total of valid scores."
+            },
+            {
+              "id": "C4.8",
+              "marks": 1,
+              "evidence": "History processing reports the first maximum index correctly when scores tie."
+            },
+            {
+              "id": "C4.9",
+              "marks": 1,
+              "evidence": "Normal difficulty uses the fixed 1000 ms patrol interval."
+            },
+            {
+              "id": "C4.10",
+              "marks": 1,
+              "evidence": "Challenge difficulty uses the fixed 750 ms interval; all other common rules remain the same."
+            }
+          ]
+        },
+        {
+          "id": "C5",
+          "category": "Implementation",
+          "marks": 5,
+          "requirements": [
+            "FR8",
+            "NFR5"
+          ],
+          "points": [
+            {
+              "id": "C5.1",
+              "marks": 1,
+              "evidence": "Read integer history scores 0–50 and skip malformed/out-of-range lines with a warning."
+            },
+            {
+              "id": "C5.2",
+              "marks": 1,
+              "evidence": "Missing/empty history gives the clear empty-history outcome while gameplay remains usable."
+            },
+            {
+              "id": "C5.3",
+              "marks": 1,
+              "evidence": "Append one final score per completed run, including repeated result-frame updates."
+            },
+            {
+              "id": "C5.4",
+              "marks": 1,
+              "evidence": "A failed write is reported truthfully without terminating usable gameplay."
+            },
+            {
+              "id": "C5.5",
+              "marks": 1,
+              "evidence": "Resolve local resources relative to the project and provide the required primitive fallback."
+            }
+          ]
+        },
+        {
+          "id": "T1",
+          "category": "Testing",
+          "marks": 5,
+          "requirements": [
+            "ALL"
+          ],
+          "points": [
+            {
+              "id": "T1.1",
+              "marks": 1,
+              "evidence": "A unit/function test states an independently derived expected result."
+            },
+            {
+              "id": "T1.2",
+              "marks": 1,
+              "evidence": "A normal unit/function case includes observed actual output or state."
+            },
+            {
+              "id": "T1.3",
+              "marks": 1,
+              "evidence": "A boundary unit/function case includes observed actual output or state."
+            },
+            {
+              "id": "T1.4",
+              "marks": 1,
+              "evidence": "An invalid/empty unit/function case includes observed actual output or state."
+            },
+            {
+              "id": "T1.5",
+              "marks": 1,
+              "evidence": "Evidence identifies the function contract and exact tested build/input so it can be reproduced."
+            }
+          ]
+        },
+        {
+          "id": "T2",
+          "category": "Testing",
+          "marks": 5,
+          "requirements": [
+            "ALL"
+          ],
+          "points": [
+            {
+              "id": "T2.1",
+              "marks": 1,
+              "evidence": "Record actual outcomes for the shared scenario-independent acceptance cases, identifying unrun checks."
+            },
+            {
+              "id": "T2.2",
+              "marks": 1,
+              "evidence": "Include a relevant integration/state-transition boundary beyond an ordinary successful playthrough."
+            },
+            {
+              "id": "T2.3",
+              "marks": 1,
+              "evidence": "Explain the first incorrect state/cause of an observed fault; if none was found, explain an actual state trace that rules out a specific plausible fault."
+            },
+            {
+              "id": "T2.4",
+              "marks": 1,
+              "evidence": "Retest the original failing case after repair; if no repair was needed, repeat the stated boundary case on the submission build and record the actual outcome."
+            },
+            {
+              "id": "T2.5",
+              "marks": 1,
+              "evidence": "Rerun a previously passing regression case after the change, or on the submission build if no change was needed, and record its actual outcome/version."
+            }
+          ]
+        },
+        {
+          "id": "T3",
+          "category": "Testing",
+          "marks": 5,
+          "requirements": [
+            "NFR1",
+            "NFR2",
+            "NFR3",
+            "NFR5",
+            "NFR6"
+          ],
+          "points": [
+            {
+              "id": "T3.1",
+              "marks": 1,
+              "evidence": "Record the declared machine/build and actual two-minute reliability trial covering pause, restart and result."
+            },
+            {
+              "id": "T3.2",
+              "marks": 1,
+              "evidence": "Record the actual 95-wall-clock-second pause trial against unchanged active time and positions."
+            },
+            {
+              "id": "T3.3",
+              "marks": 1,
+              "evidence": "Record all five observed pause-response times and compare each with the 250 ms target; do not substitute an average."
+            },
+            {
+              "id": "T3.4",
+              "marks": 1,
+              "evidence": "Record offline/different-working-directory and missing-decoration fallback checks with actual results."
+            },
+            {
+              "id": "T3.5",
+              "marks": 1,
+              "evidence": "Record an instruction-only readability/non-colour/no-audio check and code inspection for per-frame events, Clock.tick(60) and no blocking sleep."
+            }
+          ]
+        },
+        {
+          "id": "E1",
+          "category": "Evaluation",
+          "marks": 4,
+          "requirements": [
+            "ALL"
+          ],
+          "points": [
+            {
+              "id": "E1.1",
+              "marks": 1,
+              "evidence": "Judge every functional requirement as met/partly met/not met using actual evidence."
+            },
+            {
+              "id": "E1.2",
+              "marks": 1,
+              "evidence": "Judge every non-functional requirement using actual evidence or explicitly state it was untested."
+            },
+            {
+              "id": "E1.3",
+              "marks": 1,
+              "evidence": "Explain at least one discrepancy or limitation using a concrete observation."
+            },
+            {
+              "id": "E1.4",
+              "marks": 1,
+              "evidence": "Justify the overall evaluation against the common brief rather than extra features or artwork."
+            }
+          ]
+        },
+        {
+          "id": "E2",
+          "category": "Evaluation",
+          "marks": 3,
+          "requirements": [
+            "NFR1",
+            "NFR6"
+          ],
+          "points": [
+            {
+              "id": "E2.1",
+              "marks": 1,
+              "evidence": "Record a peer using the instructions without coaching."
+            },
+            {
+              "id": "E2.2",
+              "marks": 1,
+              "evidence": "Record a specific observed difficulty or successful acceptance observation."
+            },
+            {
+              "id": "E2.3",
+              "marks": 1,
+              "evidence": "Justify an implemented response or a reasoned decision not to change, with retest if changed."
+            }
+          ]
+        },
+        {
+          "id": "E3",
+          "category": "Evaluation",
+          "marks": 3,
+          "requirements": [
+            "NFR7"
+          ],
+          "points": [
+            {
+              "id": "E3.1",
+              "marks": 1,
+              "evidence": "Reflect on a specific process/version/restore decision and its consequence."
+            },
+            {
+              "id": "E3.2",
+              "marks": 1,
+              "evidence": "Declare sources, assistance and assets with sufficient attribution to distinguish supplied and student work."
+            },
+            {
+              "id": "E3.3",
+              "marks": 1,
+              "evidence": "Prioritise one feasible improvement and explain why it comes first."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 12,
+      "items": [
+        {
+          "id": "I1",
+          "category": "Investigation",
+          "marks": 5,
+          "requirements": [
+            "NFR1"
+          ],
+          "points": [
+            {
+              "id": "I1.1",
+              "marks": 1,
+              "evidence": "Identify the intended player/audience."
+            },
+            {
+              "id": "I1.2",
+              "marks": 1,
+              "evidence": "Describe the player need/problem."
+            },
+            {
+              "id": "I1.3",
+              "marks": 1,
+              "evidence": "Describe one feasible design idea within the common scope."
+            },
+            {
+              "id": "I1.4",
+              "marks": 1,
+              "evidence": "Describe a distinct second design idea within the same scope."
+            },
+            {
+              "id": "I1.5",
+              "marks": 1,
+              "evidence": "Justify the selected idea against player need and the common constraints."
+            }
+          ]
+        },
+        {
+          "id": "I2",
+          "category": "Investigation",
+          "marks": 5,
+          "requirements": [
+            "ALL"
+          ],
+          "points": [
+            {
+              "id": "I2.1",
+              "marks": 1,
+              "evidence": "Identify every applicable functional requirement using the common IDs."
+            },
+            {
+              "id": "I2.2",
+              "marks": 1,
+              "evidence": "Identify every applicable non-functional requirement using the common IDs."
+            },
+            {
+              "id": "I2.3",
+              "marks": 1,
+              "evidence": "State observable success evidence for the functional requirements."
+            },
+            {
+              "id": "I2.4",
+              "marks": 1,
+              "evidence": "State measurable quality checks on a declared setup rather than aesthetic claims."
+            },
+            {
+              "id": "I2.5",
+              "marks": 1,
+              "evidence": "Trace the success criteria to planned design and test evidence."
+            }
+          ]
+        },
+        {
+          "id": "I3",
+          "category": "Investigation",
+          "marks": 5,
+          "requirements": [
+            "NFR7"
+          ],
+          "points": [
+            {
+              "id": "I3.1",
+              "marks": 1,
+              "evidence": "Allocate the exact 10/12 existing workshop slots to dated or numbered milestones."
+            },
+            {
+              "id": "I3.2",
+              "marks": 1,
+              "evidence": "Show a meaningful dependency between planned activities."
+            },
+            {
+              "id": "I3.3",
+              "marks": 1,
+              "evidence": "Include the planned investigation/design/build/test/evaluation checkpoints."
+            },
+            {
+              "id": "I3.4",
+              "marks": 1,
+              "evidence": "Plan a version/backup and restore checkpoint."
+            },
+            {
+              "id": "I3.5",
+              "marks": 1,
+              "evidence": "Identify a specific risk and a feasible response within the budget, without mandatory home coding."
+            }
+          ]
+        },
+        {
+          "id": "D1",
+          "category": "Design",
+          "marks": 8,
+          "requirements": [
+            "FR1",
+            "FR7",
+            "FR8",
+            "NFR4"
+          ],
+          "points": [
+            {
+              "id": "D1.1",
+              "marks": 1,
+              "evidence": "Design the four states and valid control transitions."
+            },
+            {
+              "id": "D1.2",
+              "marks": 1,
+              "evidence": "Design pause/resume time handling and complete restart/quit."
+            },
+            {
+              "id": "D1.3",
+              "marks": 1,
+              "evidence": "Identify the actor base-class responsibility and shared interface."
+            },
+            {
+              "id": "D1.4",
+              "marks": 1,
+              "evidence": "Identify Player and Hazard subclass responsibilities."
+            },
+            {
+              "id": "D1.5",
+              "marks": 1,
+              "evidence": "Specify actor attributes and independent instance state."
+            },
+            {
+              "id": "D1.6",
+              "marks": 1,
+              "evidence": "Specify the relevant overridden update method and shared contract."
+            },
+            {
+              "id": "D1.7",
+              "marks": 1,
+              "evidence": "Specify meaningful method parameters/results and object interactions."
+            },
+            {
+              "id": "D1.8",
+              "marks": 1,
+              "evidence": "Separate rule updates from drawing and file access in the design."
+            }
+          ]
+        },
+        {
+          "id": "D2",
+          "category": "Design",
+          "marks": 8,
+          "requirements": [
+            "FR7",
+            "FR8",
+            "FR9",
+            "FR10",
+            "NFR4"
+          ],
+          "points": [
+            {
+              "id": "D2.1",
+              "marks": 1,
+              "evidence": "Represent two 8 × 10 maps as independent two-dimensional lists."
+            },
+            {
+              "id": "D2.2",
+              "marks": 1,
+              "evidence": "Specify tile codes 0–3 and exactly one start/exit per map."
+            },
+            {
+              "id": "D2.3",
+              "marks": 1,
+              "evidence": "Specify the dictionary keyed by item ID and its metadata."
+            },
+            {
+              "id": "D2.4",
+              "marks": 1,
+              "evidence": "Specify active-item records and IDs for the student search."
+            },
+            {
+              "id": "D2.5",
+              "marks": 1,
+              "evidence": "Specify the latest-ten-valid-score history list and duplicate preservation."
+            },
+            {
+              "id": "D2.6",
+              "marks": 1,
+              "evidence": "Define map and history text formats."
+            },
+            {
+              "id": "D2.7",
+              "marks": 1,
+              "evidence": "Specify invalid-map and malformed-history policies."
+            },
+            {
+              "id": "D2.8",
+              "marks": 1,
+              "evidence": "Document initial/reset values, meaningful constants and why the data design suits the common scope."
+            }
+          ]
+        },
+        {
+          "id": "D3",
+          "category": "Design",
+          "marks": 9,
+          "requirements": [
+            "FR3",
+            "FR5",
+            "FR7",
+            "FR8",
+            "FR9",
+            "FR10"
+          ],
+          "points": [
+            {
+              "id": "D3.1",
+              "marks": 1,
+              "evidence": "Give coherent pseudocode for once-only collection/scoring."
+            },
+            {
+              "id": "D3.2",
+              "marks": 1,
+              "evidence": "Desk-check repeated contact without a second score."
+            },
+            {
+              "id": "D3.3",
+              "marks": 1,
+              "evidence": "Desk-check first/last or only remaining item."
+            },
+            {
+              "id": "D3.4",
+              "marks": 1,
+              "evidence": "Give coherent completion/terminal-state pseudocode with loss first."
+            },
+            {
+              "id": "D3.5",
+              "marks": 1,
+              "evidence": "Desk-check zero time plus map completion."
+            },
+            {
+              "id": "D3.6",
+              "marks": 1,
+              "evidence": "Desk-check map transition carrying score/lives and refreshing the timer."
+            },
+            {
+              "id": "D3.7",
+              "marks": 1,
+              "evidence": "Specify and trace student linear search for a match and no match."
+            },
+            {
+              "id": "D3.8",
+              "marks": 1,
+              "evidence": "Specify and trace one taught sort including duplicate and empty/single-score cases."
+            },
+            {
+              "id": "D3.9",
+              "marks": 1,
+              "evidence": "Trace map validation or independent-map/reset behaviour."
+            }
+          ]
+        },
+        {
+          "id": "C1",
+          "category": "Implementation",
+          "marks": 6,
+          "requirements": [
+            "FR1",
+            "NFR1",
+            "NFR3"
+          ],
+          "points": [
+            {
+              "id": "C1.1",
+              "marks": 1,
+              "evidence": "Start a run from usable title/instructions through documented valid input; invalid start input does not start play."
+            },
+            {
+              "id": "C1.2",
+              "marks": 1,
+              "evidence": "Pause enters a visibly distinct state without gameplay advancing."
+            },
+            {
+              "id": "C1.3",
+              "marks": 1,
+              "evidence": "Resume preserves the run and excludes paused wall-clock time."
+            },
+            {
+              "id": "C1.4",
+              "marks": 1,
+              "evidence": "Restart restores the complete initial run, not just score or screen text."
+            },
+            {
+              "id": "C1.5",
+              "marks": 1,
+              "evidence": "Quit works through the documented key."
+            },
+            {
+              "id": "C1.6",
+              "marks": 1,
+              "evidence": "The window-close event is handled cleanly during the game loop."
+            }
+          ]
+        },
+        {
+          "id": "C2",
+          "category": "Implementation",
+          "marks": 8,
+          "requirements": [
+            "FR2",
+            "FR3",
+            "FR4"
+          ],
+          "points": [
+            {
+              "id": "C2.1",
+              "marks": 1,
+              "evidence": "Move left/right using the documented controls."
+            },
+            {
+              "id": "C2.2",
+              "marks": 1,
+              "evidence": "Move up/down using the documented controls."
+            },
+            {
+              "id": "C2.3",
+              "marks": 1,
+              "evidence": "Reject outer-boundary and wall moves on the supplied maps."
+            },
+            {
+              "id": "C2.4",
+              "marks": 1,
+              "evidence": "Run three predictable patrol hazards per map using the supplied fixtures."
+            },
+            {
+              "id": "C2.5",
+              "marks": 1,
+              "evidence": "A valid hazard hit removes one life."
+            },
+            {
+              "id": "C2.6",
+              "marks": 1,
+              "evidence": "A valid hazard hit returns the player to the safe start."
+            },
+            {
+              "id": "C2.7",
+              "marks": 1,
+              "evidence": "A collision during the 1000 ms protection period does not remove another life."
+            },
+            {
+              "id": "C2.8",
+              "marks": 1,
+              "evidence": "The protection boundary permits a new hit at expiry under the shared collision fixture."
+            }
+          ]
+        },
+        {
+          "id": "C3",
+          "category": "Implementation",
+          "marks": 6,
+          "requirements": [
+            "FR3",
+            "FR4",
+            "FR5",
+            "FR6"
+          ],
+          "points": [
+            {
+              "id": "C3.1",
+              "marks": 1,
+              "evidence": "Each of the five fixed collectibles awards 10 points once only."
+            },
+            {
+              "id": "C3.2",
+              "marks": 1,
+              "evidence": "The active-play timer begins at 90 seconds and decreases during playing only."
+            },
+            {
+              "id": "C3.3",
+              "marks": 1,
+              "evidence": "Zero time or zero lives produces a loss and freezes further scoring."
+            },
+            {
+              "id": "C3.4",
+              "marks": 1,
+              "evidence": "Exit completion requires all five collectibles; Year 12 uses the current map condition."
+            },
+            {
+              "id": "C3.5",
+              "marks": 1,
+              "evidence": "Loss takes precedence over completion in the same update."
+            },
+            {
+              "id": "C3.6",
+              "marks": 1,
+              "evidence": "The HUD/instructions/result feedback reports current score, lives, time and outcome legibly using shape/text as well as colour."
+            }
+          ]
+        },
+        {
+          "id": "C4",
+          "category": "Implementation",
+          "marks": 10,
+          "requirements": [
+            "FR7",
+            "FR8",
+            "FR9",
+            "FR10",
+            "NFR4"
+          ],
+          "points": [
+            {
+              "id": "C4.1",
+              "marks": 1,
+              "evidence": "Store the two supplied 8 × 10 maps as independent two-dimensional lists with the required tile representation."
+            },
+            {
+              "id": "C4.2",
+              "marks": 1,
+              "evidence": "Advance map 1 to map 2 with score/lives carried and a fresh 90-second timer, then finish after map 2."
+            },
+            {
+              "id": "C4.3",
+              "marks": 1,
+              "evidence": "Implement the actor base class with attributes/methods and shared movement/bounds responsibility."
+            },
+            {
+              "id": "C4.4",
+              "marks": 1,
+              "evidence": "Instantiate Player and Hazard subclasses with independent object state."
+            },
+            {
+              "id": "C4.5",
+              "marks": 1,
+              "evidence": "Override a relevant update method and call the shared interface with rules separated from drawing."
+            },
+            {
+              "id": "C4.6",
+              "marks": 1,
+              "evidence": "Use the item-ID dictionary to retrieve the corresponding metadata."
+            },
+            {
+              "id": "C4.7",
+              "marks": 1,
+              "evidence": "Student-written linear search locates a matching item ID in the active list."
+            },
+            {
+              "id": "C4.8",
+              "marks": 1,
+              "evidence": "The search returns the documented no-match outcome without accidental mutation."
+            },
+            {
+              "id": "C4.9",
+              "marks": 1,
+              "evidence": "A student-written taught bubble/insertion/selection sort orders the score list correctly and preserves duplicates."
+            },
+            {
+              "id": "C4.10",
+              "marks": 1,
+              "evidence": "The results report selects at most the latest ten valid history scores and displays them in the required order; assess student authorship of the sort separately at C4.9."
+            }
+          ]
+        },
+        {
+          "id": "C5",
+          "category": "Implementation",
+          "marks": 5,
+          "requirements": [
+            "FR8",
+            "FR10",
+            "NFR5"
+          ],
+          "points": [
+            {
+              "id": "C5.1",
+              "marks": 1,
+              "evidence": "Validate map dimensions, tile codes and exactly one start/exit; reject invalid map data with a useful error."
+            },
+            {
+              "id": "C5.2",
+              "marks": 1,
+              "evidence": "Read integer history scores 0–100 and skip malformed/out-of-range lines with a warning."
+            },
+            {
+              "id": "C5.3",
+              "marks": 1,
+              "evidence": "Missing/empty history is handled under the documented usable policy."
+            },
+            {
+              "id": "C5.4",
+              "marks": 1,
+              "evidence": "Append one final game score, not a separate score at map 1 transition or on every result frame."
+            },
+            {
+              "id": "C5.5",
+              "marks": 1,
+              "evidence": "A failed write reports failure truthfully without terminating usable gameplay."
+            }
+          ]
+        },
+        {
+          "id": "T1",
+          "category": "Testing",
+          "marks": 5,
+          "requirements": [
+            "ALL"
+          ],
+          "points": [
+            {
+              "id": "T1.1",
+              "marks": 1,
+              "evidence": "A unit/function test states an independently derived expected result."
+            },
+            {
+              "id": "T1.2",
+              "marks": 1,
+              "evidence": "A normal unit/function case includes observed actual output or state."
+            },
+            {
+              "id": "T1.3",
+              "marks": 1,
+              "evidence": "A boundary unit/function case includes observed actual output or state."
+            },
+            {
+              "id": "T1.4",
+              "marks": 1,
+              "evidence": "An invalid/empty unit/function case includes observed actual output or state."
+            },
+            {
+              "id": "T1.5",
+              "marks": 1,
+              "evidence": "Evidence identifies the function contract and exact tested build/input so it can be reproduced."
+            }
+          ]
+        },
+        {
+          "id": "T2",
+          "category": "Testing",
+          "marks": 5,
+          "requirements": [
+            "ALL"
+          ],
+          "points": [
+            {
+              "id": "T2.1",
+              "marks": 1,
+              "evidence": "Record actual outcomes for the shared scenario-independent acceptance cases, identifying unrun checks."
+            },
+            {
+              "id": "T2.2",
+              "marks": 1,
+              "evidence": "Include a relevant integration/state-transition boundary beyond an ordinary successful playthrough."
+            },
+            {
+              "id": "T2.3",
+              "marks": 1,
+              "evidence": "Explain the first incorrect state/cause of an observed fault; if none was found, explain an actual state trace that rules out a specific plausible fault."
+            },
+            {
+              "id": "T2.4",
+              "marks": 1,
+              "evidence": "Retest the original failing case after repair; if no repair was needed, repeat the stated boundary case on the submission build and record the actual outcome."
+            },
+            {
+              "id": "T2.5",
+              "marks": 1,
+              "evidence": "Rerun a previously passing regression case after the change, or on the submission build if no change was needed, and record its actual outcome/version."
+            }
+          ]
+        },
+        {
+          "id": "T3",
+          "category": "Testing",
+          "marks": 5,
+          "requirements": [
+            "NFR1",
+            "NFR2",
+            "NFR3",
+            "NFR5",
+            "NFR6"
+          ],
+          "points": [
+            {
+              "id": "T3.1",
+              "marks": 1,
+              "evidence": "Record the declared machine/build and actual two-minute reliability trial covering pause, restart and result."
+            },
+            {
+              "id": "T3.2",
+              "marks": 1,
+              "evidence": "Record the actual 95-wall-clock-second pause trial against unchanged active time and positions."
+            },
+            {
+              "id": "T3.3",
+              "marks": 1,
+              "evidence": "Record all five observed pause-response times and compare each with the 250 ms target; do not substitute an average."
+            },
+            {
+              "id": "T3.4",
+              "marks": 1,
+              "evidence": "Record offline/different-working-directory and missing-decoration fallback checks with actual results."
+            },
+            {
+              "id": "T3.5",
+              "marks": 1,
+              "evidence": "Record an instruction-only readability/non-colour/no-audio check and code inspection for per-frame events, Clock.tick(60) and no blocking sleep."
+            }
+          ]
+        },
+        {
+          "id": "E1",
+          "category": "Evaluation",
+          "marks": 4,
+          "requirements": [
+            "ALL"
+          ],
+          "points": [
+            {
+              "id": "E1.1",
+              "marks": 1,
+              "evidence": "Judge every functional requirement as met/partly met/not met using actual evidence."
+            },
+            {
+              "id": "E1.2",
+              "marks": 1,
+              "evidence": "Judge every non-functional requirement using actual evidence or explicitly state it was untested."
+            },
+            {
+              "id": "E1.3",
+              "marks": 1,
+              "evidence": "Explain at least one discrepancy or limitation using a concrete observation."
+            },
+            {
+              "id": "E1.4",
+              "marks": 1,
+              "evidence": "Justify the overall evaluation against the common brief rather than extra features or artwork."
+            }
+          ]
+        },
+        {
+          "id": "E2",
+          "category": "Evaluation",
+          "marks": 3,
+          "requirements": [
+            "NFR1",
+            "NFR6"
+          ],
+          "points": [
+            {
+              "id": "E2.1",
+              "marks": 1,
+              "evidence": "Record a peer using the instructions without coaching."
+            },
+            {
+              "id": "E2.2",
+              "marks": 1,
+              "evidence": "Record a specific observed difficulty or successful acceptance observation."
+            },
+            {
+              "id": "E2.3",
+              "marks": 1,
+              "evidence": "Justify an implemented response or a reasoned decision not to change, with retest if changed."
+            }
+          ]
+        },
+        {
+          "id": "E3",
+          "category": "Evaluation",
+          "marks": 3,
+          "requirements": [
+            "NFR7"
+          ],
+          "points": [
+            {
+              "id": "E3.1",
+              "marks": 1,
+              "evidence": "Reflect on a specific process/version/restore decision and its consequence."
+            },
+            {
+              "id": "E3.2",
+              "marks": 1,
+              "evidence": "Declare sources, assistance and assets with sufficient attribution to distinguish supplied and student work."
+            },
+            {
+              "id": "E3.3",
+              "marks": 1,
+              "evidence": "Prioritise one feasible improvement and explain why it comes first."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

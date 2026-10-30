@@ -1,0 +1,73 @@
+{
+  "date": "30 October 2026",
+  "status": "Pack ready; live trial and independent moderation pending",
+  "observationsSupplied": false,
+  "candidateVersion": "A03-candidate-1",
+  "years": [
+    {
+      "year": 11,
+      "workshops": 10,
+      "candidateMarks": 100,
+      "themes": [
+        "space",
+        "reef",
+        "castle",
+        "circuit",
+        "museum"
+      ],
+      "requirements": [
+        "FR1",
+        "FR2",
+        "FR3",
+        "FR4",
+        "FR5",
+        "FR6",
+        "FR7",
+        "FR8",
+        "FR9",
+        "NFR1",
+        "NFR2",
+        "NFR3",
+        "NFR4",
+        "NFR5",
+        "NFR6",
+        "NFR7"
+      ],
+      "actualTrialCompleted": false,
+      "independentModeratorSigned": false
+    },
+    {
+      "year": 12,
+      "workshops": 12,
+      "candidateMarks": 100,
+      "themes": [
+        "space",
+        "reef",
+        "castle",
+        "circuit",
+        "museum"
+      ],
+      "requirements": [
+        "FR1",
+        "FR2",
+        "FR3",
+        "FR4",
+        "FR5",
+        "FR6",
+        "FR7",
+        "FR8",
+        "FR9",
+        "FR10",
+        "NFR1",
+        "NFR2",
+        "NFR3",
+        "NFR4",
+        "NFR5",
+        "NFR6",
+        "NFR7"
+      ],
+      "actualTrialCompleted": false,
+      "independentModeratorSigned": false
+    }
+  ]
+}

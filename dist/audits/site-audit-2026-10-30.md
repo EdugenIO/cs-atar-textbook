@@ -87,13 +87,17 @@ Type: Confirmed finding · Status: Implemented; school validation pending · Sug
 
 ### A03 · P1 — Trial workload and moderate the common project evidence
 
-Type: Review required · Status: Open · Suggested owner: Teacher and independent moderator · Dependencies: A01, A02
+Type: Review required · Status: Prepared; live trial and independent moderation pending · Suggested owner: Teacher and independent moderator · Dependencies: A01, A02
 
 **Evidence:** Automated game-package checks verify fixture equality, syntax, map reachability and shell launch infrastructure; they do not implement or verify the students’ complete game. Classroom timing, requirement feasibility and independent moderation are still recorded as pending.
 
 **Action:** Trial one full common core per year, using the fixed requirements and stated school conditions. Record where learners need support and compare expected evidence against the shared marking guide. Confirm local assessment conditions and outline before issue.
 
 **Complete when:** A dated trial records actual time, setup and observed outcomes against functional/non-functional requirements; a second teacher reviews scope, marking and theme equivalence. Any reduction or scaffold is applied equally across themes, and remaining limits are documented before formal use.
+
+**Resolution (30 October 2026):** Completed an editorial desk review and published a trial/moderation pack. Includes exact 10/12-slot blank workload logs, 50/55-minute capacity arithmetic, all FR/NFR outcome records, original plus supplemental acceptance cases, assistance/response/theme checks, 100-point candidate interpretations per year preserving every existing item/category total and task weight, 200 blank double-mark records, synthetic calibration cases, adoption/discrepancy and release records. The current common guides/contracts remain unchanged; candidate interpretation requires school adoption before issue.
+
+**Verification:** Document checks verify candidate totals and point IDs, per-requirement coverage, blank actual evidence/marking/sign-off fields, unchanged original acceptance cases, all-five-theme records and ZIP integrity/current-contract copies. No full game implementation, actual participant times, real marks or independent moderator sign-off have been supplied. User confirmed no results yet and requested the trial pack.
 
 ### A04 · P1 — Make the 2027 teaching target and item-level coverage explicit
 
