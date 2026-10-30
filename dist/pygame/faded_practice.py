@@ -5,6 +5,12 @@ starter. No graphics required until the rule checks pass; then use the supplied
 runner as an adapter, changing its import to your rules module.
 """
 
+from pathlib import Path
+
+WIDTH, HEIGHT = 640, 360
+PLAYER_Y, PLAYER_SIZE = 180, 24
+DURATION_MS, SPEED = 15000, 160
+
 
 def new_state():
     # CHANGED challenge: start x=40, three stations, 15 active seconds.
@@ -23,7 +29,8 @@ def overlaps(a, b):
     raise NotImplementedError("Complete collision predicate")
 
 
-def update(state, direction, dt_ms):
+def update(state, direction, dt_ms, collect=True):
+    # If collect=False, move/time only; this keeps the runner interface compatible.
     # TODO: movement 160 pixels/second; x bounded to 0..616.
     # Three stations at x=120, 300, 500, y=180, size=24.
     # Each scores 2 ONCE; maximum 6. Timeout before collection.

@@ -73,6 +73,12 @@ class Rules(unittest.TestCase):
   for dt,wanted in [(299,True),(1,False),(900,True)]:changed.update(dt);self.assertEqual(changed.visible,wanted)
   self.assertEqual(find_label([pulse,other],'q'),1);self.assertEqual(find_label([pulse],'missing'),-1)
   original=[2,0,2,1];self.assertEqual(ordered_copy(original),[0,1,2,2]);self.assertEqual(original,[2,0,2,1]);self.assertEqual(ordered_copy([]),[])
+ def test_faded_adapter_interface_is_usable(self):
+  import faded_practice as faded, inspect
+  self.assertEqual((faded.WIDTH,faded.HEIGHT,faded.PLAYER_Y,faded.PLAYER_SIZE),(640,360,180,24))
+  self.assertEqual((faded.DURATION_MS,faded.SPEED),(15000,160))
+  self.assertIn('collect',inspect.signature(faded.update).parameters)
+  with self.assertRaises(NotImplementedError):faded.update(faded.new_state(),0,16,collect=True)
  def test_real_pygame_window_draw_and_event_loop(self):
   pygame.init();screen=pygame.display.set_mode((640,360));font=pygame.font.Font(None,24)
   for mode in ['ready','playing','paused','finished']:

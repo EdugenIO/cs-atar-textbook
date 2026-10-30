@@ -2,7 +2,7 @@
 
 ## Verified locally
 
-Windows x64, Python 3.12 bundled runtime in an isolated virtual environment; Pygame 2.6.1. Ten automated test methods exercise real Pygame Rect comparisons, SDL window/surface creation, all four display stages and the Year 12 OOP runner, plus rules, elapsed-time boundaries, transition-frame handling, once-only scoring, list/object independence, file validation, append-once, write failure/retry and search/sort cases. SDL dummy video/audio drivers allow repeatable checks; this is not an observation of physical keyboard input or a classroom installation.
+Windows x64, Python 3.12 bundled runtime in an isolated virtual environment; Pygame 2.6.1. Eleven automated test methods exercise real Pygame Rect comparisons, SDL window/surface creation, all four display stages and the Year 12 OOP runner, plus rules, elapsed-time boundaries, transition-frame handling, once-only scoring, list/object independence, file validation, append-once, write failure/retry and search/sort cases. SDL dummy video/audio drivers allow repeatable checks; this is not an observation of physical keyboard input or a classroom installation.
 
 Eight 55-minute plans precede project issue in existing periods. Automated allocation checks retain 256 lessons, all project allocations and the two controlled programming practical slots. Worked files and the teaching pack are public ungraded practice; the faded task is intentionally incomplete. Test instructions include observed actual results and independent transfer.
 
