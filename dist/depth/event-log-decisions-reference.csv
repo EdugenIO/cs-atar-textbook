@@ -1,0 +1,14 @@
+RawRow,Decision,Reason
+R01,keep,matches stated rules after documented normalisation
+R02,keep,matches stated rules after documented normalisation
+R03,suppress duplicate,same normalised event already retained
+R04,keep,matches stated rules after documented normalisation
+R05,hold,"verify source, format or domain against rules"
+R06,hold,"verify source, format or domain against rules"
+R07,hold,"verify source, format or domain against rules"
+R08,keep,review unusually long duration; preserve original value
+R09,hold,"verify source, format or domain against rules"
+R10,hold,conflicting records share an event ID
+R11,hold,conflicting records share an event ID
+R12,keep,matches stated rules after documented normalisation
+R13,keep,matches stated rules after documented normalisation

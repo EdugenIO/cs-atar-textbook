@@ -99,3 +99,9 @@ The Exam practice navigation item opens `practice/`. Six original sets (three pe
 ## Editorial language
 
 Use Australian English throughout student and teacher prose, including questions, answers, slides and downloads. Preserve code/API identifiers, standard markup attributes, official titles and source URLs. Use practice/practicing throughout as the site owner’s preferred spelling, retaining Australian English for other words; use program for computer programs.
+
+## Expanded explanations and scaffolded practice
+
+The 30 October 2026 teaching expansion adds 92 embedded modules, 50 topic-specific checking clinics, 27 runnable Python examples and three SQLite labs. It covers Python encapsulation conventions, scope/errors, file read/write/append, dictionary versus grid choices, testing, cryptography benefits, gateways, log cleaning/manipulation, normalisation anomalies, and DDL/DML. Student/teacher lab packs are in `dist/depth/`; sources and limits are recorded there. These are ungraded learning additions, not changes to the assessment outline.
+
+Author in `scripts/build-teaching-depth.py`, then run `python scripts/build-teaching-depth.py`. This regenerates `dist/depth-data.js` and downloadable examples/fixtures/packs. `dist/depth.js` inserts material beside existing anchors before the reader/search index runs; original chapter explanations and worked solutions remain intact. Run `node --test tests/*.test.mjs` and `python tests/teaching-depth-examples.test.py` before publishing. Keep actual results and classroom trials separate from the supplied expected outputs.
