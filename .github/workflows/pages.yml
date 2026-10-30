@@ -26,6 +26,8 @@ jobs:
           python tests/lesson-slides-package.test.py
           python tests/game-project-packages.test.py
           python tests/project-alignment.test.py
+          python -m pip install pygame==2.6.1
+          python tests/pygame-bridge.test.py
           python tests/teaching-depth-examples.test.py
       - name: Version runtime assets
         run: node scripts/prepare-pages.mjs

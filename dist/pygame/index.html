@@ -1,0 +1,369 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pygame teaching bridge · CS ATAR</title><link rel="stylesheet" href="../style.css"><style>main{max-width:1040px;margin:auto;padding:32px}section{border-top:1px solid var(--line);margin-top:36px;padding-top:24px;scroll-margin-top:20px}pre{white-space:pre;overflow:auto;max-height:32rem}li{margin-bottom:.6rem}.bridge-actions{display:flex;gap:12px;flex-wrap:wrap}@media print{details{display:block}pre{max-height:none;white-space:pre-wrap}.bridge-actions{display:none}}</style></head><body><a class="skip" href="#main">Skip to content</a><main id="main" tabindex="-1"><p><a href="../#teaching">← Teaching sequence</a></p><p class="eyebrow">BEFORE THE PROJECT · UNGRADED PRACTICE</p><h1>Build the skills.<br>Then build the game.</h1><p class="lede">A small unrelated Pygame lab, taught in stages with progressively less support. Four existing lessons in each year; the 10/12 project workshops stay intact.</p><div class="bridge-actions"><a class="button" href="pygame-teaching-pack.zip" download>Download teaching pack</a><a class="button secondary" href="workbook.md" download>Editable practice workbook</a><a class="button secondary" href="practice-tests.csv" download>Expected / actual tests</a><a class="button secondary" href="readiness.csv" download>Readiness record</a></div><div class="notice"><strong>Before assessment:</strong> Teachers must verify the classroom installation and observe independent transfer. Downloading worked code or running automated tests does not establish pupil readiness. If checks fail, record reteaching and re-plan before issue; do not silently consume project workshops.</div><h2>Setup and progression</h2><p>Install the pinned Pygame dependency using the school-approved Python interpreter, extract the whole pack into a writable folder and follow the <a href="README.md">setup/run guide</a>. Run stage1_loop.py, then lab_runner.py with stage 2, 3 and 4. Space starts/pauses/resumes, arrows move, R resets and Escape/window X quit. Stages 3–4 have two numbered stations, one point each and 20 active seconds; there are no assessed hazards, lives, exits or map progression.</p><p><strong>Predict → run → investigate → modify → make.</strong> Compare the worked example, complete a missing rule, then solve the changed three-station challenge without importing the solution. Teacher-selected fresh changes and recorded explanations establish independent transfer.</p><p>Each 55-minute period allocates 5 retrieval, 10 modelling, 15 guided practice, 15 faded transfer, 5 checking and 5 recording. For 50-minute periods reduce guided practice to 10 minutes and retain the exit check. These are proposed timings requiring classroom validation. The <a href="verification.md">verification record</a> distinguishes automated/local checks from school and student evidence.</p><nav aria-label="Pygame practice lessons"><ul><li><a href="#y11-1">Year 11 · W4 L2: Use a while loop to run an interactive window</a></li><li><a href="#y11-2">Year 11 · W5 L2: Use parameters and returns to separate game rules</a></li><li><a href="#y11-3">Year 11 · W6 L2: Traverse a list to collect stations once</a></li><li><a href="#y11-4">Year 11 · W7 L3: Combine game tests with reading and appending results</a></li><li><a href="#y12-1">Year 12 · W1 L2: Repair Python skills through a Pygame loop</a></li><li><a href="#y12-2">Year 12 · W2 L3: Keep game data independent when functions mutate it</a></li><li><a href="#y12-3">Year 12 · W5 L3: Encapsulate independent practice indicators</a></li><li><a href="#y12-4">Year 12 · W6 L3: Override timed behaviour and test the shared contract</a></li></ul></nav><section id="y11-1"><p class="eyebrow">YEAR 11 · PRACTICE 1</p><h2>Use a while loop to run an interactive window</h2><p><strong>Existing allocation:</strong> Unit 1, Week 4, Lesson 2. Retains condition-controlled loops, counters and accumulators. Ungraded practice before the project.</p><ol><li><strong>Retrieve / predict (5 min):</strong> Sketch one expected state and explain yesterday’s Python idea.</li><li><strong>Model (10 min):</strong> Predict input → update → draw. Run stage1_loop.py; trace running and a frame counter. Explain events versus held keys, milliseconds versus seconds, screen coordinates and bounds. Model quit handling and Clock.tick(60), without blocking sleeps.</li><li><strong>Guided practice (15 min):</strong> Pairs alternate driver and predictor; trace a normal and a boundary case, then switch roles. Ask the predictor to explain rather than dictate code.</li><li><strong>Fade / transfer (15 min):</strong> Hide the movement line. Complete it for 160 pixels/second; predict 40 pixels in 250 ms. Add and explain a frame counter; exit using Escape and the window X.</li><li><strong>Check / explain (5 min):</strong> Close both ways; trace a stopping condition; predict movement at 250/500 ms and explain why a frame count is not elapsed seconds.</li><li><strong>Exit / record (5 min):</strong> Save a version, actual test evidence, help received and one next step.</li></ol><details><summary>Scaffolding, feedback and stretch</summary><p>Use a state table, highlighted input/update/draw blocks and a pre-prepared interpreter for learners needing support. Restore one hint at a time after recording the initial attempt. Ask “which state first differs from your prediction?” before offering a fix. Use an error hunt and a second, fresh case to check the correction. Stretch: justify a contract or improve test coverage; do not add assessed-project features.</p></details><p><strong>Exit evidence:</strong> Close both ways; trace a stopping condition; predict movement at 250/500 ms and explain why a frame count is not elapsed seconds.</p></section><section id="y11-2"><p class="eyebrow">YEAR 11 · PRACTICE 2</p><h2>Use parameters and returns to separate game rules</h2><p><strong>Existing allocation:</strong> Unit 1, Week 5, Lesson 2. Retains parameters, arguments, return values and local scope. Ungraded practice before the project.</p><ol><li><strong>Retrieve / predict (5 min):</strong> Sketch one expected state and explain yesterday’s Python idea.</li><li><strong>Model (10 min):</strong> Run lab_runner.py 2. Trace new_state(), command() and update(). Identify parameters versus arguments, return a fresh state, and explain deliberate state mutation. Read state[&quot;mode&quot;] as a named slot in the supplied state store; this dictionary is provided infrastructure, not a new Year 11 assessment requirement. Model start/pause/resume/reset; inspect remaining active milliseconds before/after a transition.</li><li><strong>Guided practice (15 min):</strong> Pairs alternate driver and predictor; trace a normal and a boundary case, then switch roles. Ask the predictor to explain rather than dictate code.</li><li><strong>Fade / transfer (15 min):</strong> Complete command() in faded_practice.py, then a movement-only update. Use a separate state for each test. Explain which function returns a value and which changes its argument.</li><li><strong>Check / explain (5 min):</strong> Independently restore every initial value on reset; show a paused 95000 ms update leaves position and active time unchanged. Explain local names and caller-visible mutation.</li><li><strong>Exit / record (5 min):</strong> Save a version, actual test evidence, help received and one next step.</li></ol><details><summary>Scaffolding, feedback and stretch</summary><p>Use a state table, highlighted input/update/draw blocks and a pre-prepared interpreter for learners needing support. Restore one hint at a time after recording the initial attempt. Ask “which state first differs from your prediction?” before offering a fix. Use an error hunt and a second, fresh case to check the correction. Stretch: justify a contract or improve test coverage; do not add assessed-project features.</p></details><p><strong>Exit evidence:</strong> Independently restore every initial value on reset; show a paused 95000 ms update leaves position and active time unchanged. Explain local names and caller-visible mutation.</p></section><section id="y11-3"><p class="eyebrow">YEAR 11 · PRACTICE 3</p><h2>Traverse a list to collect stations once</h2><p><strong>Existing allocation:</strong> Unit 1, Week 6, Lesson 2. Retains one-dimensional traversal and accumulation. Ungraded practice before the project.</p><ol><li><strong>Retrieve / predict (5 min):</strong> Sketch one expected state and explain yesterday’s Python idea.</li><li><strong>Model (10 min):</strong> Run lab_runner.py 3. Predict the two active flags and score for repeated contact. Model Rect.colliderect alongside the pure overlap predicate; edge-touching does not collide. Trace loop indices, once-only flags and the score accumulator.</li><li><strong>Guided practice (15 min):</strong> Pairs alternate driver and predictor; trace a normal and a boundary case, then switch roles. Ask the predictor to explain rather than dictate code.</li><li><strong>Fade / transfer (15 min):</strong> Complete strict overlap and three-station collection in faded_practice.py. Each changed station scores two. Trace inactive entries, repeated contact and the final total; do not remove elements while traversing.</li><li><strong>Check / explain (5 min):</strong> Show edge-touch, one-pixel overlap, repeated contact and two independent state lists. Trace the accumulator to a maximum of six in the changed lab.</li><li><strong>Exit / record (5 min):</strong> Save a version, actual test evidence, help received and one next step.</li></ol><details><summary>Scaffolding, feedback and stretch</summary><p>Use a state table, highlighted input/update/draw blocks and a pre-prepared interpreter for learners needing support. Restore one hint at a time after recording the initial attempt. Ask “which state first differs from your prediction?” before offering a fix. Use an error hunt and a second, fresh case to check the correction. Stretch: justify a contract or improve test coverage; do not add assessed-project features.</p></details><p><strong>Exit evidence:</strong> Show edge-touch, one-pixel overlap, repeated contact and two independent state lists. Trace the accumulator to a maximum of six in the changed lab.</p></section><section id="y11-4"><p class="eyebrow">YEAR 11 · PRACTICE 4</p><h2>Combine game tests with reading and appending results</h2><p><strong>Existing allocation:</strong> Unit 1, Week 7, Lesson 3. Retains file processing, validation and expected/actual test tables. Ungraded practice before the project.</p><ol><li><strong>Retrieve / predict (5 min):</strong> Sketch one expected state and explain yesterday’s Python idea.</li><li><strong>Model (10 min):</strong> Run lab_runner.py 4. Model append-once after finished, missing/empty history, range validation and visible write failure. Contrast append with overwrite using a disposable file. Trace timeout before collection and events before update.</li><li><strong>Guided practice (15 min):</strong> Pairs alternate driver and predictor; trace a normal and a boundary case, then switch roles. Ask the predictor to explain rather than dictate code.</li><li><strong>Fade / transfer (15 min):</strong> Complete the changed 0/2/4/6 history policy and once-only save. Finish the changed lab using the scaffold and test table, then explain one fresh teacher-selected change without opening the worked solution.</li><li><strong>Check / explain (5 min):</strong> Submit observed pause/reset/timeout/file evidence and the independent readiness record. Retain the Week 7 Lesson 4 controlled practical unchanged.</li><li><strong>Exit / record (5 min):</strong> Save a version, actual test evidence, help received and one next step.</li></ol><details><summary>Scaffolding, feedback and stretch</summary><p>Use a state table, highlighted input/update/draw blocks and a pre-prepared interpreter for learners needing support. Restore one hint at a time after recording the initial attempt. Ask “which state first differs from your prediction?” before offering a fix. Use an error hunt and a second, fresh case to check the correction. Stretch: justify a contract or improve test coverage; do not add assessed-project features.</p></details><p><strong>Exit evidence:</strong> Submit observed pause/reset/timeout/file evidence and the independent readiness record. Retain the Week 7 Lesson 4 controlled practical unchanged.</p></section><section id="y12-1"><p class="eyebrow">YEAR 12 · PRACTICE 1</p><h2>Repair Python skills through a Pygame loop</h2><p><strong>Existing allocation:</strong> Unit 3, Week 1, Lesson 2. Retains targeted Python repairs and independent boundary/input checks. Ungraded practice before the project.</p><ol><li><strong>Retrieve / predict (5 min):</strong> Sketch one expected state and explain yesterday’s Python idea.</li><li><strong>Model (10 min):</strong> Use the Year 11 stage 1–4 files as a rapid re-entry: trace a function call, list mutation, event loop, active timer and file validation. Diagnose one syntax, runtime and logic error on copies. This is a diagnostic, not an assumption that every student has used Pygame.</li><li><strong>Guided practice (15 min):</strong> Pairs alternate driver and predictor; trace a normal and a boundary case, then switch roles. Ask the predictor to explain rather than dictate code.</li><li><strong>Fade / transfer (15 min):</strong> Complete a teacher-selected missing rule from faded_practice.py; predict/run/explain a changed movement or timeout case and record a targeted repair.</li><li><strong>Check / explain (5 min):</strong> Independently explain input/update/draw and show quit, movement, collision and pause/reset. If unfamiliarity persists, record reteaching required before issuing the project.</li><li><strong>Exit / record (5 min):</strong> Save a version, actual test evidence, help received and one next step.</li></ol><details><summary>Scaffolding, feedback and stretch</summary><p>Use a state table, highlighted input/update/draw blocks and a pre-prepared interpreter for learners needing support. Restore one hint at a time after recording the initial attempt. Ask “which state first differs from your prediction?” before offering a fix. Use an error hunt and a second, fresh case to check the correction. Stretch: justify a contract or improve test coverage; do not add assessed-project features.</p></details><p><strong>Exit evidence:</strong> Independently explain input/update/draw and show quit, movement, collision and pause/reset. If unfamiliarity persists, record reteaching required before issuing the project.</p></section><section id="y12-2"><p class="eyebrow">YEAR 12 · PRACTICE 2</p><h2>Keep game data independent when functions mutate it</h2><p><strong>Existing allocation:</strong> Unit 3, Week 2, Lesson 3. Retains mutation versus rebinding, two-dimensional lists and dictionaries. Ungraded practice before the project.</p><ol><li><strong>Retrieve / predict (5 min):</strong> Sketch one expected state and explain yesterday’s Python idea.</li><li><strong>Model (10 min):</strong> Run extension12.py. Predict independent 2 × 3 board rows and dictionary lookup; contrast with [[0]*3]*2. Relate local parameter rebinding to changes through a shared reference. Use the lab active list to demonstrate accidental state sharing.</li><li><strong>Guided practice (15 min):</strong> Pairs alternate driver and predictor; trace a normal and a boundary case, then switch roles. Ask the predictor to explain rather than dictate code.</li><li><strong>Fade / transfer (15 min):</strong> Build a fresh 3 × 2 practice board, pass it to a function that changes one cell, then rebind a local name. Add dictionary metadata for C and test a missing key. Keep this separate from assessed tile maps.</li><li><strong>Check / explain (5 min):</strong> Predict exactly which caller values change and why. Demonstrate independent boards/rows and normal/missing dictionary lookups.</li><li><strong>Exit / record (5 min):</strong> Save a version, actual test evidence, help received and one next step.</li></ol><details><summary>Scaffolding, feedback and stretch</summary><p>Use a state table, highlighted input/update/draw blocks and a pre-prepared interpreter for learners needing support. Restore one hint at a time after recording the initial attempt. Ask “which state first differs from your prediction?” before offering a fix. Use an error hunt and a second, fresh case to check the correction. Stretch: justify a contract or improve test coverage; do not add assessed-project features.</p></details><p><strong>Exit evidence:</strong> Predict exactly which caller values change and why. Demonstrate independent boards/rows and normal/missing dictionary lookups.</p></section><section id="y12-3"><p class="eyebrow">YEAR 12 · PRACTICE 3</p><h2>Encapsulate independent practice indicators</h2><p><strong>Existing allocation:</strong> Unit 3, Week 5, Lesson 3. Retains encapsulation, abstraction and defined interfaces. Ungraded practice before the project.</p><ol><li><strong>Retrieve / predict (5 min):</strong> Sketch one expected state and explain yesterday’s Python idea.</li><li><strong>Model (10 min):</strong> Model Indicator in extension12.py as a public interface. Create two instances, call update and explain independent state. Contrast plain data with a method that validates its argument. Connect to the existing chapter’s Python attribute conventions.</li><li><strong>Guided practice (15 min):</strong> Pairs alternate driver and predictor; trace a normal and a boundary case, then switch roles. Ask the predictor to explain rather than dictate code.</li><li><strong>Fade / transfer (15 min):</strong> Implement an unrelated CounterIndicator with an add(amount) method that rejects negative increments. Use two objects; explain which details callers need and which are hidden behind the interface.</li><li><strong>Check / explain (5 min):</strong> Show object independence, a rejected update without unintended mutation, and an explanation of encapsulation without claiming Python prevents all direct access.</li><li><strong>Exit / record (5 min):</strong> Save a version, actual test evidence, help received and one next step.</li></ol><details><summary>Scaffolding, feedback and stretch</summary><p>Use a state table, highlighted input/update/draw blocks and a pre-prepared interpreter for learners needing support. Restore one hint at a time after recording the initial attempt. Ask “which state first differs from your prediction?” before offering a fix. Use an error hunt and a second, fresh case to check the correction. Stretch: justify a contract or improve test coverage; do not add assessed-project features.</p></details><p><strong>Exit evidence:</strong> Show object independence, a rejected update without unintended mutation, and an explanation of encapsulation without claiming Python prevents all direct access.</p></section><section id="y12-4"><p class="eyebrow">YEAR 12 · PRACTICE 4</p><h2>Override timed behaviour and test the shared contract</h2><p><strong>Existing allocation:</strong> Unit 3, Week 6, Lesson 3. Retains polymorphism, inherited behaviour and boundary testing. Ungraded practice before the project.</p><ol><li><strong>Retrieve / predict (5 min):</strong> Sketch one expected state and explain yesterday’s Python idea.</li><li><strong>Model (10 min):</strong> Trace Indicator/Pulse update(499), update(1), update(1000). Use the same call on mixed instances; draw a labelled outline when visible changes. Update only during playing so pause freezes the pulse. Model inherited validation and leftover-time preservation.</li><li><strong>Guided practice (15 min):</strong> Pairs alternate driver and predictor; trace a normal and a boundary case, then switch roles. Ask the predictor to explain rather than dictate code.</li><li><strong>Fade / transfer (15 min):</strong> Implement a new Pulse interval of 300 ms; integrate it into a COPY of the practice runner and show shape/text cues. Retrieve the already-taught student linear search and insertion sort on practice labels/history; no new algorithm lesson replaces search/sort teaching.</li><li><strong>Check / explain (5 min):</strong> Independently pass the changed mini-game and OOP checks, including pause/reset of subclass state, 299/300/900 ms and duplicate/empty/missing search/sort cases. Retain the Week 6 Lesson 4 controlled practical unchanged.</li><li><strong>Exit / record (5 min):</strong> Save a version, actual test evidence, help received and one next step.</li></ol><details><summary>Scaffolding, feedback and stretch</summary><p>Use a state table, highlighted input/update/draw blocks and a pre-prepared interpreter for learners needing support. Restore one hint at a time after recording the initial attempt. Ask “which state first differs from your prediction?” before offering a fix. Use an error hunt and a second, fresh case to check the correction. Stretch: justify a contract or improve test coverage; do not add assessed-project features.</p></details><p><strong>Exit evidence:</strong> Independently pass the changed mini-game and OOP checks, including pause/reset of subclass state, 299/300/900 ms and duplicate/empty/missing search/sort cases. Retain the Week 6 Lesson 4 controlled practical unchanged.</p></section><section><h2>Worked code and faded starter</h2><p>Download the complete pack first so imports resolve. The worked files are public practice solutions. The faded task changes counts, timing, starting state, score and validation; it deliberately raises NotImplementedError until students implement the missing rules.</p><details><summary>stage1_loop.py</summary><p><a href="stage1_loop.py" download>Download editable Python</a></p><pre><code>&quot;&quot;&quot;Stage 1 worked loop: close with Escape or the window X. No assessed code.&quot;&quot;&quot;
+import pygame
+
+
+def main():
+    pygame.init()
+    screen = pygame.display.set_mode((640, 360))
+    pygame.display.set_caption(&quot;Practice 1: input, update, draw&quot;)
+    clock = pygame.time.Clock()
+    font = pygame.font.Font(None, 26)
+    x = 308.0
+    running = True
+    while running:
+        dt_ms = clock.tick(60)
+        # Events happen once; held keys are inspected every frame.
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                running = False
+        keys = pygame.key.get_pressed()
+        direction = int(keys[pygame.K_RIGHT]) - int(keys[pygame.K_LEFT])
+        x = max(0, min(616, x + direction * 200 * dt_ms / 1000))
+        screen.fill(&quot;#f8f5ec&quot;)
+        pygame.draw.rect(screen, &quot;#285747&quot;, pygame.Rect(int(x), 180, 24, 24))
+        screen.blit(font.render(&quot;Left/Right: move | Esc: quit&quot;, True, &quot;#18322d&quot;), (20, 30))
+        pygame.display.flip()
+    pygame.quit()
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre></details><details><summary>lab_rules.py</summary><p><a href="lab_rules.py" download>Download editable Python</a></p><pre><code>&quot;&quot;&quot;Worked practice: two stations on a horizontal strip, not assessed Task 1.
+
+Rules use ordinary Python. Positions are pixels; elapsed values are milliseconds.
+Content CC BY 4.0; code MIT.
+&quot;&quot;&quot;
+from pathlib import Path
+
+WIDTH, HEIGHT = 640, 360
+PLAYER_Y, PLAYER_SIZE = 180, 24
+DURATION_MS, SPEED = 20000, 200  # milliseconds; pixels per second
+
+
+def new_state():
+    return {&quot;mode&quot;: &quot;ready&quot;, &quot;x&quot;: 308.0, &quot;remaining&quot;: DURATION_MS,
+            &quot;score&quot;: 0, &quot;active&quot;: [True, True], &quot;saved&quot;: False}
+
+
+def command(state, action):
+    &quot;&quot;&quot;Discrete key events: start/pause/resume; R resets to READY.&quot;&quot;&quot;
+    if action == &quot;reset&quot;:
+        state.clear()
+        state.update(new_state())
+    elif action == &quot;space&quot;:
+        state[&quot;mode&quot;] = {&quot;ready&quot;: &quot;playing&quot;, &quot;playing&quot;: &quot;paused&quot;,
+                         &quot;paused&quot;: &quot;playing&quot;}.get(state[&quot;mode&quot;], state[&quot;mode&quot;])
+
+
+def overlaps(a, b):
+    &quot;&quot;&quot;Same strict edge convention as Rect.colliderect: touching is not overlap.&quot;&quot;&quot;
+    ax, ay, aw, ah = a
+    bx, by, bw, bh = b
+    return ax &lt; bx + bw and ax + aw &gt; bx and ay &lt; by + bh and ay + ah &gt; by
+
+
+def update(state, direction, dt_ms, collect=True):
+    &quot;&quot;&quot;Update once per frame. Do not call this from drawing code.
+
+    A pause/start/reset event consumes its frame without update (see the runner).
+    Timeout has precedence over collecting in the same update.
+    &quot;&quot;&quot;
+    if direction not in (-1, 0, 1) or dt_ms &lt; 0:
+        raise ValueError(&quot;Use direction -1, 0 or 1 and non-negative elapsed time&quot;)
+    if state[&quot;mode&quot;] != &quot;playing&quot;:
+        return
+    state[&quot;remaining&quot;] = max(0, state[&quot;remaining&quot;] - dt_ms)
+    if state[&quot;remaining&quot;] == 0:
+        state[&quot;mode&quot;] = &quot;finished&quot;
+        return
+    state[&quot;x&quot;] = max(0, min(WIDTH - PLAYER_SIZE,
+                           state[&quot;x&quot;] + direction * SPEED * dt_ms / 1000))
+    if not collect:
+        return
+    player = (int(state[&quot;x&quot;]), PLAYER_Y, PLAYER_SIZE, PLAYER_SIZE)
+    for index, x in enumerate([80, 520]):
+        if state[&quot;active&quot;][index] and overlaps(player, (x, PLAYER_Y, 24, 24)):
+            state[&quot;active&quot;][index] = False
+            state[&quot;score&quot;] += 1
+    if not any(state[&quot;active&quot;]):
+        state[&quot;mode&quot;] = &quot;finished&quot;
+
+
+def load_history(path):
+    &quot;&quot;&quot;Only whole scores 0–2. Missing/empty is valid; bad lines are reported.&quot;&quot;&quot;
+    values, warnings = [], []
+    try:
+        with Path(path).open(encoding=&quot;utf-8&quot;) as source:
+            for line_number, line in enumerate(source, 1):
+                try:
+                    value = int(line.strip())
+                    if not 0 &lt;= value &lt;= 2:
+                        raise ValueError(&quot;out of range&quot;)
+                    values.append(value)
+                except ValueError:
+                    warnings.append(f&quot;Skipped line {line_number}: expected score 0–2&quot;)
+    except FileNotFoundError:
+        pass
+    except (OSError, UnicodeError) as error:
+        warnings.append(f&quot;History unavailable: {error}&quot;)
+    return values, warnings
+
+
+def save_result(state, path):
+    &quot;&quot;&quot;Append once, only after finishing. Failed writes remain visibly unsaved.&quot;&quot;&quot;
+    if state[&quot;mode&quot;] != &quot;finished&quot; or state[&quot;saved&quot;]:
+        return &quot;&quot;
+    try:
+        with Path(path).open(&quot;a&quot;, encoding=&quot;utf-8&quot;) as target:
+            target.write(str(state[&quot;score&quot;]) + &quot;\n&quot;)
+    except OSError as error:
+        return f&quot;Not saved: {error}. Press S to retry.&quot;
+    state[&quot;saved&quot;] = True
+    return &quot;Saved one result.&quot;
+</code></pre></details><details><summary>lab_runner.py</summary><p><a href="lab_runner.py" download>Download editable Python</a></p><pre><code>&quot;&quot;&quot;Run stages 2–4: python lab_runner.py 2 (or 3 or 4).
+
+Stage 2: state/functions; stage 3: two-station list and collision;
+stage 4: append/read history. No external assets, sound or network.
+&quot;&quot;&quot;
+from pathlib import Path
+import argparse
+import pygame
+import lab_rules as rules
+
+
+def frame(state, events, direction, dt_ms, collect=True):
+    &quot;&quot;&quot;Process a transition before updating; discard elapsed time on that frame.&quot;&quot;&quot;
+    running, changed = True, False
+    retry = False
+    for event in events:
+        if event.type == pygame.QUIT:
+            running = False
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                running = False
+            elif event.key in (pygame.K_SPACE, pygame.K_r):
+                rules.command(state, &quot;reset&quot; if event.key == pygame.K_r else &quot;space&quot;)
+                changed = True
+            elif event.key == pygame.K_s:
+                retry = True
+    if running and not changed:
+        rules.update(state, direction, dt_ms, collect=collect)
+    return running, retry
+
+
+def draw(screen, font, state, stage, message, history):
+    screen.fill(&quot;#f8f5ec&quot;)
+    def text(value, y):
+        screen.blit(font.render(value, True, &quot;#18322d&quot;), (20, y))
+    text(f&quot;CHECKPOINT LAB — practice stage {stage}&quot;, 16)
+    text(&quot;Space: start/pause/resume | R: reset | Esc: quit&quot;, 48)
+    text(&quot;Left/Right: move | Touch numbered stations once each&quot;, 76)
+    text(f&quot;{state[&#x27;mode&#x27;]} | Score {state[&#x27;score&#x27;]}/2 | {state[&#x27;remaining&#x27;]/1000:.1f}s&quot;, 112)
+    if stage &gt;= 3:
+        for index, x in enumerate([80, 520]):
+            rect = pygame.Rect(x, rules.PLAYER_Y, 24, 24)
+            pygame.draw.rect(screen, &quot;#785c16&quot;, rect, 0 if state[&quot;active&quot;][index] else 2)
+            screen.blit(font.render(str(index + 1), True, &quot;#18322d&quot;), (x, 215))
+    pygame.draw.rect(screen, &quot;#285747&quot;, (int(state[&quot;x&quot;]), rules.PLAYER_Y, 24, 24))
+    text(message[:72], 258)
+    if stage == 4:
+        text(f&quot;Valid history: {history[-10:]} (file keeps all valid results)&quot;, 294)
+    pygame.display.flip()
+
+
+def main(stage=4, smoke_frames=None):
+    pygame.init()
+    screen = pygame.display.set_mode((rules.WIDTH, rules.HEIGHT))
+    pygame.display.set_caption(&quot;Checkpoint lab: unrelated teaching practice&quot;)
+    clock, font = pygame.time.Clock(), pygame.font.Font(None, 24)
+    state, running, frames = rules.new_state(), True, 0
+    history_path = Path(__file__).resolve().with_name(&quot;practice-scores.txt&quot;)
+    history, warnings = rules.load_history(history_path) if stage == 4 else ([], [])
+    message = warnings[0] if warnings else &quot;Ready. Predict the result before running.&quot;
+    attempted = False
+    while running:
+        dt_ms = clock.tick(60)
+        events = pygame.event.get()
+        keys = pygame.key.get_pressed()
+        direction = int(keys[pygame.K_RIGHT]) - int(keys[pygame.K_LEFT])
+        # Stage 2 deliberately has no station scoring; keep movement/timing only.
+        if any(e.type == pygame.KEYDOWN and e.key == pygame.K_r for e in events):
+            message = &quot;Reset to ready; previous results remain in history.&quot;
+        running, retry = frame(state, events, direction, dt_ms, collect=stage &gt;= 3)
+        if state[&quot;mode&quot;] != &quot;finished&quot;:
+            attempted = False
+        elif stage == 4 and (not attempted or retry):
+            message = rules.save_result(state, history_path)
+            attempted = True
+            history, warnings = rules.load_history(history_path)
+            if warnings:
+                message += &quot; &quot; + warnings[0]
+        draw(screen, font, state, stage, message, history)
+        frames += 1
+        if smoke_frames is not None and frames &gt;= smoke_frames:
+            running = False
+    pygame.quit()
+
+
+if __name__ == &quot;__main__&quot;:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(&quot;stage&quot;, type=int, choices=[2, 3, 4], nargs=&quot;?&quot;, default=4)
+    parser.add_argument(&quot;--smoke-frames&quot;, type=int)
+    args = parser.parse_args()
+    main(args.stage, args.smoke_frames)
+</code></pre></details><details><summary>extension12.py</summary><p><a href="extension12.py" download>Download editable Python</a></p><pre><code>&quot;&quot;&quot;Year 12 worked data/OOP lab, not an assessed map/actor implementation.
+
+Run python extension12.py for a console trace; the caller supplies elapsed time.
+&quot;&quot;&quot;
+
+
+class Indicator:
+    def __init__(self, label):
+        self.label = label
+        self.visible = True
+
+    def update(self, dt_ms):
+        if dt_ms &lt; 0:
+            raise ValueError(&quot;Elapsed time cannot be negative&quot;)
+
+
+class Pulse(Indicator):
+    def __init__(self, label, interval=500):
+        super().__init__(label)
+        if interval &lt;= 0:
+            raise ValueError(&quot;Positive interval required&quot;)
+        self.interval, self.elapsed = interval, 0
+
+    def update(self, dt_ms):
+        super().update(dt_ms)
+        self.elapsed += dt_ms
+        # Preserve leftover time; a slow frame can cross multiple boundaries.
+        while self.elapsed &gt;= self.interval:
+            self.elapsed -= self.interval
+            self.visible = not self.visible
+
+
+def make_board():
+    return [[0 for _ in range(3)] for _ in range(2)]
+
+
+def find_label(records, wanted):
+    for index in range(len(records)):
+        if records[index].label == wanted:
+            return index
+    return -1
+
+
+def ordered_copy(values):
+    result = values[:]
+    for position in range(1, len(result)):
+        value, index = result[position], position - 1
+        while index &gt;= 0 and result[index] &gt; value:
+            result[index + 1] = result[index]
+            index -= 1
+        result[index + 1] = value
+    return result
+
+
+if __name__ == &quot;__main__&quot;:
+    board = make_board()
+    board[0][1] = 1
+    metadata = {&quot;A&quot;: &quot;north station&quot;, &quot;B&quot;: &quot;south station&quot;}
+    indicators = [Indicator(&quot;A&quot;), Pulse(&quot;B&quot;)]
+    for indicator in indicators:
+        indicator.update(500)
+    print(board)  # [[0, 1, 0], [0, 0, 0]]: second row independent
+    print([(item.label, item.visible) for item in indicators])
+    print(metadata.get(&quot;C&quot;, &quot;unknown&quot;), find_label(indicators, &quot;B&quot;))
+    print(ordered_copy([2, 0, 2, 1]))
+</code></pre></details><details><summary>stage5_oop.py</summary><p><a href="stage5_oop.py" download>Download editable Python</a></p><pre><code>&quot;&quot;&quot;Year 12 worked adapter: polymorphic update in an ungraded Pygame window.&quot;&quot;&quot;
+import argparse
+import pygame
+import lab_rules as rules
+from lab_runner import frame, draw
+from extension12 import Indicator, Pulse
+
+
+def indicators():
+    return [Indicator(&#x27;steady&#x27;), Pulse(&#x27;pulse&#x27;, 500)]
+
+
+def main(smoke_frames=None):
+    pygame.init()
+    screen = pygame.display.set_mode((640, 360))
+    pygame.display.set_caption(&#x27;Year 12 practice: shared update, different behaviour&#x27;)
+    font, clock = pygame.font.Font(None, 24), pygame.time.Clock()
+    state, lights = rules.new_state(), indicators()
+    running, frames = True, 0
+    while running:
+        dt = clock.tick(60)
+        events = pygame.event.get()
+        keys = pygame.key.get_pressed()
+        transition = any(e.type == pygame.KEYDOWN and e.key in (pygame.K_SPACE, pygame.K_r) for e in events)
+        if any(e.type == pygame.KEYDOWN and e.key == pygame.K_r for e in events):
+            lights = indicators()  # Reset subclass state too.
+        running, _ = frame(state, events, int(keys[pygame.K_RIGHT])-int(keys[pygame.K_LEFT]), dt)
+        if running and state[&#x27;mode&#x27;] == &#x27;playing&#x27; and not transition:
+            for light in lights:
+                light.update(dt)  # Same interface, different update behaviour.
+        draw(screen, font, state, 3, &#x27;Year 12: steady / pulse (outline = off)&#x27;, [])
+        for index, light in enumerate(lights):
+            pygame.draw.rect(screen, &#x27;#18322d&#x27;, (290+index*115, 230, 20, 20), 0 if light.visible else 2)
+            screen.blit(font.render(light.label, True, &#x27;#18322d&#x27;), (315+index*115, 230))
+        pygame.display.flip()
+        frames += 1
+        if smoke_frames is not None and frames &gt;= smoke_frames:
+            running = False
+    pygame.quit()
+
+
+if __name__ == &#x27;__main__&#x27;:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(&#x27;--smoke-frames&#x27;, type=int)
+    main(parser.parse_args().smoke_frames)
+</code></pre></details><details><summary>faded_practice.py</summary><p><a href="faded_practice.py" download>Download editable Python</a></p><pre><code>&quot;&quot;&quot;Independent changed mini-game practice. Work in a COPY of this file.
+
+Complete these functions without importing lab_rules. Do not use the assessment
+starter. No graphics required until the rule checks pass; then use the supplied
+runner as an adapter, changing its import to your rules module.
+&quot;&quot;&quot;
+
+
+def new_state():
+    # CHANGED challenge: start x=40, three stations, 15 active seconds.
+    return {&quot;mode&quot;: &quot;ready&quot;, &quot;x&quot;: 40.0, &quot;remaining&quot;: 15000,
+            &quot;score&quot;: 0, &quot;active&quot;: [True, True, True], &quot;saved&quot;: False}
+
+
+def command(state, action):
+    # TODO: space toggles ready/playing/paused; finished stays finished.
+    # TODO: reset restores ALL initial values with a fresh list.
+    raise NotImplementedError(&quot;Complete state transitions&quot;)
+
+
+def overlaps(a, b):
+    # TODO: strict rectangle overlap. Edge-touching is false.
+    raise NotImplementedError(&quot;Complete collision predicate&quot;)
+
+
+def update(state, direction, dt_ms):
+    # TODO: movement 160 pixels/second; x bounded to 0..616.
+    # Three stations at x=120, 300, 500, y=180, size=24.
+    # Each scores 2 ONCE; maximum 6. Timeout before collection.
+    # Paused/ready/finished do not move or consume active time.
+    raise NotImplementedError(&quot;Complete update using your own tests&quot;)
+
+
+def load_history(path):
+    # TODO: read integers 0, 2, 4, 6 only; return (valid_scores, warnings).
+    # Missing/empty valid; malformed lines skipped with a warning.
+    raise NotImplementedError(&quot;Complete changed file policy&quot;)
+
+
+def save_result(state, path):
+    # TODO: finished only, append once, mark saved only after success.
+    # Report failed writes, permitting an explicit retry.
+    raise NotImplementedError(&quot;Complete append policy&quot;)
+</code></pre></details></section><section><h2>Readiness before project issue</h2><p>Use T01–T12 for Year 11 and T01–T16 for Year 12. Observe a visible-window run, an independent changed rule, normal/boundary/invalid tests, pause and full reset, file failure handling and a student explanation. Record interpreter/machine, version, observed results, support and reteaching. For Year 12 include independent rows/objects, polymorphic update and search/sort traces. The school retains responsibility for assessment conditions and classroom moderation.</p><p>Current project chapters: <a href="../#design">Year 11</a> · <a href="../#unit3-project">Year 12</a>. Existing slides cover the original Python strands; use this page and code for the new bridge. Additional presentations remain A06.</p><h3>Technical references</h3><ul><li><a href="https://www.pygame.org/docs/ref/event.html">Events every frame</a></li><li><a href="https://www.pygame.org/docs/ref/key.html">Held keys</a></li><li><a href="https://www.pygame.org/docs/ref/time.html">Clock and milliseconds</a></li><li><a href="https://www.pygame.org/docs/ref/rect.html">Rect overlap</a></li></ul><p>Original teaching content CC BY 4.0 · Python code MIT · Independent classroom resource.</p></section></main></body></html>

@@ -4,7 +4,7 @@ A01 alignment, 30 October 2026. Use 12 workshops with phase allocation: 1 invest
 
 Before issue, teach the Pygame event/draw/timing loop, Rect collisions and the provided shell in existing lessons. Core programming prerequisites come from the textbook. If that preparation is missing, re-plan class time before release; do not add mandatory home development.
 
-A02 preparation, A03 classroom trial/moderation and A06 replacement project slides remain pending. Do not infer those are complete from this document alignment.
+A02 preparation resources are available at https://edugenio.github.io/cs-atar-textbook/pygame/. Actual learner readiness, A03 classroom trial/moderation and A06 replacement project slides remain pending. Do not infer those are complete from this document alignment.
 
 ## Run a coherent delivery path
 

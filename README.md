@@ -113,6 +113,12 @@ The 30 October 2026 site audit is linked at the top of Coverage & audits. It pro
 
 Run `python scripts/build-project-alignment.py` after rebuilding assessment contracts, then `node scripts/build-slide-web.mjs`. The alignment builder updates the existing 10 Unit 1 and 12 Unit 3 workshops, their project chapters, guides, workbooks, milestone/test templates and five-theme teaching packs. Contracts and assessment weights remain in `assessment-source/`.
 
-Original console examples are archived under `dist/legacy-projects/`. Ten existing Unit 1 project decks retain their original editable content and are labelled legacy in the viewer, notes and complete Unit 1 bundle. Current project cards use the aligned workbook instead; replacement decks remain A06. Pygame preparation (A02) and classroom workload/moderation (A03) remain pending.
+Original console examples are archived under `dist/legacy-projects/`. Ten existing Unit 1 project decks retain their original editable content and are labelled legacy in the viewer, notes and complete Unit 1 bundle. Current project cards use the aligned workbook instead; replacement decks remain A06. Pygame preparation resources (A02) are implemented; actual school-machine/learner verification and classroom workload/moderation (A03) remain pending.
 
 Check with `python tests/project-alignment.test.py`, the existing Node suites and Python package/example checks. Do not infer a completed game or classroom feasibility from the display-only starter shell.
+
+## Pygame preparation (A02)
+
+Editable source lives in `pygame-source/`. Run `python scripts/build-project-alignment.py` then `python scripts/build-pygame-bridge.py` to regenerate the projects followed by the pre-project teaching allocations, CSV and pack. The bridge uses four existing practice periods per year and preserves the original objective, chapter and controlled practical slots. Workbooks/HTML/code are generated under `dist/pygame/`; `verification.md` records actual checks and is deliberately preserved by the builder.
+
+Install `pygame==2.6.1` into an isolated environment and run `python tests/pygame-bridge.test.py`; the test configures SDL dummy video/audio for reproducible rendering and loop checks. Run `node --test tests/*.test.mjs` for allocation/link and existing regressions. Local SDL checks do not establish physical keyboard input, school installation or independent learner readiness. Record those in `dist/pygame/readiness.csv`. A02 remains implemented with school validation pending; A03 is classroom workload/moderation and A06 is slides.

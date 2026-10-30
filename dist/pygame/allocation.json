@@ -1,0 +1,66 @@
+[
+  {
+    "unit": 1,
+    "week": 4,
+    "lesson": 2,
+    "anchor": "y11-1",
+    "title": "Use a while loop to run an interactive window",
+    "retainedStrand": "condition-controlled loops, counters and accumulators"
+  },
+  {
+    "unit": 1,
+    "week": 5,
+    "lesson": 2,
+    "anchor": "y11-2",
+    "title": "Use parameters and returns to separate game rules",
+    "retainedStrand": "parameters, arguments, return values and local scope"
+  },
+  {
+    "unit": 1,
+    "week": 6,
+    "lesson": 2,
+    "anchor": "y11-3",
+    "title": "Traverse a list to collect stations once",
+    "retainedStrand": "one-dimensional traversal and accumulation"
+  },
+  {
+    "unit": 1,
+    "week": 7,
+    "lesson": 3,
+    "anchor": "y11-4",
+    "title": "Combine game tests with reading and appending results",
+    "retainedStrand": "file processing, validation and expected/actual test tables"
+  },
+  {
+    "unit": 3,
+    "week": 1,
+    "lesson": 2,
+    "anchor": "y12-1",
+    "title": "Repair Python skills through a Pygame loop",
+    "retainedStrand": "targeted Python repairs and independent boundary/input checks"
+  },
+  {
+    "unit": 3,
+    "week": 2,
+    "lesson": 3,
+    "anchor": "y12-2",
+    "title": "Keep game data independent when functions mutate it",
+    "retainedStrand": "mutation versus rebinding, two-dimensional lists and dictionaries"
+  },
+  {
+    "unit": 3,
+    "week": 5,
+    "lesson": 3,
+    "anchor": "y12-3",
+    "title": "Encapsulate independent practice indicators",
+    "retainedStrand": "encapsulation, abstraction and defined interfaces"
+  },
+  {
+    "unit": 3,
+    "week": 6,
+    "lesson": 3,
+    "anchor": "y12-4",
+    "title": "Override timed behaviour and test the shared contract",
+    "retainedStrand": "polymorphism, inherited behaviour and boundary testing"
+  }
+]

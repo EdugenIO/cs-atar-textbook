@@ -22,7 +22,7 @@ Only labels, setting and decorative assets vary. Use the common fixture counts, 
 
 Before issue, teach the Pygame event/draw/timing loop, Rect collisions and the provided shell in existing lessons. Core programming prerequisites come from the textbook. If that preparation is missing, re-plan class time before release; do not add mandatory home development.
 
-A02’s Pygame teaching bridge and A03’s classroom workload/moderation remain separate pending work. A01 aligns delivery documents; it does not claim the preparation or full game trial has already occurred.
+The [Pygame teaching bridge](https://edugenio.github.io/cs-atar-textbook/pygame/) supplies staged practice before project issue. Record the actual school-machine and independent-learner checks; A03 classroom workload/moderation remains pending. Resource availability does not mean preparation has occurred.
 
 ## Requirements
 

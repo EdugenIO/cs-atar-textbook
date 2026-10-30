@@ -73,13 +73,17 @@ Type: Confirmed finding · Status: Complete · Suggested owner: Course editor ·
 
 ### A02 · P1 — Teach the Pygame skills needed before the assessed project
 
-Type: Confirmed finding · Status: Open · Suggested owner: Programming author · Dependencies: A01
+Type: Confirmed finding · Status: Implemented; school validation pending · Suggested owner: Programming author · Dependencies: A01
 
 **Evidence:** The new depth pack provides ordinary Python examples. A repository scan finds import pygame in the ten scenario display_shell.py files; these are deliberately static infrastructure and student_game.py contains unfinished interfaces. No dedicated worked Pygame gameplay teaching route was located in this audit.
 
 **Action:** Build a small unrelated teaching game in stages: event loop, input/movement, timing, collision, scoring, game states/pause/reset, then year-appropriate structures and persistence. Include faded starters and expected behaviour, keeping the assessed theme tasks independent.
 
 **Complete when:** The agreed sequence explicitly allocates time before assessed implementation. Students can independently complete a changed mini-game from partial support. Worked code runs on the nominated school environment; demonstrations and tests cover state/reset/pause boundaries. Additional GUI learning does not silently consume extra project workshops.
+
+**Resolution (30 October 2026):** Added eight timed, ungraded practice lessons before project issue: Unit 1 W4L2/W5L2/W6L2/W7L3 and Unit 3 W1L2/W2L3/W5L3/W6L3. Preserved Python objectives, controlled practical slots and all 10/12 project workshops. Published a staged unrelated mini-game, Year 12 data/OOP adapter, changed faded task, workbook, expected/actual tests, setup guide and readiness record. Linked from the planner and relevant chapters.
+
+**Verification:** 18 Node regression suites passed. Ten real-Pygame/SDL automated test methods cover display runners, rules, pause/reset/timeout/collision boundaries, persistence/failure and Year 12 data/OOP/search/sort. Local verification uses Windows Python 3.12/Pygame 2.6.1 with dummy SDL drivers. Physical input on the nominated school setup and observed independent student transfer are still required; A02 is not marked fully complete.
 
 ### A03 · P1 — Trial workload and moderate the common project evidence
 
