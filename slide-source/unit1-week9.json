@@ -353,7 +353,9 @@
           "strategy": "Individual reflection and fresh explanation",
           "notes": "Look for successful conversion, accepted range, returned zero cost and actual retest evidence. Keep storage integration for the next workshop. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
         }
-      ]
+      ],
+      "legacyProject": true,
+      "currentProject": "design"
     },
     {
       "id": "u1-w09-l04",
@@ -463,7 +465,9 @@
           "strategy": "Individual reflection and fresh explanation",
           "notes": "Expected: both valid records remain and a failed save does not falsely enter session data. Unfinished work becomes a specific next action. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
         }
-      ]
+      ],
+      "legacyProject": true,
+      "currentProject": "design"
     }
   ]
 }

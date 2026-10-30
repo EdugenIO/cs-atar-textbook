@@ -6,7 +6,7 @@ Audited site: https://edugenio.github.io/cs-atar-textbook/
 
 Audited source: `d7fa2deb158be768eba7215857228847760c0201`. This report is a dated snapshot, not automatic teacher/curriculum sign-off.
 
-**18 open tasks: 4 P1, 12 P2, 2 P3.** P1 = address before formal project issue; P2 = next delivery/usability/reliability work; P3 = later maintenance/discovery. Types: 8 confirmed findings, 5 reviews required and 5 planned improvements.
+**17 open tasks; 1 completed: 3 P1, 12 P2, 2 P3.** P1 = address before formal project issue; P2 = next delivery/usability/reliability work; P3 = later maintenance/discovery. Types: 8 confirmed findings, 5 reviews required and 5 planned improvements.
 
 ## What passed
 
@@ -59,13 +59,17 @@ A06, A08, A17, A18
 
 ### A01 · P1 — Align programming teaching sequences with the Pygame assessment route
 
-Type: Confirmed finding · Status: Open · Suggested owner: Course editor · Dependencies: none
+Type: Confirmed finding · Status: Complete · Suggested owner: Course editor · Dependencies: none
 
 **Evidence:** Live Unit 3 Week 7 opens “Investigate the equipment-loan brief and constraints”. Its later workshops build catalogue/search and issue/return behaviour. Unit 1 still integrates a session summary and organiser acceptance trial. Both link the older workbooks. assessment-source/catalogue.json now defines Pygame Task 1 for each year, using 10/12 project lessons.
 
 **Action:** Update the Unit 1/3 project lesson activities, chapter brief, workbooks, linked resources and downloadable lesson plan. Either replace legacy contexts or label them clearly as separate practice so students know which brief they are following.
 
 **Complete when:** Every project workshop links to the correct year-level game contract and workbook; all five themes follow the same core requirements. Existing 10/12 workshop allocations remain explicit. Click through both semester sequences and verify that no assessed instruction accidentally sends students to the previous project.
+
+**Resolution (30 October 2026):** Aligned all 22 Unit 1/3 project workshops, both project chapters/visual guides, workbooks, briefs, milestone/test templates and five-theme teaching packs to the existing shared Pygame contracts. Every workshop links its year-level contract and workbook. Preserved 10/12 workshops; retained console examples as labelled optional legacy practice. Ten old project decks are labelled legacy and excluded from current project-card slide links. A02 preparation, A03 trial/moderation and A06 replacement slides remain open.
+
+**Verification:** 17 Node regression suites and four Python checks passed, including new A01 resource/contract/pack checks. Browser checks covered both year-level workshop/chapter paths and legacy slide notices. All 234 other lessons and 13 other Unit 3 chapters were preserved.
 
 ### A02 · P1 — Teach the Pygame skills needed before the assessed project
 

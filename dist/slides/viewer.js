@@ -9,6 +9,12 @@ if (!deck) {
   document.querySelectorAll('button').forEach(button => { button.disabled = true; });
 } else {
   document.title = `${deck.title} | CS ATAR slides`;
+  if (deck.legacyProject) {
+    const notice = element('aside', undefined, 'legacy-project-notice');
+    notice.append(element('strong', 'Legacy console practice. '), element('span', 'These slides are not the current Pygame Task 1. '));
+    const current = element('a', 'Use the aligned game chapter and workbook'); current.href = '../#design';
+    notice.append(current, element('span', '. Replacement project slides are pending (A06).')); main.before(notice);
+  }
   deck.slides.forEach((slide, index) => {
     const article = element('article', undefined, 'slide' + (index === 0 ? ' cover' : ''));
     const heading = element('h1', slide.title); heading.tabIndex = -1; article.append(heading);
@@ -27,7 +33,7 @@ if (!deck) {
     main.append(article);
   });
   const downloads = document.getElementById('downloads');
-  const resources = [[`${deck.id}.pptx`, 'Download editable PowerPoint'], [`notes/${deck.id}.html`, 'Teacher notes']];
+  const resources = [[`${deck.id}.pptx`, deck.legacyProject ? 'Download legacy practice PowerPoint' : 'Download editable PowerPoint'], [`notes/${deck.id}.html`, 'Teacher notes']];
   if (deck.id.startsWith('u1-')) resources.push(['unit1-all-lesson-slides.zip', 'Download all Unit 1 PowerPoints']);
   if (deck.id.startsWith('u2-w01-')) resources.push(['unit2-week1-lesson-slides.zip', 'Download Unit 2 Week 1 PowerPoints']);
   if (deck.id.startsWith('u2-w02-')) resources.push(['unit2-week2-lesson-slides.zip', 'Download Unit 2 Week 2 PowerPoints']);

@@ -1,17 +1,27 @@
-# Unit 3 project — Project self-review and reference notes
-Optional project self-review. The 12 suggested workshops fit weeks 7–10, but you can adapt the practice plan. No grade, annual weighting or submission is attached; the project does not certify full-unit coverage.
+# Year 12 Pygame project · teacher delivery notes
 
-## Self-review questions
-- Investigation: have you explained the problem, stakeholders and scope, with measurable requirements R1–R9?
-- Design: can you explain responsibilities, classes, composition, data contracts, algorithms and a feasible schedule?
-- Implementation: do lookup, valid and rejected issues, complete and repeated returns, reports and console recovery behave as required?
-- Testing: do your expected/actual examples cover boundaries, rejected requests, duplicates, state invariants and the user workflow?
-- Evaluation: which requirements work, what remains limited, and what would you improve? Explain your own design, versions, recovery check and sources.
+A01 alignment, 30 October 2026. Use 12 workshops with phase allocation: 1 investigate, 2 design, 6 build/integrate, 2 test/acceptance, 1 evaluate/handover.
 
-Compare equivalent sound designs rather than matching method names to the reference. If one fault affects several results, fix that cause and retry. Note supplied code and any help you used so you can explain your own contribution.
+Before issue, teach the Pygame event/draw/timing loop, Rect collisions and the provided shell in existing lessons. Core programming prerequisites come from the textbook. If that preparation is missing, re-plan class time before release; do not add mandatory home development.
 
-## Reference files and checks
-project_reference.py is a runnable model; project_console.py its interface; project_support.py shared classes. Run python project_console.py in their extracted folder. No dependencies or persistence. project_reference.py can also run deterministic issue/return demonstrations. Try the scaffold first, then consult the reference to explain differences.
-Seed: Camera E01 total 2/charge 20; Projector E02 total 1/hours 999; Equipment E03 total 3. Borrowers B001–B003. L002/B001/E01/1 succeeds; L001/B002/E02/1 succeeds; L003/B003/E02/1 fails. Active report L001,L002; history L002,L001. Return L002 succeeds/available E01=2; repeat fails. Closed L002 cannot be reused.
-The reference starts with unloaned items, normalises IDs and uses list-based linear searches, internal Loan records, copied reports and insertion sorting. It accesses underscore fields within the coordinated model; these are conventions, not enforced protection. Callers must route all stock mutations through the coordinator. No real borrower/date/authentication system, atomic persistence, concurrency or reload is claimed. The system is unsuitable for real operational loans without further design.
-Review the problem, design, code, tests and evaluation, rather than judging interface decoration. Weeks 8/9 keep two explicit reliability/maintenance lessons each alongside workshops. Week 10 has four project lessons. Adapt this optional schedule to the time available.
+A02 preparation, A03 classroom trial/moderation and A06 replacement project slides remain pending. Do not infer those are complete from this document alignment.
+
+## Run a coherent delivery path
+
+1. Adopt the school conditions and common year-level contract/marking guide before issue. Do not change challenge by theme.
+2. Select one of the five supplied starter ZIPs; inspect the README, configuration, fixtures, unfinished student interfaces and display shell. Keep the relative folder structure.
+3. Use the aligned workbook and milestone/test CSVs. Model how to obtain evidence on an unrelated tiny example; do not complete assessed interfaces for students.
+4. Follow the existing project slots; use the first investigation/design checkpoints to check scope and expected tests, then build in slices.
+5. Authenticate individual decisions with explanations, version evidence and fresh changes according to school conditions. Peer acceptance is evidence for the same project, not another weighted task.
+6. Use the full shared marking guide. Primitive shapes and permitted AI decorative assets have equal standing; media sophistication earns no marks.
+7. Record real failures/limits and evaluate every FR/NFR. A static shell launch does not prove an implemented game or a feasible classroom workload.
+
+## Expected state examples, not a completed reference game
+
+- A collected item does not score again; restarting restores the original objects.
+- Paused wall-clock time does not consume active-play time.
+- A hit during the 1000 ms protection window does not remove another life.
+- At zero time plus exit completion, loss takes precedence.
+- Map 1 completion carries score/lives into map 2 with a fresh 90 seconds; final completion wins unless a loss condition is present. Sort retains duplicate scores and reports at most ten valid history entries.
+
+Use the canonical acceptance CSV for all remaining checks. Source/asset policies and marking criteria are bundled unchanged. The legacy console packs and slides are explicitly separate optional practice.

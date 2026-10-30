@@ -2,3 +2,6 @@
 @media(max-width:900px){.slide th,.slide td{overflow-wrap:anywhere}}
 
 .lesson-diagram{margin:0}.lesson-diagram img{display:block;width:100%;max-height:500px;object-fit:contain}
+
+.legacy-project-notice { padding: 1rem; margin: 1rem; border: 2px solid #785c16; background: #fff5d8; color: #30260f; font: 1rem/1.5 sans-serif; }
+.legacy-project-notice a { color: inherit; text-decoration: underline; }

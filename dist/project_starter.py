@@ -1,3 +1,7 @@
+"""LEGACY CONSOLE PRACTICE: not the current Pygame Task 1.
+Use https://edugenio.github.io/cs-atar-textbook/#unit3-project
+Retained for optional practice and compatibility.
+"""
 """Student scaffold. Implement against the brief before using the console."""
 from project_support import Equipment, Camera, Projector
 

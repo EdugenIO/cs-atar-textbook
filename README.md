@@ -109,3 +109,10 @@ Author in `scripts/build-teaching-depth.py`, then run `python scripts/build-teac
 ## Site audit and next steps
 
 The 30 October 2026 site audit is linked at the top of Coverage & audits. It provides a readable report and an editable 18-task CSV, distinguishing confirmed findings, pending reviews and planned improvements. Historical coverage snapshots retain their own dates and limits. Edit `audit-source/site-audit-2026-10-30.json`, then run `python scripts/build-site-audit.py` to regenerate the report HTML, Markdown, CSV and JSON. Findings are a dated source snapshot, not automatic sign-off after later changes.
+## Pygame delivery alignment (A01)
+
+Run `python scripts/build-project-alignment.py` after rebuilding assessment contracts, then `node scripts/build-slide-web.mjs`. The alignment builder updates the existing 10 Unit 1 and 12 Unit 3 workshops, their project chapters, guides, workbooks, milestone/test templates and five-theme teaching packs. Contracts and assessment weights remain in `assessment-source/`.
+
+Original console examples are archived under `dist/legacy-projects/`. Ten existing Unit 1 project decks retain their original editable content and are labelled legacy in the viewer, notes and complete Unit 1 bundle. Current project cards use the aligned workbook instead; replacement decks remain A06. Pygame preparation (A02) and classroom workload/moderation (A03) remain pending.
+
+Check with `python tests/project-alignment.test.py`, the existing Node suites and Python package/example checks. Do not infer a completed game or classroom feasibility from the display-only starter shell.

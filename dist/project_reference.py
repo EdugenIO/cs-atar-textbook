@@ -1,3 +1,7 @@
+"""LEGACY CONSOLE PRACTICE: not the current Pygame Task 1.
+Use https://edugenio.github.io/cs-atar-textbook/#unit3-project
+Retained for optional practice and compatibility.
+"""
 """Teacher reference: synthetic, single-session loans; no persistence.
 All stock-changing requests go through BookingSystem. Not a production service.
 """

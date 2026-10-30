@@ -1,0 +1,197 @@
+{
+  "updated": "30 October 2026",
+  "task": "A01",
+  "years": {
+    "11": {
+      "budget": 10,
+      "files": {
+        "brief": "project-brief.md",
+        "workbook": "project-workbook.md",
+        "teacher": "project-teacher-guide.md",
+        "requirements": "project-requirements.csv",
+        "tests": "project-test-log.csv",
+        "milestones": "project-milestones.csv",
+        "pack": "project-pack.zip"
+      },
+      "slots": [
+        {
+          "week": 8,
+          "lesson": 1,
+          "phase": "Investigate",
+          "title": "Choose a Pygame theme and agree the shared brief"
+        },
+        {
+          "week": 8,
+          "lesson": 2,
+          "phase": "Design",
+          "title": "Design game states, functions and one-dimensional lists"
+        },
+        {
+          "week": 8,
+          "lesson": 3,
+          "phase": "Build",
+          "title": "Build the game state and controls skeleton"
+        },
+        {
+          "week": 8,
+          "lesson": 4,
+          "phase": "Build",
+          "title": "Build movement and fixed-layout collision rules"
+        },
+        {
+          "week": 9,
+          "lesson": 3,
+          "phase": "Build",
+          "title": "Implement score, lives and active-play timing"
+        },
+        {
+          "week": 9,
+          "lesson": 4,
+          "phase": "Build",
+          "title": "Implement the HUD and score-history functions"
+        },
+        {
+          "week": 10,
+          "lesson": 1,
+          "phase": "Build",
+          "title": "Integrate difficulty choices and the complete game core"
+        },
+        {
+          "week": 10,
+          "lesson": 2,
+          "phase": "Test",
+          "title": "Run the common game tests, repair and retest"
+        },
+        {
+          "week": 10,
+          "lesson": 3,
+          "phase": "Acceptance",
+          "title": "Conduct the player acceptance and quality trial"
+        },
+        {
+          "week": 10,
+          "lesson": 4,
+          "phase": "Evaluate",
+          "title": "Demonstrate, evaluate and hand over the game"
+        }
+      ],
+      "themes": [
+        "space",
+        "reef",
+        "castle",
+        "circuit",
+        "museum"
+      ]
+    },
+    "12": {
+      "budget": 12,
+      "files": {
+        "brief": "unit3-project-brief.md",
+        "workbook": "unit3-project-workbook.md",
+        "teacher": "unit3-project-teacher-guide.md",
+        "requirements": "unit3-project-requirements.csv",
+        "tests": "unit3-project-test-log.csv",
+        "milestones": "unit3-project-gantt.csv",
+        "pack": "unit3-project-pack.zip"
+      },
+      "slots": [
+        {
+          "week": 7,
+          "lesson": 1,
+          "phase": "Investigate",
+          "title": "Investigate the shared two-map Pygame brief"
+        },
+        {
+          "week": 7,
+          "lesson": 2,
+          "phase": "Design",
+          "title": "Design actors, maps, dictionaries and game states"
+        },
+        {
+          "week": 7,
+          "lesson": 3,
+          "phase": "Design",
+          "title": "Desk-check search, sort and map-transition algorithms"
+        },
+        {
+          "week": 7,
+          "lesson": 4,
+          "phase": "Build",
+          "title": "Build actor interfaces and load the supplied maps"
+        },
+        {
+          "week": 8,
+          "lesson": 3,
+          "phase": "Build",
+          "title": "Implement movement, walls and overridden actor updates"
+        },
+        {
+          "week": 8,
+          "lesson": 4,
+          "phase": "Build",
+          "title": "Implement collection, hazards and active timers"
+        },
+        {
+          "week": 9,
+          "lesson": 3,
+          "phase": "Build",
+          "title": "Integrate dictionary lookup and history-score ordering"
+        },
+        {
+          "week": 9,
+          "lesson": 4,
+          "phase": "Build",
+          "title": "Integrate map progression and persistent results"
+        },
+        {
+          "week": 10,
+          "lesson": 1,
+          "phase": "Build",
+          "title": "Integrate instructions, HUD, pause and restart"
+        },
+        {
+          "week": 10,
+          "lesson": 2,
+          "phase": "Test",
+          "title": "Run common acceptance cases and regression checks"
+        },
+        {
+          "week": 10,
+          "lesson": 3,
+          "phase": "Acceptance",
+          "title": "Run the player and named-machine quality trial"
+        },
+        {
+          "week": 10,
+          "lesson": 4,
+          "phase": "Evaluate",
+          "title": "Demonstrate, restore and evaluate the two-map game"
+        }
+      ],
+      "themes": [
+        "space",
+        "reef",
+        "castle",
+        "circuit",
+        "museum"
+      ]
+    }
+  },
+  "legacySlideIds": [
+    "u1-w08-l01",
+    "u1-w08-l02",
+    "u1-w08-l03",
+    "u1-w08-l04",
+    "u1-w09-l03",
+    "u1-w09-l04",
+    "u1-w10-l01",
+    "u1-w10-l02",
+    "u1-w10-l03",
+    "u1-w10-l04"
+  ],
+  "pending": [
+    "A02 Pygame preparation",
+    "A03 classroom trial and moderation",
+    "A06 replacement project slides"
+  ]
+}

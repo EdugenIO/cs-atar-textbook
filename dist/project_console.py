@@ -1,3 +1,7 @@
+"""LEGACY CONSOLE PRACTICE: not the current Pygame Task 1.
+Use https://edugenio.github.io/cs-atar-textbook/#unit3-project
+Retained for optional practice and compatibility.
+"""
 """Run python project_console.py in the extracted teacher-reference folder."""
 from project_reference import demo_system
 

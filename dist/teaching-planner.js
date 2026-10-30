@@ -2,7 +2,7 @@ let plannerUnit = 1;
 let plannerWeek = '1';
 function plannerLessons(unit, week) {
   const e = escapeHtml;
-  return `<section class="planner-week"><div class="planner-week-heading"><div><p class="eyebrow">WEEK ${week.week} · LESSONS ${(week.week - 1) * 4 + 1}–${week.week * 4}</p><h2>${e(week.title)}</h2></div><span class="pill">4 lessons</span></div><div class="lesson-plan-grid">${week.lessons.map(lesson => `<article class="lesson-plan"><div class="lesson-plan-top"><strong>Lesson ${lesson.lesson}</strong><span class="lesson-kind ${lesson.kind === 'Project workshop' ? 'workshop' : ''}">${e(lesson.kind)}</span></div><h3>${e(lesson.title)}</h3><p class="lesson-objective">${e(lesson.objective)}</p><h4>Teach &amp; do</h4><p>${e(lesson.activity)}</p><h4>Check before moving on</h4><p>${e(lesson.check)}</p><div class="lesson-plan-links"><a class="button secondary" href="#${e(lesson.chapter)}">Open chapter</a>${lesson.workbook ? `<a class="button secondary" href="${e(lesson.workbook)}" download>Workbook</a>` : ''}${plannerSlideLinks(unit, week, lesson)}</div></article>`).join('')}</div></section>`;
+  return `<section class="planner-week"><div class="planner-week-heading"><div><p class="eyebrow">WEEK ${week.week} · LESSONS ${(week.week - 1) * 4 + 1}–${week.week * 4}</p><h2>${e(week.title)}</h2></div><span class="pill">4 lessons</span></div><div class="lesson-plan-grid">${week.lessons.map(lesson => `<article class="lesson-plan"><div class="lesson-plan-top"><strong>Lesson ${lesson.lesson}</strong><span class="lesson-kind ${lesson.kind === 'Project workshop' ? 'workshop' : ''}">${e(lesson.kind)}</span></div><h3>${e(lesson.title)}</h3><p class="lesson-objective">${e(lesson.objective)}</p><h4>Teach &amp; do</h4><p>${e(lesson.activity)}</p><h4>Check before moving on</h4><p>${e(lesson.check)}</p><div class="lesson-plan-links"><a class="button secondary" href="#${e(lesson.chapter)}">Open chapter</a>${lesson.workbook ? `<a class="button secondary" href="${e(lesson.workbook)}" download>Workbook</a>` : ''}${lesson.gameProjectYear ? `<a class="button secondary" href="${e(lesson.gameContract)}" download>Shared game requirements</a><a class="button secondary" href="${e(lesson.gamePack)}" download>Five-theme project pack</a><p>Requirement focus: ${e(lesson.gameRequirements)}</p>` : ''}${plannerSlideLinks(unit, week, lesson)}</div></article>`).join('')}</div></section>`;
 }
 function plannerContent() {
   const unit = teachingSchedule.find(item => item.unit === plannerUnit);
@@ -31,6 +31,7 @@ document.addEventListener('change', event => {
 });
 
 function plannerSlideLinks(unit, week, lesson) {
+  if (lesson.gameProjectYear) return '<p>Updated Pygame project slides are pending (A06). Use the aligned chapter and workbook for this workshop.</p>';
   const key = `u${unit.unit}-w${String(week.week).padStart(2, '0')}-l${String(lesson.lesson).padStart(2, '0')}`;
   if (!lessonSlideResources[key]) return '';
   return `<a class="button" href="slides/?lesson=${key}">Present slides</a><a class="button secondary" href="slides/${key}.pptx" download>Editable PowerPoint</a><a class="button secondary" href="slides/notes/${key}.html">Teacher notes</a>`;

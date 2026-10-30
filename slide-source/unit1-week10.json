@@ -131,7 +131,9 @@
           ],
           "minutes": 5
         }
-      ]
+      ],
+      "legacyProject": true,
+      "currentProject": "design"
     },
     {
       "id": "u1-w10-l02",
@@ -250,7 +252,9 @@
           ],
           "minutes": 5
         }
-      ]
+      ],
+      "legacyProject": true,
+      "currentProject": "design"
     },
     {
       "id": "u1-w10-l03",
@@ -369,7 +373,9 @@
           ],
           "minutes": 5
         }
-      ]
+      ],
+      "legacyProject": true,
+      "currentProject": "design"
     },
     {
       "id": "u1-w10-l04",
@@ -488,7 +494,9 @@
           ],
           "minutes": 5
         }
-      ]
+      ],
+      "legacyProject": true,
+      "currentProject": "design"
     }
   ]
 }

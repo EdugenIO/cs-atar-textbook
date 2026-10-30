@@ -191,31 +191,35 @@ const unit3LearningGuides = {
   },
   "unit3-project": {
     "anchor": "Choose and justify the algorithms",
-    "title": "A report is a separate view",
-    "lead": "Keep retained loan history in issue order while producing an ID-ordered outstanding report.",
-    "kind": "flow",
-    "nodes": [
-      {
-        "label": "Scan history",
-        "detail": "Read h retained loan records and select the active ones."
-      },
-      {
-        "label": "Create snapshots",
-        "detail": "Build m report rows from the current values. Leave live history unchanged."
-      },
-      {
-        "label": "Sort the report",
-        "detail": "Insertion-sort the new rows by loan ID. Do not sort retained history directly."
-      },
-      {
-        "label": "Show the result",
-        "detail": "Display the ordered active-loan view; later changes require a fresh report."
-      }
+    "title": "Trace the required game state",
+    "lead": "Predict the outcome before running a controlled test.",
+    "kind": "trace",
+    "columns": [
+      "Initial state / action",
+      "Expected state",
+      "Evidence"
     ],
-    "caption": "Filtering plus sorting takes O(h + m²) worst-case time and O(m) report space. IDs use string order; fixed-width examples L002 and L010 have the intended order.",
-    "predict": "If history contains L002 then L001 and both are active, which order should the report show?",
-    "answer": "The report shows L001 then L002. Retained history stays L002 then L001 because it records issue order.",
-    "retry": "Mark L002 returned. Explain which row appears in a newly generated active report and what remains in history."
+    "rows": [
+      [
+        "Active item; collect",
+        "Score +10; item inactive",
+        "Collection function result"
+      ],
+      [
+        "Same inactive item; collect again",
+        "Score unchanged",
+        "Repeat-call regression"
+      ],
+      [
+        "Restart after a result",
+        "Initial score, lives, time and objects",
+        "Full-state acceptance check"
+      ]
+    ],
+    "caption": "The shared game contract defines observable state; a screenshot alone cannot establish all transitions.",
+    "predict": "What should happen on the second collection, and which state must restart restore?",
+    "answer": "The second collection adds no points. Restart restores the common initial game state, including objects and active-play time, not only the displayed score.",
+    "retry": "Pause long enough to cross 90 wall-clock seconds. Explain which values must remain unchanged and how you would record evidence."
   },
   "unit3-reliability": {
     "anchor": "Isolate a fault before changing code",

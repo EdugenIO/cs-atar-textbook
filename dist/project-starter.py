@@ -1,3 +1,7 @@
+"""LEGACY CONSOLE PRACTICE: not the current Pygame Task 1.
+Use https://edugenio.github.io/cs-atar-textbook/#design
+Retained for optional practice and compatibility.
+"""
 """Club-order learning project: unfinished starter, not a complete solution.
 Use synthetic IDs and a dedicated practice folder. Replace the stubs.
 """

@@ -1,3 +1,7 @@
+"""LEGACY CONSOLE PRACTICE: not the current Pygame Task 1.
+Use https://edugenio.github.io/cs-atar-textbook/#unit3-project
+Retained for optional practice and compatibility.
+"""
 """Synthetic stock counts, not a borrower or calendar booking system."""
 class Equipment:
     def __init__(self, equipment_id, name, total):
@@ -81,4 +85,3 @@ def preparation_report(items):
     for item in items:
         report.append(item.get_id() + ": " + item.preparation())
     return report
-
