@@ -1,6 +1,6 @@
 # Computer Science ATAR — The Classroom Textbook
 
-A free, open textbook for WA Computer Science ATAR Units 1–4, using Python and SQLite. It includes 50 draft chapters, 182 glossary terms, worksheets, practice questions, quizzes and explained answers. No account is required to read the book.
+A free, open textbook for WA Computer Science ATAR Units 1–4, using Python and SQLite. Current edition: **0.49 · 2027 teaching draft**. Year 11 uses the syllabus for teaching from 2026; Year 12 uses the syllabus for teaching from 2027. It includes 50 draft chapters, 182 glossary terms, worksheets, practice questions, quizzes and explained answers. No account is required to read the book.
 
 This is a learning resource: the website does not grade, collect submissions or track students. Revision and exam-style questions are optional practice. The book is independent and does not imply SCSA or Department endorsement.
 
@@ -128,3 +128,9 @@ Install `pygame==2.6.1` into an isolated environment and run `python tests/pygam
 `assessment-source/project-moderation.json` contains the explicitly unadopted candidate point interpretation. `python scripts/build-project-trial.py` generates `dist/project-trial/` with a desk review, exact-slot blank logs, full requirement outcomes, supplemental cases, double-mark/adoption records and the downloadable pack. Run it after the assessment/alignment builders so copied current contracts match. It preserves current assessment requirements, all 100-mark parent/category totals and task weights.
 
 Run `python tests/project-trial.test.py`. The generator never fabricates classroom observations, marks or approvals; its generated logs are BLANK templates. Keep actual trial records privately outside the generated public folder. A03 remains pending until dated full-core trials and independent teacher moderation occur. The public point anchors and synthetic calibration cases are proposals, not school-approved marking or real student evidence.
+
+## Current curriculum source inventory (A04)
+
+`curriculum-source/source-registry.json` records the verified source listing/effective years. `curriculum-source/item-map.json` indexes all 648 parent/nested unit-content bullets with editorial page/ordinal IDs and provisional evidence references; it does not reproduce the official syllabus or assert item-level approval. The original retrieval pass used privately read official PDF web text and nominated book sections/modules/questions. Every row remains independently unreviewed; retrieval gaps are not confirmed content omissions.
+
+Run `python scripts/build-curriculum-map.py` after changing chapters, depth modules, practice sets or the planner. The builder validates existing references, exports the current matrix/review pack and checks library numerical assessment totals; it does not invent reviewer evidence. Revisit the official sources and source inventory explicitly when SCSA updates a document. Keep adopted school outlines/keys and actual student/reviewer evidence private. Existing grouped audit snapshots retain their own dates; current edition metadata is not a new review of those snapshots.

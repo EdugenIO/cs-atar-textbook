@@ -1,0 +1,28 @@
+[
+  {
+    "year": 11,
+    "libraryCategoryWeights": {
+      "Project": 40,
+      "Practical": 10,
+      "Theory": 20,
+      "Examination": 30
+    },
+    "libraryTasks": 8,
+    "minimumLibraryTaskWeight": 5,
+    "libraryArithmetic": "Matches the current syllabus category percentages and numerical task limits",
+    "schoolAdoptedOutline": "Not supplied; school verification pending"
+  },
+  {
+    "year": 12,
+    "libraryCategoryWeights": {
+      "Project": 40,
+      "Practical": 10,
+      "Theory": 10,
+      "Examination": 40
+    },
+    "libraryTasks": 8,
+    "minimumLibraryTaskWeight": 5,
+    "libraryArithmetic": "Matches the current syllabus category percentages and numerical task limits",
+    "schoolAdoptedOutline": "Not supplied; school verification pending"
+  }
+]

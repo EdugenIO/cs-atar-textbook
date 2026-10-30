@@ -6,7 +6,7 @@ Audited site: https://edugenio.github.io/cs-atar-textbook/
 
 Audited source: `d7fa2deb158be768eba7215857228847760c0201`. This report is a dated snapshot, not automatic teacher/curriculum sign-off.
 
-**17 open tasks; 1 completed: 3 P1, 12 P2, 2 P3.** P1 = address before formal project issue; P2 = next delivery/usability/reliability work; P3 = later maintenance/discovery. Types: 8 confirmed findings, 5 reviews required and 5 planned improvements.
+**16 open tasks; 2 completed: 2 P1, 12 P2, 2 P3.** P1 = address before formal project issue; P2 = next delivery/usability/reliability work; P3 = later maintenance/discovery. Types: 8 confirmed findings, 5 reviews required and 5 planned improvements.
 
 ## What passed
 
@@ -101,13 +101,17 @@ Type: Review required · Status: Prepared; live trial and independent moderation
 
 ### A04 · P1 — Make the 2027 teaching target and item-level coverage explicit
 
-Type: Review required · Status: Open · Suggested owner: Curriculum reviewer · Dependencies: none
+Type: Review required · Status: Complete · Suggested owner: Curriculum reviewer · Dependencies: none
 
 **Evidence:** The assessment library and new depth pack target Year 12 teaching from 2027, while About still describes a 2026 Year 12 syllabus basis. The coverage hub deliberately retains older grouped snapshots and states that no unit is signed off. The SCSA course page separately lists Year 11 from 2026 and Year 12 from 2027.
 
 **Action:** Create a current item-level matrix covering syllabus item, explanation, example, independent task, assessment/practice evidence and review status. Clearly distinguish the current teaching edition from historic audit snapshots and check the school-adopted assessment documents.
 
 **Complete when:** Each current syllabus item has a referenced location or an explicit gap, with reviewer/date and evidence limits. The site states which teaching year applies. Historical audit dates remain intact; nothing is labelled SCSA-approved or fully aligned without the required independent review.
+
+**Resolution (30 October 2026):** Made the 2027 teaching target explicit in edition 0.49, About, the bookshelf/footer and the current coverage hub. Verified the SCSA listing: Year 11 for teaching from 2026 and Year 12 for teaching from 2027. Published an item-level source inventory for all 648 parent/nested unit-content bullets (519 leaves), with source page/ordinal, provisional explanation/example/independent-task and actual formative-question links or explicit retrieval gaps, chapter-level lesson candidates, editorial method/reviewer/date, and blank independent reviewer fields. Preserved older audits and archived the prior resource-edition record. Current school-issued item mapping, adopted outlines and the applicable 2027 manual remain explicit review gaps.
+
+**Verification:** Source-list/effective-year checks use the official SCSA course page and PDF web renditions. Numeric library task/category checks match the current syllabus tables. All unit-content bullet markers were accounted for; parent/nested indexing is not a completion percentage. Automated resource-link/heading/question/CSV checks validate references, not item-specific coverage. No SCSA approval, complete alignment or independent curriculum sign-off is claimed.
 
 ### A05 · P2 — Add local contents and separate core lessons from extensions
 
