@@ -21,8 +21,20 @@ for(const chapter of chapters)test('chapter '+chapter.id,async({page},info)=>{
 test('lesson deep link, focused feedback and companion reading filter',async({page})=>{
  await page.goto('/lessons/#u2-l13');await expect(page.locator('#u2-l13')).toBeFocused();
  await page.locator('#u2-l13 summary').click();await expect(page.locator('#u2-l13 details')).toContainText('SELECT Name FROM Equipment ORDER BY EquipmentID');
+ await page.evaluate(()=>{window.print=()=>window.dispatchEvent(new Event('beforeprint'));});
+ await page.locator('#print').click();await page.emulateMedia({media:'print'});await expect(page.locator('#u2-l13 details p').first()).toBeHidden();
+ await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));await page.emulateMedia({media:'screen'});await expect(page.locator('#u2-l13 details')).toHaveAttribute('open','');
+ await page.locator('#print-answers').click();await page.emulateMedia({media:'print'});await expect(page.locator('#u2-l13 details p').first()).toBeVisible();
+ await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));await page.emulateMedia({media:'screen'});
+ await page.locator('#unit').selectOption('4');await page.reload();await expect(page.locator('#count')).toHaveText('64 of 256 lessons');await expect(page).not.toHaveURL(/#u2-l13/);
  await page.goto('/lessons/?chapter=software-responsibility');await expect(page.locator('#count')).toHaveText('1 of 256 lessons');
  await expect(page.locator('#u1-l33')).toBeVisible();
+});
+for(const unit of [1,2,3,4])test('self-contained offline reader '+unit,async({page,context},info)=>{
+ await page.goto('/offline/unit-'+unit+'-reader.html');await context.setOffline(true);
+ const journey=page.locator('.student-journey').first();await journey.locator('summary').click();const link=journey.locator('a[href^="#"]').first();const destination=await link.getAttribute('href');await link.click();
+ await expect(page.locator('[id="'+destination.slice(1)+'"]')).toBeInViewport();
+ await context.setOffline(false);if(info.project.name==='chromium')await accessible(page);
 });
 test('revision quiz unanswered feedback and checklist persistence',async({page})=>{
  await page.goto('/revision/');const check=page.locator('[data-check]').first();await check.check();await page.reload();await expect(page.locator('[data-check]').first()).toBeChecked();

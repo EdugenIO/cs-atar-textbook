@@ -9,3 +9,6 @@ let change;const menu={open:true},wide={matches:false,addEventListener:(name,fn)
 console.log('Offline readers: 50 chapters, embedded images, valid local anchors, unique IDs, answer controls; home routes, file links and responsive menu passed.');
 // Reader printing restores disclosures and mode after cancellation and failure.
 const reader=read('dist/offline/unit-1-reader.html'),script=reader.match(/<script>([\s\S]*?)<\/script>/)[1];let afterprint;const ds=[{open:false},{open:true}],buttons={},classes=new Set();const pc=vm.createContext({document:{querySelectorAll:()=>ds,body:{classList:{toggle:(k,v)=>v?classes.add(k):classes.delete(k),remove:k=>classes.delete(k)}},getElementById:id=>buttons[id]||=( {})},window:{addEventListener:(n,f)=>afterprint=f,print(){assert.ok(ds.every(d=>d.open));}}});vm.runInContext(script,pc);buttons['answer-print'].onclick();assert.ok(classes.has('answers'));afterprint();assert.deepEqual(ds.map(d=>d.open),[false,true]);assert.equal(classes.size,0);pc.window.print=()=>{throw Error('no printer')};assert.throws(()=>buttons['student-print'].onclick());assert.deepEqual(ds.map(d=>d.open),[false,true]);
+assert.ok(reader.includes('href="#loops-heading-trace-the-running-total"'));
+assert.ok(reader.includes('id="loops-heading-trace-the-running-total"'));
+assert.ok(reader.includes('href="#values-heading-your-practical-task"'));
