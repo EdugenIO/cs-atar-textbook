@@ -1,0 +1,2442 @@
+{
+  "misconceptions": {
+    "start": {
+      "risk": "Input and output are interchangeable.",
+      "response": "Trace one supplied quantity through three labelled IPO boxes, then change the input and ask which value changes."
+    },
+    "values": {
+      "risk": "Text digits automatically behave like numbers, and every digit-only identifier should be converted.",
+      "response": "Compare \"4\" * 3 with 4 * 3. Keep an identifier such as 0042 as text when its leading zeros carry meaning."
+    },
+    "representation": {
+      "risk": "Changing notation changes the value, or every visible character occupies one byte.",
+      "response": "Convert a value back to decimal by place value; separately distinguish code point, encoding and stored bytes."
+    },
+    "selection": {
+      "risk": "At least excludes equality, or every if branch executes.",
+      "response": "Predict below/at/above a threshold, mark the true condition, then trace exactly the chosen branch."
+    },
+    "loops": {
+      "risk": "range includes its stop value, or an accumulator should reset on every iteration.",
+      "response": "Trace a zero-iteration case and a three-iteration case; place initialisation outside the repeated body and explain the stopping check."
+    },
+    "functions": {
+      "risk": "Printing and returning are the same, or a definition executes its body immediately.",
+      "response": "Assign the result of a print-only function, inspect None, then compare a returned value and trace two separate calls."
+    },
+    "arrays": {
+      "risk": "The final valid index equals the length, or an equal maximum should always replace the first match.",
+      "response": "Label zero-based positions and specify first/last-match behaviour. Test empty, one-element and equal-value cases."
+    },
+    "files": {
+      "risk": "Successful conversion proves domain validity, and a conversion handler handles every file failure.",
+      "response": "Separate file opening, text conversion and range checking. Trace missing-file, blank-line, malformed and out-of-range cases."
+    },
+    "design": {
+      "risk": "A running program or impressive theme proves that every requirement is met.",
+      "response": "Trace each measurable requirement into a design decision and an expected/actual acceptance case. Use the shared core before optional presentation choices."
+    },
+    "software-responsibility": {
+      "risk": "Acknowledgement automatically grants reuse permission.",
+      "response": "Compare attribution and permission in a supplied licence case; require a short source/assistance record alongside the learner explanation."
+    },
+    "networks": {
+      "risk": "An application protocol performs every communication job.",
+      "response": "Follow a message through application, transport, IP and local-link responsibilities. Ask for the mechanism as well as the name."
+    },
+    "addressing": {
+      "risk": "An IP address, mask and gateway are interchangeable settings.",
+      "response": "Calculate the network address, decide local/remote delivery, then justify the reachable gateway using the supplied prefix."
+    },
+    "network-design": {
+      "risk": "A faster switch always fixes slow internet access, or a diagram enforces access policy.",
+      "response": "Identify the bottleneck from supplied evidence and test both an allowed and a prohibited path against the proposed design."
+    },
+    "network-review": {
+      "risk": "One symptom identifies one certain fault.",
+      "response": "Ask for a hypothesis, competing explanation and smallest useful next observation. Keep observed results separate from inference."
+    },
+    "consolidation": {
+      "risk": "Copying a corrected answer proves transfer.",
+      "response": "Retain the original attempt, explain the cause, then set a changed independent retry after a gap."
+    },
+    "exam-preparation": {
+      "risk": "A definition answers every explain or justify command.",
+      "response": "Underline each command and subpart; connect a correct technical statement to the supplied case and its requested evidence."
+    },
+    "database-foundations": {
+      "risk": "A plausible or faithfully copied value is necessarily true.",
+      "response": "Distinguish domain validation, checking against a source and source accuracy/authenticity using a deliberately plausible wrong record."
+    },
+    "entities-relationships": {
+      "risk": "A repeated description is a suitable primary key, or an M:N line alone implements the relationship.",
+      "response": "Use duplicate names/descriptions to challenge the key; resolve M:N with a junction and identify the whole key."
+    },
+    "normalisation": {
+      "risk": "Normalisation is just deleting duplicate-looking rows.",
+      "response": "State dependencies and preserve every event while removing repeating groups, partial dependencies and transitive dependencies in order."
+    },
+    "sql-basics": {
+      "risk": "SELECT changes stored columns, and storage order guarantees result order.",
+      "response": "Compare the stored table before/after a projection; require ORDER BY with an explicit tie-breaker where needed."
+    },
+    "database-solution": {
+      "risk": "A successful SQL execution message proves the right rows changed.",
+      "response": "Preview the target, predict the change, check the target and a non-target, and test an invalid record in a disposable copy."
+    },
+    "security-threats": {
+      "risk": "Two knowledge secrets are two-factor authentication, or naming a control explains its effect.",
+      "response": "Classify factor categories and require a mechanism linking each proposed control to the stated threat."
+    },
+    "responsible-data": {
+      "risk": "Replacing names with codes guarantees anonymity.",
+      "response": "Test whether a mapping or contextual linkage can identify people, then justify minimisation, access and retention decisions."
+    },
+    "unit2-review": {
+      "risk": "A content mapping is evidence of learner mastery.",
+      "response": "Use a fresh database or scenario and collect the actual independent response; the map locates resources only."
+    },
+    "unit2-consolidation": {
+      "risk": "Every low-confidence topic needs the same extra reading.",
+      "response": "Diagnose one concrete error first, select its matching explanation, then retest with changed data."
+    },
+    "unit2-exam": {
+      "risk": "Memorised SQL can be applied without checking the schema or report grain.",
+      "response": "Read the keys and desired row meaning first; manually predict one included and one excluded row before writing the report."
+    },
+    "unit3-fluency": {
+      "risk": "A loop form is interchangeable at the zero-iteration boundary.",
+      "response": "Contrast pre-test, fixed-count and post-test reasoning for zero and non-zero cases before translating to the taught Python form."
+    },
+    "unit3-structures": {
+      "risk": "A shallow copy recursively duplicates every nested object.",
+      "response": "Draw references for nested lists and dictionaries; change one nested value and predict every alias before running."
+    },
+    "unit3-search": {
+      "risk": "Binary search works on any input order, or a failed search has no boundary cases.",
+      "response": "State the sorted-range precondition; trace missing, first, last and repeated-key cases against the chosen match contract."
+    },
+    "unit3-sort": {
+      "risk": "One pass means the whole list is sorted, or all sorts establish the same sorted region.",
+      "response": "Trace a first pass of bubble, insertion and selection sort and mark the invariant/sorted region after that pass."
+    },
+    "unit3-objects": {
+      "risk": "A class is one shared instance, or aliases create independent object state.",
+      "response": "Construct two instances, change one through a method and predict which references observe the change."
+    },
+    "unit3-inheritance": {
+      "risk": "A base-typed collection prevents overridden behaviour.",
+      "response": "Call the same method on mixed instance types; explain lookup and the shared contract, then compare inheritance with composition."
+    },
+    "unit3-project": {
+      "risk": "A feature-rich engine or extra asset work substitutes for the required algorithm evidence.",
+      "response": "Trace the core requirements to the year-level structures, algorithms and tests; require an individual explanation and changed code task."
+    },
+    "unit3-reliability": {
+      "risk": "A passing component test proves user acceptance or a timing claim.",
+      "response": "Separate component, integration, acceptance and defined-workload evidence; record actual conditions and limits."
+    },
+    "unit3-network-models": {
+      "risk": "The bottom TCP/IP network grouping is identical to OSI network layer 3.",
+      "response": "Compare the two model diagrams, map responsibilities and keep the course terminology explicit."
+    },
+    "unit3-addressing": {
+      "risk": "A prefix length is a host count, or any starting address is an aligned subnet.",
+      "response": "Calculate block size, network, broadcast and ordinary host range before allocating every interface, including the gateway."
+    },
+    "unit3-secure-networks": {
+      "risk": "VLAN separation alone proves all inter-network access is blocked.",
+      "response": "Mark routing and enforcement points and test a permitted and a denied service-specific path."
+    },
+    "unit3-review": {
+      "risk": "A patch that matches one expected number proves the contract.",
+      "response": "Use changed normal, empty, boundary and failure cases; check state and non-mutation rules as well as the visible output."
+    },
+    "unit3-consolidation": {
+      "risk": "Immediate repetition of the same answer is a delayed independent retry.",
+      "response": "Change the stimulus and revisit after a gap; retain the date, original response and support used."
+    },
+    "unit3-exam": {
+      "risk": "A faster algorithm is acceptable even if it violates order or mutation requirements.",
+      "response": "Read the function contract first and test any proposed optimisation against its output-order and state-change rules."
+    },
+    "unit4-design": {
+      "risk": "Each component of a composite key must be unique alone, or documentation itself enforces integrity.",
+      "response": "Use repeated components with unique pairs; compare the diagram/dictionary to actual primary, foreign and domain constraints."
+    },
+    "unit4-sql": {
+      "risk": "SUM over a booking join gives session totals, and DISTINCT always repairs inflation.",
+      "response": "Declare the report grain and list the repeated source rows. Aggregate at the correct entity level before composing reports."
+    },
+    "unit4-project": {
+      "risk": "One statement failure always undoes every earlier change, or ACID is merely a SQL keyword list.",
+      "response": "Explain each ACID property using a logical operation; separately teach the chosen driver and transaction boundary before requiring implementation."
+    },
+    "unit4-analysis": {
+      "risk": "An accepted account event identifies the person beyond doubt.",
+      "response": "Distinguish event evidence from attribution and record plausible alternatives and the next justified observation."
+    },
+    "unit4-controls": {
+      "risk": "Hiding an edit button enforces permissions, or logging prevents every change.",
+      "response": "Test the permission at the actual boundary; verify unchanged data after denial and demonstrate recovery separately."
+    },
+    "unit4-crypto": {
+      "risk": "Encryption, hashing and signing all provide the same protection.",
+      "response": "Match confidentiality, integrity and authentication needs to mechanisms and key roles; include the identity-binding and endpoint limits."
+    },
+    "unit4-ethics": {
+      "risk": "Every entity has the same privacy obligations, or a suspected incident automatically meets a statutory threshold.",
+      "response": "Identify entity, jurisdiction, date and supplied facts. Use current authoritative sources and explain the conditional judgement."
+    },
+    "unit4-review": {
+      "risk": "A correct joined report proves schema, import, security and recovery readiness too.",
+      "response": "Collect distinct evidence for each requirement and its relevant failure case; use the SQL pathway checklist to expose missing preparation."
+    },
+    "unit4-consolidation": {
+      "risk": "A revision checklist tick is a grade prediction.",
+      "response": "Choose a concrete weak skill, collect an unaided changed response and record the remaining support or uncertainty."
+    },
+    "unit4-exam": {
+      "risk": "A list of controls is a justified evaluation.",
+      "response": "Require a recommendation tied to the case, mechanism, evidence and limitations; check all command words and subparts."
+    }
+  },
+  "profiles": {
+    "programming": {
+      "baseline": "School-approved Python 3 editor, supplied synthetic files and a paper trace sheet. Use the general program or 2D task without specialist hardware.",
+      "specialist": "Drone commands/telemetry in Year 11 or a VR/spatial engine in Year 12, through a locally verified adapter and staged teaching.",
+      "alternative": "Use a text-only adapter, replayed synthetic telemetry, a 2D sprite or a paper state trace with the same declared contract.",
+      "evidence": "Paper/replay work supports algorithm reasoning. Actual Python execution is still needed for a programming practical; a trace does not prove flight, headset performance or live API integration."
+    },
+    "networking": {
+      "baseline": "Printed logical diagrams, fictional addressing tables, synthetic frame/packet records and an offline calculation sheet.",
+      "specialist": "Network pods, managed switches/routers, wireless equipment and locally approved observation/configuration tools.",
+      "alternative": "Use supplied configuration snapshots, MAC/lease tables, request cards and fault logs; use an approved simulator if available.",
+      "evidence": "A model can demonstrate reasoning and predicted policy results. It does not establish actual cabling, live configuration or measured physical-network performance."
+    },
+    "databases": {
+      "baseline": "A school-approved SQLite RDBMS on an ordinary computer, the four/six-table fixtures, dictionaries and query/result sheets.",
+      "specialist": "A local database server or server/pod integration with a declared DBMS, driver and access model.",
+      "alternative": "Use SQLite for actual database creation/manipulation; use printed base/changed records for prediction and manual joins before execution.",
+      "evidence": "Paper results are preparation, not proof of a working database or enforced constraints. A server alternative needs explicit dialect, types, transaction and parameter-placeholder teaching."
+    },
+    "security": {
+      "baseline": "Fictional logs, role/policy tables, threat scenarios and expected/actual test records.",
+      "specialist": "An authorised isolated pod/server lab and teacher-selected specialist demonstrations linked to a precise concept.",
+      "alternative": "Use the offline policy model, synthetic logs and paper allowed/denied cases; keep the stimulus and reasoning demand comparable.",
+      "evidence": "Predicted outcomes and actual observations must be labelled separately. A demonstration is not the same as each learner independently configuring or testing a system."
+    },
+    "representation": {
+      "baseline": "Place-value cards, a supplied character/code-point table, pencil and optional Python verification.",
+      "specialist": "A supplied drone/VR telemetry record can provide a context after the representation concept is taught.",
+      "alternative": "Use fictional numbers and text records; no device, paid asset or particular encoding tool is necessary.",
+      "evidence": "Record the declared width, signed/unsigned interpretation and encoding. A correct numeric conversion does not by itself demonstrate every character-encoding concept."
+    },
+    "planning": {
+      "baseline": "A written brief, requirement/test table, dependency chart, synthetic case cards and the general textbook examples.",
+      "specialist": "Use a drone, VR, pod or hackathon scenario as the local brief after prerequisites and assessment conditions are settled.",
+      "alternative": "Use a club-loan, booking-service or simple 2D/console scenario with equivalent conceptual requirements.",
+      "evidence": "Retain requirement-linked decisions, independent explanations and actual evidence where execution is required. More complex equipment does not itself demonstrate stronger understanding."
+    }
+  },
+  "bridges": [
+    {
+      "unit": 1,
+      "title": "Drone programming, 2D hackathon and physical networking",
+      "status": "Draft 64-entry Unit 1 lesson crosswalk available; equipment procedures and event/contact-hour budget still need local confirmation.",
+      "readings": [
+        "start",
+        "selection",
+        "loops",
+        "functions",
+        "arrays",
+        "files",
+        "design",
+        "networks",
+        "addressing",
+        "network-design"
+      ],
+      "flow": "General programming explanation -> predicted trace -> taught adapter/replayed telemetry -> expected/actual comparison -> changed textbook task. Later networking uses the same address/device/diagnostic concepts.",
+      "assessment": "The proposed local applied-engine component and hackathon component belong to a reconciled local task architecture. The textbook standalone Pygame project is a separate example; do not add its workload or marks automatically.",
+      "alternative": "Python text-only engine, synthetic telemetry and ordinary 2D project; supplied network evidence for conceptual work.",
+      "beforeIssue": "Confirm adapter/runtime contract, observed versus simulated evidence, individual explanation/change task, component contributions and the event/exam calendar."
+    },
+    {
+      "unit": 2,
+      "title": "Pod/security scenarios and a relational database",
+      "status": "SQL-strand weekly planning is available; a complete local security/cipher/privacy lesson crosswalk remains to be checked.",
+      "readings": [
+        "database-foundations",
+        "entities-relationships",
+        "normalisation",
+        "sql-basics",
+        "database-solution",
+        "security-threats",
+        "responsible-data"
+      ],
+      "flow": "General database/security reading -> supplied records or logs -> guided practice -> changed independent attempt -> feedback before the local practical.",
+      "assessment": "If the practical is in Week 10, its SQL operations must be taught and practised earlier. Do not copy a plan that leaves first SELECT teaching until after the practical.",
+      "alternative": "SQLite fixtures on ordinary computers; synthetic security cases and offline policy tests.",
+      "beforeIssue": "Confirm assessed operations, normalisation/CREATE prerequisites, constraint tests, recovery evidence and any server-driver differences. Keep non-SQL content inside the same lesson budget."
+    },
+    {
+      "unit": 3,
+      "title": "VR/spatial OOP, advanced 2D hackathon and network performance",
+      "status": "Concept/equipment bridge available; a full local 64-entry lesson crosswalk and timing trial are not yet completed.",
+      "readings": [
+        "unit3-fluency",
+        "unit3-structures",
+        "unit3-search",
+        "unit3-sort",
+        "unit3-objects",
+        "unit3-inheritance",
+        "unit3-project",
+        "unit3-network-models",
+        "unit3-addressing",
+        "unit3-secure-networks"
+      ],
+      "flow": "General objects/grids/dictionaries/algorithm explanation -> small ordinary Python example -> taught spatial/2D implementation -> individual state/algorithm explanation -> changed core task.",
+      "assessment": "Retain the proposed applied VR engine plus hackathon relationship as a local option. Vendor APIs, coordinate dimensions, rendering and first-use integration require their own preparation if retained in the task.",
+      "alternative": "Ordinary Python classes and a 2D scene or console model; synthetic timings/network traces.",
+      "beforeIssue": "Confirm the actual supported runtime/API, platform language bridge, accessible alternative, independent authentication and total project/event time. A headset outcome does not replace algorithm evidence."
+    },
+    {
+      "unit": 4,
+      "title": "Database/application integration and security on pods/servers",
+      "status": "SQL-strand weekly planning is available; full local integration/security lesson mapping and workload trial remain pending.",
+      "readings": [
+        "unit4-design",
+        "unit4-sql",
+        "unit4-project",
+        "unit4-analysis",
+        "unit4-controls",
+        "unit4-crypto",
+        "unit4-ethics"
+      ],
+      "flow": "General multi-table/schema/ACID/security concept -> SQLite practice -> explicitly taught driver/server adaptation -> requirement-linked test, recovery and justified evaluation.",
+      "assessment": "Core ACID concepts remain syllabus-linked. Explicit driver/transaction syntax and supporting LEFT JOIN/HAVING material need teaching before they are required by a local task.",
+      "alternative": "SQLite plus an ordinary Python application, fictional booking data, local role/policy models and paper analysis.",
+      "beforeIssue": "Verify driver placeholders, data types, transaction boundaries, constraints/cascade behaviour, import decisions and actual recovery tests; do not infer equivalence from successful connection alone."
+    }
+  ],
+  "localUnit1": [
+    {
+      "week": 1,
+      "lesson": 1,
+      "kind": "ordinary lesson",
+      "intention": "Explain inputs, processing, outputs and development requirements",
+      "readings": [
+        {
+          "label": "Your first Python program → A problem before a program",
+          "href": "../../#start/heading-a-problem-before-a-program"
+        },
+        {
+          "label": "Your first Python program → Sequence: follow the order",
+          "href": "../../#start/heading-sequence-follow-the-order"
+        },
+        {
+          "label": "Designing and testing solutions → Investigate: understand the problem",
+          "href": "../../#design/heading-investigate-understand-the-problem"
+        }
+      ],
+      "textbookUse": "Read the badge IPO example; label its requirement before considering any equipment.",
+      "application": "Use three requirement cards: a badge calculator, a drone command sequence and a network service. Identify the shared investigate/design/develop/evaluate process.",
+      "check": "For 5 badges at $3 each, name input, processing and output; write one testable requirement.",
+      "expected": "5 is input; multiply by 3; output $15. Requirement describes an observable result for valid quantities."
+    },
+    {
+      "week": 1,
+      "lesson": 2,
+      "kind": "ordinary lesson",
+      "intention": "Run a saved program and choose types deliberately",
+      "readings": [
+        {
+          "label": "Your first Python program → Prepare your workspace",
+          "href": "../../#start/heading-prepare-your-workspace"
+        },
+        {
+          "label": "Values, types and operators → Match the type to the meaning",
+          "href": "../../#values/heading-match-the-type-to-the-meaning"
+        },
+        {
+          "label": "Values, types and operators → Convert deliberately",
+          "href": "../../#values/heading-convert-deliberately"
+        },
+        {
+          "label": "Values, types and operators → Calculate and predict",
+          "href": "../../#values/heading-calculate-and-predict"
+        }
+      ],
+      "textbookUse": "Run the sequential badge example; inspect types and arithmetic without opening later advanced harnesses.",
+      "application": "Set up the approved editor; modify a simple input/calculation/output program. Inspect a supplied telemetry-style record without connecting hardware.",
+      "check": "Predict int('4') * 3 versus '4' * 3, then choose a type for identifier '0042'.",
+      "expected": "12 versus '444'; retain identifier as text to preserve zeros. Save and run the intended file."
+    },
+    {
+      "week": 1,
+      "lesson": 3,
+      "kind": "ordinary lesson",
+      "intention": "Translate user needs into testable IPO requirements",
+      "readings": [
+        {
+          "label": "Designing and testing solutions → Investigate: understand the problem",
+          "href": "../../#design/heading-investigate-understand-the-problem"
+        },
+        {
+          "label": "Designing and testing solutions → Plan the work and dependencies",
+          "href": "../../#design/heading-plan-the-work-and-dependencies"
+        },
+        {
+          "label": "Designing and testing solutions → Build and revise a Gantt schedule",
+          "href": "../../#design/heading-build-and-revise-a-gantt-schedule"
+        }
+      ],
+      "textbookUse": "Read requirements and the small Gantt example; distinguish the example schedule from the local assessment calendar.",
+      "application": "Use the planning board to turn an interactive-program brief into inputs, processing, outputs and an eight-slot dependency plan.",
+      "check": "Coding takes four rather than three slots after investigation/design. Does the original eight-slot sequential plan still fit?",
+      "expected": "No: code 3–6, test 7–8, evaluate 9. Negotiate a justified scope/deadline change rather than silently deleting testing."
+    },
+    {
+      "week": 1,
+      "lesson": 4,
+      "kind": "ordinary lesson",
+      "intention": "Trace state, classify a syntax fault and retrieve character representation",
+      "readings": [
+        {
+          "label": "Your first Python program → Trace and test",
+          "href": "../../#start/heading-trace-and-test"
+        },
+        {
+          "label": "Values, types and operators → Assignment updates a value",
+          "href": "../../#values/heading-assignment-updates-a-value"
+        },
+        {
+          "label": "Numbers and characters in a computer → Text needs an agreed representation",
+          "href": "../../#representation/heading-text-needs-an-agreed-representation"
+        },
+        {
+          "label": "Numbers and characters in a computer → Apply a character code in three bases",
+          "href": "../../#representation/heading-apply-a-character-code-in-three-bases"
+        }
+      ],
+      "textbookUse": "Trace the sequential example on paper, inspect the expected-result table and complete the B/66 character transfer prompt.",
+      "application": "Dry-run a changed calculation; inspect a deliberately unmatched quote as a syntax example; reserve a short explicit character-code exercise omitted from the master.",
+      "check": "For B=66, give eight-bit binary and hex; explain why changing notation does not change the value.",
+      "expected": "01000010 and 42; both represent 66. Code point and UTF-8 byte representation are different concepts."
+    },
+    {
+      "week": 2,
+      "lesson": 1,
+      "kind": "ordinary lesson",
+      "intention": "Evaluate comparisons and Boolean conditions",
+      "readings": [
+        {
+          "label": "Making decisions with selection → 1. From an instruction to a decision",
+          "href": "../../#selection/heading-from-an-instruction-to-a-decision"
+        },
+        {
+          "label": "Making decisions with selection → Combine conditions and choices",
+          "href": "../../#selection/heading-combine-conditions-and-choices"
+        }
+      ],
+      "textbookUse": "Read how a condition selects a path; inspect the combined-condition example and trace both Boolean inputs.",
+      "application": "Classify sample battery/permission values against an illustrative rule on paper; the rule is not a physical-flight safety specification.",
+      "check": "Evaluate battery >= 30 and authorised when battery=29 and authorised=True.",
+      "expected": "False: both operands must be true. A successful permission check alone does not establish the threshold."
+    },
+    {
+      "week": 2,
+      "lesson": 2,
+      "kind": "ordinary lesson",
+      "intention": "Implement single, dual and nested decisions",
+      "readings": [
+        {
+          "label": "Making decisions with selection → 2. Design before coding",
+          "href": "../../#selection/heading-design-before-coding"
+        },
+        {
+          "label": "Making decisions with selection → 3. Implement the decision in Python",
+          "href": "../../#selection/heading-implement-the-decision-in-python"
+        },
+        {
+          "label": "Making decisions with selection → 4. Trace it yourself",
+          "href": "../../#selection/heading-trace-it-yourself"
+        }
+      ],
+      "textbookUse": "Read design-before-code, the implementation and trace sections; predict before running.",
+      "application": "Write a menu that rejects invalid commands, then distinguishes start/stop/status. Practise one nested condition with an explicit expected path.",
+      "check": "Trace -1, 0 and 2 through negative-invalid / zero-empty / otherwise-process branches.",
+      "expected": "Exactly one intended branch per input; distinguish an if/elif/else chain from unrelated if statements."
+    },
+    {
+      "week": 2,
+      "lesson": 3,
+      "kind": "ordinary lesson",
+      "intention": "Validate a multi-choice command without losing input meaning",
+      "readings": [
+        {
+          "label": "Making decisions with selection → Combine conditions and choices",
+          "href": "../../#selection/heading-combine-conditions-and-choices"
+        },
+        {
+          "label": "Text files and reliable input → Accept only usable input",
+          "href": "../../#files/heading-accept-only-usable-input"
+        },
+        {
+          "label": "Values, types and operators → Convert deliberately",
+          "href": "../../#values/heading-convert-deliberately"
+        }
+      ],
+      "textbookUse": "Read usable-input rules as a targeted prerequisite; use selection to decide on already-converted values before full exception handling is taught.",
+      "application": "Build a text-only command menu with documented accepted spellings. Use supplied conversion scaffolding; hardware calls remain stubbed.",
+      "check": "Explain why successful int('-4') conversion is not sufficient range validation.",
+      "expected": "It is an integer but may violate the allowed domain. Conversion, range checks and command permission are distinct."
+    },
+    {
+      "week": 2,
+      "lesson": 4,
+      "kind": "ordinary lesson",
+      "intention": "Test exact decision boundaries and explain truth tables",
+      "readings": [
+        {
+          "label": "Making decisions with selection → 4. Trace it yourself",
+          "href": "../../#selection/heading-trace-it-yourself"
+        },
+        {
+          "label": "Making decisions with selection → 5. Test the boundary",
+          "href": "../../#selection/heading-test-the-boundary"
+        },
+        {
+          "label": "Unit 1 consolidation → Station A: Boolean expressions and types",
+          "href": "../../#consolidation/heading-station-a-boolean-expressions-and-types"
+        }
+      ],
+      "textbookUse": "Inspect boundary-testing guidance and the Boolean station; keep advanced optional code closed.",
+      "application": "Desk-check the command menu with values just inside/outside the agreed range; compare expected paths with actual paths.",
+      "check": "For an inclusive permitted range 1–5, give four discriminating tests and expected outcomes.",
+      "expected": "0 reject, 1 accept, 5 accept, 6 reject; typical value 3 alone does not expose endpoint errors."
+    },
+    {
+      "week": 3,
+      "lesson": 1,
+      "kind": "ordinary lesson",
+      "intention": "Choose fixed and condition-controlled iteration; launch the applied-engine component",
+      "readings": [
+        {
+          "label": "Repeating work with loops → A fixed number of repetitions",
+          "href": "../../#loops/heading-a-fixed-number-of-repetitions"
+        },
+        {
+          "label": "Repeating work with loops → Repeat while a condition remains true",
+          "href": "../../#loops/heading-repeat-while-a-condition-remains-true"
+        },
+        {
+          "label": "Designing and testing solutions → Investigate: understand the problem",
+          "href": "../../#design/heading-investigate-understand-the-problem"
+        },
+        {
+          "label": "Designing and testing solutions → Test: choose evidence that can expose mistakes",
+          "href": "../../#design/heading-test-choose-evidence-that-can-expose-mistakes"
+        }
+      ],
+      "textbookUse": "Read loop purposes and test planning; connect one general loop contract to the issued local brief.",
+      "application": "Introduce the drone-engine project requirements and staged evidence. Use a stubbed command sequence first; distinguish formal issue from guided preparation.",
+      "check": "When is a while loop preferable to a fixed-count loop, and what must eventually change?",
+      "expected": "A condition determines continuation; an update or event must allow termination. Both need stated assumptions and boundary tests."
+    },
+    {
+      "week": 3,
+      "lesson": 2,
+      "kind": "ordinary lesson",
+      "intention": "Read an API contract before calling an external component",
+      "readings": [
+        {
+          "label": "Designing and testing solutions → Read and use a library API contract",
+          "href": "../../#design/heading-read-and-use-a-library-api-contract"
+        },
+        {
+          "label": "Repeating work with loops → Repeat while a condition remains true",
+          "href": "../../#loops/heading-repeat-while-a-condition-remains-true"
+        },
+        {
+          "label": "Values, types and operators → Match the type to the meaning",
+          "href": "../../#values/heading-match-the-type-to-the-meaning"
+        }
+      ],
+      "textbookUse": "Read the caller/contract/implementation distinction; identify arguments, response type and failure behaviour in teacher-supplied interface notes.",
+      "application": "Inspect an approved drone connection/SDK demonstration and a provided adapter; learners are not expected to author sockets, classes or functions not yet taught.",
+      "check": "Identify what an API contract must state before an illustrative send_command call can be tested.",
+      "expected": "Accepted commands/arguments, units, result/error behaviour and version. Do not infer success solely from sending a request."
+    },
+    {
+      "week": 3,
+      "lesson": 3,
+      "kind": "ordinary lesson",
+      "intention": "Trace a timed sequence and its stopping condition",
+      "readings": [
+        {
+          "label": "Repeating work with loops → Trace the running total",
+          "href": "../../#loops/heading-trace-the-running-total"
+        },
+        {
+          "label": "Repeating work with loops → Repeat while a condition remains true",
+          "href": "../../#loops/heading-repeat-while-a-condition-remains-true"
+        },
+        {
+          "label": "Repeating work with loops → From algorithm to implementation",
+          "href": "../../#loops/heading-from-algorithm-to-implementation"
+        }
+      ],
+      "textbookUse": "Use the running-total trace and pre-test loop explanation; predict each iteration before observing it.",
+      "application": "Run the approved staged drone or simulator sequence through teacher-provided controls; record planned/observed events without importing later modular-design demands.",
+      "check": "count=1; while count<=3 outputs count then increments it. List outputs and final count.",
+      "expected": "Outputs 1,2,3; final count 4; the last false condition check is not another body execution."
+    },
+    {
+      "week": 3,
+      "lesson": 4,
+      "kind": "ordinary lesson",
+      "intention": "Diagnose a loop boundary using expected and actual state",
+      "readings": [
+        {
+          "label": "Repeating work with loops → Trace the running total",
+          "href": "../../#loops/heading-trace-the-running-total"
+        },
+        {
+          "label": "Repeating work with loops → Test zero, one and several iterations",
+          "href": "../../#loops/heading-test-zero-one-and-several-iterations"
+        },
+        {
+          "label": "Designing and testing solutions → Debug: isolate the first incorrect state",
+          "href": "../../#design/heading-debug-isolate-the-first-incorrect-state"
+        }
+      ],
+      "textbookUse": "Compare zero/one/several-iteration reasoning with the standard trace; isolate the first mismatch.",
+      "application": "Use a synthetic countdown/battery log; distinguish observed values from a hypothesis about equipment behaviour.",
+      "check": "A condition-controlled loop starts with its condition false. How many times does its body run?",
+      "expected": "Zero for a pre-test loop; justify from the first check, not from the intended number of commands."
+    },
+    {
+      "week": 4,
+      "lesson": 1,
+      "kind": "ordinary lesson",
+      "intention": "Use one-dimensional indexing and bounds correctly",
+      "readings": [
+        {
+          "label": "Working with one-dimensional arrays → An array idea, a Python implementation",
+          "href": "../../#arrays/heading-an-array-idea-a-python-implementation"
+        },
+        {
+          "label": "Working with one-dimensional arrays → Load and traverse",
+          "href": "../../#arrays/heading-load-and-traverse"
+        },
+        {
+          "label": "Working with one-dimensional arrays → Check edge cases",
+          "href": "../../#arrays/heading-check-edge-cases"
+        }
+      ],
+      "textbookUse": "Read the array idea and traversal sections; use a scalar/string list rather than nested coordinate lists.",
+      "application": "Represent a route as one-dimensional command tokens or scalar distances. State separately how an adapter interprets each item.",
+      "check": "For ['A','B','C'], give the first/last valid index and what happens at index 3.",
+      "expected": "0 and 2; index 3 is outside the list. A list of coordinate lists would introduce nested data, not simply a 1D route."
+    },
+    {
+      "week": 4,
+      "lesson": 2,
+      "kind": "ordinary lesson",
+      "intention": "Traverse and update a list without confusing value and location",
+      "readings": [
+        {
+          "label": "Working with one-dimensional arrays → Load and traverse",
+          "href": "../../#arrays/heading-load-and-traverse"
+        },
+        {
+          "label": "Working with one-dimensional arrays → Remember the location of the best value",
+          "href": "../../#arrays/heading-remember-the-location-of-the-best-value"
+        },
+        {
+          "label": "Working with one-dimensional arrays → Translate the standard algorithms",
+          "href": "../../#arrays/heading-translate-the-standard-algorithms"
+        }
+      ],
+      "textbookUse": "Trace a traversal and retained index; distinguish existing array algorithms from extra list-method/API practice.",
+      "application": "Use supplied command-token lists to practise insertion/removal on paper and in Python; linear matching is a local extension, not a new Year 11 assessment requirement by assumption.",
+      "check": "Find the first 'B' in ['A','B','B']; give a documented result when no match exists.",
+      "expected": "First index 1; choose a consistent not-found sentinel. Explain which index changes during traversal and preserve duplicates."
+    },
+    {
+      "week": 4,
+      "lesson": 3,
+      "kind": "ordinary lesson",
+      "intention": "Apply an ordered route list and verify bounds",
+      "readings": [
+        {
+          "label": "Working with one-dimensional arrays → Load and traverse",
+          "href": "../../#arrays/heading-load-and-traverse"
+        },
+        {
+          "label": "Working with one-dimensional arrays → Check edge cases",
+          "href": "../../#arrays/heading-check-edge-cases"
+        },
+        {
+          "label": "Designing and testing solutions → Test: choose evidence that can expose mistakes",
+          "href": "../../#design/heading-test-choose-evidence-that-can-expose-mistakes"
+        }
+      ],
+      "textbookUse": "Return to traversal and expected/actual testing; predict which token is read at each index.",
+      "application": "Apply the one-dimensional route to the approved drone/simulator adapter and retain the command/result record; equipment-specific procedures are in the companion pack.",
+      "check": "An index equals len(route). May route[index] be accessed? State a preventive condition.",
+      "expected": "No; valid indices stop at len(route)-1. Test index < len(route), with a defined policy for an empty route."
+    },
+    {
+      "week": 4,
+      "lesson": 4,
+      "kind": "ordinary lesson",
+      "intention": "Explain repeated values, empty input and an index fault",
+      "readings": [
+        {
+          "label": "Working with one-dimensional arrays → Remember the location of the best value",
+          "href": "../../#arrays/heading-remember-the-location-of-the-best-value"
+        },
+        {
+          "label": "Working with one-dimensional arrays → Check edge cases",
+          "href": "../../#arrays/heading-check-edge-cases"
+        },
+        {
+          "label": "Working with one-dimensional arrays → Practice and explain",
+          "href": "../../#arrays/heading-practice-and-explain"
+        },
+        {
+          "label": "Working with one-dimensional arrays → Practice and explain",
+          "href": "../../#arrays/heading-practice-and-explain"
+        }
+      ],
+      "textbookUse": "Attempt the existing first-maximum and negative-values questions before revealing answers.",
+      "application": "Dry-run route traversal and a deliberately invalid index; keep algorithm faults separate from hardware response failures.",
+      "check": "Why does a maximum initialised to zero fail for [-8,-3], and what should initialise it?",
+      "expected": "Zero is not in the data and is larger than both. Use an actual first element after checking non-empty input."
+    },
+    {
+      "week": 5,
+      "lesson": 1,
+      "kind": "ordinary lesson",
+      "intention": "Decompose responsibilities into functions with explicit interfaces",
+      "readings": [
+        {
+          "label": "Functions and scope → One task, one function",
+          "href": "../../#functions/heading-one-task-one-function"
+        },
+        {
+          "label": "Functions and scope → Return a result",
+          "href": "../../#functions/heading-return-a-result"
+        },
+        {
+          "label": "Designing and testing solutions → Use a structure chart and replace a stub",
+          "href": "../../#design/heading-use-a-structure-chart-and-replace-a-stub"
+        }
+      ],
+      "textbookUse": "Read one-task/one-function and the general structure-chart/stub example; do not adopt the chapter's Pygame assessment contract.",
+      "application": "Draw load_route, validate_route and execute_route responsibilities around the local engine; specify inputs/results and retained teacher infrastructure.",
+      "check": "What does a stub let you test, and what does it not prove?",
+      "expected": "It supplies a predictable interface result so callers can be developed; it does not prove the real input/hardware implementation works."
+    },
+    {
+      "week": 5,
+      "lesson": 2,
+      "kind": "ordinary lesson",
+      "intention": "Distinguish parameters, arguments and return values",
+      "readings": [
+        {
+          "label": "Functions and scope → Return a result",
+          "href": "../../#functions/heading-return-a-result"
+        },
+        {
+          "label": "Functions and scope → Test the part before the whole",
+          "href": "../../#functions/heading-test-the-part-before-the-whole"
+        },
+        {
+          "label": "Functions and scope → Practice and explain",
+          "href": "../../#functions/heading-practice-and-explain"
+        },
+        {
+          "label": "Functions and scope → Practice and explain",
+          "href": "../../#functions/heading-practice-and-explain"
+        }
+      ],
+      "textbookUse": "Answer the existing area/return questions and inspect a pure calculation before using a hardware-facing caller.",
+      "application": "Write a distance/time calculation and a supplied navigation-wrapper call. Define whether it returns a result or changes state.",
+      "check": "For def area(width,height) and area(5,2), identify parameters/arguments and the returned product.",
+      "expected": "width/height are parameter names; 5/2 are supplied arguments; return value 10 can be used by a caller rather than only printed."
+    },
+    {
+      "week": 5,
+      "lesson": 3,
+      "kind": "ordinary lesson",
+      "intention": "Separate local names from shared mutable state",
+      "readings": [
+        {
+          "label": "Functions and scope → Names belong to scopes",
+          "href": "../../#functions/heading-names-belong-to-scopes"
+        },
+        {
+          "label": "Functions and scope → Scope faults: trace the name before changing the code",
+          "href": "../../#functions/heading-scope-faults-trace-the-name-before-changing-the-code"
+        },
+        {
+          "label": "Functions and scope → Trace local and global names",
+          "href": "../../#functions/heading-trace-local-and-global-names"
+        },
+        {
+          "label": "Functions and scope → Practice and explain",
+          "href": "../../#functions/heading-practice-and-explain"
+        }
+      ],
+      "textbookUse": "Read scope examples; compare rebinding a local name with changing a passed mutable object.",
+      "application": "Refactor a navigation helper without hidden globals. Predict caller-visible effects before running a small list-mutation example.",
+      "check": "If a function assigns local x=9 while global x=2, what remains global? Does that settle how passed lists behave?",
+      "expected": "Global x remains 2 without global declaration. Mutable-object changes require separate reasoning; Python is not blanket 'pass by value'."
+    },
+    {
+      "week": 5,
+      "lesson": 4,
+      "kind": "ordinary lesson",
+      "intention": "Trace function calls and test a reusable calculation at its boundary",
+      "readings": [
+        {
+          "label": "Functions and scope → Test the part before the whole",
+          "href": "../../#functions/heading-test-the-part-before-the-whole"
+        },
+        {
+          "label": "Functions and scope → Check your reasoning, test the claim and retain the evidence",
+          "href": "../../#functions/heading-check-your-reasoning-test-the-claim-and-retain-the-evidence"
+        },
+        {
+          "label": "Functions and scope → Your practical task",
+          "href": "../../#functions/heading-your-practical-task"
+        }
+      ],
+      "textbookUse": "Attempt delivery_charge with the book's stated threshold, then explain a changed boundary independently.",
+      "application": "Use the same contract-testing method on a local engine helper; do not substitute flight success for a function-level expected result.",
+      "check": "For order totals 49.99,50,50.01, state the book task's returned charge.",
+      "expected": "5,0,0; correct inclusion at 50. Inputs/outputs stay separate from user prompting so the calculation can be tested."
+    },
+    {
+      "week": 6,
+      "lesson": 1,
+      "kind": "ordinary lesson",
+      "intention": "Distinguish persistent files and opening modes",
+      "readings": [
+        {
+          "label": "Text files and reliable input → A file outlives the program",
+          "href": "../../#files/heading-a-file-outlives-the-program"
+        },
+        {
+          "label": "Text files and reliable input → Choose the mode deliberately",
+          "href": "../../#files/heading-choose-the-mode-deliberately"
+        },
+        {
+          "label": "Text files and reliable input → Read, write and append: three different contracts",
+          "href": "../../#files/heading-read-write-and-append-three-different-contracts"
+        },
+        {
+          "label": "Text files and reliable input → Practice and explain",
+          "href": "../../#files/heading-practice-and-explain"
+        }
+      ],
+      "textbookUse": "Read r/w/a contracts and predict a second run's effect before touching practice files.",
+      "application": "Design a telemetry record with named fields and a timestamp convention; use synthetic values for initial practice.",
+      "check": "A file contains '7'. What differs when the next run writes '8' using w versus a?",
+      "expected": "w replaces existing contents; a preserves existing contents and appends, with delimiters/newlines handled deliberately."
+    },
+    {
+      "week": 6,
+      "lesson": 2,
+      "kind": "ordinary lesson",
+      "intention": "Read and validate sequential records",
+      "readings": [
+        {
+          "label": "Text files and reliable input → Accept only usable input",
+          "href": "../../#files/heading-accept-only-usable-input"
+        },
+        {
+          "label": "Text files and reliable input → Read records in order",
+          "href": "../../#files/heading-read-records-in-order"
+        },
+        {
+          "label": "Text files and reliable input → Your practical task",
+          "href": "../../#files/heading-your-practical-task"
+        }
+      ],
+      "textbookUse": "Complete the book's 2,0,5 file-total task, including an empty file, before a multi-field telemetry record.",
+      "application": "Parse a supplied small CSV-style dataset; distinguish the controlled split exercise from a general CSV parser and handle malformed records under an explicit policy.",
+      "check": "Predict total for 2,0,5 and an empty file; name a useful conversion-failure test.",
+      "expected": "7 and 0; e.g. 'three' cannot convert to int. A numeric but out-of-range value is a separate validation test."
+    },
+    {
+      "week": 6,
+      "lesson": 3,
+      "kind": "ordinary lesson",
+      "intention": "Log observations without inventing missing data",
+      "readings": [
+        {
+          "label": "Text files and reliable input → Choose the mode deliberately",
+          "href": "../../#files/heading-choose-the-mode-deliberately"
+        },
+        {
+          "label": "Text files and reliable input → Read records in order",
+          "href": "../../#files/heading-read-records-in-order"
+        },
+        {
+          "label": "Designing and testing solutions → Test: choose evidence that can expose mistakes",
+          "href": "../../#design/heading-test-choose-evidence-that-can-expose-mistakes"
+        }
+      ],
+      "textbookUse": "Return to append and record-validation explanations; predict the record count and expected fields.",
+      "application": "Add telemetry logging to the staged engine or simulator; label synthetic versus observed records and keep the raw log unchanged.",
+      "check": "A reading is missing. Should the logger replace it with zero and call it observed? Explain.",
+      "expected": "No. Use a stated missing-value/error policy; zero may be a genuine measurement and inventing it changes meaning."
+    },
+    {
+      "week": 6,
+      "lesson": 4,
+      "kind": "ordinary lesson",
+      "intention": "Handle a file failure and compare error categories",
+      "readings": [
+        {
+          "label": "Text files and reliable input → Accept only usable input",
+          "href": "../../#files/heading-accept-only-usable-input"
+        },
+        {
+          "label": "Designing and testing solutions → Classify, isolate, repair and retest Python errors",
+          "href": "../../#design/heading-classify-isolate-repair-and-retest-python-errors"
+        },
+        {
+          "label": "Designing and testing solutions → Compare a paper trace, debugger steps and output probes",
+          "href": "../../#design/heading-compare-a-paper-trace-debugger-steps-and-output-probes"
+        }
+      ],
+      "textbookUse": "Read targeted error isolation and the debugger/output-probe clinic; record actual observations separately from a paper prediction.",
+      "application": "Test missing file, malformed line and a deliberately wrong accumulator; retain failure, repair and retest evidence.",
+      "check": "Distinguish FileNotFoundError, ValueError converting 'three', and a wrong final sum that runs without exception.",
+      "expected": "Missing resource, unsuitable conversion, and logic error respectively; use targeted handling/trace evidence rather than a bare catch-all."
+    },
+    {
+      "week": 7,
+      "lesson": 1,
+      "kind": "ordinary lesson",
+      "intention": "Evaluate the applied engine against requirements and introduce the event loop",
+      "readings": [
+        {
+          "label": "Designing and testing solutions → Test: choose evidence that can expose mistakes",
+          "href": "../../#design/heading-test-choose-evidence-that-can-expose-mistakes"
+        },
+        {
+          "label": "Designing and testing solutions → Evaluate: judge the result against the brief",
+          "href": "../../#design/heading-evaluate-judge-the-result-against-the-brief"
+        },
+        {
+          "label": "Repeating work with loops → Repeat while a condition remains true",
+          "href": "../../#loops/heading-repeat-while-a-condition-remains-true"
+        }
+      ],
+      "textbookUse": "Use the general testing/evaluation sections, then the condition-controlled-loop explanation; ignore unrelated game FR IDs.",
+      "application": "Collect individual drone-engine evidence and remaining limitations. Introduce input→update→draw as a different repeated-processing context.",
+      "check": "Does a successful run once prove every requirement? Give one boundary/failure case to add.",
+      "expected": "No; test stated requirements with normal/boundary/invalid cases and actual evidence. Distinguish a demonstration from complete validation."
+    },
+    {
+      "week": 7,
+      "lesson": 2,
+      "kind": "ordinary lesson",
+      "intention": "Run a Pygame window and separate events from held input",
+      "readings": [
+        {
+          "label": "Repeating work with loops → Repeat while a condition remains true",
+          "href": "../../#loops/heading-repeat-while-a-condition-remains-true"
+        },
+        {
+          "label": "Functions and scope → One task, one function",
+          "href": "../../#functions/heading-one-task-one-function"
+        },
+        {
+          "label": "Practice resource",
+          "href": "../../pygame/index.html#y11-1"
+        }
+      ],
+      "textbookUse": "Use the Pygame preparation lesson's worked stage1_loop with the general loop explanation; it is ungraded teaching material.",
+      "application": "Run the approved practice display; predict motion before changing it; demonstrate Escape and window close without copying assessed game code.",
+      "check": "At 160 pixels/s for 250 ms, predict displacement; why is frame count not elapsed seconds?",
+      "expected": "40 pixels; 250 ms is 0.25 seconds and frames may take different times. Process events every frame."
+    },
+    {
+      "week": 7,
+      "lesson": 3,
+      "kind": "ordinary lesson",
+      "intention": "Apply selection and bounds to interactive movement",
+      "readings": [
+        {
+          "label": "Making decisions with selection → Combine conditions and choices",
+          "href": "../../#selection/heading-combine-conditions-and-choices"
+        },
+        {
+          "label": "Working with one-dimensional arrays → Check edge cases",
+          "href": "../../#arrays/heading-check-edge-cases"
+        },
+        {
+          "label": "Practice resource",
+          "href": "../../pygame/index.html#y11-2"
+        }
+      ],
+      "textbookUse": "Revisit conditions and boundary tests; use the supplied state infrastructure without requiring Year 11 authored classes/dictionaries.",
+      "application": "Adapt keyboard movement and a documented screen-bound rule in an unrelated mini-game, then test the edge and just-inside values.",
+      "check": "A player is at its maximum allowed x. What should an outward versus inward move do?",
+      "expected": "Outward move must remain legal under the stated rule; inward move may change x. Expected positions precede observation."
+    },
+    {
+      "week": 7,
+      "lesson": 4,
+      "kind": "ordinary lesson",
+      "intention": "Explain timing/debugging evidence and submit the first component",
+      "readings": [
+        {
+          "label": "Designing and testing solutions → Debug: isolate the first incorrect state",
+          "href": "../../#design/heading-debug-isolate-the-first-incorrect-state"
+        },
+        {
+          "label": "Designing and testing solutions → Evaluate: judge the result against the brief",
+          "href": "../../#design/heading-evaluate-judge-the-result-against-the-brief"
+        },
+        {
+          "label": "Text files and reliable input → Read records in order",
+          "href": "../../#files/heading-read-records-in-order"
+        }
+      ],
+      "textbookUse": "Use debugging and evaluation vocabulary to review the engine evidence; consult timing references before/after any controlled component only as allowed.",
+      "application": "Submit the local drone-engine component and telemetry explanation; compare active gameplay time with wall-clock pause in a separate practice trace.",
+      "check": "Can a high FPS value alone prove that keyboard response met a stated time limit?",
+      "expected": "No; measure actual response on the named setup and explain the observation method; state unresolved timing issues honestly."
+    },
+    {
+      "week": 8,
+      "lesson": 1,
+      "kind": "ordinary lesson",
+      "intention": "Choose test cases and classify faults before a sprint",
+      "readings": [
+        {
+          "label": "Designing and testing solutions → Test: choose evidence that can expose mistakes",
+          "href": "../../#design/heading-test-choose-evidence-that-can-expose-mistakes"
+        },
+        {
+          "label": "Designing and testing solutions → Classify, isolate, repair and retest Python errors",
+          "href": "../../#design/heading-classify-isolate-repair-and-retest-python-errors"
+        },
+        {
+          "label": "Designing and testing solutions → Compare a paper trace, debugger steps and output probes",
+          "href": "../../#design/heading-compare-a-paper-trace-debugger-steps-and-output-probes"
+        }
+      ],
+      "textbookUse": "Read the general test/error examples and predict a trace without a key.",
+      "application": "Prepare normal/boundary/invalid tests for an unrelated game mechanic, then perform one debugger observation and retain evidence.",
+      "check": "A counter resets inside a loop. Which observation first exposes the error and what regression cases follow?",
+      "expected": "The second pass loses earlier state; move initialisation before the loop and retest normal, empty and negative-data cases as applicable."
+    },
+    {
+      "week": 8,
+      "lesson": 2,
+      "kind": "ordinary lesson",
+      "intention": "Use collisions, lists and score updates in a small worked game",
+      "readings": [
+        {
+          "label": "Working with one-dimensional arrays → Load and traverse",
+          "href": "../../#arrays/heading-load-and-traverse"
+        },
+        {
+          "label": "Making decisions with selection → 4. Trace it yourself",
+          "href": "../../#selection/heading-trace-it-yourself"
+        },
+        {
+          "label": "Practice resource",
+          "href": "../../pygame/index.html#y11-3"
+        }
+      ],
+      "textbookUse": "Work through the supplied station collection lab; predict repeat contact and edge-touch behaviour.",
+      "application": "Complete a faded rule in the unrelated practice game; separate drawing from scoring and keep fixtures independent of the hackathon brief.",
+      "check": "Under the supplied overlap rule, should touching edges score? Should repeated contact score twice?",
+      "expected": "No edge-only collision; an already-collected station adds no second score. State the rule and show normal/boundary tests."
+    },
+    {
+      "week": 8,
+      "lesson": 3,
+      "kind": "ordinary lesson",
+      "intention": "Complete a bounded independent prototype and file task",
+      "readings": [
+        {
+          "label": "Text files and reliable input → Choose the mode deliberately",
+          "href": "../../#files/heading-choose-the-mode-deliberately"
+        },
+        {
+          "label": "Designing and testing solutions → Design: divide the solution into modules",
+          "href": "../../#design/heading-design-divide-the-solution-into-modules"
+        },
+        {
+          "label": "Practice resource",
+          "href": "../../pygame/index.html#y11-4"
+        }
+      ],
+      "textbookUse": "Consult file-mode/design references before the timed practice; retain an independent attempt before viewing worked solutions.",
+      "application": "Run the 50-minute micro-game sprint with only taught mechanics and provided infrastructure; test append-once results and missing history.",
+      "check": "What should happen to history when the result screen is drawn twice for one completed game?",
+      "expected": "One final result appended, not one per draw; missing/malformed history follows its documented policy. Explain the state transition that owns saving."
+    },
+    {
+      "week": 8,
+      "lesson": 4,
+      "kind": "ordinary lesson",
+      "intention": "Review sources, responsibilities and readiness before the event",
+      "readings": [
+        {
+          "label": "Software, ownership and licensing → Read the licence before reuse",
+          "href": "../../#software-responsibility/heading-read-the-licence-before-reuse"
+        },
+        {
+          "label": "Software, ownership and licensing → Keep a source record",
+          "href": "../../#software-responsibility/heading-keep-a-source-record"
+        },
+        {
+          "label": "Designing and testing solutions → Evaluate: judge the result against the brief",
+          "href": "../../#design/heading-evaluate-judge-the-result-against-the-brief"
+        }
+      ],
+      "textbookUse": "Inspect licence/source-record guidance and use the evaluation section to identify supported versus independent work.",
+      "application": "Moderate practice evidence, agree team roles and run an individual changed-rule check; finalise the event plan and permitted support.",
+      "check": "Does crediting a source automatically give permission to copy it, or prove you authored its logic?",
+      "expected": "No; licence permission and acknowledgement are distinct, and independent understanding needs its own evidence."
+    },
+    {
+      "week": 9,
+      "lesson": 1,
+      "kind": "event checkpoint",
+      "intention": "Interpret the revealed brief and define a tested scope",
+      "readings": [
+        {
+          "label": "Designing and testing solutions → Investigate: understand the problem",
+          "href": "../../#design/heading-investigate-understand-the-problem"
+        },
+        {
+          "label": "Designing and testing solutions → Build and revise a Gantt schedule",
+          "href": "../../#design/heading-build-and-revise-a-gantt-schedule"
+        },
+        {
+          "label": "Designing and testing solutions → Use a structure chart and replace a stub",
+          "href": "../../#design/heading-use-a-structure-chart-and-replace-a-stub"
+        }
+      ],
+      "textbookUse": "At the event's requirements/design checkpoint, consult the general problem definition, Gantt and module-design sections as the event rules permit.",
+      "application": "Day 1 brief reveal: record shared requirements, data design, responsibilities and expected tests for the local hackathon. This row is a checkpoint, not an extra 55-minute period.",
+      "check": "Name one required behaviour, one excluded extra and one test that would distinguish a failure.",
+      "expected": "Answers refer to the actual issued brief and an observable result; do not import the book's unrelated default game rules."
+    },
+    {
+      "week": 9,
+      "lesson": 2,
+      "kind": "event checkpoint",
+      "intention": "Implement a small working slice and retain individual evidence",
+      "readings": [
+        {
+          "label": "Functions and scope → One task, one function",
+          "href": "../../#functions/heading-one-task-one-function"
+        },
+        {
+          "label": "Working with one-dimensional arrays → Load and traverse",
+          "href": "../../#arrays/heading-load-and-traverse"
+        },
+        {
+          "label": "Designing and testing solutions → Develop: build a small working part",
+          "href": "../../#design/heading-develop-build-a-small-working-part"
+        }
+      ],
+      "textbookUse": "Use targeted function/traversal/development references during the permitted build checkpoint.",
+      "application": "Day 1 build: integrate a small playable slice and retain individual contributions, versions, issues and assistance received.",
+      "check": "Can each team member explain one changed function and predict a new input's result independently?",
+      "expected": "Evidence names the actual contribution, contract and changed-case prediction; team membership alone does not establish mastery."
+    },
+    {
+      "week": 9,
+      "lesson": 3,
+      "kind": "event checkpoint",
+      "intention": "Integrate mechanics and run meaningful tests",
+      "readings": [
+        {
+          "label": "Designing and testing solutions → Test: choose evidence that can expose mistakes",
+          "href": "../../#design/heading-test-choose-evidence-that-can-expose-mistakes"
+        },
+        {
+          "label": "Designing and testing solutions → Debug: isolate the first incorrect state",
+          "href": "../../#design/heading-debug-isolate-the-first-incorrect-state"
+        },
+        {
+          "label": "Text files and reliable input → Choose the mode deliberately",
+          "href": "../../#files/heading-choose-the-mode-deliberately"
+        }
+      ],
+      "textbookUse": "Return to general testing/debugging/file guidance during the event's integration/QA checkpoint.",
+      "application": "Day 2 integration: run planned tests, isolate one real failure and retest earlier behaviour; retain actual results and unfinished work.",
+      "check": "What must a useful failed-test record contain beyond 'did not work'?",
+      "expected": "Initial state/input, independent expected result, actual result, build/version, cause/repair and retest/regression outcome."
+    },
+    {
+      "week": 9,
+      "lesson": 4,
+      "kind": "event checkpoint",
+      "intention": "Defend and evaluate the solution using evidence",
+      "readings": [
+        {
+          "label": "Designing and testing solutions → Evaluate: judge the result against the brief",
+          "href": "../../#design/heading-evaluate-judge-the-result-against-the-brief"
+        },
+        {
+          "label": "Software, ownership and licensing → Keep a source record",
+          "href": "../../#software-responsibility/heading-keep-a-source-record"
+        }
+      ],
+      "textbookUse": "Before the pitch and after code lock as permitted, use evaluation/source-record criteria; do not edit locked work.",
+      "application": "Day 2 pitch/demo/code defence: link decisions to requirements, identify individual work and limitations. Event hours are recorded separately from the four checkpoints.",
+      "check": "Does a five-minute team pitch prove 100% individual mastery? What extra evidence is needed?",
+      "expected": "No; individual explanation/change task, contribution/version records and appropriate teacher authentication complement the team product."
+    },
+    {
+      "week": 10,
+      "lesson": 1,
+      "kind": "controlled practical",
+      "intention": "Demonstrate individual programming skills under controlled conditions",
+      "readings": [
+        {
+          "label": "Unit 1 consolidation → Station B: algorithms in two representations",
+          "href": "../../#consolidation/heading-station-b-algorithms-in-two-representations"
+        },
+        {
+          "label": "Unit 1 consolidation → Station C: debug and prove the correction",
+          "href": "../../#consolidation/heading-station-c-debug-and-prove-the-correction"
+        },
+        {
+          "label": "Text files and reliable input → Read records in order",
+          "href": "../../#files/heading-read-records-in-order"
+        }
+      ],
+      "textbookUse": "Preparation links only: use before the test; revisit after collection, not during closed-book conditions unless expressly allowed.",
+      "application": "Task 2: 50-minute programming practical plus five minutes setup/collection; assess only taught and independently practised operations.",
+      "check": "After collection, identify one submitted trace/test decision and an assumption that affected it.",
+      "expected": "Explanation matches the submitted version; original work stays distinct from later correction. No textbook access is assumed during the test."
+    },
+    {
+      "week": 10,
+      "lesson": 2,
+      "kind": "ordinary lesson",
+      "intention": "Explain network resources and choose transmission media",
+      "readings": [
+        {
+          "label": "Network foundations → A shared set of rules",
+          "href": "../../#networks/heading-a-shared-set-of-rules"
+        },
+        {
+          "label": "Addresses, devices and media → Choose a medium for the setting",
+          "href": "../../#addressing/heading-choose-a-medium-for-the-setting"
+        }
+      ],
+      "textbookUse": "Use the shared-rules introduction and media comparisons during the post-test debrief/new-network lesson.",
+      "application": "Inspect the pod's wired/wireless/fibre paths and relate each to distance/capacity/interference needs, rather than product names.",
+      "check": "Give one reason to choose fibre between buildings and one reason for copper at a desk.",
+      "expected": "Justify against actual link requirements; distance, capacity and electrical interference differ by medium and installation."
+    },
+    {
+      "week": 10,
+      "lesson": 3,
+      "kind": "ordinary lesson",
+      "intention": "Distinguish nominal capacity, achieved rate and impairments",
+      "readings": [
+        {
+          "label": "Addresses, devices and media → Choose a medium for the setting",
+          "href": "../../#addressing/heading-choose-a-medium-for-the-setting"
+        },
+        {
+          "label": "Designing and protecting a network → Find the bottleneck",
+          "href": "../../#network-design/heading-find-the-bottleneck"
+        },
+        {
+          "label": "Network scenarios and review → Practice and explain",
+          "href": "../../#network-review/heading-practice-and-explain"
+        }
+      ],
+      "textbookUse": "Read medium/bottleneck reasoning and attempt the existing idealised transfer calculation.",
+      "application": "Compare supplied synthetic throughput results with a named local observation if available; discuss attenuation, EMI and crosstalk through companion evidence.",
+      "check": "In an ideal transfer, how long is 80 megabits over 20 megabits/s? Does that guarantee real elapsed time?",
+      "expected": "4 seconds ideally; real throughput/overhead/contention/latency may differ. Use bits and seconds consistently."
+    },
+    {
+      "week": 10,
+      "lesson": 4,
+      "kind": "ordinary lesson",
+      "intention": "Interpret a physical-link demonstration without treating it as complete diagnosis",
+      "readings": [
+        {
+          "label": "Addresses, devices and media → Choose a medium for the setting",
+          "href": "../../#addressing/heading-choose-a-medium-for-the-setting"
+        },
+        {
+          "label": "Network scenarios and review → Use a repeatable explanation",
+          "href": "../../#network-review/heading-use-a-repeatable-explanation"
+        }
+      ],
+      "textbookUse": "Read medium-selection and repeatable-explanation sections before the approved physical demonstration.",
+      "application": "Observe the teacher-managed fibre demonstration using the companion procedure; distinguish visible continuity evidence from measured performance or a full certification test.",
+      "check": "Does a continuity observation prove a link meets all throughput and reliability requirements?",
+      "expected": "No; state what was observed and what further measurement/specification is needed. Do not invent test results."
+    },
+    {
+      "week": 11,
+      "lesson": 1,
+      "kind": "ordinary lesson",
+      "intention": "Relate cable layout and pair conventions to a declared requirement",
+      "readings": [
+        {
+          "label": "Addresses, devices and media → Choose a medium for the setting",
+          "href": "../../#addressing/heading-choose-a-medium-for-the-setting"
+        },
+        {
+          "label": "Designing and protecting a network → Scale and logical diagrams",
+          "href": "../../#network-design/heading-scale-and-logical-diagrams"
+        }
+      ],
+      "textbookUse": "Use general media/logical-versus-physical distinctions; consult the separate labelled pinout reference for hands-on detail.",
+      "application": "Compare supplied T568A/B diagrams and the required straight-through mapping before the cabling lab; equipment details are enrichment, not a hidden textbook prerequisite.",
+      "check": "For a straight-through teaching fixture, what is the expected numbered-pin mapping?",
+      "expected": "1→1 through 8→8 under the specified fixture; a correct drawing must label both ends and its chosen convention."
+    },
+    {
+      "week": 11,
+      "lesson": 2,
+      "kind": "ordinary lesson",
+      "intention": "Document a physical build and distinguish it from a diagram",
+      "readings": [
+        {
+          "label": "Addresses, devices and media → Choose a medium for the setting",
+          "href": "../../#addressing/heading-choose-a-medium-for-the-setting"
+        },
+        {
+          "label": "Designing and testing solutions → Test: choose evidence that can expose mistakes",
+          "href": "../../#design/heading-test-choose-evidence-that-can-expose-mistakes"
+        }
+      ],
+      "textbookUse": "Revisit requirements and expected/actual test planning before constructing a cable.",
+      "application": "Measure/terminate the approved Cat6 practice cable using the companion procedure; record individual work, inspection and subsequent tester result.",
+      "check": "What evidence distinguishes 'I planned the cable' from 'I built and tested it'?",
+      "expected": "A labelled plan plus actual build identity and observed test result; a simulated result is not evidence of physical termination."
+    },
+    {
+      "week": 11,
+      "lesson": 3,
+      "kind": "ordinary lesson",
+      "intention": "Trace connections through patching and switching components",
+      "readings": [
+        {
+          "label": "Addresses, devices and media → Choose a device for its function",
+          "href": "../../#addressing/heading-choose-a-device-for-its-function"
+        },
+        {
+          "label": "Designing and protecting a network → Scale and logical diagrams",
+          "href": "../../#network-design/heading-scale-and-logical-diagrams"
+        }
+      ],
+      "textbookUse": "Read device roles and logical diagrams; annotate the data path independently of cabinet layout.",
+      "application": "Use the pod patch-panel/punch-down activity as the local application; draw host→panel→switch path and identify connection points using the companion guide.",
+      "check": "Does a patch panel perform the switch's frame-forwarding role?",
+      "expected": "No; distinguish passive termination/patching from active forwarding. Trace each link rather than naming the rack as one device."
+    },
+    {
+      "week": 11,
+      "lesson": 4,
+      "kind": "ordinary lesson",
+      "intention": "Diagnose evidence from a cable test and plan a retest",
+      "readings": [
+        {
+          "label": "Network scenarios and review → Use a repeatable explanation",
+          "href": "../../#network-review/heading-use-a-repeatable-explanation"
+        },
+        {
+          "label": "Designing and testing solutions → Debug: isolate the first incorrect state",
+          "href": "../../#design/heading-debug-isolate-the-first-incorrect-state"
+        }
+      ],
+      "textbookUse": "Use the explain/observe/hypothesise/test method; consult the companion tester fixture and actual instrument guide.",
+      "application": "Classify synthetic maps: all pins straight; pin 3 open; pins 1/3 and 2/6 exchanged. Then compare with an observed local test where available.",
+      "check": "For a required straight-through cable, classify 3→open and 1→3,2→6,3→1,6→2 mappings.",
+      "expected": "Open conductor versus incorrect mapping for the stated requirement; identify affected endpoints and retest after repair. Do not infer every fault from one LED pattern."
+    },
+    {
+      "week": 12,
+      "lesson": 1,
+      "kind": "ordinary lesson",
+      "intention": "Explain topology and network-layer responsibilities",
+      "readings": [
+        {
+          "label": "Network foundations → Four layers, four responsibilities",
+          "href": "../../#networks/heading-four-layers-four-responsibilities"
+        },
+        {
+          "label": "Designing and protecting a network → Scale and logical diagrams",
+          "href": "../../#network-design/heading-scale-and-logical-diagrams"
+        }
+      ],
+      "textbookUse": "Build the four-layer stack from the general chapter; read the separate seven-layer comparison only as a labelled extension.",
+      "application": "Annotate star/mesh/bus/hybrid diagrams and compare logical versus physical topology; avoid making model names substitute for functions.",
+      "check": "Place HTTP, TCP, IP and Ethernet in the four-layer model and explain a responsibility for each.",
+      "expected": "Application service, transport delivery, internet routing/addressing and link frame delivery. Relate model labels to functions."
+    },
+    {
+      "week": 12,
+      "lesson": 2,
+      "kind": "ordinary lesson",
+      "intention": "Distinguish local link operation from end-to-end service",
+      "readings": [
+        {
+          "label": "Addresses, devices and media → Choose a device for its function",
+          "href": "../../#addressing/heading-choose-a-device-for-its-function"
+        },
+        {
+          "label": "Network foundations → Encapsulation and diagnostic tools",
+          "href": "../../#networks/heading-encapsulation-and-diagnostic-tools"
+        },
+        {
+          "label": "Network scenarios and review → Practice and explain",
+          "href": "../../#network-review/heading-practice-and-explain"
+        }
+      ],
+      "textbookUse": "Read device and diagnostic explanations before checking links.",
+      "application": "Interconnect approved pod components through copper/fibre adapters; record physical/link observations before testing applications.",
+      "check": "A ping succeeds. Does that prove the website works? Give one further relevant check.",
+      "expected": "No; reachability/ICMP evidence does not establish application or name-service behaviour. Test the required service under the stated scope."
+    },
+    {
+      "week": 12,
+      "lesson": 3,
+      "kind": "ordinary lesson",
+      "intention": "Use network and host portions rather than address-class guesses",
+      "readings": [
+        {
+          "label": "Addresses, devices and media → Addresses and the local network",
+          "href": "../../#addressing/heading-addresses-and-the-local-network"
+        },
+        {
+          "label": "Numbers and characters in a computer → Place value changes with the base",
+          "href": "../../#representation/heading-place-value-changes-with-the-base"
+        },
+        {
+          "label": "Numbers and characters in a computer → Hexadecimal is a compact notation",
+          "href": "../../#representation/heading-hexadecimal-is-a-compact-notation"
+        },
+        {
+          "label": "Addresses, devices and media → Practice and explain",
+          "href": "../../#addressing/heading-practice-and-explain"
+        }
+      ],
+      "textbookUse": "Read local-network comparison and retrieve binary/hex place values; compare addresses using the stated mask.",
+      "application": "Use a small /24 addressing table for the pod; historical class labels are background, not the rule for interpreting an explicit prefix.",
+      "check": "Are 192.168.20.10 and 192.168.21.10 local under 255.255.255.0? Why?",
+      "expected": "No; their /24 network portions differ. Use the actual mask/prefix, not only the first address octet."
+    },
+    {
+      "week": 12,
+      "lesson": 4,
+      "kind": "ordinary lesson",
+      "intention": "Use addressing and diagnostic observations to test a hypothesis",
+      "readings": [
+        {
+          "label": "Addresses, devices and media → Addresses and the local network",
+          "href": "../../#addressing/heading-addresses-and-the-local-network"
+        },
+        {
+          "label": "Addresses, devices and media → Gateways: next-hop routing versus protocol translation",
+          "href": "../../#addressing/heading-gateways-next-hop-routing-versus-protocol-translation"
+        },
+        {
+          "label": "Network foundations → Encapsulation and diagnostic tools",
+          "href": "../../#networks/heading-encapsulation-and-diagnostic-tools"
+        }
+      ],
+      "textbookUse": "Read next-hop and diagnostic explanations before using approved lab commands.",
+      "application": "Configure the isolated practice interfaces under the companion instructions; inspect a supplied ICMP trace and then an authorised local observation.",
+      "check": "A host is 192.168.40.12/24 and its gateway is 192.168.41.1. What should be checked first?",
+      "expected": "Gateway is outside the host's ordinary local /24; verify intended addressing/interface configuration before inferring an external outage."
+    },
+    {
+      "week": 13,
+      "lesson": 1,
+      "kind": "ordinary lesson",
+      "intention": "Choose a device by its network function",
+      "readings": [
+        {
+          "label": "Addresses, devices and media → Choose a device for its function",
+          "href": "../../#addressing/heading-choose-a-device-for-its-function"
+        },
+        {
+          "label": "Designing and protecting a network → Scale and logical diagrams",
+          "href": "../../#network-design/heading-scale-and-logical-diagrams"
+        }
+      ],
+      "textbookUse": "Read NIC/switch/router/AP functions and label a path in the logical diagram.",
+      "application": "Identify components in the pod and map them to host connectivity, LAN forwarding, routing and wireless access.",
+      "check": "Which device connects wireless clients to a wired LAN, and which connects different networks?",
+      "expected": "AP for wireless LAN access; router/L3 function for network boundaries. Brand names do not establish function."
+    },
+    {
+      "week": 13,
+      "lesson": 2,
+      "kind": "ordinary lesson",
+      "intention": "Explain switch forwarding using observed or supplied evidence",
+      "readings": [
+        {
+          "label": "Addresses, devices and media → Choose a device for its function",
+          "href": "../../#addressing/heading-choose-a-device-for-its-function"
+        },
+        {
+          "label": "Network foundations → Encapsulation and diagnostic tools",
+          "href": "../../#networks/heading-encapsulation-and-diagnostic-tools"
+        }
+      ],
+      "textbookUse": "Use the general link-device/encapsulation explanation; a companion MAC-table fixture supplies configuration detail.",
+      "application": "Inspect a supported switch MAC table and a host-to-port case using the actual model's approved interface or synthetic fixture.",
+      "check": "A table maps MAC A to port 2 and MAC B to port 5. Where should a known-unicast frame for B be forwarded?",
+      "expected": "Port 5 under the stated simplified fixture; explain destination lookup and distinguish learning from the source address."
+    },
+    {
+      "week": 13,
+      "lesson": 3,
+      "kind": "ordinary lesson",
+      "intention": "Explain host configuration, gateway and dynamic address allocation",
+      "readings": [
+        {
+          "label": "Addresses, devices and media → Addresses and the local network",
+          "href": "../../#addressing/heading-addresses-and-the-local-network"
+        },
+        {
+          "label": "Addresses, devices and media → Gateways: next-hop routing versus protocol translation",
+          "href": "../../#addressing/heading-gateways-next-hop-routing-versus-protocol-translation"
+        },
+        {
+          "label": "Designing and protecting a network → Protect against unauthorised access",
+          "href": "../../#network-design/heading-protect-against-unauthorised-access"
+        }
+      ],
+      "textbookUse": "Read host/mask/gateway responsibilities; use the companion lease/configuration example for DHCP operations.",
+      "application": "Inspect/configure an approved isolated router address pool and gateway; check reserved/network/broadcast addresses and unique leases.",
+      "check": "Why must a lease pool avoid the fixed gateway and already-reserved interface addresses?",
+      "expected": "Avoid duplicate/conflicting allocations; addresses/mask/gateway have distinct roles. State intended network and actual device capabilities."
+    },
+    {
+      "week": 13,
+      "lesson": 4,
+      "kind": "ordinary lesson",
+      "intention": "Interpret a lease exchange as evidence, not a memorised label list",
+      "readings": [
+        {
+          "label": "Network foundations → Protocols in a familiar journey",
+          "href": "../../#networks/heading-protocols-in-a-familiar-journey"
+        },
+        {
+          "label": "Network foundations → Encapsulation and diagnostic tools",
+          "href": "../../#networks/heading-encapsulation-and-diagnostic-tools"
+        },
+        {
+          "label": "Addresses, devices and media → Addresses and the local network",
+          "href": "../../#addressing/heading-addresses-and-the-local-network"
+        }
+      ],
+      "textbookUse": "Connect application messages, transport and addressing; consult the companion DHCP message-order fixture.",
+      "application": "Read a supplied Discover→Offer→Request→Acknowledgement trace, then compare a real permitted capture if available.",
+      "check": "Does an observed DHCP acknowledgement prove that DNS and the remote website work?",
+      "expected": "No; it supports a lease/configuration observation only. Test name resolution and required service separately."
+    },
+    {
+      "week": 14,
+      "lesson": 1,
+      "kind": "controlled theory",
+      "intention": "Demonstrate networking knowledge under controlled conditions",
+      "readings": [
+        {
+          "label": "Network scenarios and review → Use a repeatable explanation",
+          "href": "../../#network-review/heading-use-a-repeatable-explanation"
+        },
+        {
+          "label": "Network scenarios and review → Review task: the library upgrade",
+          "href": "../../#network-review/heading-review-task-the-library-upgrade"
+        },
+        {
+          "label": "Unit 1 exam preparation → Use the practice paper",
+          "href": "../../#exam-preparation/heading-use-the-practice-paper"
+        }
+      ],
+      "textbookUse": "Use these references before the theory test and after collection; no textbook use during closed-book conditions.",
+      "application": "Task 3: 55-minute networking theory test; only prior taught/practised content, not the new wireless material in subsequent lessons.",
+      "check": "After collection, identify one response that needed a scenario-specific causal explanation rather than a device name.",
+      "expected": "Original answer and a missing/present fact-to-reasoning link are identified; later corrections remain separate."
+    },
+    {
+      "week": 14,
+      "lesson": 2,
+      "kind": "ordinary lesson",
+      "intention": "Explain wireless performance using requirements and evidence",
+      "readings": [
+        {
+          "label": "Addresses, devices and media → Choose a medium for the setting",
+          "href": "../../#addressing/heading-choose-a-medium-for-the-setting"
+        },
+        {
+          "label": "Designing and protecting a network → Find the bottleneck",
+          "href": "../../#network-design/heading-find-the-bottleneck"
+        },
+        {
+          "label": "Network scenarios and review → Use a repeatable explanation",
+          "href": "../../#network-review/heading-use-a-repeatable-explanation"
+        }
+      ],
+      "textbookUse": "Use general wireless/media/bottleneck reasoning; the companion reference supplies standards/band/channel details.",
+      "application": "Compare supplied channel/interference scenarios and observed results where available; distinguish radio band from an automatic speed guarantee.",
+      "check": "Why can changing channel/band improve one problem but fail to improve a congested internet uplink?",
+      "expected": "Different bottlenecks act at different path segments. Link the change to a measured/hypothesised constraint and a distinguishing test."
+    },
+    {
+      "week": 14,
+      "lesson": 3,
+      "kind": "ordinary lesson",
+      "intention": "Map identity, access and wireless controls to a precise configuration",
+      "readings": [
+        {
+          "label": "Designing and protecting a network → Protect against unauthorised access",
+          "href": "../../#network-design/heading-protect-against-unauthorised-access"
+        },
+        {
+          "label": "Designing and protecting a network → Practice and explain",
+          "href": "../../#network-design/heading-practice-and-explain"
+        },
+        {
+          "label": "Software, ownership and licensing → Keep a source record",
+          "href": "../../#software-responsibility/heading-keep-a-source-record"
+        }
+      ],
+      "textbookUse": "Read unauthorised-access protections and shared-admin-account reasoning; inspect configuration terminology in the companion guide.",
+      "application": "Configure an approved isolated SSID/access policy if supported; distinguish passphrase/personal mode from enterprise identity arrangements.",
+      "check": "Is 'WPA enterprise passkey' enough to describe authentication? What facts must a configuration record state?",
+      "expected": "No; specify actual supported mode, identity/factor arrangement and access policy. Do not assume a router supports every feature named in the master."
+    },
+    {
+      "week": 14,
+      "lesson": 4,
+      "kind": "ordinary lesson",
+      "intention": "Interpret signal measurements without overclaiming their meaning",
+      "readings": [
+        {
+          "label": "Network scenarios and review → Use a repeatable explanation",
+          "href": "../../#network-review/heading-use-a-repeatable-explanation"
+        },
+        {
+          "label": "Designing and protecting a network → Find the bottleneck",
+          "href": "../../#network-design/heading-find-the-bottleneck"
+        }
+      ],
+      "textbookUse": "Use the general evidence→hypothesis→next-check method; the companion signal fixture defines units and measurement conditions.",
+      "application": "Read a supplied signal/noise case and compare authorised analyser observations where available; retain location/device/time and limitations.",
+      "check": "Two samples show signal -50 dBm/noise -90 dBm and signal -75 dBm/noise -85 dBm. Compare their SNR.",
+      "expected": "40 dB versus 10 dB; first has a larger signal/noise margin in this fixture. It does not alone prove application throughput."
+    },
+    {
+      "week": 15,
+      "lesson": 1,
+      "kind": "ordinary lesson",
+      "intention": "Diagnose programming and networking weaknesses from evidence",
+      "readings": [
+        {
+          "label": "Unit 1 consolidation → Diagnose before choosing practice",
+          "href": "../../#consolidation/heading-diagnose-before-choosing-practice"
+        },
+        {
+          "label": "Unit 1 consolidation → Station A: Boolean expressions and types",
+          "href": "../../#consolidation/heading-station-a-boolean-expressions-and-types"
+        },
+        {
+          "label": "Unit 1 consolidation → Station E: network explanation and diagrams",
+          "href": "../../#consolidation/heading-station-e-network-explanation-and-diagrams"
+        }
+      ],
+      "textbookUse": "Complete a short selection of the existing diagnostic/stations before reading answers.",
+      "application": "Use actual individual project/test evidence to select one programming and one networking repair; hardware context does not replace the general explanation.",
+      "check": "State one precise weak skill, the evidence for it and a fresh task that would demonstrate improvement.",
+      "expected": "Use a trace/query/range/causal explanation, not confidence or a generic 'revise everything' label."
+    },
+    {
+      "week": 15,
+      "lesson": 2,
+      "kind": "ordinary lesson",
+      "intention": "Translate unfamiliar requirements into an algorithm and explanation",
+      "readings": [
+        {
+          "label": "Unit 1 consolidation → Station B: algorithms in two representations",
+          "href": "../../#consolidation/heading-station-b-algorithms-in-two-representations"
+        },
+        {
+          "label": "Unit 1 exam preparation → Explain a trace rather than memorise output",
+          "href": "../../#exam-preparation/heading-explain-a-trace-rather-than-memorise-output"
+        },
+        {
+          "label": "Designing and testing solutions → Use a structure chart and replace a stub",
+          "href": "../../#design/heading-use-a-structure-chart-and-replace-a-stub"
+        }
+      ],
+      "textbookUse": "Use algorithms-in-two-representations and explain-the-trace sections; attempt an unfamiliar changed prompt before checking guidance.",
+      "application": "Work through a client scenario on the board, draft pseudocode/structure chart and compare valid alternative solutions.",
+      "check": "Why is a correct final output insufficient when the question asks for a trace or justification?",
+      "expected": "Required evidence includes intermediate state or a fact-linked reason; answer form follows the command, not just the final value."
+    },
+    {
+      "week": 15,
+      "lesson": 3,
+      "kind": "ordinary lesson",
+      "intention": "Diagnose a fault using the smallest relevant evidence",
+      "readings": [
+        {
+          "label": "Unit 1 consolidation → Station E: network explanation and diagrams",
+          "href": "../../#consolidation/heading-station-e-network-explanation-and-diagrams"
+        },
+        {
+          "label": "Network scenarios and review → Use a repeatable explanation",
+          "href": "../../#network-review/heading-use-a-repeatable-explanation"
+        },
+        {
+          "label": "Network scenarios and review → Review task: the library upgrade",
+          "href": "../../#network-review/heading-review-task-the-library-upgrade"
+        }
+      ],
+      "textbookUse": "Return to the network station/library case and compare a new fault against the method.",
+      "application": "Use intentional approved pod faults or the companion synthetic cases: addressing mismatch, absent link, resolver failure. Keep observed versus inferred separate.",
+      "check": "A name fails while the known service address works. What is a plausible next investigation and its limitation?",
+      "expected": "Investigate name resolution/configuration while checking the actual service; it is a hypothesis, not proof that all other network layers are fault-free."
+    },
+    {
+      "week": 15,
+      "lesson": 4,
+      "kind": "ordinary lesson",
+      "intention": "Attempt timed mixed practice and explain corrections",
+      "readings": [
+        {
+          "label": "Unit 1 exam preparation → Use the practice paper",
+          "href": "../../#exam-preparation/heading-use-the-practice-paper"
+        },
+        {
+          "label": "Unit 1 exam preparation → Turn feedback into a plan",
+          "href": "../../#exam-preparation/heading-turn-feedback-into-a-plan"
+        },
+        {
+          "label": "Network scenarios and review → Practice and explain",
+          "href": "../../#network-review/heading-practice-and-explain"
+        }
+      ],
+      "textbookUse": "Use the original Unit 1 practice paper/explanations, clearly separate from secure school exam questions.",
+      "application": "Run a bounded original practice segment, classify errors and attempt a changed independent retry; do not reuse public questions as unseen assessment claims.",
+      "check": "Record one original error, its cause, explained correction and a fresh retry outcome.",
+      "expected": "All four remain distinct; copying the key or immediately repeating an identical answer is weaker evidence than independent changed work."
+    },
+    {
+      "week": 16,
+      "lesson": 1,
+      "kind": "ordinary lesson",
+      "intention": "Consolidate remaining priorities and prepare for the school examination",
+      "readings": [
+        {
+          "label": "Unit 1 exam preparation → Turn feedback into a plan",
+          "href": "../../#exam-preparation/heading-turn-feedback-into-a-plan"
+        },
+        {
+          "label": "Unit 1 consolidation → Diagnose before choosing practice",
+          "href": "../../#consolidation/heading-diagnose-before-choosing-practice"
+        },
+        {
+          "label": "Numbers and characters in a computer → Apply a character code in three bases",
+          "href": "../../#representation/heading-apply-a-character-code-in-three-bases"
+        }
+      ],
+      "textbookUse": "Final permitted textbook visit: retrieve two weak concepts and check one changed trace/representation/network case.",
+      "application": "Complete a focused 55-minute preparation session and confirm school examination instructions/materials; no new essential content.",
+      "check": "Name one demonstrated skill, one remaining support need and the evidence behind each.",
+      "expected": "Judgements cite actual independent responses; confirm actual arrangements with the school rather than inferring them from the textbook."
+    },
+    {
+      "week": 16,
+      "lesson": 2,
+      "kind": "exam block",
+      "intention": "Apply knowledge independently in the formal examination, block A",
+      "readings": [
+        {
+          "label": "Unit 1 exam preparation → Use the practice paper",
+          "href": "../../#exam-preparation/heading-use-the-practice-paper"
+        },
+        {
+          "label": "Unit 1 exam preparation → Turn feedback into a plan",
+          "href": "../../#exam-preparation/heading-turn-feedback-into-a-plan"
+        }
+      ],
+      "textbookUse": "Preparation/review reference only; textbook remains closed during the formal exam unless school conditions expressly permit it.",
+      "application": "First scheduled block of the 150-minute Semester 1 paper. Blocks L2–L4 together provide 165 minutes including 15 minutes administration; they are not three new teaching lessons.",
+      "check": "After the entire examination is collected, retain an original response for later feedback; no exit check interrupts the paper.",
+      "expected": "Independent work follows the issued paper/instructions; no answer, marking guide or textbook access is assumed during the controlled period."
+    },
+    {
+      "week": 16,
+      "lesson": 3,
+      "kind": "exam block",
+      "intention": "Apply knowledge independently in the formal examination, block B",
+      "readings": [
+        {
+          "label": "Unit 1 exam preparation → Use the practice paper",
+          "href": "../../#exam-preparation/heading-use-the-practice-paper"
+        },
+        {
+          "label": "Unit 1 exam preparation → Turn feedback into a plan",
+          "href": "../../#exam-preparation/heading-turn-feedback-into-a-plan"
+        }
+      ],
+      "textbookUse": "Preparation/review reference only; no mid-paper textbook visit.",
+      "application": "Continuation of the same 150-minute examination across the scheduled blocks, under the school's actual supervision arrangements.",
+      "check": "After collection and feedback release, identify a missed command or unsupported claim in your own response.",
+      "expected": "Refer to the original submitted work and the issued criterion; schedule feedback afterwards rather than within the exam block."
+    },
+    {
+      "week": 16,
+      "lesson": 4,
+      "kind": "exam block",
+      "intention": "Complete and submit the formal examination, block C",
+      "readings": [
+        {
+          "label": "Unit 1 exam preparation → Turn feedback into a plan",
+          "href": "../../#exam-preparation/heading-turn-feedback-into-a-plan"
+        },
+        {
+          "label": "Unit 1 consolidation → Diagnose before choosing practice",
+          "href": "../../#consolidation/heading-diagnose-before-choosing-practice"
+        }
+      ],
+      "textbookUse": "Post-collection review reference for a later feedback opportunity, not an added lesson within the exam allocation.",
+      "application": "Final block and collection of the same examination; reserve the administration allowance. If periods are non-contiguous, the school must arrange a suitable continuous session.",
+      "check": "In later feedback, choose one changed retry from an actual misconception without rewriting the original as if it were submitted.",
+      "expected": "Original examination evidence, correction and later independent retry are distinct; actual exam scheduling/approval remains a school decision."
+    }
+  ],
+  "localSQL": {
+    "unit2": [
+      {
+        "week": 1,
+        "focus": "Database vocabulary, records/fields/types; inspect a supplied relational fixture",
+        "practice": "Distinguish a raw record from a useful report. Use a supplied fixture before expecting students to create a schema.",
+        "allocation": "2 database foundation; 1 cybersecurity; 1 guided/independent application",
+        "readings": [
+          {
+            "label": "Relational database foundations → Start with a question",
+            "href": "../../#database-foundations/heading-start-with-a-question"
+          },
+          {
+            "label": "Relational database foundations → Turn records into information",
+            "href": "../../#database-foundations/heading-turn-records-into-information"
+          },
+          {
+            "label": "Relational database foundations → Database, DBMS and RDBMS",
+            "href": "../../#database-foundations/heading-database-dbms-and-rdbms"
+          }
+        ]
+      },
+      {
+        "week": 2,
+        "focus": "PK/FK relationships and first SELECT projection",
+        "practice": "Select named fields from one table. Read the relationship before using it later; distinguish projection from deletion.",
+        "allocation": "2 database/SQL; 1 authentication; 1 practice/check",
+        "readings": [
+          {
+            "label": "Modelling entities and relationships → From entity to table",
+            "href": "../../#entities-relationships/heading-from-entity-to-table"
+          },
+          {
+            "label": "Modelling entities and relationships → Choose identifiers deliberately",
+            "href": "../../#entities-relationships/heading-choose-identifiers-deliberately"
+          },
+          {
+            "label": "Modelling entities and relationships → Read relationships in both directions",
+            "href": "../../#entities-relationships/heading-read-relationships-in-both-directions"
+          },
+          {
+            "label": "Getting started with SQL → Choose result columns with SELECT",
+            "href": "../../#sql-basics/heading-choose-result-columns-with-select"
+          }
+        ]
+      },
+      {
+        "week": 3,
+        "focus": "WHERE comparisons, literal types and ORDER BY",
+        "practice": "Predict and execute a filter/order on fresh rows; show target and excluded rows.",
+        "allocation": "2 SQL; 1 social-engineering context; 1 independent practice",
+        "readings": [
+          {
+            "label": "Getting started with SQL → Filter rows with WHERE",
+            "href": "../../#sql-basics/heading-filter-rows-with-where"
+          },
+          {
+            "label": "Getting started with SQL → Make order and duplicates deliberate",
+            "href": "../../#sql-basics/heading-make-order-and-duplicates-deliberate"
+          }
+        ]
+      },
+      {
+        "week": 4,
+        "focus": "AND/OR/NOT, parentheses and LIKE; simple INNER JOIN through known keys",
+        "practice": "Compare grouped conditions; manually match parent/child keys before a simple joined report. No multi-table Year 12 complexity.",
+        "allocation": "2 SQL; 1 threat/malware context; 1 joined-query practice",
+        "readings": [
+          {
+            "label": "Getting started with SQL → Combine conditions and test boundaries",
+            "href": "../../#sql-basics/heading-combine-conditions-and-test-boundaries"
+          },
+          {
+            "label": "Building a database solution → Join keys to obtain readable reports",
+            "href": "../../#database-solution/heading-join-keys-to-obtain-readable-reports"
+          }
+        ]
+      },
+      {
+        "week": 5,
+        "focus": "Consolidate the taught query operations without adding an unseen test demand",
+        "practice": "A changed filter/join task uses known tables; feedback names the first wrong condition/key.",
+        "allocation": "1 cybersecurity theory test; 1 feedback; 1 SQL retrieval; 1 scheduled security/control work",
+        "readings": [
+          {
+            "label": "Getting started with SQL → Interpret empty results and debug",
+            "href": "../../#sql-basics/heading-interpret-empty-results-and-debug"
+          },
+          {
+            "label": "Getting started with SQL → Complete the independent query brief",
+            "href": "../../#sql-basics/heading-complete-the-independent-query-brief"
+          },
+          {
+            "label": "Building a database solution → Join keys to obtain readable reports",
+            "href": "../../#database-solution/heading-join-keys-to-obtain-readable-reports"
+          }
+        ]
+      },
+      {
+        "week": 6,
+        "focus": "COUNT/SUM/AVG/MIN/MAX over the correct records",
+        "practice": "Predict aggregate outputs from a small fixture before running them. Complex GROUP BY/HAVING remains Year 12 scope; any optional grouping example is labelled.",
+        "allocation": "2 SQL/aggregates; 1 responsibility/security; 1 independent practice",
+        "readings": [
+          {
+            "label": "Building a database solution → Summarise the right records",
+            "href": "../../#database-solution/heading-summarise-the-right-records"
+          },
+          {
+            "label": "Building a database solution → Practice and explain",
+            "href": "../../#database-solution/heading-practice-and-explain"
+          }
+        ]
+      },
+      {
+        "week": 7,
+        "focus": "Dependencies, anomalies and UNF→1NF→2NF; draft design before CREATE",
+        "practice": "Explain the dependency removed at each stage and retain a meaningful relationship. Prepare a proposed project design without pretending this is independently authored final work.",
+        "allocation": "2 modelling; 1 SQL retrieval; 1 formative project preparation",
+        "readings": [
+          {
+            "label": "Normalisation → State the rules before choosing a key",
+            "href": "../../#normalisation/heading-state-the-rules-before-choosing-a-key"
+          },
+          {
+            "label": "Normalisation → Start with a repeating group",
+            "href": "../../#normalisation/heading-start-with-a-repeating-group"
+          },
+          {
+            "label": "Normalisation → Dependencies explain the next split",
+            "href": "../../#normalisation/heading-dependencies-explain-the-next-split"
+          },
+          {
+            "label": "Normalisation → 2NF: remove partial dependencies",
+            "href": "../../#normalisation/heading-2nf-remove-partial-dependencies"
+          }
+        ]
+      },
+      {
+        "week": 8,
+        "focus": "3NF and schema creation; constraints; INSERT parent/child records",
+        "practice": "Independently create a fresh small database, enable actual FK enforcement and test duplicate/orphan/required-value failures.",
+        "allocation": "1 normalisation; 2 schema/insert practice; 1 independent schema/check",
+        "readings": [
+          {
+            "label": "Normalisation → 3NF: remove the transitive dependency",
+            "href": "../../#normalisation/heading-3nf-remove-the-transitive-dependency"
+          },
+          {
+            "label": "Building a database solution → Create and inspect four related tables",
+            "href": "../../#database-solution/heading-create-and-inspect-four-related-tables"
+          },
+          {
+            "label": "Building a database solution → Insert a new record deliberately",
+            "href": "../../#database-solution/heading-insert-a-new-record-deliberately"
+          },
+          {
+            "label": "Building a database solution → Create a fresh relational database independently",
+            "href": "../../#database-solution/heading-create-a-fresh-relational-database-independently"
+          }
+        ]
+      },
+      {
+        "week": 9,
+        "focus": "UPDATE/DELETE with exact WHERE targets; integrate queries and schema skills",
+        "practice": "Run a changed mock practical and corrective feedback before Week 10. Scope includes only what has already been explicitly taught and practised.",
+        "allocation": "2 formal project workshops; 1 safe changes; 1 mock/check and feedback",
+        "readings": [
+          {
+            "label": "Building a database solution → Update the intended row and check it",
+            "href": "../../#database-solution/heading-update-the-intended-row-and-check-it"
+          },
+          {
+            "label": "Building a database solution → Delete only the disposable test record",
+            "href": "../../#database-solution/heading-delete-only-the-disposable-test-record"
+          },
+          {
+            "label": "Building a database solution → Test against requirements, then transfer",
+            "href": "../../#database-solution/heading-test-against-requirements-then-transfer"
+          }
+        ]
+      },
+      {
+        "week": 10,
+        "focus": "SQL practical, then diagnosis; no first teaching of assessed syntax here",
+        "practice": "50-minute practical +5 minutes administration. Target list: SELECT, WHERE/Boolean/LIKE, ORDER BY, simple INNER JOIN, aggregates, taught CREATE/INSERT/UPDATE/DELETE/constraints. Drop any item without prior independent practice evidence.",
+        "allocation": "1 controlled practical; 1 post-collection feedback; 2 project workshops",
+        "readings": [
+          {
+            "label": "Getting started with SQL → Complete the independent query brief",
+            "href": "../../#sql-basics/heading-complete-the-independent-query-brief"
+          },
+          {
+            "label": "Building a database solution → Test against requirements, then transfer",
+            "href": "../../#database-solution/heading-test-against-requirements-then-transfer"
+          }
+        ]
+      },
+      {
+        "week": 11,
+        "focus": "Parameterised application calls for the chosen driver; apply taught database work",
+        "practice": "Separate SQL syntax from bound data; the chosen driver determines placeholders. This is after the practical and is not retroactively added to its scope.",
+        "allocation": "1 secure application lesson; 3 project workshops",
+        "readings": [
+          {
+            "label": "Building a database solution → Bridge Python to a controlled SQL change",
+            "href": "../../#database-solution/heading-bridge-python-to-a-controlled-sql-change"
+          },
+          {
+            "label": "Building a database solution → Insert a new record deliberately",
+            "href": "../../#database-solution/heading-insert-a-new-record-deliberately"
+          },
+          {
+            "label": "Building a database solution → Update the intended row and check it",
+            "href": "../../#database-solution/heading-update-the-intended-row-and-check-it"
+          }
+        ]
+      },
+      {
+        "week": 12,
+        "focus": "Project testing and safe backup/restore verification",
+        "practice": "Open a restored separate copy and query known records. Additional transaction depth/server administration is an extension unless explicitly taught for the local project.",
+        "allocation": "1 recovery lesson; 3 project workshops",
+        "readings": [
+          {
+            "label": "Building a database solution → Test against requirements, then transfer",
+            "href": "../../#database-solution/heading-test-against-requirements-then-transfer"
+          },
+          {
+            "label": "Building a database solution → Rehearse and recover with a transaction",
+            "href": "../../#database-solution/heading-rehearse-and-recover-with-a-transaction"
+          },
+          {
+            "label": "Responsible data use → Evaluate the database with evidence",
+            "href": "../../#responsible-data/heading-evaluate-the-database-with-evidence"
+          }
+        ]
+      },
+      {
+        "week": 13,
+        "focus": "Finish project demonstration, evidence and evaluation",
+        "practice": "Judge against issued criteria using actual query/change/recovery evidence. No new compulsory framework/driver/syntax at the deadline.",
+        "allocation": "4 project slots including demonstration, evaluation and feedback",
+        "readings": [
+          {
+            "label": "Building a database solution → Launch, document and evaluate the project",
+            "href": "../../#database-solution/heading-launch-document-and-evaluate-the-project"
+          },
+          {
+            "label": "Responsible data use → Evaluate the database with evidence",
+            "href": "../../#responsible-data/heading-evaluate-the-database-with-evidence"
+          }
+        ]
+      },
+      {
+        "week": 14,
+        "focus": "Mixed retrieval and recovery reasoning; optional server extensions separated",
+        "practice": "Use changed records/design/security facts to check retained skills. Optional server log replay is not a prerequisite for the default project.",
+        "allocation": "2 database retrieval/recovery; 2 remaining security/cipher/responsibility consolidation",
+        "readings": [
+          {
+            "label": "Unit 2 integrated review → Integrate and explain",
+            "href": "../../#unit2-review/heading-integrate-and-explain"
+          },
+          {
+            "label": "Unit 2 consolidation → Work through targeted stations",
+            "href": "../../#unit2-consolidation/heading-work-through-targeted-stations"
+          }
+        ]
+      },
+      {
+        "week": 15,
+        "focus": "Unfamiliar SQL/ERD/normalisation/security exam practice",
+        "practice": "Practice with supplied stimulus, preserve original responses, explain corrections and retry changed cases.",
+        "allocation": "4 revision/practice/feedback slots",
+        "readings": [
+          {
+            "label": "Unit 2 exam preparation → Use the original practice paper",
+            "href": "../../#unit2-exam/heading-use-the-original-practice-paper"
+          },
+          {
+            "label": "Unit 2 exam preparation → Bring the specified stimulus",
+            "href": "../../#unit2-exam/heading-bring-the-specified-stimulus"
+          },
+          {
+            "label": "Unit 2 exam preparation → Check, correct and explain limits",
+            "href": "../../#unit2-exam/heading-check-correct-and-explain-limits"
+          }
+        ]
+      },
+      {
+        "week": 16,
+        "focus": "Formal examination; no essential new SQL teaching",
+        "practice": "Textbook is preparation/review only during a closed-book examination. Arrange a continuous school-approved session and separate later feedback.",
+        "allocation": "Exam/preparation/administration according to the actual school timetable",
+        "readings": [
+          {
+            "label": "Unit 2 exam preparation → Use the original practice paper",
+            "href": "../../#unit2-exam/heading-use-the-original-practice-paper"
+          },
+          {
+            "label": "Unit 2 exam preparation → Check, correct and explain limits",
+            "href": "../../#unit2-exam/heading-check-correct-and-explain-limits"
+          }
+        ]
+      }
+    ],
+    "unit4": [
+      {
+        "week": 1,
+        "focus": "Diagnose Year 11 keys/SELECT/filter/order/basic joins; repair before extension",
+        "practice": "Fresh diagnostic names prerequisite gaps. Use prepared fixtures so server/DDL setup does not block query learning.",
+        "allocation": "2 SQL retrieval/repair; 1 cryptography; 1 independent practice",
+        "readings": [
+          {
+            "label": "Modelling entities and relationships → Choose identifiers deliberately",
+            "href": "../../#entities-relationships/heading-choose-identifiers-deliberately"
+          },
+          {
+            "label": "Getting started with SQL → Choose result columns with SELECT",
+            "href": "../../#sql-basics/heading-choose-result-columns-with-select"
+          },
+          {
+            "label": "Getting started with SQL → Filter rows with WHERE",
+            "href": "../../#sql-basics/heading-filter-rows-with-where"
+          },
+          {
+            "label": "Building a database solution → Join keys to obtain readable reports",
+            "href": "../../#database-solution/heading-join-keys-to-obtain-readable-reports"
+          }
+        ]
+      },
+      {
+        "week": 2,
+        "focus": "INNER JOIN chains up to four tables, aliases and qualified names",
+        "practice": "Predict one row per declared report entity and inspect every ON key. Repair missing join conditions without hiding the problem with DISTINCT.",
+        "allocation": "2 SQL; 1 certificates/trust; 1 independent changed join",
+        "readings": [
+          {
+            "label": "Advanced SQL queries → Define the report’s grain",
+            "href": "../../#unit4-sql/heading-define-the-report-s-grain"
+          },
+          {
+            "label": "Advanced SQL queries → Join up to four tables and keep keys visible",
+            "href": "../../#unit4-sql/heading-join-up-to-four-tables-and-keep-keys-visible"
+          }
+        ]
+      },
+      {
+        "week": 3,
+        "focus": "Aggregate at the correct grain; GROUP BY; optional HAVING extension",
+        "practice": "Calculate small expected groups manually; distinguish selected attributes, row filters and group filters.",
+        "allocation": "2 SQL; 1 web-security concepts; 1 grouped report practice",
+        "readings": [
+          {
+            "label": "Advanced SQL queries → Aggregate at the correct grain",
+            "href": "../../#unit4-sql/heading-aggregate-at-the-correct-grain"
+          },
+          {
+            "label": "Advanced SQL queries → Filter rows and groups deliberately",
+            "href": "../../#unit4-sql/heading-filter-rows-and-groups-deliberately"
+          }
+        ]
+      },
+      {
+        "week": 4,
+        "focus": "WHERE versus optional HAVING group filtering; calculated/concatenated fields; NULL semantics",
+        "practice": "Use nonzero capacities for percentages, defined NULL meaning and composite-key matches; explain deterministic ordering.",
+        "allocation": "2 SQL; 1 secure coding; 1 independent changed report",
+        "readings": [
+          {
+            "label": "Advanced SQL queries → Calculate and concatenate with aliases",
+            "href": "../../#unit4-sql/heading-calculate-and-concatenate-with-aliases"
+          },
+          {
+            "label": "Advanced SQL queries → Respect composite keys and unknown attendance",
+            "href": "../../#unit4-sql/heading-respect-composite-keys-and-unknown-attendance"
+          },
+          {
+            "label": "Advanced SQL queries → Filter rows and groups deliberately",
+            "href": "../../#unit4-sql/heading-filter-rows-and-groups-deliberately"
+          }
+        ]
+      },
+      {
+        "week": 5,
+        "focus": "LEFT JOIN and zero-count reports; filter placement",
+        "practice": "Predict an unbooked parent row and compare COUNT(*) with COUNT(non-null child key). Do not conflate a missing record with recorded absence.",
+        "allocation": "1 security theory test; 1 feedback; 1 SQL model; 1 independent SQL check",
+        "readings": [
+          {
+            "label": "Advanced SQL queries → Preserve zero-booking sessions",
+            "href": "../../#unit4-sql/heading-preserve-zero-booking-sessions"
+          },
+          {
+            "label": "Advanced SQL queries → Respect composite keys and unknown attendance",
+            "href": "../../#unit4-sql/heading-respect-composite-keys-and-unknown-attendance"
+          }
+        ]
+      },
+      {
+        "week": 6,
+        "focus": "Review CREATE/ALTER/INSERT/UPDATE/DELETE/constraints, then transactions",
+        "practice": "Positive and failed second-step cases demonstrate actual commit/rollback and unchanged non-target rows. Constraints and authorisation are separate.",
+        "allocation": "2 SQL/transaction lessons; 1 ethics/privacy; 1 independent transaction check",
+        "readings": [
+          {
+            "label": "Database development and evaluation → Make controlled changes and verify effects",
+            "href": "../../#unit4-project/heading-make-controlled-changes-and-verify-effects"
+          },
+          {
+            "label": "Database development and evaluation → Use transactions to protect a booking",
+            "href": "../../#unit4-project/heading-use-transactions-to-protect-a-booking"
+          },
+          {
+            "label": "Advanced SQL queries → DDL and DML: change the structure, change the records",
+            "href": "../../#unit4-sql/heading-ddl-and-dml-change-the-structure-change-the-records"
+          }
+        ]
+      },
+      {
+        "week": 7,
+        "focus": "3NF, wider ER interpretation and project-sized dictionary/schema reconciliation",
+        "practice": "Trace PK/FK/optionality and dependencies; design at the required scale. BCNF/additional server topics are extensions, not hidden replacements for core modelling.",
+        "allocation": "2 modelling; 1 schema/retrieval; 1 independent design/check",
+        "readings": [
+          {
+            "label": "Refining relational database designs → Refine from requirements, not a table count",
+            "href": "../../#unit4-design/heading-refine-from-requirements-not-a-table-count"
+          },
+          {
+            "label": "Refining relational database designs → Read the six-table crow’s-foot model",
+            "href": "../../#unit4-design/heading-read-the-six-table-crow-s-foot-model"
+          },
+          {
+            "label": "Refining relational database designs → Make a data dictionary that matches implementation",
+            "href": "../../#unit4-design/heading-make-a-data-dictionary-that-matches-implementation"
+          },
+          {
+            "label": "Refining relational database designs → Interpreting a ten-table ER model",
+            "href": "../../#unit4-design/heading-interpreting-a-ten-table-er-model"
+          }
+        ]
+      },
+      {
+        "week": 8,
+        "focus": "Python/DBMS connectivity, bound parameters and transaction tests",
+        "practice": "Use the selected driver, trace application/request/result and run a changed mock practical with feedback. sqlite3 is not an ODBC driver.",
+        "allocation": "1 connectivity; 1 parameterised operations; 1 mock; 1 correction/independent retry",
+        "readings": [
+          {
+            "label": "Database development and evaluation → Use transactions to protect a booking",
+            "href": "../../#unit4-project/heading-use-transactions-to-protect-a-booking"
+          },
+          {
+            "label": "Database development and evaluation → Verify a parameterised update at the interface",
+            "href": "../../#unit4-project/heading-verify-a-parameterised-update-at-the-interface"
+          },
+          {
+            "label": "Database development and evaluation → Trace application connectivity through ODBC",
+            "href": "../../#unit4-project/heading-trace-application-connectivity-through-odbc"
+          }
+        ]
+      },
+      {
+        "week": 9,
+        "focus": "Launch the database project; integrate already-taught report and change operations",
+        "practice": "Consolidate a changed dataset before the practical. Read all required operations against the teaching record; no surprise extension item.",
+        "allocation": "3 project workshops; 1 practical-readiness/retry",
+        "readings": [
+          {
+            "label": "Database development and evaluation → Investigate and design measurable requirements",
+            "href": "../../#unit4-project/heading-investigate-and-design-measurable-requirements"
+          },
+          {
+            "label": "Advanced SQL queries → Complete the query clinic",
+            "href": "../../#unit4-sql/heading-complete-the-query-clinic"
+          },
+          {
+            "label": "Database development and evaluation → Test workflows, failures and reports",
+            "href": "../../#unit4-project/heading-test-workflows-failures-and-reports"
+          }
+        ]
+      },
+      {
+        "week": 10,
+        "focus": "Controlled SQL practical then specific post-collection repair",
+        "practice": "50-minute practical +5 minutes administration. Candidate scope is taught joins/grouping/HAVING/calculations/NULL/LEFT JOIN/schema changes/transactions; include bound application calls only where independently practised and feasible under the adopted conditions.",
+        "allocation": "1 practical; 1 post-collection feedback; 2 project workshops",
+        "readings": [
+          {
+            "label": "Advanced SQL queries → Complete the query clinic",
+            "href": "../../#unit4-sql/heading-complete-the-query-clinic"
+          },
+          {
+            "label": "Database development and evaluation → Test workflows, failures and reports",
+            "href": "../../#unit4-project/heading-test-workflows-failures-and-reports"
+          }
+        ]
+      },
+      {
+        "week": 11,
+        "focus": "Project data quality, import and application integration",
+        "practice": "Preserve raw source, record cleaning decisions and demonstrate an agreed all-or-none failure policy. New import teaching is not claimed as prior Week 10 knowledge.",
+        "allocation": "1 import/data-quality lesson; 3 project workshops",
+        "readings": [
+          {
+            "label": "Database development and evaluation → Clean an import without inventing data",
+            "href": "../../#unit4-project/heading-clean-an-import-without-inventing-data"
+          },
+          {
+            "label": "Database development and evaluation → Data quality: five factors in practice",
+            "href": "../../#unit4-project/heading-data-quality-five-factors-in-practice"
+          },
+          {
+            "label": "Database development and evaluation → Test workflows, failures and reports",
+            "href": "../../#unit4-project/heading-test-workflows-failures-and-reports"
+          }
+        ]
+      },
+      {
+        "week": 12,
+        "focus": "Restore/reopen, regression testing and recovery limitations",
+        "practice": "Verify an actual persisted copy and query known contents; distinguish in-memory rollback from durable recovery. Server replay/replication are separate optional cases.",
+        "allocation": "1 recovery lesson; 3 project workshops",
+        "readings": [
+          {
+            "label": "Database development and evaluation → Preserve a known-good version and prove recovery",
+            "href": "../../#unit4-project/heading-preserve-a-known-good-version-and-prove-recovery"
+          },
+          {
+            "label": "Database development and evaluation → Test workflows, failures and reports",
+            "href": "../../#unit4-project/heading-test-workflows-failures-and-reports"
+          }
+        ]
+      },
+      {
+        "week": 13,
+        "focus": "Finish demonstration/evaluation/handover with no new required dependency",
+        "practice": "Explain independently one report, one rejected operation and one recovery result using the issued scope. Record incomplete criteria honestly.",
+        "allocation": "4 project slots including demonstration, evaluation and feedback",
+        "readings": [
+          {
+            "label": "Database development and evaluation → Run the prototype and evaluate its limits",
+            "href": "../../#unit4-project/heading-run-the-prototype-and-evaluate-its-limits"
+          },
+          {
+            "label": "Database development and evaluation → Preserve a known-good version and prove recovery",
+            "href": "../../#unit4-project/heading-preserve-a-known-good-version-and-prove-recovery"
+          }
+        ]
+      },
+      {
+        "week": 14,
+        "focus": "Mixed short-answer database/security/programming/network retrieval",
+        "practice": "Use source facts, command verbs and manual SQL predictions; corrected work remains separate from original timed responses.",
+        "allocation": "4 exam-practice/retrieval slots",
+        "readings": [
+          {
+            "label": "Unit 4 integrated review → Predict reports before running SQL",
+            "href": "../../#unit4-review/heading-predict-reports-before-running-sql"
+          },
+          {
+            "label": "Unit 4 integrated review → Explain transactions, connectivity and recovery",
+            "href": "../../#unit4-review/heading-explain-transactions-connectivity-and-recovery"
+          },
+          {
+            "label": "Full-course exam preparation → Read the command and use the stimulus",
+            "href": "../../#unit4-exam/heading-read-the-command-and-use-the-stimulus"
+          }
+        ]
+      },
+      {
+        "week": 15,
+        "focus": "Extended scenario transfer and delayed retries",
+        "practice": "Integrate ERDs/3NF/report reasoning and algorithm/security explanations. Dedicated search/sort/Big O teaching must remain in Unit 3, not first appear as revision here.",
+        "allocation": "4 extended-practice/correction/retry slots",
+        "readings": [
+          {
+            "label": "Full-course exam preparation → Attempt original mixed practice",
+            "href": "../../#unit4-exam/heading-attempt-original-mixed-practice"
+          },
+          {
+            "label": "Full-course exam preparation → Transfer to a changed case",
+            "href": "../../#unit4-exam/heading-transfer-to-a-changed-case"
+          },
+          {
+            "label": "Full-course consolidation → Show improvement with a fresh and delayed attempt",
+            "href": "../../#unit4-consolidation/heading-show-improvement-with-a-fresh-and-delayed-attempt"
+          }
+        ]
+      },
+      {
+        "week": 16,
+        "focus": "Formal examination; no essential new SQL teaching",
+        "practice": "Preparation/review references only; no mid-paper book use unless allowed. Confirm a continuous school exam session separately.",
+        "allocation": "Exam/preparation/administration according to the actual school timetable",
+        "readings": [
+          {
+            "label": "Full-course exam preparation → Prepare against the current instructions",
+            "href": "../../#unit4-exam/heading-prepare-against-the-current-instructions"
+          },
+          {
+            "label": "Full-course exam preparation → Make a manageable readiness plan",
+            "href": "../../#unit4-exam/heading-make-a-manageable-readiness-plan"
+          }
+        ]
+      }
+    ]
+  }
+}
