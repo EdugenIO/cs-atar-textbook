@@ -814,11 +814,12 @@
   "extensions": [
     {
       "id": "ext-left",
-      "title": "LEFT JOIN and HAVING",
-      "reason": "Supporting SQL extensions: useful for missing-match and group-filter reasoning, but not extra prescribed SQL keywords in the current syllabus list.",
+      "title": "LEFT JOIN extension and support-booklet HAVING",
+      "reason": "HAVING is shown in the official support booklet (printed p22), after GROUP BY. LEFT JOIN is additional to the explicitly listed INNER JOIN work. Do not label both optional-only or treat support-booklet examples as a separate new unit-content list; teach the relevant technique before assessment.",
       "link": "../sql/#step-17",
       "question": "Why can COUNT(*) show one for an unmatched left-side row?",
-      "answer": "The outer join preserves one row with NULL child fields. COUNT(child_key) instead counts non-NULL matches."
+      "answer": "The outer join preserves one row with NULL child fields. COUNT(child_key) instead counts non-NULL matches.",
+      "scopeLabel": "SUPPORT BOOKLET + ENRICHMENT"
     },
     {
       "id": "ext-transactions",

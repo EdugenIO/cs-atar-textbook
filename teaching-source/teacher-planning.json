@@ -2179,7 +2179,7 @@
       },
       {
         "week": 3,
-        "focus": "Aggregate at the correct grain; GROUP BY; optional HAVING extension",
+        "focus": "Aggregate at the correct grain; GROUP BY; support-booklet HAVING",
         "practice": "Calculate small expected groups manually; distinguish selected attributes, row filters and group filters.",
         "allocation": "2 SQL; 1 web-security concepts; 1 grouped report practice",
         "readings": [
@@ -2195,7 +2195,7 @@
       },
       {
         "week": 4,
-        "focus": "WHERE versus optional HAVING group filtering; calculated/concatenated fields; NULL semantics",
+        "focus": "WHERE versus support-booklet HAVING group filtering; calculated/concatenated fields; NULL semantics",
         "practice": "Use nonzero capacities for percentages, defined NULL meaning and composite-key matches; explain deterministic ordering.",
         "allocation": "2 SQL; 1 secure coding; 1 independent changed report",
         "readings": [

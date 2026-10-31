@@ -541,14 +541,14 @@
     {
       "id": "17",
       "year": 12,
-      "title": "Supporting extension: NULL, LEFT JOIN and HAVING",
+      "title": "Support-booklet HAVING and optional LEFT JOIN",
       "chapter": "unit4-sql",
       "operations": [
         "LEFT JOIN",
         "NULL",
         "HAVING"
       ],
-      "explanation": "Supporting extension, not an additional prescribed SQL-keyword list. LEFT JOIN preserves unmatched left-side rows with NULL right-side values. COUNT(right_key) ignores those NULL values while COUNT(*) counts the preserved row. Use IS NULL to test missing values. HAVING filters groups after grouping; WHERE filters input rows. Learn these after core INNER JOIN and GROUP BY, and teach/practise them explicitly before including them in a local assessment.",
+      "explanation": "HAVING appears in the official additional syllabus support booklet (printed p22); learn group filtering after core GROUP BY/aggregate work. LEFT JOIN is additional to the explicitly listed INNER JOIN syntax. It preserves unmatched left-side rows with NULL right-side fields. COUNT(right_key) ignores those NULLs while COUNT(*) counts the preserved row; IS NULL tests missing values. This step combines a support-booklet skill and an extension: teach each part before including it in the locally issued scope. See the scope guide for the distinction.",
       "model": {
         "prompt": "Include sessions with no bookings and count real booking keys.",
         "sql": "SELECT s.SessionID, COUNT(b.MemberID) AS Bookings FROM Session AS s LEFT JOIN Booking AS b ON b.SessionID = s.SessionID GROUP BY s.SessionID ORDER BY s.SessionID;",
@@ -569,12 +569,13 @@
       },
       "feedback": "A zero-booking session still produces a preserved join row. If it shows count one, check COUNT(*) versus COUNT(b.MemberID). Never turn unknown attendance into confirmed absence without a rule.",
       "fixture": "y12",
-      "core": false
+      "core": false,
+      "scopeLabel": "SUPPORT BOOKLET + ENRICHMENT"
     },
     {
       "id": "18",
       "year": 12,
-      "title": "Supporting extension: a transaction and a recovery test",
+      "title": "SQLite transaction implementation for ACID",
       "chapter": "unit4-project",
       "operations": [
         "BEGIN",
@@ -603,7 +604,8 @@
       },
       "feedback": "If a row is still present, check whether a previous COMMIT occurred or whether you inspected a different file. Repeat on a new copy and record the transaction boundary.",
       "fixture": "y12",
-      "core": false
+      "core": false,
+      "scopeLabel": "IMPLEMENTATION SUPPORT · ACID CORE"
     }
   ]
 }
