@@ -1019,7 +1019,7 @@ SELECT COUNT(*) AS OutstandingLoans FROM Loan WHERE Returned = 0;
   ]
 }
 
-Feedback: Use the operation checklist, not one correct report, to decide what is ready. If schema creation or any of the five aggregates has not been independently demonstrated, practise it before assessing it.
+Feedback: Use the operation checklist, not one correct report, to decide what is ready. If schema creation or any of the five aggregates has not been independently demonstrated, practice it before assessing it.
 
 ### Step 09 model
 

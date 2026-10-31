@@ -2077,7 +2077,7 @@
       "demand": "Address/mask/version roles",
       "status": "Written teaching and practice confirmed",
       "initialJudgement": "supported",
-      "decision": "A changed address/version comparison now explicitly practises mask/locality, gateway responsibility and both address representations.",
+      "decision": "A changed address/version comparison now explicitly practices mask/locality, gateway responsibility and both address representations.",
       "explanation": {
         "kind": "section",
         "url": "../#addressing/heading-compare-address-versions-and-local-delivery-independently",
@@ -2228,7 +2228,7 @@
       "demand": "Performance factors",
       "status": "Written teaching and practice confirmed",
       "initialJudgement": "supported",
-      "decision": "A four-case diagnosis now independently practises capacity, design, collisions and excess broadcasts, rather than asking learners to select only two design improvements.",
+      "decision": "A four-case diagnosis now independently practices capacity, design, collisions and excess broadcasts, rather than asking learners to select only two design improvements.",
       "explanation": {
         "kind": "section",
         "url": "../#network-design/heading-diagnose-performance-and-justify-access-controls",

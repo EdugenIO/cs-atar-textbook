@@ -913,7 +913,7 @@
         "id": "06",
         "title": "Make controlled changes and prove the result",
         "chapter": "database-solution",
-        "intention": "Use a fresh copy, specific conditions and rollback while practising changes.",
+        "intention": "Use a fresh copy, specific conditions and rollback while practicing changes.",
         "worked": [
           {
             "type": "p",

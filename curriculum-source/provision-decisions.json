@@ -20,10 +20,10 @@
     "Y11-R015": "The array transfer now independently requires both pseudocode and Python construction, with explicit load/print and empty/tie contracts.",
     "Y11-R028": "The same fresh array task explicitly covers load/print, sum and first min/max positions, with numeric expected results plus empty and one-value feedback.",
     "Y11-R021": "The new convention review explicitly addresses all named maintainability practices and a fresh validated-area implementation.",
-    "Y11-R038": "A changed address/version comparison now explicitly practises mask/locality, gateway responsibility and both address representations.",
+    "Y11-R038": "A changed address/version comparison now explicitly practices mask/locality, gateway responsibility and both address representations.",
     "Y11-R039": "The new responsibility-table task names all three media and each prescribed component, and requires a changed labelled diagram with an explicit access-technology assumption.",
     "Y11-R040": "A new access task explicitly asks why unauthorised access matters, both firewall flow decisions and OS-level protections.",
-    "Y11-R041": "A four-case diagnosis now independently practises capacity, design, collisions and excess broadcasts, rather than asking learners to select only two design improvements."
+    "Y11-R041": "A four-case diagnosis now independently practices capacity, design, collisions and excess broadcasts, rather than asking learners to select only two design improvements."
   },
   "practiceSelections": {
     "Y11-R005": {

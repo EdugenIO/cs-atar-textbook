@@ -15,7 +15,7 @@
   {
     "id": "sql-basics",
     "title": "Select and order records",
-    "ready": "Complete activity 01 on keys and the supplied Member/Loan tables before activity 02. Practise SELECT and ORDER BY before filters, joins or groups.",
+    "ready": "Complete activity 01 on keys and the supplied Member/Loan tables before activity 02. Practice SELECT and ORDER BY before filters, joins or groups.",
     "read": "Choose result columns with SELECT",
     "worked": "Make order and duplicates deliberate",
     "pack": "databases-sql",

@@ -275,7 +275,7 @@
         "responsible-data"
       ],
       "flow": "General database/security reading -> supplied records or logs -> guided practice -> changed independent attempt -> feedback before the local practical.",
-      "assessment": "If the practical is in Week 10, its SQL operations must be taught and practised earlier. Do not copy a plan that leaves first SELECT teaching until after the practical.",
+      "assessment": "If the practical is in Week 10, its SQL operations must be taught and practiced earlier. Do not copy a plan that leaves first SELECT teaching until after the practical.",
       "alternative": "SQLite fixtures on ordinary computers; synthetic security cases and offline policy tests.",
       "beforeIssue": "Confirm assessed operations, normalisation/CREATE prerequisites, constraint tests, recovery evidence and any server-driver differences. Keep non-SQL content inside the same lesson budget."
     },
@@ -464,7 +464,7 @@
         }
       ],
       "textbookUse": "Read design-before-code, the implementation and trace sections; predict before running.",
-      "application": "Write a menu that rejects invalid commands, then distinguishes start/stop/status. Practise one nested condition with an explicit expected path.",
+      "application": "Write a menu that rejects invalid commands, then distinguishes start/stop/status. Practice one nested condition with an explicit expected path.",
       "check": "Trace -1, 0 and 2 through negative-invalid / zero-empty / otherwise-process branches.",
       "expected": "Exactly one intended branch per input; distinguish an if/elif/else chain from unrelated if statements."
     },
@@ -660,7 +660,7 @@
         }
       ],
       "textbookUse": "Trace a traversal and retained index; distinguish existing array algorithms from extra list-method/API practice.",
-      "application": "Use supplied command-token lists to practise insertion/removal on paper and in Python; linear matching is a local extension, not a new Year 11 assessment requirement by assumption.",
+      "application": "Use supplied command-token lists to practice insertion/removal on paper and in Python; linear matching is a local extension, not a new Year 11 assessment requirement by assumption.",
       "check": "Find the first 'B' in ['A','B','B']; give a documented result when no match exists.",
       "expected": "First index 1; choose a consistent not-found sentinel. Explain which index changes during traversal and preserve duplicates."
     },
@@ -1224,7 +1224,7 @@
         }
       ],
       "textbookUse": "Preparation links only: use before the test; revisit after collection, not during closed-book conditions unless expressly allowed.",
-      "application": "Task 2: 50-minute programming practical plus five minutes setup/collection; assess only taught and independently practised operations.",
+      "application": "Task 2: 50-minute programming practical plus five minutes setup/collection; assess only taught and independently practiced operations.",
       "check": "After collection, identify one submitted trace/test decision and an assumption that affected it.",
       "expected": "Explanation matches the submitted version; original work stays distinct from later correction. No textbook access is assumed during the test."
     },
@@ -1576,7 +1576,7 @@
         }
       ],
       "textbookUse": "Use these references before the theory test and after collection; no textbook use during closed-book conditions.",
-      "application": "Task 3: 55-minute networking theory test; only prior taught/practised content, not the new wireless material in subsequent lessons.",
+      "application": "Task 3: 55-minute networking theory test; only prior taught/practiced content, not the new wireless material in subsequent lessons.",
       "check": "After collection, identify one response that needed a scenario-specific causal explanation rather than a device name.",
       "expected": "Original answer and a missing/present fact-to-reasoning link are identified; later corrections remain separate."
     },
@@ -1994,7 +1994,7 @@
       {
         "week": 9,
         "focus": "UPDATE/DELETE with exact WHERE targets; integrate queries and schema skills",
-        "practice": "Run a changed mock practical and corrective feedback before Week 10. Scope includes only what has already been explicitly taught and practised.",
+        "practice": "Run a changed mock practical and corrective feedback before Week 10. Scope includes only what has already been explicitly taught and practiced.",
         "allocation": "2 formal project workshops; 1 safe changes; 1 mock/check and feedback",
         "readings": [
           {
@@ -2316,7 +2316,7 @@
       {
         "week": 10,
         "focus": "Controlled SQL practical then specific post-collection repair",
-        "practice": "50-minute practical +5 minutes administration. Candidate scope is taught joins/grouping/HAVING/calculations/NULL/LEFT JOIN/schema changes/transactions; include bound application calls only where independently practised and feasible under the adopted conditions.",
+        "practice": "50-minute practical +5 minutes administration. Candidate scope is taught joins/grouping/HAVING/calculations/NULL/LEFT JOIN/schema changes/transactions; include bound application calls only where independently practiced and feasible under the adopted conditions.",
         "allocation": "1 practical; 1 post-collection feedback; 2 project workshops",
         "readings": [
           {

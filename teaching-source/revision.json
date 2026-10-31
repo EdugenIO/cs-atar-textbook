@@ -834,7 +834,7 @@
       "title": "Drone, VR and network-pod contexts",
       "reason": "Optional delivery contexts. Specialist equipment and vendor-specific procedures are not general textbook prerequisites.",
       "link": "../activities/",
-      "question": "How can a learner practise a network-policy decision without a network pod?",
+      "question": "How can a learner practice a network-policy decision without a network pod?",
       "answer": "Apply the same declared rules to supplied request cards and predict outcomes. Label this as a model, not evidence of an executed network configuration."
     },
     {

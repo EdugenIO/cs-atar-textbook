@@ -2283,7 +2283,7 @@ Does an ordinary statement error always undo earlier statements automatically?
 
 Optional delivery contexts. Specialist equipment and vendor-specific procedures are not general textbook prerequisites.
 
-How can a learner practise a network-policy decision without a network pod?
+How can a learner practice a network-policy decision without a network pod?
 
 ## Support or enrichment - Additional computer-systems context
 

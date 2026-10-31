@@ -273,7 +273,7 @@
         "check": null,
         "error": null
       },
-      "feedback": "Use the operation checklist, not one correct report, to decide what is ready. If schema creation or any of the five aggregates has not been independently demonstrated, practise it before assessing it.",
+      "feedback": "Use the operation checklist, not one correct report, to decide what is ready. If schema creation or any of the five aggregates has not been independently demonstrated, practice it before assessing it.",
       "fixture": "y11",
       "core": true
     },
@@ -411,7 +411,7 @@
     {
       "id": "13",
       "year": 12,
-      "title": "Modify structure and practise DROP on scratch tables",
+      "title": "Modify structure and practice DROP on scratch tables",
       "chapter": "unit4-project",
       "operations": [
         "ALTER TABLE",

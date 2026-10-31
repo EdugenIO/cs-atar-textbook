@@ -463,7 +463,7 @@ Observed / traced:
 Feedback and fresh retry:
 
 
-## Step 13 - Modify structure and practise DROP on scratch tables
+## Step 13 - Modify structure and practice DROP on scratch tables
 
 CREATE/ALTER/DROP change the structure; INSERT/UPDATE/DELETE change records. The syllabus phrase modify tables describes a task, not a SQLite MODIFY keyword. SQLite supports ALTER TABLE ADD COLUMN and RENAME COLUMN, but some constraint changes need a carefully planned table rebuild. Demonstrate structure changes only on scratch tables here. DROP removes the table structure and its rows; DELETE removes rows while retaining the table.
 

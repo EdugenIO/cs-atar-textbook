@@ -5,8 +5,8 @@
   "categories": {
     "required": "Required syllabus knowledge or skill: use the item-level provision review for the exact source and practice.",
     "support-booklet": "Official support-booklet convention or example. Teach it in its relevant sequence; do not dismiss it as optional enrichment merely because a keyword is not a separate unit bullet.",
-    "implementation": "A tool, model or context used to practise required concepts. Its particular software, equipment or syntax is not itself a new syllabus requirement.",
-    "enrichment": "Additional content beyond the explicit unit-content list; teach and practise it before including it in a locally issued task."
+    "implementation": "A tool, model or context used to practice required concepts. Its particular software, equipment or syntax is not itself a new syllabus requirement.",
+    "enrichment": "Additional content beyond the explicit unit-content list; teach and practice it before including it in a locally issued task."
   },
   "notes": [
     "Optional revisit means return after prerequisites; it does not mean that the underlying syllabus skill is optional.",
@@ -55,7 +55,7 @@
       "id": "gui-equipment",
       "category": "implementation",
       "title": "Pygame, drone, VR and network-pod contexts",
-      "note": "These are delivery choices for practising required programming, data and networking skills. A graphical user interface and specialist hardware are not general textbook prerequisites. The companion pathway retains local assessment contexts.",
+      "note": "These are delivery choices for practicing required programming, data and networking skills. A graphical user interface and specialist hardware are not general textbook prerequisites. The companion pathway retains local assessment contexts.",
       "url": "../teachers/companion.html"
     },
     {

@@ -70,7 +70,7 @@
 -- Write your independent attempt below:
 
 
--- Step 13 Modify structure and practise DROP on scratch tables
+-- Step 13 Modify structure and practice DROP on scratch tables
 -- Create Trial(ID INTEGER PRIMARY KEY, Label TEXT NOT NULL), insert one row, add Notes TEXT, inspect it, then DROP only Trial. Verify that the table no longer exists. Explain DROP versus DELETE.
 -- Database: scratch changed, fresh copy.
 -- Write your independent attempt below:
