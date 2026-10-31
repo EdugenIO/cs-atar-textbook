@@ -1,0 +1,23 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import vm from 'node:vm';
+const root=path.resolve(import.meta.dirname,'../dist/resources');
+const data=JSON.parse(fs.readFileSync(path.join(root,'catalogue.json'),'utf8'));
+assert.equal(data.length,50);
+assert.equal(new Set(data.map(c=>c.id)).size,50);
+for(const [u,n] of [[1,16],[2,10],[3,14],[4,10]])assert.equal(data.filter(c=>c.unit===u).length,n);
+for(const c of data){assert.equal(c.year,c.unit<3?11:12);assert.ok(c.resources.some(r=>r.type==='reading'));for(const r of c.resources){const target=path.resolve(root,r.href.split(/[?#]/)[0]||'.');assert.ok(target.startsWith(path.dirname(root)),r.href);assert.ok(fs.existsSync(target),r.href);}}
+const listeners={},fields=Object.fromEntries(['query','year','unit','topic','type'].map(id=>[id,{id,value:'',tagName:id==='query'?'INPUT':'SELECT',options:[],addEventListener:(_,fn)=>listeners[id]=fn}]));
+const cards=data.map(c=>{const links=c.resources.map(r=>({dataset:{type:r.type},hidden:false}));const teacher=c.resources.some(r=>r.type==='teacher')?{}:null;return {dataset:{year:String(c.year),unit:String(c.unit),topic:c.topic},textContent:[c.title,c.intro,...c.resources.map(r=>r.label)].join(' '),querySelectorAll:()=>links,querySelector:()=>teacher};});
+const buttons=Object.fromEntries(['reset','print'].map(id=>[id,{addEventListener:(_,fn)=>listeners[id]=fn}]));const count={},empty={};
+const context={document:{getElementById:id=>fields[id]||buttons[id]||(id==='count'?count:empty),querySelectorAll:()=>cards},URLSearchParams,location:{search:'',pathname:'/resources/',hash:''},history:{replaceState(){}},window:{print(){}}};
+vm.runInNewContext(fs.readFileSync(path.join(root,'hub.js'),'utf8'),context);
+assert.equal(cards.filter(c=>!c.hidden).length,50);
+fields.year.value='12';listeners.year();assert.equal(cards.filter(c=>!c.hidden).length,24);
+fields.unit.value='2';listeners.unit();assert.equal(cards.filter(c=>!c.hidden).length,0);assert.equal(empty.hidden,false);
+listeners.reset();fields.query.value='subnetting';listeners.query();assert.ok(cards.some(c=>!c.hidden));
+listeners.reset();fields.type.value='teacher';listeners.type();assert.ok(cards.some(c=>!c.hidden));
+for(const c of cards.filter(c=>!c.hidden))assert.equal(c.querySelector().open,true);
+listeners.reset();assert.equal(cards.filter(c=>!c.hidden).length,50);
+console.log('Resource hub: all 50 chapters, local links, year/unit filtering, search, teacher resources and reset passed.');

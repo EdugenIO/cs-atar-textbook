@@ -1,0 +1,1952 @@
+[
+  {
+    "id": "start",
+    "title": "Your first Python program",
+    "intro": "A program transforms inputs into useful outputs. Start with a small problem you can explain, then translate your steps into Python.",
+    "unit": 1,
+    "year": 11,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#start",
+        "type": "reading"
+      },
+      {
+        "label": "Worked Python example (.py)",
+        "href": "examples/start.py",
+        "type": "code"
+      },
+      {
+        "label": "Printable foundations activities",
+        "href": "../activities/programming-foundations/#lesson-01",
+        "type": "activity"
+      },
+      {
+        "label": "Student workbook · PDF (16 pages)",
+        "href": "../activities/programming-foundations/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Foundations teacher answers",
+        "href": "../activities/programming-foundations/teacher.html",
+        "type": "teacher"
+      }
+    ]
+  },
+  {
+    "id": "values",
+    "title": "Values, types and operators",
+    "intro": "The same-looking input can mean different things. Choose a type that matches the meaning of the data and the operations you need.",
+    "unit": 1,
+    "year": 11,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#values",
+        "type": "reading"
+      },
+      {
+        "label": "Worked Python example (.py)",
+        "href": "examples/values.py",
+        "type": "code"
+      },
+      {
+        "label": "Printable foundations activities",
+        "href": "../activities/programming-foundations/#lesson-02",
+        "type": "activity"
+      },
+      {
+        "label": "Student workbook · PDF (16 pages)",
+        "href": "../activities/programming-foundations/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Foundations teacher answers",
+        "href": "../activities/programming-foundations/teacher.html",
+        "type": "teacher"
+      }
+    ]
+  },
+  {
+    "id": "representation",
+    "title": "Numbers and characters in a computer",
+    "intro": "Binary, decimal and hexadecimal are different ways to write a number. Character encodings connect numbers with text.",
+    "unit": 1,
+    "year": 11,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#representation",
+        "type": "reading"
+      },
+      {
+        "label": "Worked Python example (.py)",
+        "href": "examples/representation.py",
+        "type": "code"
+      },
+      {
+        "label": "Printable foundations activities",
+        "href": "../activities/programming-foundations/#lesson-04",
+        "type": "activity"
+      },
+      {
+        "label": "Student workbook · PDF (16 pages)",
+        "href": "../activities/programming-foundations/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Foundations teacher answers",
+        "href": "../activities/programming-foundations/teacher.html",
+        "type": "teacher"
+      }
+    ]
+  },
+  {
+    "id": "selection",
+    "title": "Making decisions with selection",
+    "intro": "Compare values, choose branches and test boundary cases.",
+    "unit": 1,
+    "year": 11,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#selection",
+        "type": "reading"
+      },
+      {
+        "label": "Worked Python example (.py)",
+        "href": "examples/selection.py",
+        "type": "code"
+      },
+      {
+        "label": "Printable foundations activities",
+        "href": "../activities/programming-foundations/#lesson-05",
+        "type": "activity"
+      },
+      {
+        "label": "Student workbook · PDF (16 pages)",
+        "href": "../activities/programming-foundations/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Foundations teacher answers",
+        "href": "../activities/programming-foundations/teacher.html",
+        "type": "teacher"
+      }
+    ]
+  },
+  {
+    "id": "loops",
+    "title": "Repeating work with loops",
+    "intro": "A loop repeats instructions. This repetition is called iteration. Decide what repeats, what changes, and what makes the loop stop.",
+    "unit": 1,
+    "year": 11,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#loops",
+        "type": "reading"
+      },
+      {
+        "label": "Worked Python example (.py)",
+        "href": "examples/loops.py",
+        "type": "code"
+      }
+    ]
+  },
+  {
+    "id": "functions",
+    "title": "Functions and scope",
+    "intro": "Give one useful task a name, define its inputs and return its result. Small functions make a program easier to understand and test.",
+    "unit": 1,
+    "year": 11,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#functions",
+        "type": "reading"
+      },
+      {
+        "label": "Worked Python example (.py)",
+        "href": "examples/functions.py",
+        "type": "code"
+      }
+    ]
+  },
+  {
+    "id": "arrays",
+    "title": "Working with one-dimensional arrays",
+    "intro": "Store related values in a list. Visit them one at a time to find totals, minimums and maximums. These Python lists let you practice array-style algorithms.",
+    "unit": 1,
+    "year": 11,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#arrays",
+        "type": "reading"
+      },
+      {
+        "label": "Worked Python example (.py)",
+        "href": "examples/arrays.py",
+        "type": "code"
+      }
+    ]
+  },
+  {
+    "id": "files",
+    "title": "Text files and reliable input",
+    "intro": "A program should preserve useful results and respond clearly when input is unsuitable. Combine file processing with deliberate validation.",
+    "unit": 1,
+    "year": 11,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#files",
+        "type": "reading"
+      },
+      {
+        "label": "Worked Python example (.py)",
+        "href": "examples/files.py",
+        "type": "code"
+      }
+    ]
+  },
+  {
+    "id": "design",
+    "title": "Designing and testing solutions",
+    "intro": "Investigate, design, build and evaluate the shared Year 11 Pygame game using one equivalent theme and 10 existing supervised workshops.",
+    "unit": 1,
+    "year": 11,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#design",
+        "type": "reading"
+      },
+      {
+        "label": "Printable foundations activities",
+        "href": "../activities/programming-foundations/#lesson-03",
+        "type": "activity"
+      },
+      {
+        "label": "Student workbook · PDF (16 pages)",
+        "href": "../activities/programming-foundations/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Foundations teacher answers",
+        "href": "../activities/programming-foundations/teacher.html",
+        "type": "teacher"
+      },
+      {
+        "label": "scenario brief · y11 t1 space",
+        "href": "../assessments/briefs/y11-t1-space.md",
+        "type": "print"
+      },
+      {
+        "label": "starter ZIP · y11 t1 space starter",
+        "href": "../assessments/y11-t1-space-starter.zip",
+        "type": "download"
+      },
+      {
+        "label": "scenario brief · y11 t1 reef",
+        "href": "../assessments/briefs/y11-t1-reef.md",
+        "type": "print"
+      },
+      {
+        "label": "starter ZIP · y11 t1 reef starter",
+        "href": "../assessments/y11-t1-reef-starter.zip",
+        "type": "download"
+      },
+      {
+        "label": "scenario brief · y11 t1 castle",
+        "href": "../assessments/briefs/y11-t1-castle.md",
+        "type": "print"
+      },
+      {
+        "label": "starter ZIP · y11 t1 castle starter",
+        "href": "../assessments/y11-t1-castle-starter.zip",
+        "type": "download"
+      },
+      {
+        "label": "scenario brief · y11 t1 circuit",
+        "href": "../assessments/briefs/y11-t1-circuit.md",
+        "type": "print"
+      },
+      {
+        "label": "starter ZIP · y11 t1 circuit starter",
+        "href": "../assessments/y11-t1-circuit-starter.zip",
+        "type": "download"
+      },
+      {
+        "label": "scenario brief · y11 t1 museum",
+        "href": "../assessments/briefs/y11-t1-museum.md",
+        "type": "print"
+      },
+      {
+        "label": "starter ZIP · y11 t1 museum starter",
+        "href": "../assessments/y11-t1-museum-starter.zip",
+        "type": "download"
+      },
+      {
+        "label": "Full year-level contract",
+        "href": "../assessments/games/year11-requirements.md",
+        "type": "print"
+      },
+      {
+        "label": "Common marking guide",
+        "href": "../assessments/games/year11-marking-guide.md",
+        "type": "teacher"
+      },
+      {
+        "label": "shared expected cases",
+        "href": "../assessments/games/year11-acceptance.csv",
+        "type": "activity"
+      },
+      {
+        "label": "game test log",
+        "href": "../project-test-log.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Current game brief",
+        "href": "../project-brief.md",
+        "type": "print"
+      },
+      {
+        "label": "Aligned project workbook",
+        "href": "../project-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "All five theme starters and teaching pack",
+        "href": "../project-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Workshop milestone CSV",
+        "href": "../project-milestones.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Teacher delivery notes",
+        "href": "../project-teacher-guide.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Optional legacy console practice",
+        "href": "../legacy-projects/index.html",
+        "type": "activity"
+      }
+    ]
+  },
+  {
+    "id": "networks",
+    "title": "Network foundations",
+    "intro": "When you open a website, several network jobs happen together. Follow the message and learn which layer handles each job.",
+    "unit": 1,
+    "year": 11,
+    "topic": "Networks",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#networks",
+        "type": "reading"
+      }
+    ]
+  },
+  {
+    "id": "addressing",
+    "title": "Addresses, devices and media",
+    "intro": "Decide whether a message stays on the local network or needs a router. Then choose addresses, devices and connections that fit the setting.",
+    "unit": 1,
+    "year": 11,
+    "topic": "Networks",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#addressing",
+        "type": "reading"
+      }
+    ]
+  },
+  {
+    "id": "network-design",
+    "title": "Designing and protecting a network",
+    "intro": "Design a network for a school scenario. Show how it connects, who can use each resource, and what might limit its performance.",
+    "unit": 1,
+    "year": 11,
+    "topic": "Networks",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#network-design",
+        "type": "reading"
+      }
+    ]
+  },
+  {
+    "id": "network-review",
+    "title": "Network scenarios and review",
+    "intro": "Use the network ideas together in a library scenario. Explain each choice, then compare your reasoning with the answers.",
+    "unit": 1,
+    "year": 11,
+    "topic": "Review and revision",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#network-review",
+        "type": "reading"
+      }
+    ]
+  },
+  {
+    "id": "software-responsibility",
+    "title": "Software, ownership and licensing",
+    "intro": "Before you copy or adapt code, check what its licence allows. Giving credit and having permission are separate responsibilities.",
+    "unit": 1,
+    "year": 11,
+    "topic": "Security and responsibility",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#software-responsibility",
+        "type": "reading"
+      }
+    ]
+  },
+  {
+    "id": "consolidation",
+    "title": "Unit 1 consolidation",
+    "intro": "Find one idea you are unsure about, practice it, then try a new example. Use your results to choose what to work on next.",
+    "unit": 1,
+    "year": 11,
+    "topic": "Review and revision",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#consolidation",
+        "type": "reading"
+      }
+    ]
+  },
+  {
+    "id": "exam-preparation",
+    "title": "Unit 1 exam preparation",
+    "intro": "Try a mixed set of questions, explain how you reached each answer, and use mistakes to choose your next revision task.",
+    "unit": 1,
+    "year": 11,
+    "topic": "Review and revision",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#exam-preparation",
+        "type": "reading"
+      },
+      {
+        "label": "Download questions only",
+        "href": "../unit1-practice-paper.md",
+        "type": "print"
+      },
+      {
+        "label": "Download explained answers",
+        "href": "../unit1-practice-answers.md",
+        "type": "teacher"
+      }
+    ]
+  },
+  {
+    "id": "database-foundations",
+    "title": "Relational database foundations",
+    "intro": "Find out what a school equipment desk needs to know, then use its loan records to answer a question. You will compare a simple register with related database tables.",
+    "unit": 2,
+    "year": 11,
+    "topic": "Databases and SQL",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#database-foundations",
+        "type": "reading"
+      },
+      {
+        "label": "Download synthetic loan data",
+        "href": "../equipment-loans-flat.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Download student workbook",
+        "href": "../database-foundations-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Download explained answers",
+        "href": "../database-foundations-answers.md",
+        "type": "teacher"
+      }
+    ]
+  },
+  {
+    "id": "entities-relationships",
+    "title": "Modelling entities and relationships",
+    "intro": "Decide what each table should store before you build it. You will identify borrowers, equipment and loan events, then connect them with keys and clear relationship rules.",
+    "unit": 2,
+    "year": 11,
+    "topic": "Databases and SQL",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#entities-relationships",
+        "type": "reading"
+      },
+      {
+        "label": "Download the worked SVG diagram",
+        "href": "../equipment-model.svg",
+        "type": "activity"
+      },
+      {
+        "label": "Download student workbook",
+        "href": "../relationships-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Download explained answers",
+        "href": "../relationships-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Borrower",
+        "href": "../model-borrowers.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Category",
+        "href": "../model-categories.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Equipment",
+        "href": "../model-equipment.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Loan",
+        "href": "../model-loans.csv",
+        "type": "activity"
+      }
+    ]
+  },
+  {
+    "id": "normalisation",
+    "title": "Normalisation",
+    "intro": "Find out why repeated facts make a register hard to maintain. You will reorganise reservation records into related tables while keeping every original event. This process is called normalisation.",
+    "unit": 2,
+    "year": 11,
+    "topic": "Databases and SQL",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#normalisation",
+        "type": "reading"
+      },
+      {
+        "label": "Download student workbook",
+        "href": "../normalisation-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Download explained answers",
+        "href": "../normalisation-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Download all stages: starter JSON and eight CSV tables",
+        "href": "../normalisation-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "1NF register only",
+        "href": "../normalisation-1nf-register.csv",
+        "type": "activity"
+      }
+    ]
+  },
+  {
+    "id": "sql-basics",
+    "title": "Getting started with SQL",
+    "intro": "Ask the equipment-loan database a question using SQL. You will choose columns, filter rows and sort the result, then compare it with the source records.",
+    "unit": 2,
+    "year": 11,
+    "topic": "Databases and SQL",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#sql-basics",
+        "type": "reading"
+      },
+      {
+        "label": "Download SQLite starter",
+        "href": "../sql-starter.sqlite",
+        "type": "activity"
+      },
+      {
+        "label": "Download complete SQL pack",
+        "href": "../sql-starter-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Student workbook",
+        "href": "../sql-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained answers",
+        "href": "../sql-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Worked query file",
+        "href": "../sql-worked-queries.sql",
+        "type": "code"
+      },
+      {
+        "label": "Expected results",
+        "href": "../sql-expected-results.json",
+        "type": "activity"
+      }
+    ]
+  },
+  {
+    "id": "database-solution",
+    "title": "Building a database solution",
+    "intro": "Build a database that helps the equipment desk answer real questions. You will join related records, calculate summaries and make controlled changes, checking each result against a requirement.",
+    "unit": 2,
+    "year": 11,
+    "topic": "Databases and SQL",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#database-solution",
+        "type": "reading"
+      },
+      {
+        "label": "Download database project pack",
+        "href": "../database-project-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Download project starter",
+        "href": "../database-project.sqlite",
+        "type": "activity"
+      },
+      {
+        "label": "Student project brief",
+        "href": "../database-project-brief.md",
+        "type": "print"
+      },
+      {
+        "label": "Practice workbook",
+        "href": "../database-project-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained answers and teacher checkpoints",
+        "href": "../database-project-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Test-log template",
+        "href": "../database-project-test-log.csv",
+        "type": "activity"
+      }
+    ]
+  },
+  {
+    "id": "security-threats",
+    "title": "Threats and protective measures",
+    "intro": "Work out what happened before choosing a security control. You will use the equipment desk to explain threats, access controls and encryption, then practice historical ciphers to see their limits.",
+    "unit": 2,
+    "year": 11,
+    "topic": "Security and responsibility",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#security-threats",
+        "type": "reading"
+      },
+      {
+        "label": "Download student workbook",
+        "href": "../security-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Download explained answers",
+        "href": "../security-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Eight incident scenarios",
+        "href": "../security-scenarios.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Risk/control template",
+        "href": "../security-risk-register.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Cipher exercises",
+        "href": "../security-cipher-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Complete security pack",
+        "href": "../security-pack.zip",
+        "type": "download"
+      }
+    ]
+  },
+  {
+    "id": "responsible-data",
+    "title": "Responsible data use",
+    "intro": "Decide what the equipment desk should collect, who may use it and what may be shared. You will connect privacy, security and ethical testing to practical choices, using evidence to explain each decision.",
+    "unit": 2,
+    "year": 11,
+    "topic": "Security and responsibility",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#responsible-data",
+        "type": "reading"
+      },
+      {
+        "label": "Download student workbook",
+        "href": "../responsible-data-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Download explained answers",
+        "href": "../responsible-data-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Eight decision scenarios",
+        "href": "../responsible-data-scenarios.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Privacy and evaluation template",
+        "href": "../responsible-data-review.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Testing-scope exercise",
+        "href": "../responsible-data-scope.md",
+        "type": "print"
+      },
+      {
+        "label": "Complete pack",
+        "href": "../responsible-data-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Source record and currency notes",
+        "href": "../responsible-data-sources.md",
+        "type": "print"
+      }
+    ]
+  },
+  {
+    "id": "unit2-review",
+    "title": "Unit 2 integrated review",
+    "intro": "Bring the Unit 2 ideas together in a fresh equipment-desk example. You will check data quality, read a larger model and compare a planned design with what the database actually enforces.",
+    "unit": 2,
+    "year": 11,
+    "topic": "Review and revision",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit2-review",
+        "type": "reading"
+      },
+      {
+        "label": "Eight-lesson workbook",
+        "href": "../unit2-review-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained checkpoints",
+        "href": "../unit2-review-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Six-table diagram",
+        "href": "../unit2-six-table-model.svg",
+        "type": "activity"
+      }
+    ]
+  },
+  {
+    "id": "unit2-consolidation",
+    "title": "Unit 2 consolidation",
+    "intro": "Choose what you need to practice by trying a short explanation first. Then use focused activities and new examples to strengthen the ideas you find hardest.",
+    "unit": 2,
+    "year": 11,
+    "topic": "Review and revision",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit2-consolidation",
+        "type": "reading"
+      },
+      {
+        "label": "Consolidation workbook and revision log instructions",
+        "href": "../unit2-consolidation-workbook.md",
+        "type": "print"
+      }
+    ]
+  },
+  {
+    "id": "unit2-exam",
+    "title": "Unit 2 exam preparation",
+    "intro": "Use an original practice paper to find what you can explain independently. Compare your reasoning with the guide, revisit unclear ideas and try a changed example.",
+    "unit": 2,
+    "year": 11,
+    "topic": "Review and revision",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit2-exam",
+        "type": "reading"
+      },
+      {
+        "label": "Download student paper",
+        "href": "../unit2-practice-paper.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained answers",
+        "href": "../unit2-practice-marking-guide.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Diagram for Q4",
+        "href": "../unit2-six-table-model.svg",
+        "type": "activity"
+      },
+      {
+        "label": "Project database for checking after the attempt",
+        "href": "../database-project.sqlite",
+        "type": "activity"
+      }
+    ]
+  },
+  {
+    "id": "unit3-fluency",
+    "title": "Rebuilding Python fluency",
+    "intro": "Find what needs repair, explain the fix and prove it with a fresh test. Rebuild the programming habits needed for Year 12 before moving to richer data structures.",
+    "unit": 3,
+    "year": 12,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit3-fluency",
+        "type": "reading"
+      },
+      {
+        "label": "Worked Python example (.py)",
+        "href": "examples/unit3-fluency.py",
+        "type": "code"
+      },
+      {
+        "label": "Download diagnostic",
+        "href": "../unit3-diagnostic.md",
+        "type": "print"
+      },
+      {
+        "label": "Separate answers",
+        "href": "../unit3-fluency-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Foundation repair workbook",
+        "href": "../unit3-foundations-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained answers",
+        "href": "../unit3-foundations-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Offline reference",
+        "href": "../unit3-foundations-reference.py",
+        "type": "teacher"
+      },
+      {
+        "label": "Workbook",
+        "href": "../unit3-fluency-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Unfinished Python scaffold",
+        "href": "../unit3-fluency-starter.py",
+        "type": "code"
+      },
+      {
+        "label": "Separate worked solution",
+        "href": "../unit3-fluency-solution.py",
+        "type": "teacher"
+      },
+      {
+        "label": "Repair log",
+        "href": "../unit3-repair-log.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Complete pack",
+        "href": "../unit3-fluency-pack.zip",
+        "type": "download"
+      }
+    ]
+  },
+  {
+    "id": "unit3-structures",
+    "title": "Advanced data structures",
+    "intro": "Organise data by position and by key, then explain precisely what a function changes.",
+    "unit": 3,
+    "year": 12,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit3-structures",
+        "type": "reading"
+      },
+      {
+        "label": "Worked Python example (.py)",
+        "href": "examples/unit3-structures.py",
+        "type": "code"
+      },
+      {
+        "label": "Download classroom pack",
+        "href": "../unit3-structures-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Student workbook",
+        "href": "../unit3-structures-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained answers",
+        "href": "../unit3-structures-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Scope practice",
+        "href": "../unit3-foundations-workbook.md",
+        "type": "print"
+      }
+    ]
+  },
+  {
+    "id": "unit3-search",
+    "title": "Searching: linear and binary",
+    "intro": "Find a record, explain each step and compare how the work grows as the data grows.",
+    "unit": 3,
+    "year": 12,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit3-search",
+        "type": "reading"
+      },
+      {
+        "label": "Worked Python example (.py)",
+        "href": "examples/unit3-search.py",
+        "type": "code"
+      },
+      {
+        "label": "Download classroom pack",
+        "href": "../unit3-search-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Student workbook",
+        "href": "../unit3-search-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained answers",
+        "href": "../unit3-search-answers.md",
+        "type": "teacher"
+      }
+    ]
+  },
+  {
+    "id": "unit3-sort",
+    "title": "Sorting algorithms",
+    "intro": "Reorder data with three different strategies, trace what changes and justify the work each algorithm does.",
+    "unit": 3,
+    "year": 12,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit3-sort",
+        "type": "reading"
+      },
+      {
+        "label": "Worked Python example (.py)",
+        "href": "examples/unit3-sort.py",
+        "type": "code"
+      },
+      {
+        "label": "Download classroom pack",
+        "href": "../unit3-sort-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Student workbook",
+        "href": "../unit3-sort-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained answers",
+        "href": "../unit3-sort-answers.md",
+        "type": "teacher"
+      }
+    ]
+  },
+  {
+    "id": "unit3-objects",
+    "title": "Objects and classes in Python",
+    "intro": "Give each object its own state and a clear interface, then prove that its methods preserve the rules.",
+    "unit": 3,
+    "year": 12,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit3-objects",
+        "type": "reading"
+      },
+      {
+        "label": "Worked Python example (.py)",
+        "href": "examples/unit3-objects.py",
+        "type": "code"
+      },
+      {
+        "label": "Download classroom pack",
+        "href": "../unit3-objects-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Student workbook",
+        "href": "../unit3-objects-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained answers",
+        "href": "../unit3-objects-answers.md",
+        "type": "teacher"
+      }
+    ]
+  },
+  {
+    "id": "unit3-inheritance",
+    "title": "Extending object-oriented design",
+    "intro": "Reuse a common interface, specialise behaviour and explain which method a mixed collection calls.",
+    "unit": 3,
+    "year": 12,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit3-inheritance",
+        "type": "reading"
+      },
+      {
+        "label": "Worked Python example (.py)",
+        "href": "examples/unit3-inheritance.py",
+        "type": "code"
+      },
+      {
+        "label": "Download classroom pack",
+        "href": "../unit3-inheritance-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Student workbook",
+        "href": "../unit3-inheritance-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Optional practical",
+        "href": "../unit3-inheritance-practical.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained guide",
+        "href": "../unit3-inheritance-answers.md",
+        "type": "teacher"
+      }
+    ]
+  },
+  {
+    "id": "unit3-project",
+    "title": "Developing a software solution",
+    "intro": "Investigate, design, build and evaluate the shared Year 12 Pygame game using one equivalent theme and 12 existing supervised workshops.",
+    "unit": 3,
+    "year": 12,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit3-project",
+        "type": "reading"
+      },
+      {
+        "label": "scenario brief · y12 t1 space",
+        "href": "../assessments/briefs/y12-t1-space.md",
+        "type": "print"
+      },
+      {
+        "label": "starter ZIP · y12 t1 space starter",
+        "href": "../assessments/y12-t1-space-starter.zip",
+        "type": "download"
+      },
+      {
+        "label": "scenario brief · y12 t1 reef",
+        "href": "../assessments/briefs/y12-t1-reef.md",
+        "type": "print"
+      },
+      {
+        "label": "starter ZIP · y12 t1 reef starter",
+        "href": "../assessments/y12-t1-reef-starter.zip",
+        "type": "download"
+      },
+      {
+        "label": "scenario brief · y12 t1 castle",
+        "href": "../assessments/briefs/y12-t1-castle.md",
+        "type": "print"
+      },
+      {
+        "label": "starter ZIP · y12 t1 castle starter",
+        "href": "../assessments/y12-t1-castle-starter.zip",
+        "type": "download"
+      },
+      {
+        "label": "scenario brief · y12 t1 circuit",
+        "href": "../assessments/briefs/y12-t1-circuit.md",
+        "type": "print"
+      },
+      {
+        "label": "starter ZIP · y12 t1 circuit starter",
+        "href": "../assessments/y12-t1-circuit-starter.zip",
+        "type": "download"
+      },
+      {
+        "label": "scenario brief · y12 t1 museum",
+        "href": "../assessments/briefs/y12-t1-museum.md",
+        "type": "print"
+      },
+      {
+        "label": "starter ZIP · y12 t1 museum starter",
+        "href": "../assessments/y12-t1-museum-starter.zip",
+        "type": "download"
+      },
+      {
+        "label": "Full year-level contract",
+        "href": "../assessments/games/year12-requirements.md",
+        "type": "print"
+      },
+      {
+        "label": "Common marking guide",
+        "href": "../assessments/games/year12-marking-guide.md",
+        "type": "teacher"
+      },
+      {
+        "label": "shared expected cases",
+        "href": "../assessments/games/year12-acceptance.csv",
+        "type": "activity"
+      },
+      {
+        "label": "game test log",
+        "href": "../unit3-project-test-log.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Current game brief",
+        "href": "../unit3-project-brief.md",
+        "type": "print"
+      },
+      {
+        "label": "Aligned project workbook",
+        "href": "../unit3-project-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "All five theme starters and teaching pack",
+        "href": "../unit3-project-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Workshop milestone CSV",
+        "href": "../unit3-project-gantt.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Teacher delivery notes",
+        "href": "../unit3-project-teacher-guide.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Optional legacy console practice",
+        "href": "../legacy-projects/index.html",
+        "type": "activity"
+      },
+      {
+        "label": "View the aligned phase Gantt",
+        "href": "../unit3-project-gantt.svg",
+        "type": "activity"
+      }
+    ]
+  },
+  {
+    "id": "unit3-reliability",
+    "title": "Reliable software: testing and review",
+    "intro": "Choose meaningful tests, isolate defects and review changes using evidence from the equipment-loan project.",
+    "unit": 3,
+    "year": 12,
+    "topic": "Programming and design",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit3-reliability",
+        "type": "reading"
+      },
+      {
+        "label": "Download classroom pack",
+        "href": "../unit3-reliability-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Student workbook",
+        "href": "../unit3-reliability-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Acceptance scenarios",
+        "href": "../unit3-reliability-acceptance.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained guide",
+        "href": "../unit3-reliability-answers.md",
+        "type": "teacher"
+      }
+    ]
+  },
+  {
+    "id": "unit3-network-models",
+    "title": "Network models and protocols",
+    "intro": "Follow a message through layered responsibilities, distinguish switching from routing and explain TCP/UDP transport.",
+    "unit": 3,
+    "year": 12,
+    "topic": "Networks",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit3-network-models",
+        "type": "reading"
+      },
+      {
+        "label": "Download offline sizing script",
+        "href": "../unit3-network-sizing.py",
+        "type": "code"
+      },
+      {
+        "label": "Download classroom pack",
+        "href": "../unit3-network-models-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Student workbook",
+        "href": "../unit3-network-models-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained answers",
+        "href": "../unit3-network-models-answers.md",
+        "type": "teacher"
+      }
+    ]
+  },
+  {
+    "id": "unit3-addressing",
+    "title": "Addressing and subnetting",
+    "intro": "Read the prefix, calculate the range and design an address plan that includes every required interface.",
+    "unit": 3,
+    "year": 12,
+    "topic": "Networks",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit3-addressing",
+        "type": "reading"
+      },
+      {
+        "label": "Download offline calculator",
+        "href": "../unit3-addressing-calculator.py",
+        "type": "code"
+      },
+      {
+        "label": "Download classroom pack",
+        "href": "../unit3-addressing-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Student workbook",
+        "href": "../unit3-addressing-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained answers",
+        "href": "../unit3-addressing-answers.md",
+        "type": "teacher"
+      }
+    ]
+  },
+  {
+    "id": "unit3-secure-networks",
+    "title": "Designing secure networks",
+    "intro": "Turn an address plan into a network design: justify components, restrict traffic, calculate capacity and test your predictions.",
+    "unit": 3,
+    "year": 12,
+    "topic": "Networks",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit3-secure-networks",
+        "type": "reading"
+      },
+      {
+        "label": "Download classroom pack",
+        "href": "../unit3-secure-networks-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Student workbook",
+        "href": "../unit3-secure-networks-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained answers",
+        "href": "../unit3-secure-networks-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Offline model",
+        "href": "../unit3-secure-networks-model.py",
+        "type": "code"
+      }
+    ]
+  },
+  {
+    "id": "unit3-review",
+    "title": "Unit 3 integrated review",
+    "intro": "Bring code, software design and network reasoning together, then turn each error into a precise revision action.",
+    "unit": 3,
+    "year": 12,
+    "topic": "Review and revision",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit3-review",
+        "type": "reading"
+      },
+      {
+        "label": "Download integrated review pack",
+        "href": "../unit3-review-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Student workbook",
+        "href": "../unit3-review-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Optional mixed practice",
+        "href": "../unit3-review-practice.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained answers",
+        "href": "../unit3-review-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Python starter",
+        "href": "../unit3-review-starter.py",
+        "type": "code"
+      }
+    ]
+  },
+  {
+    "id": "unit3-consolidation",
+    "title": "Unit 3 consolidation",
+    "intro": "Use the evidence from your review to repair misconceptions, transfer the rules to fresh cases and plan the final revision week.",
+    "unit": 3,
+    "year": 12,
+    "topic": "Review and revision",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit3-consolidation",
+        "type": "reading"
+      },
+      {
+        "label": "Download consolidation pack",
+        "href": "../unit3-consolidation-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Student workbook",
+        "href": "../unit3-consolidation-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained answers",
+        "href": "../unit3-consolidation-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Python starter",
+        "href": "../unit3-consolidation-starter.py",
+        "type": "code"
+      }
+    ]
+  },
+  {
+    "id": "unit3-exam",
+    "title": "Unit 3 exam preparation",
+    "intro": "Practice reading, pacing and showing your reasoning, then correct the gaps exposed by an original Unit 3 paper.",
+    "unit": 3,
+    "year": 12,
+    "topic": "Review and revision",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit3-exam",
+        "type": "reading"
+      },
+      {
+        "label": "Download exam-preparation pack",
+        "href": "../unit3-exam-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Original optional mixed practice",
+        "href": "../unit3-exam-practice.md",
+        "type": "print"
+      },
+      {
+        "label": "Stimulus",
+        "href": "../unit3-exam-stimulus.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained answers",
+        "href": "../unit3-exam-answers.md",
+        "type": "teacher"
+      }
+    ]
+  },
+  {
+    "id": "unit4-design",
+    "title": "Refining relational database designs",
+    "intro": "Turn requirements and dependencies into a six-table model, then check what the keys and constraints actually enforce.",
+    "unit": 4,
+    "year": 12,
+    "topic": "Databases and SQL",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit4-design",
+        "type": "reading"
+      },
+      {
+        "label": "Download design pack",
+        "href": "../unit4-design-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Workbook",
+        "href": "../unit4-design-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Teacher answers",
+        "href": "../unit4-design-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Data dictionary",
+        "href": "../unit4-design-dictionary.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Schema and synthetic data",
+        "href": "../unit4-design-schema.sql",
+        "type": "code"
+      },
+      {
+        "label": "Open printable worksheet",
+        "href": "../unit4-er-interpretation.html",
+        "type": "activity"
+      },
+      {
+        "label": "Download questions",
+        "href": "../unit4-er-interpretation-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Download explained answers",
+        "href": "../unit4-er-interpretation-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Download complete pack",
+        "href": "../unit4-er-interpretation-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Download diagram",
+        "href": "../unit4-er-ten-table.svg",
+        "type": "activity"
+      }
+    ]
+  },
+  {
+    "id": "unit4-sql",
+    "title": "Advanced SQL queries",
+    "intro": "Write multi-table reports that count the right thing, preserve missing relationships and explain every calculated result.",
+    "unit": 4,
+    "year": 12,
+    "topic": "Databases and SQL",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit4-sql",
+        "type": "reading"
+      },
+      {
+        "label": "Download query pack",
+        "href": "../unit4-sql-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Workbook",
+        "href": "../unit4-sql-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Teacher explanations",
+        "href": "../unit4-sql-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Worked SQL",
+        "href": "../unit4-sql-queries.sql",
+        "type": "code"
+      }
+    ]
+  },
+  {
+    "id": "unit4-project",
+    "title": "Database development and evaluation",
+    "intro": "Build and test a six-table workshop system with controlled changes, atomic operations and requirement-linked recovery evidence.",
+    "unit": 4,
+    "year": 12,
+    "topic": "Databases and SQL",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit4-project",
+        "type": "reading"
+      },
+      {
+        "label": "Download project pack",
+        "href": "../unit4-project-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Student brief",
+        "href": "../unit4-project-brief.md",
+        "type": "print"
+      },
+      {
+        "label": "Evidence workbook",
+        "href": "../unit4-project-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Reference explanations and self-review checklist",
+        "href": "../unit4-project-teacher.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Open printable worksheet",
+        "href": "../unit4-data-quality.html",
+        "type": "activity"
+      },
+      {
+        "label": "Download questions",
+        "href": "../unit4-data-quality-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Download explained answers",
+        "href": "../unit4-data-quality-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Download complete pack",
+        "href": "../unit4-data-quality-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Raw CSV",
+        "href": "../unit4-data-quality-raw.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Source register",
+        "href": "../unit4-data-quality-sources.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Reference counts",
+        "href": "../unit4-data-quality-reference.csv",
+        "type": "teacher"
+      },
+      {
+        "label": "Blank matrix",
+        "href": "../unit4-data-quality-matrix.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Illustrative cleaned CSV",
+        "href": "../unit4-data-quality-clean-example.csv",
+        "type": "activity"
+      },
+      {
+        "label": "Explained decision log",
+        "href": "../unit4-data-quality-decision-log.csv",
+        "type": "activity"
+      }
+    ]
+  },
+  {
+    "id": "unit4-analysis",
+    "title": "Cyber security analysis",
+    "intro": "Explain the asset, threat and consequence, then use evidence to test your hypothesis rather than treating an alert as a verdict.",
+    "unit": 4,
+    "year": 12,
+    "topic": "Security and responsibility",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit4-analysis",
+        "type": "reading"
+      },
+      {
+        "label": "Download analysis pack",
+        "href": "../unit4-analysis-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Workbook",
+        "href": "../unit4-analysis-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Twelve scenario cards",
+        "href": "../unit4-analysis-cases.md",
+        "type": "print"
+      },
+      {
+        "label": "Teacher explanations",
+        "href": "../unit4-analysis-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Synthetic event log",
+        "href": "../unit4-analysis-log.csv",
+        "type": "activity"
+      }
+    ]
+  },
+  {
+    "id": "unit4-controls",
+    "title": "Security controls and responses",
+    "intro": "Match a control to the mechanism, test permitted and prohibited behaviour, and plan a proportionate response with evidence.",
+    "unit": 4,
+    "year": 12,
+    "topic": "Security and responsibility",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit4-controls",
+        "type": "reading"
+      },
+      {
+        "label": "Download control and response pack",
+        "href": "../unit4-controls-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Workbook",
+        "href": "../unit4-controls-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Teacher checkpoints",
+        "href": "../unit4-controls-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Offline rule model",
+        "href": "../unit4-controls-model.py",
+        "type": "code"
+      }
+    ]
+  },
+  {
+    "id": "unit4-crypto",
+    "title": "Secure communication and cryptography",
+    "intro": "Explain what encryption, signatures and certificates protect, then trace how an authenticated connection uses those mechanisms together.",
+    "unit": 4,
+    "year": 12,
+    "topic": "Security and responsibility",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit4-crypto",
+        "type": "reading"
+      },
+      {
+        "label": "Download cryptography lesson pack",
+        "href": "../unit4-crypto-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Workbook",
+        "href": "../unit4-crypto-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Teacher checkpoints",
+        "href": "../unit4-crypto-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Python activity",
+        "href": "../unit4-crypto-model.py",
+        "type": "code"
+      }
+    ]
+  },
+  {
+    "id": "unit4-ethics",
+    "title": "Ethical and legal considerations",
+    "intro": "Apply privacy principles to a supplied case, justify responsible data use, and explain how authorised testing improves security.",
+    "unit": 4,
+    "year": 12,
+    "topic": "Security and responsibility",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit4-ethics",
+        "type": "reading"
+      },
+      {
+        "label": "Licences and attribution",
+        "href": "../licence.html",
+        "type": "activity"
+      },
+      {
+        "label": "Download ethics and law lesson pack",
+        "href": "../unit4-ethics-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Student workbook",
+        "href": "../unit4-ethics-workbook.md",
+        "type": "print"
+      },
+      {
+        "label": "Case cards",
+        "href": "../unit4-ethics-cases.md",
+        "type": "print"
+      },
+      {
+        "label": "Teacher checkpoints",
+        "href": "../unit4-ethics-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Offline data activity",
+        "href": "../unit4-ethics-model.py",
+        "type": "code"
+      }
+    ]
+  },
+  {
+    "id": "unit4-review",
+    "title": "Unit 4 integrated review",
+    "intro": "Bring database design, SQL and security decisions together, then use fresh evidence to find what needs another attempt.",
+    "unit": 4,
+    "year": 12,
+    "topic": "Review and revision",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit4-review",
+        "type": "reading"
+      },
+      {
+        "label": "Download integrated review pack",
+        "href": "../unit4-review-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Student workbook",
+        "href": "../unit4-review-questions.md",
+        "type": "print"
+      },
+      {
+        "label": "Teacher checkpoints",
+        "href": "../unit4-review-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Mixed-practice worksheet",
+        "href": "../unit4-review-timed.md",
+        "type": "print"
+      },
+      {
+        "label": "Feedback and retry record",
+        "href": "../unit4-review-feedback.md",
+        "type": "print"
+      },
+      {
+        "label": "Reference SQL checker",
+        "href": "../unit4-review-runner.py",
+        "type": "teacher"
+      }
+    ]
+  },
+  {
+    "id": "unit4-consolidation",
+    "title": "Full-course consolidation",
+    "intro": "Use evidence to repair two priority causes, connect the course strands and demonstrate improvement on changed tasks.",
+    "unit": 4,
+    "year": 12,
+    "topic": "Review and revision",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit4-consolidation",
+        "type": "reading"
+      },
+      {
+        "label": "Download full-course consolidation pack",
+        "href": "../unit4-consolidation-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Diagnostic",
+        "href": "../unit4-consolidation-diagnostic.md",
+        "type": "print"
+      },
+      {
+        "label": "Repair workbook",
+        "href": "../unit4-consolidation-stations.md",
+        "type": "print"
+      },
+      {
+        "label": "Fresh retries",
+        "href": "../unit4-consolidation-transfer.md",
+        "type": "print"
+      },
+      {
+        "label": "Teacher checkpoints",
+        "href": "../unit4-consolidation-answers.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Evidence and revision plan",
+        "href": "../unit4-consolidation-plan.md",
+        "type": "print"
+      }
+    ]
+  },
+  {
+    "id": "unit4-exam",
+    "title": "Full-course exam preparation",
+    "intro": "Practice using the source, answering the command and managing time, then turn your explanations and self-review into focused revision.",
+    "unit": 4,
+    "year": 12,
+    "topic": "Review and revision",
+    "resources": [
+      {
+        "label": "Read chapter · practice and explained answers",
+        "href": "../#unit4-exam",
+        "type": "reading"
+      },
+      {
+        "label": "Download exam-preparation pack",
+        "href": "../unit4-exam-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Source booklet",
+        "href": "../unit4-exam-source.md",
+        "type": "print"
+      },
+      {
+        "label": "Set A",
+        "href": "../unit4-exam-set-a.md",
+        "type": "print"
+      },
+      {
+        "label": "Set B",
+        "href": "../unit4-exam-set-b.md",
+        "type": "print"
+      },
+      {
+        "label": "Explained key",
+        "href": "../unit4-exam-key.md",
+        "type": "teacher"
+      },
+      {
+        "label": "Readiness record",
+        "href": "../unit4-exam-plan.md",
+        "type": "print"
+      }
+    ]
+  }
+]
