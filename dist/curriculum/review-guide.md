@@ -16,7 +16,11 @@ The official PDFs were inspected through the web-rendered source. Direct binary 
 
 All 519 leaf demands were inspected against the actual official source and teaching evidence in 111 meaningful groups. See [the readable editorial review](editorial-review.html), [review JSON](editorial-review.json) and [original follow-up workbook](teaching-follow-up.md). The initial pass found 98 supported and 13 partial groups. New explanations/examples/tasks address identified instructional weaknesses, with independent re-review still pending. Group counts are not a coverage percentage. Network-symbol visual checks and actual debugger/classroom observations remain required where stated. The candidate fields below are retained as the earlier retrieval record, while the added editorial columns report the substantive judgement.
 
-## Suggested evidence, not a coverage declaration
+## Current written-provision review
+
+The current [111-group provision review](provision-review.html) and [519-row evidence CSV](provision-review.csv) confirm written teaching, worked examples, independent practice and feedback. Prior partial groups are resolved by nominated follow-up lessons; school assessment adoption and learner execution remain separate. [Scope labels](scope.html) distinguish required skills, support-booklet conventions, implementation choices and enrichment.
+
+## Historical suggested evidence, not an approval declaration
 
 An initial retrieval pass searched nominated chapters, their rendered sections and scaffolded depth modules. It retained existing headings/code/examples/tasks and real formative question IDs as suggestions. A link confirms the resource exists, not that it satisfies the exact item, depth or independent demand. Every candidate row remains **Item review pending** for independent teacher approval, identifies the automated editorial method/date, and leaves independent reviewer/date blank. No source item is marked teacher-verified or signed off.
 

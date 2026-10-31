@@ -12,7 +12,7 @@ const checked=core.restore(JSON.stringify({version:1,checked:[bank.checkIds[0],'
 const requirements=JSON.parse(read('dist/revision/syllabus-requirements.json')),matrix=JSON.parse(read('curriculum-source/item-map.json')).items;
 assert.equal(requirements.length,111);const ids=new Set(matrix.filter(i=>!i.isParent).map(i=>i.id));const covered=new Set(requirements.flatMap(r=>r.itemIds));assert.equal(covered.size,519);for(const id of covered)assert.ok(ids.has(id),id);
 const html=read('dist/revision/index.html');assert.equal((html.match(/class="topic-card filter-card"/g)||[]).length,50);assert.equal((html.match(/class="exam-card filter-card"/g)||[]).length,60);assert.equal((html.match(/class="extension-card"/g)||[]).length,4);
-assert.ok(html.includes('not a second list of prescribed syllabus requirements'));assert.ok(html.includes('SUPPORTING EXTENSION / OPTIONAL CONTEXT'));
+assert.ok(html.includes('not a second list of prescribed syllabus requirements'));assert.ok(html.includes('SUPPORT BOOKLET + ENRICHMENT'));assert.ok(html.includes('SUPPORT / IMPLEMENTATION / ENRICHMENT'));assert.ok(html.includes('HAVING is shown in the official support booklet'));
 // Atomic fields in normalisation remain core; they are not transaction extensions.
 const normalisationStart=html.indexOf('id="exam-y12-d9"');assert.ok(normalisationStart>0);
 const normalisation=html.slice(normalisationStart,html.indexOf('</article>',normalisationStart));assert.ok(normalisation.includes('Syllabus-linked practice: an original question'));

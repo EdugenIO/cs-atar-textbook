@@ -2267,25 +2267,25 @@ B. The entity, jurisdiction and relevant date
 
 C. Only the file extension
 
-## Supporting extension - LEFT JOIN and HAVING
+## Support or enrichment - LEFT JOIN extension and support-booklet HAVING
 
-Supporting SQL extensions: useful for missing-match and group-filter reasoning, but not extra prescribed SQL keywords in the current syllabus list.
+HAVING is shown in the official support booklet (printed p22), after GROUP BY. LEFT JOIN is additional to the explicitly listed INNER JOIN work. Do not label both optional-only or treat support-booklet examples as a separate new unit-content list; teach the relevant technique before assessment.
 
 Why can COUNT(*) show one for an unmatched left-side row?
 
-## Supporting extension - Explicit SQLite transaction control
+## Support or enrichment - Explicit SQLite transaction control
 
 ACID and the role of database transactions remain syllabus-linked Year 12 requirements. This supporting lab adds explicit BEGIN/COMMIT/ROLLBACK syntax in a chosen SQLite tool; those commands are not an extra prescribed keyword list. Teach the chosen tool/driver behaviour before requiring the implementation locally.
 
 Does an ordinary statement error always undo earlier statements automatically?
 
-## Supporting extension - Drone, VR and network-pod contexts
+## Support or enrichment - Drone, VR and network-pod contexts
 
 Optional delivery contexts. Specialist equipment and vendor-specific procedures are not general textbook prerequisites.
 
 How can a learner practise a network-policy decision without a network pod?
 
-## Supporting extension - Additional computer-systems context
+## Support or enrichment - Additional computer-systems context
 
 CPU pipeline and recorder-buffer examples in the activity pack are supporting context; they are not automatically additional examinable content. Binary/character representation remains in the syllabus-linked chapter material.
 

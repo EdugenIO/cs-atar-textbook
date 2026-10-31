@@ -1643,18 +1643,18 @@ Other choice: Obligations are not automatically identical in every context.
 
 Other choice: A file extension does not establish legal applicability.
 
-## Supporting extension - LEFT JOIN and HAVING
+## Support or enrichment - LEFT JOIN extension and support-booklet HAVING
 
 The outer join preserves one row with NULL child fields. COUNT(child_key) instead counts non-NULL matches.
 
-## Supporting extension - Explicit SQLite transaction control
+## Support or enrichment - Explicit SQLite transaction control
 
 No. Recovery depends on the DBMS/error and transaction boundary. Use an explicit, tested rollback strategy for the logical operation.
 
-## Supporting extension - Drone, VR and network-pod contexts
+## Support or enrichment - Drone, VR and network-pod contexts
 
 Apply the same declared rules to supplied request cards and predict outcomes. Label this as a model, not evidence of an executed network configuration.
 
-## Supporting extension - Additional computer-systems context
+## Support or enrichment - Additional computer-systems context
 
 It grows by 3 MB/s and fills after 24 / 3 = 8 seconds under the stated constant-rate assumptions.

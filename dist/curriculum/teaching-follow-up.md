@@ -271,3 +271,183 @@ Draw both paths for an attendance application and explain what may change when m
 ### Explained answer (review after attempting)
 
 ODBC path includes interface/driver selection and DBMS; direct sqlite3 does not. Driver/configuration and possibly SQL/types differ. Missing driver, wrong data source, unavailable server or denied credentials can fail at different stages. Inspect the relevant error without assuming every failure is an SQL syntax issue. This is a worked conceptual example, not a claim that ODBC has been installed or tested.
+
+## Review a program against programming conventions
+
+Maintainability comes from connected decisions: validate before processing, choose meaningful names and named constants, explain intent in comments, indent standard control structures, give each clearly named module one responsibility and handle expected failures narrowly. A program that happens to print the right answer once can still be hard to understand or maintain.
+
+### Worked example
+
+```text
+BADGE_PRICE = 3
+
+def read_quantity(text):
+    # Validate the count before calculating the cost.
+    try:
+        quantity = int(text)
+    except ValueError:
+        return None
+    if quantity < 0:
+        return None
+    return quantity
+
+def cost(quantity):
+    return quantity * BADGE_PRICE
+
+quantity = read_quantity("4")
+if quantity is not None:
+    print(cost(quantity))  # 12
+# "bad" and "-1" return None; neither reaches processing.
+```
+
+### Independent task
+
+Review the worked program against all nine conventions in the explanation. Then independently write a validated rectangle-area program: accept two measured lengths, reject nonnumeric or negative input, separate parsing from area calculation and display. Name the modules, justify a comment and use normal/zero/invalid tests. Explain why a broad except that hides every error is inappropriate.
+
+### Explained answer (review after attempting)
+
+Map validation and narrow ValueError handling to read_quantity; quantity/BADGE_PRICE/cost express purpose; the comment explains intent; indentation and if show structure; read_quantity and cost each have one role and meaningful names. An area solution may use parse_length(text) returning a non-negative float or None, area(width,height) returning their product, and a separate caller/display. For 2.5 and 4 expect 10.0; zero and 4 expect 0.0; negative or unsuitable text is rejected before area calculation. A broad except can hide unrelated programming faults.
+
+## Compare address versions and local delivery independently
+
+An IP address identifies an interface at the network layer. IPv4 has 32 bits and IPv6 has 128. Under the supplied IPv4 /24 mask, compare network prefixes to decide local delivery versus a routed destination. This example does not turn all subnet masks into a rule about the first three octets; that shortcut applies only to this /24.
+
+### Worked example
+
+```text
+Host 192.168.40.10/24, mask 255.255.255.0.
+192.168.40.20 is local: network 192.168.40.0.
+192.168.41.20 is remote: network 192.168.41.0.
+Use the configured reachable gateway for the remote network.
+IPv6 2001:db8::20 uses hexadecimal notation and a 128-bit address.
+More address bits do not imply encryption or a faster connection.
+```
+
+### Independent task
+
+For 192.168.60.12/24, classify destinations 192.168.60.80 and 192.168.61.80 and justify each using the mask. Explain the roles of the host address and gateway. Compare IPv4 and IPv6 address lengths and notation, and explain why an IPv6 address is not a guarantee of secure communication.
+
+### Explained answer (review after attempting)
+
+The first destination shares network 192.168.60.0 and is local; the second is on 192.168.61.0 and needs routing through the configured gateway. The mask identifies the network portion; the address identifies the interface. IPv4 is 32-bit dotted decimal; IPv6 is 128-bit hexadecimal groups with permitted compression. Address size is not encryption, authentication or permission.
+
+## Match every network component to a responsibility
+
+A labelled path is a model of responsibilities, not a rule that each physical appliance has only one function. UTP supports ordinary copper Ethernet links; fibre suits suitable long or electrically isolated links; wireless provides radio access. A modem matches the access technology, a router forwards between IP networks, a switch forwards local frames, an access point bridges wireless access, and a firewall applies traffic policy. Place the trust boundary explicitly and check the course symbol table when drawing.
+
+### Worked example
+
+```text
+Illustrative DSL access: ISP/access medium -> modem -> router -> perimeter firewall -> trusted LAN switch.
+The switch connects wired clients, a server and an access point; wireless clients connect through the AP.
+UTP can connect fixed desks; a suitable fibre link can connect buildings.
+Router: IP forwarding. Switch: local frame forwarding. Firewall: permitted/denied flows.
+Use the official support-booklet symbols for the final logical diagram, rather than copying these text boxes.
+```
+
+### Independent task
+
+Create a responsibility table for UTP, fibre, wireless, modem, router, switch, access point and firewall. For each, name a suitable use in a two-building school, explain what it does and one thing it does not establish. Draw a changed logical LAN/WLAN/WAN design with the official symbols, label the trust boundary and trace one local and one remote request. State the assumed ISP access technology before requiring a modem.
+
+### Explained answer (review after attempting)
+
+UTP carries suitable copper LAN signalling, fibre optical links, and wireless radio access; none by itself grants permission. A modem serves the specified provider technology, not every internet service. A router routes IP packets, a switch forwards local frames, an AP supplies wireless-to-LAN access, and a firewall filters traffic according to policy. A valid design places the perimeter outside the trusted LAN and labels media, endpoints and boundaries; local traffic follows local switching and remote traffic follows routing. Devices can combine these roles. Match the official symbol reference and justify alternatives against distance, capacity and access needs.
+
+## Diagnose performance and justify access controls
+
+Separate a capacity limit, a poor traffic path, collisions on a shared half-duplex link and excess broadcast traffic. Modern switched full-duplex Ethernet does not have the shared-medium collision behaviour; Wi-Fi shares airtime with collision avoidance. A firewall can restrict unwanted flows, while operating-system account permissions, updates and secure configuration protect hosts. Neither replaces the other.
+
+### Worked example
+
+```text
+Case A: 20 clients each need 8 Mbit/s on a 100 Mbit/s uplink: demand 160, above capacity.
+Case B: a local file transfer unnecessarily traverses a constrained remote path: inspect the design and service location.
+Case C: a legacy shared half-duplex segment reports collisions: investigate the shared access design.
+Case D: excessive broadcast traffic uses a LAN broadcast domain: inspect source/rate and segmentation.
+Access example: deny a guest-to-staff file service at the firewall; keep staff files protected by individual accounts/OS permissions even on permitted paths.
+```
+
+### Independent task
+
+For each of the four cases, identify the main performance factor, request one observation and justify one remedy with a limitation. Then explain why unauthorised access must be prevented, give a concrete firewall allow/deny pair and name two OS-level protections. Explain why a successful ping cannot prove that file permissions or web access are correct.
+
+### Explained answer (review after attempting)
+
+A: bandwidth/capacity; compare measured utilisation and demand, then address the constrained link or demand, recognising other bottlenecks. B: network design; trace the actual path and place/route the service appropriately. C: data collisions; inspect duplex/shared-medium evidence and modernise or correct the link, without attributing full-duplex or every Wi-Fi delay to this cause. D: excess broadcasts; inspect counts/sources and control or segment broadcast scope, without assuming an ordinary switch removes broadcasts. Restrict unauthorised disclosure/change/disruption with policy: permit an authorised staff service and deny guest-to-staff access; use least-privilege individual OS accounts, permissions and maintained updates/configuration. ICMP response is not evidence of application authorisation.
+
+## Choose and use all four primitive types independently
+
+Choose a type from the meaning of a value, rather than how it looks when printed. Integer counts are whole quantities; floats represent fractional measurements in these examples; a string identifier preserves characters such as leading zeros; a Boolean represents a true/false state. A numeric-looking identifier is not automatically a quantity.
+
+### Worked example
+
+```text
+# Python 3: four different meanings
+item_count = 3
+measured_length = 2.5
+reference = "0042"
+has_permission = True
+print(item_count * measured_length)  # 7.5
+print(reference)  # 0042
+print(has_permission)  # True
+
+Pseudocode declarations:
+item_count = 3
+measured_length = 2.5
+reference = "0042"
+has_permission = TRUE
+PRINT(item_count * measured_length, reference, has_permission)
+```
+
+### Independent task
+
+Choose and justify a type for each fresh requirement: the number of seats booked, a measured distance that can include fractions, a postcode whose first character may be zero, and whether permission has been granted. Write both clear pseudocode and Python assignments for 6 seats, distance 3.75, postcode 0600 and permission granted. Calculate seats multiplied by distance, display the postcode without losing its leading zero, and state the permission value when permission is refused.
+
+### Explained answer (review after attempting)
+
+Use integer seats = 6; float distance = 3.75; string postcode = "0600"; Boolean permitted = True (TRUE in pseudocode). Multiplication gives 22.5; displaying the string gives 0600. Refused permission is False/FALSE. Counts, fractional measures, identifiers and states have different roles; converting the postcode to an integer would discard a meaningful leading character.
+
+## Construct array algorithms in both representations
+
+Practice must include loading/printing, accumulating every element and finding a position, not only naming a list. Use zero-based indices in these examples and define empty and tie cases. Strict comparisons retain the first tied position. Pseudocode represents the same steps as Python; a different spelling of the loop does not change its contract.
+
+### Worked example
+
+```text
+Pseudocode (FOR bounds inclusive):
+values = [3, 7, 7]
+total = 0
+best = -1
+IF values.length > 0 THEN
+    best = 0
+END IF
+FOR i = 0 TO values.length - 1
+    PRINT(i, values[i])
+    total = total + values[i]
+    IF values[i] > values[best] THEN
+        best = i
+    END IF
+END FOR
+PRINT(total, best)
+# No loop passes for an empty array; best -1 is a sentinel, not an index to use.
+
+Python 3
+values = [3, 7, 7]
+total = 0
+best = None
+for index in range(len(values)):
+    print(index, values[index])
+    total += values[index]
+    if best is None or values[index] > values[best]:
+        best = index
+print(total, best)
+# Lines: 0 3; 1 7; 2 7; then 17 1.
+```
+
+### Independent task
+
+Independently write pseudocode and Python to read three valid integers into an array, print each zero-based index/value, calculate their total, and return the first minimum and first maximum positions without min/max built-ins. Test inputs -4, -1, -1. Then adapt the processing part for an empty array and one value. State how the caller distinguishes no position from index 0 before indexing. Explain how strict comparisons affect the two equal -1 values.
+
+### Explained answer (review after attempting)
+
+For [-4,-1,-1], printed pairs are (0,-4),(1,-1),(2,-1), total -6, first minimum index 0 and first maximum index 1. For an empty array, total is 0 and no min/max position exists: use None or a documented sentinel and check it before indexing. With one value at index 0, both positions are 0 and the total equals that value. Load with a three-pass input loop; traverse the resulting array once, initialise total before traversal, initialise extrema from a real first value only when nonempty, and update positions only on strict < or >. Match the same contracts and bounds in pseudocode and Python.

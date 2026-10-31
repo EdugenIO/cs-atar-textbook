@@ -1,0 +1,141 @@
+{
+  "reviewed": "31 October 2026",
+  "reviewer": "AI-assisted editorial re-review",
+  "scope": "Written teaching and independent formative practice; not teacher approval or observed learner execution",
+  "closureNotes": {
+    "Y11-R001": "The added B/66 transfer independently converts the character code in three bases and distinguishes a code point from UTF-8 bytes; it closes the former numeric-only task gap.",
+    "Y11-R013": "The paired arithmetic clinic supplies both representations, all arithmetic operators, declared types and a changed independent calculation rather than relying on the cone example alone.",
+    "Y11-R017": "The Gantt clinic explains time bars and dependencies and requires a changed schedule with predecessor effects; a fixed allocation table is no longer the sole evidence.",
+    "Y11-R023": "The structured-benefits clinic compares development, comprehension and modification using a changed calculation, with an explained independent response.",
+    "Y11-R025": "The structure-chart clinic includes module/data-flow design, a runnable loader stub and replacement; the task requires a fresh chart and file-reader replacement.",
+    "Y11-R027": "The same chart/stub clinic now supplies an explicit Year 11 independent construction task and expected evidence, not a Year 12-only example.",
+    "Y11-R032": "The debugger clinic gives breakpoint, before/after inspection and stepping instructions plus a separate independent fault; paper expectations are distinguished from actual observations.",
+    "Y11-R034": "The fault task explicitly requires execution markers and value probes, first-wrong-state reasoning, removal of probes and regression checks.",
+    "Y11-R035": "The API clinic distinguishes caller, contract and implementation, models an input/result/error contract and requires an independent call plus inspection of a real documented API.",
+    "Y11-R042": "The clinic supplies logical-role modelling and an independent changed LAN/WLAN/WAN drawing with addresses, security and a symbol-comparison checklist. The official support-booklet symbol table remains the authoritative visual reference; this is written provision, not a claim of learner symbol fidelity.",
+    "Y11-R059": "A worked Author/Title schema is followed by a fresh three-table Member/Workshop/Enrolment specification, required keys, data and integrity tests, plus explained expected constraints. Running the worked seed is not counted as independent construction.",
+    "Y12-12": "The transfer clinic explicitly separates the historical console-loan case from current game FR/NFR evidence and asks for pause/restart, workload/file-size and actual-response observations. No supplied timing is represented as a learner measurement.",
+    "Y12-39": "The ODBC clinic models the application/interface/driver-manager/DBMS request-result path and contrasts direct sqlite3. A fresh comparison/failure-point task and answer now address the knowledge demand without requiring a driver installation.",
+    "Y11-R006": "A fresh type-selection and paired-notation task now asks for all four meanings without supplying the type labels in the prompt. It checks a fractional result, leading-zero identifier and both permission states.",
+    "Y11-R015": "The array transfer now independently requires both pseudocode and Python construction, with explicit load/print and empty/tie contracts.",
+    "Y11-R028": "The same fresh array task explicitly covers load/print, sum and first min/max positions, with numeric expected results plus empty and one-value feedback.",
+    "Y11-R021": "The new convention review explicitly addresses all named maintainability practices and a fresh validated-area implementation.",
+    "Y11-R038": "A changed address/version comparison now explicitly practises mask/locality, gateway responsibility and both address representations.",
+    "Y11-R039": "The new responsibility-table task names all three media and each prescribed component, and requires a changed labelled diagram with an explicit access-technology assumption.",
+    "Y11-R040": "A new access task explicitly asks why unauthorised access matters, both firewall flow decisions and OS-level protections.",
+    "Y11-R041": "A four-case diagnosis now independently practises capacity, design, collisions and excess broadcasts, rather than asking learners to select only two design improvements."
+  },
+  "practiceSelections": {
+    "Y11-R005": {
+      "route": "functions",
+      "section": "Scope faults: trace the name before changing the code"
+    },
+    "Y11-R007": {
+      "route": "consolidation",
+      "section": "Station A: Boolean expressions and types"
+    },
+    "Y11-R012": {
+      "route": "consolidation",
+      "section": "Types, operators and functions together"
+    },
+    "Y11-R014": {
+      "route": "selection",
+      "section": "Combine conditions and choices"
+    },
+    "Y11-R019": {
+      "route": "design",
+      "section": "Classify, isolate, repair and retest Python errors"
+    },
+    "Y11-R024": {
+      "route": "consolidation",
+      "section": "Station B: algorithms in two representations"
+    },
+    "Y11-R026": {
+      "route": "consolidation",
+      "section": "Station B: algorithms in two representations"
+    },
+    "Y11-R029": {
+      "route": "files",
+      "section": "Read, write and append: three different contracts"
+    },
+    "Y11-R030": {
+      "file": "unit1-practice-paper.md",
+      "answerFile": "unit1-practice-answers.md"
+    },
+    "Y11-R031": {
+      "file": "unit1-practice-paper.md",
+      "answerFile": "unit1-practice-answers.md"
+    },
+    "Y11-R033": {
+      "route": "design",
+      "section": "Classify, isolate, repair and retest Python errors"
+    },
+    "Y11-R049": {
+      "file": "security-cipher-workbook.md",
+      "answerFile": "security-answers.md"
+    },
+    "Y12-04": {
+      "file": "unit3-evidence-activities.md",
+      "answerFile": "unit3-evidence-teacher.md"
+    },
+    "Y12-09": {
+      "file": "unit3-evidence-activities.md",
+      "answerFile": "unit3-evidence-teacher.md"
+    },
+    "Y12-13": {
+      "file": "unit3-evidence-activities.md",
+      "answerFile": "unit3-evidence-teacher.md"
+    },
+    "Y12-23": {
+      "file": "unit3-addressing-workbook.md",
+      "answerFile": "unit3-addressing-answers.md"
+    },
+    "Y12-26": {
+      "file": "unit3-evidence-activities.md",
+      "answerFile": "unit3-evidence-teacher.md"
+    },
+    "Y12-27": {
+      "file": "unit3-evidence-activities.md",
+      "answerFile": "unit3-evidence-teacher.md"
+    },
+    "Y12-41": {
+      "file": "unit4-design-workbook.md",
+      "answerFile": "unit4-design-answers.md",
+      "additional": [
+        "unit4-er-interpretation-workbook.md",
+        "unit4-er-interpretation-answers.md"
+      ]
+    },
+    "Y12-43": {
+      "file": "unit4-data-quality-workbook.md",
+      "answerFile": "unit4-data-quality-answers.md"
+    },
+    "Y11-R006": {
+      "route": "consolidation",
+      "section": "Station A: Boolean expressions and types"
+    },
+    "Y11-R015": {
+      "route": "consolidation",
+      "section": "Station B: algorithms in two representations"
+    },
+    "Y11-R028": {
+      "route": "consolidation",
+      "section": "Station B: algorithms in two representations"
+    }
+  },
+  "remainingHumanChecks": [
+    "School-issued assessment mapping and school adoption",
+    "Learner execution of debugger, files, software and assigned network tools",
+    "Independent subject-teacher review and student diagram fidelity",
+    "Teaching-time currency of law and external technical sources"
+  ],
+  "demandLabels": {
+    "Y11-R002": "Sequence concepts",
+    "Y11-R003": "Selection concepts",
+    "Y11-R004": "Iteration concepts",
+    "Y11-R005": "Function scope, parameters and arguments",
+    "Y11-R006": "Integer, float, string and Boolean values",
+    "Y11-R007": "Arithmetic, relational and logical operators",
+    "Y11-R008": "One-dimensional array concepts"
+  }
+}

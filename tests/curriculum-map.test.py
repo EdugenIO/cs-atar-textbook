@@ -29,7 +29,7 @@ for row in rows:
  for l in row['lessons']:assert l['unit']==row['unit'] and 1<=l['week']<=16 and 1<=l['lesson']<=4
 for path in OUT.glob('*.csv'):
  table=list(csv.reader(io.StringIO(path.read_text(encoding='utf-8'))));assert all(len(r)==len(table[0]) for r in table),path.name
- assert len(table)-1==(648 if path.name=='matrix.csv' else {1:157,2:124,3:226,4:141}[int(path.name[4])])
+ assert len(table)-1==(519 if path.name=='provision-review.csv' else 648 if path.name=='matrix.csv' else {1:157,2:124,3:226,4:141}[int(path.name[4])])
 checks=json.loads((OUT/'assessment-checks.json').read_text(encoding='utf-8'))
 for c in checks:
  assert c['libraryTasks']==8 and c['minimumLibraryTaskWeight']>=5

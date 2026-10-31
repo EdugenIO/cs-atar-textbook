@@ -94,13 +94,13 @@
 -- Write your independent attempt below:
 
 
--- Step 17 Supporting extension: NULL, LEFT JOIN and HAVING
+-- Step 17 Support-booklet HAVING and optional LEFT JOIN
 -- On changed data, include every session, count real booking keys and return only groups with fewer than two bookings.
 -- Database: y12 changed, fresh copy.
 -- Write your independent attempt below:
 
 
--- Step 18 Supporting extension: a transaction and a recovery test
+-- Step 18 SQLite transaction implementation for ACID
 -- On changed data, insert M21, insert its S04 booking, then roll back both. Verify neither remains. Explain the before/inside/after state and retain evidence from inside the transaction as well.
 -- Database: y12 changed, fresh copy.
 -- Write your independent attempt below:

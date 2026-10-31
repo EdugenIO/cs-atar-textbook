@@ -1,0 +1,668 @@
+{
+  "Y11-R001": {
+    "explanation": "cf6964ef65fbaf46f4fee56689283b20b6a429f585f0e501dc775981c36c6f11",
+    "example": "cf6964ef65fbaf46f4fee56689283b20b6a429f585f0e501dc775981c36c6f11",
+    "independentTask": "a4e084092c5db02548aacd7b59f84415a34e288783109cd1a8eae281b0d054e5",
+    "feedback": "c6e6b63b173155d0b8006e3944c277f62cb7741844486db206e77bf7a519156a"
+  },
+  "Y11-R002": {
+    "explanation": "5d50039bd4a8c5b9ce4d14db4c4d516f3705dca39ba7ed8097f94a35f8ee88b6",
+    "example": "5d50039bd4a8c5b9ce4d14db4c4d516f3705dca39ba7ed8097f94a35f8ee88b6",
+    "independentTask": "901bb81a0dd9b3de66a35a01a01607f31035e7d7ef07cdf9d85c09a33e3357c2",
+    "feedback": "cd74ec7ca9c105997218589ea2b5087b8b7efe1ca50ec62cc0daa7ee764a49f9"
+  },
+  "Y11-R003": {
+    "explanation": "83b40cbf06c317cd67f26a1e20fdf0ae554d06b762240bf9cc709c2400096ece",
+    "example": "83b40cbf06c317cd67f26a1e20fdf0ae554d06b762240bf9cc709c2400096ece",
+    "independentTask": "7d9aa009d0d32e7b1b7af472372bed147231d29ecbd24dbb605b4bc919b514ea",
+    "feedback": "7d9aa009d0d32e7b1b7af472372bed147231d29ecbd24dbb605b4bc919b514ea"
+  },
+  "Y11-R004": {
+    "explanation": "64ea69a013c093b2e2566157b72c735acc3d9b514df9923a6883d30993108ab7",
+    "example": "64ea69a013c093b2e2566157b72c735acc3d9b514df9923a6883d30993108ab7",
+    "independentTask": "7c94a45f8f1fe1d0209f79840a787c2c51cb2e568bcff836998debb5fbd6d5a1",
+    "feedback": "b6a963b36f3fd6991fc3283d0702da691cc8fc95ddfbe158d0da58c2bf3c07da"
+  },
+  "Y11-R005": {
+    "explanation": "94af997f8d9ea309f611d0adc7dca602a6b7b9a04975a2944ec52686645fe733",
+    "example": "94af997f8d9ea309f611d0adc7dca602a6b7b9a04975a2944ec52686645fe733",
+    "independentTask": "8d29874d63bbffeaec2c4f5e38481b4f06e83debf4bd73a906104148e25b5fd4",
+    "feedback": "5e08ce6508aadea2dca3b430ea731e7d2f768dff4894009fed10df909a4a597a"
+  },
+  "Y11-R006": {
+    "explanation": "07a54433657b8ebbd4d54af0ad7a48bd807ddacbd27094266f0b5d8d59556275",
+    "example": "07a54433657b8ebbd4d54af0ad7a48bd807ddacbd27094266f0b5d8d59556275",
+    "independentTask": "1f76ae608997c963a1c4d1dc69286f9b59b5e390fac22e89ac4392d0332c6ab4",
+    "feedback": "c7ecce4e24c84e7f42b7e39d7350e9de2ac8eb8c8f74dd38d9415c5762e31d7f"
+  },
+  "Y11-R007": {
+    "explanation": "37ad0534ff2a4ecab5ab5253a6fcbac242e8c1ca451740ca43afbc9926926aa7",
+    "example": "37ad0534ff2a4ecab5ab5253a6fcbac242e8c1ca451740ca43afbc9926926aa7",
+    "independentTask": "0b024d57c465240a608c880e4429799cb218c14d7d6de7a7119894367bd1f0da",
+    "feedback": "0b024d57c465240a608c880e4429799cb218c14d7d6de7a7119894367bd1f0da"
+  },
+  "Y11-R008": {
+    "explanation": "f12bd2feca35971de0f2b5a2722f6382f36490948d6749561a82b9168badd6a5",
+    "example": "f12bd2feca35971de0f2b5a2722f6382f36490948d6749561a82b9168badd6a5",
+    "independentTask": "65e8f916170144a6ac0cd42eb8e9a2ac9fbc12463ec136c12154151059cc081c",
+    "feedback": "8399dc0104fb3b6ae66644cfbc0901110a956fedab254896a67cbd3a866cb7f2"
+  },
+  "Y11-R009": {
+    "explanation": "5d50039bd4a8c5b9ce4d14db4c4d516f3705dca39ba7ed8097f94a35f8ee88b6",
+    "example": "5d50039bd4a8c5b9ce4d14db4c4d516f3705dca39ba7ed8097f94a35f8ee88b6",
+    "independentTask": "901bb81a0dd9b3de66a35a01a01607f31035e7d7ef07cdf9d85c09a33e3357c2",
+    "feedback": "cd74ec7ca9c105997218589ea2b5087b8b7efe1ca50ec62cc0daa7ee764a49f9"
+  },
+  "Y11-R010": {
+    "explanation": "0c2bebceb487086707c770089a16543e5466533c11662514fef88a0c6e3cb0ae",
+    "example": "e4b758ebee18dd2f4b58ce50ee99ac9f4e4c5d57241b0697a7f36311fa8d5115",
+    "independentTask": "7d9aa009d0d32e7b1b7af472372bed147231d29ecbd24dbb605b4bc919b514ea",
+    "feedback": "7d9aa009d0d32e7b1b7af472372bed147231d29ecbd24dbb605b4bc919b514ea"
+  },
+  "Y11-R011": {
+    "explanation": "56c99c58dd470359fc15831520935d417373fa444f954debd3ccc18fbbcb2e33",
+    "example": "56c99c58dd470359fc15831520935d417373fa444f954debd3ccc18fbbcb2e33",
+    "independentTask": "7c94a45f8f1fe1d0209f79840a787c2c51cb2e568bcff836998debb5fbd6d5a1",
+    "feedback": "b6a963b36f3fd6991fc3283d0702da691cc8fc95ddfbe158d0da58c2bf3c07da"
+  },
+  "Y11-R012": {
+    "explanation": "6a42d8d7c0c4bace44c022e559b270b638d96714e1416a13f25651395b41fcbc",
+    "example": "94af997f8d9ea309f611d0adc7dca602a6b7b9a04975a2944ec52686645fe733",
+    "independentTask": "2b3098df7df917604761d4b9abe5f3399943ba9375cd2418923dc26c8047a813",
+    "feedback": "2b3098df7df917604761d4b9abe5f3399943ba9375cd2418923dc26c8047a813"
+  },
+  "Y11-R013": {
+    "explanation": "6c243c7ba2c5ce87ffc399654916f6f54e7e9bb2ab8146724319cb361fd481a0",
+    "example": "6c243c7ba2c5ce87ffc399654916f6f54e7e9bb2ab8146724319cb361fd481a0",
+    "independentTask": "0bbaf4ccbb69f898c28534c8c03e2f17fcd195ef097dc6d6443367f6cd878d42",
+    "feedback": "036fae644a5271ab279365b70a7d85bd485a6806df8a61077eae237535301284"
+  },
+  "Y11-R014": {
+    "explanation": "0b024d57c465240a608c880e4429799cb218c14d7d6de7a7119894367bd1f0da",
+    "example": "0b024d57c465240a608c880e4429799cb218c14d7d6de7a7119894367bd1f0da",
+    "independentTask": "37ad0534ff2a4ecab5ab5253a6fcbac242e8c1ca451740ca43afbc9926926aa7",
+    "feedback": "37ad0534ff2a4ecab5ab5253a6fcbac242e8c1ca451740ca43afbc9926926aa7"
+  },
+  "Y11-R015": {
+    "explanation": "cf0495411738fcba1b674046ce058e7da399572b519699c1b677c9976aa3f083",
+    "example": "cf0495411738fcba1b674046ce058e7da399572b519699c1b677c9976aa3f083",
+    "independentTask": "a783ac22ab082d69a6ae8d59131319bf371646821382b32e06bc1bc5768d9941",
+    "feedback": "137fdbf5cdf252e0663a8d44a265e35737a1d354c6a5974dfd14440d54dcc42f"
+  },
+  "Y11-R016": {
+    "explanation": "17856308fcdc753e1783c86d2b744f5055683ff6a32c7458813b43df75c3880d",
+    "example": "17856308fcdc753e1783c86d2b744f5055683ff6a32c7458813b43df75c3880d",
+    "independentTask": "c1b9053b2a29fcbe104cab079b6632ae18c3c554b006026e856eedf29fee29f4",
+    "feedback": "11b55522a741da2c88cea9545a58d9291cabd3f4d765b27725c2209c554b0a68"
+  },
+  "Y11-R017": {
+    "explanation": "f3cf19e483e03a9a05a32cc0e95314efbc0f934955e9816c674f53a231ead827",
+    "example": "f3cf19e483e03a9a05a32cc0e95314efbc0f934955e9816c674f53a231ead827",
+    "independentTask": "b777e389006014f35890c615174f1c8012d4ba13440ba08c88d40935e76bdfad",
+    "feedback": "26747999843b540e47df4a84c984efe2e5b1e52fc98d55cf6c56e825cf8090a3"
+  },
+  "Y11-R018": {
+    "explanation": "ef94b9f61dae9538bd8c421fb2779f752d4b6bca859bfee83f5fd2dbd11f9e80",
+    "example": "ef94b9f61dae9538bd8c421fb2779f752d4b6bca859bfee83f5fd2dbd11f9e80",
+    "independentTask": "c1b9053b2a29fcbe104cab079b6632ae18c3c554b006026e856eedf29fee29f4",
+    "feedback": "11b55522a741da2c88cea9545a58d9291cabd3f4d765b27725c2209c554b0a68"
+  },
+  "Y11-R019": {
+    "explanation": "cc698600903dbcd0219c0f6ef79279e6ec0c47bc2665452a4a4f7c21937dbe78",
+    "example": "6b6caba01ee1f7cefa2a4f3b39ff8439c01c987aa10be73074c9afa61f5b9403",
+    "independentTask": "fe308ead663fb46c1ff1c87dd13b5502b9b85e27445279b4c282346ddf58332d",
+    "feedback": "a705097146ca81b182a06bde4c55315560485c4b7e7707b1e8bdbf6aad5e20c7"
+  },
+  "Y11-R020": {
+    "explanation": "787bca66d2e04e6266e576f6886dacab45e2e3436950f9c47a401ee22b0a3dec",
+    "example": "787bca66d2e04e6266e576f6886dacab45e2e3436950f9c47a401ee22b0a3dec",
+    "independentTask": "c1b9053b2a29fcbe104cab079b6632ae18c3c554b006026e856eedf29fee29f4",
+    "feedback": "11b55522a741da2c88cea9545a58d9291cabd3f4d765b27725c2209c554b0a68"
+  },
+  "Y11-R021": {
+    "explanation": "a840422c5309f509d05537067b84fff1b33993d69e959c86b759ad5902d30fbd",
+    "example": "a840422c5309f509d05537067b84fff1b33993d69e959c86b759ad5902d30fbd",
+    "independentTask": "d6f62af29527979309410b9f422e246bcd2b12b4a0162b562e8275870f51a190",
+    "feedback": "9bb04671c3e19f7125c9611f46ec36534eed19f5950145b06c281ad455633f23"
+  },
+  "Y11-R022": {
+    "explanation": "cc698600903dbcd0219c0f6ef79279e6ec0c47bc2665452a4a4f7c21937dbe78",
+    "example": "6b6caba01ee1f7cefa2a4f3b39ff8439c01c987aa10be73074c9afa61f5b9403",
+    "independentTask": "c1b9053b2a29fcbe104cab079b6632ae18c3c554b006026e856eedf29fee29f4",
+    "feedback": "11b55522a741da2c88cea9545a58d9291cabd3f4d765b27725c2209c554b0a68"
+  },
+  "Y11-R023": {
+    "explanation": "ac8cb1df046acc3b1ad39b95f1b99a82e31c4f48fd967ea006e716b2d3e175e3",
+    "example": "ac8cb1df046acc3b1ad39b95f1b99a82e31c4f48fd967ea006e716b2d3e175e3",
+    "independentTask": "1e2725a5959cc8b33368a62d1b7d695effe8c7f4a12cfb62252c18a535d84334",
+    "feedback": "3e4bef8e21c643ce16ee4db9024dccb87ddc0e15e89362ab861ca9397f387361"
+  },
+  "Y11-R024": {
+    "explanation": "56c99c58dd470359fc15831520935d417373fa444f954debd3ccc18fbbcb2e33",
+    "example": "56c99c58dd470359fc15831520935d417373fa444f954debd3ccc18fbbcb2e33",
+    "independentTask": "60a2f7ecba53a9ace41669e21fe561ab744b592da8f584940675fc81198886b9",
+    "feedback": "60a2f7ecba53a9ace41669e21fe561ab744b592da8f584940675fc81198886b9"
+  },
+  "Y11-R025": {
+    "explanation": "eea7ba26a2dd4587c93a24b0a415d95fe47b913bcd6a5f0a12e21138ce7da23d",
+    "example": "eea7ba26a2dd4587c93a24b0a415d95fe47b913bcd6a5f0a12e21138ce7da23d",
+    "independentTask": "7863bce28ef5b7ca3325ecb14f71eea7d908e28c280eceb9e058ac12aa694d18",
+    "feedback": "f1a3eef5c5b8aff9c53e3bfed181ae571c5a27caa7b04691ce26d75f2e4c139b"
+  },
+  "Y11-R026": {
+    "explanation": "60a2f7ecba53a9ace41669e21fe561ab744b592da8f584940675fc81198886b9",
+    "example": "60a2f7ecba53a9ace41669e21fe561ab744b592da8f584940675fc81198886b9",
+    "independentTask": "60a2f7ecba53a9ace41669e21fe561ab744b592da8f584940675fc81198886b9",
+    "feedback": "60a2f7ecba53a9ace41669e21fe561ab744b592da8f584940675fc81198886b9"
+  },
+  "Y11-R027": {
+    "explanation": "eea7ba26a2dd4587c93a24b0a415d95fe47b913bcd6a5f0a12e21138ce7da23d",
+    "example": "eea7ba26a2dd4587c93a24b0a415d95fe47b913bcd6a5f0a12e21138ce7da23d",
+    "independentTask": "7863bce28ef5b7ca3325ecb14f71eea7d908e28c280eceb9e058ac12aa694d18",
+    "feedback": "f1a3eef5c5b8aff9c53e3bfed181ae571c5a27caa7b04691ce26d75f2e4c139b"
+  },
+  "Y11-R028": {
+    "explanation": "cf0495411738fcba1b674046ce058e7da399572b519699c1b677c9976aa3f083",
+    "example": "cf0495411738fcba1b674046ce058e7da399572b519699c1b677c9976aa3f083",
+    "independentTask": "a783ac22ab082d69a6ae8d59131319bf371646821382b32e06bc1bc5768d9941",
+    "feedback": "137fdbf5cdf252e0663a8d44a265e35737a1d354c6a5974dfd14440d54dcc42f"
+  },
+  "Y11-R029": {
+    "explanation": "fa48c7e7656d85b9471764264c4bbde266c68fc57879b5d2f1e7dd0d5a299d71",
+    "example": "ee1a3234174023fffead6d5c78b2b69e6a579a27c418ced12f20528bc6380661",
+    "independentTask": "0f2e2003938ae9af4ba4d56a0de5fa4340b52ee05eff8176dbbfca1351f46435",
+    "feedback": "8e993cb90da176d31974420dc366a31499f7f1f9f2a612da06db57a5336a465c"
+  },
+  "Y11-R030": {
+    "explanation": "aad8a419721c8f8d62ed18a2db8299e73ac6d6b2053eee08aae5241eb517d8c6",
+    "example": "aad8a419721c8f8d62ed18a2db8299e73ac6d6b2053eee08aae5241eb517d8c6",
+    "independentTask": "ce88530950e7427a8cf0c848d0e104aea59c727e145808b3fed15246fc203bc3",
+    "feedback": "9912e45a864ecd3acb48fa19536f41413bdd3c02d38a12715cc05ae5983ffd79"
+  },
+  "Y11-R031": {
+    "explanation": "6b6caba01ee1f7cefa2a4f3b39ff8439c01c987aa10be73074c9afa61f5b9403",
+    "example": "6b6caba01ee1f7cefa2a4f3b39ff8439c01c987aa10be73074c9afa61f5b9403",
+    "independentTask": "ce88530950e7427a8cf0c848d0e104aea59c727e145808b3fed15246fc203bc3",
+    "feedback": "9912e45a864ecd3acb48fa19536f41413bdd3c02d38a12715cc05ae5983ffd79"
+  },
+  "Y11-R032": {
+    "explanation": "c6e4ee5f02a51904953b2a1f057aca209d5d52ac2c50a455155a01f85d54c9e1",
+    "example": "c6e4ee5f02a51904953b2a1f057aca209d5d52ac2c50a455155a01f85d54c9e1",
+    "independentTask": "35aceb6c50323aaf13316d55e057526310b7c39e7c1f24d513ac9e2a3a83fab5",
+    "feedback": "7df89ab92d2d47ef5124419119fba5b6a4de4a74d0419680562c8bfd262a4b8a"
+  },
+  "Y11-R033": {
+    "explanation": "747e372d1e6a790575405d76c4484b80b85a6656d17dd62b5b2cfa2a1fb072b6",
+    "example": "747e372d1e6a790575405d76c4484b80b85a6656d17dd62b5b2cfa2a1fb072b6",
+    "independentTask": "fe308ead663fb46c1ff1c87dd13b5502b9b85e27445279b4c282346ddf58332d",
+    "feedback": "a705097146ca81b182a06bde4c55315560485c4b7e7707b1e8bdbf6aad5e20c7"
+  },
+  "Y11-R034": {
+    "explanation": "c6e4ee5f02a51904953b2a1f057aca209d5d52ac2c50a455155a01f85d54c9e1",
+    "example": "c6e4ee5f02a51904953b2a1f057aca209d5d52ac2c50a455155a01f85d54c9e1",
+    "independentTask": "35aceb6c50323aaf13316d55e057526310b7c39e7c1f24d513ac9e2a3a83fab5",
+    "feedback": "7df89ab92d2d47ef5124419119fba5b6a4de4a74d0419680562c8bfd262a4b8a"
+  },
+  "Y11-R035": {
+    "explanation": "3edd4ec1c104cf73064ac191439073acd2eefcfce299af5e062b9fecb4370500",
+    "example": "3edd4ec1c104cf73064ac191439073acd2eefcfce299af5e062b9fecb4370500",
+    "independentTask": "2cb64127ac5c82fa50a66b13e787fb5f253edc5a4e6bf6102bc3e6e303cf5cb2",
+    "feedback": "af22a97b6a3dda5dccc4190818794ee958db6d7aa05a0f76a6434fe06cb5718a"
+  },
+  "Y11-R036": {
+    "explanation": "5ef54bd3c4322e4ca368d4d072a95941e6bcee0b47cfdb9bad3066e4560e66f2",
+    "example": "aae83a869cacd569f5f919413410887ee2be16fa0a08a1fae00b9c9a231090d8",
+    "independentTask": "ced1b0e18d7537458179b4fd389971c877498748230d5cc4a4d880441f7ef188",
+    "feedback": "359a57ee0d0f9490bec02db62fbad167b56b36ef56f7a07c0d66a3ab6911f492"
+  },
+  "Y11-R037": {
+    "explanation": "fde231a9b5c8e2a368e9ad0c756fabf5e7bac35fafd3ea2eaa9200c72957ae97",
+    "example": "86f100c2d84ff69943454bae2e4cdb869fa417c21c0a6e07b53a10a3d26fa3b9",
+    "independentTask": "3bf1363740dd75a55d4cb45d9f3d4eef596203e6617be3c7a9fee79abc557311",
+    "feedback": "4762ae72a07fd198499ef403985518f239ee252b5775db0ce4558e31f813020e"
+  },
+  "Y11-R038": {
+    "explanation": "da291a113dc8a898e465d63b7e90a48247c68e97c9a1a62a4f4af285c293344f",
+    "example": "da291a113dc8a898e465d63b7e90a48247c68e97c9a1a62a4f4af285c293344f",
+    "independentTask": "42daa96afa8694a5f3e7dd6a1c701f693e53de6ece647505e03776bf90c43436",
+    "feedback": "96494c2b30b4ecfd84815d30a29a6a0fb3ae18623d91b41c789c0a0430a88e1c"
+  },
+  "Y11-R039": {
+    "explanation": "794d24ae4acf82c0176fc1a087f25031fe0772fafee32eca9ea265a816e14aae",
+    "example": "794d24ae4acf82c0176fc1a087f25031fe0772fafee32eca9ea265a816e14aae",
+    "independentTask": "c2c04d59d6804c242d86e4ce2ba5c3de7fe1a19a9c58ca58f98891f93cad3aa7",
+    "feedback": "6912c0f297fb43d10523d2208d7a850dc1e67371641efb6273742a2d8b548e91"
+  },
+  "Y11-R040": {
+    "explanation": "9f5cdf06ef260771b7f9844a0790da880dea18a58e5f3197c6576fb7e25ddc3f",
+    "example": "9f5cdf06ef260771b7f9844a0790da880dea18a58e5f3197c6576fb7e25ddc3f",
+    "independentTask": "fffe826223501591b77f39bb4202eaba50fe37e1f4634dbdbd49970ca311ea9a",
+    "feedback": "b1133468a6b061f3f3be6ac9bb3565d4c742d582924129e46d04834cb9380ea8"
+  },
+  "Y11-R041": {
+    "explanation": "9f5cdf06ef260771b7f9844a0790da880dea18a58e5f3197c6576fb7e25ddc3f",
+    "example": "9f5cdf06ef260771b7f9844a0790da880dea18a58e5f3197c6576fb7e25ddc3f",
+    "independentTask": "fffe826223501591b77f39bb4202eaba50fe37e1f4634dbdbd49970ca311ea9a",
+    "feedback": "b1133468a6b061f3f3be6ac9bb3565d4c742d582924129e46d04834cb9380ea8"
+  },
+  "Y11-R042": {
+    "explanation": "9fa15f0b62b3aa31f77705b6b47439c22de751a972d4c0618422780322c834da",
+    "example": "9fa15f0b62b3aa31f77705b6b47439c22de751a972d4c0618422780322c834da",
+    "independentTask": "2a8c91f57cf5e90b64b88dc1404d543047b3ce1607cd774fc41c47bd9400f10c",
+    "feedback": "700afb1d8cb27a74b8840a5359f51e922756d13cfa28ef958dc40b0f820da6e0"
+  },
+  "Y11-R043": {
+    "explanation": "0f77741baa3dd14e75d0af15446312aae2aeaad99d620e2f3c0ed1e71c04ac75",
+    "example": "94dac343c683e74c06007f08de0e0c4e32b8cc6e441bfc2c0d16b37e3e738118",
+    "independentTask": "fc577f2e170b8a5d3290fa2b403c344ece63bb162435c60a6dfc4a1ed2f21a6f",
+    "feedback": "de1ac40b3d0a2625c8fa480d9b962a175f07061d17f5e4e696d6cbdf48a452fd"
+  },
+  "Y11-R044": {
+    "explanation": "4e6f4ca95ae3e10b1011f0a507675e1750c79ca7ea3f11991edab9814383cb23",
+    "example": "4e6f4ca95ae3e10b1011f0a507675e1750c79ca7ea3f11991edab9814383cb23",
+    "independentTask": "08b0f19e9828c36bac601c98df75b8633e5ee5db356d2adb00eeb95d480a9a74",
+    "feedback": "342e7532bad279c2a74764f6f9ac9786dc8e61987d567efcd002c6bb10207eb5"
+  },
+  "Y11-R045": {
+    "explanation": "d47e69edaf051f6b215a9c6d372b7a4acb1be2311e43524f87fbeea69abd16a9",
+    "example": "d47e69edaf051f6b215a9c6d372b7a4acb1be2311e43524f87fbeea69abd16a9",
+    "independentTask": "08b0f19e9828c36bac601c98df75b8633e5ee5db356d2adb00eeb95d480a9a74",
+    "feedback": "342e7532bad279c2a74764f6f9ac9786dc8e61987d567efcd002c6bb10207eb5"
+  },
+  "Y11-R046": {
+    "explanation": "3e423c294c770c48a76893b21d85a68713adf89a3d378cb425054a58f8404884",
+    "example": "94da90fba855867e52b08b44b29eff65b90b795495b1347bfa01fc9853ca709b",
+    "independentTask": "08b0f19e9828c36bac601c98df75b8633e5ee5db356d2adb00eeb95d480a9a74",
+    "feedback": "342e7532bad279c2a74764f6f9ac9786dc8e61987d567efcd002c6bb10207eb5"
+  },
+  "Y11-R047": {
+    "explanation": "c703f0f82335e5ce50b051b48068ecd42fdafbac862ffd0289547c88a47f003f",
+    "example": "bcf579fc7f8dbc6a8e5510be13ab9e1a24701964a9db86d52be84c119dadcd01",
+    "independentTask": "08b0f19e9828c36bac601c98df75b8633e5ee5db356d2adb00eeb95d480a9a74",
+    "feedback": "342e7532bad279c2a74764f6f9ac9786dc8e61987d567efcd002c6bb10207eb5"
+  },
+  "Y11-R048": {
+    "explanation": "fb094eb789e77804b6d354a1528fd1ec44629d74b8d70c72565561c08709ad5d",
+    "example": "fb094eb789e77804b6d354a1528fd1ec44629d74b8d70c72565561c08709ad5d",
+    "independentTask": "08b0f19e9828c36bac601c98df75b8633e5ee5db356d2adb00eeb95d480a9a74",
+    "feedback": "342e7532bad279c2a74764f6f9ac9786dc8e61987d567efcd002c6bb10207eb5"
+  },
+  "Y11-R049": {
+    "explanation": "8344cc95b806595ecb5b7532a3ac0b03cba8f5d2d9e5b91829c470ede4e14665",
+    "example": "158f1f7a19b492ae2629c58d004482e4326cf54141f27e14d61e778fd20f4d83",
+    "independentTask": "cbefa1b55df176bb6e993e02b205f67371c4b7b4cc9858076e8fa5d3830f052e",
+    "feedback": "342e7532bad279c2a74764f6f9ac9786dc8e61987d567efcd002c6bb10207eb5"
+  },
+  "Y11-R050": {
+    "explanation": "ca9c065eb90d50f52818fe615ec9b31062e4b98c1eb671c175f58e6fecc928b7",
+    "example": "c5a136b05784d909c90c513dbb03c3f90053b4b2905abb98c3d2b5e02cbc5ca7",
+    "independentTask": "9cdf729edad541edd86e5fe5295b73fc6a33f0dca6c8d9c0baae791f4ba6d3d6",
+    "feedback": "d0907ec835fd7ad3844b1f2c838f1dd706339f36c861d32019051494ff569bae"
+  },
+  "Y11-R051": {
+    "explanation": "c44e0790beb8ab0991a6e27a007573e9df8c7789b72a4b7b61c411a5d08dd383",
+    "example": "fe37f58070615aa9acf8b588a7e384c701848ea33f16be730ac511febdbba7e1",
+    "independentTask": "443e86715be37faaa45363319284f00319de34e13420ce65d3aa5a67b4de36b2",
+    "feedback": "6074176e284b8917a434da1cd9792452eb235e3a3422af531b23b3eb9e594cd2"
+  },
+  "Y11-R052": {
+    "explanation": "5e6874a309d1b7b38b9701a066a3c28685ff2e893bcffe37e95ef20fb4114cb4",
+    "example": "5e6874a309d1b7b38b9701a066a3c28685ff2e893bcffe37e95ef20fb4114cb4",
+    "independentTask": "443e86715be37faaa45363319284f00319de34e13420ce65d3aa5a67b4de36b2",
+    "feedback": "6074176e284b8917a434da1cd9792452eb235e3a3422af531b23b3eb9e594cd2"
+  },
+  "Y11-R053": {
+    "explanation": "bb0890429eb27d461a4ab2a04efef58e374034fa5bd471ba14c16b9f78b8992f",
+    "example": "bb0890429eb27d461a4ab2a04efef58e374034fa5bd471ba14c16b9f78b8992f",
+    "independentTask": "9568b5240d09d3b0d102914dbf24d4691a8dae531b493ce16963fb1edfe60b3c",
+    "feedback": "d7493bb68ef680ead1b304ee1a1065a6c150f67c57eaab01539a643dd49dc4ce"
+  },
+  "Y11-R054": {
+    "explanation": "6bad22b945fa76fa5b2fcae77f7515c29cd6df0d7cc1791094a32737ade17098",
+    "example": "fe37f58070615aa9acf8b588a7e384c701848ea33f16be730ac511febdbba7e1",
+    "independentTask": "443e86715be37faaa45363319284f00319de34e13420ce65d3aa5a67b4de36b2",
+    "feedback": "6074176e284b8917a434da1cd9792452eb235e3a3422af531b23b3eb9e594cd2"
+  },
+  "Y11-R055": {
+    "explanation": "ed72246f854834a222b5f47e7d46d08f0ff0482d5744a8b13ca958db8ae58ce9",
+    "example": "ed72246f854834a222b5f47e7d46d08f0ff0482d5744a8b13ca958db8ae58ce9",
+    "independentTask": "10397849a1b5453f3b6bda1aea17db7a6a42af0c0bb02897465914226f7fda51",
+    "feedback": "bdc4798ec29da6f292fb55ea1a8205a06fc35ffd7e2a5e8c1e8797488a8ed49f"
+  },
+  "Y11-R056": {
+    "explanation": "2e55130527cee38cc9cf603ae163f9a89a0367b99bd705d7707e7782c9d0f316",
+    "example": "2e55130527cee38cc9cf603ae163f9a89a0367b99bd705d7707e7782c9d0f316",
+    "independentTask": "10397849a1b5453f3b6bda1aea17db7a6a42af0c0bb02897465914226f7fda51",
+    "feedback": "bdc4798ec29da6f292fb55ea1a8205a06fc35ffd7e2a5e8c1e8797488a8ed49f"
+  },
+  "Y11-R057": {
+    "explanation": "8a8c22096c3577e9f2b64fdd6c00084133c6e488d7fa16cf77b28f076e652477",
+    "example": "8a8c22096c3577e9f2b64fdd6c00084133c6e488d7fa16cf77b28f076e652477",
+    "independentTask": "10397849a1b5453f3b6bda1aea17db7a6a42af0c0bb02897465914226f7fda51",
+    "feedback": "bdc4798ec29da6f292fb55ea1a8205a06fc35ffd7e2a5e8c1e8797488a8ed49f"
+  },
+  "Y11-R058": {
+    "explanation": "8908d7314cb7a4311405fee02504db9311b507aa44bc18c0c80b8666a9f75a03",
+    "example": "b5848d924556e13159d8ff4c42cb5a0a662e31031bfdf2f55c0ed8a5513c4045",
+    "independentTask": "9568b5240d09d3b0d102914dbf24d4691a8dae531b493ce16963fb1edfe60b3c",
+    "feedback": "d7493bb68ef680ead1b304ee1a1065a6c150f67c57eaab01539a643dd49dc4ce"
+  },
+  "Y11-R059": {
+    "explanation": "909d4dfa0a34a46b8c55de1be00521669920a5647313aa3d6fc3b29c6924a684",
+    "example": "909d4dfa0a34a46b8c55de1be00521669920a5647313aa3d6fc3b29c6924a684",
+    "independentTask": "0a8f91a6f581a8a033e9a2626f5ea714f90714b26ea478f4c8002cd9633fcd0f",
+    "feedback": "23fbcce221f851b677f75a6689c3635fac96e6ea68461253d64e035bc1d588e4"
+  },
+  "Y11-R060": {
+    "explanation": "4004274abe7eb4d7f6ba2195fa360dcc232d223c4072a2ad97a933112490e77d",
+    "example": "fb90ea08b008fc1db88d6fb34a63af58217dda5460ae8f4851742af60d058b02",
+    "independentTask": "df608e10e1c96b4b87708588e4d7d69a0022613b871fda5493bf1acd6bf8ae8e",
+    "feedback": "b1521624d8542543bac1eaca71a6429e5877ac30d2eb6cb4d9e5ddcecd39d1ef"
+  },
+  "Y11-R061": {
+    "explanation": "ca215c9d3f57236d5893fbd2324a8c9daad1187a0a8863f384800069330567eb",
+    "example": "74c312d02dd5ada586b8d9e0c464d0542e9d7d66bceca0d09505020a4ba6d787",
+    "independentTask": "fc577f2e170b8a5d3290fa2b403c344ece63bb162435c60a6dfc4a1ed2f21a6f",
+    "feedback": "de1ac40b3d0a2625c8fa480d9b962a175f07061d17f5e4e696d6cbdf48a452fd"
+  },
+  "Y12-01": {
+    "explanation": "c1074aa321020b218d44b412b82516454fd3fc708a9119b9b8c8dafe2aa76d93",
+    "example": "c1074aa321020b218d44b412b82516454fd3fc708a9119b9b8c8dafe2aa76d93",
+    "independentTask": "c227450114b6f46f36f855f0139a1208b09d674cc25e21049eb8e08fdc971bc0",
+    "feedback": "5f2473c9d7c1e04a32170727638baea877dc45da322d01065b84e024c2faf1de"
+  },
+  "Y12-02": {
+    "explanation": "82a28756ae40fef4058b2c6e1fe3e04787b5e24a1f064fd9c2eb23ac2ea72038",
+    "example": "82a28756ae40fef4058b2c6e1fe3e04787b5e24a1f064fd9c2eb23ac2ea72038",
+    "independentTask": "c227450114b6f46f36f855f0139a1208b09d674cc25e21049eb8e08fdc971bc0",
+    "feedback": "5f2473c9d7c1e04a32170727638baea877dc45da322d01065b84e024c2faf1de"
+  },
+  "Y12-03": {
+    "explanation": "f2c4ee476259d98d16cb20bbd2c36f2927ba42824060e61887169e0d36a61daa",
+    "example": "f2c4ee476259d98d16cb20bbd2c36f2927ba42824060e61887169e0d36a61daa",
+    "independentTask": "70e321adc5bc1e65715abc80024f9800be0cac99ba71fafa59e91191edc7026d",
+    "feedback": "ab7ab89441edc2c0464f1b3fa547131b6663343630b53376814ad78c33fccb07"
+  },
+  "Y12-04": {
+    "explanation": "e509f906dfb3b32e1125ddd0d1b22e4575c89382e52e35215a3c601eee8734d0",
+    "example": "e509f906dfb3b32e1125ddd0d1b22e4575c89382e52e35215a3c601eee8734d0",
+    "independentTask": "53e3c4d12efc5a3924f7f1a26458d148a74113e5f8360135b0404f92675a2691",
+    "feedback": "5db922c9f315b33e215ce258bde044477792249cb1bda2393415da836a417486"
+  },
+  "Y12-05": {
+    "explanation": "82a28756ae40fef4058b2c6e1fe3e04787b5e24a1f064fd9c2eb23ac2ea72038",
+    "example": "82a28756ae40fef4058b2c6e1fe3e04787b5e24a1f064fd9c2eb23ac2ea72038",
+    "independentTask": "c227450114b6f46f36f855f0139a1208b09d674cc25e21049eb8e08fdc971bc0",
+    "feedback": "5f2473c9d7c1e04a32170727638baea877dc45da322d01065b84e024c2faf1de"
+  },
+  "Y12-06": {
+    "explanation": "b08cce0e0d8eb2d8ac4ab030b46e15f10ed0c9ea8bfbb7388c98a43b2a208d40",
+    "example": "b08cce0e0d8eb2d8ac4ab030b46e15f10ed0c9ea8bfbb7388c98a43b2a208d40",
+    "independentTask": "e832fb6398638b47dc763294cee3894af546bcfb239fda9bf1b372dbbde6fa16",
+    "feedback": "df99ecfb97c2c2eab70fb227141188f1f636ae78f2aa42213987e6b876eed1f6"
+  },
+  "Y12-07": {
+    "explanation": "65049ad0340bae2e8bb01bd54ac2b8d4df7bd217f9eec62a4c2164d043860b39",
+    "example": "65049ad0340bae2e8bb01bd54ac2b8d4df7bd217f9eec62a4c2164d043860b39",
+    "independentTask": "31d4ebae399aff685f73883c69f24c40fd4c0b057fb160a1a7274acb88caeb8b",
+    "feedback": "1bb93ad4650345e8f6de53b49d362066103be5daf9ac937a743399b315951ef7"
+  },
+  "Y12-08": {
+    "explanation": "9fc199902384b20073ce87d69273bd4e8ed7fb72f0e0096b6a652da11363d77e",
+    "example": "9fc199902384b20073ce87d69273bd4e8ed7fb72f0e0096b6a652da11363d77e",
+    "independentTask": "31d4ebae399aff685f73883c69f24c40fd4c0b057fb160a1a7274acb88caeb8b",
+    "feedback": "1bb93ad4650345e8f6de53b49d362066103be5daf9ac937a743399b315951ef7"
+  },
+  "Y12-09": {
+    "explanation": "d5241a041456e9261d3739c598a6aaf9eabe3f1d97c213708c0b714726befe8a",
+    "example": "d5241a041456e9261d3739c598a6aaf9eabe3f1d97c213708c0b714726befe8a",
+    "independentTask": "53e3c4d12efc5a3924f7f1a26458d148a74113e5f8360135b0404f92675a2691",
+    "feedback": "5db922c9f315b33e215ce258bde044477792249cb1bda2393415da836a417486"
+  },
+  "Y12-10": {
+    "explanation": "3db50e8897e55a8e7317f523603795d2e04e768663fa0affa5ead99d0fa3bad8",
+    "example": "3db50e8897e55a8e7317f523603795d2e04e768663fa0affa5ead99d0fa3bad8",
+    "independentTask": "8b94965f1659b93c1999201e58390c1f9aa931d1402543fbc5920e1d17b07d99",
+    "feedback": "cfcfffa9dc64970ba19b0bf7b252b00884ce1b8627bc932434026bbecc2fa2be"
+  },
+  "Y12-11": {
+    "explanation": "520dc4c2f709527e93211a91e31e30c49419ac1b68d9f82499a8e6a6e31a846f",
+    "example": "520dc4c2f709527e93211a91e31e30c49419ac1b68d9f82499a8e6a6e31a846f",
+    "independentTask": "e34c249d7bf185a155bb2460eb702823007117b19859e81c25d19b38dd1d35e1",
+    "feedback": "402f0bda10c7f0fc008ecdec2690087a75b29d47fb978026e445cc5df91c01ed"
+  },
+  "Y12-12": {
+    "explanation": "5df78b85e182311b7acd0db6b3edb5cdd00bd7b43ad92bd54df857884ebdb2bf",
+    "example": "5df78b85e182311b7acd0db6b3edb5cdd00bd7b43ad92bd54df857884ebdb2bf",
+    "independentTask": "74945aac5ebd3ae40242f2bfa8e0977ee6dfca3a1913f8bc2d10314f6d8f0881",
+    "feedback": "e10a87b482d60eb0aaf99838167c2db57925aef725a3aef227705d10788b0fc1"
+  },
+  "Y12-13": {
+    "explanation": "694589bfafa537b1953c9fda397deb3e5242e733e6824c21b779c76eb98fb506",
+    "example": "694589bfafa537b1953c9fda397deb3e5242e733e6824c21b779c76eb98fb506",
+    "independentTask": "53e3c4d12efc5a3924f7f1a26458d148a74113e5f8360135b0404f92675a2691",
+    "feedback": "5db922c9f315b33e215ce258bde044477792249cb1bda2393415da836a417486"
+  },
+  "Y12-14": {
+    "explanation": "56216ef65657ee004ba7d2fd8b062c1bd276031035d6692769bd2ed378808c67",
+    "example": "56216ef65657ee004ba7d2fd8b062c1bd276031035d6692769bd2ed378808c67",
+    "independentTask": "3d58932d535dc3163a1a8ad6b4180edeee429b2d2dc417f4ab7fca8000af931c",
+    "feedback": "0b58c2aa43ce81f53ffea7a73d9a0a61a15f5474ebc95dabdb5a1a0e34d38c41"
+  },
+  "Y12-15": {
+    "explanation": "ae7081e612f4a826d62f4863302d28845ec7ac9a358ac3e5dc3ff96e83c78422",
+    "example": "ae7081e612f4a826d62f4863302d28845ec7ac9a358ac3e5dc3ff96e83c78422",
+    "independentTask": "c4391853b412205cc8a2b7366662a4a810a650464c5a961f51bbd4093373f638",
+    "feedback": "1c8807b95b14eeace3826b2b13a887d49de12c57f0f3aa87721ab92417dc8060"
+  },
+  "Y12-16": {
+    "explanation": "6eae638be5b7f985a9c55cd77690842fd5372ae09988cefd2fdd0efcc8a671e1",
+    "example": "6eae638be5b7f985a9c55cd77690842fd5372ae09988cefd2fdd0efcc8a671e1",
+    "independentTask": "9c18f69a71a445af314eea1fa29f82a2356e65f694b3c0631857ebe0f37da58e",
+    "feedback": "024c12b7513a600e7d4542731db55ff34b1da25cf7e51f7f6e62a0e20355d2ef"
+  },
+  "Y12-17": {
+    "explanation": "6eae638be5b7f985a9c55cd77690842fd5372ae09988cefd2fdd0efcc8a671e1",
+    "example": "6eae638be5b7f985a9c55cd77690842fd5372ae09988cefd2fdd0efcc8a671e1",
+    "independentTask": "9c18f69a71a445af314eea1fa29f82a2356e65f694b3c0631857ebe0f37da58e",
+    "feedback": "024c12b7513a600e7d4542731db55ff34b1da25cf7e51f7f6e62a0e20355d2ef"
+  },
+  "Y12-18": {
+    "explanation": "2c6fce18450637527080b94dd70d4e2c7feaf34314440ed0264ea685c2ab7b4a",
+    "example": "2c6fce18450637527080b94dd70d4e2c7feaf34314440ed0264ea685c2ab7b4a",
+    "independentTask": "4040b9131f9e4dd8f65bda16231af5611328e92df65d5a62173fdcec2f1a3cb5",
+    "feedback": "5daf67b8ba51a68d243db748acee589aa67d681772516fac256bfc7fb9850853"
+  },
+  "Y12-19": {
+    "explanation": "7efdf577098f31a98978007a2b2858417a52bbb844d92c7ee6037047c8baf75b",
+    "example": "7efdf577098f31a98978007a2b2858417a52bbb844d92c7ee6037047c8baf75b",
+    "independentTask": "4040b9131f9e4dd8f65bda16231af5611328e92df65d5a62173fdcec2f1a3cb5",
+    "feedback": "5daf67b8ba51a68d243db748acee589aa67d681772516fac256bfc7fb9850853"
+  },
+  "Y12-20": {
+    "explanation": "841a213fcd9287146d2aeeec36440dac2d217ee77021d1f0a07492736ee5ec99",
+    "example": "841a213fcd9287146d2aeeec36440dac2d217ee77021d1f0a07492736ee5ec99",
+    "independentTask": "2a99bf6553ff3c53c8c4faa6c60f44820bf182e8bd9394365ef1885918e44f34",
+    "feedback": "f2114535e14c481cf1a9eb30d3e840ad865ede1f3720b2d2f135215f51bcf1bd"
+  },
+  "Y12-21": {
+    "explanation": "42c5cedc3b15b2c8e94ee19061f2fc51529eadb431d3b4e9ee706978ce7472e9",
+    "example": "42c5cedc3b15b2c8e94ee19061f2fc51529eadb431d3b4e9ee706978ce7472e9",
+    "independentTask": "4040b9131f9e4dd8f65bda16231af5611328e92df65d5a62173fdcec2f1a3cb5",
+    "feedback": "5daf67b8ba51a68d243db748acee589aa67d681772516fac256bfc7fb9850853"
+  },
+  "Y12-22": {
+    "explanation": "2ccf67d380f6e2efa0e0eaef897744bc14268b51892bdf4744416f4adfb6692f",
+    "example": "2ccf67d380f6e2efa0e0eaef897744bc14268b51892bdf4744416f4adfb6692f",
+    "independentTask": "4040b9131f9e4dd8f65bda16231af5611328e92df65d5a62173fdcec2f1a3cb5",
+    "feedback": "5daf67b8ba51a68d243db748acee589aa67d681772516fac256bfc7fb9850853"
+  },
+  "Y12-23": {
+    "explanation": "780fa58a9f9c40f9e0bb5dd5a5fe0a6f82656061f8c16e417d40b1c434e7ac91",
+    "example": "780fa58a9f9c40f9e0bb5dd5a5fe0a6f82656061f8c16e417d40b1c434e7ac91",
+    "independentTask": "2a99bf6553ff3c53c8c4faa6c60f44820bf182e8bd9394365ef1885918e44f34",
+    "feedback": "f2114535e14c481cf1a9eb30d3e840ad865ede1f3720b2d2f135215f51bcf1bd"
+  },
+  "Y12-24": {
+    "explanation": "d79a65d92f7751de62bc1dc7ba44d0562200f2c3d1792958faf813f85e3b882a",
+    "example": "d79a65d92f7751de62bc1dc7ba44d0562200f2c3d1792958faf813f85e3b882a",
+    "independentTask": "ce891583a70b5b5453c5699641e741ffd3230465ea298c839e675549d73ffe5e",
+    "feedback": "844fcb85e739517b7b5dbc022194d62c9e5df5428c0d2abe8521c8ceb476b06f"
+  },
+  "Y12-25": {
+    "explanation": "7444ed85c9d794334867f58abf586c350cfce01f31abcdf0e7209de3c80302d8",
+    "example": "7444ed85c9d794334867f58abf586c350cfce01f31abcdf0e7209de3c80302d8",
+    "independentTask": "ce891583a70b5b5453c5699641e741ffd3230465ea298c839e675549d73ffe5e",
+    "feedback": "844fcb85e739517b7b5dbc022194d62c9e5df5428c0d2abe8521c8ceb476b06f"
+  },
+  "Y12-26": {
+    "explanation": "e68cbcdeb2c241337804e593bb4d9efb72717d41da1fe5fa313a74a0c5fa8611",
+    "example": "e68cbcdeb2c241337804e593bb4d9efb72717d41da1fe5fa313a74a0c5fa8611",
+    "independentTask": "53e3c4d12efc5a3924f7f1a26458d148a74113e5f8360135b0404f92675a2691",
+    "feedback": "5db922c9f315b33e215ce258bde044477792249cb1bda2393415da836a417486"
+  },
+  "Y12-27": {
+    "explanation": "000f2c2bac7986fba86511536ec8f8d36c6d85ebaade289347afcacf7d672f8c",
+    "example": "000f2c2bac7986fba86511536ec8f8d36c6d85ebaade289347afcacf7d672f8c",
+    "independentTask": "53e3c4d12efc5a3924f7f1a26458d148a74113e5f8360135b0404f92675a2691",
+    "feedback": "5db922c9f315b33e215ce258bde044477792249cb1bda2393415da836a417486"
+  },
+  "Y12-28": {
+    "explanation": "387801c1d12a65095e87356f49016d3e555f3175827d8aa7631ba118b543e5d8",
+    "example": "387801c1d12a65095e87356f49016d3e555f3175827d8aa7631ba118b543e5d8",
+    "independentTask": "677ca53b14a6688a90905eea6da000315835e012a1ed60da88cd7ad0c6ca7134",
+    "feedback": "d8bc240d05cd4e4b62393788826bc553683a5b768e11a8532a3e29c0d597a6ae"
+  },
+  "Y12-29": {
+    "explanation": "8d3752c9ff2f90e9b1f72a1fbae2ef12e2462da690476818c6014f07604fe5a0",
+    "example": "8d3752c9ff2f90e9b1f72a1fbae2ef12e2462da690476818c6014f07604fe5a0",
+    "independentTask": "6508b316ecae7975b04365060ea7954669a3a6061fe2295f16ee9af64dd87d46",
+    "feedback": "afff2bf15dfeafeeb3a5f360c7b5789fddb099d0cec2a3ba153316b10e61ba18"
+  },
+  "Y12-30": {
+    "explanation": "8d3752c9ff2f90e9b1f72a1fbae2ef12e2462da690476818c6014f07604fe5a0",
+    "example": "8d3752c9ff2f90e9b1f72a1fbae2ef12e2462da690476818c6014f07604fe5a0",
+    "independentTask": "6508b316ecae7975b04365060ea7954669a3a6061fe2295f16ee9af64dd87d46",
+    "feedback": "afff2bf15dfeafeeb3a5f360c7b5789fddb099d0cec2a3ba153316b10e61ba18"
+  },
+  "Y12-31": {
+    "explanation": "8d3752c9ff2f90e9b1f72a1fbae2ef12e2462da690476818c6014f07604fe5a0",
+    "example": "8d3752c9ff2f90e9b1f72a1fbae2ef12e2462da690476818c6014f07604fe5a0",
+    "independentTask": "6508b316ecae7975b04365060ea7954669a3a6061fe2295f16ee9af64dd87d46",
+    "feedback": "afff2bf15dfeafeeb3a5f360c7b5789fddb099d0cec2a3ba153316b10e61ba18"
+  },
+  "Y12-32": {
+    "explanation": "dfe62a98690147948e1e0e93b6b024ba9689527add76266702848fddf452d155",
+    "example": "dfe62a98690147948e1e0e93b6b024ba9689527add76266702848fddf452d155",
+    "independentTask": "5d89fbf91c03580e90521c755f0ab98c46017bdf5b0518f07bdd9e292b177b2b",
+    "feedback": "20bb0ac8de74643b2dabe1537c01925845fd335ce370de9e851f3cc6f5785e35"
+  },
+  "Y12-33": {
+    "explanation": "c1f2d415214e615d2e5f7e1c7adc8cfce9ed768e37a736ba7845de0083b34fe1",
+    "example": "c1f2d415214e615d2e5f7e1c7adc8cfce9ed768e37a736ba7845de0083b34fe1",
+    "independentTask": "6508b316ecae7975b04365060ea7954669a3a6061fe2295f16ee9af64dd87d46",
+    "feedback": "afff2bf15dfeafeeb3a5f360c7b5789fddb099d0cec2a3ba153316b10e61ba18"
+  },
+  "Y12-34": {
+    "explanation": "bc7668ea81c4a5478f97e7e5fc7e7f94fd3643b6deb2c6056c90b7d486a241b7",
+    "example": "bc7668ea81c4a5478f97e7e5fc7e7f94fd3643b6deb2c6056c90b7d486a241b7",
+    "independentTask": "615585e21bd6e00369431a0ee645543ce8fc436db43464fe91cb383ffb196c6d",
+    "feedback": "335d98e91bcaeb82ca894d34b29e817b67a59c25a65f71d61f6b1599ae5b4615"
+  },
+  "Y12-35": {
+    "explanation": "1575ae95dd4407eedae628426b395386620d9588957428e773523bd20265a34c",
+    "example": "1575ae95dd4407eedae628426b395386620d9588957428e773523bd20265a34c",
+    "independentTask": "615585e21bd6e00369431a0ee645543ce8fc436db43464fe91cb383ffb196c6d",
+    "feedback": "335d98e91bcaeb82ca894d34b29e817b67a59c25a65f71d61f6b1599ae5b4615"
+  },
+  "Y12-36": {
+    "explanation": "e47745d3aa511cd7b9eefca6a93ee7cf919525ffe4adcdfe9c8b84b96b43ce41",
+    "example": "e47745d3aa511cd7b9eefca6a93ee7cf919525ffe4adcdfe9c8b84b96b43ce41",
+    "independentTask": "677ca53b14a6688a90905eea6da000315835e012a1ed60da88cd7ad0c6ca7134",
+    "feedback": "d8bc240d05cd4e4b62393788826bc553683a5b768e11a8532a3e29c0d597a6ae"
+  },
+  "Y12-37": {
+    "explanation": "237a412f9f3abdd68cf9104650b2a47fcfe8fb4cdfb2d95c3348c0d7e7713bd9",
+    "example": "237a412f9f3abdd68cf9104650b2a47fcfe8fb4cdfb2d95c3348c0d7e7713bd9",
+    "independentTask": "9e3c38012e7191ee43cadb4746bd6f9d1e1d56bb20605e2be52a3082ae291ca4",
+    "feedback": "1c0093a54a0d57ba90d95029dd801a5fd636009df12d591b76e6a52b11ee5d18"
+  },
+  "Y12-38": {
+    "explanation": "1fc52833dc79be84ac6abeb6033d0b0d2920de384f139a5b6ec9bc96edc9e97a",
+    "example": "1fc52833dc79be84ac6abeb6033d0b0d2920de384f139a5b6ec9bc96edc9e97a",
+    "independentTask": "9e3c38012e7191ee43cadb4746bd6f9d1e1d56bb20605e2be52a3082ae291ca4",
+    "feedback": "1c0093a54a0d57ba90d95029dd801a5fd636009df12d591b76e6a52b11ee5d18"
+  },
+  "Y12-39": {
+    "explanation": "4cdafbb2a9843fb1a92f5424824e822e8ef8d5ccd9d04141b96a6ff925b8af1b",
+    "example": "4cdafbb2a9843fb1a92f5424824e822e8ef8d5ccd9d04141b96a6ff925b8af1b",
+    "independentTask": "85480f6df9136d44a49c0590612ecc3bec01aff3c1ff3d0730ec561f7905f8d5",
+    "feedback": "1f8b51e74304e763a51680f22077039215e81174c2ba0032f89cb751f5c9a19f"
+  },
+  "Y12-40": {
+    "explanation": "310c8b2381a894d48a6c25f955596c536c145386cf28dd677efeae6eab84a001",
+    "example": "310c8b2381a894d48a6c25f955596c536c145386cf28dd677efeae6eab84a001",
+    "independentTask": "b0b576a705446882b0536b4b8d255443d5edfe86ad00fe92f5e194cba94ce8f2",
+    "feedback": "27117883cb20e0ce431626580b27992abbbfd2c8c12695b460ac0da9ccaa6368"
+  },
+  "Y12-41": {
+    "explanation": "237a412f9f3abdd68cf9104650b2a47fcfe8fb4cdfb2d95c3348c0d7e7713bd9",
+    "example": "237a412f9f3abdd68cf9104650b2a47fcfe8fb4cdfb2d95c3348c0d7e7713bd9",
+    "independentTask": "9e3c38012e7191ee43cadb4746bd6f9d1e1d56bb20605e2be52a3082ae291ca4",
+    "feedback": "1c0093a54a0d57ba90d95029dd801a5fd636009df12d591b76e6a52b11ee5d18"
+  },
+  "Y12-42": {
+    "explanation": "ec4c310b0207a27eccf599005e3f9a359a6c49c2f8f578660892e5467b890c27",
+    "example": "ec4c310b0207a27eccf599005e3f9a359a6c49c2f8f578660892e5467b890c27",
+    "independentTask": "9e3c38012e7191ee43cadb4746bd6f9d1e1d56bb20605e2be52a3082ae291ca4",
+    "feedback": "1c0093a54a0d57ba90d95029dd801a5fd636009df12d591b76e6a52b11ee5d18"
+  },
+  "Y12-43": {
+    "explanation": "ec4c310b0207a27eccf599005e3f9a359a6c49c2f8f578660892e5467b890c27",
+    "example": "ec4c310b0207a27eccf599005e3f9a359a6c49c2f8f578660892e5467b890c27",
+    "independentTask": "fbfae4a12f9978d7ebfb2e73aa33e4d808471e01f7378f7af538ee88d1fa0326",
+    "feedback": "0fc69d12d4bbc7503bc06e34dc239bc0ca30ec7418b2d18f666eef3761ed0d23"
+  },
+  "Y12-44": {
+    "explanation": "1fc52833dc79be84ac6abeb6033d0b0d2920de384f139a5b6ec9bc96edc9e97a",
+    "example": "1fc52833dc79be84ac6abeb6033d0b0d2920de384f139a5b6ec9bc96edc9e97a",
+    "independentTask": "9e3c38012e7191ee43cadb4746bd6f9d1e1d56bb20605e2be52a3082ae291ca4",
+    "feedback": "1c0093a54a0d57ba90d95029dd801a5fd636009df12d591b76e6a52b11ee5d18"
+  },
+  "Y12-45": {
+    "explanation": "1b0f7a22918c996bbf8929845191eb39ede519bb7d2607d2b318a9323ed70c8c",
+    "example": "1b0f7a22918c996bbf8929845191eb39ede519bb7d2607d2b318a9323ed70c8c",
+    "independentTask": "0c1202ae9dc0486dde8ec7ad4d1680fc951b0f54d5e8aa3adaade99ad53d6cc5",
+    "feedback": "a00002bd68c9acaef81b0d921eec5193c54b05e0c543611d5c1d8b4000773beb"
+  },
+  "Y12-46": {
+    "explanation": "13c6dff259a11530eede852470f20ff94e9b77b1e873ed9ba8129c99a2fd7148",
+    "example": "13c6dff259a11530eede852470f20ff94e9b77b1e873ed9ba8129c99a2fd7148",
+    "independentTask": "b0b576a705446882b0536b4b8d255443d5edfe86ad00fe92f5e194cba94ce8f2",
+    "feedback": "27117883cb20e0ce431626580b27992abbbfd2c8c12695b460ac0da9ccaa6368"
+  },
+  "Y12-47": {
+    "explanation": "4c018403be371caf1e5ea80bbaf5547e26bbe15319e67033a040a6a60eabb5ca",
+    "example": "4c018403be371caf1e5ea80bbaf5547e26bbe15319e67033a040a6a60eabb5ca",
+    "independentTask": "b0b576a705446882b0536b4b8d255443d5edfe86ad00fe92f5e194cba94ce8f2",
+    "feedback": "27117883cb20e0ce431626580b27992abbbfd2c8c12695b460ac0da9ccaa6368"
+  },
+  "Y12-48": {
+    "explanation": "79d2260ecef1d349a35159fa4f852c2506856c480435a01da11e62cd031387a9",
+    "example": "79d2260ecef1d349a35159fa4f852c2506856c480435a01da11e62cd031387a9",
+    "independentTask": "677ca53b14a6688a90905eea6da000315835e012a1ed60da88cd7ad0c6ca7134",
+    "feedback": "d8bc240d05cd4e4b62393788826bc553683a5b768e11a8532a3e29c0d597a6ae"
+  },
+  "Y12-49": {
+    "explanation": "387801c1d12a65095e87356f49016d3e555f3175827d8aa7631ba118b543e5d8",
+    "example": "387801c1d12a65095e87356f49016d3e555f3175827d8aa7631ba118b543e5d8",
+    "independentTask": "677ca53b14a6688a90905eea6da000315835e012a1ed60da88cd7ad0c6ca7134",
+    "feedback": "d8bc240d05cd4e4b62393788826bc553683a5b768e11a8532a3e29c0d597a6ae"
+  },
+  "Y12-50": {
+    "explanation": "835f5ee41aec902af2e4789f1068fac20cff0d9f97ca2afff4837f3997c6097f",
+    "example": "835f5ee41aec902af2e4789f1068fac20cff0d9f97ca2afff4837f3997c6097f",
+    "independentTask": "677ca53b14a6688a90905eea6da000315835e012a1ed60da88cd7ad0c6ca7134",
+    "feedback": "d8bc240d05cd4e4b62393788826bc553683a5b768e11a8532a3e29c0d597a6ae"
+  }
+}

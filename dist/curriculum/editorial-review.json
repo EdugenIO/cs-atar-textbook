@@ -323,8 +323,14 @@
       "actions": [],
       "originalTask": null,
       "independentReview": "pending",
-      "teachingAdditions": [],
-      "followUpStatus": "Existing provision nominated; independent teacher review pending"
+      "teachingAdditions": [
+        {
+          "id": "fresh-type-choices",
+          "title": "Choose and use all four primitive types independently",
+          "url": "../#values/heading-choose-and-use-all-four-primitive-types-independently"
+        }
+      ],
+      "followUpStatus": "Original teaching addition supplied; independent re-review and actual learner evidence pending"
     },
     {
       "id": "Y11-R007",
@@ -817,8 +823,14 @@
       "actions": [],
       "originalTask": null,
       "independentReview": "pending",
-      "teachingAdditions": [],
-      "followUpStatus": "Existing provision nominated; independent teacher review pending"
+      "teachingAdditions": [
+        {
+          "id": "array-representation-transfer",
+          "title": "Construct array algorithms in both representations",
+          "url": "../#arrays/heading-construct-array-algorithms-in-both-representations"
+        }
+      ],
+      "followUpStatus": "Original teaching addition supplied; independent re-review and actual learner evidence pending"
     },
     {
       "id": "Y11-R016",
@@ -1187,8 +1199,14 @@
       "actions": [],
       "originalTask": null,
       "independentReview": "pending",
-      "teachingAdditions": [],
-      "followUpStatus": "Existing provision nominated; independent teacher review pending"
+      "teachingAdditions": [
+        {
+          "id": "maintainability-check",
+          "title": "Review a program against programming conventions",
+          "url": "../#design/heading-review-a-program-against-programming-conventions"
+        }
+      ],
+      "followUpStatus": "Original teaching addition supplied; independent re-review and actual learner evidence pending"
     },
     {
       "id": "Y11-R022",
@@ -1671,8 +1689,14 @@
       "actions": [],
       "originalTask": null,
       "independentReview": "pending",
-      "teachingAdditions": [],
-      "followUpStatus": "Existing provision nominated; independent teacher review pending"
+      "teachingAdditions": [
+        {
+          "id": "array-representation-transfer",
+          "title": "Construct array algorithms in both representations",
+          "url": "../#arrays/heading-construct-array-algorithms-in-both-representations"
+        }
+      ],
+      "followUpStatus": "Original teaching addition supplied; independent re-review and actual learner evidence pending"
     },
     {
       "id": "Y11-R029",
@@ -2361,8 +2385,14 @@
       "actions": [],
       "originalTask": null,
       "independentReview": "pending",
-      "teachingAdditions": [],
-      "followUpStatus": "Existing provision nominated; independent teacher review pending"
+      "teachingAdditions": [
+        {
+          "id": "address-version-check",
+          "title": "Compare address versions and local delivery independently",
+          "url": "../#addressing/heading-compare-address-versions-and-local-delivery-independently"
+        }
+      ],
+      "followUpStatus": "Original teaching addition supplied; independent re-review and actual learner evidence pending"
     },
     {
       "id": "Y11-R039",
@@ -2446,8 +2476,14 @@
       "actions": [],
       "originalTask": null,
       "independentReview": "pending",
-      "teachingAdditions": [],
-      "followUpStatus": "Existing provision nominated; independent teacher review pending"
+      "teachingAdditions": [
+        {
+          "id": "network-component-check",
+          "title": "Match every network component to a responsibility",
+          "url": "../#network-design/heading-match-every-network-component-to-a-responsibility"
+        }
+      ],
+      "followUpStatus": "Original teaching addition supplied; independent re-review and actual learner evidence pending"
     },
     {
       "id": "Y11-R040",
@@ -2505,8 +2541,14 @@
       "actions": [],
       "originalTask": null,
       "independentReview": "pending",
-      "teachingAdditions": [],
-      "followUpStatus": "Existing provision nominated; independent teacher review pending"
+      "teachingAdditions": [
+        {
+          "id": "network-access-performance-check",
+          "title": "Diagnose performance and justify access controls",
+          "url": "../#network-design/heading-diagnose-performance-and-justify-access-controls"
+        }
+      ],
+      "followUpStatus": "Original teaching addition supplied; independent re-review and actual learner evidence pending"
     },
     {
       "id": "Y11-R041",
@@ -2571,8 +2613,14 @@
       "actions": [],
       "originalTask": null,
       "independentReview": "pending",
-      "teachingAdditions": [],
-      "followUpStatus": "Existing provision nominated; independent teacher review pending"
+      "teachingAdditions": [
+        {
+          "id": "network-access-performance-check",
+          "title": "Diagnose performance and justify access controls",
+          "url": "../#network-design/heading-diagnose-performance-and-justify-access-controls"
+        }
+      ],
+      "followUpStatus": "Original teaching addition supplied; independent re-review and actual learner evidence pending"
     },
     {
       "id": "Y11-R042",

@@ -618,9 +618,9 @@ Observed / traced:
 Feedback and fresh retry:
 
 
-## Step 17 - Supporting extension: NULL, LEFT JOIN and HAVING
+## Step 17 - Support-booklet HAVING and optional LEFT JOIN
 
-Supporting extension, not an additional prescribed SQL-keyword list. LEFT JOIN preserves unmatched left-side rows with NULL right-side values. COUNT(right_key) ignores those NULL values while COUNT(*) counts the preserved row. Use IS NULL to test missing values. HAVING filters groups after grouping; WHERE filters input rows. Learn these after core INNER JOIN and GROUP BY, and teach/practise them explicitly before including them in a local assessment.
+HAVING appears in the official additional syllabus support booklet (printed p22); learn group filtering after core GROUP BY/aggregate work. LEFT JOIN is additional to the explicitly listed INNER JOIN syntax. It preserves unmatched left-side rows with NULL right-side fields. COUNT(right_key) ignores those NULLs while COUNT(*) counts the preserved row; IS NULL tests missing values. This step combines a support-booklet skill and an extension: teach each part before including it in the locally issued scope. See the scope guide for the distinction.
 
 Textbook: https://edugenio.github.io/cs-atar-textbook/#unit4-sql
 
@@ -656,7 +656,7 @@ Observed / traced:
 Feedback and fresh retry:
 
 
-## Step 18 - Supporting extension: a transaction and a recovery test
+## Step 18 - SQLite transaction implementation for ACID
 
 Supporting application/reliability practice. A transaction can keep related changes together. BEGIN starts the boundary, COMMIT accepts it, and ROLLBACK cancels uncommitted changes. Use explicit boundaries in a disposable SQLite tool; other drivers may manage transactions differently. Enable foreign keys before BEGIN. A second BEGIN inside an open transaction fails. After an error, choose an explicit rollback/recovery action rather than assuming every earlier statement was undone.
 

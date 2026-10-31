@@ -429,7 +429,7 @@
     "id": "databases-sql",
     "title": "Databases and SQL: from records to reliable changes",
     "unit": 2,
-    "prerequisites": "Activities 01-04 establish the Year 11 foundation. Before Activity 05, complete whole-result aggregate practice in the SQL pathway; grouped reports belong to the Year 12 route. HAVING and LEFT JOIN are supporting extensions with their own preparation. Activity 06 needs prior SELECT/WHERE practice and a disposable database copy. Follow the prerequisites, rather than treating the activity numbers as one beginner lesson.",
+    "prerequisites": "Activities 01-04 establish the Year 11 foundation. Before Activity 05, complete whole-result aggregate practice in the SQL pathway; grouped reports belong to the Year 12 route. HAVING is a support-booklet skill after GROUP BY; LEFT JOIN is an extension. Both need their own preparation. Activity 06 needs prior SELECT/WHERE practice and a disposable database copy. Follow the prerequisites, rather than treating the activity numbers as one beginner lesson.",
     "references": [
       "https://www.sqlite.org/lang_select.html",
       "https://www.sqlite.org/foreignkeys.html",
@@ -869,7 +869,7 @@
           },
           {
             "type": "heading",
-            "text": "B. Supporting extension: HAVING"
+            "text": "B. Support-booklet SQL: HAVING"
           },
           {
             "type": "p",
