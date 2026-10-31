@@ -1,0 +1,7 @@
+(() => {
+ const unit=document.getElementById('unit'),chapter=document.getElementById('chapter'),cards=[...document.querySelectorAll('.lesson-route')];
+ function filter(){let count=0;for(const card of cards){card.hidden=!!((unit.value&&card.dataset.unit!==unit.value)||(chapter.value&&card.dataset.chapter!==chapter.value));if(!card.hidden)count++;}document.getElementById('count').textContent=count+' of 256 lessons';const params=new URLSearchParams();if(unit.value)params.set('unit',unit.value);if(chapter.value)params.set('chapter',chapter.value);history.replaceState(null,'',location.pathname+(params.size?'?'+params:'')+location.hash);}
+ function reveal(){const target=document.getElementById(location.hash.slice(1));if(!target?.classList.contains('lesson-route'))return;unit.value=target.dataset.unit;chapter.value=target.dataset.chapter;filter();target.tabIndex=-1;target.focus({preventScroll:true});target.scrollIntoView({block:'start'});}
+ const params=new URLSearchParams(location.search);for(const field of [unit,chapter])if([...field.options].some(o=>o.value===params.get(field.id)))field.value=params.get(field.id);
+ unit.addEventListener('change',()=>{chapter.value='';filter();});chapter.addEventListener('change',()=>{unit.value='';filter();});document.getElementById('reset').addEventListener('click',()=>{unit.value='';chapter.value='';history.replaceState(null,'',location.pathname);filter();});document.getElementById('print').addEventListener('click',()=>window.print());window.addEventListener('hashchange',reveal);filter();reveal();
+})();

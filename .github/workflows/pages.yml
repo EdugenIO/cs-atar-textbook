@@ -26,6 +26,7 @@ jobs:
           python scripts/build-provision-review.py
           python scripts/build-curriculum-map.py
           node scripts/build-student-journeys.mjs
+          node scripts/build-lesson-routes.mjs
           python scripts/build-extended-packs.py
           python scripts/build-sql-pathway.py
           node scripts/build-resource-hub.mjs
@@ -55,6 +56,23 @@ jobs:
         run: |
           python scripts/build-offline-library.py
           python tests/offline-library.test.py
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: Install browser acceptance tools
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium firefox webkit
+      - name: Browser and accessibility acceptance
+        run: npm run test:browser
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: browser-acceptance-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
