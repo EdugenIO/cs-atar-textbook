@@ -1,0 +1,3 @@
+id,seq,table,from,to,on_update,on_delete,match
+0,0,Skill,SkillID,SkillID,NO ACTION,NO ACTION,NONE
+1,0,Device,DeviceID,DeviceID,NO ACTION,NO ACTION,NONE

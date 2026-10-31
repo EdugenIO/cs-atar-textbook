@@ -1,0 +1,609 @@
+{
+  "basis": "2026 foundation with 2027 revisions",
+  "checked": "31 October 2026",
+  "sources": {
+    "year11": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+    "year12": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0005/1273190/Computer-Science-ATAR-Year-12-Syllabus-for-teaching-from-2027.PDF"
+  },
+  "stages": [
+    {
+      "id": "01",
+      "year": 11,
+      "title": "Choose columns, order rows and remove duplicates",
+      "chapter": "sql-basics",
+      "operations": [
+        "SELECT",
+        "ORDER BY",
+        "DISTINCT"
+      ],
+      "explanation": "Start with the supplied four-table equipment database; you do not need to build it before learning queries. SELECT chooses output columns and FROM identifies the table. ORDER BY gives an explicit order; add a secondary key when values tie. DISTINCT removes duplicate result rows. Read the keys and table preview before writing SQL. This step assumes basic table, record, field and primary/foreign-key vocabulary from the linked reading.",
+      "model": {
+        "prompt": "List every equipment identifier and description, ordered by identifier.",
+        "sql": "SELECT EquipmentID, EquipmentDescription FROM Equipment ORDER BY EquipmentID;",
+        "check": null,
+        "error": null
+      },
+      "guided": {
+        "prompt": "List borrower labels and identifiers, ordered by label descending.",
+        "sql": "SELECT BorrowerLabel, BorrowerID FROM Borrower ORDER BY BorrowerLabel DESC, BorrowerID;",
+        "check": null,
+        "error": null
+      },
+      "independent": {
+        "prompt": "On the changed database, list distinct equipment descriptions in ascending order.",
+        "sql": "SELECT DISTINCT EquipmentDescription FROM Equipment ORDER BY EquipmentDescription;",
+        "check": null,
+        "error": null
+      },
+      "feedback": "Compare column order, row count and ordering separately. If descriptions repeat, decide whether the requirement asks for items or distinct descriptions.",
+      "fixture": "y11",
+      "core": true
+    },
+    {
+      "id": "02",
+      "year": 11,
+      "title": "Filter and combine conditions before joining",
+      "chapter": "sql-basics",
+      "operations": [
+        "WHERE",
+        "comparisons",
+        "AND",
+        "OR",
+        "NOT",
+        "LIKE",
+        "BETWEEN"
+      ],
+      "explanation": "WHERE retains rows whose condition is true. Use single quotes for text. AND requires both conditions; OR accepts either; parentheses make combinations explicit. NOT negates a condition. BETWEEN includes its endpoints; LIKE uses % for any sequence and _ for one character in SQLite. ISO dates here are fixed-width YYYY-MM-DD text, so lexical comparisons match chronological order. This teaching choice is not a universal date-storage rule.",
+      "model": {
+        "prompt": "Find outstanding loans due before 8 April 2026.",
+        "sql": "SELECT LoanID, DueDate FROM Loan WHERE Returned = 0 AND DueDate < '2026-04-08' ORDER BY DueDate, LoanID;",
+        "check": null,
+        "error": null
+      },
+      "guided": {
+        "prompt": "List Camera equipment in either category C01 or C03; make grouping explicit.",
+        "sql": "SELECT EquipmentID FROM Equipment WHERE EquipmentDescription = 'Camera' AND (CategoryID = 'C01' OR CategoryID = 'C03') ORDER BY EquipmentID;",
+        "check": null,
+        "error": null
+      },
+      "independent": {
+        "prompt": "On changed data, list outstanding loans due from 8 through 12 April inclusive, excluding B001. Also write a separate prefix search for descriptions beginning with S.",
+        "sql": "SELECT LoanID, BorrowerID, DueDate FROM Loan WHERE Returned = 0 AND DueDate BETWEEN '2026-04-08' AND '2026-04-12' AND NOT (BorrowerID = 'B001') ORDER BY DueDate, LoanID;\nSELECT EquipmentID, EquipmentDescription FROM Equipment WHERE EquipmentDescription LIKE 'S%' ORDER BY EquipmentID;",
+        "check": null,
+        "error": null
+      },
+      "feedback": "Check each Boolean component on a known included row and an excluded row. An empty result can be correct; inspect the data before changing the query.",
+      "fixture": "y11",
+      "core": true
+    },
+    {
+      "id": "03",
+      "year": 11,
+      "title": "Match a known key in an INNER JOIN",
+      "chapter": "database-solution",
+      "operations": [
+        "INNER JOIN",
+        "ON"
+      ],
+      "explanation": "Read the relationship first: each Loan refers to one Borrower; a Borrower may have several Loans. INNER JOIN pairs rows on matching identifiers. Repeated borrower labels are expected when a person has multiple loans. Qualify columns shared by both tables. Join by corresponding keys, not by similarly shaped names or unrelated row numbers.",
+      "model": {
+        "prompt": "List each loan with its borrower label.",
+        "sql": "SELECT Loan.LoanID, Borrower.BorrowerLabel FROM Loan INNER JOIN Borrower ON Loan.BorrowerID = Borrower.BorrowerID ORDER BY Loan.LoanID;",
+        "check": null,
+        "error": null
+      },
+      "guided": {
+        "prompt": "List loan identifiers and equipment descriptions for returned loans.",
+        "sql": "SELECT Loan.LoanID, Equipment.EquipmentDescription FROM Loan INNER JOIN Equipment ON Loan.EquipmentID = Equipment.EquipmentID WHERE Loan.Returned = 1 ORDER BY Loan.LoanID;",
+        "check": null,
+        "error": null
+      },
+      "independent": {
+        "prompt": "On changed data, list outstanding loans with borrower labels and due dates, ordered by due date then loan identifier.",
+        "sql": "SELECT Loan.LoanID, Borrower.BorrowerLabel, Loan.DueDate FROM Loan INNER JOIN Borrower ON Loan.BorrowerID = Borrower.BorrowerID WHERE Loan.Returned = 0 ORDER BY Loan.DueDate, Loan.LoanID;",
+        "check": null,
+        "error": null
+      },
+      "feedback": "If the count suddenly multiplies, inspect ON and relationship cardinality. Add one table at a time and check the intermediate rows.",
+      "fixture": "y11",
+      "core": true
+    },
+    {
+      "id": "04",
+      "year": 11,
+      "title": "Use all five aggregate functions at the right grain",
+      "chapter": "database-solution",
+      "operations": [
+        "COUNT",
+        "SUM",
+        "AVG",
+        "MAX",
+        "MIN"
+      ],
+      "explanation": "An aggregate summarises a set of input rows. COUNT(*) counts rows; COUNT(column) counts non-NULL values. SUM, AVG, MAX and MIN operate on the selected values. Use a small numeric fixture to predict each result by hand. First learn whole-result aggregates without GROUP BY; grouping comes in the Year 12 pathway. For an empty input set COUNT gives zero; these other aggregates give NULL. AS labels an output column; it does not rename a stored field. These simple result labels help compare aggregates before calculated aliases are developed in Year 12.",
+      "model": {
+        "prompt": "Summarise the fixed durations of five practice records.",
+        "sql": "SELECT COUNT(*) AS Records, SUM(Days) AS TotalDays, AVG(Days) AS MeanDays, MAX(Days) AS Longest, MIN(Days) AS Shortest FROM Duration;",
+        "check": null,
+        "error": null
+      },
+      "guided": {
+        "prompt": "Apply all five aggregates only to records with Days at least 3.",
+        "sql": "SELECT COUNT(*) AS Records, SUM(Days) AS TotalDays, AVG(Days) AS MeanDays, MAX(Days) AS Longest, MIN(Days) AS Shortest FROM Duration WHERE Days >= 3;",
+        "check": null,
+        "error": null
+      },
+      "independent": {
+        "prompt": "On changed durations, summarise only completed records with all five functions. Also predict the aggregate row for Days greater than 99.",
+        "sql": "SELECT COUNT(*) AS Records, SUM(Days) AS TotalDays, AVG(Days) AS MeanDays, MAX(Days) AS Longest, MIN(Days) AS Shortest FROM Duration WHERE Completed = 1;\nSELECT COUNT(*) AS Records, SUM(Days) AS TotalDays, AVG(Days) AS MeanDays, MAX(Days) AS Longest, MIN(Days) AS Shortest FROM Duration WHERE Days > 99;",
+        "check": null,
+        "error": null
+      },
+      "feedback": "Write the actual input values beside the answer. If the mean is wrong, check the divisor and the filtered rows; do not average identifiers.",
+      "fixture": "durations",
+      "core": true
+    },
+    {
+      "id": "05",
+      "year": 11,
+      "title": "Design before CREATE: build three related tables",
+      "chapter": "normalisation",
+      "operations": [
+        "CREATE TABLE",
+        "data types",
+        "PRIMARY KEY",
+        "FOREIGN KEY",
+        "NOT NULL"
+      ],
+      "explanation": "Before independent schema construction, complete the linked ER modelling and 1NF -> 2NF -> 3NF practice. Here StudentID determines StudentName, ClubID determines ClubName, and a membership is identified by StudentID plus ClubID. Separate those facts into Student, Club and Membership. An ordinary membership refers to exactly one existing student and club. SQLite uses type affinity; declared types alone do not enforce every domain rule. BOOLEAN and DATE need an explicit storage convention. The model shows inline REFERENCES for foreign keys and a table-level PRIMARY KEY for a pair: neither component alone identifies the relationship record.",
+      "model": {
+        "prompt": "Model a three-table design for devices, skills and dated device-skill records. Inspect the junction key and foreign keys before the independent transfer.",
+        "sql": "CREATE TABLE Device (DeviceID TEXT PRIMARY KEY NOT NULL, Label TEXT NOT NULL);\nCREATE TABLE Skill (SkillID TEXT PRIMARY KEY NOT NULL, SkillName TEXT NOT NULL);\nCREATE TABLE DeviceSkill (DeviceID TEXT NOT NULL REFERENCES Device(DeviceID), SkillID TEXT NOT NULL REFERENCES Skill(SkillID), RecordedOn TEXT NOT NULL, PRIMARY KEY(DeviceID, SkillID));",
+        "check": "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;\nSELECT name, type, pk FROM pragma_table_info('DeviceSkill') ORDER BY cid;\nPRAGMA foreign_key_list(DeviceSkill);",
+        "error": null
+      },
+      "guided": {
+        "prompt": "Create Room(RoomID required TEXT primary key, RoomName required TEXT) and Desk(DeskID required TEXT primary key, RoomID required TEXT referencing Room). Explain the one-to-many link.",
+        "sql": "CREATE TABLE Room (RoomID TEXT PRIMARY KEY NOT NULL, RoomName TEXT NOT NULL);\nCREATE TABLE Desk (DeskID TEXT PRIMARY KEY NOT NULL, RoomID TEXT NOT NULL REFERENCES Room(RoomID));",
+        "check": "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;\nPRAGMA foreign_key_list(Desk);",
+        "error": null
+      },
+      "independent": {
+        "prompt": "From the stated dependencies, create Student(StudentID, StudentName), Club(ClubID, ClubName), Membership(StudentID, ClubID, JoinedOn). Use required TEXT fields, a composite Membership primary key and both foreign keys. JoinedOn stores ISO date text. Explain why names belong in the parent tables.",
+        "sql": "CREATE TABLE Student (StudentID TEXT PRIMARY KEY NOT NULL, StudentName TEXT NOT NULL);\nCREATE TABLE Club (ClubID TEXT PRIMARY KEY NOT NULL, ClubName TEXT NOT NULL);\nCREATE TABLE Membership (StudentID TEXT NOT NULL REFERENCES Student(StudentID), ClubID TEXT NOT NULL REFERENCES Club(ClubID), JoinedOn TEXT NOT NULL, PRIMARY KEY(StudentID, ClubID));",
+        "check": "SELECT name FROM sqlite_master WHERE type = 'table' ORDER BY name;\nSELECT name, type, pk FROM pragma_table_info('Membership') ORDER BY cid;",
+        "error": null
+      },
+      "feedback": "Check the data dictionary against PRAGMA table_info and foreign_key_list. The three-table construction is independent learner work; downloading a supplied fixture does not replace it.",
+      "fixture": "scratch",
+      "core": true
+    },
+    {
+      "id": "06",
+      "year": 11,
+      "title": "INSERT deliberately and test integrity",
+      "chapter": "database-solution",
+      "operations": [
+        "INSERT",
+        "referential integrity",
+        "required values",
+        "duplicate keys"
+      ],
+      "explanation": "Use a fresh copy for each attempt. Enable PRAGMA foreign_keys = ON outside a transaction in every connection, then check PRAGMA foreign_keys returns 1. That setting is not stored in the database file. Insert parent records before dependent rows. Name the columns rather than relying on table order. After a change, verify the stored record and retain evidence of a deliberate invalid case.",
+      "model": {
+        "prompt": "Add a new parent borrower to the equipment database.",
+        "sql": "INSERT INTO Borrower (BorrowerID, BorrowerLabel) VALUES ('B010','Practice member');",
+        "check": "SELECT BorrowerID, BorrowerLabel FROM Borrower WHERE BorrowerID = 'B010';",
+        "error": null
+      },
+      "guided": {
+        "prompt": "Try an orphan loan. Predict the error and check that no row was inserted.",
+        "sql": "INSERT INTO Loan VALUES ('L020','B999','E01','2026-04-14',0);",
+        "check": "SELECT COUNT(*) AS MatchingRows FROM Loan WHERE LoanID = 'L020';",
+        "error": "FOREIGN KEY constraint failed"
+      },
+      "independent": {
+        "prompt": "On changed data, insert B011 with label New member, then L021 for B011/E06 due 15 April 2026, not returned. In separate fresh copies, try a repeated B001 key and a NULL borrower label; explain both failures.",
+        "sql": "INSERT INTO Borrower (BorrowerID, BorrowerLabel) VALUES ('B011','New member');\nINSERT INTO Loan VALUES ('L021','B011','E06','2026-04-15',0);",
+        "check": "SELECT LoanID, BorrowerID, EquipmentID FROM Loan WHERE LoanID = 'L021';",
+        "error": null
+      },
+      "feedback": "If the orphan insert succeeds, stop and check PRAGMA foreign_keys before BEGIN. For a duplicate key, inspect the existing record; do not invent a new ID without checking the requirement.",
+      "fixture": "y11",
+      "core": true
+    },
+    {
+      "id": "07",
+      "year": 11,
+      "title": "Target UPDATE and DELETE, then verify unchanged rows",
+      "chapter": "database-solution",
+      "operations": [
+        "UPDATE",
+        "DELETE",
+        "WHERE",
+        "verification"
+      ],
+      "explanation": "Preview the target SELECT before changing data. UPDATE changes columns in matching rows; DELETE removes matching rows. Without WHERE, either statement can affect the whole table. Keep a disposable copy, record the original row and verify both the target and a non-target row. The expected results below are from fresh databases; do not carry mutations between exercises. In verification queries, IN (value1, value2) matches any listed value.",
+      "model": {
+        "prompt": "Mark L001 returned, delete only returned L005, and verify the changes plus an unchanged L002.",
+        "sql": "UPDATE Loan SET Returned = 1 WHERE LoanID = 'L001';\nDELETE FROM Loan WHERE LoanID='L005' AND Returned=1;",
+        "check": "SELECT LoanID, Returned FROM Loan WHERE LoanID IN ('L001','L002') ORDER BY LoanID;\nSELECT COUNT(*) AS RemovedLoanRows FROM Loan WHERE LoanID='L005';",
+        "error": null
+      },
+      "guided": {
+        "prompt": "Delete only returned loan L003; verify the borrower survives.",
+        "sql": "DELETE FROM Loan WHERE LoanID = 'L003' AND Returned = 1;",
+        "check": "SELECT COUNT(*) AS LoanRows FROM Loan WHERE LoanID = 'L003';\nSELECT BorrowerID FROM Borrower WHERE BorrowerID = 'B001';",
+        "error": null
+      },
+      "independent": {
+        "prompt": "On changed data, move L007 due date to 16 April 2026, then delete only returned L005. Show both effects and an unchanged L004.",
+        "sql": "UPDATE Loan SET DueDate = '2026-04-16' WHERE LoanID = 'L007';\nDELETE FROM Loan WHERE LoanID = 'L005' AND Returned = 1;",
+        "check": "SELECT LoanID, DueDate FROM Loan WHERE LoanID IN ('L004','L007') ORDER BY LoanID;\nSELECT COUNT(*) AS RemovedLoanRows FROM Loan WHERE LoanID = 'L005';",
+        "error": null
+      },
+      "feedback": "A successful execution message is not evidence that the correct record changed. Compare expected and actual rows; restore a fresh copy after an unintended broad change.",
+      "fixture": "y11",
+      "core": true
+    },
+    {
+      "id": "08",
+      "year": 11,
+      "title": "Independent rehearsal before the Year 11 checkpoint",
+      "chapter": "database-solution",
+      "operations": [
+        "Year 11 rehearsal"
+      ],
+      "explanation": "Use the changed four-table database and the separate three-table schema task from Step 05. Make an independent attempt before revealing reference SQL. Retain predicted results, actual results and a short explanation of the first mismatch. After feedback, retry using the other data variant or a teacher-supplied changed requirement. This public rehearsal is formative, not a secure assessment or a compulsory assessment date.",
+      "model": {
+        "prompt": "Model a requirement-to-query explanation for a distinct category list.",
+        "sql": "SELECT DISTINCT CategoryID FROM Equipment ORDER BY CategoryID;",
+        "check": null,
+        "error": null
+      },
+      "guided": {
+        "prompt": "Produce an equipment count, then explain whether it counts categories or items.",
+        "sql": "SELECT COUNT(*) AS EquipmentItems FROM Equipment;",
+        "check": null,
+        "error": null
+      },
+      "independent": {
+        "prompt": "On changed data, produce a sorted report of outstanding LoanID and equipment description. Then count all outstanding loans. Explain the join key and what each output row represents. Separately repeat the three-table construction and controlled insert/update/delete tasks before including them in assessment.",
+        "sql": "SELECT Loan.LoanID, Equipment.EquipmentDescription FROM Loan INNER JOIN Equipment ON Loan.EquipmentID = Equipment.EquipmentID WHERE Loan.Returned = 0 ORDER BY Loan.LoanID;\nSELECT COUNT(*) AS OutstandingLoans FROM Loan WHERE Returned = 0;",
+        "check": null,
+        "error": null
+      },
+      "feedback": "Use the operation checklist, not one correct report, to decide what is ready. If schema creation or any of the five aggregates has not been independently demonstrated, practise it before assessing it.",
+      "fixture": "y11",
+      "core": true
+    },
+    {
+      "id": "09",
+      "year": 12,
+      "title": "Inspect six tables and join across four",
+      "chapter": "unit4-sql",
+      "operations": [
+        "multi-table INNER JOIN",
+        "composite keys"
+      ],
+      "explanation": "Begin after the Year 11 checkpoint. Read the supplied six-table dictionary and relationships: Workshop -> Session; Instructor -> Session; Member -> Booking; Session -> Booking; Booking -> Attendance by the complete MemberID/SessionID key. Trace one row across the keys before writing a four-table query. The report grain below is one booking. Instructor and Attendance exist in the schema even though this report does not need them. AS b, m, s and w introduce short table aliases; use those aliases to qualify fields consistently.",
+      "model": {
+        "prompt": "List member, session and workshop for each booking.",
+        "sql": "SELECT b.MemberID, m.DisplayName, s.SessionID, w.Title FROM Booking AS b INNER JOIN Member AS m ON m.MemberID = b.MemberID INNER JOIN Session AS s ON s.SessionID = b.SessionID INNER JOIN Workshop AS w ON w.WorkshopID = s.WorkshopID ORDER BY s.SessionID, b.MemberID;",
+        "check": null,
+        "error": null
+      },
+      "guided": {
+        "prompt": "List bookings for Network design only.",
+        "sql": "SELECT b.MemberID, s.SessionID, w.Title FROM Booking AS b INNER JOIN Session AS s ON s.SessionID = b.SessionID INNER JOIN Workshop AS w ON w.WorkshopID = s.WorkshopID WHERE w.Title = 'Network design' ORDER BY s.SessionID, b.MemberID;",
+        "check": null,
+        "error": null
+      },
+      "independent": {
+        "prompt": "On changed data, report member display name, session date and workshop title for Network design bookings, sorted by session date then member ID.",
+        "sql": "SELECT m.DisplayName, s.SessionDate, w.Title FROM Booking AS b INNER JOIN Member AS m ON m.MemberID = b.MemberID INNER JOIN Session AS s ON s.SessionID = b.SessionID INNER JOIN Workshop AS w ON w.WorkshopID = s.WorkshopID WHERE w.Title = 'Network design' ORDER BY s.SessionDate, b.MemberID;",
+        "check": null,
+        "error": null
+      },
+      "feedback": "Check one booking key through every table. If a member appears unexpectedly many times, inspect each intermediate join before adding DISTINCT to hide the issue.",
+      "fixture": "y12",
+      "core": true
+    },
+    {
+      "id": "10",
+      "year": 12,
+      "title": "GROUP BY and aggregate without multiplying totals",
+      "chapter": "unit4-sql",
+      "operations": [
+        "GROUP BY",
+        "aggregates",
+        "grain"
+      ],
+      "explanation": "GROUP BY partitions source rows before aggregates are calculated. Every selected non-aggregate column in these examples is grouped. First decide the grain: session capacity belongs to a session, while a booking belongs to a member/session pair. Summing capacity after joining to Booking repeats capacity for every booking and can inflate the total. SQLite may allow ungrouped bare columns; avoid relying on that behaviour.",
+      "model": {
+        "prompt": "Count bookings in sessions that have bookings.",
+        "sql": "SELECT SessionID, COUNT(*) AS Bookings FROM Booking GROUP BY SessionID ORDER BY SessionID;",
+        "check": null,
+        "error": null
+      },
+      "guided": {
+        "prompt": "Compute count, sum, average, minimum and maximum capacity directly from Session.",
+        "sql": "SELECT COUNT(*) AS Sessions, SUM(Capacity) AS Places, AVG(Capacity) AS MeanCapacity, MIN(Capacity) AS Smallest, MAX(Capacity) AS Largest FROM Session;",
+        "check": null,
+        "error": null
+      },
+      "independent": {
+        "prompt": "On changed data, group Session by WorkshopID and show session count and total capacity. Separately count bookings per MemberID; explain why those are different grains.",
+        "sql": "SELECT WorkshopID, COUNT(*) AS Sessions, SUM(Capacity) AS Places FROM Session GROUP BY WorkshopID ORDER BY WorkshopID;\nSELECT MemberID, COUNT(*) AS Bookings FROM Booking GROUP BY MemberID ORDER BY MemberID;",
+        "check": null,
+        "error": null
+      },
+      "feedback": "List the rows entering each group. Repair a join or choose the correct source grain before changing SUM to SUM(DISTINCT), which can incorrectly merge equal capacities.",
+      "fixture": "y12",
+      "core": true
+    },
+    {
+      "id": "11",
+      "year": 12,
+      "title": "Calculate, concatenate and name result columns",
+      "chapter": "unit4-sql",
+      "operations": [
+        "calculated fields",
+        "concatenated fields",
+        "aliases"
+      ],
+      "explanation": "Calculated fields derive output values without changing stored fields. In SQLite, 100.0 forces real arithmetic; integer division can truncate. || concatenates text and AS supplies a meaningful alias. Keep the calculation grain explicit and state the unit. Other DBMSs may use different concatenation or date syntax; these downloads consistently use SQLite. ROUND(expression, 1) reports a numeric result to one decimal place. The independent report combines previously taught joins and grouping with the new calculations; it deliberately includes only sessions with bookings.",
+      "model": {
+        "prompt": "Show a labelled session and half its capacity using a real divisor.",
+        "sql": "SELECT SessionID || ' / ' || SessionDate AS SessionLabel, ROUND(Capacity / 2.0, 1) AS HalfCapacity FROM Session ORDER BY SessionID;",
+        "check": null,
+        "error": null
+      },
+      "guided": {
+        "prompt": "List a member label formed from MemberID, separator and DisplayName.",
+        "sql": "SELECT MemberID || ': ' || DisplayName AS MemberLabel FROM Member ORDER BY MemberID;",
+        "check": null,
+        "error": null
+      },
+      "independent": {
+        "prompt": "On changed data, show SessionID as Code, Capacity times 15.0 as BudgetDollars, and SessionID plus date separated by @ as SessionLabel. Name all calculated and concatenated fields. Then report only booked sessions: SessionID, remaining places (capacity minus bookings), fill percentage rounded to one decimal, and a concatenated session/workshop label. Use INNER JOIN and GROUP BY, and explain why unbooked S04 is omitted.",
+        "sql": "SELECT SessionID AS Code, Capacity * 15.0 AS BudgetDollars, SessionID || ' @ ' || SessionDate AS SessionLabel FROM Session ORDER BY SessionID;\nSELECT s.SessionID, s.Capacity - COUNT(b.MemberID) AS RemainingPlaces, ROUND(100.0 * COUNT(b.MemberID) / s.Capacity, 1) AS FillPercent, s.SessionID || ' / ' || w.Title AS SessionLabel FROM Session AS s INNER JOIN Booking AS b ON b.SessionID = s.SessionID INNER JOIN Workshop AS w ON w.WorkshopID = s.WorkshopID GROUP BY s.SessionID, s.Capacity, w.Title ORDER BY s.SessionID;",
+        "check": null,
+        "error": null
+      },
+      "feedback": "If a fraction becomes zero, inspect numeric types and integer division. If concatenation becomes NULL, inspect missing operands before replacing them with an invented value.",
+      "fixture": "y12",
+      "core": true
+    },
+    {
+      "id": "12",
+      "year": 12,
+      "title": "Clean source data before importing it",
+      "chapter": "unit4-project",
+      "operations": [
+        "cleaning",
+        "import preparation",
+        "validation"
+      ],
+      "explanation": "Preserve the raw file. Compare values with the declared import contract: MemberID is unique, trimmed uppercase M followed by two digits; DisplayName is trimmed non-empty text. Keep a decision log and quarantine a conflicting duplicate rather than guessing identity. Syntactic validity does not prove the name is accurate. Import only reviewed clean rows into a disposable copy, with an explicit column mapping. trim removes surrounding spaces and upper converts letters to uppercase; neither verifies identity or source accuracy. For the fictional exercise, source verification has confirmed row 4 against the roster. INSERT ... SELECT inserts the selected output into named target columns; restrict it to that verified row. Other rows still need retain/quarantine decisions.",
+      "model": {
+        "prompt": "Trim and normalise a supplied staging row; this is a proposed clean result, not automatic proof of identity. Row 4 has been verified as M09 / Eli; import only that row into Member after normalisation.",
+        "sql": "SELECT upper(trim(MemberID)) AS ProposedID, trim(DisplayName) AS ProposedName FROM Staging ORDER BY RowNo;\nINSERT INTO Member (MemberID, DisplayName) SELECT upper(trim(MemberID)), trim(DisplayName) FROM Staging WHERE RowNo = 4;",
+        "check": "SELECT MemberID, DisplayName FROM Member ORDER BY MemberID;",
+        "error": null
+      },
+      "guided": {
+        "prompt": "Detect duplicate proposed identifiers before importing.",
+        "sql": "SELECT upper(trim(MemberID)) AS ProposedID, COUNT(*) AS Records FROM Staging GROUP BY upper(trim(MemberID)) ORDER BY ProposedID;",
+        "check": null,
+        "error": null
+      },
+      "independent": {
+        "prompt": "On changed staging data, identify valid-looking rows, blank names and duplicate proposed IDs. Preserve raw rows and write a retain/quarantine reason for each before any INSERT. Produce a report of non-blank proposed names only. Row 4 has now been verified as M07 / Gia. Import only that reviewed row into Member using an explicit column mapping and verify the stored row.",
+        "sql": "SELECT RowNo, upper(trim(MemberID)) AS ProposedID, trim(DisplayName) AS ProposedName FROM Staging WHERE trim(DisplayName) <> '' ORDER BY RowNo;\nINSERT INTO Member (MemberID, DisplayName) SELECT upper(trim(MemberID)), trim(DisplayName) FROM Staging WHERE RowNo = 4;",
+        "check": "SELECT MemberID, DisplayName FROM Member ORDER BY MemberID;",
+        "error": null
+      },
+      "feedback": "A duplicate report does not decide which person is correct. For changed rows, quarantine both M05 candidates pending verification, quarantine the blank M06 name, and retain M07 provisionally after source verification. Do not claim SQL has established authenticity.",
+      "fixture": "staging",
+      "core": true
+    },
+    {
+      "id": "13",
+      "year": 12,
+      "title": "Modify structure and practise DROP on scratch tables",
+      "chapter": "unit4-project",
+      "operations": [
+        "ALTER TABLE",
+        "DROP TABLE",
+        "DDL versus DML"
+      ],
+      "explanation": "CREATE/ALTER/DROP change the structure; INSERT/UPDATE/DELETE change records. The syllabus phrase modify tables describes a task, not a SQLite MODIFY keyword. SQLite supports ALTER TABLE ADD COLUMN and RENAME COLUMN, but some constraint changes need a carefully planned table rebuild. Demonstrate structure changes only on scratch tables here. DROP removes the table structure and its rows; DELETE removes rows while retaining the table.",
+      "model": {
+        "prompt": "Create Scratch, add Notes, inspect the fields, then drop only this scratch table and verify its absence.",
+        "sql": "CREATE TABLE Scratch (ID INTEGER PRIMARY KEY, Label TEXT NOT NULL);\nALTER TABLE Scratch ADD COLUMN Notes TEXT;\nSELECT name, type FROM pragma_table_info('Scratch') ORDER BY cid;\nDROP TABLE Scratch;",
+        "check": "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;",
+        "error": null
+      },
+      "guided": {
+        "prompt": "Rename a field, then verify the new name.",
+        "sql": "CREATE TABLE Scratch (ID INTEGER PRIMARY KEY, OldLabel TEXT);\nALTER TABLE Scratch RENAME COLUMN OldLabel TO Label;",
+        "check": "SELECT name FROM pragma_table_info('Scratch') ORDER BY cid;",
+        "error": null
+      },
+      "independent": {
+        "prompt": "Create Trial(ID INTEGER PRIMARY KEY, Label TEXT NOT NULL), insert one row, add Notes TEXT, inspect it, then DROP only Trial. Verify that the table no longer exists. Explain DROP versus DELETE.",
+        "sql": "CREATE TABLE Trial (ID INTEGER PRIMARY KEY, Label TEXT NOT NULL);\nINSERT INTO Trial VALUES (1,'Sample');\nALTER TABLE Trial ADD COLUMN Notes TEXT;\nDROP TABLE Trial;",
+        "check": "SELECT name FROM sqlite_master WHERE type = 'table' ORDER BY name;",
+        "error": null
+      },
+      "feedback": "For a syntax error near MODIFY, use the supported ALTER syntax. Do not retry DROP against a real project database; open a new scratch file.",
+      "fixture": "scratch",
+      "core": true
+    },
+    {
+      "id": "14",
+      "year": 12,
+      "title": "Test cascading delete and the whole foreign key",
+      "chapter": "unit4-project",
+      "operations": [
+        "cascading DELETE",
+        "composite foreign key",
+        "constraint tests"
+      ],
+      "explanation": "Attendance refers to the complete Booking(MemberID, SessionID) key with ON DELETE CASCADE. Deleting that booking removes only its dependent attendance, not the Member or Session. Other relationships use the default restrictive action. Enable and check foreign keys in each connection. A cascade is a declared relationship action, not a substitute for authorising the delete or verifying its scope. Inside CREATE TABLE Attendance, the relevant table constraint is FOREIGN KEY(MemberID, SessionID) REFERENCES Booking(MemberID, SessionID) ON DELETE CASCADE. Both key components form one relationship.",
+      "model": {
+        "prompt": "Remove booking M01/S01 and inspect remaining booking and attendance keys.",
+        "sql": "DELETE FROM Booking WHERE MemberID = 'M01' AND SessionID = 'S01';",
+        "check": "SELECT MemberID, SessionID FROM Booking ORDER BY SessionID, MemberID;\nSELECT MemberID, SessionID FROM Attendance ORDER BY SessionID, MemberID;",
+        "error": null
+      },
+      "guided": {
+        "prompt": "Try to add attendance for a non-existent M03/S02 booking.",
+        "sql": "INSERT INTO Attendance VALUES ('M03','S02',1);",
+        "check": "SELECT COUNT(*) AS AttendanceRows FROM Attendance WHERE MemberID = 'M03' AND SessionID = 'S02';",
+        "error": "FOREIGN KEY constraint failed"
+      },
+      "independent": {
+        "prompt": "On changed data, delete only M01/S02. Verify that its attendance disappears, M01/S01 remains and Member M01 survives.",
+        "sql": "DELETE FROM Booking WHERE MemberID = 'M01' AND SessionID = 'S02';",
+        "check": "SELECT MemberID, SessionID FROM Attendance ORDER BY SessionID, MemberID;\nSELECT MemberID FROM Member WHERE MemberID = 'M01';\nSELECT MemberID, SessionID FROM Booking WHERE MemberID = 'M01' ORDER BY SessionID;",
+        "error": null
+      },
+      "feedback": "If unrelated attendance disappears, check both WHERE fields. If the dependent record survives, check enforcement and the actual declared foreign key action.",
+      "fixture": "y12",
+      "core": true
+    },
+    {
+      "id": "15",
+      "year": 12,
+      "title": "Independent six-table construction and constraint checks",
+      "chapter": "unit4-design",
+      "operations": [
+        "six-table construction",
+        "validity constraints",
+        "referential integrity"
+      ],
+      "explanation": "Use the supplied dictionary and relationship list to implement Instructor, Workshop, Session, Member, Booking and Attendance in an empty database. The independent construction has six tables, exceeding the five-table minimum for Year 12. Define the whole composite Booking key and matching Attendance foreign key. Capacity must be an integer greater than zero; attendance is an integer 0 or 1. Use the source dictionary rather than copying a finished schema before the first attempt. typeof checks SQLite's stored value type; the positive-value comparison separately rules out zero and negative capacity. length counts characters; trim removes surrounding spaces. The worked Label constraint demonstrates how to enforce a trimmed non-empty length limit.",
+      "model": {
+        "prompt": "Demonstrate positive integer capacity and a trimmed label length of 1..60 on one practice table.",
+        "sql": "CREATE TABLE Sample (ID INTEGER PRIMARY KEY, Capacity INTEGER NOT NULL CHECK(typeof(Capacity)='integer' AND Capacity > 0), Label TEXT NOT NULL CHECK(length(trim(Label)) BETWEEN 1 AND 60));",
+        "check": "SELECT name, type FROM pragma_table_info('Sample') ORDER BY cid;",
+        "error": null
+      },
+      "guided": {
+        "prompt": "Try a negative capacity against that rule.",
+        "sql": "CREATE TABLE Sample (ID INTEGER PRIMARY KEY, Capacity INTEGER NOT NULL CHECK(typeof(Capacity)='integer' AND Capacity > 0));\nINSERT INTO Sample VALUES (1,-1);",
+        "check": "SELECT COUNT(*) AS AcceptedRows FROM Sample;",
+        "error": "CHECK constraint failed"
+      },
+      "independent": {
+        "prompt": "Build all six tables from dictionary.md, then insert parent records before child records using the supplied seed rows. Test duplicate Booking keys, orphan Attendance and invalid Capacity in separate copies. Compare your schema and stored rows against the reference only after your attempt.",
+        "sql": "-- Reference implementation is provided separately after the independent attempt.\n",
+        "check": null,
+        "error": null
+      },
+      "feedback": "Retain your authored schema and constraint-failure evidence. Matching table names alone is insufficient: check data types, nullability, primary/foreign keys, checks and cascade behaviour.",
+      "fixture": "scratch",
+      "core": true
+    },
+    {
+      "id": "16",
+      "year": 12,
+      "title": "Independent Year 12 reporting rehearsal",
+      "chapter": "unit4-sql",
+      "operations": [
+        "Year 12 rehearsal"
+      ],
+      "explanation": "Use the changed six-table dataset only after Steps 09-15 and a fresh independent schema attempt. This mixed rehearsal retrieves familiar operations in a new combination. Explain row grain and validate one output row by hand. The teacher checkpoint separates taught core operations from supporting extensions; no public reference response is a secure assessment task.",
+      "model": {
+        "prompt": "Model a grouped capacity report at workshop grain.",
+        "sql": "SELECT WorkshopID, SUM(Capacity) AS Places FROM Session GROUP BY WorkshopID ORDER BY WorkshopID;",
+        "check": null,
+        "error": null
+      },
+      "guided": {
+        "prompt": "Produce a concatenated session/date label, with a meaningful alias.",
+        "sql": "SELECT SessionID || ' / ' || SessionDate AS SessionLabel FROM Session ORDER BY SessionID;",
+        "check": null,
+        "error": null
+      },
+      "independent": {
+        "prompt": "On changed data, join Member, Booking, Session and Workshop to list member name, session ID and workshop title. Then group bookings by session and produce an aliased booking count. Explain why the report does not include sessions with no bookings. In a fresh changed copy, add M22 (Rehearsal member), update S04 capacity to 6, then delete only M22. Verify the member is gone and S04 changed.",
+        "sql": "SELECT m.DisplayName, s.SessionID, w.Title FROM Booking AS b INNER JOIN Member AS m ON m.MemberID = b.MemberID INNER JOIN Session AS s ON s.SessionID = b.SessionID INNER JOIN Workshop AS w ON w.WorkshopID = s.WorkshopID ORDER BY s.SessionID, b.MemberID;\nSELECT SessionID, COUNT(*) AS BookingCount FROM Booking GROUP BY SessionID ORDER BY SessionID;\nINSERT INTO Member VALUES ('M22','Rehearsal member');\nUPDATE Session SET Capacity=6 WHERE SessionID='S04';\nDELETE FROM Member WHERE MemberID='M22';",
+        "check": "SELECT COUNT(*) AS TrialMembers FROM Member WHERE MemberID='M22';\nSELECT SessionID, Capacity FROM Session WHERE SessionID='S04';",
+        "error": null
+      },
+      "feedback": "Complete separate demonstrated evidence for calculated fields, import decisions, structure changes and cascading deletes. A correct joined report alone does not establish readiness for every operation.",
+      "fixture": "y12",
+      "core": true
+    },
+    {
+      "id": "17",
+      "year": 12,
+      "title": "Supporting extension: NULL, LEFT JOIN and HAVING",
+      "chapter": "unit4-sql",
+      "operations": [
+        "LEFT JOIN",
+        "NULL",
+        "HAVING"
+      ],
+      "explanation": "Supporting extension, not an additional prescribed SQL-keyword list. LEFT JOIN preserves unmatched left-side rows with NULL right-side values. COUNT(right_key) ignores those NULL values while COUNT(*) counts the preserved row. Use IS NULL to test missing values. HAVING filters groups after grouping; WHERE filters input rows. Learn these after core INNER JOIN and GROUP BY, and teach/practise them explicitly before including them in a local assessment.",
+      "model": {
+        "prompt": "Include sessions with no bookings and count real booking keys.",
+        "sql": "SELECT s.SessionID, COUNT(b.MemberID) AS Bookings FROM Session AS s LEFT JOIN Booking AS b ON b.SessionID = s.SessionID GROUP BY s.SessionID ORDER BY s.SessionID;",
+        "check": null,
+        "error": null
+      },
+      "guided": {
+        "prompt": "Find sessions with no booking match.",
+        "sql": "SELECT s.SessionID FROM Session AS s LEFT JOIN Booking AS b ON b.SessionID = s.SessionID WHERE b.MemberID IS NULL ORDER BY s.SessionID;",
+        "check": null,
+        "error": null
+      },
+      "independent": {
+        "prompt": "On changed data, include every session, count real booking keys and return only groups with fewer than two bookings.",
+        "sql": "SELECT s.SessionID, COUNT(b.MemberID) AS Bookings FROM Session AS s LEFT JOIN Booking AS b ON b.SessionID = s.SessionID GROUP BY s.SessionID HAVING COUNT(b.MemberID) < 2 ORDER BY s.SessionID;",
+        "check": null,
+        "error": null
+      },
+      "feedback": "A zero-booking session still produces a preserved join row. If it shows count one, check COUNT(*) versus COUNT(b.MemberID). Never turn unknown attendance into confirmed absence without a rule.",
+      "fixture": "y12",
+      "core": false
+    },
+    {
+      "id": "18",
+      "year": 12,
+      "title": "Supporting extension: a transaction and a recovery test",
+      "chapter": "unit4-project",
+      "operations": [
+        "BEGIN",
+        "COMMIT",
+        "ROLLBACK",
+        "atomicity"
+      ],
+      "explanation": "Supporting application/reliability practice. A transaction can keep related changes together. BEGIN starts the boundary, COMMIT accepts it, and ROLLBACK cancels uncommitted changes. Use explicit boundaries in a disposable SQLite tool; other drivers may manage transactions differently. Enable foreign keys before BEGIN. A second BEGIN inside an open transaction fails. After an error, choose an explicit rollback/recovery action rather than assuming every earlier statement was undone.",
+      "model": {
+        "prompt": "Change capacity inside a transaction, then cancel it.",
+        "sql": "BEGIN;\nUPDATE Session SET Capacity = 8 WHERE SessionID = 'S01';\nROLLBACK;",
+        "check": "SELECT SessionID, Capacity FROM Session WHERE SessionID = 'S01';",
+        "error": null
+      },
+      "guided": {
+        "prompt": "Insert a practice member, commit it and verify the saved row.",
+        "sql": "BEGIN;\nINSERT INTO Member VALUES ('M20','Transaction member');\nCOMMIT;",
+        "check": "SELECT MemberID, DisplayName FROM Member WHERE MemberID = 'M20';",
+        "error": null
+      },
+      "independent": {
+        "prompt": "On changed data, insert M21, insert its S04 booking, then roll back both. Verify neither remains. Explain the before/inside/after state and retain evidence from inside the transaction as well.",
+        "sql": "BEGIN;\nINSERT INTO Member VALUES ('M21','Trial member');\nINSERT INTO Booking VALUES ('M21','S04','2026-10-20');\nROLLBACK;",
+        "check": "SELECT COUNT(*) AS Members FROM Member WHERE MemberID = 'M21';\nSELECT COUNT(*) AS Bookings FROM Booking WHERE MemberID = 'M21';",
+        "error": null
+      },
+      "feedback": "If a row is still present, check whether a previous COMMIT occurred or whether you inspected a different file. Repeat on a new copy and record the transaction boundary.",
+      "fixture": "y12",
+      "core": false
+    }
+  ]
+}

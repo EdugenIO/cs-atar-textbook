@@ -1,0 +1,4 @@
+CREATE TABLE Duration (RecordID INTEGER PRIMARY KEY, Days INTEGER NOT NULL, Completed INTEGER NOT NULL);
+INSERT INTO Duration VALUES (1,2,1),(2,3,1),(3,5,0),(4,5,1),(5,0,0);
+DELETE FROM Duration;
+INSERT INTO Duration VALUES (1,1,1),(2,4,1),(3,4,0),(4,7,1),(5,0,0);

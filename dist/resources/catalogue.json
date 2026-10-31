@@ -773,6 +773,21 @@
         "type": "reading"
       },
       {
+        "label": "SQL learning pathway · sequenced lessons, fresh databases and expected results",
+        "href": "../sql/#step-01",
+        "type": "activity"
+      },
+      {
+        "label": "SQL pathway · student databases and practice workbook",
+        "href": "../sql/sql-student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "SQL pathway · expected results and reference queries",
+        "href": "../sql/sql-reference-pack.zip",
+        "type": "teacher"
+      },
+      {
         "label": "Activity 01: Model records before querying",
         "href": "../activities/databases-sql/#lesson-01",
         "type": "activity"
@@ -858,6 +873,21 @@
         "type": "reading"
       },
       {
+        "label": "SQL learning pathway · sequenced lessons, fresh databases and expected results",
+        "href": "../sql/#step-05",
+        "type": "activity"
+      },
+      {
+        "label": "SQL pathway · student databases and practice workbook",
+        "href": "../sql/sql-student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "SQL pathway · expected results and reference queries",
+        "href": "../sql/sql-reference-pack.zip",
+        "type": "teacher"
+      },
+      {
         "label": "Download the worked SVG diagram",
         "href": "../equipment-model.svg",
         "type": "activity"
@@ -908,6 +938,21 @@
         "type": "reading"
       },
       {
+        "label": "SQL learning pathway · sequenced lessons, fresh databases and expected results",
+        "href": "../sql/#step-05",
+        "type": "activity"
+      },
+      {
+        "label": "SQL pathway · student databases and practice workbook",
+        "href": "../sql/sql-student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "SQL pathway · expected results and reference queries",
+        "href": "../sql/sql-reference-pack.zip",
+        "type": "teacher"
+      },
+      {
         "label": "Download student workbook",
         "href": "../normalisation-workbook.md",
         "type": "print"
@@ -941,6 +986,21 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#sql-basics",
         "type": "reading"
+      },
+      {
+        "label": "SQL learning pathway · sequenced lessons, fresh databases and expected results",
+        "href": "../sql/#step-01",
+        "type": "activity"
+      },
+      {
+        "label": "SQL pathway · student databases and practice workbook",
+        "href": "../sql/sql-student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "SQL pathway · expected results and reference queries",
+        "href": "../sql/sql-reference-pack.zip",
+        "type": "teacher"
       },
       {
         "label": "Activity 02: Select columns and specify order",
@@ -1051,6 +1111,21 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#database-solution",
         "type": "reading"
+      },
+      {
+        "label": "SQL learning pathway · sequenced lessons, fresh databases and expected results",
+        "href": "../sql/#step-03",
+        "type": "activity"
+      },
+      {
+        "label": "SQL pathway · student databases and practice workbook",
+        "href": "../sql/sql-student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "SQL pathway · expected results and reference queries",
+        "href": "../sql/sql-reference-pack.zip",
+        "type": "teacher"
       },
       {
         "label": "Activity 04: Join related records without losing meaning",
@@ -1983,6 +2058,21 @@
         "type": "reading"
       },
       {
+        "label": "SQL learning pathway · sequenced lessons, fresh databases and expected results",
+        "href": "../sql/#step-15",
+        "type": "activity"
+      },
+      {
+        "label": "SQL pathway · student databases and practice workbook",
+        "href": "../sql/sql-student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "SQL pathway · expected results and reference queries",
+        "href": "../sql/sql-reference-pack.zip",
+        "type": "teacher"
+      },
+      {
         "label": "Download design pack",
         "href": "../unit4-design-pack.zip",
         "type": "download"
@@ -2046,6 +2136,21 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#unit4-sql",
         "type": "reading"
+      },
+      {
+        "label": "SQL learning pathway · sequenced lessons, fresh databases and expected results",
+        "href": "../sql/#step-09",
+        "type": "activity"
+      },
+      {
+        "label": "SQL pathway · student databases and practice workbook",
+        "href": "../sql/sql-student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "SQL pathway · expected results and reference queries",
+        "href": "../sql/sql-reference-pack.zip",
+        "type": "teacher"
       },
       {
         "label": "Activity 05: Aggregate first, then filter groups",
@@ -2136,6 +2241,21 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#unit4-project",
         "type": "reading"
+      },
+      {
+        "label": "SQL learning pathway · sequenced lessons, fresh databases and expected results",
+        "href": "../sql/#step-12",
+        "type": "activity"
+      },
+      {
+        "label": "SQL pathway · student databases and practice workbook",
+        "href": "../sql/sql-student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "SQL pathway · expected results and reference queries",
+        "href": "../sql/sql-reference-pack.zip",
+        "type": "teacher"
       },
       {
         "label": "Download project pack",

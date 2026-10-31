@@ -1,0 +1,15 @@
+import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
+const read=f=>fs.readFileSync(new URL('../'+f,import.meta.url),'utf8');
+const data=JSON.parse(read('teaching-source/sql-pathway.json'));
+const steps=data.stages.map(s=>({id:'step-'+s.id,dataset:{year:String(s.year),kind:s.core?'core':'extension'},hidden:false,scrollIntoView(){this.scrolled=true;}}));
+const handlers={},year={value:'all',addEventListener:(name,fn)=>handlers[name]=fn},count={},print={addEventListener:(_,fn)=>handlers.print=fn};
+const context={document:{getElementById:id=>id==='year'?year:id==='step-count'?count:print,querySelectorAll:()=>steps},location:{hash:''},window:{addEventListener:(name,fn)=>handlers[name]=fn,print(){context.printed=true;}}};
+vm.runInNewContext(read('dist/sql/pathway.js'),context);
+assert.equal(steps.filter(s=>!s.hidden).length,18);
+year.value='11';handlers.change();assert.equal(steps.filter(s=>!s.hidden).length,8);
+year.value='12';handlers.change();assert.equal(steps.filter(s=>!s.hidden).length,8);
+year.value='extension';handlers.change();assert.deepEqual(steps.filter(s=>!s.hidden).map(s=>s.id),['step-17','step-18']);
+context.location.hash='#step-04';handlers.hashchange();assert.equal(year.value,'11');assert.equal(steps[3].hidden,false);assert.equal(steps[3].scrolled,true);
+context.location.hash='#step-17';handlers.hashchange();assert.equal(year.value,'extension');assert.equal(steps[16].hidden,false);
+handlers.print();assert.equal(context.printed,true);
+console.log('SQL pathway filters, extension separation, deep-link reveal, scroll destination and print control passed.');

@@ -1,0 +1,4 @@
+name,type
+ID,INTEGER
+Capacity,INTEGER
+Label,TEXT

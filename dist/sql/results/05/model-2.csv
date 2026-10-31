@@ -1,0 +1,4 @@
+name,type,pk
+DeviceID,TEXT,1
+SkillID,TEXT,2
+RecordedOn,TEXT,0

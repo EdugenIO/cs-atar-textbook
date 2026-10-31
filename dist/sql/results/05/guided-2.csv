@@ -1,0 +1,2 @@
+id,seq,table,from,to,on_update,on_delete,match
+0,0,Room,RoomID,RoomID,NO ACTION,NO ACTION,NONE

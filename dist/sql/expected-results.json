@@ -1,0 +1,1606 @@
+{
+  "01": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "EquipmentID",
+            "EquipmentDescription"
+          ],
+          "rows": [
+            [
+              "E01",
+              "Camera"
+            ],
+            [
+              "E02",
+              "Tripod"
+            ],
+            [
+              "E03",
+              "Recorder"
+            ],
+            [
+              "E04",
+              "Camera"
+            ],
+            [
+              "E05",
+              "Microphone"
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "BorrowerLabel",
+            "BorrowerID"
+          ],
+          "rows": [
+            [
+              "Learner D",
+              "B004"
+            ],
+            [
+              "Learner C",
+              "B003"
+            ],
+            [
+              "Learner B",
+              "B002"
+            ],
+            [
+              "Learner A",
+              "B001"
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "EquipmentDescription"
+          ],
+          "rows": [
+            [
+              "Camera"
+            ],
+            [
+              "Microphone"
+            ],
+            [
+              "Recorder"
+            ],
+            [
+              "Sensor"
+            ],
+            [
+              "Tripod"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "02": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "LoanID",
+            "DueDate"
+          ],
+          "rows": [
+            [
+              "L001",
+              "2026-04-06"
+            ],
+            [
+              "L006",
+              "2026-04-07"
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "EquipmentID"
+          ],
+          "rows": [
+            [
+              "E01"
+            ],
+            [
+              "E04"
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "LoanID",
+            "BorrowerID",
+            "DueDate"
+          ],
+          "rows": [
+            [
+              "L007",
+              "B005",
+              "2026-04-09"
+            ],
+            [
+              "L004",
+              "B003",
+              "2026-04-10"
+            ],
+            [
+              "L006",
+              "B004",
+              "2026-04-12"
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "EquipmentID",
+            "EquipmentDescription"
+          ],
+          "rows": [
+            [
+              "E06",
+              "Sensor"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "03": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "LoanID",
+            "BorrowerLabel"
+          ],
+          "rows": [
+            [
+              "L001",
+              "Learner A"
+            ],
+            [
+              "L002",
+              "Learner B"
+            ],
+            [
+              "L003",
+              "Learner A"
+            ],
+            [
+              "L004",
+              "Learner C"
+            ],
+            [
+              "L005",
+              "Learner B"
+            ],
+            [
+              "L006",
+              "Learner D"
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "LoanID",
+            "EquipmentDescription"
+          ],
+          "rows": [
+            [
+              "L003",
+              "Recorder"
+            ],
+            [
+              "L005",
+              "Tripod"
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "LoanID",
+            "BorrowerLabel",
+            "DueDate"
+          ],
+          "rows": [
+            [
+              "L001",
+              "Learner A",
+              "2026-04-06"
+            ],
+            [
+              "L007",
+              "Learner E",
+              "2026-04-09"
+            ],
+            [
+              "L004",
+              "Learner C",
+              "2026-04-10"
+            ],
+            [
+              "L006",
+              "Learner D",
+              "2026-04-12"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "04": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "Records",
+            "TotalDays",
+            "MeanDays",
+            "Longest",
+            "Shortest"
+          ],
+          "rows": [
+            [
+              5,
+              15,
+              3.0,
+              5,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "Records",
+            "TotalDays",
+            "MeanDays",
+            "Longest",
+            "Shortest"
+          ],
+          "rows": [
+            [
+              3,
+              13,
+              4.333333333333333,
+              5,
+              3
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "Records",
+            "TotalDays",
+            "MeanDays",
+            "Longest",
+            "Shortest"
+          ],
+          "rows": [
+            [
+              3,
+              12,
+              4.0,
+              7,
+              1
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "Records",
+            "TotalDays",
+            "MeanDays",
+            "Longest",
+            "Shortest"
+          ],
+          "rows": [
+            [
+              0,
+              null,
+              null,
+              null,
+              null
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "05": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "name"
+          ],
+          "rows": [
+            [
+              "Device"
+            ],
+            [
+              "DeviceSkill"
+            ],
+            [
+              "Skill"
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "name",
+            "type",
+            "pk"
+          ],
+          "rows": [
+            [
+              "DeviceID",
+              "TEXT",
+              1
+            ],
+            [
+              "SkillID",
+              "TEXT",
+              2
+            ],
+            [
+              "RecordedOn",
+              "TEXT",
+              0
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "id",
+            "seq",
+            "table",
+            "from",
+            "to",
+            "on_update",
+            "on_delete",
+            "match"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              "Skill",
+              "SkillID",
+              "SkillID",
+              "NO ACTION",
+              "NO ACTION",
+              "NONE"
+            ],
+            [
+              1,
+              0,
+              "Device",
+              "DeviceID",
+              "DeviceID",
+              "NO ACTION",
+              "NO ACTION",
+              "NONE"
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "name"
+          ],
+          "rows": [
+            [
+              "Desk"
+            ],
+            [
+              "Room"
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "id",
+            "seq",
+            "table",
+            "from",
+            "to",
+            "on_update",
+            "on_delete",
+            "match"
+          ],
+          "rows": [
+            [
+              0,
+              0,
+              "Room",
+              "RoomID",
+              "RoomID",
+              "NO ACTION",
+              "NO ACTION",
+              "NONE"
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "name"
+          ],
+          "rows": [
+            [
+              "Club"
+            ],
+            [
+              "Membership"
+            ],
+            [
+              "Student"
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "name",
+            "type",
+            "pk"
+          ],
+          "rows": [
+            [
+              "StudentID",
+              "TEXT",
+              1
+            ],
+            [
+              "ClubID",
+              "TEXT",
+              2
+            ],
+            [
+              "JoinedOn",
+              "TEXT",
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "06": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "BorrowerID",
+            "BorrowerLabel"
+          ],
+          "rows": [
+            [
+              "B010",
+              "Practice member"
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": "FOREIGN KEY constraint failed",
+      "results": [
+        {
+          "columns": [
+            "MatchingRows"
+          ],
+          "rows": [
+            [
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "LoanID",
+            "BorrowerID",
+            "EquipmentID"
+          ],
+          "rows": [
+            [
+              "L021",
+              "B011",
+              "E06"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "07": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "LoanID",
+            "Returned"
+          ],
+          "rows": [
+            [
+              "L001",
+              1
+            ],
+            [
+              "L002",
+              0
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "RemovedLoanRows"
+          ],
+          "rows": [
+            [
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "LoanRows"
+          ],
+          "rows": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "BorrowerID"
+          ],
+          "rows": [
+            [
+              "B001"
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "LoanID",
+            "DueDate"
+          ],
+          "rows": [
+            [
+              "L004",
+              "2026-04-10"
+            ],
+            [
+              "L007",
+              "2026-04-16"
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "RemovedLoanRows"
+          ],
+          "rows": [
+            [
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "08": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "CategoryID"
+          ],
+          "rows": [
+            [
+              "C01"
+            ],
+            [
+              "C02"
+            ],
+            [
+              "C03"
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "EquipmentItems"
+          ],
+          "rows": [
+            [
+              5
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "LoanID",
+            "EquipmentDescription"
+          ],
+          "rows": [
+            [
+              "L001",
+              "Camera"
+            ],
+            [
+              "L004",
+              "Camera"
+            ],
+            [
+              "L006",
+              "Microphone"
+            ],
+            [
+              "L007",
+              "Sensor"
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "OutstandingLoans"
+          ],
+          "rows": [
+            [
+              4
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "09": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "MemberID",
+            "DisplayName",
+            "SessionID",
+            "Title"
+          ],
+          "rows": [
+            [
+              "M01",
+              "Member A",
+              "S01",
+              "Python studio"
+            ],
+            [
+              "M02",
+              "Member B",
+              "S01",
+              "Python studio"
+            ],
+            [
+              "M01",
+              "Member A",
+              "S02",
+              "Python studio"
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "MemberID",
+            "SessionID",
+            "Title"
+          ],
+          "rows": []
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "DisplayName",
+            "SessionDate",
+            "Title"
+          ],
+          "rows": [
+            [
+              "Member C",
+              "2026-11-03",
+              "Network design"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "10": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "SessionID",
+            "Bookings"
+          ],
+          "rows": [
+            [
+              "S01",
+              2
+            ],
+            [
+              "S02",
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "Sessions",
+            "Places",
+            "MeanCapacity",
+            "Smallest",
+            "Largest"
+          ],
+          "rows": [
+            [
+              3,
+              7,
+              2.3333333333333335,
+              2,
+              3
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "WorkshopID",
+            "Sessions",
+            "Places"
+          ],
+          "rows": [
+            [
+              "W01",
+              2,
+              5
+            ],
+            [
+              "W02",
+              2,
+              6
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "MemberID",
+            "Bookings"
+          ],
+          "rows": [
+            [
+              "M01",
+              2
+            ],
+            [
+              "M02",
+              1
+            ],
+            [
+              "M03",
+              1
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "11": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "SessionLabel",
+            "HalfCapacity"
+          ],
+          "rows": [
+            [
+              "S01 / 2026-11-02",
+              1.0
+            ],
+            [
+              "S02 / 2026-11-09",
+              1.5
+            ],
+            [
+              "S03 / 2026-11-03",
+              1.0
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "MemberLabel"
+          ],
+          "rows": [
+            [
+              "M01: Member A"
+            ],
+            [
+              "M02: Member B"
+            ],
+            [
+              "M03: Member C"
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "Code",
+            "BudgetDollars",
+            "SessionLabel"
+          ],
+          "rows": [
+            [
+              "S01",
+              30.0,
+              "S01 @ 2026-11-02"
+            ],
+            [
+              "S02",
+              45.0,
+              "S02 @ 2026-11-09"
+            ],
+            [
+              "S03",
+              30.0,
+              "S03 @ 2026-11-03"
+            ],
+            [
+              "S04",
+              60.0,
+              "S04 @ 2026-11-10"
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "SessionID",
+            "RemainingPlaces",
+            "FillPercent",
+            "SessionLabel"
+          ],
+          "rows": [
+            [
+              "S01",
+              0,
+              100.0,
+              "S01 / Python studio"
+            ],
+            [
+              "S02",
+              2,
+              33.3,
+              "S02 / Python studio"
+            ],
+            [
+              "S03",
+              1,
+              50.0,
+              "S03 / Network design"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "12": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "ProposedID",
+            "ProposedName"
+          ],
+          "rows": [
+            [
+              "M04",
+              "Dana"
+            ],
+            [
+              "M04",
+              "Different name"
+            ],
+            [
+              "M08",
+              ""
+            ],
+            [
+              "M09",
+              "Eli"
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "MemberID",
+            "DisplayName"
+          ],
+          "rows": [
+            [
+              "M09",
+              "Eli"
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "ProposedID",
+            "Records"
+          ],
+          "rows": [
+            [
+              "M04",
+              2
+            ],
+            [
+              "M08",
+              1
+            ],
+            [
+              "M09",
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "RowNo",
+            "ProposedID",
+            "ProposedName"
+          ],
+          "rows": [
+            [
+              1,
+              "M05",
+              "Faye"
+            ],
+            [
+              2,
+              "M05",
+              "Conflicting person"
+            ],
+            [
+              4,
+              "M07",
+              "Gia"
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "MemberID",
+            "DisplayName"
+          ],
+          "rows": [
+            [
+              "M07",
+              "Gia"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "13": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "name",
+            "type"
+          ],
+          "rows": [
+            [
+              "ID",
+              "INTEGER"
+            ],
+            [
+              "Label",
+              "TEXT"
+            ],
+            [
+              "Notes",
+              "TEXT"
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "name"
+          ],
+          "rows": []
+        }
+      ]
+    },
+    "guided": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "name"
+          ],
+          "rows": [
+            [
+              "ID"
+            ],
+            [
+              "Label"
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "name"
+          ],
+          "rows": []
+        }
+      ]
+    }
+  },
+  "14": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "MemberID",
+            "SessionID"
+          ],
+          "rows": [
+            [
+              "M02",
+              "S01"
+            ],
+            [
+              "M01",
+              "S02"
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "MemberID",
+            "SessionID"
+          ],
+          "rows": [
+            [
+              "M02",
+              "S01"
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": "FOREIGN KEY constraint failed",
+      "results": [
+        {
+          "columns": [
+            "AttendanceRows"
+          ],
+          "rows": [
+            [
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "MemberID",
+            "SessionID"
+          ],
+          "rows": [
+            [
+              "M01",
+              "S01"
+            ],
+            [
+              "M02",
+              "S01"
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "MemberID"
+          ],
+          "rows": [
+            [
+              "M01"
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "MemberID",
+            "SessionID"
+          ],
+          "rows": [
+            [
+              "M01",
+              "S01"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "15": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "name",
+            "type"
+          ],
+          "rows": [
+            [
+              "ID",
+              "INTEGER"
+            ],
+            [
+              "Capacity",
+              "INTEGER"
+            ],
+            [
+              "Label",
+              "TEXT"
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": "CHECK constraint failed: typeof(Capacity)='integer' AND Capacity > 0",
+      "results": [
+        {
+          "columns": [
+            "AcceptedRows"
+          ],
+          "rows": [
+            [
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "name"
+          ],
+          "rows": [
+            [
+              "Attendance"
+            ],
+            [
+              "Booking"
+            ],
+            [
+              "Instructor"
+            ],
+            [
+              "Member"
+            ],
+            [
+              "Session"
+            ],
+            [
+              "Workshop"
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "Bookings"
+          ],
+          "rows": [
+            [
+              3
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "16": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "WorkshopID",
+            "Places"
+          ],
+          "rows": [
+            [
+              "W01",
+              5
+            ],
+            [
+              "W02",
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "SessionLabel"
+          ],
+          "rows": [
+            [
+              "S01 / 2026-11-02"
+            ],
+            [
+              "S02 / 2026-11-09"
+            ],
+            [
+              "S03 / 2026-11-03"
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "DisplayName",
+            "SessionID",
+            "Title"
+          ],
+          "rows": [
+            [
+              "Member A",
+              "S01",
+              "Python studio"
+            ],
+            [
+              "Member B",
+              "S01",
+              "Python studio"
+            ],
+            [
+              "Member A",
+              "S02",
+              "Python studio"
+            ],
+            [
+              "Member C",
+              "S03",
+              "Network design"
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "SessionID",
+            "BookingCount"
+          ],
+          "rows": [
+            [
+              "S01",
+              2
+            ],
+            [
+              "S02",
+              1
+            ],
+            [
+              "S03",
+              1
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "TrialMembers"
+          ],
+          "rows": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "SessionID",
+            "Capacity"
+          ],
+          "rows": [
+            [
+              "S04",
+              6
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "17": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "SessionID",
+            "Bookings"
+          ],
+          "rows": [
+            [
+              "S01",
+              2
+            ],
+            [
+              "S02",
+              1
+            ],
+            [
+              "S03",
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "SessionID"
+          ],
+          "rows": [
+            [
+              "S03"
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "SessionID",
+            "Bookings"
+          ],
+          "rows": [
+            [
+              "S02",
+              1
+            ],
+            [
+              "S03",
+              1
+            ],
+            [
+              "S04",
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "18": {
+    "model": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "SessionID",
+            "Capacity"
+          ],
+          "rows": [
+            [
+              "S01",
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    "guided": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "MemberID",
+            "DisplayName"
+          ],
+          "rows": [
+            [
+              "M20",
+              "Transaction member"
+            ]
+          ]
+        }
+      ]
+    },
+    "independent": {
+      "error": null,
+      "results": [
+        {
+          "columns": [
+            "Members"
+          ],
+          "rows": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "columns": [
+            "Bookings"
+          ],
+          "rows": [
+            [
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  }
+}

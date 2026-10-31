@@ -1,0 +1,18 @@
+INSERT INTO Borrower (BorrowerID, BorrowerLabel) VALUES ('B001', 'Learner A');
+INSERT INTO Borrower (BorrowerID, BorrowerLabel) VALUES ('B002', 'Learner B');
+INSERT INTO Borrower (BorrowerID, BorrowerLabel) VALUES ('B003', 'Learner C');
+INSERT INTO Borrower (BorrowerID, BorrowerLabel) VALUES ('B004', 'Learner D');
+INSERT INTO Category (CategoryID, CategoryName) VALUES ('C01', 'Imaging');
+INSERT INTO Category (CategoryID, CategoryName) VALUES ('C02', 'Support');
+INSERT INTO Category (CategoryID, CategoryName) VALUES ('C03', 'Audio');
+INSERT INTO Equipment (EquipmentID, EquipmentDescription, CategoryID) VALUES ('E01', 'Camera', 'C01');
+INSERT INTO Equipment (EquipmentID, EquipmentDescription, CategoryID) VALUES ('E02', 'Tripod', 'C02');
+INSERT INTO Equipment (EquipmentID, EquipmentDescription, CategoryID) VALUES ('E03', 'Recorder', 'C03');
+INSERT INTO Equipment (EquipmentID, EquipmentDescription, CategoryID) VALUES ('E04', 'Camera', 'C01');
+INSERT INTO Equipment (EquipmentID, EquipmentDescription, CategoryID) VALUES ('E05', 'Microphone', 'C03');
+INSERT INTO Loan (LoanID, BorrowerID, EquipmentID, DueDate, Returned) VALUES ('L001', 'B001', 'E01', '2026-04-06', 0);
+INSERT INTO Loan (LoanID, BorrowerID, EquipmentID, DueDate, Returned) VALUES ('L002', 'B002', 'E02', '2026-04-08', 0);
+INSERT INTO Loan (LoanID, BorrowerID, EquipmentID, DueDate, Returned) VALUES ('L003', 'B001', 'E03', '2026-04-07', 1);
+INSERT INTO Loan (LoanID, BorrowerID, EquipmentID, DueDate, Returned) VALUES ('L004', 'B003', 'E04', '2026-04-10', 0);
+INSERT INTO Loan (LoanID, BorrowerID, EquipmentID, DueDate, Returned) VALUES ('L005', 'B002', 'E02', '2026-04-04', 1);
+INSERT INTO Loan (LoanID, BorrowerID, EquipmentID, DueDate, Returned) VALUES ('L006', 'B004', 'E05', '2026-04-07', 0);

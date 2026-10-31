@@ -1,0 +1,4 @@
+name,type,pk
+StudentID,TEXT,1
+ClubID,TEXT,2
+JoinedOn,TEXT,0
