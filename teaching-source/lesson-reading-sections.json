@@ -52,8 +52,10 @@
     "unit4-exam": [0,3,4,5,3,4,5,6]
   },
   "overrides": {
-    "u1-l33": {"chapter":"software-responsibility","section":1},
+    "u1-l33": {"chapter":"software-responsibility","section":1,"also":[{"chapter":"design","section":2}]},
+    "u2-l13": {"objective":"Distinguish stored tables from query results; choose named fields with SELECT and order rows with ORDER BY.","also":[{"chapter":"sql-basics","section":5}]},
+    "u2-l15": {"objective":"Combine Boolean conditions with parentheses and check deterministic ordering at boundaries.","also":[{"chapter":"sql-basics","section":5}]},
     "u3-l4": {"chapter":"unit3-fluency","section":7},
-    "u4-l10": {"chapter":"unit4-sql","section":5}
+    "u4-l10": {"chapter":"unit4-sql","section":5,"also":[{"chapter":"unit4-sql","section":6}]}
   }
 }

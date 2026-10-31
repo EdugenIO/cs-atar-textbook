@@ -25,6 +25,7 @@ jobs:
           python scripts/build-editorial-review.py
           python scripts/build-provision-review.py
           python scripts/build-curriculum-map.py
+          python scripts/build-lesson-checks.py
           node scripts/build-student-journeys.mjs
           node scripts/build-lesson-routes.mjs
           python scripts/build-extended-packs.py
