@@ -1,0 +1,849 @@
+{
+  "retrieval": {
+    "start": {
+      "prompt": "Badges cost $3 each with no fixed charge. For quantity 6, identify input, processing and output.",
+      "answer": "Input 6; multiply 6 by 3; output a total of $18. State the input domain separately."
+    },
+    "values": {
+      "prompt": "Calculate 23 // 5 and 23 % 5. Explain the relationship between the results.",
+      "answer": "Quotient 4 and remainder 3: 23 = 4 * 5 + 3. // performs floor division; % gives the remainder for these positive operands."
+    },
+    "representation": {
+      "prompt": "Convert unsigned 8-bit binary 00011001 to decimal and hexadecimal. Show the place values.",
+      "answer": "16 + 8 + 1 = 25; hexadecimal 19. Leading zeros preserve the unsigned value while declaring the width."
+    },
+    "selection": {
+      "prompt": "A delivery fee is $0 for order totals at least $50, otherwise $5. Give tests just below, at and above the boundary.",
+      "answer": "49.99 gives $5; 50 gives $0; 50.01 gives $0. The comparison is >= 50, so equality belongs to the free branch."
+    },
+    "loops": {
+      "prompt": "Which values does range(2, 6) produce, and how many loop iterations does that give?",
+      "answer": "2, 3, 4, 5: four iterations. The stop value is excluded."
+    },
+    "functions": {
+      "prompt": "For def area(width, height) and the call area(5, 2), identify parameters and arguments. What does return do?",
+      "answer": "width and height are parameters; 5 and 2 are arguments. return sends a result to the caller and ends that function call."
+    },
+    "arrays": {
+      "prompt": "An algorithm starts best = 0 and replaces it only when a later value is strictly greater. What index does it return for [5, 9, 9], and why?",
+      "answer": "Index 1, the first maximum. The equal value at index 2 does not satisfy a strictly greater comparison. State a non-empty-list precondition or handle empty input."
+    },
+    "files": {
+      "prompt": "Does successfully converting \"-4\" with int establish valid non-negative input? Explain a complete check.",
+      "answer": "No. Conversion succeeds but the value is outside the declared domain. Check conversion and then the non-negative range rule; report unsuitable input without silently accepting it."
+    },
+    "design": {
+      "prompt": "A client says a program must be reliable. Write a measurable requirement and explain how a test would challenge it.",
+      "answer": "For example: reject an empty quantity without crashing and display a stated message. Supply an empty quantity, predict the message, run the test and compare. A vague adjective alone cannot be checked."
+    },
+    "software-responsibility": {
+      "prompt": "Does crediting the author give permission to reuse code under any conditions?",
+      "answer": "No. Acknowledgement and licence permission are distinct. Check the licence terms, comply with permitted reuse and record assistance honestly."
+    },
+    "networks": {
+      "prompt": "Why is HTTP alone insufficient to deliver a web page across networks?",
+      "answer": "HTTP specifies application messages; transport, IP and local-link mechanisms perform other communication jobs. Identify the responsibilities rather than naming HTTP for every layer."
+    },
+    "addressing": {
+      "prompt": "Are 192.168.20.10/24 and 192.168.21.10/24 in the same ordinary IPv4 subnet?",
+      "answer": "No: their network addresses are 192.168.20.0 and 192.168.21.0. Communication between those networks needs routing."
+    },
+    "network-design": {
+      "prompt": "A school has slow internet downloads. Why might replacing its switch fail to help?",
+      "answer": "The bottleneck could be the internet link, wireless airtime, storage or remote server. Use evidence to identify the limiting part before selecting an upgrade."
+    },
+    "network-review": {
+      "prompt": "A fictional client is 192.168.40.12/24 with gateway 192.168.41.1. What mismatch should be investigated?",
+      "answer": "The configured gateway is outside the client subnet. Check the intended plan and the correct reachable local gateway; a supplied mismatch is evidence to investigate, not permission to change a real network."
+    },
+    "consolidation": {
+      "prompt": "How can you test whether feedback repaired a misconception rather than just helping you copy an answer?",
+      "answer": "Try a changed case without the model, explain the steps and compare with independently prepared expectations. Retain the original error and later attempt."
+    },
+    "exam-preparation": {
+      "prompt": "An exam-style prompt says identify a layer and explain its role. Why is a correct layer name insufficient?",
+      "answer": "The command has two parts. Supply the layer and a causal explanation of what that layer does in the given scenario."
+    },
+    "database-foundations": {
+      "prompt": "A returned loan has a due date before the stated reference date. Is it necessarily overdue under a rule requiring an earlier date AND an outstanding loan?",
+      "answer": "No. Both conditions must hold; a returned loan fails the outstanding condition. State the reference date and declared rule."
+    },
+    "entities-relationships": {
+      "prompt": "Two equipment records are both described as Camera. Why is the description unsuitable as their primary key?",
+      "answer": "A primary key must identify one record uniquely. A repeated description identifies a kind of item; use a unique equipment identifier."
+    },
+    "normalisation": {
+      "prompt": "A composite key is (MemberID, EventID), but MemberName depends only on MemberID. What dependency causes a 2NF problem?",
+      "answer": "A partial dependency: the non-key MemberName depends on only part of the composite key. Put member facts in a Member table and retain the relationship through MemberID."
+    },
+    "sql-basics": {
+      "prompt": "Does SELECT EquipmentID FROM Equipment delete the other stored columns? What controls result order?",
+      "answer": "No. SELECT chooses result columns; the stored table is unchanged. ORDER BY specifies result order, including a tie-breaker where necessary."
+    },
+    "database-solution": {
+      "prompt": "Two loan events refer to the same equipment identifier. Why may an INNER JOIN report contain that item twice?",
+      "answer": "The report has one row per loan event, not per unique item. Repetition can be correct one-to-many behaviour; inspect the join key and intended grain."
+    },
+    "security-threats": {
+      "prompt": "Is a password plus a PIN necessarily two-factor authentication?",
+      "answer": "No. Both are knowledge factors. Two-factor authentication uses two distinct factor categories, such as knowledge and possession."
+    },
+    "responsible-data": {
+      "prompt": "Does replacing real names with codes guarantee that a dataset is anonymous?",
+      "answer": "No. A mapping or other context may identify people. Minimise data and consider linkage and access; invented classroom data is different from relabelled real data."
+    },
+    "unit2-review": {
+      "prompt": "A club stores member names on every loan row. Name an update anomaly and explain a relational repair.",
+      "answer": "Updating only some repeated names leaves conflicting values. Store the member name once in Member, keyed by MemberID, and reference that key from each Loan."
+    },
+    "unit2-consolidation": {
+      "prompt": "How do validation and checking against a source differ, and can either guarantee that the original fact is true?",
+      "answer": "Validation tests declared rules. Comparing with a source checks faithful copying. A plausible value or an accurately copied false source can still be wrong."
+    },
+    "unit2-exam": {
+      "prompt": "An SQL practical includes UPDATE. What should you retain to show that the intended row changed and other rows did not?",
+      "answer": "Record the requirement, target SELECT, expected change, actual verification query and a non-target check. An execution-success message alone is insufficient."
+    },
+    "unit3-fluency": {
+      "prompt": "A function counts values greater than or equal to minimum. What count should [5, 5] produce for minimum 5?",
+      "answer": "2. Each observation is counted separately and equality is included."
+    },
+    "unit3-structures": {
+      "prompt": "For grid = [[2, 0, 1], [0, 4, 0]], what are grid[0][2] and the two row totals?",
+      "answer": "The element is 1 and row totals are [3, 4]. Select the row before the column and reset each row accumulator."
+    },
+    "unit3-search": {
+      "prompt": "Why must the searched range be sorted before applying an ordinary binary search?",
+      "answer": "The comparison must tell you which half can be discarded. Without the ordering precondition, that half can still contain the target."
+    },
+    "unit3-sort": {
+      "prompt": "Using ascending adjacent-swap bubble sort, what is [5, 2, 4, 1] after its first full left-to-right pass?",
+      "answer": "[2, 4, 1, 5]. Successive comparisons move the largest value to the final position; that does not mean the entire list is sorted."
+    },
+    "unit3-objects": {
+      "prompt": "In camera = Equipment(\"E01\", \"Camera\", 2), distinguish class, instance and arguments.",
+      "answer": "Equipment is the class; the created object referred to by camera is an instance; E01, Camera and 2 are initialisation arguments."
+    },
+    "unit3-inheritance": {
+      "prompt": "A Camera overrides preparation(). Which method runs when preparation() is called on a Camera in a list of Equipment objects?",
+      "answer": "The Camera override runs for that instance. Placing it in a collection does not convert it into a base-class instance."
+    },
+    "unit3-project": {
+      "prompt": "Why should a software requirement be linked to an acceptance test before implementation?",
+      "answer": "It makes success observable and connects client needs to evidence. A test can expose a requirement or design problem early, rather than merely confirming that code runs."
+    },
+    "unit3-reliability": {
+      "prompt": "Why can a passing component test still leave a user acceptance problem?",
+      "answer": "A component test checks a local contract. A user workflow can still have unclear input, confusing feedback or unmet needs across components."
+    },
+    "unit3-network-models": {
+      "prompt": "Broadly, which OSI layers correspond to the bottom layer of the four-layer TCP/IP model?",
+      "answer": "Physical and data link (layers 1 and 2). Course terminology for this TCP/IP grouping can be network; link/network-access are common alternatives. Distinguish it from OSI network layer 3."
+    },
+    "unit3-addressing": {
+      "prompt": "For ordinary LAN subnet 192.168.50.64/27, give broadcast, usable range and usable count.",
+      "answer": "Broadcast .95; usable .65 through .94; 30 usable addresses. /27 leaves five host bits and 32 total addresses, with network/broadcast reserved in this ordinary LAN case."
+    },
+    "unit3-secure-networks": {
+      "prompt": "Do two VLANs alone prove that no traffic can pass between their users?",
+      "answer": "No. VLANs separate layer-2 broadcast domains; routing and access policy govern traffic between them. Test allowed and prohibited paths against the requirements."
+    },
+    "unit3-review": {
+      "prompt": "Why does alias = grid differ from copying each row when grid is a nested list?",
+      "answer": "Assignment gives another reference to the same object. Copying each row creates separate row lists; explain which nested objects remain shared for the chosen copy method."
+    },
+    "unit3-consolidation": {
+      "prompt": "Why can a shallow dictionary copy still share a list value with the original?",
+      "answer": "It copies references to the values, not every nested object. Appending to a shared list is visible through both mappings."
+    },
+    "unit3-exam": {
+      "prompt": "A function contract requires preserving input order and not mutating records. Why may sorting be an incorrect repair?",
+      "answer": "Sorting changes required order and may mutate input. A faster or tidier implementation still fails if it violates the contract."
+    },
+    "unit4-design": {
+      "prompt": "Why can (MemberID, SessionID) be a useful Booking primary key when each component repeats?",
+      "answer": "The pair identifies the permitted one-booking-per-member/session relationship. Each component alone does not identify one booking; both are needed for the declared rule."
+    },
+    "unit4-sql": {
+      "prompt": "Why can SUM(Session.Capacity) over a booking join inflate total places?",
+      "answer": "A session capacity is repeated once per matched booking. Aggregate at session grain; SUM(DISTINCT Capacity) can wrongly merge separate sessions with equal capacities."
+    },
+    "unit4-project": {
+      "prompt": "What evidence would show that a database constraint is enforced rather than merely written in a design document?",
+      "answer": "Run a deliberate invalid case on a disposable copy, record the actual failure and verify stored rows. Compare it with a valid case; a diagram alone does not enforce a rule."
+    },
+    "unit4-analysis": {
+      "prompt": "Does a successful account login prove which person performed the action?",
+      "answer": "No. Credentials or session context can be compromised. Treat the log as evidence of an event and investigate attribution using other relevant observations."
+    },
+    "unit4-controls": {
+      "prompt": "In a first-match rule model, why can an early Visitor-to-any allow defeat a later internal-network deny?",
+      "answer": "The broad allow matches first, so the later deny is never applied to that request. Check rule order and both allowed and denied test cases."
+    },
+    "unit4-crypto": {
+      "prompt": "Which key verifies a digital signature, and what else is needed to associate that key with an identity?",
+      "answer": "The corresponding public key verifies the signature. Identity depends on a trustworthy binding between the key and the claimed signer, not merely a mathematically valid signature."
+    },
+    "unit4-ethics": {
+      "prompt": "Why should a privacy analysis identify the entity, jurisdiction and date before applying a framework?",
+      "answer": "Different entities and contexts can be subject to different obligations, and commencement dates matter. Use the supplied facts and current authoritative sources before reaching a conclusion."
+    },
+    "unit4-review": {
+      "prompt": "Why is a grouped report wrong if it selects an ungrouped description with no justified dependency on the grouping key?",
+      "answer": "The description may not identify a unique value for each group. Group at the required grain and include suitable grouping keys rather than relying on permissive DBMS behaviour."
+    },
+    "unit4-consolidation": {
+      "prompt": "Why does grid = [[0]*2]*2 share changes between its rows?",
+      "answer": "Both outer entries reference the same inner list. Construct independent row lists when changes must be separate."
+    },
+    "unit4-exam": {
+      "prompt": "What makes a justified security recommendation stronger than a list of control names?",
+      "answer": "Connect the chosen mechanism to the case requirements, evidence and limitations. Explain why it addresses the stated risk and acknowledge what it does not establish."
+    }
+  },
+  "quizQuestions": [
+    {
+      "id": "q01",
+      "unit": 1,
+      "chapter": "values",
+      "prompt": "What does 17 % 5 evaluate to?",
+      "choices": [
+        "3",
+        "2",
+        "3.4"
+      ],
+      "correct": 1,
+      "explanation": "17 = 3 * 5 + 2, so the remainder is 2.",
+      "misconceptions": [
+        "3 is the whole-number quotient, not the remainder.",
+        "",
+        "3.4 is the ordinary division result."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q02",
+      "unit": 1,
+      "chapter": "selection",
+      "prompt": "A rule accepts scores from 1 to 5 inclusive. Which condition matches?",
+      "choices": [
+        "score > 1 and score < 5",
+        "score >= 1 or score <= 5",
+        "score >= 1 and score <= 5"
+      ],
+      "correct": 2,
+      "explanation": "Both bounds must hold and equality is included.",
+      "misconceptions": [
+        "This excludes both boundary values.",
+        "OR accepts values outside the permitted interval.",
+        ""
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q03",
+      "unit": 1,
+      "chapter": "loops",
+      "prompt": "What list of values is produced by range(1, 4)?",
+      "choices": [
+        "1, 2, 3",
+        "1, 2, 3, 4",
+        "0, 1, 2, 3"
+      ],
+      "correct": 0,
+      "explanation": "The start is included and stop excluded.",
+      "misconceptions": [
+        "",
+        "The stop is excluded.",
+        "The specified start is 1, not 0."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q04",
+      "unit": 1,
+      "chapter": "functions",
+      "prompt": "A function only prints a number and has no return statement. What value does its call return?",
+      "choices": [
+        "The printed number",
+        "None",
+        "An empty string"
+      ],
+      "correct": 1,
+      "explanation": "A function that reaches its end without return implicitly returns None.",
+      "misconceptions": [
+        "Displayed output is different from a returned value.",
+        "",
+        "No rule supplies an empty string."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q05",
+      "unit": 1,
+      "chapter": "arrays",
+      "prompt": "What is the last valid index of [7, 8, 9]?",
+      "choices": [
+        "3",
+        "9",
+        "2"
+      ],
+      "correct": 2,
+      "explanation": "Three elements have indices 0, 1 and 2.",
+      "misconceptions": [
+        "3 equals the length and is out of range.",
+        "9 is a value, not its index.",
+        ""
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q06",
+      "unit": 1,
+      "chapter": "representation",
+      "prompt": "Which decimal value is unsigned binary 00101010?",
+      "choices": [
+        "42",
+        "24",
+        "84"
+      ],
+      "correct": 0,
+      "explanation": "32 + 8 + 2 = 42.",
+      "misconceptions": [
+        "",
+        "The bit weights are not read as decimal digits.",
+        "That would double the represented value."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q07",
+      "unit": 1,
+      "chapter": "addressing",
+      "prompt": "Two hosts have different /24 network addresses. Which function is needed to forward between those networks?",
+      "choices": [
+        "Routing",
+        "Text encoding",
+        "Local frame switching alone"
+      ],
+      "correct": 0,
+      "explanation": "Routing forwards packets between networks.",
+      "misconceptions": [
+        "",
+        "Encoding represents data; it does not choose inter-network paths.",
+        "A local switch does not by itself provide inter-network routing."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q08",
+      "unit": 1,
+      "chapter": "software-responsibility",
+      "prompt": "A tutorial is acknowledged but its licence forbids the intended copying. What is correct?",
+      "choices": [
+        "Credit makes all copying permitted",
+        "Permission and attribution are separate checks",
+        "Only variable names need changing"
+      ],
+      "correct": 1,
+      "explanation": "Attribution does not override the applicable permission terms.",
+      "misconceptions": [
+        "Acknowledgement is not a grant of permission.",
+        "",
+        "Renaming variables does not resolve permission restrictions."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q09",
+      "unit": 2,
+      "chapter": "entities-relationships",
+      "prompt": "Which is the strongest primary-key candidate when names can repeat?",
+      "choices": [
+        "FamilyName",
+        "A unique, non-empty MemberID",
+        "Postcode shared by a suburb"
+      ],
+      "correct": 1,
+      "explanation": "A key must uniquely identify each record under the declared rules.",
+      "misconceptions": [
+        "Names can repeat.",
+        "",
+        "Many people share a postcode."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q10",
+      "unit": 2,
+      "chapter": "normalisation",
+      "prompt": "A non-key attribute depends on only part of a composite key. What is this?",
+      "choices": [
+        "A partial dependency",
+        "An outer join",
+        "A sorting rule"
+      ],
+      "correct": 0,
+      "explanation": "Partial dependencies are addressed when moving toward 2NF.",
+      "misconceptions": [
+        "",
+        "A join combines rows; it is not this dependency.",
+        "Ordering rows does not remove dependencies."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q11",
+      "unit": 2,
+      "chapter": "sql-basics",
+      "prompt": "What does SELECT Name FROM Member do to stored columns?",
+      "choices": [
+        "Deletes every column except Name",
+        "Renames the table",
+        "Returns a result column without deleting stored columns"
+      ],
+      "correct": 2,
+      "explanation": "Projection changes the result shape, not the stored schema.",
+      "misconceptions": [
+        "SELECT does not delete stored columns.",
+        "Renaming is a schema operation.",
+        ""
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q12",
+      "unit": 2,
+      "chapter": "database-solution",
+      "prompt": "Two loans refer to one equipment item. A correct joined history has two rows for that item. What should you conclude?",
+      "choices": [
+        "The primary key must be broken",
+        "The one-to-many result can be correct",
+        "Use DISTINCT to remove a loan"
+      ],
+      "correct": 1,
+      "explanation": "The report grain is one loan event, not one item.",
+      "misconceptions": [
+        "The equipment key can remain unique in its own table.",
+        "",
+        "Removing a distinct loan would lose information."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q13",
+      "unit": 2,
+      "chapter": "database-solution",
+      "prompt": "For values 2, 4 and 9, which are COUNT(*), SUM and AVG?",
+      "choices": [
+        "3, 15, 5",
+        "15, 3, 5",
+        "3, 15, 7.5"
+      ],
+      "correct": 0,
+      "explanation": "There are three rows, sum 15 and average 15 / 3 = 5.",
+      "misconceptions": [
+        "",
+        "COUNT and SUM have been reversed.",
+        "Divide by three rows, not two."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q14",
+      "unit": 2,
+      "chapter": "database-solution",
+      "prompt": "Which action best checks a targeted UPDATE?",
+      "choices": [
+        "Trust the success message",
+        "Verify the target and a non-target record",
+        "Drop the table afterwards"
+      ],
+      "correct": 1,
+      "explanation": "Execution success does not establish that the intended rows changed.",
+      "misconceptions": [
+        "The wrong rows can change successfully.",
+        "",
+        "Dropping the table destroys the evidence and structure."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q15",
+      "unit": 2,
+      "chapter": "security-threats",
+      "prompt": "Password plus PIN uses how many distinct factor categories?",
+      "choices": [
+        "Two because there are two secrets",
+        "Three",
+        "One: knowledge"
+      ],
+      "correct": 2,
+      "explanation": "Both are things the user knows.",
+      "misconceptions": [
+        "Two secrets can be the same category.",
+        "The prompt supplies no third category.",
+        ""
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q16",
+      "unit": 2,
+      "chapter": "responsible-data",
+      "prompt": "Which statement about validity is correct?",
+      "choices": [
+        "A valid value is always accurate",
+        "A value can satisfy rules and still be factually wrong",
+        "Validation proves source authenticity"
+      ],
+      "correct": 1,
+      "explanation": "A plausible but incorrect value may satisfy the domain rules.",
+      "misconceptions": [
+        "Rule compliance is not factual truth.",
+        "",
+        "Authenticity requires other evidence."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q17",
+      "unit": 3,
+      "chapter": "unit3-structures",
+      "prompt": "For grid = [[1, 2], [3, 4]], what is grid[1][0]?",
+      "choices": [
+        "2",
+        "4",
+        "3"
+      ],
+      "correct": 2,
+      "explanation": "Choose row 1, then column 0.",
+      "misconceptions": [
+        "This is row 0, column 1.",
+        "This is row 1, column 1.",
+        ""
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q18",
+      "unit": 3,
+      "chapter": "unit3-search",
+      "prompt": "What precondition supports ordinary binary search?",
+      "choices": [
+        "The searched range is sorted",
+        "Every value is unique",
+        "The target is present"
+      ],
+      "correct": 0,
+      "explanation": "Ordering lets a comparison eliminate a half.",
+      "misconceptions": [
+        "",
+        "Binary search can be defined for repeated values, with a stated match contract.",
+        "An absent target must also be handled."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q19",
+      "unit": 3,
+      "chapter": "unit3-sort",
+      "prompt": "After one ascending left-to-right bubble pass on [3, 1, 2], what remains?",
+      "choices": [
+        "[1, 3, 2]",
+        "[1, 2, 3]",
+        "[3, 2, 1]"
+      ],
+      "correct": 1,
+      "explanation": "Swap 3/1, then swap 3/2; the largest moves to the end.",
+      "misconceptions": [
+        "That is only the first comparison.",
+        "",
+        "That is descending order."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q20",
+      "unit": 3,
+      "chapter": "unit3-objects",
+      "prompt": "Equipment is a class; camera refers to an object created from it. What is camera referring to?",
+      "choices": [
+        "A primary key",
+        "An instance",
+        "A module licence"
+      ],
+      "correct": 1,
+      "explanation": "An object created from a class is an instance of it.",
+      "misconceptions": [
+        "A database key is a different concept.",
+        "",
+        "A licence specifies permissions."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q21",
+      "unit": 3,
+      "chapter": "unit3-inheritance",
+      "prompt": "An instance of Camera overrides preparation(). Which implementation is called on that Camera?",
+      "choices": [
+        "Always Equipment.preparation",
+        "Whichever method is alphabetically first",
+        "Camera.preparation"
+      ],
+      "correct": 2,
+      "explanation": "Method lookup uses the instance type and its class hierarchy.",
+      "misconceptions": [
+        "An override specialises the inherited behaviour.",
+        "Alphabetical order is irrelevant.",
+        ""
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q22",
+      "unit": 3,
+      "chapter": "unit3-structures",
+      "prompt": "Why can changing a nested list affect both an original dictionary and its shallow copy?",
+      "choices": [
+        "Values may still reference the same nested list",
+        "All copies are immutable",
+        "Dictionary keys must be integers"
+      ],
+      "correct": 0,
+      "explanation": "A shallow copy does not recursively copy every value.",
+      "misconceptions": [
+        "",
+        "A shallow copy is not inherently immutable.",
+        "Dictionary keys need not be integers."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q23",
+      "unit": 3,
+      "chapter": "unit3-addressing",
+      "prompt": "How many usable host addresses are in an ordinary IPv4 LAN /27, reserving network and broadcast?",
+      "choices": [
+        "32",
+        "30",
+        "27"
+      ],
+      "correct": 1,
+      "explanation": "Five host bits give 32 total addresses; reserve two for this ordinary LAN case.",
+      "misconceptions": [
+        "32 includes the reserved addresses.",
+        "",
+        "The prefix length is not the host count."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q24",
+      "unit": 3,
+      "chapter": "unit3-reliability",
+      "prompt": "What does a successful component test alone establish?",
+      "choices": [
+        "Every user need is met",
+        "No more testing is useful",
+        "That tested component behaviour met that test expectation"
+      ],
+      "correct": 2,
+      "explanation": "The evidence is limited to the tested contract and conditions.",
+      "misconceptions": [
+        "A user workflow may still fail.",
+        "Acceptance and integration evidence can still be needed.",
+        ""
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q25",
+      "unit": 4,
+      "chapter": "unit4-design",
+      "prompt": "Why is a full (MemberID, SessionID) foreign key important for Attendance?",
+      "choices": [
+        "It must reference the actual booking pair",
+        "Either field alone always identifies a booking",
+        "It sorts the attendance report"
+      ],
+      "correct": 0,
+      "explanation": "Both components identify the declared member/session booking relationship.",
+      "misconceptions": [
+        "",
+        "Each component can repeat across different bookings.",
+        "Referential integrity is different from result order."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q26",
+      "unit": 4,
+      "chapter": "unit4-sql",
+      "prompt": "Two sessions have capacity 10 each. One has 2 bookings and one has 3. What is the total session capacity?",
+      "choices": [
+        "50",
+        "20",
+        "10"
+      ],
+      "correct": 1,
+      "explanation": "At session grain, add 10 + 10 = 20.",
+      "misconceptions": [
+        "50 sums capacity once per booking.",
+        "",
+        "10 wrongly merges equal capacities with DISTINCT."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q27",
+      "unit": 4,
+      "chapter": "unit4-sql",
+      "prompt": "What does GROUP BY WorkshopID with SUM(Capacity) do?",
+      "choices": [
+        "Creates one total across every workshop only",
+        "Changes every stored Capacity",
+        "Produces a capacity total for each workshop group"
+      ],
+      "correct": 2,
+      "explanation": "Rows are grouped by workshop before each aggregate is evaluated.",
+      "misconceptions": [
+        "That describes an ungrouped total.",
+        "A SELECT report does not update stored values.",
+        ""
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q28",
+      "unit": 4,
+      "chapter": "unit4-sql",
+      "prompt": "In SQLite, which expression concatenates an ID and label with a separator?",
+      "choices": [
+        "ID || ' / ' || Label",
+        "ID AND Label",
+        "ID * Label"
+      ],
+      "correct": 0,
+      "explanation": "SQLite uses || for text concatenation; the literal supplies the separator.",
+      "misconceptions": [
+        "",
+        "AND is Boolean logic.",
+        "Multiplication is not text concatenation."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q29",
+      "unit": 4,
+      "chapter": "unit4-project",
+      "prompt": "A dependent Attendance key has ON DELETE CASCADE to Booking. Deleting that booking does what?",
+      "choices": [
+        "Always deletes the Member too",
+        "Deletes its matching dependent Attendance when enforcement is enabled",
+        "Deletes every session"
+      ],
+      "correct": 1,
+      "explanation": "The declared cascade follows that parent-child relationship.",
+      "misconceptions": [
+        "The action does not imply deleting the independent member parent.",
+        "",
+        "The cascade is not a whole-database delete."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q30",
+      "unit": 4,
+      "chapter": "unit4-analysis",
+      "prompt": "A successful login log proves what by itself?",
+      "choices": [
+        "Exactly which person acted",
+        "The account label is the person",
+        "That the system recorded an accepted login event"
+      ],
+      "correct": 2,
+      "explanation": "Attribution needs further evidence; credentials or session context may be compromised.",
+      "misconceptions": [
+        "An accepted event does not identify a person with certainty.",
+        "An account identifier is not conclusive personal attribution.",
+        ""
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q31",
+      "unit": 4,
+      "chapter": "unit4-crypto",
+      "prompt": "Which key verifies a digital signature?",
+      "choices": [
+        "The corresponding public key",
+        "A random symmetric key",
+        "The signer private key shared publicly"
+      ],
+      "correct": 0,
+      "explanation": "Verification uses the corresponding public key; trusted identity binding remains necessary.",
+      "misconceptions": [
+        "",
+        "A random key will not verify that signature.",
+        "The private signing key should remain private."
+      ],
+      "kind": "syllabus-linked"
+    },
+    {
+      "id": "q32",
+      "unit": 4,
+      "chapter": "unit4-ethics",
+      "prompt": "Before applying a privacy framework to a supplied case, what should you establish?",
+      "choices": [
+        "That every entity has identical obligations",
+        "The entity, jurisdiction and relevant date",
+        "Only the file extension"
+      ],
+      "correct": 1,
+      "explanation": "Applicability depends on the stated entity/context and current authoritative sources.",
+      "misconceptions": [
+        "Obligations are not automatically identical in every context.",
+        "",
+        "A file extension does not establish legal applicability."
+      ],
+      "kind": "syllabus-linked"
+    }
+  ],
+  "extensions": [
+    {
+      "id": "ext-left",
+      "title": "LEFT JOIN and HAVING",
+      "reason": "Supporting SQL extensions: useful for missing-match and group-filter reasoning, but not extra prescribed SQL keywords in the current syllabus list.",
+      "link": "../sql/#step-17",
+      "question": "Why can COUNT(*) show one for an unmatched left-side row?",
+      "answer": "The outer join preserves one row with NULL child fields. COUNT(child_key) instead counts non-NULL matches."
+    },
+    {
+      "id": "ext-transactions",
+      "title": "Explicit SQLite transaction control",
+      "reason": "ACID and the role of database transactions remain syllabus-linked Year 12 requirements. This supporting lab adds explicit BEGIN/COMMIT/ROLLBACK syntax in a chosen SQLite tool; those commands are not an extra prescribed keyword list. Teach the chosen tool/driver behaviour before requiring the implementation locally.",
+      "link": "../sql/#step-18",
+      "question": "Does an ordinary statement error always undo earlier statements automatically?",
+      "answer": "No. Recovery depends on the DBMS/error and transaction boundary. Use an explicit, tested rollback strategy for the logical operation."
+    },
+    {
+      "id": "ext-hardware",
+      "title": "Drone, VR and network-pod contexts",
+      "reason": "Optional delivery contexts. Specialist equipment and vendor-specific procedures are not general textbook prerequisites.",
+      "link": "../activities/",
+      "question": "How can a learner practise a network-policy decision without a network pod?",
+      "answer": "Apply the same declared rules to supplied request cards and predict outcomes. Label this as a model, not evidence of an executed network configuration."
+    },
+    {
+      "id": "ext-cpu",
+      "title": "Additional computer-systems context",
+      "reason": "CPU pipeline and recorder-buffer examples in the activity pack are supporting context; they are not automatically additional examinable content. Binary/character representation remains in the syllabus-linked chapter material.",
+      "link": "../activities/computer-systems/",
+      "question": "A recorder produces 9 MB/s and writes 6 MB/s. How quickly does an initially empty 24 MB buffer fill?",
+      "answer": "It grows by 3 MB/s and fills after 24 / 3 = 8 seconds under the stated constant-rate assumptions."
+    }
+  ],
+  "examExtensions": []
+}

@@ -62,5 +62,5 @@ function renderLessonPreparation(id) {
   }).filter(Boolean);
   const activities={start:['01','02','04'],values:['02'],representation:['04'],selection:['05','06','07','08'],design:['03']}[id];
   const pack=activities ? `<p>Printable practice: ${activities.map(number=>`<a href="activities/programming-foundations/#lesson-${number}">Activity ${number}</a>`).join(' · ')} · <a href="activities/programming-foundations/">Complete foundations pack</a>.</p>` : '';
-  return `<div class="notice lesson-preparation" role="note" aria-label="Before you start"><p><strong>Before you start:</strong> ${escape(entry[0])}</p>${links.length ? `<p>Revisit if needed: ${links.join(' · ')}.</p>` : ''}${pack}</div>`;
+  return `<div class="notice lesson-preparation" role="note" aria-label="Before you start"><p><strong>Before you start:</strong> ${escape(entry[0])}</p>${links.length ? `<p>Revisit if needed: ${links.join(' · ')}.</p>` : ''}${pack}<p><a href="revision/#topic-${escape(id)}">Revise this topic: checklist and closed-book retrieval</a>.</p></div>`;
 }

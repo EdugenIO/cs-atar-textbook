@@ -1,0 +1,1860 @@
+[
+  {
+    "id": "Y11-R001",
+    "title": "Character-number representation — Text needs an agreed representation",
+    "chapter": "representation",
+    "unit": 1,
+    "itemIds": [
+      "U1-P08-B001"
+    ],
+    "pages": [
+      8
+    ],
+    "judgement": "partial"
+  },
+  {
+    "id": "Y11-R002",
+    "title": "Programming concepts — Sequence: follow the order",
+    "chapter": "start",
+    "unit": 1,
+    "itemIds": [
+      "U1-P08-B003"
+    ],
+    "pages": [
+      8
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R003",
+    "title": "Programming concepts — 1. From an instruction to a decision",
+    "chapter": "selection",
+    "unit": 1,
+    "itemIds": [
+      "U1-P08-B004"
+    ],
+    "pages": [
+      8
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R004",
+    "title": "Programming concepts — Repeat while a condition remains true",
+    "chapter": "loops",
+    "unit": 1,
+    "itemIds": [
+      "U1-P08-B005"
+    ],
+    "pages": [
+      8
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R005",
+    "title": "Programming concepts — Names belong to scopes",
+    "chapter": "functions",
+    "unit": 1,
+    "itemIds": [
+      "U1-P08-B007",
+      "U1-P08-B008"
+    ],
+    "pages": [
+      8
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R006",
+    "title": "Programming concepts — Calculate and predict",
+    "chapter": "values",
+    "unit": 1,
+    "itemIds": [
+      "U1-P08-B010",
+      "U1-P08-B011",
+      "U1-P08-B012",
+      "U1-P08-B013",
+      "U1-P08-B015"
+    ],
+    "pages": [
+      8
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R007",
+    "title": "Programming concepts — Combine conditions and choices",
+    "chapter": "selection",
+    "unit": 1,
+    "itemIds": [
+      "U1-P09-B001",
+      "U1-P09-B002"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R008",
+    "title": "Programming concepts — An array idea, a Python implementation",
+    "chapter": "arrays",
+    "unit": 1,
+    "itemIds": [
+      "U1-P09-B004"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R009",
+    "title": "Construct sequences — Sequence: follow the order",
+    "chapter": "start",
+    "unit": 1,
+    "itemIds": [
+      "U1-P09-B006"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R010",
+    "title": "Construct selections — 2. Design before coding",
+    "chapter": "selection",
+    "unit": 1,
+    "itemIds": [
+      "U1-P09-B007"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R011",
+    "title": "Construct repetition — From algorithm to implementation",
+    "chapter": "loops",
+    "unit": 1,
+    "itemIds": [
+      "U1-P09-B008"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R012",
+    "title": "Construct modular solutions — One task, one function",
+    "chapter": "functions",
+    "unit": 1,
+    "itemIds": [
+      "U1-P09-B010",
+      "U1-P09-B011"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R013",
+    "title": "Apply types/operators — Types, operators and functions together",
+    "chapter": "consolidation",
+    "unit": 1,
+    "itemIds": [
+      "U1-P09-B013",
+      "U1-P09-B014",
+      "U1-P09-B015",
+      "U1-P09-B016",
+      "U1-P09-B018",
+      "U1-P09-B019",
+      "U1-P09-B020"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "partial"
+  },
+  {
+    "id": "Y11-R014",
+    "title": "Boolean construction/precedence — Station A: Boolean expressions and types",
+    "chapter": "consolidation",
+    "unit": 1,
+    "itemIds": [
+      "U1-P09-B022",
+      "U1-P09-B023"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R015",
+    "title": "Construct indexed collections — Load and traverse",
+    "chapter": "arrays",
+    "unit": 1,
+    "itemIds": [
+      "U1-P09-B025"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R016",
+    "title": "Define problem/requirements — Investigate: understand the problem",
+    "chapter": "design",
+    "unit": 1,
+    "itemIds": [
+      "U1-P09-B028",
+      "U1-P09-B029"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R017",
+    "title": "Schedule development — Plan the work and dependencies",
+    "chapter": "design",
+    "unit": 1,
+    "itemIds": [
+      "U1-P09-B030"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "partial"
+  },
+  {
+    "id": "Y11-R018",
+    "title": "Design structures/algorithms — Design: divide the solution into modules",
+    "chapter": "design",
+    "unit": 1,
+    "itemIds": [
+      "U1-P09-B032",
+      "U1-P09-B033"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R019",
+    "title": "Develop/debug/unit-test — Develop: build a small working part",
+    "chapter": "design",
+    "unit": 1,
+    "itemIds": [
+      "U1-P09-B035",
+      "U1-P09-B036"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R020",
+    "title": "Acceptance/retrospective — Evaluate: judge the result against the brief",
+    "chapter": "design",
+    "unit": 1,
+    "itemIds": [
+      "U1-P09-B038",
+      "U1-P09-B039"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R021",
+    "title": "Explain maintainable programming — Accept only usable input",
+    "chapter": "files",
+    "unit": 1,
+    "itemIds": [
+      "U1-P10-B001",
+      "U1-P10-B002",
+      "U1-P10-B003",
+      "U1-P10-B004",
+      "U1-P10-B005",
+      "U1-P10-B006",
+      "U1-P10-B007",
+      "U1-P10-B008",
+      "U1-P10-B009"
+    ],
+    "pages": [
+      10
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R022",
+    "title": "Apply programming practices — Develop: build a small working part",
+    "chapter": "design",
+    "unit": 1,
+    "itemIds": [
+      "U1-P10-B010",
+      "U1-P10-B012",
+      "U1-P10-B013",
+      "U1-P10-B014",
+      "U1-P10-B015",
+      "U1-P10-B016",
+      "U1-P10-B017",
+      "U1-P10-B018",
+      "U1-P10-B019",
+      "U1-P10-B020"
+    ],
+    "pages": [
+      10
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R023",
+    "title": "Structured design benefits — One task, one function",
+    "chapter": "functions",
+    "unit": 1,
+    "itemIds": [
+      "U1-P10-B022",
+      "U1-P10-B023",
+      "U1-P10-B024"
+    ],
+    "pages": [
+      10
+    ],
+    "judgement": "partial"
+  },
+  {
+    "id": "Y11-R024",
+    "title": "Pseudocode representation — From algorithm to implementation",
+    "chapter": "loops",
+    "unit": 1,
+    "itemIds": [
+      "U1-P10-B025"
+    ],
+    "pages": [
+      10
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R025",
+    "title": "Design tools — Design: divide the solution into modules",
+    "chapter": "design",
+    "unit": 1,
+    "itemIds": [
+      "U1-P10-B027",
+      "U1-P10-B028",
+      "U1-P10-B029"
+    ],
+    "pages": [
+      10
+    ],
+    "judgement": "partial"
+  },
+  {
+    "id": "Y11-R026",
+    "title": "Write pseudocode — Station B: algorithms in two representations",
+    "chapter": "consolidation",
+    "unit": 1,
+    "itemIds": [
+      "U1-P10-B030"
+    ],
+    "pages": [
+      10
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R027",
+    "title": "Apply design tools — Design: divide the solution into modules",
+    "chapter": "design",
+    "unit": 1,
+    "itemIds": [
+      "U1-P10-B032",
+      "U1-P10-B033",
+      "U1-P10-B034"
+    ],
+    "pages": [
+      10
+    ],
+    "judgement": "partial"
+  },
+  {
+    "id": "Y11-R028",
+    "title": "Array algorithms — Load and traverse",
+    "chapter": "arrays",
+    "unit": 1,
+    "itemIds": [
+      "U1-P10-B037",
+      "U1-P10-B038",
+      "U1-P10-B039"
+    ],
+    "pages": [
+      10
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R029",
+    "title": "File algorithms — Choose the mode deliberately",
+    "chapter": "files",
+    "unit": 1,
+    "itemIds": [
+      "U1-P11-B002",
+      "U1-P11-B003",
+      "U1-P11-B004",
+      "U1-P11-B005"
+    ],
+    "pages": [
+      11
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R030",
+    "title": "Explain testing data — 5. Test the boundary",
+    "chapter": "selection",
+    "unit": 1,
+    "itemIds": [
+      "U1-P11-B007",
+      "U1-P11-B008",
+      "U1-P11-B009",
+      "U1-P11-B010"
+    ],
+    "pages": [
+      11
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R031",
+    "title": "Select test cases — Test: choose evidence that can expose mistakes",
+    "chapter": "design",
+    "unit": 1,
+    "itemIds": [
+      "U1-P11-B012",
+      "U1-P11-B013",
+      "U1-P11-B014",
+      "U1-P11-B015"
+    ],
+    "pages": [
+      11
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R032",
+    "title": "Trace/step execution — Trace the running total",
+    "chapter": "loops",
+    "unit": 1,
+    "itemIds": [
+      "U1-P11-B017",
+      "U1-P11-B018"
+    ],
+    "pages": [
+      11
+    ],
+    "judgement": "partial"
+  },
+  {
+    "id": "Y11-R033",
+    "title": "Classify defects — Debug: isolate the first incorrect state",
+    "chapter": "design",
+    "unit": 1,
+    "itemIds": [
+      "U1-P11-B020",
+      "U1-P11-B021",
+      "U1-P11-B022"
+    ],
+    "pages": [
+      11
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R034",
+    "title": "Diagnostic output — Debug: isolate the first incorrect state",
+    "chapter": "design",
+    "unit": 1,
+    "itemIds": [
+      "U1-P11-B025",
+      "U1-P11-B026"
+    ],
+    "pages": [
+      11
+    ],
+    "judgement": "partial"
+  },
+  {
+    "id": "Y11-R035",
+    "title": "External interface purpose/use — Develop: build a small working part",
+    "chapter": "design",
+    "unit": 1,
+    "itemIds": [
+      "U1-P11-B028",
+      "U1-P11-B029"
+    ],
+    "pages": [
+      11
+    ],
+    "judgement": "partial"
+  },
+  {
+    "id": "Y11-R036",
+    "title": "Software permission/attribution — Ideas, expression and permissions",
+    "chapter": "software-responsibility",
+    "unit": 1,
+    "itemIds": [
+      "U1-P12-B003",
+      "U1-P12-B004",
+      "U1-P12-B005",
+      "U1-P12-B006",
+      "U1-P12-B007"
+    ],
+    "pages": [
+      12
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R037",
+    "title": "Layered communication — A shared set of rules",
+    "chapter": "networks",
+    "unit": 1,
+    "itemIds": [
+      "U1-P12-B008",
+      "U1-P12-B010",
+      "U1-P12-B011",
+      "U1-P12-B012",
+      "U1-P12-B013",
+      "U1-P12-B014",
+      "U1-P12-B015"
+    ],
+    "pages": [
+      12
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R038",
+    "title": "Address/mask/version roles — Addresses and the local network",
+    "chapter": "addressing",
+    "unit": 1,
+    "itemIds": [
+      "U1-P12-B016",
+      "U1-P12-B017",
+      "U1-P12-B018"
+    ],
+    "pages": [
+      12
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R039",
+    "title": "Media/device functions — Choose a device for its function",
+    "chapter": "addressing",
+    "unit": 1,
+    "itemIds": [
+      "U1-P12-B020",
+      "U1-P12-B021",
+      "U1-P12-B022",
+      "U1-P12-B023",
+      "U1-P12-B024",
+      "U1-P12-B025"
+    ],
+    "pages": [
+      12
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R040",
+    "title": "Network access protection — Protect against unauthorised access",
+    "chapter": "network-design",
+    "unit": 1,
+    "itemIds": [
+      "U1-P12-B026",
+      "U1-P12-B027",
+      "U1-P12-B028"
+    ],
+    "pages": [
+      12
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R041",
+    "title": "Performance factors — Find the bottleneck",
+    "chapter": "network-design",
+    "unit": 1,
+    "itemIds": [
+      "U1-P13-B002",
+      "U1-P13-B003",
+      "U1-P13-B004",
+      "U1-P13-B005"
+    ],
+    "pages": [
+      13
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R042",
+    "title": "Create network diagrams — Scale and logical diagrams",
+    "chapter": "network-design",
+    "unit": 1,
+    "itemIds": [
+      "U1-P13-B006"
+    ],
+    "pages": [
+      13
+    ],
+    "judgement": "partial"
+  },
+  {
+    "id": "Y11-R043",
+    "title": "Authorised testing/privacy — Know the Privacy Act and the course context",
+    "chapter": "responsible-data",
+    "unit": 2,
+    "itemIds": [
+      "U2-P14-B002",
+      "U2-P14-B003",
+      "U2-P14-B004",
+      "U2-P14-B005",
+      "U2-P14-B006",
+      "U2-P14-B007"
+    ],
+    "pages": [
+      14
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R044",
+    "title": "Authentication policy/factors — Protect authentication and set a useful policy",
+    "chapter": "security-threats",
+    "unit": 2,
+    "itemIds": [
+      "U2-P14-B009",
+      "U2-P14-B010",
+      "U2-P14-B011",
+      "U2-P15-B001",
+      "U2-P15-B002"
+    ],
+    "pages": [
+      14,
+      15
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R045",
+    "title": "Encryption key roles — Explain encryption and key roles",
+    "chapter": "security-threats",
+    "unit": 2,
+    "itemIds": [
+      "U2-P15-B004",
+      "U2-P15-B005",
+      "U2-P15-B006"
+    ],
+    "pages": [
+      15
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R046",
+    "title": "Differentiate attack mechanisms — Distinguish people, network and application threats",
+    "chapter": "security-threats",
+    "unit": 2,
+    "itemIds": [
+      "U2-P15-B008",
+      "U2-P15-B009",
+      "U2-P15-B010",
+      "U2-P15-B011",
+      "U2-P15-B012",
+      "U2-P15-B013",
+      "U2-P15-B014",
+      "U2-P15-B016",
+      "U2-P15-B017",
+      "U2-P15-B018",
+      "U2-P15-B019",
+      "U2-P15-B020",
+      "U2-P15-B021",
+      "U2-P15-B022",
+      "U2-P15-B023"
+    ],
+    "pages": [
+      15
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R047",
+    "title": "Security model concepts — Analyse harm using the CIA triad",
+    "chapter": "security-threats",
+    "unit": 2,
+    "itemIds": [
+      "U2-P15-B025",
+      "U2-P15-B026",
+      "U2-P15-B027",
+      "U2-P15-B029",
+      "U2-P15-B030",
+      "U2-P15-B031"
+    ],
+    "pages": [
+      15
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R048",
+    "title": "Apply security models — Work through an incident using evidence",
+    "chapter": "security-threats",
+    "unit": 2,
+    "itemIds": [
+      "U2-P15-B032",
+      "U2-P15-B033"
+    ],
+    "pages": [
+      15
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R049",
+    "title": "Cipher use/cracking — Use a rotation cipher with explicit conventions",
+    "chapter": "security-threats",
+    "unit": 2,
+    "itemIds": [
+      "U2-P16-B001",
+      "U2-P16-B002",
+      "U2-P16-B005",
+      "U2-P16-B006",
+      "U2-P16-B007",
+      "U2-P16-B009",
+      "U2-P16-B010",
+      "U2-P16-B011"
+    ],
+    "pages": [
+      16
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R050",
+    "title": "Database systems/independence — Start with a question",
+    "chapter": "database-foundations",
+    "unit": 2,
+    "itemIds": [
+      "U2-P16-B012",
+      "U2-P16-B013",
+      "U2-P16-B015",
+      "U2-P16-B016"
+    ],
+    "pages": [
+      16
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R051",
+    "title": "Relational organisation/types — From entity to table",
+    "chapter": "entities-relationships",
+    "unit": 2,
+    "itemIds": [
+      "U2-P16-B018",
+      "U2-P16-B019",
+      "U2-P16-B021",
+      "U2-P16-B022",
+      "U2-P16-B023",
+      "U2-P16-B024",
+      "U2-P16-B026",
+      "U2-P16-B027",
+      "U2-P16-B028",
+      "U2-P16-B030",
+      "U2-P16-B031",
+      "U2-P16-B032",
+      "U2-P17-B001",
+      "U2-P17-B002"
+    ],
+    "pages": [
+      16,
+      17
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R052",
+    "title": "Linking identifiers — Choose identifiers deliberately",
+    "chapter": "entities-relationships",
+    "unit": 2,
+    "itemIds": [
+      "U2-P17-B003"
+    ],
+    "pages": [
+      17
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R053",
+    "title": "Anomaly consequences — Recognise the anomalies",
+    "chapter": "normalisation",
+    "unit": 2,
+    "itemIds": [
+      "U2-P17-B005",
+      "U2-P17-B006",
+      "U2-P17-B007",
+      "U2-P17-B008"
+    ],
+    "pages": [
+      17
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R054",
+    "title": "Developer documentation — Draw and interpret crow’s-foot notation",
+    "chapter": "entities-relationships",
+    "unit": 2,
+    "itemIds": [
+      "U2-P17-B010",
+      "U2-P17-B011"
+    ],
+    "pages": [
+      17
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R055",
+    "title": "Interpret ER models — Read a six-table extension",
+    "chapter": "unit2-review",
+    "unit": 2,
+    "itemIds": [
+      "U2-P17-B012"
+    ],
+    "pages": [
+      17
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R056",
+    "title": "Create ER/dictionary/bridge — Create and reconcile a fresh model",
+    "chapter": "unit2-review",
+    "unit": 2,
+    "itemIds": [
+      "U2-P17-B013",
+      "U2-P17-B014",
+      "U2-P17-B015"
+    ],
+    "pages": [
+      17
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R057",
+    "title": "Data quality reasoning — Data-quality clinic",
+    "chapter": "unit2-review",
+    "unit": 2,
+    "itemIds": [
+      "U2-P17-B017",
+      "U2-P17-B018",
+      "U2-P17-B019",
+      "U2-P17-B020",
+      "U2-P17-B021",
+      "U2-P17-B022"
+    ],
+    "pages": [
+      17
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R058",
+    "title": "Normalisation reasoning/application — Dependencies explain the next split",
+    "chapter": "normalisation",
+    "unit": 2,
+    "itemIds": [
+      "U2-P17-B023",
+      "U2-P17-B024",
+      "U2-P17-B026",
+      "U2-P17-B027",
+      "U2-P17-B028"
+    ],
+    "pages": [
+      17
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R059",
+    "title": "Construct relational database — Create and inspect four related tables",
+    "chapter": "database-solution",
+    "unit": 2,
+    "itemIds": [
+      "U2-P18-B001"
+    ],
+    "pages": [
+      18
+    ],
+    "judgement": "partial"
+  },
+  {
+    "id": "Y11-R060",
+    "title": "Query/change/aggregate — Join keys to obtain readable reports",
+    "chapter": "database-solution",
+    "unit": 2,
+    "itemIds": [
+      "U2-P18-B003",
+      "U2-P18-B004",
+      "U2-P18-B005",
+      "U2-P18-B006",
+      "U2-P18-B007",
+      "U2-P18-B008",
+      "U2-P18-B009"
+    ],
+    "pages": [
+      18
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y11-R061",
+    "title": "Responsible data development — Apply selected APPs to design decisions",
+    "chapter": "responsible-data",
+    "unit": 2,
+    "itemIds": [
+      "U2-P18-B011",
+      "U2-P18-B012",
+      "U2-P18-B013",
+      "U2-P18-B014",
+      "U2-P18-B016",
+      "U2-P18-B017",
+      "U2-P18-B018",
+      "U2-P18-B020"
+    ],
+    "pages": [
+      18
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-01",
+    "title": "Control-flow forms — Choose and trace loop forms",
+    "chapter": "unit3-fluency",
+    "unit": 3,
+    "itemIds": [
+      "U3-P08-B002",
+      "U3-P08-B003",
+      "U3-P08-B005",
+      "U3-P08-B006",
+      "U3-P08-B007"
+    ],
+    "pages": [
+      8
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-02",
+    "title": "Primitive values — Retrieve types, operators and Boolean precedence",
+    "chapter": "unit3-fluency",
+    "unit": 3,
+    "itemIds": [
+      "U3-P08-B009",
+      "U3-P08-B010",
+      "U3-P08-B011",
+      "U3-P08-B012",
+      "U3-P09-B010"
+    ],
+    "pages": [
+      8,
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-03",
+    "title": "Function sharing — Parameters: mutation and rebinding",
+    "chapter": "unit3-structures",
+    "unit": 3,
+    "itemIds": [
+      "U3-P09-B002",
+      "U3-P09-B003",
+      "U3-P09-B011"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-04",
+    "title": "Structured collections — Choose the structure for the question",
+    "chapter": "unit3-structures",
+    "unit": 3,
+    "itemIds": [
+      "U3-P09-B006",
+      "U3-P09-B007",
+      "U3-P09-B008",
+      "U3-P09-B021",
+      "U3-P09-B022",
+      "U3-P09-B023"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-05",
+    "title": "Expression construction — Retrieve types, operators and Boolean precedence",
+    "chapter": "unit3-fluency",
+    "unit": 3,
+    "itemIds": [
+      "U3-P09-B009",
+      "U3-P09-B013",
+      "U3-P09-B014",
+      "U3-P09-B015",
+      "U3-P09-B017",
+      "U3-P09-B018"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-06",
+    "title": "Development stages — Turn the problem into measurable requirements",
+    "chapter": "unit3-project",
+    "unit": 3,
+    "itemIds": [
+      "U3-P09-B026",
+      "U3-P09-B027",
+      "U3-P09-B028",
+      "U3-P09-B030",
+      "U3-P09-B031",
+      "U3-P09-B033",
+      "U3-P09-B034",
+      "U3-P09-B036",
+      "U3-P09-B037"
+    ],
+    "pages": [
+      9
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-07",
+    "title": "Development approaches — Compare development processes",
+    "chapter": "unit3-fluency",
+    "unit": 3,
+    "itemIds": [
+      "U3-P10-B002",
+      "U3-P10-B003",
+      "U3-P10-B016"
+    ],
+    "pages": [
+      10
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-08",
+    "title": "Maintainable implementation — Separate validation, processing and display",
+    "chapter": "unit3-fluency",
+    "unit": 3,
+    "itemIds": [
+      "U3-P10-B005",
+      "U3-P10-B006",
+      "U3-P10-B007",
+      "U3-P10-B008",
+      "U3-P10-B009",
+      "U3-P10-B010",
+      "U3-P10-B011",
+      "U3-P10-B012",
+      "U3-P10-B013",
+      "U3-P10-B014",
+      "U3-P10-B015",
+      "U3-P10-B018",
+      "U3-P10-B019",
+      "U3-P10-B020",
+      "U3-P10-B021",
+      "U3-P10-B022",
+      "U3-P10-B023",
+      "U3-P10-B024",
+      "U3-P10-B025",
+      "U3-P10-B026",
+      "U3-P10-B027",
+      "U3-P10-B028"
+    ],
+    "pages": [
+      10
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-09",
+    "title": "Modular algorithms — Scope and Python argument binding",
+    "chapter": "unit3-structures",
+    "unit": 3,
+    "itemIds": [
+      "U3-P10-B030",
+      "U3-P10-B031",
+      "U3-P10-B032",
+      "U3-P11-B001",
+      "U3-P11-B003",
+      "U3-P11-B004",
+      "U3-P11-B005"
+    ],
+    "pages": [
+      10,
+      11
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-10",
+    "title": "Search growth — Linear search: check in order",
+    "chapter": "unit3-search",
+    "unit": 3,
+    "itemIds": [
+      "U3-P10-B034",
+      "U3-P10-B035",
+      "U3-P10-B037",
+      "U3-P10-B038"
+    ],
+    "pages": [
+      10
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-11",
+    "title": "Sorting growth — Bubble sort: move the largest to the end",
+    "chapter": "unit3-sort",
+    "unit": 3,
+    "itemIds": [
+      "U3-P10-B040",
+      "U3-P10-B041",
+      "U3-P10-B042"
+    ],
+    "pages": [
+      10
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-12",
+    "title": "Realistic solution testing — Start with a requirement and an expected result",
+    "chapter": "unit3-reliability",
+    "unit": 3,
+    "itemIds": [
+      "U3-P11-B006",
+      "U3-P11-B008",
+      "U3-P11-B009",
+      "U3-P11-B010",
+      "U3-P11-B011",
+      "U3-P11-B012",
+      "U3-P11-B013",
+      "U3-P11-B014",
+      "U3-P11-B015",
+      "U3-P11-B016",
+      "U3-P11-B017",
+      "U3-P11-B018"
+    ],
+    "pages": [
+      11
+    ],
+    "judgement": "partial"
+  },
+  {
+    "id": "Y12-13",
+    "title": "Diagnose and repair — Isolate a fault before changing code",
+    "chapter": "unit3-reliability",
+    "unit": 3,
+    "itemIds": [
+      "U3-P11-B021",
+      "U3-P11-B022",
+      "U3-P11-B024",
+      "U3-P11-B025",
+      "U3-P11-B027",
+      "U3-P11-B029",
+      "U3-P11-B030",
+      "U3-P11-B031",
+      "U3-P11-B032",
+      "U3-P12-B002",
+      "U3-P12-B003",
+      "U3-P12-B004",
+      "U3-P12-B006",
+      "U3-P12-B007",
+      "U3-P12-B009",
+      "U3-P12-B010",
+      "U3-P12-B011"
+    ],
+    "pages": [
+      11,
+      12
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-14",
+    "title": "Object construction — Design the class before coding",
+    "chapter": "unit3-objects",
+    "unit": 3,
+    "itemIds": [
+      "U3-P12-B013",
+      "U3-P12-B014",
+      "U3-P12-B015",
+      "U3-P12-B016",
+      "U3-P12-B018",
+      "U3-P12-B022",
+      "U3-P12-B023",
+      "U3-P12-B024",
+      "U3-P12-B025",
+      "U3-P12-B027",
+      "U3-P12-B030",
+      "U3-P12-B031",
+      "U3-P12-B033"
+    ],
+    "pages": [
+      12
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-15",
+    "title": "Abstraction and extension — Override behaviour while keeping the interface",
+    "chapter": "unit3-inheritance",
+    "unit": 3,
+    "itemIds": [
+      "U3-P12-B017",
+      "U3-P12-B019",
+      "U3-P12-B020",
+      "U3-P12-B026",
+      "U3-P12-B028",
+      "U3-P12-B032"
+    ],
+    "pages": [
+      12
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-16",
+    "title": "Software social effects — Review developer responsibilities through scenarios",
+    "chapter": "unit3-reliability",
+    "unit": 3,
+    "itemIds": [
+      "U3-P13-B002",
+      "U3-P13-B003",
+      "U3-P13-B004",
+      "U3-P13-B005",
+      "U3-P13-B006"
+    ],
+    "pages": [
+      13
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-17",
+    "title": "Developer obligations — Review developer responsibilities through scenarios",
+    "chapter": "unit3-reliability",
+    "unit": 3,
+    "itemIds": [
+      "U3-P13-B008",
+      "U3-P13-B009",
+      "U3-P13-B010",
+      "U3-P13-B011",
+      "U3-P13-B012",
+      "U3-P13-B013",
+      "U3-P13-B014",
+      "U3-P13-B015",
+      "U3-P13-B016"
+    ],
+    "pages": [
+      13
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-18",
+    "title": "Layered network models — Compare the seven-layer OSI and four-layer TCP/IP models",
+    "chapter": "unit3-network-models",
+    "unit": 3,
+    "itemIds": [
+      "U3-P13-B017",
+      "U3-P13-B019",
+      "U3-P13-B020",
+      "U3-P13-B021",
+      "U3-P13-B022",
+      "U3-P13-B023",
+      "U3-P13-B025",
+      "U3-P13-B027",
+      "U3-P13-B028",
+      "U3-P13-B029",
+      "U3-P13-B030",
+      "U3-P13-B031"
+    ],
+    "pages": [
+      13
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-19",
+    "title": "Transport protocol comparison — Compare TCP and UDP behaviour",
+    "chapter": "unit3-network-models",
+    "unit": 3,
+    "itemIds": [
+      "U3-P13-B033",
+      "U3-P13-B034",
+      "U3-P13-B035",
+      "U3-P14-B001"
+    ],
+    "pages": [
+      13,
+      14
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-20",
+    "title": "IP addressing concepts — An address needs a prefix",
+    "chapter": "unit3-addressing",
+    "unit": 3,
+    "itemIds": [
+      "U3-P14-B002",
+      "U3-P14-B003",
+      "U3-P14-B004",
+      "U3-P14-B006",
+      "U3-P14-B007"
+    ],
+    "pages": [
+      14
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-21",
+    "title": "Network service endpoints — Separate ports, IP addresses and link addresses",
+    "chapter": "unit3-network-models",
+    "unit": 3,
+    "itemIds": [
+      "U3-P14-B008",
+      "U3-P14-B009",
+      "U3-P14-B010"
+    ],
+    "pages": [
+      14
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-22",
+    "title": "Encapsulated data units — Follow encapsulation and decapsulation",
+    "chapter": "unit3-network-models",
+    "unit": 3,
+    "itemIds": [
+      "U3-P14-B012",
+      "U3-P14-B013",
+      "U3-P14-B014",
+      "U3-P14-B015",
+      "U3-P14-B016"
+    ],
+    "pages": [
+      14
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-23",
+    "title": "Apply subnet plan — Build and check a variable-length address plan",
+    "chapter": "unit3-addressing",
+    "unit": 3,
+    "itemIds": [
+      "U3-P14-B017",
+      "U3-P14-B018"
+    ],
+    "pages": [
+      14
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-24",
+    "title": "Layer-specific network devices — Choose components by their role",
+    "chapter": "unit3-secure-networks",
+    "unit": 3,
+    "itemIds": [
+      "U3-P14-B020",
+      "U3-P14-B021",
+      "U3-P14-B022",
+      "U3-P14-B023",
+      "U3-P14-B024",
+      "U3-P14-B025",
+      "U3-P14-B026"
+    ],
+    "pages": [
+      14
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-25",
+    "title": "Network design performance — Draw physical and logical topology",
+    "chapter": "unit3-secure-networks",
+    "unit": 3,
+    "itemIds": [
+      "U3-P14-B027",
+      "U3-P14-B029",
+      "U3-P14-B030"
+    ],
+    "pages": [
+      14
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-26",
+    "title": "Use network diagnostics — Use ping and traceroute as evidence",
+    "chapter": "unit3-secure-networks",
+    "unit": 3,
+    "itemIds": [
+      "U3-P14-B032",
+      "U3-P14-B033",
+      "U3-P14-B034"
+    ],
+    "pages": [
+      14
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-27",
+    "title": "Conventional network diagrams — Course diagram convention and live evidence",
+    "chapter": "unit3-secure-networks",
+    "unit": 3,
+    "itemIds": [
+      "U3-P14-B035"
+    ],
+    "pages": [
+      14
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-28",
+    "title": "Privacy breach analysis — Turn APP 11 into design evidence",
+    "chapter": "unit4-ethics",
+    "unit": 4,
+    "itemIds": [
+      "U4-P15-B001",
+      "U4-P15-B002",
+      "U4-P15-B003"
+    ],
+    "pages": [
+      15
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-29",
+    "title": "External attack mechanisms — Classify threats without treating labels as proof",
+    "chapter": "unit4-analysis",
+    "unit": 4,
+    "itemIds": [
+      "U4-P15-B005",
+      "U4-P15-B006",
+      "U4-P15-B007",
+      "U4-P15-B008",
+      "U4-P15-B009",
+      "U4-P15-B010",
+      "U4-P16-B001"
+    ],
+    "pages": [
+      15,
+      16
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-30",
+    "title": "Malware and exposure — Classify threats without treating labels as proof",
+    "chapter": "unit4-analysis",
+    "unit": 4,
+    "itemIds": [
+      "U4-P16-B003",
+      "U4-P16-B004",
+      "U4-P16-B005",
+      "U4-P16-B006",
+      "U4-P16-B007",
+      "U4-P16-B008",
+      "U4-P16-B009",
+      "U4-P16-B010"
+    ],
+    "pages": [
+      16
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-31",
+    "title": "Internal threat mechanisms — Classify threats without treating labels as proof",
+    "chapter": "unit4-analysis",
+    "unit": 4,
+    "itemIds": [
+      "U4-P16-B012",
+      "U4-P16-B013",
+      "U4-P16-B014"
+    ],
+    "pages": [
+      16
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-32",
+    "title": "Match defensive controls — Compare the required control families",
+    "chapter": "unit4-controls",
+    "unit": 4,
+    "itemIds": [
+      "U4-P16-B016",
+      "U4-P16-B017",
+      "U4-P16-B018",
+      "U4-P16-B019",
+      "U4-P16-B020",
+      "U4-P16-B021",
+      "U4-P16-B022",
+      "U4-P16-B023",
+      "U4-P16-B024",
+      "U4-P16-B025",
+      "U4-P16-B026"
+    ],
+    "pages": [
+      16
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-33",
+    "title": "CIA and AAA — Apply the CIA triad to specific consequences",
+    "chapter": "unit4-analysis",
+    "unit": 4,
+    "itemIds": [
+      "U4-P16-B028",
+      "U4-P16-B029",
+      "U4-P16-B030",
+      "U4-P16-B032",
+      "U4-P16-B033",
+      "U4-P16-B034",
+      "U4-P16-B035",
+      "U4-P16-B036"
+    ],
+    "pages": [
+      16
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-34",
+    "title": "Hybrid protected communication — Keep key roles separate",
+    "chapter": "unit4-crypto",
+    "unit": 4,
+    "itemIds": [
+      "U4-P17-B001",
+      "U4-P17-B003",
+      "U4-P17-B005",
+      "U4-P17-B006",
+      "U4-P17-B008"
+    ],
+    "pages": [
+      17
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-35",
+    "title": "Historical versus modern protection — From historical ciphers to modern algorithms",
+    "chapter": "unit4-crypto",
+    "unit": 4,
+    "itemIds": [
+      "U4-P17-B010",
+      "U4-P17-B011"
+    ],
+    "pages": [
+      17
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-36",
+    "title": "Authorised security testing — Explain ethical hacking and team roles",
+    "chapter": "unit4-ethics",
+    "unit": 4,
+    "itemIds": [
+      "U4-P17-B012",
+      "U4-P17-B013"
+    ],
+    "pages": [
+      17
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-37",
+    "title": "Relational organisation — Read the six-table crow’s-foot model",
+    "chapter": "unit4-design",
+    "unit": 4,
+    "itemIds": [
+      "U4-P17-B015",
+      "U4-P17-B016",
+      "U4-P17-B018",
+      "U4-P17-B019",
+      "U4-P17-B020",
+      "U4-P17-B021",
+      "U4-P17-B023",
+      "U4-P17-B024",
+      "U4-P17-B025",
+      "U4-P17-B026",
+      "U4-P17-B027",
+      "U4-P17-B028",
+      "U4-P17-B029"
+    ],
+    "pages": [
+      17
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-38",
+    "title": "Modification anomalies — Diagnose a flat record and its dependencies",
+    "chapter": "unit4-design",
+    "unit": 4,
+    "itemIds": [
+      "U4-P17-B031",
+      "U4-P17-B032",
+      "U4-P17-B033"
+    ],
+    "pages": [
+      17
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-39",
+    "title": "Application database connectivity — Use transactions to protect a booking",
+    "chapter": "unit4-project",
+    "unit": 4,
+    "itemIds": [
+      "U4-P17-B035"
+    ],
+    "pages": [
+      17
+    ],
+    "judgement": "partial"
+  },
+  {
+    "id": "Y12-40",
+    "title": "Transactional guarantees — Use transactions to protect a booking",
+    "chapter": "unit4-project",
+    "unit": 4,
+    "itemIds": [
+      "U4-P17-B036"
+    ],
+    "pages": [
+      17
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-41",
+    "title": "Database modelling artefacts — Read the six-table crow’s-foot model",
+    "chapter": "unit4-design",
+    "unit": 4,
+    "itemIds": [
+      "U4-P18-B002",
+      "U4-P18-B003",
+      "U4-P18-B004",
+      "U4-P18-B005",
+      "U4-P18-B006",
+      "U4-P18-B007",
+      "U4-P18-B008"
+    ],
+    "pages": [
+      18
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-42",
+    "title": "Database integrity types — Distinguish three kinds of integrity",
+    "chapter": "unit4-design",
+    "unit": 4,
+    "itemIds": [
+      "U4-P18-B010",
+      "U4-P18-B011",
+      "U4-P18-B012"
+    ],
+    "pages": [
+      18
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-43",
+    "title": "Fitness of data — Distinguish three kinds of integrity",
+    "chapter": "unit4-design",
+    "unit": 4,
+    "itemIds": [
+      "U4-P18-B014",
+      "U4-P18-B015",
+      "U4-P18-B016",
+      "U4-P18-B017",
+      "U4-P18-B018"
+    ],
+    "pages": [
+      18
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-44",
+    "title": "Normalise with dependencies — Diagnose a flat record and its dependencies",
+    "chapter": "unit4-design",
+    "unit": 4,
+    "itemIds": [
+      "U4-P18-B020",
+      "U4-P18-B021",
+      "U4-P18-B022",
+      "U4-P18-B023",
+      "U4-P18-B024"
+    ],
+    "pages": [
+      18
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-45",
+    "title": "SQL reporting — Define the report’s grain",
+    "chapter": "unit4-sql",
+    "unit": 4,
+    "itemIds": [
+      "U4-P19-B001",
+      "U4-P19-B009",
+      "U4-P19-B013",
+      "U4-P19-B014",
+      "U4-P19-B015",
+      "U4-P19-B016",
+      "U4-P19-B017",
+      "U4-P19-B018",
+      "U4-P19-B019"
+    ],
+    "pages": [
+      19
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-46",
+    "title": "Create and change database — Make controlled changes and verify effects",
+    "chapter": "unit4-project",
+    "unit": 4,
+    "itemIds": [
+      "U4-P19-B003",
+      "U4-P19-B006",
+      "U4-P19-B007",
+      "U4-P19-B008",
+      "U4-P19-B010",
+      "U4-P19-B011",
+      "U4-P19-B012"
+    ],
+    "pages": [
+      19
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-47",
+    "title": "Clean for import — Clean an import without inventing data",
+    "chapter": "unit4-project",
+    "unit": 4,
+    "itemIds": [
+      "U4-P19-B002",
+      "U4-P19-B020"
+    ],
+    "pages": [
+      19
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-48",
+    "title": "Ethical data development — Collect and analyse data responsibly",
+    "chapter": "unit4-ethics",
+    "unit": 4,
+    "itemIds": [
+      "U4-P19-B022",
+      "U4-P19-B023",
+      "U4-P19-B024",
+      "U4-P19-B025",
+      "U4-P19-B026",
+      "U4-P19-B027"
+    ],
+    "pages": [
+      19
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-49",
+    "title": "Protect and control records — Turn APP 11 into design evidence",
+    "chapter": "unit4-ethics",
+    "unit": 4,
+    "itemIds": [
+      "U4-P19-B029",
+      "U4-P19-B030",
+      "U4-P19-B031",
+      "U4-P19-B032"
+    ],
+    "pages": [
+      19
+    ],
+    "judgement": "supported"
+  },
+  {
+    "id": "Y12-50",
+    "title": "Australian privacy principles — Identify whose privacy rules apply",
+    "chapter": "unit4-ethics",
+    "unit": 4,
+    "itemIds": [
+      "U4-P19-B034",
+      "U4-P19-B035"
+    ],
+    "pages": [
+      19
+    ],
+    "judgement": "supported"
+  }
+]

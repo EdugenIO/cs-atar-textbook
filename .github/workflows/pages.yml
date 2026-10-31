@@ -25,6 +25,7 @@ jobs:
           python scripts/build-extended-packs.py
           python scripts/build-sql-pathway.py
           node scripts/build-resource-hub.mjs
+          node scripts/build-revision.mjs
           node --test tests/*.test.mjs
           python tests/lesson-slides-package.test.py
           python tests/game-project-packages.test.py

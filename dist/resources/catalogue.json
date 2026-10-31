@@ -13,6 +13,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-start",
+        "type": "activity"
+      },
+      {
         "label": "Worked Python example (.py)",
         "href": "examples/start.py",
         "type": "code"
@@ -48,6 +53,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-values",
+        "type": "activity"
+      },
+      {
         "label": "Worked Python example (.py)",
         "href": "examples/values.py",
         "type": "code"
@@ -81,6 +91,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#representation",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-representation",
+        "type": "activity"
       },
       {
         "label": "Worked Python example (.py)",
@@ -148,6 +163,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-selection",
+        "type": "activity"
+      },
+      {
         "label": "Worked Python example (.py)",
         "href": "examples/selection.py",
         "type": "code"
@@ -201,6 +221,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#loops",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-loops",
+        "type": "activity"
       },
       {
         "label": "Worked Python example (.py)",
@@ -273,6 +298,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-functions",
+        "type": "activity"
+      },
+      {
         "label": "Worked Python example (.py)",
         "href": "examples/functions.py",
         "type": "code"
@@ -341,6 +371,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#arrays",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-arrays",
+        "type": "activity"
       },
       {
         "label": "Worked Python example (.py)",
@@ -413,6 +448,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-files",
+        "type": "activity"
+      },
+      {
         "label": "Worked Python example (.py)",
         "href": "examples/files.py",
         "type": "code"
@@ -481,6 +521,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#design",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-design",
+        "type": "activity"
       },
       {
         "label": "Printable foundations activities",
@@ -613,6 +658,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-networks",
+        "type": "activity"
+      },
+      {
         "label": "Activity 01: Follow a message through a network",
         "href": "../activities/network-reasoning/#lesson-01",
         "type": "activity"
@@ -651,6 +701,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#addressing",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-addressing",
+        "type": "activity"
       }
     ]
   },
@@ -666,6 +721,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#network-design",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-network-design",
+        "type": "activity"
       },
       {
         "label": "Activity 03: Design against capacity and access requirements",
@@ -701,6 +761,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#network-review",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-network-review",
+        "type": "activity"
       }
     ]
   },
@@ -716,6 +781,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#software-responsibility",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-software-responsibility",
+        "type": "activity"
       }
     ]
   },
@@ -731,6 +801,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#consolidation",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-consolidation",
+        "type": "activity"
       }
     ]
   },
@@ -746,6 +821,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#exam-preparation",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-exam-preparation",
+        "type": "activity"
       },
       {
         "label": "Download questions only",
@@ -771,6 +851,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#database-foundations",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-database-foundations",
+        "type": "activity"
       },
       {
         "label": "SQL learning pathway · sequenced lessons, fresh databases and expected results",
@@ -873,6 +958,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-entities-relationships",
+        "type": "activity"
+      },
+      {
         "label": "SQL learning pathway · sequenced lessons, fresh databases and expected results",
         "href": "../sql/#step-05",
         "type": "activity"
@@ -938,6 +1028,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-normalisation",
+        "type": "activity"
+      },
+      {
         "label": "SQL learning pathway · sequenced lessons, fresh databases and expected results",
         "href": "../sql/#step-05",
         "type": "activity"
@@ -986,6 +1081,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#sql-basics",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-sql-basics",
+        "type": "activity"
       },
       {
         "label": "SQL learning pathway · sequenced lessons, fresh databases and expected results",
@@ -1113,6 +1213,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-database-solution",
+        "type": "activity"
+      },
+      {
         "label": "SQL learning pathway · sequenced lessons, fresh databases and expected results",
         "href": "../sql/#step-03",
         "type": "activity"
@@ -1233,6 +1338,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-security-threats",
+        "type": "activity"
+      },
+      {
         "label": "Download student workbook",
         "href": "../security-workbook.md",
         "type": "print"
@@ -1276,6 +1386,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#responsible-data",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-responsible-data",
+        "type": "activity"
       },
       {
         "label": "Download student workbook",
@@ -1328,6 +1443,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit2-review",
+        "type": "activity"
+      },
+      {
         "label": "Eight-lesson workbook",
         "href": "../unit2-review-workbook.md",
         "type": "print"
@@ -1358,6 +1478,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit2-consolidation",
+        "type": "activity"
+      },
+      {
         "label": "Consolidation workbook and revision log instructions",
         "href": "../unit2-consolidation-workbook.md",
         "type": "print"
@@ -1376,6 +1501,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#unit2-exam",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit2-exam",
+        "type": "activity"
       },
       {
         "label": "Download student paper",
@@ -1411,6 +1541,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#unit3-fluency",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit3-fluency",
+        "type": "activity"
       },
       {
         "label": "Worked Python example (.py)",
@@ -1483,6 +1618,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit3-structures",
+        "type": "activity"
+      },
+      {
         "label": "Worked Python example (.py)",
         "href": "examples/unit3-structures.py",
         "type": "code"
@@ -1523,6 +1663,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit3-search",
+        "type": "activity"
+      },
+      {
         "label": "Worked Python example (.py)",
         "href": "examples/unit3-search.py",
         "type": "code"
@@ -1556,6 +1701,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#unit3-sort",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit3-sort",
+        "type": "activity"
       },
       {
         "label": "Worked Python example (.py)",
@@ -1593,6 +1743,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit3-objects",
+        "type": "activity"
+      },
+      {
         "label": "Worked Python example (.py)",
         "href": "examples/unit3-objects.py",
         "type": "code"
@@ -1626,6 +1781,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#unit3-inheritance",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit3-inheritance",
+        "type": "activity"
       },
       {
         "label": "Worked Python example (.py)",
@@ -1666,6 +1826,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#unit3-project",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit3-project",
+        "type": "activity"
       },
       {
         "label": "scenario brief · y12 t1 space",
@@ -1788,6 +1953,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit3-reliability",
+        "type": "activity"
+      },
+      {
         "label": "Download classroom pack",
         "href": "../unit3-reliability-pack.zip",
         "type": "download"
@@ -1823,6 +1993,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit3-network-models",
+        "type": "activity"
+      },
+      {
         "label": "Download offline sizing script",
         "href": "../unit3-network-sizing.py",
         "type": "code"
@@ -1856,6 +2031,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#unit3-addressing",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit3-addressing",
+        "type": "activity"
       },
       {
         "label": "Activity 04: Year 12 bridge: allocate a small subnet",
@@ -1913,6 +2093,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit3-secure-networks",
+        "type": "activity"
+      },
+      {
         "label": "Download classroom pack",
         "href": "../unit3-secure-networks-pack.zip",
         "type": "download"
@@ -1946,6 +2131,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#unit3-review",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit3-review",
+        "type": "activity"
       },
       {
         "label": "Download integrated review pack",
@@ -1988,6 +2178,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit3-consolidation",
+        "type": "activity"
+      },
+      {
         "label": "Download consolidation pack",
         "href": "../unit3-consolidation-pack.zip",
         "type": "download"
@@ -2023,6 +2218,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit3-exam",
+        "type": "activity"
+      },
+      {
         "label": "Download exam-preparation pack",
         "href": "../unit3-exam-pack.zip",
         "type": "download"
@@ -2056,6 +2256,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#unit4-design",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit4-design",
+        "type": "activity"
       },
       {
         "label": "SQL learning pathway · sequenced lessons, fresh databases and expected results",
@@ -2136,6 +2341,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#unit4-sql",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit4-sql",
+        "type": "activity"
       },
       {
         "label": "SQL learning pathway · sequenced lessons, fresh databases and expected results",
@@ -2243,6 +2453,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit4-project",
+        "type": "activity"
+      },
+      {
         "label": "SQL learning pathway · sequenced lessons, fresh databases and expected results",
         "href": "../sql/#step-12",
         "type": "activity"
@@ -2343,6 +2558,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit4-analysis",
+        "type": "activity"
+      },
+      {
         "label": "Download analysis pack",
         "href": "../unit4-analysis-pack.zip",
         "type": "download"
@@ -2383,6 +2603,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit4-controls",
+        "type": "activity"
+      },
+      {
         "label": "Download control and response pack",
         "href": "../unit4-controls-pack.zip",
         "type": "download"
@@ -2418,6 +2643,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit4-crypto",
+        "type": "activity"
+      },
+      {
         "label": "Download cryptography lesson pack",
         "href": "../unit4-crypto-pack.zip",
         "type": "download"
@@ -2451,6 +2681,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#unit4-ethics",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit4-ethics",
+        "type": "activity"
       },
       {
         "label": "Licences and attribution",
@@ -2498,6 +2733,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit4-review",
+        "type": "activity"
+      },
+      {
         "label": "Download integrated review pack",
         "href": "../unit4-review-pack.zip",
         "type": "download"
@@ -2543,6 +2783,11 @@
         "type": "reading"
       },
       {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit4-consolidation",
+        "type": "activity"
+      },
+      {
         "label": "Download full-course consolidation pack",
         "href": "../unit4-consolidation-pack.zip",
         "type": "download"
@@ -2586,6 +2831,11 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#unit4-exam",
         "type": "reading"
+      },
+      {
+        "label": "Revise this topic · checklist and closed-book retrieval",
+        "href": "../revision/#topic-unit4-exam",
+        "type": "activity"
       },
       {
         "label": "Download exam-preparation pack",
