@@ -1,5 +1,11 @@
 # Computer Science ATAR — The Classroom Textbook
 
+## 1 November lesson routes and acceptance checks
+
+All 50 chapters now provide reading → worked explanation → activity → feedback → revision pathways. The 256 existing lesson allocations have focused routes at `dist/lessons/index.html`, linked from the planner and resource cards. Exact section titles are authored in `teaching-source/lesson-reading-sections.json`; missing destinations fail the build. This does not add contact hours or school assessment tasks.
+
+[ACCEPTANCE.md](ACCEPTANCE.md) records browser/accessibility release gates and pending human checks. Pinned Playwright and axe checks run before deployment; failure reports are retained as workflow artifacts. The offline readers retain precise section links and keyboard destinations.
+
 ## 31 October editorial improvements
 
 The **2026 technical foundation is retained**, with the limited 2027 revisions explained in `curriculum-source/syllabus-basis.md` and `dist/syllabus-basis.md`. Current root learning packs include that comparison; historical audits retain their own dates. The manual official-source comparison found no substantive technical or assessment redesign for 2027. It is not a character-level PDF diff or independent approval.

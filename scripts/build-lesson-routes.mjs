@@ -8,13 +8,13 @@ const chapterMap=new Map(chapters.map(c=>[c.id,c]));const used={},lessons=[];
 for(const u of schedule)for(const w of u.weeks)for(const lesson of w.lessons){
  const id='u'+u.unit+'-l'+lesson.number,index=used[lesson.chapter]||0;used[lesson.chapter]=index+1;
  const override=mapping.overrides[id],c=chapterMap.get(override?.chapter||lesson.chapter);
- const position=override?.section??mapping.sections[lesson.chapter]?.[index],section=c.sections[position];
+ const chosen=override?.section??mapping.sections[lesson.chapter]?.[index],position=c.sections.findIndex(s=>s[0]===chosen),section=c.sections[position];
  if(!section)throw Error('Missing reviewed section for '+id);
  const controlled=/assessment slot|controlled|timed attempt|original set [ab]|first paper attempt|original practice/i.test(lesson.kind+' '+lesson.title);
  // A walkthrough later in the chapter must not pull a beginner past today's reading.
  const guideIndex=c.sections.findIndex(s=>s[0]===guides[c.id].anchor);
  const worked=guideIndex<=position?guides[c.id].anchor:section[0];
- const also=(override?.also||[]).map(item=>{const title=chapterMap.get(item.chapter)?.sections[item.section]?.[0];if(!title)throw Error('Missing supporting section '+id);return {chapter:item.chapter,title,href:'../#'+item.chapter+'/'+heading(title)};});
+ const also=(override?.also||[]).map(item=>{const title=chapterMap.get(item.chapter)?.sections.find(s=>s[0]===item.section)?.[0];if(!title)throw Error('Missing supporting section '+id);return {chapter:item.chapter,title,href:'../#'+item.chapter+'/'+heading(title)};});
  lessons.push({...lesson,id,unit:u.unit,year:u.year,week:w.week,readChapter:c.id,read:section[0],readHref:'../#'+c.id+'/'+heading(section[0]),also,worked,workedHref:'../#'+c.id+'/'+heading(worked),ready:preparation[lesson.chapter][0],controlled,revisionHref:'../revision/#topic-'+c.id});
 }
 for(const [chapter,positions]of Object.entries(mapping.sections))if(used[chapter]!==positions.length)throw Error('Unused or missing reading allocation for '+chapter);

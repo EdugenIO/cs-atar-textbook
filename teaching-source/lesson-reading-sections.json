@@ -1,61 +1,403 @@
 {
-  "note": "Editorial reading destinations, in scheduled lesson order within each chapter. Zero-based section positions in the authored chapter, before later clinics. Each lesson retains its own objective, activity, exit question, expected reasoning and retry. These are learning routes, not teacher approval or observed workload evidence.",
+  "note": "Editorial reading destinations, in scheduled lesson order within each chapter. Exact authored titles fail validation if moved or removed instead of silently shifting an index. Each lesson retains its own activity, exit question, expected reasoning and retry. Two beginner SQL objectives are aligned with their existing tasks. These are learning routes, not teacher approval or observed workload evidence.",
   "sections": {
-    "start": [0,1,3,3],
-    "values": [1,2],
-    "representation": [0,2],
-    "selection": [1,4,3,6],
-    "loops": [0,2,1,3],
-    "functions": [0,1,2,3],
-    "arrays": [1,1,2,3],
-    "files": [2,0,3,3],
-    "design": [0,2,3,3,2,5,3,3,3,4,6,7],
-    "networks": [0,1,2,3],
-    "addressing": [0,0,1,2],
-    "network-design": [0,0,1,2],
-    "network-review": [0,1,1,0],
-    "consolidation": [0,1,5,0],
-    "exam-preparation": [0,0,13,13],
-    "database-foundations": [0,1,4,7],
-    "entities-relationships": [0,1,3,6],
-    "normalisation": [0,4,6,8],
-    "sql-basics": [2,3,4,7],
-    "database-solution": [2,2,3,8,1,4,6,8,0,9,1,9,1,1,2,8,9,8,8,7],
-    "security-threats": [0,2,3,4,6,7,8,10],
-    "responsible-data": [0,6,8,9],
-    "unit2-review": [0,1,2,2,3,3,3,3],
-    "unit2-consolidation": [0,1,2,2],
-    "unit2-exam": [0,1,2,2],
-    "unit3-fluency": [0,1,6,7],
-    "unit3-structures": [1,3,4,6],
-    "unit3-search": [1,2,5,4],
-    "unit3-sort": [1,2,3,5],
-    "unit3-objects": [0,2,4,6],
-    "unit3-inheritance": [0,2,5,7],
-    "unit3-project": [1,2,3,4,4,4,3,4,4,6,6,6],
-    "unit3-reliability": [1,4,5,7],
-    "unit3-network-models": [1,3,6,7],
-    "unit3-addressing": [0,3,6,7],
-    "unit3-secure-networks": [0,3,5,6],
-    "unit3-review": [0,4,6,7],
-    "unit3-consolidation": [0,1,6,7],
-    "unit3-exam": [1,3,4,6],
-    "unit4-design": [1,2,4,7],
-    "unit4-sql": [1,1,2,3,4,5,7,8],
-    "unit4-project": [2,3,4,6,1,1,1,5,2,5,2,4,4,5,3,6,5,6,8,8],
-    "unit4-analysis": [1,4],
-    "unit4-controls": [2,5],
-    "unit4-crypto": [2,5],
-    "unit4-ethics": [2,6],
-    "unit4-review": [1,2,3,5,2,4,6,7],
-    "unit4-consolidation": [0,2,4,5,7,7,7,7],
-    "unit4-exam": [0,3,4,5,3,4,5,6]
+    "start": [
+      "A problem before a program",
+      "Prepare your workspace",
+      "Trace and test",
+      "Trace and test"
+    ],
+    "values": [
+      "Convert deliberately",
+      "Calculate and predict"
+    ],
+    "representation": [
+      "Place value changes with the base",
+      "Text needs an agreed representation"
+    ],
+    "selection": [
+      "From an instruction to a decision",
+      "Combine conditions and choices",
+      "Implement the decision in Python",
+      "Test the boundary"
+    ],
+    "loops": [
+      "A fixed number of repetitions",
+      "Repeat while a condition remains true",
+      "Trace the running total",
+      "From algorithm to implementation"
+    ],
+    "functions": [
+      "One task, one function",
+      "Return a result",
+      "Names belong to scopes",
+      "Test the part before the whole"
+    ],
+    "arrays": [
+      "Load and traverse",
+      "Load and traverse",
+      "Remember the location of the best value",
+      "Check edge cases"
+    ],
+    "files": [
+      "Choose the mode deliberately",
+      "Accept only usable input",
+      "Read records in order",
+      "Read records in order"
+    ],
+    "design": [
+      "Investigate: understand the problem",
+      "Design: divide the solution into modules",
+      "Develop: build a small working part",
+      "Develop: build a small working part",
+      "Design: divide the solution into modules",
+      "Debug: isolate the first incorrect state",
+      "Develop: build a small working part",
+      "Develop: build a small working part",
+      "Develop: build a small working part",
+      "Test: choose evidence that can expose mistakes",
+      "Evaluate: judge the result against the brief",
+      "Project pack and checkpoints"
+    ],
+    "networks": [
+      "A shared set of rules",
+      "Four layers, four responsibilities",
+      "Protocols in a familiar journey",
+      "Encapsulation and diagnostic tools"
+    ],
+    "addressing": [
+      "Addresses and the local network",
+      "Addresses and the local network",
+      "Choose a device for its function",
+      "Choose a medium for the setting"
+    ],
+    "network-design": [
+      "Scale and logical diagrams",
+      "Scale and logical diagrams",
+      "Protect against unauthorised access",
+      "Find the bottleneck"
+    ],
+    "network-review": [
+      "Use a repeatable explanation",
+      "Review task: the library upgrade",
+      "Review task: the library upgrade",
+      "Use a repeatable explanation"
+    ],
+    "consolidation": [
+      "Diagnose before choosing practice",
+      "Station A: Boolean expressions and types",
+      "Station D: design, files and responsibility",
+      "Diagnose before choosing practice"
+    ],
+    "exam-preparation": [
+      "Use the practice paper",
+      "Use the practice paper",
+      "Turn feedback into a plan",
+      "Turn feedback into a plan"
+    ],
+    "database-foundations": [
+      "Start with a question",
+      "Inspect the flat-file starter",
+      "Database, DBMS and RDBMS",
+      "Your first database workbook"
+    ],
+    "entities-relationships": [
+      "From entity to table",
+      "Choose identifiers deliberately",
+      "Read relationships in both directions",
+      "Document the fields and their rules"
+    ],
+    "normalisation": [
+      "State the rules before choosing a key",
+      "Dependencies explain the next split",
+      "3NF: remove the transitive dependency",
+      "Practice on a fresh four-table problem"
+    ],
+    "sql-basics": [
+      "Choose result columns with SELECT",
+      "Filter rows with WHERE",
+      "Combine conditions and test boundaries",
+      "Complete the independent query brief"
+    ],
+    "database-solution": [
+      "Join keys to obtain readable reports",
+      "Join keys to obtain readable reports",
+      "Summarise the right records",
+      "Test against requirements, then transfer",
+      "Create and inspect four related tables",
+      "Insert a new record deliberately",
+      "Delete only the disposable test record",
+      "Test against requirements, then transfer",
+      "Define the equipment-desk solution",
+      "Launch, document and evaluate the project",
+      "Create and inspect four related tables",
+      "Launch, document and evaluate the project",
+      "Create and inspect four related tables",
+      "Create and inspect four related tables",
+      "Join keys to obtain readable reports",
+      "Test against requirements, then transfer",
+      "Launch, document and evaluate the project",
+      "Test against requirements, then transfer",
+      "Test against requirements, then transfer",
+      "Rehearse and recover with a transaction"
+    ],
+    "security-threats": [
+      "Begin with assets, threats and evidence",
+      "Audit access using AAA",
+      "Distinguish people, network and application threats",
+      "Distinguish malware, physical threats and new flaws",
+      "Protect authentication and set a useful policy",
+      "Explain encryption and key roles",
+      "Use a rotation cipher with explicit conventions",
+      "Use a polyalphabetic cipher"
+    ],
+    "responsible-data": [
+      "Separate privacy, security, ethics and law",
+      "Explain ethical hacking and penetration testing",
+      "Evaluate the database with evidence",
+      "Submit, reflect and prepare for review"
+    ],
+    "unit2-review": [
+      "Data-quality clinic",
+      "Read a six-table extension",
+      "Create and reconcile a fresh model",
+      "Create and reconcile a fresh model",
+      "Integrate and explain",
+      "Integrate and explain",
+      "Integrate and explain",
+      "Integrate and explain"
+    ],
+    "unit2-consolidation": [
+      "Diagnose without the answer key",
+      "Work through targeted stations",
+      "Retest with changed circumstances",
+      "Retest with changed circumstances"
+    ],
+    "unit2-exam": [
+      "Use the original 64-mark paper",
+      "Bring the specified stimulus",
+      "Mark, correct and explain limits",
+      "Mark, correct and explain limits"
+    ],
+    "unit3-fluency": [
+      "Use diagnosis to choose practice",
+      "Choose and trace loop forms",
+      "Compare development processes",
+      "Preserve versions and prove recovery"
+    ],
+    "unit3-structures": [
+      "Read and update a two-dimensional grid",
+      "Build and use a dictionary",
+      "Parameters: mutation and rebinding",
+      "Build a small booking report"
+    ],
+    "unit3-search": [
+      "Linear search: check in order",
+      "Binary search: discard half",
+      "Choose and test a search",
+      "Compare growth, not just a stopwatch"
+    ],
+    "unit3-sort": [
+      "Bubble sort: move the largest to the end",
+      "Insertion sort: grow a sorted prefix",
+      "Selection sort: place the smallest remaining item",
+      "Compare growth and the work being counted"
+    ],
+    "unit3-objects": [
+      "From separate data to an object",
+      "Instantiate and initialise",
+      "Encapsulation and abstraction",
+      "Trace state and test the interface"
+    ],
+    "unit3-inheritance": [
+      "Extend a responsibility, not just a name",
+      "Override behaviour while keeping the interface",
+      "Trace dispatch and boundary changes",
+      "Practice, then complete the controlled task"
+    ],
+    "unit3-project": [
+      "Turn the problem into measurable requirements",
+      "Design responsibilities and shared references",
+      "Choose and justify the algorithms",
+      "Develop one tested slice at a time",
+      "Develop one tested slice at a time",
+      "Develop one tested slice at a time",
+      "Choose and justify the algorithms",
+      "Develop one tested slice at a time",
+      "Develop one tested slice at a time",
+      "Test the state transitions, not just the menu",
+      "Test the state transitions, not just the menu",
+      "Test the state transitions, not just the menu"
+    ],
+    "unit3-reliability": [
+      "Choose normal, boundary and rejected data",
+      "Plan a representative load and file-size trial",
+      "Review a change and retain regression evidence",
+      "Review developer responsibilities through scenarios"
+    ],
+    "unit3-network-models": [
+      "Compare the seven-layer OSI and four-layer TCP/IP models",
+      "Separate ports, IP addresses and link addresses",
+      "Read transport fields and trace a TCP connection",
+      "Calculate sizes using explicit assumptions"
+    ],
+    "unit3-addressing": [
+      "An address needs a prefix",
+      "Work a host address into its subnet",
+      "Build and check a variable-length address plan",
+      "Compare IPv6 and read its notation"
+    ],
+    "unit3-secure-networks": [
+      "Start with measurable requirements",
+      "Separate broadcast domains and enforce policy",
+      "Calculate capacity and identify bottlenecks",
+      "Use ping and traceroute as evidence"
+    ],
+    "unit3-review": [
+      "Diagnose before revising",
+      "Work an integrated network case",
+      "Complete a controlled practice and feedback cycle",
+      "Plan the next revision from evidence"
+    ],
+    "unit3-consolidation": [
+      "Choose two priorities from evidence",
+      "Use targeted practice stations",
+      "Attempt fresh mixed transfer",
+      "Build an evidence-based revision plan"
+    ],
+    "unit3-exam": [
+      "Read the task and plan the evidence",
+      "Attempt the original timed practice",
+      "Mark the method and diagnose the error",
+      "Complete the final readiness check"
+    ],
+    "unit4-design": [
+      "Diagnose a flat record and its dependencies",
+      "Read the six-table crow’s-foot model",
+      "Make a data dictionary that matches implementation",
+      "Transfer to a fresh design"
+    ],
+    "unit4-sql": [
+      "Join up to four tables and keep keys visible",
+      "Join up to four tables and keep keys visible",
+      "Aggregate at the correct grain",
+      "Preserve zero-booking sessions",
+      "Calculate and concatenate with aliases",
+      "Respect composite keys and unknown attendance",
+      "Diagnose multiplied totals and test changed data",
+      "Complete the query clinic"
+    ],
+    "unit4-project": [
+      "Make controlled changes and verify effects",
+      "Clean an import without inventing data",
+      "Use transactions to protect a booking",
+      "Preserve a known-good version and prove recovery",
+      "Investigate and design measurable requirements",
+      "Investigate and design measurable requirements",
+      "Investigate and design measurable requirements",
+      "Test workflows, failures and reports",
+      "Make controlled changes and verify effects",
+      "Test workflows, failures and reports",
+      "Make controlled changes and verify effects",
+      "Use transactions to protect a booking",
+      "Use transactions to protect a booking",
+      "Test workflows, failures and reports",
+      "Clean an import without inventing data",
+      "Preserve a known-good version and prove recovery",
+      "Test workflows, failures and reports",
+      "Preserve a known-good version and prove recovery",
+      "Run the prototype and evaluate its limits",
+      "Run the prototype and evaluate its limits"
+    ],
+    "unit4-analysis": [
+      "Apply the CIA triad to specific consequences",
+      "Read a synthetic event sequence"
+    ],
+    "unit4-controls": [
+      "Write narrow traffic rules and inspect order",
+      "Plan an authorised incident response"
+    ],
+    "unit4-crypto": [
+      "Keep key roles separate",
+      "Trace a simplified TLS 1.3 connection"
+    ],
+    "unit4-ethics": [
+      "Apply the five prescribed APPs",
+      "Explain ethical hacking and team roles"
+    ],
+    "unit4-review": [
+      "Read the model and identify its invariants",
+      "Predict reports before running SQL",
+      "Explain transactions, connectivity and recovery",
+      "Connect security, cryptography and privacy",
+      "Predict reports before running SQL",
+      "Analyse a proposed web deployment with evidence",
+      "Attempt a controlled sample and diagnose the result",
+      "Transfer, retrieve and plan consolidation"
+    ],
+    "unit4-consolidation": [
+      "Use evidence to choose the next repair",
+      "Repair Python structures and algorithm reasoning",
+      "Transfer database knowledge to a different model",
+      "Repair network models, addresses and diagnosis",
+      "Show improvement with a fresh and delayed attempt",
+      "Show improvement with a fresh and delayed attempt",
+      "Show improvement with a fresh and delayed attempt",
+      "Show improvement with a fresh and delayed attempt"
+    ],
+    "unit4-exam": [
+      "Prepare against the current instructions",
+      "Attempt original mixed practice",
+      "Mark a criterion and explain its cause",
+      "Transfer to a changed case",
+      "Attempt original mixed practice",
+      "Mark a criterion and explain its cause",
+      "Transfer to a changed case",
+      "Make a manageable readiness plan"
+    ]
   },
   "overrides": {
-    "u1-l33": {"chapter":"software-responsibility","section":1,"also":[{"chapter":"design","section":2}]},
-    "u2-l13": {"objective":"Distinguish stored tables from query results; choose named fields with SELECT and order rows with ORDER BY.","also":[{"chapter":"sql-basics","section":5}]},
-    "u2-l15": {"objective":"Combine Boolean conditions with parentheses and check deterministic ordering at boundaries.","also":[{"chapter":"sql-basics","section":5}]},
-    "u3-l4": {"chapter":"unit3-fluency","section":7},
-    "u4-l10": {"chapter":"unit4-sql","section":5,"also":[{"chapter":"unit4-sql","section":6}]}
+    "u1-l33": {
+      "chapter": "software-responsibility",
+      "section": "Read the licence before reuse",
+      "also": [
+        {
+          "chapter": "design",
+          "section": "Design: divide the solution into modules"
+        }
+      ]
+    },
+    "u2-l13": {
+      "objective": "Distinguish stored tables from query results; choose named fields with SELECT and order rows with ORDER BY.",
+      "also": [
+        {
+          "chapter": "sql-basics",
+          "section": "Make order and duplicates deliberate"
+        }
+      ]
+    },
+    "u2-l15": {
+      "objective": "Combine Boolean conditions with parentheses and check deterministic ordering at boundaries.",
+      "also": [
+        {
+          "chapter": "sql-basics",
+          "section": "Make order and duplicates deliberate"
+        }
+      ]
+    },
+    "u3-l4": {
+      "chapter": "unit3-fluency",
+      "section": "Preserve versions and prove recovery"
+    },
+    "u4-l10": {
+      "chapter": "unit4-sql",
+      "section": "Respect composite keys and unknown attendance",
+      "also": [
+        {
+          "chapter": "unit4-sql",
+          "section": "Filter rows and groups deliberately"
+        }
+      ]
+    }
   }
 }

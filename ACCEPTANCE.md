@@ -14,7 +14,7 @@ Run the content generators in `.github/workflows/pages.yml`, then `npm ci`, `npx
 - Narrow-screen chapter layout does not overflow the viewport. Code, diagram and table regions may scroll independently.
 - Resource filters return correct counts; empty results and reset work.
 - Example download supplies the expected filename. Print preparation and restoration retain the correct student-copy mode and hide navigation controls in print media. This does not automate the operating-system print dialog.
-- All 256 scheduled lesson routes preserve the original objective, activity and distinct exit question, expected reasoning and next teaching step. Reading and worked destinations resolve to authored sections; worked section destinations do not jump ahead of the selected reading.
+- All 256 scheduled lesson routes use the source schedule’s objective, activity and distinct exit question, expected reasoning and next teaching step. Two beginner SQL objectives now match their existing activities. Reading and worked destinations resolve to exact authored section titles; worked section destinations do not jump ahead of the selected reading.
 - All 50 chapters appear as primary or companion readings. The licensing lesson retains its original allocation while directly reading the software-responsibility chapter.
 - SQL SELECT practice precedes filters/joins/groups, with the later LEFT JOIN clinic explicitly identified. Optional specialist equipment does not become a general prerequisite.
 - Controlled attempts state that feedback follows collection. These public routes do not become secure issued papers or introduce new assessment weights/contact hours.
@@ -25,8 +25,8 @@ Record the actual browser, assistive technology, date and result. Leave unperfor
 
 | Check | Required evidence | Status |
 |---|---|---|
-| Keyboard: home → chapter → example → task → feedback → revision | Visible focus throughout; no traps; collapsed answers operable; destination focus and back navigation preserved | Browser automation plus representative manual review; record release results |
-| 375px layout and 200%/400% zoom/reflow | No clipped controls or page-wide horizontal scrolling; isolated wide content usable | Narrow-screen automation; manual zoom review still required |
+| Keyboard: home → chapter → example → task → feedback → revision | Visible focus throughout; no traps; collapsed answers operable; destination focus and back navigation preserved | Browser automation plus manual SQL reading/feedback and offline keyboard destination checks on 1 November 2026; independent review still required |
+| 375px layout and 200%/400% zoom/reflow | No clipped controls or page-wide horizontal scrolling; isolated wide content usable | Narrow-screen automation plus manual 375px lesson and 320px diagram checks; manual zoom review still required |
 | Screen reader: navigation, disclosures, tables, quiz errors/results | NVDA/Firefox and VoiceOver/Safari observations with understandable names and reading order | Pending independent assistive-technology review |
 | Diagrams | Text equivalent preserves relationships, optionality and the question's information | Existing descriptions retained; independent subject review pending |
 | Printing | Actual student/answer PDF output is legible and answer selection is respected | Existing print checks plus browser preparation tests; representative visual review required |
