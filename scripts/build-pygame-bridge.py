@@ -165,3 +165,6 @@ if not (OUT/'verification.md').exists():
     write(OUT/'verification.md','# Verification\n\nAutomated/local checks pending. School-machine and independent-student readiness must be recorded by the teacher in readiness.csv. Timings require a classroom trial (A03).')
 build_pack()
 print('Built eight pre-project practice lessons, staged code, faded starter, workbook, checks, readiness record and teaching pack.')
+
+# Preserve authored checks when regenerating workshop/preparation allocations.
+subprocess.run([__import__("sys").executable, str(ROOT/"scripts/build-lesson-checks.py")], cwd=ROOT, check=True)

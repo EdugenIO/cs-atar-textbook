@@ -1,0 +1,273 @@
+# Curriculum follow-up workbook
+
+2026 foundation · 2027 revisions · Original formative additions, 31 October 2026. Expected outcomes are not observed learner results. Independent review remains pending.
+
+## Apply a character code in three bases
+
+A code point is an identifier for a character, not a byte count. Worked example: C has decimal code point 67 = 64 + 2 + 1 = binary 01000011 = hexadecimal 43. UTF-8 encodes this character in one byte; that does not establish a one-byte rule for other characters.
+
+### Worked example
+
+```text
+C: decimal 67 → binary 01000011 → hexadecimal 43 → decimal 4×16+3 = 67.
+```
+
+### Independent task
+
+Given character B has decimal code point 66, write its eight-bit binary and hexadecimal code point. Check both conversions by converting back. Explain why the character é can use two UTF-8 bytes even though its code point is one number.
+
+### Explained answer (review after attempting)
+
+B: 01000010 and 42 hexadecimal; 64+2=66 and 4×16+2=66. The code point identifies the character; encoding determines its byte representation. One number does not imply one byte.
+
+## Express the same arithmetic in pseudocode and Python
+
+Pseudocode describes the algorithm independently of a language. Define DIV as whole-number quotient for these non-negative counts and MOD as remainder. Python uses // and %. A count is an integer; the measured/price value in this teaching example is a float. Pseudocode conventions must be clear rather than copied as runnable Python.
+
+### Worked example
+
+```text
+Pseudocode (illustrative):
+count = 17
+full = count DIV 4
+left = count MOD 4
+cost = count * 2.5
+OUTPUT full, left, cost
+
+Python:
+count = 17
+full = count // 4
+left = count % 4
+cost = count * 2.5
+print(full, left, cost)
+
+Expected: 4, 1, 42.5
+```
+
+### Independent task
+
+For 23 tickets packed five per envelope at $2.50 each, write pseudocode and Python to compute full envelopes, tickets left and total price. Name the types. Change the count to zero and predict again.
+
+### Explained answer (review after attempting)
+
+4 full envelopes, 3 left, cost 57.5; count/full/left are integer, price/cost float. With zero: 0, 0, 0.0. Use DIV/MOD in clearly defined pseudocode and //,% in Python. Binary floats are a learning simplification for financial amounts.
+
+## Build and revise a Gantt schedule
+
+A Gantt chart places tasks on rows and time slots on columns. Bars show duration; dependencies constrain the earliest start. This separate eight-slot practice example is not a change to the assessed game's workshop budget. Investigation must finish before design, then code, test and evaluation follow. A longer predecessor shifts later tasks unless scope, resources or sequencing genuinely change.
+
+### Worked example
+
+```text
+Task       1 2 3 4 5 6 7 8
+Investigate ■ · · · · · · ·
+Design      · ■ · · · · · ·
+Code        · · ■ ■ ■ · · ·
+Test        · · · · · ■ ■ ·
+Evaluate    · · · · · · · ■
+Dependencies: Investigate → Design → Code → Test → Evaluate.
+```
+
+### Independent task
+
+Redraw this chart if coding takes four slots instead of three. State the revised finish and propose a defensible response to the original eight-slot deadline. Do not assume testing can disappear.
+
+### Explained answer (review after attempting)
+
+Code occupies 3–6, test 7–8 and evaluation 9: finish slips one slot. Negotiate scope/deadline or a justified resource change, then retest the plan; merely overlapping dependent tasks or removing testing does not solve the dependency.
+
+## Explain what structured design improves
+
+A named calculation function separates one responsibility from input/output. Develop and test it once, call it from several places, read the name to understand intent, and change its rule in one implementation. Repetition can create inconsistent fixes. Modules still need clear inputs/results; hidden global changes can undermine these benefits.
+
+### Worked example
+
+```text
+Repeated version: two separate copies of the delivery threshold both need editing.
+Function version: delivery_charge(total) implements the threshold once; two callers use its return value.
+Test the threshold independently before integrating either caller.
+```
+
+### Independent task
+
+Compare repeated delivery calculations with one delivery_charge function called twice. Explain one benefit each for development, comprehension and modification, plus a limitation of poor modular design.
+
+### Explained answer (review after attempting)
+
+Develop/test reusable calculation once; a meaningful function name exposes responsibility; update the threshold in one place. Poor names, unclear interfaces or hidden mutable globals can still make the program difficult to understand and change.
+
+## Use a structure chart and replace a stub
+
+A structure chart shows the module hierarchy and the data passed, rather than execution-time decisions. Main calls LoadScores, Total and Display in this example. LoadScores returns a list to Main; Main passes that list to Total, receives a number and passes it to Display. A stub temporarily supplies a predictable result so callers can be developed before the real input module is finished. It is not a finished file reader.
+
+### Worked example
+
+```text
+Main
+├── LoadScores() → scores
+├── Total(scores) → total
+└── Display(total)
+
+# Runnable Python stub example
+def load_scores():
+    return [2, 5]  # Temporary known input, not a file reader
+
+def total_scores(scores):
+    total = 0
+    for score in scores:
+        total += score
+    return total
+
+def display(total):
+    print(total)
+
+display(total_scores(load_scores()))  # 7
+```
+
+### Independent task
+
+Draw your own labelled structure chart for loading scores, finding the maximum and displaying it. State empty-input behaviour. Replace a loader stub with a text-file reader using the file chapter; test a valid file, missing file and malformed line, and explain how callers use the same interface.
+
+### Explained answer (review after attempting)
+
+Main receives a score list, passes it to a maximum function and passes the result/message to display. Define empty as no maximum before indexing. The loader returns the promised list or follows a documented failure policy, closes the file and validates lines. Use [2,5]→5 and []→no readings; record actual file tests separately. A new implementation behind the same contract need not change correct callers.
+
+## Compare a paper trace, debugger steps and output probes
+
+Predict first on paper. In the school-approved IDE, set a breakpoint on the update line, start its debugger and inspect value/total before stepping over the line. Continue to the next iteration and record the new values. Debugger button names vary by IDE. Diagnostic output is a separate method: an execution marker confirms a branch/body ran, while value prints expose changing state. Neither substitutes for a known expected result.
+
+### Worked example
+
+```text
+total = 0
+for value in [4, -1, 3]:
+    total += value  # Set breakpoint here
+print(total)
+
+Expected debugger/paper rows (value, total before, total after):
+(4, 0, 4), (-1, 4, 3), (3, 3, 6).
+Actual debugger observations: record only after running.
+
+Fault to investigate:
+for value in [2, 3]:
+    total = 0
+    print('ENTER LOOP', value, 'before', total)
+    total += value
+    print('after', total)
+print(total)  # Wrong final 3; intended sum is 5
+```
+
+### Independent task
+
+Use a debugger on the first program and compare actual observations with your paper trace. For the faulty program, add or inspect branch/body markers and before/after values, identify the first wrong state, repair initialisation, remove temporary probes and retest [2,3], [] and [-2,1]. If debugger access is unavailable, mark the actual stepping exercise pending and ask for an approved environment.
+
+### Explained answer (review after attempting)
+
+The second iteration resets total from 2 to 0; move initialisation before the loop. Correct sums are 5, 0 and -1. Execution markers show entered code; value probes show state. The first program ends 6. A paper prediction is not a claim that the debugger was run.
+
+## Read and use a library API contract
+
+An application programming interface specifies how a caller uses a component: available operations, parameters, results and relevant failure behaviour. Its implementation supplies the internal steps. An API can be a local Python library; it need not be an internet service. Consult documentation for the installed version. Do not infer valid input ranges only from one successful call.
+
+### Worked example
+
+```text
+Example documented contract: library_api.fee(weight) accepts a non-negative number of kilograms and returns a float charge in dollars. Negative input raises ValueError.
+Caller: charge = library_api.fee(2.5)
+The caller needs the contract; the fee calculation is library implementation. This is an illustrative interface, not an installed package or a fixed fee formula.
+```
+
+### Independent task
+
+Write a caller using 2.5 kg. Explain interface versus implementation, where to find permitted arguments, and a valid/boundary/invalid test. Then inspect one actual documented Pygame call used in your practice program and identify its inputs/result.
+
+### Explained answer (review after attempting)
+
+charge = library_api.fee(2.5); contract documents accepted input/result/ValueError while implementation computes charge. Use versioned API docs. Test 2.5 and 0 as accepted, -1 rejected; exact numeric fees need a documented formula. For the real call, cite its actual documentation rather than inventing an output.
+
+## Check a diagram against the course symbol conventions
+
+A logical diagram communicates devices, links and network boundaries; physical room placement is a different view. Use the Cisco-style device symbols shown in the official additional syllabus support booklet, not an unlabeled chain of generic boxes. Read its legend and distinguish router, switch, access point, host and server. Labels and explained traffic paths remain necessary even with correct symbols.
+
+### Worked example
+
+```text
+Worked logical roles: wireless client → access point → switch → router → remote service. The AP supplies wireless access; the switch forwards LAN frames; the router connects networks. In the booklet, locate each device symbol and annotate this same path with those symbols before attempting the changed network.
+```
+
+### Independent task
+
+Using the official support booklet as the symbol reference, draw a fresh network for 20 wired and 10 wireless clients, a local server and internet access. Label devices, links, network/gateway addresses and an unauthorised-access control. Trace one local and one remote request. Compare symbol shapes with the booklet and record any mismatch before revision.
+
+### Explained answer (review after attempting)
+
+Wired clients/server connect via appropriate switching, wireless clients via APs, remote path via router/gateway. Addresses must be coherent and unique, links/roles explicit, control justified. Symbol fidelity requires visual comparison with the official booklet and teacher review; a text-only path is not evidence of a completed convention-correct drawing.
+
+## Create a fresh relational database independently
+
+Running a supplied creation script demonstrates setup, not independent schema construction. Use a fresh context after the worked equipment database: Author has many Titles, and each Title has exactly one Author. Define a required foreign key with compatible types and test enforcement on the actual connection. The independent task below adds a different many-to-many design rather than merely renaming this example.
+
+### Worked example
+
+```text
+-- Worked example: run only in a new disposable SQLite database
+PRAGMA foreign_keys = ON;
+CREATE TABLE Author(AuthorID TEXT PRIMARY KEY NOT NULL, Name TEXT NOT NULL);
+CREATE TABLE Title(TitleID TEXT PRIMARY KEY NOT NULL, AuthorID TEXT NOT NULL REFERENCES Author(AuthorID), Name TEXT NOT NULL);
+INSERT INTO Author VALUES('A1','Mia');
+INSERT INTO Title VALUES('T1','A1','Robots');
+SELECT t.TitleID,a.Name FROM Title t INNER JOIN Author a ON t.AuthorID=a.AuthorID;
+-- Expected: T1 | Mia
+```
+
+### Independent task
+
+Independently create Member(MemberID text PK, Name required), Workshop(WorkshopID text PK, Title required) and Enrolment with required MemberID/WorkshopID foreign keys and a composite primary key. Insert M1/Ari, W1/Robotics and their enrolment. Write a joined report and demonstrate duplicate-pair and missing-M9 rejection with foreign keys enabled before the transaction.
+
+### Explained answer (review after attempting)
+
+Use three CREATE TABLE statements; text keys explicitly NOT NULL; Enrolment PRIMARY KEY(MemberID,WorkshopID) plus two NOT NULL REFERENCES constraints. Insert parent rows before child. Report joins all three using their IDs and returns Ari/Robotics. Duplicate pair fails uniqueness; M9 fails the FK. Predict these results, then record actual SQL and observed outcomes.
+
+## Transfer the reliability example to the current game
+
+The equipment-loan code in this chapter is a separate worked reliability example. Its R5/R9 labels, request counts and project_reference.py are not the current Pygame task or evidence that a game passes. Transfer the testing method to the current Year 12 game FR1–FR10 and NFR1–NFR7 in the aligned workbook. Use the specified object count for assessed acceptance; additional synthetic load explores limits rather than adding assessed mechanics.
+
+### Worked example
+
+```text
+Method transfer:
+Loan operation invariant → game score/lives/state invariant.
+Failed loan leaves records unchanged → paused update leaves active timer/positions unchanged.
+Loan workload + file bytes → declared game workload + history/map size + measured input response.
+Database restore → separate version restore, then actual game acceptance/retest.
+Keep measured environments and workloads separate; loan timing is not game timing.
+```
+
+### Independent task
+
+In the current game workbook, predict pause/resume and restart state tests, including score, lives, active time and actors. Pause three seconds, resume, restart and record actual results. Separately design a bounded synthetic many-actor and large-resource case; state machine/version, workload, measurement and limitations. Link assessed tests to the existing contract, not new requirements.
+
+### Explained answer (review after attempting)
+
+Pause freezes gameplay state/time while input remains responsive; resume continues, restart restores initial contract values. Actual declared-machine response observations, file handling and regression results must be recorded, not inferred from FPS. Extra-load results describe the synthetic trial only; do not change project scope or claim universal performance.
+
+## Trace application connectivity through ODBC
+
+ODBC provides a common database-access interface with an appropriate DBMS driver. An application requests a connection and operation through the interface/driver manager; the selected driver communicates with its DBMS and returns results or errors. Driver/data-source configuration, credentials, supported types and some SQL may change for a different DBMS. ODBC does not make all SQL dialects identical or bypass authorisation.
+
+### Worked example
+
+```text
+Request: Attendance app → ODBC interface/driver manager → selected DBMS driver → DBMS/database
+Result/error: DBMS → driver → ODBC → attendance app
+Example: application requests attendance rows; configured driver connects to the named data source; DBMS checks access and executes supported SQL; rows/errors return along the path.
+Direct alternative: Python app → sqlite3 DB-API module → SQLite database. This is not an ODBC connection.
+```
+
+### Independent task
+
+Draw both paths for an attendance application and explain what may change when moving an ODBC application to another supported DBMS. Identify two possible failure points. Explain why running this textbook's direct sqlite3 reference does not demonstrate an installed ODBC driver.
+
+### Explained answer (review after attempting)
+
+ODBC path includes interface/driver selection and DBMS; direct sqlite3 does not. Driver/configuration and possibly SQL/types differ. Missing driver, wrong data source, unavailable server or denied credentials can fail at different stages. Inspect the relevant error without assuming every failure is an SQL syntax issue. This is a worked conceptual example, not a claim that ODBC has been installed or tested.

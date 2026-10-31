@@ -12,9 +12,13 @@ There are 648 editorial source locators: Unit 1 157, Unit 2 124, Unit 3 226, Uni
 
 The official PDFs were inspected through the web-rendered source. Direct binary download returned HTTP 403; registry digests identify the privately read normalised web-text unit-content snapshots, NOT PDF binary files. Official PDFs are linked, not redistributed or relicensed. Source-list dates and content effective dates are distinct from the textbook edition.
 
+## Substantive editorial review completed 31 October 2026
+
+All 519 leaf demands were inspected against the actual official source and teaching evidence in 111 meaningful groups. See [the readable editorial review](editorial-review.html), [review JSON](editorial-review.json) and [original follow-up workbook](teaching-follow-up.md). The initial pass found 98 supported and 13 partial groups. New explanations/examples/tasks address identified instructional weaknesses, with independent re-review still pending. Group counts are not a coverage percentage. Network-symbol visual checks and actual debugger/classroom observations remain required where stated. The candidate fields below are retained as the earlier retrieval record, while the added editorial columns report the substantive judgement.
+
 ## Suggested evidence, not a coverage declaration
 
-An initial retrieval pass searched nominated chapters, their rendered sections and scaffolded depth modules. It retained existing headings/code/examples/tasks and real formative question IDs as suggestions. A link confirms the resource exists, not that it satisfies the exact item, depth or independent demand. Every row remains **Item review pending**, identifies the automated editorial method/date, and leaves independent reviewer/date blank. No source item is marked teacher-verified or signed off.
+An initial retrieval pass searched nominated chapters, their rendered sections and scaffolded depth modules. It retained existing headings/code/examples/tasks and real formative question IDs as suggestions. A link confirms the resource exists, not that it satisfies the exact item, depth or independent demand. Every candidate row remains **Item review pending** for independent teacher approval, identifies the automated editorial method/date, and leaves independent reviewer/date blank. No source item is marked teacher-verified or signed off.
 
 Retrieval did not nominate an explanation for 14 rows, a worked example for 167, an independent task for 297 or a current formative question for 421. These are retrieval gaps, NOT confirmed omissions from the entire book. Non-code worked examples or equivalent activities may need manual nomination. Every row also records the unverified school-issued assessment mapping and independent review gap. Do not interpret the existence of a related chapter or project as item-level summative coverage.
 

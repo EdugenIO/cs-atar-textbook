@@ -42,5 +42,14 @@
         819
       ]
     }
-  ]
+  ],
+  "foundation": {
+    "year": 2026,
+    "year12URL": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0013/1211323/_Computer-Science-ATAR-Year-12-Syllabus-for-teaching-from-January-2026.PDF",
+    "revisionYear": 2027,
+    "revisionURL": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0005/1273190/Computer-Science-ATAR-Year-12-Syllabus-for-teaching-from-2027.PDF",
+    "comparison": "syllabus-basis.md",
+    "checked": "31 October 2026",
+    "finding": "Manual section comparison found no substantive technical, school-assessment or examination-design change. Rationale, aims, capabilities, terminology and layout revised. Not a character-level diff."
+  }
 }

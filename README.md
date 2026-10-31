@@ -1,5 +1,15 @@
 # Computer Science ATAR — The Classroom Textbook
 
+## 31 October editorial improvements
+
+The **2026 technical foundation is retained**, with the limited 2027 revisions explained in `curriculum-source/syllabus-basis.md` and `dist/syllabus-basis.md`. Current root learning packs include that comparison; historical audits retain their own dates. The manual official-source comparison found no substantive technical or assessment redesign for 2027. It is not a character-level PDF diff or independent approval.
+
+All 519 leaf source demands now have a substantive AI-assisted editorial review in 111 groups (`curriculum-source/editorial-review-year11.json` and `editorial-review-year12.json`). The published matrix adds these judgements beside the earlier automated candidates. Read `dist/curriculum/editorial-review.html`; 98 groups were supported and 13 partial at initial inspection. Original follow-up explanations, worked examples and independent tasks are authored in `curriculum-source/teaching-repairs.json` and embedded through `dist/curriculum-clinics.js`. Independent teacher re-review, visual symbol checks, actual practical observations and school-issued assessment mapping remain separate pending evidence. Do not convert group counts into a coverage percentage.
+
+The first chapter shows its sequential program before the later function-based harness. Early advanced code is retained in optional revisits with explicit prerequisites. All 256 lessons have distinct exit questions, expected reasoning and specific follow-up in `teaching-source/exit-checks.tsv`; the planner, CSV and `dist/lesson-exit-checks.md` use the same source. These are formative checks, not extra weighted assessment tasks. Controlled-task checks occur after collection.
+
+After other content generators, run `python scripts/build-editorial-priorities.py`. The project/Pygame builders also reapply authored exit checks so their older generic strings cannot replace them. This command rebuilds lesson checks, editorial clinics/review, syllabus notes/current root packs and the curriculum matrix in dependency order. Review sources before changing judgements; never generate teacher signatures or actual learner results. Run the existing Node/Python checks, including `tests/editorial-priorities.test.mjs`, before publication.
+
 A free, open textbook for WA Computer Science ATAR Units 1–4, using Python and SQLite. Current edition: **0.49 · 2027 teaching draft**. Year 11 uses the syllabus for teaching from 2026; Year 12 uses the syllabus for teaching from 2027. It includes 50 draft chapters, 182 glossary terms, worksheets, practice questions, quizzes and explained answers. No account is required to read the book.
 
 This is a learning resource: the website does not grade, collect submissions or track students. Revision and exam-style questions are optional practice. The book is independent and does not imply SCSA or Department endorsement.

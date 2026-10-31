@@ -260,3 +260,6 @@ write(DIST/'legacy-projects/index.html',legacy_html)
 manifest={'updated':'30 October 2026','task':'A01','years':{str(y):{'budget':years[y]['budget'],'files':FILES[y],'slots':[{'week':s[0],'lesson':s[1],'phase':s[2],'title':s[3]} for s in SLOTS[y]],'themes':[o['id'] for o in options[y]]} for y in [11,12]},'legacySlideIds':sorted(legacy_slide_ids),'pending':['A02 school-machine and independent-learner verification','A03 classroom trial and moderation','A06 replacement project slides']}
 write(DIST/'project-alignment.json',json.dumps(manifest,ensure_ascii=False,indent=2))
 print('Aligned 22 project slots, two chapters/workbooks and two five-theme teaching packs; ten console decks explicitly retained as legacy.')
+
+# Preserve authored checks when regenerating workshop/preparation allocations.
+subprocess.run([__import__("sys").executable, str(ROOT/"scripts/build-lesson-checks.py")], cwd=ROOT, check=True)

@@ -2,6 +2,8 @@
 
 Current teaching target: **2027**. Edition metadata and source-list check: **30 October 2026**. This is an independent classroom draft, not an SCSA-approved or fully verified alignment.
 
+2026 remains the technical foundation, with the applicable 2027 revisions. Valid 2026 chapter citations are retained and explained in the [syllabus comparison](syllabus-basis.md).
+
 ## Current syllabus basis
 
 - Year 11 / Units 1–2: SCSA Computer Science ATAR syllabus **for teaching from 2026**, the Year 11 version currently listed for use. This does not mean there is a separately published Year 11 2027 syllabus.

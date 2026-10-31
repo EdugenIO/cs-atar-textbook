@@ -1,0 +1,2753 @@
+{
+  "title": "Year 12 source-demand editorial review",
+  "reviewer": "AI-assisted editorial review",
+  "date": "2026-10-31",
+  "independentReview": "pending",
+  "source": {
+    "title": "SCSA Computer Science ATAR Year 12 syllabus for teaching from 2027",
+    "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0005/1273190/Computer-Science-ATAR-Year-12-Syllabus-for-teaching-from-2027.PDF",
+    "method": "Official course-page listing and official PDF web rendition inspected 2026-10-31; printed unit-content pages 8–19. PDF page is 1-based printed page + 4. No binary-hash verification claimed.",
+    "locatorConvention": "item-map editorial bullet numbering, counting parent and nested markers. Only leaves assigned; web lines refer to official PDF rendition."
+  },
+  "scope": "Year 12 Units 3–4; Year 11 teaching-from-2026 foundation preserved. Source demand headings are concise paraphrases; rationale judges existing textbook depth.",
+  "judgementMeaning": {
+    "supported": "Substantive explanation/example and relevant learner practice are provided. Resource support does not establish mastery, teacher approval or formal assessment coverage.",
+    "partial": "Specified depth, alignment or practice weakness remains.",
+    "gap": "No adequate provision located."
+  },
+  "limitations": [
+    "Independent teacher/symbol review and actual learner performance remain pending.",
+    "Conditional debugger, simulator and ping/traceroute exercises are practice opportunities; execution/results are not claimed.",
+    "School-issued formal assessment coverage is outside this teaching-content review.",
+    "Legal and cryptographic references need teaching-time currency checks; this file does not supply operational/legal advice.",
+    "Editorial evidence supersedes weak automated candidate retrieval without changing item-map statuses.",
+    "Only this new review file is authored."
+  ],
+  "reviews": [
+    {
+      "id": "Y12-01",
+      "itemIds": [
+        "U3-P08-B002",
+        "U3-P08-B003",
+        "U3-P08-B005",
+        "U3-P08-B006",
+        "U3-P08-B007"
+      ],
+      "sourceDemand": "Control-flow forms",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 8,
+          "pdfPage": 12,
+          "bulletRange": [
+            1,
+            7
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        343,
+        348
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-fluency",
+          "sections": [
+            "Choose and trace loop forms"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-foundations-workbook.md",
+          "section": "loop-form retrieval"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Fixed/pre/post tests contrast n=0 and n=3, including the at-least-once post-test. Selection and sequence are also constructed in the counter scaffold.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-02",
+      "itemIds": [
+        "U3-P08-B009",
+        "U3-P08-B010",
+        "U3-P08-B011",
+        "U3-P08-B012",
+        "U3-P09-B010"
+      ],
+      "sourceDemand": "Primitive values",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 8,
+          "pdfPage": 12,
+          "bulletRange": [
+            8,
+            12
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 9,
+          "pdfPage": 13,
+          "bulletRange": [
+            10,
+            10
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        350,
+        367
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-fluency",
+          "sections": [
+            "Retrieve types, operators and Boolean precedence"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-foundations-workbook.md",
+          "section": "types retrieval"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Counts, approximate measurements, leading-zero identifiers and explicit text-to-Boolean conversion justify all four types. Boolean B012 has direct support despite its null candidate location.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-03",
+      "itemIds": [
+        "U3-P09-B002",
+        "U3-P09-B003",
+        "U3-P09-B011"
+      ],
+      "sourceDemand": "Function sharing",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 9,
+          "pdfPage": 13,
+          "bulletRange": [
+            1,
+            3
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 9,
+          "pdfPage": 13,
+          "bulletRange": [
+            11,
+            11
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        357,
+        369
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-structures",
+          "sections": [
+            "Parameters: mutation and rebinding",
+            "Scope and Python argument binding"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-structures-workbook.md",
+          "section": "parameter/reference trace"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Caller scalar/list outputs distinguish local rebinding, shared mutation and scope. Python argument assignment is accurately explained alongside course value/reference terminology; generic parsing examples were weaker candidates.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-04",
+      "itemIds": [
+        "U3-P09-B006",
+        "U3-P09-B007",
+        "U3-P09-B008",
+        "U3-P09-B021",
+        "U3-P09-B022",
+        "U3-P09-B023"
+      ],
+      "sourceDemand": "Structured collections",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 9,
+          "pdfPage": 13,
+          "bulletRange": [
+            4,
+            8
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 9,
+          "pdfPage": 13,
+          "bulletRange": [
+            19,
+            23
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        361,
+        382
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-structures",
+          "sections": [
+            "Choose the structure for the question",
+            "Traverse rows and columns",
+            "Build and use a dictionary"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-evidence-activities.md",
+          "section": "E1 — Independent algorithms"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Grid traversal, independent rows and dictionary lookup/update/removal are explained with contracts. E1 requires fresh pseudocode traversal and dictionary work, matching the source pseudocode skill more closely than a Python-only candidate module.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-05",
+      "itemIds": [
+        "U3-P09-B009",
+        "U3-P09-B013",
+        "U3-P09-B014",
+        "U3-P09-B015",
+        "U3-P09-B017",
+        "U3-P09-B018"
+      ],
+      "sourceDemand": "Expression construction",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 9,
+          "pdfPage": 13,
+          "bulletRange": [
+            9,
+            9
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 9,
+          "pdfPage": 13,
+          "bulletRange": [
+            12,
+            18
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        365,
+        377
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-fluency",
+          "sections": [
+            "Retrieve types, operators and Boolean precedence",
+            "State the contract before writing code"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-foundations-workbook.md",
+          "section": "operators/control-flow retrieval"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "The blocked/trained/supervisor example compares grouped and ungrouped expressions and all eight combinations. Equality boundaries and arithmetic/relational/logical operators are applied in the counter.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-06",
+      "itemIds": [
+        "U3-P09-B026",
+        "U3-P09-B027",
+        "U3-P09-B028",
+        "U3-P09-B030",
+        "U3-P09-B031",
+        "U3-P09-B033",
+        "U3-P09-B034",
+        "U3-P09-B036",
+        "U3-P09-B037"
+      ],
+      "sourceDemand": "Development stages",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 9,
+          "pdfPage": 13,
+          "bulletRange": [
+            24,
+            37
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        387,
+        398
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-project",
+          "sections": [
+            "Turn the problem into measurable requirements",
+            "Develop one tested slice at a time",
+            "Submit evidence and evaluate against the requirements",
+            "Worked Gantt schedule and dependencies"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-project-workbook.md",
+          "section": "investigate/design/develop/evaluate evidence"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Current actor-game FR/NFR criteria, scheduled dependencies, design, iterations and evaluation provide concrete stages. Keep these requirements distinct from legacy console-loan illustrations elsewhere.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-07",
+      "itemIds": [
+        "U3-P10-B002",
+        "U3-P10-B003",
+        "U3-P10-B016"
+      ],
+      "sourceDemand": "Development approaches",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 10,
+          "pdfPage": 14,
+          "bulletRange": [
+            1,
+            3
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 10,
+          "pdfPage": 14,
+          "bulletRange": [
+            16,
+            16
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        402,
+        417
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-fluency",
+          "sections": [
+            "Compare development processes"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-fluency-workbook.md",
+          "section": "changed threshold and development comparison"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "A stable counter requirement then a threshold change makes linear-versus-iterative tradeoffs concrete and asks learners to apply the stages.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-08",
+      "itemIds": [
+        "U3-P10-B005",
+        "U3-P10-B006",
+        "U3-P10-B007",
+        "U3-P10-B008",
+        "U3-P10-B009",
+        "U3-P10-B010",
+        "U3-P10-B011",
+        "U3-P10-B012",
+        "U3-P10-B013",
+        "U3-P10-B014",
+        "U3-P10-B015",
+        "U3-P10-B018",
+        "U3-P10-B019",
+        "U3-P10-B020",
+        "U3-P10-B021",
+        "U3-P10-B022",
+        "U3-P10-B023",
+        "U3-P10-B024",
+        "U3-P10-B025",
+        "U3-P10-B026",
+        "U3-P10-B027",
+        "U3-P10-B028"
+      ],
+      "sourceDemand": "Maintainable implementation",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 10,
+          "pdfPage": 14,
+          "bulletRange": [
+            4,
+            15
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 10,
+          "pdfPage": 14,
+          "bulletRange": [
+            17,
+            28
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        405,
+        429
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-fluency",
+          "sections": [
+            "Separate validation, processing and display",
+            "Preserve versions and prove recovery"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-fluency-workbook.md",
+          "section": "repair/version/restore log"
+        },
+        {
+          "kind": "additional demand-specific evidence",
+          "path": "dist/unit3-chapters.js",
+          "section": "unit3-reliability — Review developer responsibilities through scenarios"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Parser conversion/domain checks distinguish valid zero from rejection; processing/display and single-purpose functions are separated. Explicit stubs, exceptions, returned structures, meaningful versions and tested recovery are explained. Reliability responsibility scenarios add ethical cases; a returned collection is one structure, not several unrelated returns.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-09",
+      "itemIds": [
+        "U3-P10-B030",
+        "U3-P10-B031",
+        "U3-P10-B032",
+        "U3-P11-B001",
+        "U3-P11-B003",
+        "U3-P11-B004",
+        "U3-P11-B005"
+      ],
+      "sourceDemand": "Modular algorithms",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 10,
+          "pdfPage": 14,
+          "bulletRange": [
+            29,
+            32
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 11,
+          "pdfPage": 15,
+          "bulletRange": [
+            1,
+            5
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        433,
+        453
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-structures",
+          "sections": [
+            "Scope and Python argument binding",
+            "Convention-focused transfer"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-evidence-activities.md",
+          "section": "E1 — Independent algorithms"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Fresh algorithm representation, functions, arguments and explicit stubs are required. Objects/inheritance workbook A also implements class modularity. E1 supplies independent pseudocode rather than assuming that reading the search example is enough.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-10",
+      "itemIds": [
+        "U3-P10-B034",
+        "U3-P10-B035",
+        "U3-P10-B037",
+        "U3-P10-B038"
+      ],
+      "sourceDemand": "Search growth",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 10,
+          "pdfPage": 14,
+          "bulletRange": [
+            33,
+            38
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        437,
+        441
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-search",
+          "sections": [
+            "Linear search: check in order",
+            "Binary search: discard half",
+            "Desk-check the bounds",
+            "Compare growth, not just a stopwatch"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-search-workbook.md",
+          "section": "search traces and probe experiment"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Sortedness, duplicates, missing targets and shrinking bounds are traced. Growth analysis separates probes from Boolean comparisons, best/worst cases and preparation cost. The absent-target n=8/16/32/1024 task is stronger than the candidate sorting-contract example for Big O purpose.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-11",
+      "itemIds": [
+        "U3-P10-B040",
+        "U3-P10-B041",
+        "U3-P10-B042"
+      ],
+      "sourceDemand": "Sorting growth",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 10,
+          "pdfPage": 14,
+          "bulletRange": [
+            39,
+            42
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        443,
+        445
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-sort",
+          "sections": [
+            "Bubble sort: move the largest to the end",
+            "Insertion sort: grow a sorted prefix",
+            "Selection sort: place the smallest remaining item",
+            "Compare growth and the work being counted"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-sort-workbook.md",
+          "section": "pass traces and comparison experiments"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "All three mechanisms have pseudocode, Python, pass tables and consistent key-comparison counts. Early-exit bubble/insertion best cases differ from quadratic selection and worst cases; fresh copies preserve duplicates and mutation contracts. Insertion support belongs here, not in candidate search links.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-12",
+      "itemIds": [
+        "U3-P11-B006",
+        "U3-P11-B008",
+        "U3-P11-B009",
+        "U3-P11-B010",
+        "U3-P11-B011",
+        "U3-P11-B012",
+        "U3-P11-B013",
+        "U3-P11-B014",
+        "U3-P11-B015",
+        "U3-P11-B016",
+        "U3-P11-B017",
+        "U3-P11-B018"
+      ],
+      "sourceDemand": "Realistic solution testing",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 11,
+          "pdfPage": 15,
+          "bulletRange": [
+            6,
+            18
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        456,
+        470
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-reliability",
+          "sections": [
+            "Start with a requirement and an expected result",
+            "Choose normal, boundary and rejected data",
+            "Plan a representative load and file-size trial"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-evidence-activities.md",
+          "section": "E3 — Representative environment"
+        },
+        {
+          "kind": "current game acceptance and performance evidence",
+          "path": "dist/unit3-project-workbook.md",
+          "section": "2. Trace every shared requirement — FR1–FR10 and NFR1–NFR7"
+        }
+      ],
+      "judgement": "partial",
+      "rationale": "Expected/actual fixtures, unit/integration/acceptance distinctions, synthetic mixed transactions, file bytes and timings are substantial. Current game workbook FR1–FR10 and NFR1–NFR7 also give concrete acceptance/reliability/responsiveness criteria, so independent testing tasks are available. The remaining weakness is alignment: reliability still calls the console-loan R5/R9 and imports project_reference.py while the current adopted project is the actor game. Learners need an explicit distinction and adaptation path; loan workload measurements are not game performance evidence.",
+      "actions": [
+        "Label the console-loan case as a separate worked example; add explicit navigation/adaptation from its testing concepts to the current game workbook FR/NFR criteria, including representative files/workload and actual response measures."
+      ],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending",
+      "proposedOriginalTask": {
+        "prompt": "For the current actor game, predict pause/resume and restart trials. Record score, lives, gameplay time and actor states; pause three seconds, resume, then restart. Design a bounded many-actor workload and a large resource-file case. State machine/version, workload, response criterion and expected state before measurement.",
+        "answerSuggestions": "Pause preserves gameplay state/time while event handling remains responsive; resume continues state and restart restores specified initial values. Count and frame-time checks must use stated workload/environment and expected actor/state assertions. Report synthetic/target differences and actual measured limits; no universal timing pass mark is implied.",
+        "status": "optional bridge proposal addressing alignment; existing game acceptance tasks already available; not integrated or independently reviewed"
+      }
+    },
+    {
+      "id": "Y12-13",
+      "itemIds": [
+        "U3-P11-B021",
+        "U3-P11-B022",
+        "U3-P11-B024",
+        "U3-P11-B025",
+        "U3-P11-B027",
+        "U3-P11-B029",
+        "U3-P11-B030",
+        "U3-P11-B031",
+        "U3-P11-B032",
+        "U3-P12-B002",
+        "U3-P12-B003",
+        "U3-P12-B004",
+        "U3-P12-B006",
+        "U3-P12-B007",
+        "U3-P12-B009",
+        "U3-P12-B010",
+        "U3-P12-B011"
+      ],
+      "sourceDemand": "Diagnose and repair",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 11,
+          "pdfPage": 15,
+          "bulletRange": [
+            19,
+            32
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 12,
+          "pdfPage": 16,
+          "bulletRange": [
+            1,
+            11
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        475,
+        500
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-reliability",
+          "sections": [
+            "Isolate a fault before changing code"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-evidence-activities.md",
+          "section": "E2 — Debugger"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Syntax/logic/division-by-zero/index faults have concrete distinctions. The double-return defect gives minimal reproduction, expected/actual state and regression retest. E2 explicitly requires breakpoint watch/step evidence; actual learner use remains unobserved.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-14",
+      "itemIds": [
+        "U3-P12-B013",
+        "U3-P12-B014",
+        "U3-P12-B015",
+        "U3-P12-B016",
+        "U3-P12-B018",
+        "U3-P12-B022",
+        "U3-P12-B023",
+        "U3-P12-B024",
+        "U3-P12-B025",
+        "U3-P12-B027",
+        "U3-P12-B030",
+        "U3-P12-B031",
+        "U3-P12-B033"
+      ],
+      "sourceDemand": "Object construction",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 12,
+          "pdfPage": 16,
+          "bulletRange": [
+            12,
+            16
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 12,
+          "pdfPage": 16,
+          "bulletRange": [
+            18,
+            18
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 12,
+          "pdfPage": 16,
+          "bulletRange": [
+            22,
+            25
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 12,
+          "pdfPage": 16,
+          "bulletRange": [
+            27,
+            27
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 12,
+          "pdfPage": 16,
+          "bulletRange": [
+            30,
+            31
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 12,
+          "pdfPage": 16,
+          "bulletRange": [
+            33,
+            33
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        504,
+        526
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-objects",
+          "sections": [
+            "Design the class before coding",
+            "Instantiate and initialise",
+            "Methods: queries and commands",
+            "Separate instances, shared aliases and class attributes"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-objects-workbook.md",
+          "section": "class design/state tests/catalogue extension"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Equipment validation, independent instances, alias versus class-state trace and query/command methods demonstrate state and control structures. Workbook construction and changed-state tests go beyond naming concepts.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-15",
+      "itemIds": [
+        "U3-P12-B017",
+        "U3-P12-B019",
+        "U3-P12-B020",
+        "U3-P12-B026",
+        "U3-P12-B028",
+        "U3-P12-B032"
+      ],
+      "sourceDemand": "Abstraction and extension",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 12,
+          "pdfPage": 16,
+          "bulletRange": [
+            17,
+            17
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 12,
+          "pdfPage": 16,
+          "bulletRange": [
+            19,
+            20
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 12,
+          "pdfPage": 16,
+          "bulletRange": [
+            26,
+            26
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 12,
+          "pdfPage": 16,
+          "bulletRange": [
+            28,
+            28
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 12,
+          "pdfPage": 16,
+          "bulletRange": [
+            32,
+            32
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        508,
+        525
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-inheritance",
+          "sections": [
+            "Override behaviour while keeping the interface",
+            "Polymorphism: one call, different implementations",
+            "Abstraction and a consistent stock contract"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-inheritance-workbook.md",
+          "section": "A — Model and initialise; B — Dispatch and abstraction; C — Contracts and testing"
+        },
+        {
+          "kind": "additional demand-specific evidence",
+          "path": "dist/unit3-chapters.js",
+          "section": "unit3-objects — Encapsulation and abstraction"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Mixed receivers select their own preparation implementation; adding AudioRecorder leaves the report unchanged. super initialisation, inherited methods and common contracts distinguish actual polymorphism from merely defining subclasses. Objects chapter Encapsulation and abstraction explains underscore conventions and method-controlled invariants without calling them a security boundary.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-16",
+      "itemIds": [
+        "U3-P13-B002",
+        "U3-P13-B003",
+        "U3-P13-B004",
+        "U3-P13-B005",
+        "U3-P13-B006"
+      ],
+      "sourceDemand": "Software social effects",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 13,
+          "pdfPage": 17,
+          "bulletRange": [
+            1,
+            6
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        532,
+        536
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-reliability",
+          "sections": [
+            "Review developer responsibilities through scenarios"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-reliability-workbook.md",
+          "section": "developer responsibility scenarios"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Installer provenance, sole-record reliance, public social posts, cyber safety and unsupported web facts each connect stakeholders/consequences to a developer response.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-17",
+      "itemIds": [
+        "U3-P13-B008",
+        "U3-P13-B009",
+        "U3-P13-B010",
+        "U3-P13-B011",
+        "U3-P13-B012",
+        "U3-P13-B013",
+        "U3-P13-B014",
+        "U3-P13-B015",
+        "U3-P13-B016"
+      ],
+      "sourceDemand": "Developer obligations",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 13,
+          "pdfPage": 17,
+          "bulletRange": [
+            7,
+            16
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        539,
+        547
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-reliability",
+          "sections": [
+            "Review developer responsibilities through scenarios",
+            "Maintain versions, backups and honest limitations"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-reliability-workbook.md",
+          "section": "developer responsibility scenarios"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Source/permission records and recognition, quality and user fault response, conduct, avoiding malware, ergonomics/inclusion and privacy receive distinct cases. The accessible feedback and disclosure cases are better evidence than generic test-harness candidates.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-18",
+      "itemIds": [
+        "U3-P13-B017",
+        "U3-P13-B019",
+        "U3-P13-B020",
+        "U3-P13-B021",
+        "U3-P13-B022",
+        "U3-P13-B023",
+        "U3-P13-B025",
+        "U3-P13-B027",
+        "U3-P13-B028",
+        "U3-P13-B029",
+        "U3-P13-B030",
+        "U3-P13-B031"
+      ],
+      "sourceDemand": "Layered network models",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 13,
+          "pdfPage": 17,
+          "bulletRange": [
+            17,
+            31
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        551,
+        566
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-network-models",
+          "sections": [
+            "Compare the seven-layer OSI and four-layer TCP/IP models",
+            "Distinguish layer 2 switching from layer 3 routing"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-network-models-workbook.md",
+          "section": "A — Layers and nested units; B — Follow a routed message"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Seven/four-layer role mapping and a per-hop path distinguish MAC switching and IP routing. DoD network/link is not confused with OSI network; the original routed-path diagram makes the conceptual mapping concrete.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-19",
+      "itemIds": [
+        "U3-P13-B033",
+        "U3-P13-B034",
+        "U3-P13-B035",
+        "U3-P14-B001"
+      ],
+      "sourceDemand": "Transport protocol comparison",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 13,
+          "pdfPage": 17,
+          "bulletRange": [
+            32,
+            35
+          ]
+        },
+        {
+          "unit": 3,
+          "printedPage": 14,
+          "pdfPage": 18,
+          "bulletRange": [
+            1,
+            1
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        568,
+        573
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-network-models",
+          "sections": [
+            "Compare TCP and UDP behaviour",
+            "Read transport fields and trace a TCP connection"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-network-models-workbook.md",
+          "section": "C — Transport choices and fields"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Header fields, handshake/sequence/acknowledgements and UDP structure are compared. File/media choices include counterexamples rather than conflating reliability with encryption.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-20",
+      "itemIds": [
+        "U3-P14-B002",
+        "U3-P14-B003",
+        "U3-P14-B004",
+        "U3-P14-B006",
+        "U3-P14-B007"
+      ],
+      "sourceDemand": "IP addressing concepts",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 14,
+          "pdfPage": 18,
+          "bulletRange": [
+            2,
+            7
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        574,
+        579
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-addressing",
+          "sections": [
+            "An address needs a prefix",
+            "Distinguish RFC 1918 private, public and special addresses",
+            "Convert a prefix to a mask and a capacity",
+            "Compare IPv6 and read its notation"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-addressing-workbook.md",
+          "section": "prefix/mask and VLSM planning"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Prefix/mask and host-to-subnet arithmetic cover both IP versions and private/public distinctions. Special/documentation blocks are not labelled private; IPv6 does not inherit the ordinary IPv4 broadcast subtraction rule.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-21",
+      "itemIds": [
+        "U3-P14-B008",
+        "U3-P14-B009",
+        "U3-P14-B010"
+      ],
+      "sourceDemand": "Network service endpoints",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 14,
+          "pdfPage": 18,
+          "bulletRange": [
+            8,
+            10
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        580,
+        582
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-network-models",
+          "sections": [
+            "Separate ports, IP addresses and link addresses"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-network-models-workbook.md",
+          "section": "B — Follow a routed message; C — Transport choices and fields"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Remote TCP/443 routing separates MAC, IP and port and contrasts DNS with local ARP. Addressing chapter Decide local versus routed and validate a gateway provides the gateway calculation. A translation-only gateway module is insufficient for DNS/ports.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-22",
+      "itemIds": [
+        "U3-P14-B012",
+        "U3-P14-B013",
+        "U3-P14-B014",
+        "U3-P14-B015",
+        "U3-P14-B016"
+      ],
+      "sourceDemand": "Encapsulated data units",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 14,
+          "pdfPage": 18,
+          "bulletRange": [
+            11,
+            16
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        584,
+        588
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-network-models",
+          "sections": [
+            "Follow encapsulation and decapsulation",
+            "Calculate sizes using explicit assumptions"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-network-models-workbook.md",
+          "section": "A — Layers and nested units; D — Size and diagnose"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Nested units and header/padding assumptions give conceptual and numerical examples from payload to bits; this directly replaces irrelevant generic gateway candidates.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-23",
+      "itemIds": [
+        "U3-P14-B017",
+        "U3-P14-B018"
+      ],
+      "sourceDemand": "Apply subnet plan",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 14,
+          "pdfPage": 18,
+          "bulletRange": [
+            17,
+            18
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        590,
+        591
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-addressing",
+          "sections": [
+            "Build and check a variable-length address plan",
+            "Verify the arithmetic and diagnose mistakes"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-evidence-activities.md",
+          "section": "E4 — Address-plan application"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "A fresh parent /24 requires smallest aligned nonoverlapping LANs, gateways and reserve, with actual isolated simulator/lab application. Workbook/calculator support planning. Application is conditional on an assigned environment; paper calculation alone does not demonstrate it.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-24",
+      "itemIds": [
+        "U3-P14-B020",
+        "U3-P14-B021",
+        "U3-P14-B022",
+        "U3-P14-B023",
+        "U3-P14-B024",
+        "U3-P14-B025",
+        "U3-P14-B026"
+      ],
+      "sourceDemand": "Layer-specific network devices",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 14,
+          "pdfPage": 18,
+          "bulletRange": [
+            19,
+            26
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        595,
+        601
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-secure-networks",
+          "sections": [
+            "Choose components by their role"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-secure-networks-workbook.md",
+          "section": "Lesson 1"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Media/modem/router/gateway/switch/AP/firewall each has a role, design choice and multifunction-device caveat. This chapter is stronger than sending all device bullets to a generic gateway depth module.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-25",
+      "itemIds": [
+        "U3-P14-B027",
+        "U3-P14-B029",
+        "U3-P14-B030"
+      ],
+      "sourceDemand": "Network design performance",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 14,
+          "pdfPage": 18,
+          "bulletRange": [
+            27,
+            30
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        604,
+        607
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-secure-networks",
+          "sections": [
+            "Draw physical and logical topology",
+            "Separate broadcast domains and enforce policy",
+            "Calculate capacity and identify bottlenecks"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-secure-networks-workbook.md",
+          "section": "Lessons 1–3; final design task"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Labelled intermediate/end nodes, topology, demand/capacity and enforced segmentation connect to staff/visitor requirements. Uplink changes and local versus internet paths support justified performance choices.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-26",
+      "itemIds": [
+        "U3-P14-B032",
+        "U3-P14-B033",
+        "U3-P14-B034"
+      ],
+      "sourceDemand": "Use network diagnostics",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 14,
+          "pdfPage": 18,
+          "bulletRange": [
+            31,
+            34
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        609,
+        612
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-secure-networks",
+          "sections": [
+            "Use ping and traceroute as evidence"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-evidence-activities.md",
+          "section": "E6 — Live tools"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Synthetic interpretation models cautious conclusions; E6 requires bounded actual ping/traceroute on an assigned authorised target, saved timestamps/load and independent service checks. Resource provision is supported while learner execution and access remain unobserved.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-27",
+      "itemIds": [
+        "U3-P14-B035"
+      ],
+      "sourceDemand": "Conventional network diagrams",
+      "sourceChecked": [
+        {
+          "unit": 3,
+          "printedPage": 14,
+          "pdfPage": 18,
+          "bulletRange": [
+            35,
+            35
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        613,
+        613
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit3-chapters.js",
+          "route": "unit3-secure-networks",
+          "sections": [
+            "Course diagram convention and live evidence"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit3-evidence-activities.md",
+          "section": "E5 — Network conventions"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "E5 supplies support-booklet page 12, Cisco symbols, perimeter placement and labelled subnets/endpoints/link media/rates. Redrawing and interpretation go beyond the concept diagram. Independent symbol fidelity remains pending.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-28",
+      "itemIds": [
+        "U4-P15-B001",
+        "U4-P15-B002",
+        "U4-P15-B003"
+      ],
+      "sourceDemand": "Privacy breach analysis",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 15,
+          "pdfPage": 19,
+          "bulletRange": [
+            1,
+            3
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        641,
+        644
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-ethics",
+          "sections": [
+            "Turn APP 11 into design evidence",
+            "Assess a federal notifiable breach case",
+            "Identify whose privacy rules apply"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-ethics-workbook.md",
+          "section": "case cards P1–P8"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Entity/date assumptions, protection/retention, serious harm/remediation and assessment versus notification are applied to case facts. Federal APP coverage is distinguished from WA public-sector law. This audit checks prescribed teaching content; linked primary law still needs teaching-time checks.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-29",
+      "itemIds": [
+        "U4-P15-B005",
+        "U4-P15-B006",
+        "U4-P15-B007",
+        "U4-P15-B008",
+        "U4-P15-B009",
+        "U4-P15-B010",
+        "U4-P16-B001"
+      ],
+      "sourceDemand": "External attack mechanisms",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 15,
+          "pdfPage": 19,
+          "bulletRange": [
+            4,
+            10
+          ]
+        },
+        {
+          "unit": 4,
+          "printedPage": 16,
+          "pdfPage": 20,
+          "bulletRange": [
+            1,
+            1
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        648,
+        656
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-analysis",
+          "sections": [
+            "Classify threats without treating labels as proof",
+            "Build an evidence-based incident hypothesis"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-analysis-workbook.md",
+          "section": "twelve scenario cards and hypothesis record"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Phishing, DoS/DDoS, back door, spoofing, injection, interception and XSS have mechanisms and discriminating clues. Scenario responses require observations, alternatives and next evidence rather than treating one log entry as proof.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-30",
+      "itemIds": [
+        "U4-P16-B003",
+        "U4-P16-B004",
+        "U4-P16-B005",
+        "U4-P16-B006",
+        "U4-P16-B007",
+        "U4-P16-B008",
+        "U4-P16-B009",
+        "U4-P16-B010"
+      ],
+      "sourceDemand": "Malware and exposure",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 16,
+          "pdfPage": 20,
+          "bulletRange": [
+            2,
+            10
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        658,
+        665
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-analysis",
+          "sections": [
+            "Classify threats without treating labels as proof"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-analysis-workbook.md",
+          "section": "threat classification and scenario cards"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "The table differentiates host-attaching virus, self-propagating worm, disguised trojan, spyware, adware and ransomware, plus physical and zero-day exposure. Direct examples support every listed mechanism; no malware execution is needed.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-31",
+      "itemIds": [
+        "U4-P16-B012",
+        "U4-P16-B013",
+        "U4-P16-B014"
+      ],
+      "sourceDemand": "Internal threat mechanisms",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 16,
+          "pdfPage": 20,
+          "bulletRange": [
+            11,
+            14
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        667,
+        669
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-analysis",
+          "sections": [
+            "Classify threats without treating labels as proof",
+            "Read a synthetic event sequence"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-analysis-workbook.md",
+          "section": "credential/export/employee case analysis"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Lost devices, credentials and employee misuse connect to specific assets/evidence. Accepted login and allowed export are distinguished from proof of a human actor or malicious intent.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-32",
+      "itemIds": [
+        "U4-P16-B016",
+        "U4-P16-B017",
+        "U4-P16-B018",
+        "U4-P16-B019",
+        "U4-P16-B020",
+        "U4-P16-B021",
+        "U4-P16-B022",
+        "U4-P16-B023",
+        "U4-P16-B024",
+        "U4-P16-B025",
+        "U4-P16-B026"
+      ],
+      "sourceDemand": "Match defensive controls",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 16,
+          "pdfPage": 20,
+          "bulletRange": [
+            15,
+            26
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        671,
+        682
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-controls",
+          "sections": [
+            "Compare the required control families",
+            "Write narrow traffic rules and inspect order",
+            "Separate identity, role and resource scope",
+            "Write acceptance tests and residual risks"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-controls-workbook.md",
+          "section": "ordered rules, role matrix and response cases"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Every prescribed control has purpose/evidence/limits, including training, conduct and physical security. First-match shadowing, trusted record-scope checks and positive/negative scenarios directly exercise mitigation; candidate event-cleaning examples were not adequate substitutes.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-33",
+      "itemIds": [
+        "U4-P16-B028",
+        "U4-P16-B029",
+        "U4-P16-B030",
+        "U4-P16-B032",
+        "U4-P16-B033",
+        "U4-P16-B034",
+        "U4-P16-B035",
+        "U4-P16-B036"
+      ],
+      "sourceDemand": "CIA and AAA",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 16,
+          "pdfPage": 20,
+          "bulletRange": [
+            27,
+            36
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        687,
+        696
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-analysis",
+          "sections": [
+            "Apply the CIA triad to specific consequences",
+            "Distinguish the AAA questions"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-analysis-workbook.md",
+          "section": "asset/consequence and security hypothesis matrices"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Booking consequences distinguish all three security goals and identity/permission/audit functions. Allowed export versus denied delete supplies an authorisation example; accounting is audit evidence, not financial calculation. Applied cases are stronger than generic cleaning links.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-34",
+      "itemIds": [
+        "U4-P17-B001",
+        "U4-P17-B003",
+        "U4-P17-B005",
+        "U4-P17-B006",
+        "U4-P17-B008"
+      ],
+      "sourceDemand": "Hybrid protected communication",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 17,
+          "pdfPage": 21,
+          "bulletRange": [
+            1,
+            8
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        701,
+        708
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-crypto",
+          "sections": [
+            "Keep key roles separate",
+            "Explain certificates and trust",
+            "Trace a simplified TLS 1.3 connection"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-crypto-workbook.md",
+          "section": "certificate cards and TLS ordering"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Symmetric confidentiality, public/private encryption/signature roles and certificate trust are distinguished. TLS uses authenticated ephemeral agreement then symmetric records; it avoids the false TLS 1.3 RSA session-key-transport account. Independent cards/ordering ask reasoning about remaining export risks.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-35",
+      "itemIds": [
+        "U4-P17-B010",
+        "U4-P17-B011"
+      ],
+      "sourceDemand": "Historical versus modern protection",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 17,
+          "pdfPage": 21,
+          "bulletRange": [
+            9,
+            11
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        711,
+        712
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-crypto",
+          "sections": [
+            "From historical ciphers to modern algorithms"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-crypto-workbook.md",
+          "section": "Caesar prediction/all shifts and weaknesses"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Historical substitution/repeated-key weaknesses contrast with modern algorithm roles and implementation/key-management limits. Caesar brute-force demonstrates weakness rather than recommending deployment. Maintained primary references support future currency checks.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-36",
+      "itemIds": [
+        "U4-P17-B012",
+        "U4-P17-B013"
+      ],
+      "sourceDemand": "Authorised security testing",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 17,
+          "pdfPage": 21,
+          "bulletRange": [
+            12,
+            13
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        715,
+        716
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-ethics",
+          "sections": [
+            "Explain ethical hacking and team roles"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-ethics-workbook.md",
+          "section": "paper red/blue scope and report"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Authority, targets/time/techniques/exclusions, handling and reporting are explicit. Red emulation, blue defence and remediation/retest have distinct roles. Paper scope supports the knowledge demand without claiming live penetration testing.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-37",
+      "itemIds": [
+        "U4-P17-B015",
+        "U4-P17-B016",
+        "U4-P17-B018",
+        "U4-P17-B019",
+        "U4-P17-B020",
+        "U4-P17-B021",
+        "U4-P17-B023",
+        "U4-P17-B024",
+        "U4-P17-B025",
+        "U4-P17-B026",
+        "U4-P17-B027",
+        "U4-P17-B028",
+        "U4-P17-B029"
+      ],
+      "sourceDemand": "Relational organisation",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 17,
+          "pdfPage": 21,
+          "bulletRange": [
+            14,
+            29
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        721,
+        735
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-design",
+          "sections": [
+            "Read the six-table crow’s-foot model",
+            "Write relational notation and key rules",
+            "Make a data dictionary that matches implementation"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-design-workbook.md",
+          "section": "A–D"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "The six-table model covers entities/attributes/records, cardinalities, conceptual types and joint keys. Attendance composite FK explains why independent references are insufficient. Date/Boolean concepts are separated from SQLite storage affinity. D requests a fresh six-entity design.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-38",
+      "itemIds": [
+        "U4-P17-B031",
+        "U4-P17-B032",
+        "U4-P17-B033"
+      ],
+      "sourceDemand": "Modification anomalies",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 17,
+          "pdfPage": 21,
+          "bulletRange": [
+            30,
+            33
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        737,
+        739
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-design",
+          "sections": [
+            "Diagnose a flat record and its dependencies"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-design-workbook.md",
+          "section": "A — flat relation anomalies and dependencies"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Repeated instructor facts, unbooked sessions and last-booking deletion show update/insert/delete anomalies. Learners explain consequences before decomposing; the answer sheet gives the dependency reasoning.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-39",
+      "itemIds": [
+        "U4-P17-B035"
+      ],
+      "sourceDemand": "Application database connectivity",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 17,
+          "pdfPage": 21,
+          "bulletRange": [
+            34,
+            35
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        741,
+        741
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-project",
+          "sections": [
+            "Use transactions to protect a booking"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-project-workbook.md",
+          "section": "Transaction walkthrough: one request, one boundary"
+        }
+      ],
+      "judgement": "partial",
+      "rationale": "ODBC is correctly named as driver-based and distinguished from sqlite3 DB-API, but only a short comparison describes its architecture. The reference demonstrates direct SQLite, not a worked driver/application/result path. The source is a knowledge demand, so an installed ODBC lab is not required; an explanatory example and independent comparison would improve depth.",
+      "actions": [
+        "Add a worked ODBC driver/data-source/application/results diagram and a separate learner explanation task; retain accurate distinction from direct SQLite."
+      ],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending",
+      "proposedOriginalTask": {
+        "prompt": "An attendance application accesses a supported school DBMS using ODBC. Draw the request/result path through application, ODBC interface, selected driver and DBMS. Explain what might change for another DBMS and why a direct Python sqlite3 call does not demonstrate ODBC.",
+        "answerSuggestions": "The application issues requests through ODBC; the suitable driver communicates with its DBMS and returns results/errors. Driver/configuration and possibly DBMS-specific SQL change; ODBC does not unify every SQL dialect. sqlite3 is a direct DB-API route to SQLite without an ODBC driver.",
+        "status": "proposal, not integrated or independently reviewed"
+      }
+    },
+    {
+      "id": "Y12-40",
+      "itemIds": [
+        "U4-P17-B036"
+      ],
+      "sourceDemand": "Transactional guarantees",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 17,
+          "pdfPage": 21,
+          "bulletRange": [
+            36,
+            36
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        742,
+        742
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-project",
+          "sections": [
+            "Use transactions to protect a booking"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-project-workbook.md",
+          "section": "Transaction walkthrough: one request, one boundary; Read the reference boundary before reusing a function"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "All four ACID properties connect to last-place competition and all-or-none changes. The workbook notes book commits separately from set_attendance: a later failure cannot undo an earlier commit. Explicit rollback/before-after checks support atomicity while in-memory success is not crash durability.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-41",
+      "itemIds": [
+        "U4-P18-B002",
+        "U4-P18-B003",
+        "U4-P18-B004",
+        "U4-P18-B005",
+        "U4-P18-B006",
+        "U4-P18-B007",
+        "U4-P18-B008"
+      ],
+      "sourceDemand": "Database modelling artefacts",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 18,
+          "pdfPage": 22,
+          "bulletRange": [
+            1,
+            8
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        748,
+        755
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-design",
+          "sections": [
+            "Read the six-table crow’s-foot model",
+            "Write relational notation and key rules",
+            "Make a data dictionary that matches implementation",
+            "Transfer to a fresh design"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-design-workbook.md",
+          "section": "B–D; E ten-table interpretation"
+        },
+        {
+          "kind": "additional demand-specific evidence",
+          "path": "dist/unit4-er-interpretation-workbook.md",
+          "section": "Worked example; Questions 1–9"
+        },
+        {
+          "kind": "additional demand-specific evidence",
+          "path": "dist/unit4-er-ten-table.svg",
+          "section": "complete ten-table model"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "The fresh six-entity creation task fits the required range and includes notation/dictionary/bridge resolution. The separate ten-table interpretation workbook reaches the maximum diagram size with optionality and composite references. This corrects candidate anomaly modules that cannot by themselves establish diagram interpretation.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-42",
+      "itemIds": [
+        "U4-P18-B010",
+        "U4-P18-B011",
+        "U4-P18-B012"
+      ],
+      "sourceDemand": "Database integrity types",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 18,
+          "pdfPage": 22,
+          "bulletRange": [
+            9,
+            12
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        759,
+        761
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-design",
+          "sections": [
+            "Distinguish three kinds of integrity",
+            "Compare conceptual rules with a runnable schema"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-design-workbook.md",
+          "section": "C — predicted constraint outcomes and unenforced rules"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Duplicate keys, orphans and invalid Present/capacity values distinguish entity, referential and domain integrity. The checker contrasts intended rules with actual enforcement; well-formed dates and valid values do not prove factual accuracy.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-43",
+      "itemIds": [
+        "U4-P18-B014",
+        "U4-P18-B015",
+        "U4-P18-B016",
+        "U4-P18-B017",
+        "U4-P18-B018"
+      ],
+      "sourceDemand": "Fitness of data",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 18,
+          "pdfPage": 22,
+          "bulletRange": [
+            13,
+            18
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        763,
+        767
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-design",
+          "sections": [
+            "Distinguish three kinds of integrity"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-data-quality-workbook.md",
+          "section": "Five factors; Worked example; Questions 1–12"
+        },
+        {
+          "kind": "additional demand-specific evidence",
+          "path": "dist/unit4-data-quality-answers.md",
+          "section": "Questions 1–12"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "The dedicated quality worksheet supplies dates/provenance/units/source evidence for every factor. Microphones 80 versus 8 separate validation from accuracy; supplier stock relevance, archive currency, unknown uploader authenticity and verified chair extremes demand different decisions. This closes weak/null candidate links, especially relevance.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-44",
+      "itemIds": [
+        "U4-P18-B020",
+        "U4-P18-B021",
+        "U4-P18-B022",
+        "U4-P18-B023",
+        "U4-P18-B024"
+      ],
+      "sourceDemand": "Normalise with dependencies",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 18,
+          "pdfPage": 22,
+          "bulletRange": [
+            19,
+            24
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        771,
+        776
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-design",
+          "sections": [
+            "Diagnose a flat record and its dependencies",
+            "Write relational notation and key rules"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-design-workbook.md",
+          "section": "A — decompose flat relation; D — fresh model"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Atomic domains/repeating lists, partial candidate-key dependencies and transitive dependencies precede decomposition. A/D require relational notation and new-model transfer. Adding a surrogate ID is explicitly rejected as a cure for remaining dependencies.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-45",
+      "itemIds": [
+        "U4-P19-B001",
+        "U4-P19-B009",
+        "U4-P19-B013",
+        "U4-P19-B014",
+        "U4-P19-B015",
+        "U4-P19-B016",
+        "U4-P19-B017",
+        "U4-P19-B018",
+        "U4-P19-B019"
+      ],
+      "sourceDemand": "SQL reporting",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 19,
+          "pdfPage": 23,
+          "bulletRange": [
+            1,
+            1
+          ]
+        },
+        {
+          "unit": 4,
+          "printedPage": 19,
+          "pdfPage": 23,
+          "bulletRange": [
+            9,
+            9
+          ]
+        },
+        {
+          "unit": 4,
+          "printedPage": 19,
+          "pdfPage": 23,
+          "bulletRange": [
+            13,
+            19
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        781,
+        801
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-sql",
+          "sections": [
+            "Define the report’s grain",
+            "Join up to four tables and keep keys visible",
+            "Aggregate at the correct grain",
+            "Calculate and concatenate with aliases"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-sql-workbook.md",
+          "section": "A–F"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Four-table key paths, all five aggregates, grouping/ordering and calculated/concatenated aliases are taught and exercised. NULL/zero, real division and repeated-capacity traps develop reasoning beyond syntax. Fresh transfers require predictions before execution.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-46",
+      "itemIds": [
+        "U4-P19-B003",
+        "U4-P19-B006",
+        "U4-P19-B007",
+        "U4-P19-B008",
+        "U4-P19-B010",
+        "U4-P19-B011",
+        "U4-P19-B012"
+      ],
+      "sourceDemand": "Create and change database",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 19,
+          "pdfPage": 23,
+          "bulletRange": [
+            3,
+            8
+          ]
+        },
+        {
+          "unit": 4,
+          "printedPage": 19,
+          "pdfPage": 23,
+          "bulletRange": [
+            10,
+            12
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        784,
+        794
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-project",
+          "sections": [
+            "Make controlled changes and verify effects"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-project-workbook.md",
+          "section": "Develop; R1/R6 controlled changes"
+        },
+        {
+          "kind": "additional demand-specific evidence",
+          "path": "dist/unit4-project-change-lab.sql",
+          "section": "BEGIN through ROLLBACK"
+        },
+        {
+          "kind": "additional demand-specific evidence",
+          "path": "dist/unit4-project-brief.md",
+          "section": "R1–R7"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "R1 requires actual six-table implementation/inspection; R6 and the disposable change lab cover CREATE/ALTER/INSERT/UPDATE/DELETE/cascade/DROP with references/constraints. Source MODIFY means modifying the schema through the chosen DBMS, not inventing a SQLite MODIFY keyword. A reference download alone is not learner construction.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-47",
+      "itemIds": [
+        "U4-P19-B002",
+        "U4-P19-B020"
+      ],
+      "sourceDemand": "Clean for import",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 19,
+          "pdfPage": 23,
+          "bulletRange": [
+            2,
+            2
+          ]
+        },
+        {
+          "unit": 4,
+          "printedPage": 19,
+          "pdfPage": 23,
+          "bulletRange": [
+            20,
+            20
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        782,
+        802
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-project",
+          "sections": [
+            "Clean an import without inventing data"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-project-workbook.md",
+          "section": "Develop; R5 atomic synthetic member batch"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Raw fields are mapped and validated; missing names are not invented and invalid/duplicate batches must leave rows unchanged. Raw/clean CSVs and scaffold make import concrete. Event-log cleaning is extension rather than a substitute for database-import work.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-48",
+      "itemIds": [
+        "U4-P19-B022",
+        "U4-P19-B023",
+        "U4-P19-B024",
+        "U4-P19-B025",
+        "U4-P19-B026",
+        "U4-P19-B027"
+      ],
+      "sourceDemand": "Ethical data development",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 19,
+          "pdfPage": 23,
+          "bulletRange": [
+            21,
+            27
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        806,
+        811
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-ethics",
+          "sections": [
+            "Collect and analyse data responsibly",
+            "Acknowledge sources and plan an open resource"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-ethics-workbook.md",
+          "section": "P1–P8; aggregate versus individual profiling"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Purpose/minimisation, privacy, appropriate use, source reliability/acknowledgement and mining bias connect to booking decisions. Aggregate support versus punitive profiling and possible re-identification develop the ethical consequences rather than equating removed names with anonymity.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-49",
+      "itemIds": [
+        "U4-P19-B029",
+        "U4-P19-B030",
+        "U4-P19-B031",
+        "U4-P19-B032"
+      ],
+      "sourceDemand": "Protect and control records",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 19,
+          "pdfPage": 23,
+          "bulletRange": [
+            28,
+            32
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        813,
+        816
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-ethics",
+          "sections": [
+            "Turn APP 11 into design evidence",
+            "Collect and analyse data responsibly"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-ethics-workbook.md",
+          "section": "project privacy/source register and scope/report"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Privacy, recoverable backups, restricted exports and ownership/control connect to purpose/stakeholders. Separate application/network controls include positive/negative tests. Encryption alone is not offered as a complete protection argument.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    },
+    {
+      "id": "Y12-50",
+      "itemIds": [
+        "U4-P19-B034",
+        "U4-P19-B035"
+      ],
+      "sourceDemand": "Australian privacy principles",
+      "sourceChecked": [
+        {
+          "unit": 4,
+          "printedPage": 19,
+          "pdfPage": 23,
+          "bulletRange": [
+            33,
+            35
+          ]
+        }
+      ],
+      "sourceWebLinesChecked": [
+        818,
+        819
+      ],
+      "evidence": [
+        {
+          "kind": "explanation and worked example",
+          "path": "dist/unit4-chapters.js",
+          "route": "unit4-ethics",
+          "sections": [
+            "Identify whose privacy rules apply",
+            "Apply the five prescribed APPs"
+          ]
+        },
+        {
+          "kind": "independent practice scaffold",
+          "path": "dist/unit4-ethics-workbook.md",
+          "section": "case cards P1–P8"
+        }
+      ],
+      "judgement": "supported",
+      "rationale": "Each prescribed APP is connected to a distinct collection/overseas disclosure/quality/protection/access decision. Case responses require entity/jurisdiction/date and missing facts rather than automatically applying federal rules to a WA public school.",
+      "actions": [],
+      "reviewer": "AI-assisted editorial review",
+      "date": "2026-10-31",
+      "independentReview": "pending"
+    }
+  ],
+  "summary": {
+    "sourceLocators": 367,
+    "parentLocators": 70,
+    "leafItemsReviewed": 297,
+    "reviewGroups": 50,
+    "judgements": {
+      "supported": 48,
+      "partial": 2
+    },
+    "coverageValidation": "Every Year12 leaf ID assigned exactly once; all cited local evidence paths exist and named explanation sections match parsed chapter sections.",
+    "demandParaphraseWords": 136
+  }
+}

@@ -1,0 +1,3888 @@
+{
+  "year": 11,
+  "units": [
+    1,
+    2
+  ],
+  "reviewer": "AI-assisted editorial review",
+  "date": "2026-10-31",
+  "independentReview": {
+    "status": "pending",
+    "reviewer": null,
+    "date": null,
+    "required": "Independent teacher review and learner evidence; this editorial inspection is not approval."
+  },
+  "method": "Read official SCSA web-rendered Year11 teaching-from-2026 PDF unit content printed pp8\u201318, then inspected local chapter explanations, worked code, depth manifest and named workbooks. Groups use meaningful common demands, with exact leaf locators. Supported means resource evidence exists; it does not certify student achievement, delivery timing, formal assessment coverage, legal currency or independent approval.",
+  "source": {
+    "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+    "printedPages": [
+      8,
+      18
+    ],
+    "pdfPhysicalPagesOneBased": [
+      12,
+      22
+    ],
+    "locatorConvention": "Use existing item-map editorial IDs; printed page +4 = 1-based PDF page. Web P indices are zero-based."
+  },
+  "coverage": {
+    "totalSourceMarkers": 281,
+    "leafItems": 222,
+    "reviewGroups": 61,
+    "reviewedLeafItems": 222
+  },
+  "reviews": [
+    {
+      "reviewId": "Y11-R001",
+      "itemIds": [
+        "U1-P08-B001"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          335,
+          335
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P08-B001",
+            "printedPage": 8,
+            "pdfPageOneBased": 12,
+            "bulletOnPage": 1
+          }
+        ]
+      },
+      "demand": "Character-number representation",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/chapters.js",
+            "route": "representation",
+            "section": "Text needs an agreed representation"
+          },
+          {
+            "path": "dist/chapters.js",
+            "route": "representation",
+            "section": "Check by a second method"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/chapters.js",
+          "route": "representation",
+          "section": "Check by a second method"
+        },
+        "independentTask": "dist/chapters.js #representation practical task: decimal 37 conversion"
+      },
+      "judgement": "partial",
+      "rationale": "Explicit A/65/U+0041 connects character identity to three bases; independent task currently checks numbers only.",
+      "remainingGaps": [
+        "Add an independent character-code conversion, rather than treating numeric conversion alone as character evidence."
+      ],
+      "suggestedOriginalTask": {
+        "prompt": "Given character B has code point decimal 66, write its binary and hexadecimal code point. Explain whether every visible character uses one byte.",
+        "answer": "1000010 (or 01000010), 42 hex; byte count depends on encoding and character."
+      }
+    },
+    {
+      "reviewId": "Y11-R002",
+      "itemIds": [
+        "U1-P08-B003"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          337,
+          337
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P08-B003",
+            "printedPage": 8,
+            "pdfPageOneBased": 12,
+            "bulletOnPage": 3
+          }
+        ]
+      },
+      "demand": "Programming concepts",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/chapters.js",
+            "route": "start",
+            "section": "Sequence: follow the order"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/chapters.js",
+          "route": "start",
+          "section": "Sequence: follow the order"
+        },
+        "independentTask": "Book-cover calculator"
+      },
+      "judgement": "supported",
+      "rationale": "Input, multiplication and output explain ordered execution; the independent calculator changes prices and adds handling.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R003",
+      "itemIds": [
+        "U1-P08-B004"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          338,
+          338
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P08-B004",
+            "printedPage": 8,
+            "pdfPageOneBased": 12,
+            "bulletOnPage": 4
+          }
+        ]
+      },
+      "demand": "Programming concepts",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/app.js",
+            "route": "selection",
+            "section": "1. From an instruction to a decision"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/app.js",
+          "route": "selection",
+          "section": "1. From an instruction to a decision"
+        },
+        "independentTask": "Museum admission exercise in 6. Practice"
+      },
+      "judgement": "supported",
+      "rationale": "Branches, Boolean comparison and a new age threshold are explicit.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R004",
+      "itemIds": [
+        "U1-P08-B005"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          339,
+          339
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P08-B005",
+            "printedPage": 8,
+            "pdfPageOneBased": 12,
+            "bulletOnPage": 5
+          }
+        ]
+      },
+      "demand": "Programming concepts",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/chapters.js",
+            "route": "loops",
+            "section": "Repeat while a condition remains true"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/chapters.js",
+          "route": "loops",
+          "section": "Repeat while a condition remains true"
+        },
+        "independentTask": "Four-score total/mean practical task"
+      },
+      "judgement": "supported",
+      "rationale": "Loop explanation includes zero passes and termination; fixed repetition is applied independently.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R005",
+      "itemIds": [
+        "U1-P08-B007",
+        "U1-P08-B008"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          341,
+          342
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P08-B007",
+            "printedPage": 8,
+            "pdfPageOneBased": 12,
+            "bulletOnPage": 7
+          },
+          {
+            "itemId": "U1-P08-B008",
+            "printedPage": 8,
+            "pdfPageOneBased": 12,
+            "bulletOnPage": 8
+          }
+        ]
+      },
+      "demand": "Programming concepts",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/chapters.js",
+            "route": "functions",
+            "section": "Names belong to scopes"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/chapters.js",
+          "route": "functions",
+          "section": "Names belong to scopes"
+        },
+        "independentTask": "dist/depth/manifest.json: Scope faults: trace the name before changing the code / independent"
+      },
+      "judgement": "supported",
+      "rationale": "Explains local/global bindings and argument-to-parameter transfer; two-player repair provides independent scope evidence.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R006",
+      "itemIds": [
+        "U1-P08-B010",
+        "U1-P08-B011",
+        "U1-P08-B012",
+        "U1-P08-B013",
+        "U1-P08-B015"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          344,
+          349
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P08-B010",
+            "printedPage": 8,
+            "pdfPageOneBased": 12,
+            "bulletOnPage": 10
+          },
+          {
+            "itemId": "U1-P08-B011",
+            "printedPage": 8,
+            "pdfPageOneBased": 12,
+            "bulletOnPage": 11
+          },
+          {
+            "itemId": "U1-P08-B012",
+            "printedPage": 8,
+            "pdfPageOneBased": 12,
+            "bulletOnPage": 12
+          },
+          {
+            "itemId": "U1-P08-B013",
+            "printedPage": 8,
+            "pdfPageOneBased": 12,
+            "bulletOnPage": 13
+          },
+          {
+            "itemId": "U1-P08-B015",
+            "printedPage": 8,
+            "pdfPageOneBased": 12,
+            "bulletOnPage": 15
+          }
+        ]
+      },
+      "demand": "Programming concepts",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/chapters.js",
+            "route": "values",
+            "section": "Calculate and predict"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/chapters.js",
+          "route": "values",
+          "section": "Calculate and predict"
+        },
+        "independentTask": "Cone-box practical task plus type choices in Practice and explain"
+      },
+      "judgement": "supported",
+      "rationale": "Names int/float/str/bool with contextual uses and arithmetic including remainder.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R007",
+      "itemIds": [
+        "U1-P09-B001",
+        "U1-P09-B002"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          351,
+          352
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P09-B001",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 1
+          },
+          {
+            "itemId": "U1-P09-B002",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 2
+          }
+        ]
+      },
+      "demand": "Programming concepts",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/app.js",
+            "route": "selection",
+            "section": "Combine conditions and choices"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/app.js",
+          "route": "selection",
+          "section": "Combine conditions and choices"
+        },
+        "independentTask": "dist/audit-chapters.js #consolidation Station A: Boolean expressions and types"
+      },
+      "judgement": "supported",
+      "rationale": "Relational comparison and AND/OR/NOT rules are illustrated; consolidation adds evaluation and changed cases.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R008",
+      "itemIds": [
+        "U1-P09-B004"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          354,
+          354
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P09-B004",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 4
+          }
+        ]
+      },
+      "demand": "Programming concepts",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/chapters.js",
+            "route": "arrays",
+            "section": "An array idea, a Python implementation"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/chapters.js",
+          "route": "arrays",
+          "section": "An array idea, a Python implementation"
+        },
+        "independentTask": "Temperature practical task"
+      },
+      "judgement": "supported",
+      "rationale": "Explicit index, element, dimension and list-versus-array caveat precede construction.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R009",
+      "itemIds": [
+        "U1-P09-B006"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          357,
+          357
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P09-B006",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 6
+          }
+        ]
+      },
+      "demand": "Construct sequences",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/chapters.js",
+            "route": "start",
+            "section": "Sequence: follow the order"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/chapters.js",
+          "route": "start",
+          "section": "Sequence: follow the order"
+        },
+        "independentTask": "Book-cover calculator: write steps then code; input 0/1/5 gives 4/6/14"
+      },
+      "judgement": "supported",
+      "rationale": "Independent task explicitly asks algorithm steps and Python implementation.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R010",
+      "itemIds": [
+        "U1-P09-B007"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          358,
+          358
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P09-B007",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 7
+          }
+        ]
+      },
+      "demand": "Construct selections",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/app.js",
+            "route": "selection",
+            "section": "2. Design before coding"
+          },
+          {
+            "path": "dist/app.js",
+            "route": "selection",
+            "section": "3. Implement the decision in Python"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/app.js",
+          "route": "selection",
+          "section": "3. Implement the decision in Python"
+        },
+        "independentTask": "Museum price decision: ages 15/16/17 yield 8/12/12"
+      },
+      "judgement": "supported",
+      "rationale": "Pseudocode and Python match the same threshold; independent museum task transfers it.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R011",
+      "itemIds": [
+        "U1-P09-B008"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          359,
+          359
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P09-B008",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 8
+          }
+        ]
+      },
+      "demand": "Construct repetition",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/chapters.js",
+            "route": "loops",
+            "section": "From algorithm to implementation"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/chapters.js",
+          "route": "loops",
+          "section": "From algorithm to implementation"
+        },
+        "independentTask": "Four-score task and changed loop bounds"
+      },
+      "judgement": "supported",
+      "rationale": "FOR pseudocode distinguishes inclusive endpoint from Python range; practical task changes dataset.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R012",
+      "itemIds": [
+        "U1-P09-B010",
+        "U1-P09-B011"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          361,
+          362
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P09-B010",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 10
+          },
+          {
+            "itemId": "U1-P09-B011",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 11
+          }
+        ]
+      },
+      "demand": "Construct modular solutions",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/chapters.js",
+            "route": "functions",
+            "section": "One task, one function"
+          },
+          {
+            "path": "dist/chapters.js",
+            "route": "functions",
+            "section": "Names belong to scopes"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/chapters.js",
+          "route": "functions",
+          "section": "Names belong to scopes"
+        },
+        "independentTask": "delivery_charge practical task; scope repair in dist/depth/manifest.json"
+      },
+      "judgement": "supported",
+      "rationale": "Parameters/returns and local/global data flow appear in Python; paired pseudocode is in consolidation Types, operators and functions together.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R013",
+      "itemIds": [
+        "U1-P09-B013",
+        "U1-P09-B014",
+        "U1-P09-B015",
+        "U1-P09-B016",
+        "U1-P09-B018",
+        "U1-P09-B019",
+        "U1-P09-B020"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          364,
+          371
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P09-B013",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 13
+          },
+          {
+            "itemId": "U1-P09-B014",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 14
+          },
+          {
+            "itemId": "U1-P09-B015",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 15
+          },
+          {
+            "itemId": "U1-P09-B016",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 16
+          },
+          {
+            "itemId": "U1-P09-B018",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 18
+          },
+          {
+            "itemId": "U1-P09-B019",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 19
+          },
+          {
+            "itemId": "U1-P09-B020",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 20
+          }
+        ]
+      },
+      "demand": "Apply types/operators",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/audit-chapters.js",
+            "route": "consolidation",
+            "section": "Types, operators and functions together"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/audit-chapters.js",
+          "route": "consolidation",
+          "section": "Types, operators and functions together"
+        },
+        "independentTask": "Station A: choose integer count, float length, text ID, Boolean permission; translate condition to pseudocode"
+      },
+      "judgement": "partial",
+      "rationale": "Better evidence than generic conversion module: paired pseudocode/Python deliberately uses all four types and compares all six relational operators. Arithmetic is modelled in values Calculate and predict.",
+      "remainingGaps": [
+        "Add independent pseudocode/Python task jointly exercising arithmetic operators, rather than relying on the Python-only cone exercise."
+      ],
+      "suggestedOriginalTask": {
+        "prompt": "For 23 tickets packed five per envelope, write pseudocode and Python computing envelopes, remainder and total price at $2.50 each; name types.",
+        "answer": "4 full envelopes, 3 tickets left, cost 57.5; counts integer, price/total float. Use quotient/floor division and MOD/%."
+      }
+    },
+    {
+      "reviewId": "Y11-R014",
+      "itemIds": [
+        "U1-P09-B022",
+        "U1-P09-B023"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          373,
+          374
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P09-B022",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 22
+          },
+          {
+            "itemId": "U1-P09-B023",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 23
+          }
+        ]
+      },
+      "demand": "Boolean construction/precedence",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/audit-chapters.js",
+            "route": "consolidation",
+            "section": "Station A: Boolean expressions and types"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/audit-chapters.js",
+          "route": "consolidation",
+          "section": "Station A: Boolean expressions and types"
+        },
+        "independentTask": "Age/permission/escort truth combinations and NOT counterexample"
+      },
+      "judgement": "supported",
+      "rationale": "Actual expressions and changed truth cases support compound reasoning; selection explicitly gives NOT then AND then OR.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R015",
+      "itemIds": [
+        "U1-P09-B025"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          376,
+          376
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P09-B025",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 25
+          }
+        ]
+      },
+      "demand": "Construct indexed collections",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/chapters.js",
+            "route": "arrays",
+            "section": "Load and traverse"
+          },
+          {
+            "path": "dist/chapters.js",
+            "route": "arrays",
+            "section": "Translate the standard algorithms"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/chapters.js",
+          "route": "arrays",
+          "section": "Translate the standard algorithms"
+        },
+        "independentTask": "Temperature task; consolidation Station B translate algorithms to Python"
+      },
+      "judgement": "supported",
+      "rationale": "Loading and traversal are explicitly paired with pseudocode, rather than only list terminology.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R016",
+      "itemIds": [
+        "U1-P09-B028",
+        "U1-P09-B029"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          381,
+          382
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P09-B028",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 28
+          },
+          {
+            "itemId": "U1-P09-B029",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 29
+          }
+        ]
+      },
+      "demand": "Define problem/requirements",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/project-chapter.js",
+            "route": "design",
+            "section": "Investigate: understand the problem"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/project-chapter.js",
+          "route": "design",
+          "section": "Investigate: understand the problem"
+        },
+        "independentTask": "dist/project-workbook.md sections 1\u20132"
+      },
+      "judgement": "supported",
+      "rationale": "Common FR/NFR requirements provide a concrete investigation and requirement-to-test trace.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R017",
+      "itemIds": [
+        "U1-P09-B030"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          383,
+          383
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P09-B030",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 30
+          }
+        ]
+      },
+      "demand": "Schedule development",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/project-chapter.js",
+            "route": "design",
+            "section": "Plan the work and dependencies"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/project-chapter.js",
+          "route": "design",
+          "section": "Plan the work and dependencies"
+        },
+        "independentTask": "dist/project-workbook.md investigation/planning"
+      },
+      "judgement": "partial",
+      "rationale": "Milestone schedule exists, but it is a fixed slot table, not a taught Gantt construction.",
+      "remainingGaps": [
+        "Teach Gantt time bars and dependencies with an independent changed schedule."
+      ],
+      "suggestedOriginalTask": {
+        "prompt": "Plan tasks A investigate(1 slot), B design(1 after A), C code(3 after B), D test(2 after C), E evaluate(1 after D). Draw an eight-slot Gantt. Replan if C takes four.",
+        "answer": "A1,B2,C3\u20135,D6\u20137,E8. With C3\u20136, D7\u20138,E9; original deadline slips one slot unless scope/resources change."
+      }
+    },
+    {
+      "reviewId": "Y11-R018",
+      "itemIds": [
+        "U1-P09-B032",
+        "U1-P09-B033"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          385,
+          386
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P09-B032",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 32
+          },
+          {
+            "itemId": "U1-P09-B033",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 33
+          }
+        ]
+      },
+      "demand": "Design structures/algorithms",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/project-chapter.js",
+            "route": "design",
+            "section": "Design: divide the solution into modules"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/project-chapter.js",
+          "route": "design",
+          "section": "Design: divide the solution into modules"
+        },
+        "independentTask": "dist/project-workbook.md section 3"
+      },
+      "judgement": "supported",
+      "rationale": "Requires lists, function contracts, pseudocode and traces of timer/collision/file rules.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R019",
+      "itemIds": [
+        "U1-P09-B035",
+        "U1-P09-B036"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          388,
+          389
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P09-B035",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 35
+          },
+          {
+            "itemId": "U1-P09-B036",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 36
+          }
+        ]
+      },
+      "demand": "Develop/debug/unit-test",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/project-chapter.js",
+            "route": "design",
+            "section": "Develop: build a small working part"
+          },
+          {
+            "path": "dist/project-chapter.js",
+            "route": "design",
+            "section": "Test: choose evidence that can expose mistakes"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/project-chapter.js",
+          "route": "design",
+          "section": "Test: choose evidence that can expose mistakes"
+        },
+        "independentTask": "dist/depth/manifest.json design error repair; project test log"
+      },
+      "judgement": "supported",
+      "rationale": "Build-small-part instruction and independent repeated-collection repair make testing operational.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R020",
+      "itemIds": [
+        "U1-P09-B038",
+        "U1-P09-B039"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          391,
+          392
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P09-B038",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 38
+          },
+          {
+            "itemId": "U1-P09-B039",
+            "printedPage": 9,
+            "pdfPageOneBased": 13,
+            "bulletOnPage": 39
+          }
+        ]
+      },
+      "demand": "Acceptance/retrospective",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/project-chapter.js",
+            "route": "design",
+            "section": "Evaluate: judge the result against the brief"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/project-chapter.js",
+          "route": "design",
+          "section": "Evaluate: judge the result against the brief"
+        },
+        "independentTask": "dist/project-workbook.md evaluation/handover and developer retrospective"
+      },
+      "judgement": "supported",
+      "rationale": "Peer player trial, requirement-by-requirement judgement and retrospective are explicitly required.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R021",
+      "itemIds": [
+        "U1-P10-B001",
+        "U1-P10-B002",
+        "U1-P10-B003",
+        "U1-P10-B004",
+        "U1-P10-B005",
+        "U1-P10-B006",
+        "U1-P10-B007",
+        "U1-P10-B008",
+        "U1-P10-B009"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          395,
+          403
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P10-B001",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 1
+          },
+          {
+            "itemId": "U1-P10-B002",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 2
+          },
+          {
+            "itemId": "U1-P10-B003",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 3
+          },
+          {
+            "itemId": "U1-P10-B004",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 4
+          },
+          {
+            "itemId": "U1-P10-B005",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 5
+          },
+          {
+            "itemId": "U1-P10-B006",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 6
+          },
+          {
+            "itemId": "U1-P10-B007",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 7
+          },
+          {
+            "itemId": "U1-P10-B008",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 8
+          },
+          {
+            "itemId": "U1-P10-B009",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 9
+          }
+        ]
+      },
+      "demand": "Explain maintainable programming",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/chapters.js",
+            "route": "files",
+            "section": "Accept only usable input"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/chapters.js",
+          "route": "files",
+          "section": "Accept only usable input"
+        },
+        "independentTask": "Validation practical task; functions Test the part before the whole"
+      },
+      "judgement": "supported",
+      "rationale": "Narrow ValueError handling teaches validation; start/functions worked code supplies meaningful names/constants/comments/indentation/module responsibility. These are distributed teaching locations, not a claim that the files chapter alone covers all conventions.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R022",
+      "itemIds": [
+        "U1-P10-B010",
+        "U1-P10-B012",
+        "U1-P10-B013",
+        "U1-P10-B014",
+        "U1-P10-B015",
+        "U1-P10-B016",
+        "U1-P10-B017",
+        "U1-P10-B018",
+        "U1-P10-B019",
+        "U1-P10-B020"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          405,
+          415
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P10-B010",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 10
+          },
+          {
+            "itemId": "U1-P10-B012",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 12
+          },
+          {
+            "itemId": "U1-P10-B013",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 13
+          },
+          {
+            "itemId": "U1-P10-B014",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 14
+          },
+          {
+            "itemId": "U1-P10-B015",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 15
+          },
+          {
+            "itemId": "U1-P10-B016",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 16
+          },
+          {
+            "itemId": "U1-P10-B017",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 17
+          },
+          {
+            "itemId": "U1-P10-B018",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 18
+          },
+          {
+            "itemId": "U1-P10-B019",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 19
+          },
+          {
+            "itemId": "U1-P10-B020",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 20
+          }
+        ]
+      },
+      "demand": "Apply programming practices",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/project-chapter.js",
+            "route": "design",
+            "section": "Develop: build a small working part"
+          },
+          {
+            "path": "dist/project-chapter.js",
+            "route": "design",
+            "section": "Test: choose evidence that can expose mistakes"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/project-chapter.js",
+          "route": "design",
+          "section": "Test: choose evidence that can expose mistakes"
+        },
+        "independentTask": "dist/project-workbook.md FR7/FR8 and NFR4"
+      },
+      "judgement": "supported",
+      "rationale": "Complete project requires framework use, validated file input, clear modular design and evidence of tests. Independent performance remains unobserved.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R023",
+      "itemIds": [
+        "U1-P10-B022",
+        "U1-P10-B023",
+        "U1-P10-B024"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          419,
+          421
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P10-B022",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 22
+          },
+          {
+            "itemId": "U1-P10-B023",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 23
+          },
+          {
+            "itemId": "U1-P10-B024",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 24
+          }
+        ]
+      },
+      "demand": "Structured design benefits",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/chapters.js",
+            "route": "functions",
+            "section": "One task, one function"
+          },
+          {
+            "path": "dist/chapters.js",
+            "route": "functions",
+            "section": "Test the part before the whole"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/chapters.js",
+          "route": "functions",
+          "section": "Test the part before the whole"
+        },
+        "independentTask": "delivery_charge practical task and explanation"
+      },
+      "judgement": "partial",
+      "rationale": "Reusable pure calculation and one-responsibility module explain ease of testing/change; explicit comparative explanation of the three benefits is thin.",
+      "remainingGaps": [
+        "Add a comparative explanation requiring development, comprehension and modification benefits."
+      ],
+      "suggestedOriginalTask": {
+        "prompt": "Compare one long repeated delivery calculation with one delivery_charge function called twice. Explain three benefits and one limitation.",
+        "answer": "Develop once/reuse; readers follow named responsibility; threshold changes in one place. Poor interfaces or hidden globals can still make a modular solution hard to understand."
+      }
+    },
+    {
+      "reviewId": "Y11-R024",
+      "itemIds": [
+        "U1-P10-B025"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          422,
+          422
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P10-B025",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 25
+          }
+        ]
+      },
+      "demand": "Pseudocode representation",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/chapters.js",
+            "route": "loops",
+            "section": "From algorithm to implementation"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/chapters.js",
+          "route": "loops",
+          "section": "From algorithm to implementation"
+        },
+        "independentTask": "dist/audit-chapters.js #consolidation Station B"
+      },
+      "judgement": "supported",
+      "rationale": "Pseudocode has explicit loop bounds and matched implementation.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R025",
+      "itemIds": [
+        "U1-P10-B027",
+        "U1-P10-B028",
+        "U1-P10-B029"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          424,
+          426
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P10-B027",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 27
+          },
+          {
+            "itemId": "U1-P10-B028",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 28
+          },
+          {
+            "itemId": "U1-P10-B029",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 29
+          }
+        ]
+      },
+      "demand": "Design tools",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/project-chapter.js",
+            "route": "design",
+            "section": "Design: divide the solution into modules"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/project-chapter.js",
+          "route": "design",
+          "section": "Design: divide the solution into modules"
+        },
+        "independentTask": "Project function design; dist/depth/project_stub_contract.py (Year12-linked example)"
+      },
+      "judgement": "partial",
+      "rationale": "Current Year11 project teaches modular decomposition but does not explicitly teach structure-chart notation or stub development. Year12 stub is supplementary, not Year11 progression.",
+      "remainingGaps": [
+        "Add Year11 structure chart with data flow and a runnable stub, then independent replacement."
+      ],
+      "suggestedOriginalTask": {
+        "prompt": "Draw Main calling LoadScores, Total and Display; label score-list and total data flows. Stub LoadScores to return [2,5]; implement Total, then replace loader with a text-file reader.",
+        "answer": "Main receives list from LoadScores, passes it to Total, passes returned 7 to Display. Stub isolates processing; file read/closure and missing-file tests become necessary after replacement."
+      }
+    },
+    {
+      "reviewId": "Y11-R026",
+      "itemIds": [
+        "U1-P10-B030"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          428,
+          428
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P10-B030",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 30
+          }
+        ]
+      },
+      "demand": "Write pseudocode",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/audit-chapters.js",
+            "route": "consolidation",
+            "section": "Station B: algorithms in two representations"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/audit-chapters.js",
+          "route": "consolidation",
+          "section": "Station B: algorithms in two representations"
+        },
+        "independentTask": "Translate and test array algorithms independently"
+      },
+      "judgement": "supported",
+      "rationale": "Explicit algorithms and changed empty/negative/tie cases support independent representation.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R027",
+      "itemIds": [
+        "U1-P10-B032",
+        "U1-P10-B033",
+        "U1-P10-B034"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          430,
+          432
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P10-B032",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 32
+          },
+          {
+            "itemId": "U1-P10-B033",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 33
+          },
+          {
+            "itemId": "U1-P10-B034",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 34
+          }
+        ]
+      },
+      "demand": "Apply design tools",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/project-chapter.js",
+            "route": "design",
+            "section": "Design: divide the solution into modules"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/project-chapter.js",
+          "route": "design",
+          "section": "Design: divide the solution into modules"
+        },
+        "independentTask": "dist/project-workbook.md section 3"
+      },
+      "judgement": "partial",
+      "rationale": "Student function/pseudocode design exists; no explicit Year11 structure-chart-and-stub independent task.",
+      "remainingGaps": [
+        "Use the structure-chart/stub task proposed in Y11 review of lines424\u2013426; collect both chart and runnable replacement evidence."
+      ],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R028",
+      "itemIds": [
+        "U1-P10-B037",
+        "U1-P10-B038",
+        "U1-P10-B039"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          435,
+          437
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P10-B037",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 37
+          },
+          {
+            "itemId": "U1-P10-B038",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 38
+          },
+          {
+            "itemId": "U1-P10-B039",
+            "printedPage": 10,
+            "pdfPageOneBased": 14,
+            "bulletOnPage": 39
+          }
+        ]
+      },
+      "demand": "Array algorithms",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/chapters.js",
+            "route": "arrays",
+            "section": "Load and traverse"
+          },
+          {
+            "path": "dist/chapters.js",
+            "route": "arrays",
+            "section": "Remember the location of the best value"
+          },
+          {
+            "path": "dist/chapters.js",
+            "route": "arrays",
+            "section": "Translate the standard algorithms"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/chapters.js",
+          "route": "arrays",
+          "section": "Translate the standard algorithms"
+        },
+        "independentTask": "Temperature practical task; consolidation Station B"
+      },
+      "judgement": "supported",
+      "rationale": "Load/print, sum and first min/max positions are shown; ties, negatives and empty list are explicit.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R029",
+      "itemIds": [
+        "U1-P11-B002",
+        "U1-P11-B003",
+        "U1-P11-B004",
+        "U1-P11-B005"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          440,
+          443
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P11-B002",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 2
+          },
+          {
+            "itemId": "U1-P11-B003",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 3
+          },
+          {
+            "itemId": "U1-P11-B004",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 4
+          },
+          {
+            "itemId": "U1-P11-B005",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 5
+          }
+        ]
+      },
+      "demand": "File algorithms",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/chapters.js",
+            "route": "files",
+            "section": "Choose the mode deliberately"
+          },
+          {
+            "path": "dist/chapters.js",
+            "route": "files",
+            "section": "Read records in order"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/chapters.js",
+          "route": "files",
+          "section": "Read records in order"
+        },
+        "independentTask": "dist/depth/manifest.json files / Read, write and append: three different contracts independent task"
+      },
+      "judgement": "supported",
+      "rationale": "Read/write/append and with-based closure are concrete; separate depth files prevent write mode being mistaken for append.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R030",
+      "itemIds": [
+        "U1-P11-B007",
+        "U1-P11-B008",
+        "U1-P11-B009",
+        "U1-P11-B010"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          447,
+          451
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P11-B007",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 7
+          },
+          {
+            "itemId": "U1-P11-B008",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 8
+          },
+          {
+            "itemId": "U1-P11-B009",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 9
+          },
+          {
+            "itemId": "U1-P11-B010",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 10
+          }
+        ]
+      },
+      "demand": "Explain testing data",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/app.js",
+            "route": "selection",
+            "section": "5. Test the boundary"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/app.js",
+          "route": "selection",
+          "section": "5. Test the boundary"
+        },
+        "independentTask": "dist/unit1-practice-paper.md Q5"
+      },
+      "judgement": "supported",
+      "rationale": "Both branches, known answers and below/at/above threshold are explicit; files Accept only usable input adds type/range distinction.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R031",
+      "itemIds": [
+        "U1-P11-B012",
+        "U1-P11-B013",
+        "U1-P11-B014",
+        "U1-P11-B015"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          454,
+          458
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P11-B012",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 12
+          },
+          {
+            "itemId": "U1-P11-B013",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 13
+          },
+          {
+            "itemId": "U1-P11-B014",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 14
+          },
+          {
+            "itemId": "U1-P11-B015",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 15
+          }
+        ]
+      },
+      "demand": "Select test cases",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/project-chapter.js",
+            "route": "design",
+            "section": "Test: choose evidence that can expose mistakes"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/project-chapter.js",
+          "route": "design",
+          "section": "Test: choose evidence that can expose mistakes"
+        },
+        "independentTask": "Project FR4/FR5 boundary cases; unit1-practice-paper Q5"
+      },
+      "judgement": "supported",
+      "rationale": "Independent expected results and invalid/type/range cases appear in actual task materials.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R032",
+      "itemIds": [
+        "U1-P11-B017",
+        "U1-P11-B018"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          460,
+          461
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P11-B017",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 17
+          },
+          {
+            "itemId": "U1-P11-B018",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 18
+          }
+        ]
+      },
+      "demand": "Trace/step execution",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/chapters.js",
+            "route": "loops",
+            "section": "Trace the running total"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/chapters.js",
+          "route": "loops",
+          "section": "Trace the running total"
+        },
+        "independentTask": "dist/unit1-practice-paper.md Q3; dist/depth/manifest.json design debug module"
+      },
+      "judgement": "partial",
+      "rationale": "Trace tables are worked. Breakpoints/stepping are mentioned in depth explanation but no precise independent debugger procedure is supplied.",
+      "remainingGaps": [
+        "Add a short breakpoint/step task distinguishing observation from paper trace."
+      ],
+      "suggestedOriginalTask": {
+        "prompt": "Set total=0 and process [4,-1,3]. Break before total+=value, step each update, record value and total before/after, then compare a paper trace.",
+        "answer": "(4,0,4),(-1,4,3),(3,3,6); final6. Record actual debugger observations rather than copying this expected trace."
+      }
+    },
+    {
+      "reviewId": "Y11-R033",
+      "itemIds": [
+        "U1-P11-B020",
+        "U1-P11-B021",
+        "U1-P11-B022"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          465,
+          467
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P11-B020",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 20
+          },
+          {
+            "itemId": "U1-P11-B021",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 21
+          },
+          {
+            "itemId": "U1-P11-B022",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 22
+          }
+        ]
+      },
+      "demand": "Classify defects",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/project-chapter.js",
+            "route": "design",
+            "section": "Debug: isolate the first incorrect state"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/project-chapter.js",
+          "route": "design",
+          "section": "Debug: isolate the first incorrect state"
+        },
+        "independentTask": "dist/depth/python_error_cases.py; manifest design independent repeated-score repair"
+      },
+      "judgement": "supported",
+      "rationale": "Concrete parse/runtime/logic cases, traceback interpretation and regression repair exceed a vocabulary-only nomination.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R034",
+      "itemIds": [
+        "U1-P11-B025",
+        "U1-P11-B026"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          471,
+          472
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P11-B025",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 25
+          },
+          {
+            "itemId": "U1-P11-B026",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 26
+          }
+        ]
+      },
+      "demand": "Diagnostic output",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/project-chapter.js",
+            "route": "design",
+            "section": "Debug: isolate the first incorrect state"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/project-chapter.js",
+          "route": "design",
+          "section": "Debug: isolate the first incorrect state"
+        },
+        "independentTask": "dist/depth/manifest.json design error module"
+      },
+      "judgement": "partial",
+      "rationale": "Depth explanation recommends suspect value/type prints, but independent repair does not explicitly require branch-execution and value probes.",
+      "remainingGaps": [
+        "Require purposeful print probes and their removal after repair."
+      ],
+      "suggestedOriginalTask": {
+        "prompt": "A total resets inside a loop. Add ENTER LOOP and before/after-total prints for [2,3]. Identify the first wrong state, move initialisation and remove probes after retest.",
+        "answer": "Reset on second pass loses2. Initialise once before loop; correct final5. Execution markers show entered sections; value probes show state changes."
+      }
+    },
+    {
+      "reviewId": "Y11-R035",
+      "itemIds": [
+        "U1-P11-B028",
+        "U1-P11-B029"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          476,
+          477
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P11-B028",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 28
+          },
+          {
+            "itemId": "U1-P11-B029",
+            "printedPage": 11,
+            "pdfPageOneBased": 15,
+            "bulletOnPage": 29
+          }
+        ]
+      },
+      "demand": "External interface purpose/use",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/project-chapter.js",
+            "route": "design",
+            "section": "Develop: build a small working part"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/project-chapter.js",
+          "route": "design",
+          "section": "Develop: build a small working part"
+        },
+        "independentTask": "Pygame starter shell; consolidation Station D asks for an API example"
+      },
+      "judgement": "partial",
+      "rationale": "Pygame calls provide usage context, but a standalone API contract explanation and original independent task are missing; glossary definition alone is insufficient.",
+      "remainingGaps": [
+        "Teach caller/contract/library implementation separation explicitly."
+      ],
+      "suggestedOriginalTask": {
+        "prompt": "Given library_api.fee(weight) accepts a nonnegative float and returns a float charge, write a caller for 2.5, distinguish API from implementation, and state how you find allowed arguments.",
+        "answer": "charge=library_api.fee(2.5). Interface specifies inputs/results; implementation supplies internal steps. Consult versioned API documentation; no network service is implied."
+      }
+    },
+    {
+      "reviewId": "Y11-R036",
+      "itemIds": [
+        "U1-P12-B003",
+        "U1-P12-B004",
+        "U1-P12-B005",
+        "U1-P12-B006",
+        "U1-P12-B007"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          483,
+          487
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P12-B003",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 3
+          },
+          {
+            "itemId": "U1-P12-B004",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 4
+          },
+          {
+            "itemId": "U1-P12-B005",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 5
+          },
+          {
+            "itemId": "U1-P12-B006",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 6
+          },
+          {
+            "itemId": "U1-P12-B007",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 7
+          }
+        ]
+      },
+      "demand": "Software permission/attribution",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/audit-chapters.js",
+            "route": "software-responsibility",
+            "section": "Ideas, expression and permissions"
+          },
+          {
+            "path": "dist/audit-chapters.js",
+            "route": "software-responsibility",
+            "section": "Read the licence before reuse"
+          },
+          {
+            "path": "dist/audit-chapters.js",
+            "route": "software-responsibility",
+            "section": "Keep a source record"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/audit-chapters.js",
+          "route": "software-responsibility",
+          "section": "Keep a source record"
+        },
+        "independentTask": "Two-licence comparison practical task"
+      },
+      "judgement": "supported",
+      "rationale": "Distinguishes permission from credit, proprietary from price, and open-source conditions. Current law is referred to official sources; no independent legal approval inferred.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R037",
+      "itemIds": [
+        "U1-P12-B008",
+        "U1-P12-B010",
+        "U1-P12-B011",
+        "U1-P12-B012",
+        "U1-P12-B013",
+        "U1-P12-B014",
+        "U1-P12-B015"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          491,
+          499
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P12-B008",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 8
+          },
+          {
+            "itemId": "U1-P12-B010",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 10
+          },
+          {
+            "itemId": "U1-P12-B011",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 11
+          },
+          {
+            "itemId": "U1-P12-B012",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 12
+          },
+          {
+            "itemId": "U1-P12-B013",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 13
+          },
+          {
+            "itemId": "U1-P12-B014",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 14
+          },
+          {
+            "itemId": "U1-P12-B015",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 15
+          }
+        ]
+      },
+      "demand": "Layered communication",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/network-chapters.js",
+            "route": "networks",
+            "section": "A shared set of rules"
+          },
+          {
+            "path": "dist/network-chapters.js",
+            "route": "networks",
+            "section": "Four layers, four responsibilities"
+          },
+          {
+            "path": "dist/network-chapters.js",
+            "route": "networks",
+            "section": "Protocols in a familiar journey"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/network-chapters.js",
+          "route": "networks",
+          "section": "Protocols in a familiar journey"
+        },
+        "independentTask": "Draw four-layer web-request stack practical task"
+      },
+      "judgement": "supported",
+      "rationale": "Layer table and message journey directly explain each named layer and protocols; stronger than a generic network decision file.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R038",
+      "itemIds": [
+        "U1-P12-B016",
+        "U1-P12-B017",
+        "U1-P12-B018"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          500,
+          502
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P12-B016",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 16
+          },
+          {
+            "itemId": "U1-P12-B017",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 17
+          },
+          {
+            "itemId": "U1-P12-B018",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 18
+          }
+        ]
+      },
+      "demand": "Address/mask/version roles",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/network-chapters.js",
+            "route": "addressing",
+            "section": "Addresses and the local network"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/network-chapters.js",
+          "route": "addressing",
+          "section": "Addresses and the local network"
+        },
+        "independentTask": "Local/remote practice and library address-plan task"
+      },
+      "judgement": "supported",
+      "rationale": "32/128-bit comparison and /24 local/remote worked example explain mask responsibility without importing Year12 subnetting depth.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R039",
+      "itemIds": [
+        "U1-P12-B020",
+        "U1-P12-B021",
+        "U1-P12-B022",
+        "U1-P12-B023",
+        "U1-P12-B024",
+        "U1-P12-B025"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          506,
+          511
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P12-B020",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 20
+          },
+          {
+            "itemId": "U1-P12-B021",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 21
+          },
+          {
+            "itemId": "U1-P12-B022",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 22
+          },
+          {
+            "itemId": "U1-P12-B023",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 23
+          },
+          {
+            "itemId": "U1-P12-B024",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 24
+          },
+          {
+            "itemId": "U1-P12-B025",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 25
+          }
+        ]
+      },
+      "demand": "Media/device functions",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/network-chapters.js",
+            "route": "addressing",
+            "section": "Choose a device for its function"
+          },
+          {
+            "path": "dist/network-chapters.js",
+            "route": "addressing",
+            "section": "Choose a medium for the setting"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/network-chapters.js",
+          "route": "addressing",
+          "section": "Choose a medium for the setting"
+        },
+        "independentTask": "network-design lab plan; addressing practice wireless access point"
+      },
+      "judgement": "supported",
+      "rationale": "Explicit media/device table and layer caveat cover each named component; combined-device caveat prevents false one-device-one-layer assumptions.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R040",
+      "itemIds": [
+        "U1-P12-B026",
+        "U1-P12-B027",
+        "U1-P12-B028"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          514,
+          516
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P12-B026",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 26
+          },
+          {
+            "itemId": "U1-P12-B027",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 27
+          },
+          {
+            "itemId": "U1-P12-B028",
+            "printedPage": 12,
+            "pdfPageOneBased": 16,
+            "bulletOnPage": 28
+          }
+        ]
+      },
+      "demand": "Network access protection",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/network-chapters.js",
+            "route": "network-design",
+            "section": "Protect against unauthorised access"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/network-chapters.js",
+          "route": "network-design",
+          "section": "Protect against unauthorised access"
+        },
+        "independentTask": "Lab plan two-security-control explanation; unit1 paper Q12"
+      },
+      "judgement": "supported",
+      "rationale": "Least privilege, firewall filtering and OS updates/permissions are mechanisms tied to access risk.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R041",
+      "itemIds": [
+        "U1-P13-B002",
+        "U1-P13-B003",
+        "U1-P13-B004",
+        "U1-P13-B005"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          521,
+          524
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P13-B002",
+            "printedPage": 13,
+            "pdfPageOneBased": 17,
+            "bulletOnPage": 2
+          },
+          {
+            "itemId": "U1-P13-B003",
+            "printedPage": 13,
+            "pdfPageOneBased": 17,
+            "bulletOnPage": 3
+          },
+          {
+            "itemId": "U1-P13-B004",
+            "printedPage": 13,
+            "pdfPageOneBased": 17,
+            "bulletOnPage": 4
+          },
+          {
+            "itemId": "U1-P13-B005",
+            "printedPage": 13,
+            "pdfPageOneBased": 17,
+            "bulletOnPage": 5
+          }
+        ]
+      },
+      "demand": "Performance factors",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/network-chapters.js",
+            "route": "network-design",
+            "section": "Find the bottleneck"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/network-chapters.js",
+          "route": "network-design",
+          "section": "Find the bottleneck"
+        },
+        "independentTask": "Lab design two performance choices; unit1 paper Q12"
+      },
+      "judgement": "supported",
+      "rationale": "Bandwidth/design/collisions/broadcasts taught with switched full-duplex and Wi-Fi caveats.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R042",
+      "itemIds": [
+        "U1-P13-B006"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          526,
+          527
+        ],
+        "locators": [
+          {
+            "itemId": "U1-P13-B006",
+            "printedPage": 13,
+            "pdfPageOneBased": 17,
+            "bulletOnPage": 6
+          }
+        ]
+      },
+      "demand": "Create network diagrams",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/network-chapters.js",
+            "route": "network-design",
+            "section": "Scale and logical diagrams"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/network-chapters.js",
+          "route": "network-design",
+          "section": "Scale and logical diagrams"
+        },
+        "independentTask": "20 wired/10 wireless lab practical task; unit1 paper Q11"
+      },
+      "judgement": "partial",
+      "rationale": "Independent diagram demand includes course symbols, addresses and security, but chapter sends students to support booklet for actual symbols.",
+      "remainingGaps": [
+        "Check Cisco symbol fidelity against official support booklet and collect a fresh learner drawing; conceptual chain alone is insufficient."
+      ],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R043",
+      "itemIds": [
+        "U2-P14-B002",
+        "U2-P14-B003",
+        "U2-P14-B004",
+        "U2-P14-B005",
+        "U2-P14-B006",
+        "U2-P14-B007"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          554,
+          559
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P14-B002",
+            "printedPage": 14,
+            "pdfPageOneBased": 18,
+            "bulletOnPage": 2
+          },
+          {
+            "itemId": "U2-P14-B003",
+            "printedPage": 14,
+            "pdfPageOneBased": 18,
+            "bulletOnPage": 3
+          },
+          {
+            "itemId": "U2-P14-B004",
+            "printedPage": 14,
+            "pdfPageOneBased": 18,
+            "bulletOnPage": 4
+          },
+          {
+            "itemId": "U2-P14-B005",
+            "printedPage": 14,
+            "pdfPageOneBased": 18,
+            "bulletOnPage": 5
+          },
+          {
+            "itemId": "U2-P14-B006",
+            "printedPage": 14,
+            "pdfPageOneBased": 18,
+            "bulletOnPage": 6
+          },
+          {
+            "itemId": "U2-P14-B007",
+            "printedPage": 14,
+            "pdfPageOneBased": 18,
+            "bulletOnPage": 7
+          }
+        ]
+      },
+      "demand": "Authorised testing/privacy",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "responsible-data",
+            "section": "Know the Privacy Act and the course context"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "responsible-data",
+            "section": "Apply selected APPs to design decisions"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "responsible-data",
+            "section": "Explain ethical hacking and penetration testing"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-chapters.js",
+          "route": "responsible-data",
+          "section": "Explain ethical hacking and penetration testing"
+        },
+        "independentTask": "dist/responsible-data-workbook.md Q3\u20137"
+      },
+      "judgement": "supported",
+      "rationale": "Explicit purpose, permission/scope, federal coverage distinction and APP security decisions; compare intentions with actual authority.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R044",
+      "itemIds": [
+        "U2-P14-B009",
+        "U2-P14-B010",
+        "U2-P14-B011",
+        "U2-P15-B001",
+        "U2-P15-B002"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          563,
+          568
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P14-B009",
+            "printedPage": 14,
+            "pdfPageOneBased": 18,
+            "bulletOnPage": 9
+          },
+          {
+            "itemId": "U2-P14-B010",
+            "printedPage": 14,
+            "pdfPageOneBased": 18,
+            "bulletOnPage": 10
+          },
+          {
+            "itemId": "U2-P14-B011",
+            "printedPage": 14,
+            "pdfPageOneBased": 18,
+            "bulletOnPage": 11
+          },
+          {
+            "itemId": "U2-P15-B001",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 1
+          },
+          {
+            "itemId": "U2-P15-B002",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 2
+          }
+        ]
+      },
+      "demand": "Authentication policy/factors",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "security-threats",
+            "section": "Protect authentication and set a useful policy"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-chapters.js",
+          "route": "security-threats",
+          "section": "Protect authentication and set a useful policy"
+        },
+        "independentTask": "dist/security-workbook.md Q5"
+      },
+      "judgement": "supported",
+      "rationale": "Passphrases, organisational policy, two factors and biometric limits are directly explained; password+PIN counterexample makes distinctions testable.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R045",
+      "itemIds": [
+        "U2-P15-B004",
+        "U2-P15-B005",
+        "U2-P15-B006"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          570,
+          572
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P15-B004",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 4
+          },
+          {
+            "itemId": "U2-P15-B005",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 5
+          },
+          {
+            "itemId": "U2-P15-B006",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 6
+          }
+        ]
+      },
+      "demand": "Encryption key roles",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "security-threats",
+            "section": "Explain encryption and key roles"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-chapters.js",
+          "route": "security-threats",
+          "section": "Explain encryption and key roles"
+        },
+        "independentTask": "dist/security-workbook.md Q6"
+      },
+      "judgement": "supported",
+      "rationale": "Clear symmetric shared key versus public/private pair roles, bulk-data context and residual limits.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R046",
+      "itemIds": [
+        "U2-P15-B008",
+        "U2-P15-B009",
+        "U2-P15-B010",
+        "U2-P15-B011",
+        "U2-P15-B012",
+        "U2-P15-B013",
+        "U2-P15-B014",
+        "U2-P15-B016",
+        "U2-P15-B017",
+        "U2-P15-B018",
+        "U2-P15-B019",
+        "U2-P15-B020",
+        "U2-P15-B021",
+        "U2-P15-B022",
+        "U2-P15-B023"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          576,
+          591
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P15-B008",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 8
+          },
+          {
+            "itemId": "U2-P15-B009",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 9
+          },
+          {
+            "itemId": "U2-P15-B010",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 10
+          },
+          {
+            "itemId": "U2-P15-B011",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 11
+          },
+          {
+            "itemId": "U2-P15-B012",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 12
+          },
+          {
+            "itemId": "U2-P15-B013",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 13
+          },
+          {
+            "itemId": "U2-P15-B014",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 14
+          },
+          {
+            "itemId": "U2-P15-B016",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 16
+          },
+          {
+            "itemId": "U2-P15-B017",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 17
+          },
+          {
+            "itemId": "U2-P15-B018",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 18
+          },
+          {
+            "itemId": "U2-P15-B019",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 19
+          },
+          {
+            "itemId": "U2-P15-B020",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 20
+          },
+          {
+            "itemId": "U2-P15-B021",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 21
+          },
+          {
+            "itemId": "U2-P15-B022",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 22
+          },
+          {
+            "itemId": "U2-P15-B023",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 23
+          }
+        ]
+      },
+      "demand": "Differentiate attack mechanisms",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "security-threats",
+            "section": "Distinguish people, network and application threats"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "security-threats",
+            "section": "Distinguish malware, physical threats and new flaws"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-chapters.js",
+          "route": "security-threats",
+          "section": "Distinguish malware, physical threats and new flaws"
+        },
+        "independentTask": "dist/security-workbook.md Q2\u20134; dist/security-scenarios.csv; security-threat-reference.json"
+      },
+      "judgement": "supported",
+      "rationale": "Mechanism tables distinguish every named attack/malware, physical risk and zero-day; comparison prompts prevent mere label matching.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R047",
+      "itemIds": [
+        "U2-P15-B025",
+        "U2-P15-B026",
+        "U2-P15-B027",
+        "U2-P15-B029",
+        "U2-P15-B030",
+        "U2-P15-B031"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          595,
+          601
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P15-B025",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 25
+          },
+          {
+            "itemId": "U2-P15-B026",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 26
+          },
+          {
+            "itemId": "U2-P15-B027",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 27
+          },
+          {
+            "itemId": "U2-P15-B029",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 29
+          },
+          {
+            "itemId": "U2-P15-B030",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 30
+          },
+          {
+            "itemId": "U2-P15-B031",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 31
+          }
+        ]
+      },
+      "demand": "Security model concepts",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "security-threats",
+            "section": "Analyse harm using the CIA triad"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "security-threats",
+            "section": "Audit access using AAA"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-chapters.js",
+          "route": "security-threats",
+          "section": "Audit access using AAA"
+        },
+        "independentTask": "dist/security-workbook.md Q2 and Q8"
+      },
+      "judgement": "supported",
+      "rationale": "Separate CIA harm from identity/permissions/logging; shared-login incident is an explicit worked model.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R048",
+      "itemIds": [
+        "U2-P15-B032",
+        "U2-P15-B033"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          603,
+          604
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P15-B032",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 32
+          },
+          {
+            "itemId": "U2-P15-B033",
+            "printedPage": 15,
+            "pdfPageOneBased": 19,
+            "bulletOnPage": 33
+          }
+        ]
+      },
+      "demand": "Apply security models",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "security-threats",
+            "section": "Work through an incident using evidence"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-chapters.js",
+          "route": "security-threats",
+          "section": "Work through an incident using evidence"
+        },
+        "independentTask": "dist/security-workbook.md Q2/Q8; unit2-review workbook Task E"
+      },
+      "judgement": "supported",
+      "rationale": "Scenario demands evidence, uncertainty, CIA impact and AAA question; original incident application rather than a control vocabulary list.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R049",
+      "itemIds": [
+        "U2-P16-B001",
+        "U2-P16-B002",
+        "U2-P16-B005",
+        "U2-P16-B006",
+        "U2-P16-B007",
+        "U2-P16-B009",
+        "U2-P16-B010",
+        "U2-P16-B011"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          608,
+          619
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P16-B001",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 1
+          },
+          {
+            "itemId": "U2-P16-B002",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 2
+          },
+          {
+            "itemId": "U2-P16-B005",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 5
+          },
+          {
+            "itemId": "U2-P16-B006",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 6
+          },
+          {
+            "itemId": "U2-P16-B007",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 7
+          },
+          {
+            "itemId": "U2-P16-B009",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 9
+          },
+          {
+            "itemId": "U2-P16-B010",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 10
+          },
+          {
+            "itemId": "U2-P16-B011",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 11
+          }
+        ]
+      },
+      "demand": "Cipher use/cracking",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "security-threats",
+            "section": "Use a rotation cipher with explicit conventions"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "security-threats",
+            "section": "Use a random substitution and compare patterns"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "security-threats",
+            "section": "Use a polyalphabetic cipher"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-chapters.js",
+          "route": "security-threats",
+          "section": "Use a polyalphabetic cipher"
+        },
+        "independentTask": "dist/security-cipher-workbook.md Q1\u20138"
+      },
+      "judgement": "supported",
+      "rationale": "Worked LOAN transformations and fresh RETURN/DATA tasks with wrap, reverse mapping and repeated key; brute-force/frequency limitations are taught.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R050",
+      "itemIds": [
+        "U2-P16-B012",
+        "U2-P16-B013",
+        "U2-P16-B015",
+        "U2-P16-B016"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          623,
+          627
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P16-B012",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 12
+          },
+          {
+            "itemId": "U2-P16-B013",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 13
+          },
+          {
+            "itemId": "U2-P16-B015",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 15
+          },
+          {
+            "itemId": "U2-P16-B016",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 16
+          }
+        ]
+      },
+      "demand": "Database systems/independence",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "database-foundations",
+            "section": "Start with a question"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "database-foundations",
+            "section": "Database, DBMS and RDBMS"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "database-foundations",
+            "section": "What does data independence mean?"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-chapters.js",
+          "route": "database-foundations",
+          "section": "What does data independence mean?"
+        },
+        "independentTask": "dist/database-foundations-workbook.md Q4/Q8\u201312"
+      },
+      "judgement": "supported",
+      "rationale": "Index/storage change counterexample explains physical independence without promising cross-product file compatibility; roles/permissions are contextual.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R051",
+      "itemIds": [
+        "U2-P16-B018",
+        "U2-P16-B019",
+        "U2-P16-B021",
+        "U2-P16-B022",
+        "U2-P16-B023",
+        "U2-P16-B024",
+        "U2-P16-B026",
+        "U2-P16-B027",
+        "U2-P16-B028",
+        "U2-P16-B030",
+        "U2-P16-B031",
+        "U2-P16-B032",
+        "U2-P17-B001",
+        "U2-P17-B002"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          631,
+          648
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P16-B018",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 18
+          },
+          {
+            "itemId": "U2-P16-B019",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 19
+          },
+          {
+            "itemId": "U2-P16-B021",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 21
+          },
+          {
+            "itemId": "U2-P16-B022",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 22
+          },
+          {
+            "itemId": "U2-P16-B023",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 23
+          },
+          {
+            "itemId": "U2-P16-B024",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 24
+          },
+          {
+            "itemId": "U2-P16-B026",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 26
+          },
+          {
+            "itemId": "U2-P16-B027",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 27
+          },
+          {
+            "itemId": "U2-P16-B028",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 28
+          },
+          {
+            "itemId": "U2-P16-B030",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 30
+          },
+          {
+            "itemId": "U2-P16-B031",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 31
+          },
+          {
+            "itemId": "U2-P16-B032",
+            "printedPage": 16,
+            "pdfPageOneBased": 20,
+            "bulletOnPage": 32
+          },
+          {
+            "itemId": "U2-P17-B001",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 1
+          },
+          {
+            "itemId": "U2-P17-B002",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 2
+          }
+        ]
+      },
+      "demand": "Relational organisation/types",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "entities-relationships",
+            "section": "From entity to table"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "entities-relationships",
+            "section": "Read relationships in both directions"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "entities-relationships",
+            "section": "Document the fields and their rules"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-chapters.js",
+          "route": "entities-relationships",
+          "section": "Document the fields and their rules"
+        },
+        "independentTask": "dist/relationships-workbook.md Q1/Q8/Q11"
+      },
+      "judgement": "supported",
+      "rationale": "Entity/instance/attribute/table/row and both relationship directions are explicit; data dictionary names all required conceptual types and SQLite mapping caveat.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R052",
+      "itemIds": [
+        "U2-P17-B003"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          649,
+          649
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P17-B003",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 3
+          }
+        ]
+      },
+      "demand": "Linking identifiers",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "entities-relationships",
+            "section": "Choose identifiers deliberately"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-chapters.js",
+          "route": "entities-relationships",
+          "section": "Choose identifiers deliberately"
+        },
+        "independentTask": "dist/relationships-workbook.md Q2/Q7"
+      },
+      "judgement": "supported",
+      "rationale": "PK uniqueness and FK reference are distinguished; invalid-reference counterexample gives independently testable explanation.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R053",
+      "itemIds": [
+        "U2-P17-B005",
+        "U2-P17-B006",
+        "U2-P17-B007",
+        "U2-P17-B008"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          651,
+          654
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P17-B005",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 5
+          },
+          {
+            "itemId": "U2-P17-B006",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 6
+          },
+          {
+            "itemId": "U2-P17-B007",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 7
+          },
+          {
+            "itemId": "U2-P17-B008",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 8
+          }
+        ]
+      },
+      "demand": "Anomaly consequences",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "normalisation",
+            "section": "Recognise the anomalies"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-chapters.js",
+          "route": "normalisation",
+          "section": "Recognise the anomalies"
+        },
+        "independentTask": "dist/normalisation-workbook.md Q2; dist/depth/anomalies_lab.sql"
+      },
+      "judgement": "supported",
+      "rationale": "Explicit insert/update/delete examples plus schema split. Composite-key parent at line650 remains represented in source map but this file audits leaves; its direct explanation is entities-relationships When a composite key fits.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R054",
+      "itemIds": [
+        "U2-P17-B010",
+        "U2-P17-B011"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          658,
+          659
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P17-B010",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 10
+          },
+          {
+            "itemId": "U2-P17-B011",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 11
+          }
+        ]
+      },
+      "demand": "Developer documentation",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "entities-relationships",
+            "section": "Draw and interpret crow\u2019s-foot notation"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "entities-relationships",
+            "section": "Document the fields and their rules"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-chapters.js",
+          "route": "entities-relationships",
+          "section": "Document the fields and their rules"
+        },
+        "independentTask": "dist/relationships-workbook.md Q5/Q10"
+      },
+      "judgement": "supported",
+      "rationale": "Worked four-table model and field dictionary explain how developers communicate keys, constraints and rules.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R055",
+      "itemIds": [
+        "U2-P17-B012"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          661,
+          661
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P17-B012",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 12
+          }
+        ]
+      },
+      "demand": "Interpret ER models",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-review-chapters.js",
+            "route": "unit2-review",
+            "section": "Read a six-table extension"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-review-chapters.js",
+          "route": "unit2-review",
+          "section": "Read a six-table extension"
+        },
+        "independentTask": "dist/unit2-review-workbook.md Task B; dist/unit2-six-table-model.svg"
+      },
+      "judgement": "supported",
+      "rationale": "Corrects weak four-table-only nomination: actual six-table interpretation task asks both directions and trace through supplier/category.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R056",
+      "itemIds": [
+        "U2-P17-B013",
+        "U2-P17-B014",
+        "U2-P17-B015"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          662,
+          664
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P17-B013",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 13
+          },
+          {
+            "itemId": "U2-P17-B014",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 14
+          },
+          {
+            "itemId": "U2-P17-B015",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 15
+          }
+        ]
+      },
+      "demand": "Create ER/dictionary/bridge",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-review-chapters.js",
+            "route": "unit2-review",
+            "section": "Create and reconcile a fresh model"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-review-chapters.js",
+          "route": "unit2-review",
+          "section": "Create and reconcile a fresh model"
+        },
+        "independentTask": "dist/unit2-review-workbook.md Task C"
+      },
+      "judgement": "supported",
+      "rationale": "Fresh Member/Activity/Leader/Participation rules require four tables, crow\u2019s-foot, composite event key and dictionary; stronger independence than redrawing worked loans.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R057",
+      "itemIds": [
+        "U2-P17-B017",
+        "U2-P17-B018",
+        "U2-P17-B019",
+        "U2-P17-B020",
+        "U2-P17-B021",
+        "U2-P17-B022"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          668,
+          673
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P17-B017",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 17
+          },
+          {
+            "itemId": "U2-P17-B018",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 18
+          },
+          {
+            "itemId": "U2-P17-B019",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 19
+          },
+          {
+            "itemId": "U2-P17-B020",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 20
+          },
+          {
+            "itemId": "U2-P17-B021",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 21
+          },
+          {
+            "itemId": "U2-P17-B022",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 22
+          }
+        ]
+      },
+      "demand": "Data quality reasoning",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-review-chapters.js",
+            "route": "unit2-review",
+            "section": "Data-quality clinic"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-review-chapters.js",
+          "route": "unit2-review",
+          "section": "Data-quality clinic"
+        },
+        "independentTask": "dist/unit2-review-workbook.md Task A"
+      },
+      "judgement": "supported",
+      "rationale": "Fresh old status, wrong valid date, unverified message, irrelevant health note and extreme cost explicitly cover each factor; preserve/verify rather than delete outliers.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R058",
+      "itemIds": [
+        "U2-P17-B023",
+        "U2-P17-B024",
+        "U2-P17-B026",
+        "U2-P17-B027",
+        "U2-P17-B028"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          676,
+          682
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P17-B023",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 23
+          },
+          {
+            "itemId": "U2-P17-B024",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 24
+          },
+          {
+            "itemId": "U2-P17-B026",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 26
+          },
+          {
+            "itemId": "U2-P17-B027",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 27
+          },
+          {
+            "itemId": "U2-P17-B028",
+            "printedPage": 17,
+            "pdfPageOneBased": 21,
+            "bulletOnPage": 28
+          }
+        ]
+      },
+      "demand": "Normalisation reasoning/application",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "normalisation",
+            "section": "Dependencies explain the next split"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "normalisation",
+            "section": "2NF: remove partial dependencies"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "normalisation",
+            "section": "3NF: remove the transitive dependency"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "normalisation",
+            "section": "Practice on a fresh four-table problem"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-chapters.js",
+          "route": "normalisation",
+          "section": "Practice on a fresh four-table problem"
+        },
+        "independentTask": "dist/normalisation-workbook.md Q1\u201312; club transfer Q12"
+      },
+      "judgement": "supported",
+      "rationale": "Six-row reservation stages plus functional dependencies and reconstruction model the process; fresh club scenario yields four relations without copying event names.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R059",
+      "itemIds": [
+        "U2-P18-B001"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          686,
+          686
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P18-B001",
+            "printedPage": 18,
+            "pdfPageOneBased": 22,
+            "bulletOnPage": 1
+          }
+        ]
+      },
+      "demand": "Construct relational database",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "database-solution",
+            "section": "Create and inspect four related tables"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-chapters.js",
+          "route": "database-solution",
+          "section": "Create and inspect four related tables"
+        },
+        "independentTask": "dist/database-project-workbook.md; database project brief and own creation script"
+      },
+      "judgement": "partial",
+      "rationale": "Four-table setup meets size context, but running a supplied setup alone is not independent schema creation. Chapter explicitly demands own script/adaptations; collect resulting learner artefact.",
+      "remainingGaps": [
+        "Provide a fully specified fresh three-table creation prompt with expected schema, so independence does not depend on teacher inventing adaptations."
+      ],
+      "suggestedOriginalTask": {
+        "prompt": "Create Member(MemberID text PK,Name required), Workshop(WorkshopID text PK,Title required), Enrolment(MemberID FK,WorkshopID FK, composite PK). Insert M1/Ari,W1/Robotics and their enrolment. Demonstrate duplicate pair and missing M9 rejection with foreign keys enabled.",
+        "answer": "Three CREATE TABLE statements; Enrolment PRIMARY KEY(MemberID,WorkshopID), required FK references. One valid joined row; duplicate pair and M9 reference fail. Enable PRAGMA foreign_keys=ON before transaction."
+      }
+    },
+    {
+      "reviewId": "Y11-R060",
+      "itemIds": [
+        "U2-P18-B003",
+        "U2-P18-B004",
+        "U2-P18-B005",
+        "U2-P18-B006",
+        "U2-P18-B007",
+        "U2-P18-B008",
+        "U2-P18-B009"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          688,
+          694
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P18-B003",
+            "printedPage": 18,
+            "pdfPageOneBased": 22,
+            "bulletOnPage": 3
+          },
+          {
+            "itemId": "U2-P18-B004",
+            "printedPage": 18,
+            "pdfPageOneBased": 22,
+            "bulletOnPage": 4
+          },
+          {
+            "itemId": "U2-P18-B005",
+            "printedPage": 18,
+            "pdfPageOneBased": 22,
+            "bulletOnPage": 5
+          },
+          {
+            "itemId": "U2-P18-B006",
+            "printedPage": 18,
+            "pdfPageOneBased": 22,
+            "bulletOnPage": 6
+          },
+          {
+            "itemId": "U2-P18-B007",
+            "printedPage": 18,
+            "pdfPageOneBased": 22,
+            "bulletOnPage": 7
+          },
+          {
+            "itemId": "U2-P18-B008",
+            "printedPage": 18,
+            "pdfPageOneBased": 22,
+            "bulletOnPage": 8
+          },
+          {
+            "itemId": "U2-P18-B009",
+            "printedPage": 18,
+            "pdfPageOneBased": 22,
+            "bulletOnPage": 9
+          }
+        ]
+      },
+      "demand": "Query/change/aggregate",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "database-solution",
+            "section": "Join keys to obtain readable reports"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "database-solution",
+            "section": "Summarise the right records"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "database-solution",
+            "section": "Insert a new record deliberately"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "database-solution",
+            "section": "Update the intended row and check it"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "database-solution",
+            "section": "Delete only the disposable test record"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-chapters.js",
+          "route": "database-solution",
+          "section": "Delete only the disposable test record"
+        },
+        "independentTask": "dist/database-project-workbook.md Q1\u201312; dist/sql-workbook.md"
+      },
+      "judgement": "supported",
+      "rationale": "Starter SELECT chapter alone omits key demands; project workbook supplies insert/update/delete, inner joins, ordering and all five aggregates with before/after/rollback checks.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    },
+    {
+      "reviewId": "Y11-R061",
+      "itemIds": [
+        "U2-P18-B011",
+        "U2-P18-B012",
+        "U2-P18-B013",
+        "U2-P18-B014",
+        "U2-P18-B016",
+        "U2-P18-B017",
+        "U2-P18-B018",
+        "U2-P18-B020"
+      ],
+      "sourceChecked": {
+        "url": "https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF",
+        "webLineRange": [
+          698,
+          707
+        ],
+        "locators": [
+          {
+            "itemId": "U2-P18-B011",
+            "printedPage": 18,
+            "pdfPageOneBased": 22,
+            "bulletOnPage": 11
+          },
+          {
+            "itemId": "U2-P18-B012",
+            "printedPage": 18,
+            "pdfPageOneBased": 22,
+            "bulletOnPage": 12
+          },
+          {
+            "itemId": "U2-P18-B013",
+            "printedPage": 18,
+            "pdfPageOneBased": 22,
+            "bulletOnPage": 13
+          },
+          {
+            "itemId": "U2-P18-B014",
+            "printedPage": 18,
+            "pdfPageOneBased": 22,
+            "bulletOnPage": 14
+          },
+          {
+            "itemId": "U2-P18-B016",
+            "printedPage": 18,
+            "pdfPageOneBased": 22,
+            "bulletOnPage": 16
+          },
+          {
+            "itemId": "U2-P18-B017",
+            "printedPage": 18,
+            "pdfPageOneBased": 22,
+            "bulletOnPage": 17
+          },
+          {
+            "itemId": "U2-P18-B018",
+            "printedPage": 18,
+            "pdfPageOneBased": 22,
+            "bulletOnPage": 18
+          },
+          {
+            "itemId": "U2-P18-B020",
+            "printedPage": 18,
+            "pdfPageOneBased": 22,
+            "bulletOnPage": 20
+          }
+        ]
+      },
+      "demand": "Responsible data development",
+      "evidence": {
+        "explanation": [
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "responsible-data",
+            "section": "Apply selected APPs to design decisions"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "responsible-data",
+            "section": "Follow the data through its lifecycle"
+          },
+          {
+            "path": "dist/unit2-chapters.js",
+            "route": "responsible-data",
+            "section": "Evaluate the database with evidence"
+          }
+        ],
+        "workedExample": {
+          "path": "dist/unit2-chapters.js",
+          "route": "responsible-data",
+          "section": "Evaluate the database with evidence"
+        },
+        "independentTask": "dist/responsible-data-workbook.md Q3\u201310; dist/security-workbook.md Q9\u201310"
+      },
+      "judgement": "supported",
+      "rationale": "Field-purpose, identifiability, permission, copies/retention, backup/restoration and source authority are contextual. Separate restore demonstration distinguishes backup existence from recovery. Integrity/accuracy is reinforced by unit2-review Task A.",
+      "remainingGaps": [],
+      "suggestedOriginalTask": null
+    }
+  ]
+}
