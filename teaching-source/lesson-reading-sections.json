@@ -1,5 +1,5 @@
 {
-  "note": "Editorial reading destinations, in scheduled lesson order within each chapter. Exact authored titles fail validation if moved or removed instead of silently shifting an index. Each lesson retains its own activity, exit question, expected reasoning and retry. Two beginner SQL objectives are aligned with their existing tasks. These are learning routes, not teacher approval or observed workload evidence.",
+  "note": "Editorial reading destinations, in scheduled lesson order within each chapter. Exact authored titles fail validation if renamed or removed instead of silently shifting an index. Each lesson retains its own activity, exit question, expected reasoning and retry. Two beginner SQL objectives are aligned with their existing tasks. These are learning routes, not teacher approval or observed workload evidence.",
   "sections": {
     "start": [
       "A problem before a program",

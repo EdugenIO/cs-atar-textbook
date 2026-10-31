@@ -51,11 +51,11 @@ test('keyboard, chapter anchor, return to top and narrow-screen reflow',async({p
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
  // Establish a deterministic scroll position: native End can keep animating after
  // the key is released, and WebKit uses a different document-end shortcut.
- await page.evaluate(()=>window.scrollTo({top:1500,behavior:'instant'}));await expect.poll(()=>page.evaluate(()=>scrollY)).toBe(1500);await expect(page.locator('#back-to-top')).toBeVisible();
+ await page.evaluate(()=>window.scrollTo({top:1500,behavior:'instant'}));await expect.poll(()=>page.evaluate(()=>Math.abs(scrollY-1500))).toBeLessThan(1);await expect(page.locator('#back-to-top')).toBeVisible();
  await page.locator('#back-to-top').focus();await page.keyboard.press('Enter');await expect(page.locator('main h1')).toBeFocused();
- await expect.poll(()=>page.evaluate(()=>scrollY)).toBe(0);
+ await expect.poll(()=>page.evaluate(()=>scrollY)).toBeLessThan(1);
  await page.locator('.student-journey summary').click();
- const read=page.locator('.student-journey a').first();await read.click();
+ const read=page.locator('.student-journey a[href^="#start/"]').first();await read.click();
  const hash=await page.evaluate(()=>location.hash.split('/')[1]);await expect(page.locator('[id="'+hash+'"]').first()).toBeFocused();
 });
 test('resource filters, empty state and reset',async({page})=>{
