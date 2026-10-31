@@ -1,0 +1,9 @@
+staff,card_valid,override,allowed
+False,False,False,
+False,False,True,
+False,True,False,
+False,True,True,
+True,False,False,
+True,False,True,
+True,True,False,
+True,True,True,

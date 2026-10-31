@@ -1,0 +1,7 @@
+BEGIN;
+INSERT INTO Member VALUES (4,'Dev');
+INSERT INTO Loan VALUES (105,4,'Light',1,0);
+SELECT * FROM Loan WHERE loan_id=105;
+DELETE FROM Loan WHERE loan_id=105;
+SELECT * FROM Member WHERE member_id=4;
+ROLLBACK;

@@ -22,6 +22,7 @@ jobs:
       - uses: actions/checkout@v6
       - name: Regression checks
         run: |
+          python scripts/build-extended-packs.py
           node scripts/build-resource-hub.mjs
           node --test tests/*.test.mjs
           python tests/lesson-slides-package.test.py
@@ -30,6 +31,7 @@ jobs:
           python tests/project-trial.test.py
           python tests/curriculum-map.test.py
           python tests/foundations-pack.test.py
+          python tests/extended-packs.test.py
           python -m pip install pygame==2.6.1
           python tests/pygame-bridge.test.py
           python tests/teaching-depth-examples.test.py

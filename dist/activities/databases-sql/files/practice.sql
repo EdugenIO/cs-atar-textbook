@@ -1,0 +1,3 @@
+-- Use a new SQLite database and load setup.sql once.
+-- Write independent answers here, in activity order.
+-- Do not run changes against any real database.

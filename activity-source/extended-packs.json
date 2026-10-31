@@ -1,0 +1,1723 @@
+[
+  {
+    "id": "programming-next",
+    "title": "Programming: loops, functions, lists and files",
+    "unit": 1,
+    "prerequisites": "Complete the foundations pack: assignment, types, comparisons, selection and boundary tests. Teach these four activities in order; revisit tracing before adding repetition.",
+    "references": [
+      "https://docs.python.org/3/tutorial/controlflow.html",
+      "https://docs.python.org/3/tutorial/datastructures.html",
+      "https://docs.python.org/3/tutorial/inputoutput.html"
+    ],
+    "lessons": [
+      {
+        "id": "01",
+        "title": "Count and accumulate",
+        "chapter": "loops",
+        "intention": "Trace a counted loop and distinguish a counter from a running total.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "A club records points of 2, 4 and 6. range(1, 4) supplies 1, 2, 3; the stop value is excluded. Start total outside the loop so earlier values are preserved."
+          },
+          {
+            "type": "code",
+            "text": "total = 0\nfor round_number in range(1, 4):\n    total = total + round_number * 2\nprint(total)"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Round",
+              "Added",
+              "Total after update"
+            ],
+            "rows": [
+              [
+                "1",
+                "2",
+                "2"
+              ],
+              [
+                "2",
+                "4",
+                "6"
+              ],
+              [
+                "3",
+                "6",
+                "12"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "The loop runs three times and prints 12. Moving total = 0 inside the loop would discard earlier additions."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Predict and trace"
+          },
+          {
+            "type": "p",
+            "text": "Change the stop value to 5. Draw a trace with round number, added points and total. Predict the final output before running or hand-executing."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "B. Independent program"
+          },
+          {
+            "type": "p",
+            "text": "Write a loop to add the integers from 1 through n inclusive. Use supplied n = 4, then test n = 0 and n = 1. Record expected and actual totals separately. Explain why the accumulator starts at zero."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "n",
+              "Expected",
+              "Actual / hand trace"
+            ],
+            "rows": [
+              [
+                "4",
+                "",
+                ""
+              ],
+              [
+                "0",
+                "",
+                ""
+              ],
+              [
+                "1",
+                "",
+                ""
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "A learner uses range(1, n). Give a test that exposes the missing final value and explain the fix."
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "Rounds 1,2,3,4 add 2,4,6,8; running totals 2,6,12,20. Output 20."
+          ],
+          [
+            "B / exit",
+            "Use total = 0; for value in range(1, n + 1): total += value. Totals for 4,0,1 are 10,0,1. Zero is the additive identity; an empty range adds nothing. n = 1 exposes range(1,n): wrong 0 instead of 1."
+          ],
+          [
+            "Feedback",
+            "If the result is only the last value, locate accumulator initialisation. Retrace with n = 3 after the correction."
+          ]
+        ],
+        "offline": "Use a pencil and a trace table, treating each loop iteration as one row. Record hand-traced results explicitly; do not label them as executed Python output.",
+        "extension": ""
+      },
+      {
+        "id": "02",
+        "title": "Return a result from a function",
+        "chapter": "functions",
+        "intention": "Separate parameters, return values and printed output.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "This function applies a fixed booking charge of $2 and $3 per item. Assume quantity is a non-negative integer. The parameter is local to the function; return sends a value back to its caller."
+          },
+          {
+            "type": "code",
+            "text": "def booking_cost(quantity):\n    return quantity * 3 + 2\n\nfirst = booking_cost(4)\nprint(first)"
+          },
+          {
+            "type": "p",
+            "text": "quantity receives 4, the expression evaluates to 14, first receives 14 and print displays it. Defining the function alone does not perform this call."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Trace two calls"
+          },
+          {
+            "type": "p",
+            "text": "Predict booking_cost(0) and booking_cost(5). Explain why replacing return with print would stop first receiving the calculated number."
+          },
+          {
+            "type": "workspace",
+            "lines": 3
+          },
+          {
+            "type": "heading",
+            "text": "B. Independent transfer"
+          },
+          {
+            "type": "p",
+            "text": "Write cover_cost(quantity, price) returning quantity * price + 4. Test (0, 2), (3, 2) and (2, 5). Keep the function separate from printing. State the allowed input domain."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Arguments",
+              "Expected return",
+              "Observed / traced return"
+            ],
+            "rows": [
+              [
+                "0, 2",
+                "",
+                ""
+              ],
+              [
+                "3, 2",
+                "",
+                ""
+              ],
+              [
+                "2, 5",
+                "",
+                ""
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "Explain the difference between a parameter and an argument using one of your calls."
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "Returns 2 and 17. A print-only version displays a number but implicitly returns None; first would receive None."
+          ],
+          [
+            "B",
+            "def cover_cost(quantity, price): return quantity * price + 4. Returns 4,10,14. Accept non-negative integer quantity and non-negative numeric price, explicitly stated. Input validation is separate."
+          ],
+          [
+            "Exit / feedback",
+            "quantity and price are parameters; 3 and 2 are arguments in cover_cost(3,2). If print and return are confused, assign the result and inspect it before printing."
+          ]
+        ],
+        "offline": "Act out the function with an input card and a separate return card. Calculate all three calls by hand and label the results as traced.",
+        "extension": ""
+      },
+      {
+        "id": "03",
+        "title": "Traverse a list and retain a position",
+        "chapter": "arrays",
+        "intention": "Use zero-based indices and handle empty input deliberately.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "The task is to find the index of the first smallest value in a non-empty list. Start with the first valid index. Use <, rather than <=, to preserve the first equal minimum."
+          },
+          {
+            "type": "code",
+            "text": "values = [8, 3, 3, 6]\nbest = 0\nfor index in range(1, len(values)):\n    if values[index] < values[best]:\n        best = index\nprint(best, values[best])"
+          },
+          {
+            "type": "p",
+            "text": "At index 1 the minimum becomes 3; the equal 3 at index 2 does not replace it. The output is 1 3. The initial index is invalid for an empty list."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Independent trace"
+          },
+          {
+            "type": "p",
+            "text": "Trace [5, 7, 2, 2]. Show index, comparison and best after every iteration. Explain how <= would change the answer."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "B. Extend the contract"
+          },
+          {
+            "type": "p",
+            "text": "Add selection before the algorithm: if the list is empty, print 'No data'; otherwise find the first minimum. Test [], [9] and [4, 1, 1]. Do not silently report index 0 for an empty list."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Data",
+              "Expected",
+              "Actual / traced"
+            ],
+            "rows": [
+              [
+                "[]",
+                "",
+                ""
+              ],
+              [
+                "[9]",
+                "",
+                ""
+              ],
+              [
+                "[4, 1, 1]",
+                "",
+                ""
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "Distinguish index 1 from the value stored at index 1."
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "best remains 0 at index 1, changes to 2 at index 2, stays 2 at index 3. Output 2 2. With <= the last equal minimum wins: index 3."
+          ],
+          [
+            "B",
+            "Use if len(values) == 0 before any indexing; else execute the algorithm. Expected No data; 0 9; 1 1. For the last case the minimum value is 1 and its first index is 1."
+          ],
+          [
+            "Feedback",
+            "If indices start at 1, label positions 0..len-1 over the supplied values. Retest a single-element list and equal minima."
+          ]
+        ],
+        "offline": "Cut out value cards and number their positions from zero. Move a best-index marker only when the comparison is true.",
+        "extension": ""
+      },
+      {
+        "id": "04",
+        "title": "Read a file and test bad records",
+        "chapter": "files",
+        "intention": "Read sequential text, convert values and report unsuitable records.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "Assume a UTF-8 text file called readings.txt exists in the working folder. It contains one integer per line. The example ignores blank lines; a non-integer line is reported and skipped. File-not-found recovery is a separate task."
+          },
+          {
+            "type": "code",
+            "text": "total = 0\nwith open(\"readings.txt\", encoding=\"utf-8\") as source:\n    for line in source:\n        text = line.strip()\n        if text != \"\":\n            try:\n                total += int(text)\n            except ValueError:\n                print(\"Invalid:\", text)\nprint(\"Total:\", total)"
+          },
+          {
+            "type": "p",
+            "text": "For lines 3, blank, x, 5 the output is Invalid: x followed by Total: 8. int converts suitable text; the exception branch does not add a value."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Independent trace"
+          },
+          {
+            "type": "p",
+            "text": "Trace lines 2, -1, bad, 4. List the output messages in order. The current program accepts negative integers; distinguish conversion from a domain rule."
+          },
+          {
+            "type": "workspace",
+            "lines": 3
+          },
+          {
+            "type": "heading",
+            "text": "B. Change the requirement"
+          },
+          {
+            "type": "p",
+            "text": "Only readings 0 through 10 inclusive may contribute. Add a range test after conversion. Print Out of range: followed by the integer when outside this range. Preserve invalid-text reporting. Test lines 0, 10, 11, -1, oops, blank."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Case",
+              "Expected message / total effect",
+              "Actual / traced"
+            ],
+            "rows": [
+              [
+                "0 and 10",
+                "",
+                ""
+              ],
+              [
+                "11 and -1",
+                "",
+                ""
+              ],
+              [
+                "oops and blank",
+                "",
+                ""
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "Does this program recover from a missing file? Explain where that failure occurs."
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "Prints Invalid: bad then Total: 5. -1 is convertible and is accepted by the original contract."
+          ],
+          [
+            "B",
+            "After value = int(text), use if 0 <= value <= 10: total += value; else: print(\"Out of range:\", value). Test output: Out of range: 11; Out of range: -1; Invalid: oops; Total: 10. Blank is ignored."
+          ],
+          [
+            "Feedback / exit",
+            "No: open may raise FileNotFoundError before the inner try. A ValueError handler around conversion does not handle missing files. If 10 is rejected, check inclusive boundaries."
+          ]
+        ],
+        "offline": "Use the printed record lines as the file. Trace the accumulator and output queue line by line; no editor or device is required.",
+        "extension": ""
+      }
+    ],
+    "files": {
+      "worked.py": "total = 0\nfor round_number in range(1, 4):\n    total += round_number * 2\nprint(total)\n",
+      "readings.txt": "3\n\nx\n5\n",
+      "independent-starters.py": "# Complete one activity at a time in a separate file.\n# 01: sum integers from 1 to supplied n inclusive.\n# 02: define cover_cost(quantity, price), returning the cost.\n# 03: handle an empty list before indexing; find first minimum.\n# 04: read readings.txt, validate 0..10, retain error messages.\n"
+    },
+    "answers": {
+      "reference.py": "def sum_to(n):\n    total = 0\n    for value in range(1, n + 1):\n        total += value\n    return total\n\ndef cover_cost(quantity, price):\n    return quantity * price + 4\n\ndef first_minimum(values):\n    if len(values) == 0:\n        return None\n    best = 0\n    for index in range(1, len(values)):\n        if values[index] < values[best]:\n            best = index\n    return best\n\ndef reading_total(lines):\n    total = 0\n    messages = []\n    for line in lines:\n        text = line.strip()\n        if text != \"\":\n            try:\n                value = int(text)\n                if 0 <= value <= 10:\n                    total += value\n                else:\n                    messages.append(f\"Out of range: {value}\")\n            except ValueError:\n                messages.append(f\"Invalid: {text}\")\n    return total, messages\n"
+    }
+  },
+  {
+    "id": "databases-sql",
+    "title": "Databases and SQL: from records to reliable changes",
+    "unit": 2,
+    "prerequisites": "Teach in the numbered order. Activities 01-04 establish the Year 11 pathway; 05 introduces grouped reports with a labelled Year 12 HAVING extension. Complete relevant practice and feedback before any assessment. This is a progression, not a claim to cover every SQL syllabus item.",
+    "references": [
+      "https://www.sqlite.org/lang_select.html",
+      "https://www.sqlite.org/foreignkeys.html",
+      "https://www.sqlite.org/lang_transaction.html"
+    ],
+    "lessons": [
+      {
+        "id": "01",
+        "title": "Model records before querying",
+        "chapter": "database-foundations",
+        "intention": "Identify keys, relationships and a reason to separate tables.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "Use this synthetic dataset throughout the pack. returned is 1 for returned and 0 for outstanding. days is a stored duration, not a live date calculation. Loan.member_id refers to Member.member_id; one member may have zero or many loans. Each loan belongs to exactly one member."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Member ID",
+              "Name"
+            ],
+            "rows": [
+              [
+                "1",
+                "Ari"
+              ],
+              [
+                "2",
+                "Bo"
+              ],
+              [
+                "3",
+                "Cleo"
+              ]
+            ]
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Loan ID",
+              "Member ID",
+              "Item",
+              "Days",
+              "Returned"
+            ],
+            "rows": [
+              [
+                "101",
+                "1",
+                "Camera",
+                "3",
+                "1"
+              ],
+              [
+                "102",
+                "1",
+                "Headset",
+                "5",
+                "0"
+              ],
+              [
+                "103",
+                "2",
+                "Camera",
+                "2",
+                "1"
+              ],
+              [
+                "104",
+                "2",
+                "Tripod",
+                "5",
+                "0"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "member_id uniquely identifies a member. A name is not a reliable key: two people can share it. Separating member details avoids changing the same name on every loan."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Independent model"
+          },
+          {
+            "type": "p",
+            "text": "Draw both entities, underline primary keys and mark the foreign key. Add minimum and maximum relationship participation at each end. Can Cleo exist without a loan?"
+          },
+          {
+            "type": "workspace",
+            "lines": 5
+          },
+          {
+            "type": "heading",
+            "text": "B. Integrity and dependencies"
+          },
+          {
+            "type": "p",
+            "text": "Would loan (105, 9, Light, 1, 0) be valid with enforced foreign keys? Explain. A flat register repeats a member name on each loan: identify the update anomaly and the dependency that motivates separating Member."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "Could two Loan rows have the same member_id? Could they have the same loan_id? Explain each answer."
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "Member PK member_id; Loan PK loan_id; Loan FK member_id. One Member has 0..many Loans; one Loan has exactly 1 Member. Cleo illustrates optional participation for Member."
+          ],
+          [
+            "B",
+            "Member 9 does not exist, so the foreign-key insert fails when enforcement is enabled. Repeated names could be updated inconsistently. member_id determines name; loan_id determines loan details. Move member facts to Member."
+          ],
+          [
+            "Exit / feedback",
+            "Repeated Loan.member_id is valid for multiple loans. Repeated loan_id violates uniqueness. If keys are confused, identify which entity each identifier names."
+          ]
+        ],
+        "offline": "Use the printed tables as record cards. Draw keys and relationships on paper; apply integrity rules manually. Keep these tables beside later SQL activities.",
+        "extension": ""
+      },
+      {
+        "id": "02",
+        "title": "Select columns and specify order",
+        "chapter": "sql-basics",
+        "intention": "Read SELECT, FROM and ORDER BY before adding conditions.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "SQL returns a table. SELECT chooses output columns, FROM chooses source records, and ORDER BY specifies the result order. Without ORDER BY, do not rely on the displayed order. Run setup.sql once in a fresh SQLite database if using software."
+          },
+          {
+            "type": "code",
+            "text": "SELECT loan_id, item\nFROM Loan\nORDER BY loan_id;"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "loan_id",
+              "item"
+            ],
+            "rows": [
+              [
+                "101",
+                "Camera"
+              ],
+              [
+                "102",
+                "Headset"
+              ],
+              [
+                "103",
+                "Camera"
+              ],
+              [
+                "104",
+                "Tripod"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "The query returns four rows; item alone is not unique. SELECT DISTINCT item FROM Loan ORDER BY item; returns Camera, Headset, Tripod."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Write a query"
+          },
+          {
+            "type": "p",
+            "text": "Return name and member_id from Member, ordered by name descending. Predict every row, including column order, using Activity 01 tables."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "B. Independent transfer"
+          },
+          {
+            "type": "p",
+            "text": "Return loan_id and days ordered by days descending, then loan_id ascending to break ties. Explain why a secondary sort is useful here. Write a second query listing distinct durations in ascending order."
+          },
+          {
+            "type": "workspace",
+            "lines": 5
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "Does SELECT change the stored rows? Explain SELECT versus ORDER BY."
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "SELECT name, member_id FROM Member ORDER BY name DESC; returns ('Cleo',3), ('Bo',2), ('Ari',1)."
+          ],
+          [
+            "B",
+            "SELECT loan_id, days FROM Loan ORDER BY days DESC, loan_id ASC; returns (102,5),(104,5),(101,3),(103,2). DISTINCT days ordered ascending returns 2,3,5. Secondary order makes equal-day results explicit."
+          ],
+          [
+            "Exit / feedback",
+            "SELECT reads; it does not change stored rows. Output columns come from SELECT; order comes from ORDER BY. If rows are missing, check whether an unintended filter was added."
+          ]
+        ],
+        "offline": "Write the SQL and construct the result table by hand from Activity 01. Label it a manual result; a school-approved SQLite tool is optional.",
+        "extension": ""
+      },
+      {
+        "id": "03",
+        "title": "Filter rows and test boundaries",
+        "chapter": "sql-basics",
+        "intention": "Apply WHERE with inclusive boundaries and explicit Boolean grouping.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "WHERE filters individual rows before the result is sorted. BETWEEN includes both endpoints. Text literals use single quotes. Parentheses make combined conditions explicit."
+          },
+          {
+            "type": "code",
+            "text": "SELECT loan_id, item, days\nFROM Loan\nWHERE returned = 0 AND days BETWEEN 3 AND 5\nORDER BY loan_id;"
+          },
+          {
+            "type": "p",
+            "text": "The result is (102, Headset, 5) and (104, Tripod, 5). Test the boundary separately: a returned = 0 row with days = 3 would also qualify. This dataset does not by itself demonstrate that lower boundary."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Independent query"
+          },
+          {
+            "type": "p",
+            "text": "Return loan_id and item for Camera loans OR outstanding loans, ordered by loan_id. Then change the condition to require a Camera AND an outstanding loan. Predict both results."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "B. Changed test data"
+          },
+          {
+            "type": "p",
+            "text": "Write a query for outstanding loans lasting 2 through 4 days inclusive. Predict the current result, then design three hypothetical test rows that check 1, 2 and 4 days. State whether each should pass. Do not change the shared database yet."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Days / returned",
+              "Expected inclusion",
+              "Reason"
+            ],
+            "rows": [
+              [
+                "1 / 0",
+                "",
+                ""
+              ],
+              [
+                "2 / 0",
+                "",
+                ""
+              ],
+              [
+                "4 / 0",
+                "",
+                ""
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "Write a condition for item names beginning with C using LIKE. Why would = NULL fail to test a missing value in a nullable column?"
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "WHERE item = 'Camera' OR returned = 0 returns all four loans. AND instead returns no rows: Camera loans are returned. Retain ORDER BY loan_id."
+          ],
+          [
+            "B",
+            "WHERE returned = 0 AND days BETWEEN 2 AND 4 returns no current rows. Hypothetical days 1 excludes; 2 and 4 include. Include returned = 0 in each test."
+          ],
+          [
+            "Exit / feedback",
+            "item LIKE 'C%' matches Camera. Use IS NULL for missing values: = NULL is not true, and WHERE retains only true conditions. Loan columns in this dataset are NOT NULL; use a hypothetical nullable column for this explanation."
+          ]
+        ],
+        "offline": "Evaluate the Boolean expression on each printed row. Use separate true/false columns for its parts and construct the final table without database software.",
+        "extension": ""
+      },
+      {
+        "id": "04",
+        "title": "Join related records without losing meaning",
+        "chapter": "database-solution",
+        "intention": "Match keys in an INNER JOIN and predict missing matches.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "A join pairs related rows. The ON clause must match the member identifier, not loan_id. A member with two loans produces two result rows; that is expected one-to-many behaviour."
+          },
+          {
+            "type": "code",
+            "text": "SELECT Member.name, Loan.loan_id, Loan.item\nFROM Member INNER JOIN Loan\nON Member.member_id = Loan.member_id\nORDER BY Loan.loan_id;"
+          },
+          {
+            "type": "p",
+            "text": "The result is Ari/101/Camera, Ari/102/Headset, Bo/103/Camera, Bo/104/Tripod. Cleo is absent because an INNER JOIN requires a matching loan."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Independent report"
+          },
+          {
+            "type": "p",
+            "text": "Write a joined report listing member name, loan_id and item only for outstanding loans. Order by loan_id and predict every row."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "B. Diagnose a faulty join"
+          },
+          {
+            "type": "p",
+            "text": "A learner joins ON Member.member_id = Loan.loan_id. Predict the row count here and explain the error. Another learner omits the matching condition entirely and produces every member-loan pair: calculate that row count."
+          },
+          {
+            "type": "workspace",
+            "lines": 3
+          },
+          {
+            "type": "heading",
+            "text": "Exit / later extension"
+          },
+          {
+            "type": "p",
+            "text": "Why does counting joined rows fail to count distinct members? After INNER JOIN is secure, investigate LEFT JOIN: which extra member would it preserve, and what would the missing Loan columns contain?"
+          },
+          {
+            "type": "workspace",
+            "lines": 3
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "Use the worked join plus WHERE Loan.returned = 0. Returns Ari/102/Headset and Bo/104/Tripod. ORDER BY Loan.loan_id."
+          ],
+          [
+            "B",
+            "Wrong join gives 0 rows because 1,2,3 do not equal 101..104. All pairs give 3 * 4 = 12 rows. Join relationships using corresponding keys."
+          ],
+          [
+            "Exit / extension",
+            "Ari and Bo each appear twice; row count 4 is not distinct-member count 2. LEFT JOIN preserves Cleo with NULL loan columns. LEFT JOIN is a later extension, not a prerequisite for the independent INNER JOIN task."
+          ]
+        ],
+        "offline": "Place matching Member and Loan cards beside one another. Construct each joined output row by hand; include a no-match card for Cleo.",
+        "extension": ""
+      },
+      {
+        "id": "05",
+        "title": "Aggregate first, then filter groups",
+        "chapter": "sql-basics",
+        "intention": "Distinguish row filters, grouping and aggregate results.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "Start with one table. GROUP BY partitions rows by a chosen key. COUNT(*) counts rows in each group and SUM(days) adds stored durations. Every selected non-aggregate column here is grouped. These rules avoid SQLite-specific bare-column behaviour."
+          },
+          {
+            "type": "code",
+            "text": "SELECT member_id, COUNT(*) AS loans, SUM(days) AS total_days\nFROM Loan\nGROUP BY member_id\nORDER BY member_id;"
+          },
+          {
+            "type": "p",
+            "text": "Result: (1, 2, 8), (2, 2, 7). Cleo has no Loan rows, so no group appears. AVG(days) over all four loans is 15 / 4 = 3.75; COUNT(*) is 4."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Independent grouped report"
+          },
+          {
+            "type": "p",
+            "text": "Group by item, showing item, COUNT(*) and MAX(days), ordered by item. Predict each row. Then add WHERE returned = 0 before GROUP BY and recalculate."
+          },
+          {
+            "type": "workspace",
+            "lines": 5
+          },
+          {
+            "type": "heading",
+            "text": "B. Year 12 extension: HAVING"
+          },
+          {
+            "type": "p",
+            "text": "After grouped reports are secure, return member_id and SUM(days) only for groups whose sum is at least 8. Use HAVING SUM(days) >= 8. Explain why WHERE SUM(days) >= 8 is unsuitable here."
+          },
+          {
+            "type": "workspace",
+            "lines": 3
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "For a LEFT JOIN from Member to Loan, why would COUNT(Loan.loan_id) give Cleo zero while COUNT(*) gives one? Refer to the preserved unmatched row."
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "All rows: Camera/2/3, Headset/1/5, Tripod/1/5. With WHERE returned = 0: Headset/1/5, Tripod/1/5. WHERE removes source rows before grouping."
+          ],
+          [
+            "B",
+            "SELECT member_id, SUM(days) FROM Loan GROUP BY member_id HAVING SUM(days) >= 8 ORDER BY member_id; returns (1,8). HAVING filters groups; WHERE cannot filter on an aggregate over the group at that stage."
+          ],
+          [
+            "Exit / feedback",
+            "The preserved Cleo row contains NULL Loan.loan_id. COUNT(column) ignores NULL; COUNT(*) counts that row. If totals are multiplied, inspect join cardinality before changing aggregate functions."
+          ]
+        ],
+        "offline": "Sort printed loan cards into piles by the grouping key and calculate each aggregate. Use the optional extension only after feedback on Activity 04 and the grouped report.",
+        "extension": ""
+      },
+      {
+        "id": "06",
+        "title": "Make controlled changes and prove the result",
+        "chapter": "database-solution",
+        "intention": "Use a fresh copy, specific conditions and rollback while practising changes.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "Work only on a disposable copy. In each SQLite connection, run PRAGMA foreign_keys = ON; before BEGIN and check PRAGMA foreign_keys; returns 1. This setting is not saved in the database file. A transaction groups changes until COMMIT makes them persistent or ROLLBACK cancels them. Preview the target row before changing it. The example marks loan 102 returned, checks it, then rolls back."
+          },
+          {
+            "type": "code",
+            "text": "BEGIN;\nSELECT loan_id, returned FROM Loan WHERE loan_id = 102;\nUPDATE Loan SET returned = 1 WHERE loan_id = 102;\nSELECT loan_id, returned FROM Loan WHERE loan_id = 102;\nROLLBACK;"
+          },
+          {
+            "type": "p",
+            "text": "Before: (102,0). Inside transaction: (102,1). After ROLLBACK a fresh SELECT gives (102,0). An UPDATE without WHERE would change all four rows."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Independent transaction"
+          },
+          {
+            "type": "p",
+            "text": "In a fresh copy, insert Member (4, 'Dev'), then Loan (105, 4, 'Light', 1, 0). Preview and delete only loan 105. Verify Member 4 still exists, then ROLLBACK the whole transaction. Predict final row counts. Write every statement."
+          },
+          {
+            "type": "workspace",
+            "lines": 6
+          },
+          {
+            "type": "heading",
+            "text": "B. Create and test a constraint"
+          },
+          {
+            "type": "p",
+            "text": "Write CREATE TABLE Tag with tag_id INTEGER PRIMARY KEY and label TEXT NOT NULL. In a separate scratch database, predict the outcome of inserting (1, NULL), then (1, Light) with the text correctly quoted. Explain what the two constraints protect."
+          },
+          {
+            "type": "workspace",
+            "lines": 3
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "List the evidence you would retain before committing an authorised change. Explain why running the same insert twice can fail."
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "BEGIN; INSERT INTO Member VALUES (4,'Dev'); INSERT INTO Loan VALUES (105,4,'Light',1,0); SELECT * FROM Loan WHERE loan_id=105; DELETE FROM Loan WHERE loan_id=105; SELECT * FROM Member WHERE member_id=4; ROLLBACK; Final original counts: Member 3, Loan 4. Member 4 exists inside the transaction after the delete, but not after rollback."
+          ],
+          [
+            "B",
+            "CREATE TABLE Tag(tag_id INTEGER PRIMARY KEY, label TEXT NOT NULL); NULL label fails. INSERT INTO Tag VALUES (1,'Light'); succeeds if the table is fresh. Primary key ensures unique tag IDs; NOT NULL requires a label value, but does not itself prohibit empty text."
+          ],
+          [
+            "Feedback / exit",
+            "Retain requirement, authorised scope, preview, expected/actual affected rows and verification/recovery evidence. A repeated successful insert with the same primary key fails. If too many rows change, rollback and repair WHERE before retrying."
+          ]
+        ],
+        "offline": "Use a second paper copy of the tables. Pencil in changes, record before/after rows, then discard the copy for rollback. This models effects but does not prove a database engine enforced a constraint.",
+        "extension": ""
+      }
+    ],
+    "files": {
+      "setup.sql": "PRAGMA foreign_keys = ON;\nCREATE TABLE Member (\n member_id INTEGER PRIMARY KEY,\n name TEXT NOT NULL\n);\nCREATE TABLE Loan (\n loan_id INTEGER PRIMARY KEY,\n member_id INTEGER NOT NULL REFERENCES Member(member_id),\n item TEXT NOT NULL,\n days INTEGER NOT NULL CHECK(days >= 0),\n returned INTEGER NOT NULL CHECK(returned IN (0,1))\n);\nINSERT INTO Member VALUES (1,'Ari'),(2,'Bo'),(3,'Cleo');\nINSERT INTO Loan VALUES\n (101,1,'Camera',3,1),\n (102,1,'Headset',5,0),\n (103,2,'Camera',2,1),\n (104,2,'Tripod',5,0);\n",
+      "practice.sql": "-- Use a new SQLite database and load setup.sql once.\n-- Write independent answers here, in activity order.\n-- Do not run changes against any real database.\n",
+      "Member.csv": "member_id,name\n1,Ari\n2,Bo\n3,Cleo\n",
+      "Loan.csv": "loan_id,member_id,item,days,returned\n101,1,Camera,3,1\n102,1,Headset,5,0\n103,2,Camera,2,1\n104,2,Tripod,5,0\n"
+    },
+    "answers": {
+      "queries.sql": "SELECT name, member_id FROM Member ORDER BY name DESC;\nSELECT loan_id, days FROM Loan ORDER BY days DESC, loan_id ASC;\nSELECT DISTINCT days FROM Loan ORDER BY days;\nSELECT loan_id, item FROM Loan WHERE item = 'Camera' OR returned = 0 ORDER BY loan_id;\nSELECT loan_id, item FROM Loan WHERE item = 'Camera' AND returned = 0 ORDER BY loan_id;\nSELECT Member.name, Loan.loan_id, Loan.item FROM Member INNER JOIN Loan ON Member.member_id = Loan.member_id WHERE Loan.returned = 0 ORDER BY Loan.loan_id;\nSELECT item, COUNT(*), MAX(days) FROM Loan GROUP BY item ORDER BY item;\nSELECT item, COUNT(*), MAX(days) FROM Loan WHERE returned = 0 GROUP BY item ORDER BY item;\nSELECT member_id, SUM(days) FROM Loan GROUP BY member_id HAVING SUM(days) >= 8 ORDER BY member_id;\n",
+      "changes.sql": "BEGIN;\nINSERT INTO Member VALUES (4,'Dev');\nINSERT INTO Loan VALUES (105,4,'Light',1,0);\nSELECT * FROM Loan WHERE loan_id=105;\nDELETE FROM Loan WHERE loan_id=105;\nSELECT * FROM Member WHERE member_id=4;\nROLLBACK;\n"
+    }
+  },
+  {
+    "id": "network-reasoning",
+    "title": "Networks: trace, address, design and test",
+    "unit": 1,
+    "prerequisites": "Read Network foundations before Activity 01. Activities 01-03 develop Unit 1 reasoning; Activity 04 is a Year 12 Unit 3 addressing bridge and requires binary/prefix knowledge. Use supplied fictional addresses and logs; no scanning or live configuration is needed.",
+    "references": [
+      "https://learn.microsoft.com/en-us/troubleshoot/windows-client/networking/tcpip-addressing-and-subnetting",
+      "https://www.rfc-editor.org/rfc/rfc9293",
+      "https://www.rfc-editor.org/rfc/rfc768"
+    ],
+    "lessons": [
+      {
+        "id": "01",
+        "title": "Follow a message through a network",
+        "chapter": "networks",
+        "intention": "Separate local forwarding, routing and application responsibilities.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "A classroom laptop requests a page from a remote server. Simplify the path as laptop -> access point -> switch -> router -> remote network -> server. The access point connects wireless clients; the switch forwards local frames using link-layer addresses; the router forwards IP packets between networks."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Responsibility",
+              "Worked decision"
+            ],
+            "rows": [
+              [
+                "DNS",
+                "Resolve a hostname to an IP address; not the page itself"
+              ],
+              [
+                "IP / router",
+                "Address and forward packets across networks"
+              ],
+              [
+                "TCP",
+                "Provide ordered reliable byte-stream transport"
+              ],
+              [
+                "HTTPS",
+                "HTTP protected by TLS; confidentiality and authentication depend on correct verification"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "These are responsibilities, not a claim that every real network uses this exact arrangement."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Independent trace"
+          },
+          {
+            "type": "p",
+            "text": "Two wired computers are on the same subnet and switch. Draw their simplified message path. Explain why sending this local traffic does not require the internet router to forward it."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "B. Diagnose from evidence"
+          },
+          {
+            "type": "p",
+            "text": "A cached page opens, but a new hostname does not resolve. Explain why the cached page is insufficient evidence that DNS works. Name one extra supplied observation you would request before choosing a cause."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "Distinguish the switch forwarding a local frame from the router forwarding a packet between networks."
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "Computer A -> switch -> computer B. Same-subnet delivery uses local link forwarding after address resolution; a router is needed when the destination is outside the local subnet."
+          ],
+          [
+            "B",
+            "A cached page may require no new DNS lookup or network fetch. Request a supplied DNS result, connectivity observation, or server response. Consider alternatives instead of asserting a fault from the cache alone."
+          ],
+          [
+            "Feedback",
+            "If every box is called a router, label each forwarding responsibility and revisit the simplified path. Real devices can combine roles."
+          ]
+        ],
+        "offline": "Use role cards and paper message envelopes. Label the destination and move the envelope along the drawn path; no live traffic capture is required.",
+        "extension": ""
+      },
+      {
+        "id": "02",
+        "title": "Compare transport using a supplied trace",
+        "chapter": "networks",
+        "intention": "Explain reliability and latency trade-offs without treating protocols as guarantees.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "For a simplified teaching trace, a TCP sender transmits segments carrying bytes starting at sequence 100 and 104, four bytes each. The receiver gets the first segment and acknowledges 104, the next expected byte. If the second segment is lost, TCP can retransmit it and the receiver can acknowledge 108. Actual traces include further flags, timing and congestion behaviour."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Application need",
+              "Worked reasoning"
+            ],
+            "rows": [
+              [
+                "File transfer",
+                "Ordered delivery and recovery matter; TCP is a suitable transport choice"
+              ],
+              [
+                "Live audio",
+                "Late data can lose value; an application may prefer UDP with its own handling"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "UDP itself does not promise delivery or ordering. TCP reliability does not guarantee low delay or that an application succeeds."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Independent trace"
+          },
+          {
+            "type": "p",
+            "text": "Repeat the simplified example with first sequence 200 and two segments of 6 bytes. State the next expected byte after the first and after both. If the second is missing, identify what still needs recovery."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "B. Choose with reasons"
+          },
+          {
+            "type": "p",
+            "text": "Choose and justify a transport for downloading a marked report and for a live voice stream. State one cost or limitation of each choice. Explain why an application can add reliability over UDP."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "Is a missing packet in a single supplied trace proof of a permanently faulty cable? Give an alternative cause and the next evidence needed."
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "Next expected byte 206 after the first; 212 after both contiguous segments. Missing bytes 206..211 still need recovery. This simplified exercise counts payload bytes only."
+          ],
+          [
+            "B",
+            "Report: TCP suits ordered reliable transfer, with retransmission delay as a cost. Voice: UDP may suit time-sensitive delivery; loss/order handling falls to the application. Applications can add acknowledgements/retries themselves."
+          ],
+          [
+            "Feedback / exit",
+            "No. Congestion, temporary interference or incomplete capture may explain a missing observation. Request repeat evidence or relevant link/error logs before selecting a physical fault."
+          ]
+        ],
+        "offline": "Write sequence numbers on paper strips and simulate loss by withholding a strip. The receiver writes the next expected byte number; this is a teaching model, not a full protocol implementation.",
+        "extension": ""
+      },
+      {
+        "id": "03",
+        "title": "Design against capacity and access requirements",
+        "chapter": "network-design",
+        "intention": "Calculate a lower-bound transfer time and justify a restricted network design.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "A fictional school transfers a 120 MB file over a 40 Mbit/s link. Using decimal units, 120 MB = 960 Mbit, so the ideal lower bound is 960 / 40 = 24 seconds. Protocol overhead, contention and storage performance can increase actual time. MB is bytes; Mbit is bits."
+          },
+          {
+            "type": "p",
+            "text": "The school separates a student segment and a staff segment. A proposed rule permits student access to a named learning server but denies access to a staff file service. The design requires both an allowed-case test and a denied-case test; drawing two colours alone does not enforce isolation."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Independent calculation"
+          },
+          {
+            "type": "p",
+            "text": "A 75 MB file uses a 20 Mbit/s link. Calculate the ideal minimum seconds and name two reasons an observed transfer might be slower. State all unit conversions."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "B. Design and test"
+          },
+          {
+            "type": "p",
+            "text": "Draw a small network for 12 student devices, 2 staff devices and a learning server. Mark switches/access points, the routing boundary and the policy enforcement point. Write one permit rule and one deny rule, plus expected outcomes for two tests. Do not configure a live system."
+          },
+          {
+            "type": "workspace",
+            "lines": 6
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "Why does successfully opening the learning server fail to prove that staff files are protected?"
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "75 MB * 8 = 600 Mbit; 600 / 20 = 30 seconds ideal minimum. Accept contention, overhead, wireless interference, storage or other identified bottlenecks with explanation."
+          ],
+          [
+            "B",
+            "Accept a coherent topology with separate segments and an explicit firewall/access policy at the routing boundary. Permit student -> named learning service; deny student -> staff file service. Test the allowed destination succeeds and the denied one is blocked, retaining observations."
+          ],
+          [
+            "Feedback / exit",
+            "An allowed test does not exercise the denied path. Require a corresponding denied-case test; network names or colour coding are not enforcement evidence."
+          ]
+        ],
+        "offline": "Draw the topology and apply written permit/deny cards to supplied requests. Calculate transfer time on paper. Optional network pods may later test the same rules in an authorised isolated lab.",
+        "extension": ""
+      },
+      {
+        "id": "04",
+        "title": "Year 12 bridge: allocate a small subnet",
+        "chapter": "unit3-addressing",
+        "intention": "Calculate an IPv4 subnet range and include every required interface.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "Year 12 bridge: /27 leaves 5 host bits. It contains 2^5 = 32 addresses. For an ordinary IPv4 LAN subnet with network and broadcast addresses reserved, 30 are usable. In 192.0.2.64/27, network .64, usable .65-.94 and broadcast .95. 192.0.2.0/24 is documentation space used here as a fictional example."
+          },
+          {
+            "type": "p",
+            "text": "A LAN needs 24 workstation interfaces plus 1 router interface: 25 usable addresses. /27 is the smallest conventional subnet that fits; /28 offers only 14 usable. Other special subnet types have different rules and are outside this activity."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Independent range"
+          },
+          {
+            "type": "p",
+            "text": "For 192.0.2.96/27, give network, broadcast, first and last usable addresses, subnet mask and usable count. Show the block-size method."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "B. Changed requirement"
+          },
+          {
+            "type": "p",
+            "text": "The LAN grows to 30 workstations plus 1 router interface. Does /27 still fit? Give the smallest conventional prefix that fits. Allocate it starting at 192.0.2.128 and state its full address range."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "Two adjacent /27 subnets start at .64 and .96. Does .95 belong to the second subnet? Explain its role."
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "Block size 32; network 192.0.2.96; broadcast .127; usable .97-.126; mask 255.255.255.224; 30 usable."
+          ],
+          [
+            "B",
+            "31 interfaces do not fit 30 usable. /26 has 64 total and 62 usable. 192.0.2.128/26 spans .128-.191; usable .129-.190; broadcast .191."
+          ],
+          [
+            "Feedback / exit",
+            ".95 is the broadcast of .64/27, not a host in .96/27. If allocations overlap, list network and broadcast before assigning host addresses."
+          ]
+        ],
+        "offline": "Use a 0-255 number line divided into blocks of 32 or 64. Assign interface cards only to usable addresses; no physical router or subnet calculator is needed.",
+        "extension": ""
+      }
+    ],
+    "files": {
+      "transport-trace.csv": "event,sequence,payload_bytes,next_expected\nfirst,200,6,\nsecond,206,6,\n",
+      "network-test-log.csv": "case,source,destination,expected,observed,evidence\nallowed,student,learning service,,,\ndenied,student,staff file service,,,\n",
+      "address-plan.csv": "subnet,network,first_usable,last_usable,broadcast,mask,usable_count\n192.0.2.96/27,,,,,,\n"
+    },
+    "answers": {}
+  },
+  {
+    "id": "computer-systems",
+    "title": "Computer systems: representation, logic and performance",
+    "unit": 1,
+    "prerequisites": "Use as general supporting computer-systems practice alongside the representation chapter. These activities build conceptual fluency; the CPU and performance examples are supporting context, not a claim that every detail is examinable. Teach binary place value before logic and performance.",
+    "references": [
+      "https://docs.python.org/3/library/functions.html#ord",
+      "https://www.unicode.org/standard/principles.html",
+      "https://www.rfc-editor.org/rfc/rfc3629"
+    ],
+    "lessons": [
+      {
+        "id": "01",
+        "title": "Represent a value with bits",
+        "chapter": "representation",
+        "intention": "Convert between unsigned binary, decimal and hexadecimal with a declared width.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "For an unsigned 8-bit value, the place values are 128,64,32,16,8,4,2,1. 00101101 equals 32 + 8 + 4 + 1 = 45. Split it into nibbles: 0010 is 2 and 1101 is D, so the hexadecimal representation is 2D. These are representations of the same value."
+          },
+          {
+            "type": "p",
+            "text": "Eight unsigned bits represent 0 through 255. A calculated value of 256 needs nine bits. The storage width and signed/unsigned interpretation must be stated before interpreting a bit pattern."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Independent conversions"
+          },
+          {
+            "type": "p",
+            "text": "Convert decimal 58 to 8-bit binary and hexadecimal. Convert binary 10100110 to decimal and hexadecimal. Show place-value working rather than only the final answer."
+          },
+          {
+            "type": "workspace",
+            "lines": 5
+          },
+          {
+            "type": "heading",
+            "text": "B. Boundary reasoning"
+          },
+          {
+            "type": "p",
+            "text": "A field stores an unsigned 8-bit count. Can it represent 255, 256 and -1? Explain. Do not assume wraparound behaviour unless the system specification states it."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Value",
+              "Fits?",
+              "Reason"
+            ],
+            "rows": [
+              [
+                "255",
+                "",
+                ""
+              ],
+              [
+                "256",
+                "",
+                ""
+              ],
+              [
+                "-1",
+                "",
+                ""
+              ]
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "Does leading zero padding change the unsigned numeric value? Why state the width anyway?"
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "58 = 32+16+8+2 = 00111010 = 3A. 10100110 = 128+32+4+2 = 166 = A6."
+          ],
+          [
+            "B",
+            "255 fits; 256 exceeds the maximum; -1 is outside the unsigned domain. A signed representation would require a different interpretation."
+          ],
+          [
+            "Feedback / exit",
+            "Leading zeros preserve an unsigned value; width establishes the available patterns/range. If a nibble is reversed, label bit weights before grouping into hexadecimal."
+          ]
+        ],
+        "offline": "Use eight labelled place-value cards and counters. Group four bits at a time for hexadecimal; calculators and hardware are optional.",
+        "extension": ""
+      },
+      {
+        "id": "02",
+        "title": "Separate characters from encoded bytes",
+        "chapter": "representation",
+        "intention": "Distinguish a code point, encoding and the number of stored bytes.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "Unicode gives characters code points. For A, U+0041 is decimal 65 and its UTF-8 representation is one byte, hexadecimal 41. For é (precomposed U+00E9), UTF-8 uses two bytes C3 A9. A code point number is not necessarily a byte value in the chosen encoding."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Text",
+              "Code points",
+              "UTF-8 bytes (hex)"
+            ],
+            "rows": [
+              [
+                "A",
+                "U+0041",
+                "41"
+              ],
+              [
+                "B",
+                "U+0042",
+                "42"
+              ],
+              [
+                "é (precomposed)",
+                "U+00E9",
+                "C3 A9"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "UTF-8 uses one to four bytes per code point. Visually similar text may use different code-point sequences. This exercise uses exactly the supplied precomposed character."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Independent byte count"
+          },
+          {
+            "type": "p",
+            "text": "Using the supplied table, write the UTF-8 bytes for ABé and count code points, bytes and bits. Count only encoded text: no byte-order mark, terminator or file metadata."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "B. Diagnose an assumption"
+          },
+          {
+            "type": "p",
+            "text": "A learner says ten characters always take ten bytes. Give a counterexample using only the table. Explain why counting displayed symbols can be more complex than counting code points."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "Explain why reading C3 A9 as two unrelated characters would produce the wrong text."
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "41 42 C3 A9: 3 code points, 4 bytes, 32 bits. UTF-8 encodes the precomposed é using two bytes."
+          ],
+          [
+            "B",
+            "Ten precomposed é code points take 20 UTF-8 bytes. A displayed symbol can contain multiple code points, such as a base character plus a combining mark; do not equate every displayed symbol with one code point."
+          ],
+          [
+            "Feedback / exit",
+            "The bytes form a single UTF-8 sequence for U+00E9. Decode using the declared encoding. If totals count hexadecimal digits as bytes, mark pairs of digits as one byte."
+          ]
+        ],
+        "offline": "Use the supplied encoding table as the complete data source. Concatenate byte cards on paper; no Unicode software or VR headset is required.",
+        "extension": ""
+      },
+      {
+        "id": "03",
+        "title": "Combine logic and evaluate a small system",
+        "chapter": "selection",
+        "intention": "Construct a truth table and evaluate a declared access decision.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "A fictional desktop simulation displays OPEN only when staff is true AND (card_valid OR override) is true. The override bypasses the card requirement, not the staff requirement. This is a supplied Boolean rule for reasoning, not a real access-control specification."
+          },
+          {
+            "type": "code",
+            "text": "allowed = staff and (card_valid or override)"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Staff",
+              "Card valid",
+              "Override",
+              "Allowed"
+            ],
+            "rows": [
+              [
+                "False",
+                "False",
+                "False",
+                "False"
+              ],
+              [
+                "False",
+                "True",
+                "True",
+                "False"
+              ],
+              [
+                "True",
+                "False",
+                "True",
+                "True"
+              ],
+              [
+                "True",
+                "False",
+                "False",
+                "False"
+              ]
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Work inside the parentheses first, then apply AND. The output message does not actuate any door or other device."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Complete the truth table"
+          },
+          {
+            "type": "p",
+            "text": "Build all eight distinct combinations of the three Boolean inputs and calculate allowed. Mark which two rows differ when override changes while staff=True and card_valid=False."
+          },
+          {
+            "type": "workspace",
+            "lines": 6
+          },
+          {
+            "type": "heading",
+            "text": "B. Independent comparison"
+          },
+          {
+            "type": "p",
+            "text": "Compare staff and (card_valid or override) with (staff and card_valid) or override. Supply an input combination on which they differ and explain the consequence."
+          },
+          {
+            "type": "workspace",
+            "lines": 3
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "Which input combinations make the original rule true? Explain without saying merely that the table says so."
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "For staff/card/override in FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT order, allowed is F,F,F,F,F,T,T,T. TFF is false; TFT is true."
+          ],
+          [
+            "B",
+            "staff=False, card_valid=False, override=True: original false, changed expression true. The changed rule lets override bypass staff status as well as the card requirement."
+          ],
+          [
+            "Feedback / exit",
+            "Staff must be true and at least one of card_valid/override true. If combinations are missing, enumerate inputs as a three-bit count 000..111 before calculating output."
+          ]
+        ],
+        "offline": "Use Boolean input cards and a paper AND/OR circuit. Trace the declared rule; no electronics or physical access equipment is needed.",
+        "extension": ""
+      },
+      {
+        "id": "04",
+        "title": "Explain processing and a performance bottleneck",
+        "chapter": "representation",
+        "intention": "Use a simplified processing model and distinguish capacity from transfer rate.",
+        "worked": [
+          {
+            "type": "p",
+            "text": "Supporting context: in a simplified stored-program model, instructions and data reside in memory. The processor fetches an instruction, decodes it and executes its operation; registers hold immediate working values, while persistent storage retains files without power. Real processors overlap work, so this is a conceptual model, not a timing simulator."
+          },
+          {
+            "type": "p",
+            "text": "A fictional capture system produces 6 MB each second. A storage path sustains 4 MB/s. The backlog grows by 2 MB/s. With an initially empty 20 MB buffer, it fills after 20 / 2 = 10 seconds, assuming constant rates and no other overhead."
+          }
+        ],
+        "practice": [
+          {
+            "type": "heading",
+            "text": "A. Independent pipeline"
+          },
+          {
+            "type": "p",
+            "text": "Draw input -> processing -> output for a supplied temperature display. Locate its saved program, working values and saved log using memory/register/storage roles. State which parts must persist after power is removed."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "B. Changed performance case"
+          },
+          {
+            "type": "p",
+            "text": "A simulated recorder produces 9 MB/s, writes 6 MB/s and has an empty 24 MB buffer. Calculate net growth and time to fill. Would doubling CPU clock rate necessarily remove this bottleneck? Explain using the rates."
+          },
+          {
+            "type": "workspace",
+            "lines": 4
+          },
+          {
+            "type": "heading",
+            "text": "Exit"
+          },
+          {
+            "type": "p",
+            "text": "Distinguish MB of buffer capacity from MB/s of write throughput. Explain one limitation of this constant-rate model."
+          },
+          {
+            "type": "workspace",
+            "lines": 2
+          }
+        ],
+        "key": [
+          [
+            "A",
+            "Accept a labelled flow with sensor value as input, conversion/formatting as processing and displayed temperature as output. Saved program/log reside in persistent storage; program/data are loaded into working memory; immediate CPU values use registers. Working memory is generally volatile in this model."
+          ],
+          [
+            "B",
+            "Net growth 9-6 = 3 MB/s; fill time 24/3 = 8 seconds. A faster CPU does not necessarily increase the stated write throughput; storage remains the bottleneck unless its service rate changes."
+          ],
+          [
+            "Feedback / exit",
+            "MB measures an amount; MB/s measures an amount per second. Real rates vary, buffers may start partly full, and overhead may change throughput. Ask which assumption changed before recalculating."
+          ]
+        ],
+        "offline": "Draw the pipeline and use counters for produced, written and buffered MB each second. Optional drone/VR recordings can supply later data, but the supplied figures meet the same learning goal.",
+        "extension": ""
+      }
+    ],
+    "files": {
+      "conversion-table.csv": "decimal,binary_8_bit,hexadecimal\n58,,\n166,,\n",
+      "buffer-trace.csv": "second,produced_MB,written_MB,buffered_MB\n0,0,0,0\n1,,,\n2,,,\n3,,,\n",
+      "logic-inputs.csv": "staff,card_valid,override,allowed\nFalse,False,False,\nFalse,False,True,\nFalse,True,False,\nFalse,True,True,\nTrue,False,False,\nTrue,False,True,\nTrue,True,False,\nTrue,True,True,\n"
+    },
+    "answers": {}
+  }
+]

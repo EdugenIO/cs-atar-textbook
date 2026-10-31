@@ -75,7 +75,7 @@
     "intro": "Binary, decimal and hexadecimal are different ways to write a number. Character encodings connect numbers with text.",
     "unit": 1,
     "year": 11,
-    "topic": "Programming and design",
+    "topic": "Computer systems",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -100,6 +100,36 @@
       {
         "label": "Foundations teacher answers",
         "href": "../activities/programming-foundations/teacher.html",
+        "type": "teacher"
+      },
+      {
+        "label": "Activity 01: Represent a value with bits",
+        "href": "../activities/computer-systems/#lesson-01",
+        "type": "activity"
+      },
+      {
+        "label": "Activity 02: Separate characters from encoded bytes",
+        "href": "../activities/computer-systems/#lesson-02",
+        "type": "activity"
+      },
+      {
+        "label": "Activity 04: Explain processing and a performance bottleneck",
+        "href": "../activities/computer-systems/#lesson-04",
+        "type": "activity"
+      },
+      {
+        "label": "Computer systems: representation, logic and performance · student PDF",
+        "href": "../activities/computer-systems/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Computer systems: representation, logic and performance · offline student pack & files",
+        "href": "../activities/computer-systems/student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Computer systems: representation, logic and performance · explained teacher answers",
+        "href": "../activities/computer-systems/teacher.html",
         "type": "teacher"
       }
     ]
@@ -136,6 +166,26 @@
         "label": "Foundations teacher answers",
         "href": "../activities/programming-foundations/teacher.html",
         "type": "teacher"
+      },
+      {
+        "label": "Activity 03: Combine logic and evaluate a small system",
+        "href": "../activities/computer-systems/#lesson-03",
+        "type": "activity"
+      },
+      {
+        "label": "Computer systems: representation, logic and performance · student PDF",
+        "href": "../activities/computer-systems/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Computer systems: representation, logic and performance · offline student pack & files",
+        "href": "../activities/computer-systems/student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Computer systems: representation, logic and performance · explained teacher answers",
+        "href": "../activities/computer-systems/teacher.html",
+        "type": "teacher"
       }
     ]
   },
@@ -155,6 +205,56 @@
       {
         "label": "Worked Python example (.py)",
         "href": "examples/loops.py",
+        "type": "code"
+      },
+      {
+        "label": "Activity 01: Count and accumulate",
+        "href": "../activities/programming-next/#lesson-01",
+        "type": "activity"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · student PDF",
+        "href": "../activities/programming-next/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · offline student pack & files",
+        "href": "../activities/programming-next/student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · explained teacher answers",
+        "href": "../activities/programming-next/teacher.html",
+        "type": "teacher"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · independent-starters.py",
+        "href": "../activities/programming-next/files/independent-starters.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked-01.py",
+        "href": "../activities/programming-next/files/worked-01.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked-02.py",
+        "href": "../activities/programming-next/files/worked-02.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked-03.py",
+        "href": "../activities/programming-next/files/worked-03.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked-04.py",
+        "href": "../activities/programming-next/files/worked-04.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked.py",
+        "href": "../activities/programming-next/files/worked.py",
         "type": "code"
       }
     ]
@@ -176,6 +276,56 @@
         "label": "Worked Python example (.py)",
         "href": "examples/functions.py",
         "type": "code"
+      },
+      {
+        "label": "Activity 02: Return a result from a function",
+        "href": "../activities/programming-next/#lesson-02",
+        "type": "activity"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · student PDF",
+        "href": "../activities/programming-next/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · offline student pack & files",
+        "href": "../activities/programming-next/student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · explained teacher answers",
+        "href": "../activities/programming-next/teacher.html",
+        "type": "teacher"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · independent-starters.py",
+        "href": "../activities/programming-next/files/independent-starters.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked-01.py",
+        "href": "../activities/programming-next/files/worked-01.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked-02.py",
+        "href": "../activities/programming-next/files/worked-02.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked-03.py",
+        "href": "../activities/programming-next/files/worked-03.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked-04.py",
+        "href": "../activities/programming-next/files/worked-04.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked.py",
+        "href": "../activities/programming-next/files/worked.py",
+        "type": "code"
       }
     ]
   },
@@ -196,6 +346,56 @@
         "label": "Worked Python example (.py)",
         "href": "examples/arrays.py",
         "type": "code"
+      },
+      {
+        "label": "Activity 03: Traverse a list and retain a position",
+        "href": "../activities/programming-next/#lesson-03",
+        "type": "activity"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · student PDF",
+        "href": "../activities/programming-next/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · offline student pack & files",
+        "href": "../activities/programming-next/student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · explained teacher answers",
+        "href": "../activities/programming-next/teacher.html",
+        "type": "teacher"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · independent-starters.py",
+        "href": "../activities/programming-next/files/independent-starters.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked-01.py",
+        "href": "../activities/programming-next/files/worked-01.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked-02.py",
+        "href": "../activities/programming-next/files/worked-02.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked-03.py",
+        "href": "../activities/programming-next/files/worked-03.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked-04.py",
+        "href": "../activities/programming-next/files/worked-04.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked.py",
+        "href": "../activities/programming-next/files/worked.py",
+        "type": "code"
       }
     ]
   },
@@ -215,6 +415,56 @@
       {
         "label": "Worked Python example (.py)",
         "href": "examples/files.py",
+        "type": "code"
+      },
+      {
+        "label": "Activity 04: Read a file and test bad records",
+        "href": "../activities/programming-next/#lesson-04",
+        "type": "activity"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · student PDF",
+        "href": "../activities/programming-next/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · offline student pack & files",
+        "href": "../activities/programming-next/student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · explained teacher answers",
+        "href": "../activities/programming-next/teacher.html",
+        "type": "teacher"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · independent-starters.py",
+        "href": "../activities/programming-next/files/independent-starters.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked-01.py",
+        "href": "../activities/programming-next/files/worked-01.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked-02.py",
+        "href": "../activities/programming-next/files/worked-02.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked-03.py",
+        "href": "../activities/programming-next/files/worked-03.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked-04.py",
+        "href": "../activities/programming-next/files/worked-04.py",
+        "type": "code"
+      },
+      {
+        "label": "Programming: loops, functions, lists and files · worked.py",
+        "href": "../activities/programming-next/files/worked.py",
         "type": "code"
       }
     ]
@@ -361,6 +611,31 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#networks",
         "type": "reading"
+      },
+      {
+        "label": "Activity 01: Follow a message through a network",
+        "href": "../activities/network-reasoning/#lesson-01",
+        "type": "activity"
+      },
+      {
+        "label": "Activity 02: Compare transport using a supplied trace",
+        "href": "../activities/network-reasoning/#lesson-02",
+        "type": "activity"
+      },
+      {
+        "label": "Networks: trace, address, design and test · student PDF",
+        "href": "../activities/network-reasoning/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Networks: trace, address, design and test · offline student pack & files",
+        "href": "../activities/network-reasoning/student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Networks: trace, address, design and test · explained teacher answers",
+        "href": "../activities/network-reasoning/teacher.html",
+        "type": "teacher"
       }
     ]
   },
@@ -391,6 +666,26 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#network-design",
         "type": "reading"
+      },
+      {
+        "label": "Activity 03: Design against capacity and access requirements",
+        "href": "../activities/network-reasoning/#lesson-03",
+        "type": "activity"
+      },
+      {
+        "label": "Networks: trace, address, design and test · student PDF",
+        "href": "../activities/network-reasoning/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Networks: trace, address, design and test · offline student pack & files",
+        "href": "../activities/network-reasoning/student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Networks: trace, address, design and test · explained teacher answers",
+        "href": "../activities/network-reasoning/teacher.html",
+        "type": "teacher"
       }
     ]
   },
@@ -476,6 +771,61 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#database-foundations",
         "type": "reading"
+      },
+      {
+        "label": "Activity 01: Model records before querying",
+        "href": "../activities/databases-sql/#lesson-01",
+        "type": "activity"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · student PDF",
+        "href": "../activities/databases-sql/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · offline student pack & files",
+        "href": "../activities/databases-sql/student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · explained teacher answers",
+        "href": "../activities/databases-sql/teacher.html",
+        "type": "teacher"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · practice.sql",
+        "href": "../activities/databases-sql/files/practice.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · setup.sql",
+        "href": "../activities/databases-sql/files/setup.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-02.sql",
+        "href": "../activities/databases-sql/files/worked-02.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-03.sql",
+        "href": "../activities/databases-sql/files/worked-03.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-04.sql",
+        "href": "../activities/databases-sql/files/worked-04.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-05.sql",
+        "href": "../activities/databases-sql/files/worked-05.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-06.sql",
+        "href": "../activities/databases-sql/files/worked-06.sql",
+        "type": "code"
       },
       {
         "label": "Download synthetic loan data",
@@ -593,6 +943,71 @@
         "type": "reading"
       },
       {
+        "label": "Activity 02: Select columns and specify order",
+        "href": "../activities/databases-sql/#lesson-02",
+        "type": "activity"
+      },
+      {
+        "label": "Activity 03: Filter rows and test boundaries",
+        "href": "../activities/databases-sql/#lesson-03",
+        "type": "activity"
+      },
+      {
+        "label": "Activity 05: Aggregate first, then filter groups",
+        "href": "../activities/databases-sql/#lesson-05",
+        "type": "activity"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · student PDF",
+        "href": "../activities/databases-sql/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · offline student pack & files",
+        "href": "../activities/databases-sql/student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · explained teacher answers",
+        "href": "../activities/databases-sql/teacher.html",
+        "type": "teacher"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · practice.sql",
+        "href": "../activities/databases-sql/files/practice.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · setup.sql",
+        "href": "../activities/databases-sql/files/setup.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-02.sql",
+        "href": "../activities/databases-sql/files/worked-02.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-03.sql",
+        "href": "../activities/databases-sql/files/worked-03.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-04.sql",
+        "href": "../activities/databases-sql/files/worked-04.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-05.sql",
+        "href": "../activities/databases-sql/files/worked-05.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-06.sql",
+        "href": "../activities/databases-sql/files/worked-06.sql",
+        "type": "code"
+      },
+      {
         "label": "Download SQLite starter",
         "href": "../sql-starter.sqlite",
         "type": "activity"
@@ -636,6 +1051,66 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#database-solution",
         "type": "reading"
+      },
+      {
+        "label": "Activity 04: Join related records without losing meaning",
+        "href": "../activities/databases-sql/#lesson-04",
+        "type": "activity"
+      },
+      {
+        "label": "Activity 06: Make controlled changes and prove the result",
+        "href": "../activities/databases-sql/#lesson-06",
+        "type": "activity"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · student PDF",
+        "href": "../activities/databases-sql/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · offline student pack & files",
+        "href": "../activities/databases-sql/student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · explained teacher answers",
+        "href": "../activities/databases-sql/teacher.html",
+        "type": "teacher"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · practice.sql",
+        "href": "../activities/databases-sql/files/practice.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · setup.sql",
+        "href": "../activities/databases-sql/files/setup.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-02.sql",
+        "href": "../activities/databases-sql/files/worked-02.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-03.sql",
+        "href": "../activities/databases-sql/files/worked-03.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-04.sql",
+        "href": "../activities/databases-sql/files/worked-04.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-05.sql",
+        "href": "../activities/databases-sql/files/worked-05.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-06.sql",
+        "href": "../activities/databases-sql/files/worked-06.sql",
+        "type": "code"
       },
       {
         "label": "Download database project pack",
@@ -1308,6 +1783,26 @@
         "type": "reading"
       },
       {
+        "label": "Activity 04: Year 12 bridge: allocate a small subnet",
+        "href": "../activities/network-reasoning/#lesson-04",
+        "type": "activity"
+      },
+      {
+        "label": "Networks: trace, address, design and test · student PDF",
+        "href": "../activities/network-reasoning/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Networks: trace, address, design and test · offline student pack & files",
+        "href": "../activities/network-reasoning/student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Networks: trace, address, design and test · explained teacher answers",
+        "href": "../activities/network-reasoning/teacher.html",
+        "type": "teacher"
+      },
+      {
         "label": "Download offline calculator",
         "href": "../unit3-addressing-calculator.py",
         "type": "code"
@@ -1551,6 +2046,61 @@
         "label": "Read chapter · practice and explained answers",
         "href": "../#unit4-sql",
         "type": "reading"
+      },
+      {
+        "label": "Activity 05: Aggregate first, then filter groups",
+        "href": "../activities/databases-sql/#lesson-05",
+        "type": "activity"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · student PDF",
+        "href": "../activities/databases-sql/student.pdf",
+        "type": "print"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · offline student pack & files",
+        "href": "../activities/databases-sql/student-pack.zip",
+        "type": "download"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · explained teacher answers",
+        "href": "../activities/databases-sql/teacher.html",
+        "type": "teacher"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · practice.sql",
+        "href": "../activities/databases-sql/files/practice.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · setup.sql",
+        "href": "../activities/databases-sql/files/setup.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-02.sql",
+        "href": "../activities/databases-sql/files/worked-02.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-03.sql",
+        "href": "../activities/databases-sql/files/worked-03.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-04.sql",
+        "href": "../activities/databases-sql/files/worked-04.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-05.sql",
+        "href": "../activities/databases-sql/files/worked-05.sql",
+        "type": "code"
+      },
+      {
+        "label": "Databases and SQL: from records to reliable changes · worked-06.sql",
+        "href": "../activities/databases-sql/files/worked-06.sql",
+        "type": "code"
       },
       {
         "label": "Download query pack",
