@@ -1,0 +1,36 @@
+.pack-header{height:auto;padding:20px max(24px,calc((100% - 980px)/2));gap:24px;justify-content:flex-start;font-size:14px}.pack-header a{text-decoration:none}.pack-header a:last-child{margin-left:auto}main{max-width:1000px;margin:auto;padding:44px 24px}.pack-intro h1{max-width:780px}.pack-intro .lede{max-width:780px}.pack-downloads{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:24px 0}.pack-downloads .secondary{margin-left:0}.quiet-link{font-size:14px}.print-toolbar{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;padding:20px;background:#edf3ed;border:1px solid var(--line);border-radius:8px;margin-top:28px}.print-toolbar label{flex:1;min-width:220px;font-size:14px}.print-toolbar select{display:block;width:100%;font:inherit;background:white;color:var(--ink);border:1px solid #7d9387;border-radius:4px;padding:10px;margin-top:6px}.print-toolbar button{font-size:14px}.print-toolbar .secondary{background:white;color:var(--green);border:1px solid #7d9387}.print-toolbar button:disabled{opacity:.5;cursor:default}.print-help{font-size:13px;color:var(--muted)}.activity-nav{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;margin:26px 0 36px}.activity-nav a{display:flex;align-items:center;gap:12px;border:1px solid var(--line);background:white;padding:12px;border-radius:6px;text-decoration:none;font-size:14px}.activity-nav span{font-weight:700;color:var(--green)}.pack-lesson{scroll-margin-top:24px;border-top:3px solid var(--green);padding-top:12px;margin:48px 0}.pack-lesson[hidden]{display:none}.lesson-heading h2{margin:12px 0}.lesson-heading>p{max-width:800px}.lesson-timing{font-size:13px;color:var(--muted)}.worksheet-sheet{background:white;border:1px solid var(--line);border-radius:8px;padding:30px;margin:20px 0}.sheet-banner{display:none}.identity{font-size:13px;color:var(--muted);margin:0 0 20px}.worksheet-sheet h3{font:normal 25px/1.3 Georgia,serif;margin:6px 0 20px}.worksheet-sheet h4{font-size:17px;line-height:1.4;margin:26px 0 10px}.worksheet-sheet p{font-size:15px;line-height:1.65}.worksheet-sheet pre{font-size:14px;line-height:1.55;padding:18px;max-width:100%;overflow:auto}.reading{background:#f0f4ed;border-left:3px solid var(--green);padding:12px 18px;margin-bottom:22px}.reading>strong{font-size:13px}.reading-links{font-size:13px;line-height:1.5;margin:8px 0;padding-left:18px}.reading-links li{margin:5px 0}.table-wrap{overflow:auto}.worksheet-sheet table{font-size:13px;line-height:1.45;margin:14px 0}.worksheet-sheet th,.worksheet-sheet td{padding:9px;border:1px solid var(--line);vertical-align:top;min-width:35px}.worksheet-sheet td:empty{min-height:36px;height:36px}.workspace{margin:8px 0 18px}.writing-line{height:29px;border-bottom:1px solid #c5d1c7}.sheet-footer{font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:28px}.teacher-note{background:#f4f1e6;padding:12px}.pack-footer{font-size:12px;color:var(--muted);margin-top:48px}.pack-footer p{max-width:850px}@media(max-width:650px){main{padding:28px 16px}.pack-header{padding:16px;gap:14px;flex-wrap:wrap}.pack-header a:last-child{margin-left:0}.activity-nav{grid-template-columns:1fr}.worksheet-sheet{padding:20px 16px}.print-toolbar{padding:16px}.print-toolbar button{width:100%}.worksheet-sheet pre{font-size:12px;padding:12px}.worksheet-sheet th,.worksheet-sheet td{padding:6px;font-size:12px}}
+@media print{
+  @page{size:A4;margin:14mm}
+  html,body{background:white!important;color:black!important;font-size:10.2pt;line-height:1.35;margin:0;padding:0}
+  main{max-width:none;width:auto;margin:0;padding:0}
+  .pack-header,.pack-intro,.lesson-heading,.pack-footer{display:none!important}
+  .pack-lesson{border:0;padding:0;margin:0}
+  .pack-lesson[hidden]{display:none!important}
+  .worksheet-sheet{border:0;border-radius:0;padding:0;margin:0;break-after:page;page-break-after:always}
+  .pack-lesson:last-of-type .worksheet-sheet:last-child{break-after:auto;page-break-after:auto}
+  .pack-lesson.print-last .worksheet-sheet:last-child{break-after:auto;page-break-after:auto}
+  .sheet-banner{display:block;margin:0 0 8pt;border-bottom:1pt solid #777;padding-bottom:7pt}
+  .sheet-banner .eyebrow{font-size:7pt;letter-spacing:1pt;margin:0 0 5pt;color:black}
+  .sheet-banner h2{font:700 17pt/1.2 Georgia,serif;margin:0 0 4pt;break-after:avoid}
+  .sheet-banner p:last-child{font-size:9pt;margin:0}
+  .worksheet-sheet>h3{display:none}
+  .identity{font-size:8pt;margin:8pt 0 10pt;color:black}
+  .worksheet-sheet p{font-size:10.2pt;line-height:1.35;margin:6pt 0}
+  .worksheet-sheet h4{font-size:11pt;line-height:1.25;margin:11pt 0 5pt;break-after:avoid}
+  .reading{background:none;border-left:1pt solid #777;padding:4pt 8pt;margin:6pt 0 9pt;break-inside:avoid}
+  .reading-links{font-size:8pt;margin:3pt 0;line-height:1.3}
+  .reading-links li{margin:2pt 0}
+  .reading>strong{font-size:8pt}
+  a{color:black;text-decoration:none}
+  .table-wrap{overflow:visible}
+  .worksheet-sheet table{font-size:8.5pt;line-height:1.25;table-layout:auto;margin:7pt 0;width:100%;break-inside:avoid}
+  .worksheet-sheet th,.worksheet-sheet td{font-size:8.5pt;padding:4pt;min-width:0;border-color:#aaa;overflow-wrap:anywhere}
+  .worksheet-sheet td:empty{height:19pt}
+  thead{display:table-header-group}
+  tr{break-inside:avoid}
+  .worksheet-sheet pre{background:#f0f0f0!important;color:black!important;border-radius:0;padding:8pt;font:8.5pt/1.3 Courier,monospace;white-space:pre-wrap;overflow:visible;overflow-wrap:anywhere;break-inside:avoid;margin:7pt 0}
+  .workspace{margin:4pt 0 8pt;break-inside:avoid}
+  .writing-line{height:18pt;border-color:#aaa}
+  .sheet-footer{font-size:7pt;color:black;margin-top:12pt;padding-top:5pt;border-color:#aaa}
+  .teacher-note{background:none;padding:0}
+}

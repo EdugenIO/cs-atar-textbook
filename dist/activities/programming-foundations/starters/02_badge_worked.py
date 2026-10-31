@@ -1,0 +1,5 @@
+# Worked sequence: assume valid non-negative whole-number input.
+BADGE_PRICE = 3
+quantity = int(input("Number of badges: "))
+total = quantity * BADGE_PRICE
+print(f"Total: ${total}")

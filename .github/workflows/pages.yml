@@ -28,6 +28,7 @@ jobs:
           python tests/project-alignment.test.py
           python tests/project-trial.test.py
           python tests/curriculum-map.test.py
+          python tests/foundations-pack.test.py
           python -m pip install pygame==2.6.1
           python tests/pygame-bridge.test.py
           python tests/teaching-depth-examples.test.py

@@ -1,0 +1,301 @@
+{
+  "id":"programming-foundations",
+  "title":"Programming foundations",
+  "subtitle":"Activity pack 1 · eight lessons · local Weeks 1–2",
+  "date":"31 October 2026",
+  "basis":"2026 syllabus foundation with applicable 2027 revisions",
+  "lessons":[
+    {
+      "id":"01","week":1,"lesson":1,"title":"From a problem to a requirement",
+      "intention":"Separate inputs, processing and outputs, then write a requirement you can test.",
+      "reading":[["Your first Python program: a problem before a program","#start/heading-a-problem-before-a-program"],["Designing solutions: investigate the problem","#design/heading-investigate-understand-the-problem"]],
+      "timing":"8 min reading, 12 min modelling, 20 min application, 10 min return, 5 min exit.",
+      "sheets":[
+        {"title":"Read, predict and investigate","blocks":[
+          {"type":"p","text":"Visit the two textbook sections above. Use only the problem/requirement explanation; the book's separate game project is not this activity."},
+          {"type":"heading","text":"Worked example: badge order"},
+          {"type":"p","text":"A club sells badges for $3 each. Assume quantity is a non-negative whole number. For four badges: input 4; processing 4 * 3; output Total: $12. A testable requirement is: display quantity * 3 for any allowed quantity."},
+          {"type":"heading","text":"1A. Sort the facts"},
+          {"type":"table","headers":["Statement","Input, processing, output or assumption?"],"rows":[["The quantity is 5.",""],["Multiply the quantity by 3.",""],["Display Total: $15.",""],["The quantity must be a non-negative whole number.",""]]},
+          {"type":"heading","text":"1B. Make the requirement testable"},
+          {"type":"p","text":"Replace 'the calculator should work well' with one observable requirement. Give a quantity and the exact expected total. Predict before running anything."},
+          {"type":"workspace","lines":3}
+        ]},
+        {"title":"Apply, compare and explain","blocks":[
+          {"type":"heading","text":"1C. Three requirement cards"},
+          {"type":"p","text":"For each card, identify input, processing, output and one assumption. These are paper/desktop scenarios, not instructions to operate equipment."},
+          {"type":"table","headers":["Card","Brief"],"rows":[["A - cover order","Covers cost $2 each plus $4 for every order, including an order of zero."],["B - simulated movement","A simulated marker begins at position 10. Read a non-negative distance, add it to the position and display the new position. No hardware is controlled."],["C - status display","Read a device label and a supplied online Boolean. Display the label followed by online or offline. Use supplied data; do not scan a network."]]},
+          {"type":"workspace","lines":5},
+          {"type":"heading","text":"1D. Check the boundary"},
+          {"type":"p","text":"For Card A, predict totals for 0 and 5 covers. Explain whether the handling charge applies to zero. Return to the textbook's requirement explanation if you need to justify the assumption."},
+          {"type":"workspace","lines":2},
+          {"type":"heading","text":"Exit: show the reasoning"},
+          {"type":"p","text":"For five badges at $3 each, name input, processing and output. Write one requirement that a test could show to be wrong."},
+          {"type":"workspace","lines":2}
+        ]}
+      ],
+      "key":[
+        ["1A–1B","5 is input; multiply by 3 is processing; Total: $15 is output; allowed quantities are an assumption/domain rule. Accept equivalent requirements with a measurable output and declared valid input. 'User-friendly' alone is not testable."],
+        ["1C","A: input quantity, multiply by 2 then add 4, display cost; assumption every order has the charge. B: input distance, calculate 10 + distance, display position; assume valid non-negative distance. C: input label and supplied Boolean, choose the corresponding message, display it; supplied status is not a live network observation."],
+        ["1D / exit","Card A gives $4 for zero and $14 for five. Badge exit gives input 5, processing 5 * 3, output $15. Accept equivalent explicit assumptions consistent with the card; do not silently waive the charge."],
+        ["Reteach / extension","If input and output are reversed, use three labelled boxes and trace 2 badges. Ask for a changed test quantity. A correct number without explaining the transformation is incomplete reasoning."]
+      ]
+    },
+    {
+      "id":"02","week":1,"lesson":2,"title":"Values, types and a saved program",
+      "intention":"Run a saved sequence, distinguish text from numbers and predict simple calculations.",
+      "reading":[["Prepare your Python workspace","#start/heading-prepare-your-workspace"],["Match a type to its meaning","#values/heading-match-the-type-to-the-meaning"],["Convert deliberately","#values/heading-convert-deliberately"],["Calculate and predict","#values/heading-calculate-and-predict"]],
+      "timing":"7 min reading, 13 min modelling, 20 min application, 10 min return, 5 min exit.",
+      "sheets":[
+        {"title":"Predict, save and run","blocks":[
+          {"type":"p","text":"Read the named textbook examples. Keep the later optional test harness closed: no functions or loops are needed here. Use a school-approved Python 3 editor."},
+          {"type":"heading","text":"Worked sequence: badge cost"},
+          {"type":"code","text":"BADGE_PRICE = 3\nquantity = int(input(\"Number of badges: \"))\ntotal = quantity * BADGE_PRICE\nprint(f\"Total: ${total}\")"},
+          {"type":"p","text":"Save as 02_badge_worked.py and run that saved file. Assume the entered text represents a non-negative whole number; handling unsuitable text comes later. For quantity 4, the expected output is Total: $12."},
+          {"type":"heading","text":"2A. Choose a representation"},
+          {"type":"table","headers":["Meaning/value","Python type and reason"],"rows":[["Identifier '0042'",""],["Count 4",""],["Measured length 2.5",""],["Paid True",""]]},
+          {"type":"heading","text":"2B. Predict before checking"},
+          {"type":"p","text":"Predict: int('4') * 3; '4' * 3; 17 // 4; 17 % 4; 2 + 3 * 4; (2 + 3) * 4. Then check each in your editor/console."},
+          {"type":"workspace","lines":3}
+        ]},
+        {"title":"Make a small change and prove it","blocks":[
+          {"type":"heading","text":"2C. Change the saved program"},
+          {"type":"p","text":"Run the badge program for quantity 2. Change BADGE_PRICE to 4, save, and run the same file again. Record the expected and actual totals. If output did not change, check filename, saved version and which file ran."},
+          {"type":"table","headers":["Price / quantity","Expected","Actual after running"],"rows":[["$3 / 2","",""],["$4 / 2","",""]]},
+          {"type":"heading","text":"2D. Independent transfer: ticket cost"},
+          {"type":"p","text":"Tickets cost $4 each plus $1 per order, including zero-ticket orders. Starting with 02_ticket_starter.py or a blank file, write an input/calculation/output program. Assume valid non-negative whole-number input. Predict and run quantities 0, 1 and 3. You do not need selection or a loop."},
+          {"type":"workspace","lines":6},
+          {"type":"heading","text":"Exit: explain a type choice"},
+          {"type":"p","text":"Why must input text be converted for this calculation? Why should identifier '0042' remain text? Optional extra: predict 2 ** 3, where ** means exponentiation."},
+          {"type":"workspace","lines":2}
+        ]}
+      ],
+      "key":[
+        ["2A","Identifier str preserves zeros; count int; measured length float; paid bool. 'It looks numeric' is not enough to justify storing an identifier as a number."],
+        ["2B","12; '444'; 4; 1; 14; 20. The string result is text, not numeric 444. // is whole-number floor division; % is remainder for these non-negative examples. Parentheses change the evaluation order."],
+        ["2C–2D","Expected totals are $6 then $8; leave actual outcomes blank until observed. Ticket rule: total = quantity * 4 + 1. Quantities 0,1,3 give 1,5,13. A different valid variable naming style is acceptable."],
+        ["Exit / reteach","input returns text; converting valid numeric text enables arithmetic rather than repetition/concatenation. Identifier formatting matters and arithmetic is not meaningful for it. Optional 2 ** 3 is 8. If a new price appears not to work, inspect the actual saved/running file rather than changing the formula at random."]
+      ]
+    },
+    {
+      "id":"03","week":1,"lesson":3,"title":"Requirements and a realistic schedule",
+      "intention":"Translate a brief into measurable requirements and draw task durations with dependencies.",
+      "reading":[["Investigate the problem","#design/heading-investigate-understand-the-problem"],["Plan work and dependencies","#design/heading-plan-the-work-and-dependencies"],["Build and revise a Gantt schedule","#design/heading-build-and-revise-a-gantt-schedule"]],
+      "timing":"8 min reading, 10 min modelling, 22 min application, 10 min return, 5 min exit.",
+      "sheets":[
+        {"title":"Define what success means","blocks":[
+          {"type":"p","text":"Read the general requirements and scheduling sections. The textbook's separate Pygame game rules and workshop budget do not apply to this short planning activity."},
+          {"type":"heading","text":"Brief: a cover-order calculator"},
+          {"type":"p","text":"A club needs the cost of covers. Each costs $2 and every order has a $4 handling charge. Allowed quantities are non-negative whole numbers. Display the total clearly. No stock database, payment processing or live hardware is required."},
+          {"type":"heading","text":"3A. Investigate before coding"},
+          {"type":"p","text":"Write two measurable functional requirements, one assumption and one out-of-scope feature. Give one input with the independently calculated expected output."},
+          {"type":"workspace","lines":5},
+          {"type":"heading","text":"3B. Read a schedule"},
+          {"type":"p","text":"Tasks must run in this order: A investigate (1 slot), B design (1 after A), C code (3 after B), D test (2 after C), E evaluate (1 after D). One slot is a planning unit, not necessarily one classroom lesson."},
+          {"type":"table","headers":["Task","1","2","3","4","5","6","7","8"],"rows":[["A investigate","X","","","","","","",""],["B design","","X","","","","","",""],["C code","","","X","X","X","","",""],["D test","","","","","","X","X",""],["E evaluate","","","","","","","","X"]]}
+        ]},
+        {"title":"Replan without hiding work","blocks":[
+          {"type":"heading","text":"3C. A predecessor takes longer"},
+          {"type":"p","text":"Coding now takes four slots. Redraw the chart, preserving every dependency and test/evaluation duration. State the finish slot and one defensible response to the original eight-slot deadline."},
+          {"type":"table","headers":["Task","1","2","3","4","5","6","7","8","9"],"rows":[["A","","","","","","","","",""],["B","","","","","","","","",""],["C","","","","","","","","",""],["D","","","","","","","","",""],["E","","","","","","","","",""]]},
+          {"type":"workspace","lines":2},
+          {"type":"heading","text":"3D. Independent plan"},
+          {"type":"p","text":"Plan a desktop status display: investigate 1 slot, design 2, build 2, test 1, evaluate 1, all sequential. Draw or list the occupied slots and write one observable display requirement. Explain why removing testing is not the same as meeting the requirement sooner."},
+          {"type":"workspace","lines":5},
+          {"type":"heading","text":"Exit"},
+          {"type":"p","text":"Why does a delayed predecessor affect later tasks? Distinguish a deadline, a duration and a dependency."},
+          {"type":"workspace","lines":2}
+        ]}
+      ],
+      "key":[
+        ["3A","Examples: calculate quantity * 2 + 4 for every allowed quantity; display the calculated total. Assumption: input is a non-negative whole number. Payment processing is excluded. For quantity 5, expected total is $14. Accept equivalent measurable requirements; appearance preferences alone are insufficient."],
+        ["3B–3C","Original finishes slot 8. Revised: A1, B2, C3–6, D7–8, E9. Finish is 9. Negotiate scope/deadline/resources with a justified revised plan. Do not merely overlap tasks whose predecessor must finish first or silently remove testing."],
+        ["3D","Investigate1; design2–3; build4–5; test6; evaluate7. Example requirement: for a supplied label/status, display that label and the correct online/offline message. Testing checks the output against the requirement; deleting it supplies no evidence of correctness."],
+        ["Exit / reteach","Duration is time needed; deadline is required finish; dependency constrains start relative to other work. Model the chart with cards before redrawing if pupils treat bars as decoration rather than constraints. No student is assumed to have built the program merely by drawing the plan."]
+      ]
+    },
+    {
+      "id":"04","week":1,"lesson":4,"title":"Trace a sequence and represent a character",
+      "intention":"Track changing values, distinguish an expected result from an observation, and convert one character code between bases.",
+      "reading":[["Trace and test","#start/heading-trace-and-test"],["Assignment updates a value","#values/heading-assignment-updates-a-value"],["A character code in three bases","#representation/heading-apply-a-character-code-in-three-bases"]],
+      "timing":"10 min reading, 10 min modelling, 20 min application, 10 min return, 5 min exit.",
+      "sheets":[
+        {"title":"Follow the values in order","blocks":[
+          {"type":"p","text":"Read the trace/assignment examples. Predict on paper before running 04_trace_worked.py. A name not yet assigned has no value in this trace; write not set rather than guessing zero."},
+          {"type":"code","text":"quantity = 3\nprice = 2\nhandling = 4\nsubtotal = quantity * price\ntotal = subtotal + handling\nprint(total)"},
+          {"type":"heading","text":"4A. Complete the trace"},
+          {"type":"table","headers":["After line","quantity","price","handling","subtotal","total / output"],"rows":[["1","","","","",""],["2","","","","",""],["3","","","","",""],["4","","","","",""],["5","","","","",""],["6","","","","",""]]},
+          {"type":"heading","text":"4B. Diagnose before changing"},
+          {"type":"p","text":"A pupil writes print(\"Total) with an unmatched quote. Is this a syntax fault or a wrong arithmetic rule? Repair the line to print the word Total. Then explain why a program that runs can still calculate the wrong amount."},
+          {"type":"workspace","lines":3}
+        ]},
+        {"title":"Change the input, keep the reasoning","blocks":[
+          {"type":"heading","text":"4C. Fresh prediction"},
+          {"type":"p","text":"Keep price=2 and handling=4. Predict subtotal, total and output for quantity 0 and quantity 5. Run only after predicting; record actual output separately."},
+          {"type":"table","headers":["quantity","subtotal","Expected total/output","Actual after running"],"rows":[["0","","",""],["5","","",""]]},
+          {"type":"heading","text":"Worked representation: C"},
+          {"type":"p","text":"Character C has code point decimal 67. 67 = 64 + 2 + 1, so eight-bit binary is 01000011. Hexadecimal 43 means 4 * 16 + 3 = 67. The notation changes, not the code-point value. Encoding determines stored bytes."},
+          {"type":"heading","text":"4D. Independent character transfer"},
+          {"type":"p","text":"B has decimal code point 66. Write its eight-bit binary and hexadecimal code point and convert both back to decimal. Explain why one visible character need not use one UTF-8 byte."},
+          {"type":"workspace","lines":4},
+          {"type":"heading","text":"Exit"},
+          {"type":"p","text":"State the output of the original six-line program and one reason an independent prediction is useful. Give B's binary and hex values without copying the C example."},
+          {"type":"workspace","lines":2}
+        ]}
+      ],
+      "key":[
+        ["4A","Line1 quantity3; line2 price2; line3 handling4; line4 subtotal6; line5 total10; line6 output10. Previously assigned values remain unchanged. Before its assignment a name is not set, not automatically zero."],
+        ["4B","Syntax fault: print(\"Total\"). A logic fault can still run but implement the wrong formula. Do not tell students to execute a syntax-invalid file as if it were a working starter."],
+        ["4C–4D","Quantity0: subtotal0, total/output4. Quantity5: subtotal10, total/output14. Actual columns are only completed after observation. B is 01000010 and 42 hexadecimal; 64+2=66 and 4*16+2=66. A code point identifies a character; UTF-8 byte count depends on its encoding, and a visible character may involve more than one code point."],
+        ["Exit / reteach","Original output10. Prediction supplies an independent expectation instead of accepting whatever the code displays. If place values are weak, write the 128/64/32/16/8/4/2/1 row and add the selected positions; retain the extra zeros for the requested eight-bit form."]
+      ]
+    },
+    {
+      "id":"05","week":2,"lesson":1,"title":"Conditions and Boolean reasoning",
+      "intention":"Evaluate comparisons and combine Boolean conditions with and, or and not.",
+      "reading":[["From an instruction to a decision","#selection/heading-from-an-instruction-to-a-decision"],["Combine conditions and choices","#selection/heading-combine-conditions-and-choices"]],
+      "timing":"8 min reading, 12 min modelling, 20 min application, 10 min return, 5 min exit.",
+      "sheets":[
+        {"title":"Read each condition precisely","blocks":[
+          {"type":"p","text":"Read the comparison/combined-condition examples. Python spells Boolean literals True and False. = assigns a value; == compares. The following battery rule is invented for a desktop exercise, not a real-flight operating rule."},
+          {"type":"heading","text":"Worked condition"},
+          {"type":"code","text":"battery = 29\nauthorised = True\nready = battery >= 30 and authorised\nprint(ready)"},
+          {"type":"p","text":"battery >= 30 is False, so ready is False even though authorised is True. Change values in 05_conditions_worked.py only after predicting."},
+          {"type":"heading","text":"5A. Complete a truth table"},
+          {"type":"table","headers":["A","B","A and B","A or B","not A"],"rows":[["False","False","","",""],["False","True","","",""],["True","False","","",""],["True","True","","",""]]},
+          {"type":"heading","text":"5B. A comparison is not assignment"},
+          {"type":"p","text":"For score=7, evaluate score >= 5, score == 5 and score != 5. Explain why changing == to = is not an alternative comparison."},
+          {"type":"workspace","lines":2}
+        ]},
+        {"title":"Apply the rule to fresh cases","blocks":[
+          {"type":"heading","text":"5C. Both parts matter"},
+          {"type":"table","headers":["battery","authorised","battery >= 30","ready"],"rows":[["29","True","",""],["30","False","",""],["30","True","",""],["31","True","",""]]},
+          {"type":"heading","text":"5D. Make grouping visible"},
+          {"type":"p","text":"Python evaluates not before and, and before or. Predict False or True and False, then (False or True) and False. Next predict True or False and False, then (True or False) and False. Use parentheses to communicate your intended grouping."},
+          {"type":"workspace","lines":3},
+          {"type":"heading","text":"5E. Independent transfer"},
+          {"type":"p","text":"A club accepts entry only when age is at least 12 and member is True. Write the Boolean expression. Predict (age=11, member=True), (12,False) and (12,True). No input conversion or if statement is required yet."},
+          {"type":"workspace","lines":3},
+          {"type":"heading","text":"Exit"},
+          {"type":"p","text":"Explain why one true part is insufficient for and. Give a pair of Boolean inputs that makes or true but and false."},
+          {"type":"workspace","lines":2}
+        ]}
+      ],
+      "key":[
+        ["5A–5B","Truth rows (and,or,not A): (False,False,True), (False,True,True), (False,True,False), (True,True,False). With score7: >=5 True, ==5 False, !=5 True. Assignment changes/binds a value; it is not an equality comparison."],
+        ["5C","Rows ready=False,False,True,True. The comparison battery>=30 is False,True,True,True. Equality at 30 is included."],
+        ["5D–5E","First pair False and False; second pair True and False. Parentheses can change the expression's meaning. Entry expression age >= 12 and member gives False,False,True for the listed cases. Accept an equivalent explicit Boolean comparison."],
+        ["Exit / reteach","For True/False (or False/True), or is True and and is False. If pupils reason from one operand only, evaluate both components before combining them. These examples use Boolean operands; do not generalise every Python and/or result to a bool for arbitrary objects."]
+      ]
+    },
+    {
+      "id":"06","week":2,"lesson":2,"title":"Choose exactly the intended branch",
+      "intention":"Use if/elif/else and trace a nested decision without executing both alternatives.",
+      "reading":[["Design before coding","#selection/heading-design-before-coding"],["Implement the decision in Python","#selection/heading-implement-the-decision-in-python"],["Trace it yourself","#selection/heading-trace-it-yourself"]],
+      "timing":"7 min reading, 13 min modelling, 20 min application, 10 min return, 5 min exit.",
+      "sheets":[
+        {"title":"Predict which branch runs","blocks":[
+          {"type":"p","text":"Read the textbook's design, Python and trace examples. Indentation identifies a branch body. In one if/elif/else chain, the first matching branch runs and the remaining alternatives are skipped."},
+          {"type":"code","text":"quantity = 0\nif quantity < 0:\n    result = \"invalid\"\nelif quantity == 0:\n    result = \"empty\"\nelse:\n    result = \"process\"\nprint(result)"},
+          {"type":"heading","text":"6A. Trace three inputs"},
+          {"type":"table","headers":["quantity","Chosen branch","Printed result"],"rows":[["-1","",""],["0","",""],["2","",""]]},
+          {"type":"heading","text":"6B. Implement the rule independently"},
+          {"type":"p","text":"Use 06_selection_starter.py or a blank file. An order total of at least $50 gets delivery charge 0; smaller non-negative totals get charge 5. Use an already-supplied numeric order_total, not interactive conversion. Test 49, 50 and 51."},
+          {"type":"workspace","lines":4}
+        ]},
+        {"title":"A decision inside a decision","blocks":[
+          {"type":"heading","text":"Worked nested decision"},
+          {"type":"code","text":"command = \"START\"\nauthorised = False\nif command == \"START\":\n    if authorised:\n        print(\"ready\")\n    else:\n        print(\"not authorised\")\nelse:\n    print(\"not a start request\")"},
+          {"type":"heading","text":"6C. Follow the actual path"},
+          {"type":"p","text":"Predict the output for the worked values, then for START/True and STOP/True. Mark which if each else belongs to. Check using 06_nested_worked.py after predicting."},
+          {"type":"workspace","lines":3},
+          {"type":"heading","text":"6D. Independent transfer"},
+          {"type":"p","text":"A desktop display receives command='SHOW' and staff=False. If command is SHOW, staff users see 'full report' and others see 'summary'. Other commands produce 'unknown'. Write and test the nested decision for SHOW/False, SHOW/True and HIDE/True. It only prints a message."},
+          {"type":"workspace","lines":4},
+          {"type":"heading","text":"Exit"},
+          {"type":"p","text":"Why can two separate if statements behave differently from an if/elif chain? Explain using the first matching branch."},
+          {"type":"workspace","lines":2}
+        ]}
+      ],
+      "key":[
+        ["6A–6B","-1 selects negative/invalid; 0 selects equality/empty; 2 selects else/process. Delivery: if order_total >= 50: charge=0; else: charge=5. Expected charges 5,0,0. Assume stated valid non-negative numeric totals; do not silently add unrequested input handling."],
+        ["6C","START/False prints not authorised; START/True prints ready; STOP/True prints not a start request. Inner else belongs to if authorised; outer else belongs to if command == START. Indentation is essential."],
+        ["6D","if command == 'SHOW': then an inner if staff prints full report, inner else summary; outer else unknown. Outputs summary, full report, unknown for the three cases. Accept equivalent logic with the same observable behaviour; compare its structure explicitly if it is not nested."],
+        ["Exit / reteach","Separate if statements each test their own condition; more than one may run. An if/elif/else chain selects at most one alternative. If pupils execute both branches, draw a path arrow and stop evaluating alternatives after a match."]
+      ]
+    },
+    {
+      "id":"07","week":2,"lesson":3,"title":"A reliable text command menu",
+      "intention":"Normalise text deliberately and separate conversion, domain validation and permission.",
+      "reading":[["Combine conditions and choices","#selection/heading-combine-conditions-and-choices"],["Accept only usable input","#files/heading-accept-only-usable-input"],["Convert deliberately","#values/heading-convert-deliberately"]],
+      "timing":"8 min reading, 12 min modelling, 20 min application, 10 min return, 5 min exit.",
+      "sheets":[
+        {"title":"Read a small input contract","blocks":[
+          {"type":"p","text":"Use the named textbook paragraphs for validation, not the later file/exception-handling lab. This menu only prints a response. It does not control a drone, start a process or send network requests."},
+          {"type":"heading","text":"Contract"},
+          {"type":"p","text":"Accept START, STOP or STATUS, ignoring letter case and whitespace at the ends. START prints Start requested; STOP prints Stop requested; STATUS prints Status requested. Any other input, including blank input, prints Unknown command. Internal spaces are not removed."},
+          {"type":"heading","text":"Worked normalisation"},
+          {"type":"code","text":"raw = \"  status  \"\ncommand = raw.strip().upper()\nprint(command)  # STATUS"},
+          {"type":"p","text":"strip() removes leading/trailing whitespace; upper() returns uppercase text. Neither proves that the resulting command is allowed. Normalisation follows this explicit contract; it is not a general instruction to strip or change all user data."},
+          {"type":"heading","text":"7A. Predict the normalised text and response"},
+          {"type":"table","headers":["Raw input","Normalised text","Expected response"],"rows":[["' start '","",""],["'Stop'","",""],["'STATUS'","",""],["'   '","",""],["'ST ART'","",""]]},
+          {"type":"workspace","lines":1}
+        ]},
+        {"title":"Implement, test and explain a limit","blocks":[
+          {"type":"heading","text":"7B. Complete the menu"},
+          {"type":"p","text":"Use 07_menu_starter.py. Preserve raw input, create command = raw.strip().upper(), then write if/elif/else branches satisfying the contract. No loop, function or try/except is required. Predict at least one valid, one blank and one unknown input before running."},
+          {"type":"workspace","lines":5},
+          {"type":"heading","text":"7C. Transfer the rule carefully"},
+          {"type":"p","text":"A separate display accepts an already-supplied integer rating from 1 to 5 inclusive. Write a Boolean range expression. Why does int('-4') succeeding not mean -4 is an allowed rating? What happens if int('three') is attempted? Explain without implementing exception handling."},
+          {"type":"workspace","lines":3},
+          {"type":"heading","text":"7D. A normalised command is not permission"},
+          {"type":"p","text":"Someone enters ' start ' but is not authorised to use a real service. Does this menu's acceptance prove permission? Explain the difference using the nested decision from Lesson 6."},
+          {"type":"workspace","lines":2},
+          {"type":"heading","text":"Exit"},
+          {"type":"p","text":"Name one input accepted after normalisation and one still rejected. Explain why input conversion and an allowed-value check are different."},
+          {"type":"workspace","lines":2}
+        ]}
+      ],
+      "key":[
+        ["7A","' start '→START→Start requested; Stop→STOP→Stop requested; STATUS→STATUS→Status requested; whitespace-only→empty string→Unknown command; ST ART remains ST ART→Unknown command. The internal space is not removed by strip()."],
+        ["7B","Bind raw input, normalise to command, then compare exactly with START, STOP and STATUS in one if/elif chain, otherwise Unknown command. Do not change messages silently. No actual results are claimed before a learner runs their version."],
+        ["7C","rating >= 1 and rating <= 5. int('-4') produces an integer but violates the domain. int('three') raises ValueError; knowing that is distinct from being required to write an exception handler now."],
+        ["7D / exit / reteach","Normalisation adjusts representation under the stated contract; validation checks allowed values; authorisation concerns permitted actions. START can be valid text while a caller lacks permission. If unknown strings reach a valid branch, inspect exact comparisons and the final else; retest blank and internal-space cases."]
+      ]
+    },
+    {
+      "id":"08","week":2,"lesson":4,"title":"Test both sides of the boundary",
+      "intention":"Predict discriminating tests, find a boundary defect and retain failure/repair/retest evidence.",
+      "reading":[["Trace a decision","#selection/heading-trace-it-yourself"],["Test the boundary","#selection/heading-test-the-boundary"],["Boolean expressions and types station","#consolidation/heading-station-a-boolean-expressions-and-types"]],
+      "timing":"5 min reading, 10 min modelling, 25 min application, 10 min return, 5 min exit.",
+      "sheets":[
+        {"title":"A typical value is not enough","blocks":[
+          {"type":"p","text":"Read the boundary example, then state the expected rule before looking at code. Allowed ratings are integers from 1 to 5 inclusive. In this exercise rating is already an integer; input conversion is outside the tested contract."},
+          {"type":"heading","text":"8A. Predict from the requirement"},
+          {"type":"table","headers":["rating","Expected accepted?","Why this case?"],"rows":[["0","",""],["1","",""],["3","",""],["5","",""],["6","",""]]},
+          {"type":"heading","text":"8B. Inspect the faulty program"},
+          {"type":"code","text":"rating = 3\naccepted = rating > 1 and rating < 5\nprint(accepted)"},
+          {"type":"p","text":"Without running it yet, predict its result for all five ratings. Which inputs distinguish the faulty rule from the requirement? Why might testing only 3 miss the defect?"},
+          {"type":"workspace","lines":4}
+        ]},
+        {"title":"Repair, retest and transfer","blocks":[
+          {"type":"heading","text":"8C. Retain actual evidence"},
+          {"type":"p","text":"Use 08_boundary_fault.py, changing rating for each run. Record actual results, repair the condition, and rerun the same cases. Keep the original file or a clearly identified copy; do not replace earlier evidence with the repaired outcome."},
+          {"type":"table","headers":["rating","Expected","Actual before","Actual after repair"],"rows":[["0","","",""],["1","","",""],["3","","",""],["5","","",""],["6","","",""]]},
+          {"type":"heading","text":"8D. Independent transfer"},
+          {"type":"p","text":"A second requirement accepts order quantities from 2 to 8 inclusive. Write the condition and choose tests just outside/inside both endpoints plus a typical value. Predict them independently, then run. Do not simply change expected answers to match your program."},
+          {"type":"workspace","lines":4},
+          {"type":"heading","text":"Exit"},
+          {"type":"p","text":"For the original 1–5 rule, name four cases that distinguish both boundaries and give their expected results. Explain one changed test you would try after a later edit."},
+          {"type":"workspace","lines":2}
+        ]}
+      ],
+      "key":[
+        ["8A–8B","Required results for 0,1,3,5,6: False,True,True,True,False. Faulty results: False,False,True,False,False. Cases 1 and 5 expose exclusive versus inclusive comparisons; 3 passes both rules and cannot distinguish them."],
+        ["8C","Repair to rating >= 1 and rating <= 5. Retest 0,1,3,5,6. Expected values can be written now; actual-before/after fields are only completed from observed runs. Retain a build/version note and the reason for repair."],
+        ["8D","quantity >= 2 and quantity <= 8. Suitable tests 1 reject,2 accept,5 accept,8 accept,9 reject. Accept another valid typical value and equivalent condition with the same domain."],
+        ["Exit / reteach","Original four endpoint cases: 0 reject,1 accept,5 accept,6 reject. A later threshold change needs new near-boundary values and regression checks on previous valid behaviour. If pupils copy outputs as expectations, calculate expected acceptance from the written requirement first."]
+      ]
+    }
+  ]
+}
