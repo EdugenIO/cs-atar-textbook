@@ -635,15 +635,15 @@ Common mistake: Naming classes is insufficient: explain responsibilities and inh
 
 A booking service stores Workshop(WorkshopID, Title, Capacity) and Booking(BookingID, WorkshopID, StudentID). A booking must refer to an existing workshop; a student must not book the same workshop twice. Staff can change capacity. Explain suitable database constraints, how the application should safely use user-supplied values in SQL, one suitable staff access control, and a recovery measure. Include an example check for the duplicate-booking rule.
 
-Use WorkshopID and BookingID as primary keys. Enforce the WorkshopID foreign key, and a UNIQUE(WorkshopID, StudentID) constraint. Use parameterised SQL, such as placeholders bound to user-supplied values, so those values are treated as data rather than SQL instructions. Test a second booking of the same workshop for the same student: the duplicate must be rejected and the original retained. Restrict capacity updates to authorised staff roles. Keep separate regular backups and test restoration to support recovery. Equivalent constraints, tests and explained controls are acceptable; exact SQL syntax is not required.
+Use WorkshopID and BookingID as primary keys. Require Booking.WorkshopID and StudentID to be NOT NULL, enforce the WorkshopID foreign key, and add UNIQUE(WorkshopID, StudentID). In SQLite, a nullable foreign key can contain NULL without matching a parent, and UNIQUE permits NULLs, so those constraints alone do not enforce mandatory booking identity. Enable and verify foreign-key enforcement for every SQLite connection before the transaction. Use parameterised SQL, such as placeholders bound to user-supplied values, so those values are treated as data rather than SQL instructions. Test a second booking of the same workshop for the same student: the duplicate must be rejected and the original retained. Restrict capacity updates to authorised staff roles. Keep separate regular backups and test restoration to support recovery. Equivalent constraints, tests and explained controls are acceptable; exact SQL syntax is not required.
 
 Criteria (one mark each):
 
 - Identifies suitable primary keys for Workshop and Booking.
 
-- Enforces Booking.WorkshopID as a foreign key to an existing Workshop.
+- Requires Booking.WorkshopID to be NOT NULL and a foreign key to an existing Workshop.
 
-- Uses a unique constraint on the pair (WorkshopID, StudentID) to prevent duplicate student bookings.
+- Requires StudentID to be NOT NULL and uses a unique constraint on (WorkshopID, StudentID) to prevent duplicate student bookings.
 
 - Uses parameterised SQL to pass user-supplied values separately from the SQL statement, rather than concatenating them.
 
@@ -653,7 +653,7 @@ Criteria (one mark each):
 
 - Proposes separate regular backups with tested restoration and explains recovery after loss/corruption.
 
-Common mistake: A foreign key alone does not stop the same student booking twice. Parameterised SQL helps prevent SQL injection; it does not replace access control or validation.
+Common mistake: A foreign key alone does not stop the same student booking twice or make the reference mandatory. NOT NULL is needed for required identifiers; the composite unique constraint prevents repeated non-NULL pairs. Parameterised SQL helps prevent SQL injection; it does not replace access control or validation.
 
 ## Exam-style y11-p1 - Trace a while loop
 

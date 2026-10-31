@@ -28,6 +28,7 @@ jobs:
           node scripts/build-resource-hub.mjs
           node scripts/build-revision.mjs
           node scripts/build-teacher-planning.mjs
+          python scripts/build-technical-review.py
           node scripts/build-offline-readers.mjs
           python scripts/build-offline-library.py
           node --test tests/*.test.mjs
@@ -40,6 +41,7 @@ jobs:
           python tests/foundations-pack.test.py
           python tests/extended-packs.test.py
           python tests/sql-pathway.test.py
+          python tests/technical-accuracy.test.py
           python -m pip install pygame==2.6.1
           python tests/pygame-bridge.test.py
           python tests/teaching-depth-examples.test.py
