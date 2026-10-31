@@ -55,6 +55,9 @@ def dictionary(key,changed=False):
   columns=db.execute('PRAGMA table_info('+name+')').fetchall();rows=[[c[1],c[2],str(c[3]),str(c[5])] for c in columns]
   lines+=['## '+name,'Field | Declared type | NOT NULL flag | Primary-key position','--- | --- | --- | ---']+[' | '.join(r) for r in rows]
   records=[list(r) for r in db.execute('SELECT * FROM '+name)];headers=[c[1] for c in columns]
+  if key=='staging':
+   records=[[repr(v) if isinstance(v,str) else v for v in row] for row in records]
+   lines.append('Text values below are shown in quotes so surrounding/blank spaces remain visible; the quote marks are display notation, not stored characters.')
   html.append('<details><summary>'+e(name)+' · fields and supplied records</summary>'+table_html({'columns':['Field','Type','NOT NULL','PK position'],'rows':rows})+table_html({'columns':headers,'rows':records})+'</details>')
   for fk in db.execute('PRAGMA foreign_key_list('+name+')'):
    lines.append('Foreign key component: '+name+'.'+fk[3]+' -> '+fk[2]+'.'+fk[4]+'; delete action '+fk[6]+'. Components with the same FK ID '+str(fk[0])+' form one foreign key.')

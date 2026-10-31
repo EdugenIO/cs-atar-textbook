@@ -6,6 +6,7 @@ Field | Declared type | NOT NULL flag | Primary-key position
 --- | --- | --- | ---
 MemberID | TEXT | 1 | 1
 DisplayName | TEXT | 1 | 0
+Text values below are shown in quotes so surrounding/blank spaces remain visible; the quote marks are display notation, not stored characters.
 
 Supplied records:
 MemberID | DisplayName
@@ -17,11 +18,12 @@ Field | Declared type | NOT NULL flag | Primary-key position
 RowNo | INTEGER | 0 | 1
 MemberID | TEXT | 1 | 0
 DisplayName | TEXT | 1 | 0
+Text values below are shown in quotes so surrounding/blank spaces remain visible; the quote marks are display notation, not stored characters.
 
 Supplied records:
 RowNo | MemberID | DisplayName
 --- | --- | ---
-1 |  m05  |  Faye 
-2 | M05 | Conflicting person
-3 | M06 |  
-4 | m07 |  Gia
+1 | ' m05 ' | ' Faye '
+2 | 'M05' | 'Conflicting person'
+3 | 'M06' | ' '
+4 | 'm07' | ' Gia '
