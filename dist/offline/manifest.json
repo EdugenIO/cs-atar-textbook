@@ -1,0 +1,31 @@
+{
+  "release": "2026-10-31",
+  "edition": "2026 foundation; 2027 revisions",
+  "files": [
+    {
+      "name": "unit-1-reader.html",
+      "bytes": 299129,
+      "sha256": "d9b4248db796b0a32bdb22685f29c05e86a6ddc71dda6464477381c04a793003"
+    },
+    {
+      "name": "unit-2-reader.html",
+      "bytes": 271717,
+      "sha256": "a2f154b70ed3ed40c1e55f993219696bc6b64300e18a511d8de3914f23ea086d"
+    },
+    {
+      "name": "unit-3-reader.html",
+      "bytes": 482121,
+      "sha256": "9180c971226131bf753c08ca7b36bdc6a729a52bca0389a0771fad8a9d3ecfae"
+    },
+    {
+      "name": "unit-4-reader.html",
+      "bytes": 364022,
+      "sha256": "d009ab0b46df6ec4b7aed57d0da62e722912be3ff9774fbf7c5bc8b434079cf0"
+    },
+    {
+      "name": "cs-atar-complete.zip",
+      "bytes": 10738679,
+      "sha256": "832c3138ba153aa50b9b9d2aa323b1b6bb06b2446a769b5b9604c59350c153c4"
+    }
+  ]
+}

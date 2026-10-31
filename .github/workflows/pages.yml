@@ -27,7 +27,10 @@ jobs:
           node scripts/build-resource-hub.mjs
           node scripts/build-revision.mjs
           node scripts/build-teacher-planning.mjs
+          node scripts/build-offline-readers.mjs
+          python scripts/build-offline-library.py
           node --test tests/*.test.mjs
+          python tests/offline-library.test.py
           python tests/lesson-slides-package.test.py
           python tests/game-project-packages.test.py
           python tests/project-alignment.test.py
@@ -41,6 +44,10 @@ jobs:
           python tests/teaching-depth-examples.test.py
       - name: Version runtime assets
         run: node scripts/prepare-pages.mjs
+      - name: Package offline library with versioned assets
+        run: |
+          python scripts/build-offline-library.py
+          python tests/offline-library.test.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

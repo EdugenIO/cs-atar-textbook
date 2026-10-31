@@ -1,0 +1,26 @@
+[
+  {
+    "unit": 1,
+    "name": "unit-1-reader.html",
+    "chapters": 16,
+    "bytes": 299193
+  },
+  {
+    "unit": 2,
+    "name": "unit-2-reader.html",
+    "chapters": 10,
+    "bytes": 271781
+  },
+  {
+    "unit": 3,
+    "name": "unit-3-reader.html",
+    "chapters": 14,
+    "bytes": 482185
+  },
+  {
+    "unit": 4,
+    "name": "unit-4-reader.html",
+    "chapters": 10,
+    "bytes": 364086
+  }
+]
