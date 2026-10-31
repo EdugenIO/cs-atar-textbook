@@ -783,7 +783,7 @@ CHECKS = {
 "values": [("Text '0042' used as an ID", "Leading zeroes retained as text", "Meaning determines type"), ("Text '2.5' passed to int", "ValueError rather than integer 2", "Conversion is not arbitrary rounding")],
 "representation": [("Binary 00101101", "Decimal 45; check using place values", "Two independent methods"), ("Eight one bits", "255", "Maximum unsigned eight-bit boundary")],
 "selection": [("Order 49, 50, 51", "Charges 5, 0, 0", "Exposes > versus >="), ("Negative order total", "Documented rejection", "Invalid-domain path")],
-"loops": [("sum_to(0)", "0 with no iterations", "Zero-iteration path"), ("sum_to(4)", "10", "Includes the final intended value")],
+"loops": [("Add integers from 1 through n with n = 0", "0 with no iterations", "Zero-iteration path"), ("Add integers from 1 through n with n = 4", "10", "Includes the final intended value")],
 "functions": [("score 10, bonus 5", "Return 15; original module binding unchanged until assigned", "Scope and data flow"), ("Two separate player inputs", "Updating one does not silently change the other", "Shared-state counterexample")],
 "arrays": [("[]", "No maximum under the stated contract", "Do not index before checking empty"), ("[9, 9, 4] with first-maximum contract", "Index 0", "Tie behaviour must be explicit")],
 "files": [("Append 20 to a file containing 10 and a newline", "Two records: 10 and 20", "Persistence and separator"), ("Read a missing compulsory input", "Clear failure message; no fabricated data", "Failure differs from optional empty history")],

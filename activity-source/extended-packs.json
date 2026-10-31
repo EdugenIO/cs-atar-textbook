@@ -429,7 +429,7 @@
     "id": "databases-sql",
     "title": "Databases and SQL: from records to reliable changes",
     "unit": 2,
-    "prerequisites": "Teach in the numbered order. Activities 01-04 establish the Year 11 pathway; 05 introduces grouped reports with a labelled Year 12 HAVING extension. Complete relevant practice and feedback before any assessment. This is a progression, not a claim to cover every SQL syllabus item.",
+    "prerequisites": "Activities 01-04 establish the Year 11 foundation. Before Activity 05, complete whole-result aggregate practice in the SQL pathway; grouped reports belong to the Year 12 route. HAVING and LEFT JOIN are supporting extensions with their own preparation. Activity 06 needs prior SELECT/WHERE practice and a disposable database copy. Follow the prerequisites, rather than treating the activity numbers as one beginner lesson.",
     "references": [
       "https://www.sqlite.org/lang_select.html",
       "https://www.sqlite.org/foreignkeys.html",
@@ -838,7 +838,7 @@
       {
         "id": "05",
         "title": "Aggregate first, then filter groups",
-        "chapter": "sql-basics",
+        "chapter": "unit4-sql",
         "intention": "Distinguish row filters, grouping and aggregate results.",
         "worked": [
           {
@@ -869,7 +869,7 @@
           },
           {
             "type": "heading",
-            "text": "B. Year 12 extension: HAVING"
+            "text": "B. Supporting extension: HAVING"
           },
           {
             "type": "p",
@@ -881,11 +881,11 @@
           },
           {
             "type": "heading",
-            "text": "Exit"
+            "text": "Exit: core grouped-report check"
           },
           {
             "type": "p",
-            "text": "For a LEFT JOIN from Member to Loan, why would COUNT(Loan.loan_id) give Cleo zero while COUNT(*) gives one? Refer to the preserved unmatched row."
+            "text": "Explain why Cleo has no row in a report grouped from Loan alone. Does a missing group mean that Member 3 is missing from Member? Identify the source table and justify your answer."
           },
           {
             "type": "workspace",
@@ -903,10 +903,10 @@
           ],
           [
             "Exit / feedback",
-            "The preserved Cleo row contains NULL Loan.loan_id. COUNT(column) ignores NULL; COUNT(*) counts that row. If totals are multiplied, inspect join cardinality before changing aggregate functions."
+            "Loan has no row for Cleo, so grouping Loan cannot create a Cleo group. Member 3 still exists in Member. A missing result row is not proof that the parent record is absent. If totals are multiplied, inspect join cardinality before changing aggregate functions."
           ]
         ],
-        "offline": "Sort printed loan cards into piles by the grouping key and calculate each aggregate. Use the optional extension only after feedback on Activity 04 and the grouped report.",
+        "offline": "Group printed loan cards by the chosen key and calculate aggregates. Complete the whole-result aggregate pathway before this activity. Attempt HAVING only after the core grouped report and the supporting HAVING explanation; LEFT JOIN is not needed for the core exit.",
         "extension": ""
       },
       {

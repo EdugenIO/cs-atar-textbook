@@ -66,3 +66,5 @@ net=ipaddress.ip_network('192.0.2.96/27');hosts=list(net.hosts())
 assert str(net.broadcast_address)=='192.0.2.127' and len(hosts)==30 and str(hosts[0])=='192.0.2.97' and str(hosts[-1])=='192.0.2.126'
 assert 75*8/20==30 and 24/(9-6)==8
 print('18 activities: 36 student/18 teacher pages, archives, Python results, SQL reports/constraints/rollback, Unicode, logic and subnet calculations passed.')
+# The guided beginner-SQL changed sort uses this pack's actual schema.
+assert db.execute('SELECT item, loan_id FROM Loan ORDER BY item ASC, loan_id DESC').fetchall()==[('Camera',103),('Camera',101),('Headset',102),('Tripod',104)]

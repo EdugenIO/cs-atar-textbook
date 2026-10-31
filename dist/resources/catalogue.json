@@ -1213,11 +1213,6 @@
         "type": "activity"
       },
       {
-        "label": "Activity 05: Aggregate first, then filter groups",
-        "href": "../activities/databases-sql/#lesson-05",
-        "type": "activity"
-      },
-      {
         "label": "Databases and SQL: from records to reliable changes · student PDF",
         "href": "../activities/databases-sql/student.pdf",
         "type": "print"

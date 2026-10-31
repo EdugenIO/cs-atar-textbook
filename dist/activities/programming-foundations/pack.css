@@ -34,3 +34,5 @@
   .sheet-footer{font-size:7pt;color:black;margin-top:12pt;padding-top:5pt;border-color:#aaa}
   .teacher-note{background:none;padding:0}
 }
+
+.activity-next{max-width:850px;padding:20px;margin:20px auto;background:#edf3ed;border:1px solid #63736a;border-radius:8px}@media print{.activity-next{display:none!important}}

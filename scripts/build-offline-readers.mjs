@@ -1,7 +1,7 @@
 import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
 const dist=path.resolve('dist'),out=path.join(dist,'offline');fs.mkdirSync(out,{recursive:true});const read=n=>fs.readFileSync(path.join(dist,n),'utf8');
 const c=vm.createContext({textbookHeadingId:s=>'heading-'+s.toLowerCase().replace(/[^a-z0-9]+/g,'-')});
-for(const f of ['app','chapters','project-chapter','network-chapters','audit-chapters','unit2-chapters','unit2-review-chapters','unit3-chapters','unit4-chapters','unit4-er-interpretation','unit4-data-quality','prerequisites',...([1,2,3,4].map(n=>'learning-guides-unit'+n)),'learning-support'])vm.runInContext(read(f+'.js'),c);
+for(const f of ['app','chapters','project-chapter','network-chapters','audit-chapters','unit2-chapters','unit2-review-chapters','unit3-chapters','unit4-chapters','unit4-er-interpretation','unit4-data-quality','lesson-journeys','prerequisites',...([1,2,3,4].map(n=>'learning-guides-unit'+n)),'learning-support'])vm.runInContext(read(f+'.js'),c);
 vm.runInContext(read('reader.js').split('function downloadText')[0],c);for(const f of ['depth-data','depth','diagram-descriptions'])vm.runInContext(read(f+'.js'),c);
 const chapters=JSON.parse(vm.runInContext('JSON.stringify(chapters)',c));chapters.splice(3,0,{id:'selection',unit:1,title:'Making decisions with selection'});
 const esc=s=>String(s).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
