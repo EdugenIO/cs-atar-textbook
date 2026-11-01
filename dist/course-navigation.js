@@ -23,7 +23,7 @@
   const text=active?`Year ${active.dataset.year} · Unit ${active.dataset.unit} · Chapter ${active.dataset.position} of ${active.dataset.total}`:overview?`Unit ${overview} overview`:route()==='home'?'Choose a year and unit':route()==='glossary'?'Glossary':route()==='contents'?'Course contents':route()==='sources'?'About and sources':'Teacher resources';
   position.textContent=text;mobile.textContent=active?`Unit ${active.dataset.unit} · ${active.dataset.title}`:text;
   context.hidden=!active;
-  if(changed&&active&&wide.matches)panel.scrollTop=Math.max(0,active.offsetTop-panel.clientHeight*.35);
+  if(changed&&active&&wide.matches){const top=active.offsetTop,bottom=top+active.offsetHeight;if(top<panel.scrollTop)panel.scrollTop=Math.max(0,top-12);else if(bottom>panel.scrollTop+panel.clientHeight)panel.scrollTop=bottom-panel.clientHeight+12;}
   if(previousRoute!==null&&changed)closeMobile();previousRoute=route();
  }
  function anchor(text,href){const a=document.createElement('a');a.textContent=text;a.href=href;return a;}
