@@ -1,7 +1,7 @@
 const fields=['query','year','unit','topic','type'].map(id=>document.getElementById(id));
 const cards=[...document.querySelectorAll('.resource-card')];
 function normalise(value){return String(value).normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();}
-function relevance(card,q){const query=normalise(q);if(!query)return 1;const terms=query.split(' '),title=normalise(card.dataset.title||''),text=normalise(card.dataset.search||card.textContent);if(!terms.every(t=>(' '+text+' ').includes(' '+t+' ')))return 0;return title===query?100:title.includes(query)?80:terms.every(t=>(' '+title+' ').includes(' '+t+' '))?60:20;}
+function relevance(card,q){const query=normalise(q);if(!query)return 1;const terms=query.split(' '),title=normalise(card.dataset.title||''),fileQuery=/\.(?:py|sql|csv|sqlite|md|pdf|zip)\b/i.test(q),text=fileQuery?normalise([...card.querySelectorAll('a[href]')].map(a=>a.getAttribute('href').split('/').at(-1).split(/[?#]/)[0]).join(' ')):normalise(card.dataset.search||card.textContent);if(!terms.every(t=>(' '+text+' ').includes(' '+t+' ')))return 0;return title===query?100:title.includes(query)?80:terms.every(t=>(' '+title+' ').includes(' '+t+' '))?60:20;}
 function filterResources(){
  const [q,year,unit,topic,type]=fields.map(f=>f.value.trim());let count=0;const ranked=[];
  for(const card of cards){

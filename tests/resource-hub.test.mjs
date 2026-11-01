@@ -9,7 +9,7 @@ assert.equal(new Set(data.map(c=>c.id)).size,50);
 for(const [u,n] of [[1,16],[2,10],[3,14],[4,10]])assert.equal(data.filter(c=>c.unit===u).length,n);
 for(const c of data){assert.equal(c.year,c.unit<3?11:12);assert.ok(c.resources.some(r=>r.type==='reading'));for(const r of c.resources){const target=path.resolve(root,r.href.split(/[?#]/)[0]||'.');assert.ok(target.startsWith(path.dirname(root)),r.href);assert.ok(fs.existsSync(target),r.href);}}
 const listeners={},fields=Object.fromEntries(['query','year','unit','topic','type'].map(id=>[id,{id,value:'',tagName:id==='query'?'INPUT':'SELECT',options:[],addEventListener:(_,fn)=>listeners[id]=fn}]));
-const cards=data.map(c=>{const links=c.resources.map(r=>({dataset:{type:r.type},hidden:false}));const teacher=c.resources.some(r=>r.type==='teacher')?{}:null;return {dataset:{title:c.title,search:c.search,year:String(c.year),unit:String(c.unit),topic:c.topic},textContent:[c.title,c.intro,...c.resources.map(r=>r.label)].join(' '),querySelectorAll:()=>links,querySelector:()=>teacher};});
+const cards=data.map(c=>{const links=c.resources.map(r=>({dataset:{type:r.type},hidden:false,getAttribute:()=>r.href}));const teacher=c.resources.some(r=>r.type==='teacher')?{}:null;return {dataset:{title:c.title,search:c.search,year:String(c.year),unit:String(c.unit),topic:c.topic},textContent:[c.title,c.intro,...c.resources.map(r=>r.label)].join(' '),querySelectorAll:()=>links,querySelector:()=>teacher};});
 const buttons=Object.fromEntries(['reset','print'].map(id=>[id,{addEventListener:(_,fn)=>listeners[id]=fn}]));const count={},empty={};
 const context={document:{getElementById:id=>fields[id]||buttons[id]||(id==='count'?count:empty),querySelectorAll:()=>cards},URLSearchParams,location:{search:'',pathname:'/resources/',hash:''},history:{replaceState(){}},window:{print(){}}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'hub.js'),'utf8'),context);
@@ -22,4 +22,5 @@ for(const c of cards.filter(c=>!c.hidden))assert.equal(c.querySelector().open,tr
 listeners.reset();assert.equal(cards.filter(c=>!c.hidden).length,50);
 fields.query.value='SQL';listeners.query();const sql=cards.filter(c=>!c.hidden);assert.ok(sql.length<20,'Shared resource labels do not match most chapters');assert.ok(vm.runInContext('relevance(cards.find(c=>c.dataset.title.includes("SQL")),"SQL")',context)>0);
 listeners.reset();fields.query.value='foreign key';listeners.query();assert.ok(cards.some(c=>!c.hidden));
+listeners.reset();fields.query.value='sql-worked-queries.sql';listeners.query();assert.ok(cards.some(c=>!c.hidden),'Exact downloadable filenames remain searchable');
 console.log('Resource hub: all 50 chapters, local links, year/unit filtering, search, teacher resources and reset passed.');

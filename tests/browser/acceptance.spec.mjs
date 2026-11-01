@@ -61,6 +61,7 @@ test('interrupted textbook download offers recovery',async({page})=>{
 test('ranked topic search excludes generic download labels',async({page})=>{
  await page.goto('/resources/?query=SQL');await expect(page.locator('.resource-card:not([hidden])').first().locator('h2')).toContainText('SQL');expect(await page.locator('.resource-card:not([hidden])').count()).toBeLessThan(20);
  await page.locator('#query').fill('subnetting');await expect(page.locator('.resource-card:not([hidden])')).toHaveCount(1);
+ await page.locator('#query').fill('sql-worked-queries.sql');expect(await page.locator('.resource-card:not([hidden])').count()).toBeGreaterThan(0);
 });
 test('checklist backup import merges and rejects unrelated files',async({page})=>{
  await page.goto('/revision/');await page.locator('[data-check]').first().check();const second=page.locator('[data-check]').nth(1),id=await second.getAttribute('data-check');
