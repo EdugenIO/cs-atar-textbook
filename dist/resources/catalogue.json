@@ -6,6 +6,7 @@
     "unit": 1,
     "year": 11,
     "topic": "Programming and design",
+    "search": "Your first Python program A program transforms inputs into useful outputs. Start with a small problem you can explain, then translate your steps into Python. A problem before a program Prepare your workspace Sequence: follow the order Trace and test Python sequence input output variables first program",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -51,6 +52,7 @@
     "unit": 1,
     "year": 11,
     "topic": "Programming and design",
+    "search": "Values, types and operators The same-looking input can mean different things. Choose a type that matches the meaning of the data and the operations you need. Match the type to the meaning Convert deliberately Calculate and predict Assignment updates a value Python types operators arithmetic conversion precedence modulo",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -96,6 +98,7 @@
     "unit": 1,
     "year": 11,
     "topic": "Computer systems",
+    "search": "Numbers and characters in a computer Binary, decimal and hexadecimal are different ways to write a number. Character encodings connect numbers with text. Place value changes with the base Hexadecimal is a compact notation Text needs an agreed representation Check by a second method binary decimal hexadecimal hex ASCII Unicode bits bytes",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -171,6 +174,7 @@
     "unit": 1,
     "year": 11,
     "topic": "Programming and design",
+    "search": "Making decisions with selection Compare values, choose branches and test boundary cases. Selection Python if else elif Boolean conditional boundary decision",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -236,6 +240,7 @@
     "unit": 1,
     "year": 11,
     "topic": "Programming and design",
+    "search": "Repeating work with loops A loop repeats instructions. This repetition is called iteration. Decide what repeats, what changes, and what makes the loop stop. A fixed number of repetitions Trace the running total Repeat while a condition remains true From algorithm to implementation Test-first and test-last repetition Python iteration repetition for while range accumulator counter",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -316,6 +321,7 @@
     "unit": 1,
     "year": 11,
     "topic": "Programming and design",
+    "search": "Functions and scope Give one useful task a name, define its inputs and return its result. Small functions make a program easier to understand and test. One task, one function Return a result Names belong to scopes Test the part before the whole Trace local and global names Python parameter return local global scope procedure",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -396,6 +402,7 @@
     "unit": 1,
     "year": 11,
     "topic": "Programming and design",
+    "search": "Working with one-dimensional arrays Store related values in a list. Visit them one at a time to find totals, minimums and maximums. These Python lists let you practice array-style algorithms. An array idea, a Python implementation Load and traverse Remember the location of the best value Check edge cases Translate the standard algorithms Python list array traverse minimum maximum index",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -476,6 +483,7 @@
     "unit": 1,
     "year": 11,
     "topic": "Programming and design",
+    "search": "Text files and reliable input A program should preserve useful results and respond clearly when input is unsuitable. Combine file processing with deliberate validation. Accept only usable input A file outlives the program Choose the mode deliberately Read records in order Python text file read write append exception validation",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -556,6 +564,7 @@
     "unit": 1,
     "year": 11,
     "topic": "Programming and design",
+    "search": "Designing and testing solutions Investigate, design, build and evaluate the shared Year 11 Pygame game using one equivalent theme and 10 existing supervised workshops. Investigate: understand the problem Plan the work and dependencies Design: divide the solution into modules Develop: build a small working part Test: choose evidence that can expose mistakes Debug: isolate the first incorrect state Evaluate: judge the result against the brief Project pack and checkpoints ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -696,6 +705,7 @@
     "unit": 1,
     "year": 11,
     "topic": "Networks",
+    "search": "Network foundations When you open a website, several network jobs happen together. Follow the message and learn which layer handles each job. A shared set of rules Four layers, four responsibilities Protocols in a familiar journey Encapsulation and diagnostic tools network DoD TCP IP protocols layers TCP UDP DNS",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -746,6 +756,7 @@
     "unit": 1,
     "year": 11,
     "topic": "Networks",
+    "search": "Addresses, devices and media Decide whether a message stays on the local network or needs a router. Then choose addresses, devices and connections that fit the setting. Addresses and the local network Choose a device for its function Choose a medium for the setting IP MAC gateway switch router fibre wireless ethernet media",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -771,6 +782,7 @@
     "unit": 1,
     "year": 11,
     "topic": "Networks",
+    "search": "Designing and protecting a network Design a network for a school scenario. Show how it connects, who can use each resource, and what might limit its performance. Scale and logical diagrams Protect against unauthorised access Find the bottleneck network logical diagram bandwidth bottleneck capacity security",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -816,6 +828,7 @@
     "unit": 1,
     "year": 11,
     "topic": "Review and revision",
+    "search": "Network scenarios and review Use the network ideas together in a library scenario. Explain each choice, then compare your reasoning with the answers. Use a repeatable explanation Review task: the library upgrade ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -841,6 +854,7 @@
     "unit": 1,
     "year": 11,
     "topic": "Security and responsibility",
+    "search": "Software, ownership and licensing Before you copy or adapt code, check what its licence allows. Giving credit and having permission are separate responsibilities. Ideas, expression and permissions Read the licence before reuse Keep a source record copyright licence licensing attribution API plagiarism",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -866,6 +880,7 @@
     "unit": 1,
     "year": 11,
     "topic": "Review and revision",
+    "search": "Unit 1 consolidation Find one idea you are unsure about, practice it, then try a new example. Use your results to choose what to work on next. Diagnose before choosing practice Station A: Boolean expressions and types Types, operators and functions together Station B: algorithms in two representations Station C: debug and prove the correction Station D: design, files and responsibility Station E: network explanation and diagrams ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -891,6 +906,7 @@
     "unit": 1,
     "year": 11,
     "topic": "Review and revision",
+    "search": "Unit 1 exam preparation Try a mixed set of questions, explain how you reached each answer, and use mistakes to choose your next revision task. Use the practice paper Q1 · 3 marks Q2 · 4 marks Q3 · 5 marks Q4 · 4 marks Q5 · 4 marks Q6 · 4 marks Q7 · 4 marks Q8 · 3 marks Q9 · 4 marks Q10 · 3 marks Q11 · 6 marks Q12 · 4 marks Turn feedback into a plan ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -926,6 +942,7 @@
     "unit": 2,
     "year": 11,
     "topic": "Databases and SQL",
+    "search": "Relational database foundations Find out what a school equipment desk needs to know, then use its loan records to answer a question. You will compare a simple register with related database tables. Start with a question Inspect the flat-file starter Turn records into information Why separate related facts? Database, DBMS and RDBMS What does data independence mean? Choose an approach for the requirement Your first database workbook ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -1036,6 +1053,7 @@
     "unit": 2,
     "year": 11,
     "topic": "Databases and SQL",
+    "search": "Modelling entities and relationships Decide what each table should store before you build it. You will identify borrowers, equipment and loan events, then connect them with keys and clear relationship rules. From entity to table Choose identifiers deliberately Four tables from the familiar register Read relationships in both directions Draw and interpret crow’s-foot notation When a composite key fits Document the fields and their rules Check the design against counterexamples Model pack and independent practice ERD entity relationship diagram primary foreign composite key",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -1111,6 +1129,7 @@
     "unit": 2,
     "year": 11,
     "topic": "Databases and SQL",
+    "search": "Normalisation Find out why repeated facts make a register hard to maintain. You will reorganise reservation records into related tables while keeping every original event. This process is called normalisation. State the rules before choosing a key Start with a repeating group Recognise the anomalies 1NF: one reservation per row Dependencies explain the next split 2NF: remove partial dependencies 3NF: remove the transitive dependency Verify that the split preserves information Practice on a fresh four-table problem Downloads and review checkpoints normalization 1NF 2NF 3NF functional dependency anomalies",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -1171,6 +1190,7 @@
     "unit": 2,
     "year": 11,
     "topic": "Databases and SQL",
+    "search": "Getting started with SQL Ask the equipment-loan database a question using SQL. You will choose columns, filter rows and sort the result, then compare it with the source records. Use the relational model Open the starter database Choose result columns with SELECT Filter rows with WHERE Combine conditions and test boundaries Make order and duplicates deliberate Interpret empty results and debug Complete the independent query brief SQL SQLite SELECT WHERE ORDER BY DISTINCT LIKE beginner query",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -1301,6 +1321,7 @@
     "unit": 2,
     "year": 11,
     "topic": "Databases and SQL",
+    "search": "Building a database solution Build a database that helps the equipment desk answer real questions. You will join related records, calculate summaries and make controlled changes, checking each result against a requirement. Define the equipment-desk solution Create and inspect four related tables Join keys to obtain readable reports Summarise the right records Insert a new record deliberately Update the intended row and check it Delete only the disposable test record Rehearse and recover with a transaction Test against requirements, then transfer Launch, document and evaluate the project SQL SQLite INNER JOIN CREATE INSERT UPDATE DELETE aggregate database",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -1431,6 +1452,7 @@
     "unit": 2,
     "year": 11,
     "topic": "Security and responsibility",
+    "search": "Threats and protective measures Work out what happened before choosing a security control. You will use the equipment desk to explain threats, access controls and encryption, then practice historical ciphers to see their limits. Begin with assets, threats and evidence Analyse harm using the CIA triad Audit access using AAA Distinguish people, network and application threats Distinguish malware, physical threats and new flaws Choose layers of protection Protect authentication and set a useful policy Explain encryption and key roles Use a rotation cipher with explicit conventions Use a random substitution and compare patterns Use a polyalphabetic cipher Work through an incident using evidence Apply the controls to the database project Practice on the scenario pack ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -1486,6 +1508,7 @@
     "unit": 2,
     "year": 11,
     "topic": "Security and responsibility",
+    "search": "Responsible data use Decide what the equipment desk should collect, who may use it and what may be shared. You will connect privacy, security and ethical testing to practical choices, using evidence to explain each decision. Separate privacy, security, ethics and law Recognise personal and sensitive information Know the Privacy Act and the course context Apply selected APPs to design decisions Follow the data through its lifecycle Work through a disclosure decision Explain ethical hacking and penetration testing Practice an authorisation review Evaluate the database with evidence Submit, reflect and prepare for review ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -1546,6 +1569,7 @@
     "unit": 2,
     "year": 11,
     "topic": "Review and revision",
+    "search": "Unit 2 integrated review Bring the Unit 2 ideas together in a fresh equipment-desk example. You will check data quality, read a larger model and compare a planned design with what the database actually enforces. Data-quality clinic Read a six-table extension Create and reconcile a fresh model Integrate and explain SQL database security review",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -1586,6 +1610,7 @@
     "unit": 2,
     "year": 11,
     "topic": "Review and revision",
+    "search": "Unit 2 consolidation Choose what you need to practice by trying a short explanation first. Then use focused activities and new examples to strengthen the ideas you find hardest. Diagnose without the answer key Work through targeted stations Retest with changed circumstances SQL database security consolidation",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -1616,6 +1641,7 @@
     "unit": 2,
     "year": 11,
     "topic": "Review and revision",
+    "search": "Unit 2 exam preparation Use an original practice paper to find what you can explain independently. Compare your reasoning with the guide, revisit unclear ideas and try a changed example. Use the original 64-mark paper Bring the specified stimulus Mark, correct and explain limits SQL database security revision exam",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -1661,6 +1687,7 @@
     "unit": 3,
     "year": 12,
     "topic": "Programming and design",
+    "search": "Rebuilding Python fluency Find what needs repair, explain the fix and prove it with a fresh test. Rebuild the programming habits needed for Year 12 before moving to richer data structures. Use diagnosis to choose practice Choose and trace loop forms Retrieve types, operators and Boolean precedence State the contract before writing code Trace and isolate faults Separate validation, processing and display Compare development processes Preserve versions and prove recovery Complete the repair and transfer pack ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -1741,6 +1768,7 @@
     "unit": 3,
     "year": 12,
     "topic": "Programming and design",
+    "search": "Advanced data structures Organise data by position and by key, then explain precisely what a function changes. Choose the structure for the question Read and update a two-dimensional grid Traverse rows and columns Build and use a dictionary Parameters: mutation and rebinding Avoid shared rows and shallow-copy traps Build a small booking report Scope and Python argument binding Convention-focused transfer Python dictionary two dimensional array grid mutable alias",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -1791,6 +1819,7 @@
     "unit": 3,
     "year": 12,
     "topic": "Programming and design",
+    "search": "Searching: linear and binary Find a record, explain each step and compare how the work grows as the data grows. Specify what finding means Linear search: check in order Binary search: discard half Desk-check the bounds Compare growth, not just a stopwatch Choose and test a search Convention-focused transfer Python linear binary searching Big O sorted",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -1836,6 +1865,7 @@
     "unit": 3,
     "year": 12,
     "topic": "Programming and design",
+    "search": "Sorting algorithms Reorder data with three different strategies, trace what changes and justify the work each algorithm does. Define the sorting contract Bubble sort: move the largest to the end Insertion sort: grow a sorted prefix Selection sort: place the smallest remaining item Trace the same data three ways Compare growth and the work being counted Equal keys, stability and a practical choice Test, explain and connect back to searching Convention-focused transfer Python bubble insertion selection sorting stability Big O",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -1881,6 +1911,7 @@
     "unit": 3,
     "year": 12,
     "topic": "Programming and design",
+    "search": "Objects and classes in Python Give each object its own state and a clear interface, then prove that its methods preserve the rules. From separate data to an object Design the class before coding Instantiate and initialise Methods: queries and commands Encapsulation and abstraction Separate instances, shared aliases and class attributes Trace state and test the interface Refactor and connect to earlier algorithms Python class object instance encapsulation abstraction self",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -1926,6 +1957,7 @@
     "unit": 3,
     "year": 12,
     "topic": "Programming and design",
+    "search": "Extending object-oriented design Reuse a common interface, specialise behaviour and explain which method a mixed collection calls. Extend a responsibility, not just a name Initialise common state with super() Override behaviour while keeping the interface Polymorphism: one call, different implementations Abstraction and a consistent stock contract Trace dispatch and boundary changes Test common and specialised behaviour Practice, then complete the controlled task Python inheritance polymorphism override super subclass",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -1976,6 +2008,7 @@
     "unit": 3,
     "year": 12,
     "topic": "Programming and design",
+    "search": "Developing a software solution Investigate, design, build and evaluate the shared Year 12 Pygame game using one equivalent theme and 12 existing supervised workshops. A project small enough to finish Turn the problem into measurable requirements Design responsibilities and shared references Choose and justify the algorithms Develop one tested slice at a time Use the twelve supervised project lessons Test the state transitions, not just the menu Submit evidence and evaluate against the requirements Worked Gantt schedule and dependencies ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -2106,6 +2139,7 @@
     "unit": 3,
     "year": 12,
     "topic": "Programming and design",
+    "search": "Reliable software: testing and review Choose meaningful tests, isolate defects and review changes using evidence from the equipment-loan project. Start with a requirement and an expected result Choose normal, boundary and rejected data Automate a component check with unittest Isolate a fault before changing code Plan a representative load and file-size trial Review a change and retain regression evidence Maintain versions, backups and honest limitations Review developer responsibilities through scenarios Fit the work alongside the project ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -2151,6 +2185,7 @@
     "unit": 3,
     "year": 12,
     "topic": "Networks",
+    "search": "Network models and protocols Follow a message through layered responsibilities, distinguish switching from routing and explain TCP/UDP transport. Use layers to explain a communication Compare the seven-layer OSI and four-layer TCP/IP models Follow encapsulation and decapsulation Separate ports, IP addresses and link addresses Distinguish layer 2 switching from layer 3 routing Compare TCP and UDP behaviour Read transport fields and trace a TCP connection Calculate sizes using explicit assumptions Explain and diagnose a scenario OSI TCP IP encapsulation ports TCP UDP packet frame",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -2196,6 +2231,7 @@
     "unit": 3,
     "year": 12,
     "topic": "Networks",
+    "search": "Addressing and subnetting Read the prefix, calculate the range and design an address plan that includes every required interface. An address needs a prefix Distinguish RFC 1918 private, public and special addresses Convert a prefix to a mask and a capacity Work a host address into its subnet Decide local versus routed and validate a gateway Choose a subnet from the requirement Build and check a variable-length address plan Compare IPv6 and read its notation Verify the arithmetic and diagnose mistakes subnetting subnet CIDR prefix mask VLSM IPv4 IPv6",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -2261,6 +2297,7 @@
     "unit": 3,
     "year": 12,
     "topic": "Networks",
+    "search": "Designing secure networks Turn an address plan into a network design: justify components, restrict traffic, calculate capacity and test your predictions. Start with measurable requirements Choose components by their role Draw physical and logical topology Separate broadcast domains and enforce policy Write a service-specific traffic policy Calculate capacity and identify bottlenecks Use ping and traceroute as evidence Test, evaluate and revise the design Sources and curriculum connection Course diagram convention and live evidence ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -2306,6 +2343,7 @@
     "unit": 3,
     "year": 12,
     "topic": "Review and revision",
+    "search": "Unit 3 integrated review Bring code, software design and network reasoning together, then turn each error into a precise revision action. Diagnose before revising Trace data structures and state Connect sorting, searching and contracts Review objects and reliable changes Work an integrated network case Interpret evidence and diagnose layers Complete a controlled practice and feedback cycle Plan the next revision from evidence ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -2356,6 +2394,7 @@
     "unit": 3,
     "year": 12,
     "topic": "Review and revision",
+    "search": "Unit 3 consolidation Use the evidence from your review to repair misconceptions, transfer the rules to fresh cases and plan the final revision week. Choose two priorities from evidence Use targeted practice stations Work a state correction Make algorithm and object reasoning explicit Transfer subnet and performance reasoning Evaluate a network answer against evidence Attempt fresh mixed transfer Build an evidence-based revision plan ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -2401,6 +2440,7 @@
     "unit": 3,
     "year": 12,
     "topic": "Review and revision",
+    "search": "Unit 3 exam preparation Practice reading, pacing and showing your reasoning, then correct the gaps exposed by an original Unit 3 paper. Understand the scope of this preparation Read the task and plan the evidence Practice a trace and a contract Attempt the original timed practice Mark the method and diagnose the error Use a fresh retry to check transfer Complete the final readiness check ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -2446,6 +2486,7 @@
     "unit": 4,
     "year": 12,
     "topic": "Databases and SQL",
+    "search": "Refining relational database designs Turn requirements and dependencies into a six-table model, then check what the keys and constraints actually enforce. Refine from requirements, not a table count Diagnose a flat record and its dependencies Read the six-table crow’s-foot model Write relational notation and key rules Make a data dictionary that matches implementation Distinguish three kinds of integrity Compare conceptual rules with a runnable schema Transfer to a fresh design Interpreting a ten-table ER model ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -2536,6 +2577,7 @@
     "unit": 4,
     "year": 12,
     "topic": "Databases and SQL",
+    "search": "Advanced SQL queries Write multi-table reports that count the right thing, preserve missing relationships and explain every calculated result. Define the report’s grain Join up to four tables and keep keys visible Aggregate at the correct grain Preserve zero-booking sessions Calculate and concatenate with aliases Respect composite keys and unknown attendance Filter rows and groups deliberately Diagnose multiplied totals and test changed data Complete the query clinic SQL SQLite join GROUP BY HAVING COUNT SUM AVG aggregate query",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -2651,6 +2693,7 @@
     "unit": 4,
     "year": 12,
     "topic": "Databases and SQL",
+    "search": "Database development and evaluation Build and test a six-table workshop system with controlled changes, atomic operations and requirement-linked recovery evidence. Keep the project inside its workshop budget Investigate and design measurable requirements Make controlled changes and verify effects Clean an import without inventing data Use transactions to protect a booking Test workflows, failures and reports Preserve a known-good version and prove recovery Use the sixteen project workshops Run the prototype and evaluate its limits Data quality: five factors in practice SQL SQLite ACID transaction COMMIT ROLLBACK ODBC parameterised database",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -2761,6 +2804,7 @@
     "unit": 4,
     "year": 12,
     "topic": "Security and responsibility",
+    "search": "Cyber security analysis Explain the asset, threat and consequence, then use evidence to test your hypothesis rather than treating an alert as a verdict. Start with assets, weaknesses and evidence Apply the CIA triad to specific consequences Distinguish the AAA questions Classify threats without treating labels as proof Read a synthetic event sequence Build an evidence-based incident hypothesis Link a mitigation to its purpose and limit Complete the scenario analysis clinic ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -2811,6 +2855,7 @@
     "unit": 4,
     "year": 12,
     "topic": "Security and responsibility",
+    "search": "Security controls and responses Match a control to the mechanism, test permitted and prohibited behaviour, and plan a proportionate response with evidence. Choose a control from the risk Compare the required control families Write narrow traffic rules and inspect order Separate identity, role and resource scope Evaluate detection and operational impact Plan an authorised incident response Write acceptance tests and residual risks Complete the control-and-response clinic ",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -2856,6 +2901,7 @@
     "unit": 4,
     "year": 12,
     "topic": "Security and responsibility",
+    "search": "Secure communication and cryptography Explain what encryption, signatures and certificates protect, then trace how an authenticated connection uses those mechanisms together. Identify the protection needed From historical ciphers to modern algorithms Keep key roles separate Hashes are not encryption Explain certificates and trust Trace a simplified TLS 1.3 connection Apply the idea to a VPN and stored records Complete the cryptography clinic TLS encryption cryptography certificate hash symmetric asymmetric VPN",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -2901,6 +2947,7 @@
     "unit": 4,
     "year": 12,
     "topic": "Security and responsibility",
+    "search": "Ethical and legal considerations Apply privacy principles to a supplied case, justify responsible data use, and explain how authorised testing improves security. Separate ethics, law and policy Identify whose privacy rules apply Apply the five prescribed APPs Turn APP 11 into design evidence Assess a federal notifiable breach case Collect and analyse data responsibly Explain ethical hacking and team roles Acknowledge sources and plan an open resource Complete the responsibilities clinic privacy APP APP11 ethical hacking breach law",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -2956,6 +3003,7 @@
     "unit": 4,
     "year": 12,
     "topic": "Review and revision",
+    "search": "Unit 4 integrated review Bring database design, SQL and security decisions together, then use fresh evidence to find what needs another attempt. Review through a changed case Read the model and identify its invariants Predict reports before running SQL Explain transactions, connectivity and recovery Analyse a proposed web deployment with evidence Connect security, cryptography and privacy Attempt a controlled sample and diagnose the result Transfer, retrieve and plan consolidation Download the review materials SQL database security review",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -3011,6 +3059,7 @@
     "unit": 4,
     "year": 12,
     "topic": "Review and revision",
+    "search": "Full-course consolidation Use evidence to repair two priority causes, connect the course strands and demonstrate improvement on changed tasks. Use evidence to choose the next repair Diagnose a cause rather than chase a total Repair Python structures and algorithm reasoning Repair object behaviour and testing Transfer database knowledge to a different model Repair network models, addresses and diagnosis Repair security and responsibility explanations Show improvement with a fresh and delayed attempt Download the consolidation materials SQL database programming network consolidation",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",
@@ -3066,6 +3115,7 @@
     "unit": 4,
     "year": 12,
     "topic": "Review and revision",
+    "search": "Full-course exam preparation Practice using the source, answering the command and managing time, then turn your explanations and self-review into focused revision. Prepare against the current instructions Read the command and use the stimulus Plan time by the actual task Attempt original mixed practice Mark a criterion and explain its cause Transfer to a changed case Make a manageable readiness plan Download the preparation pack SQL database security revision exam",
     "resources": [
       {
         "label": "Read chapter · practice and explained answers",

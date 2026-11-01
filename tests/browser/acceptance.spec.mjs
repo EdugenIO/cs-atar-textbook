@@ -41,8 +41,28 @@ test('revision quiz unanswered feedback and checklist persistence',async({page})
  await page.locator('[data-view="quizzes"]').click();await page.locator('#start-quiz').click();await accessible(page);
  await page.locator('#quiz-form button[type="submit"]').click();await expect(page.locator('#quiz-status')).toContainText('unanswered');await accessible(page);
 });
-for(const route of ['/#home','/#teaching','/#assessments','/resources/','/activities/','/sql/','/revision/','/practice/','/teachers/','/offline/','/lessons/','/accessibility.html'])test('page '+route,async({page})=>{
+for(const route of ['/#home','/#teaching','/#assessments','/resources/','/activities/','/sql/','/revision/','/practice/','/teachers/','/offline/','/lessons/','/accessibility.html','/resource-status.html'])test('page '+route,async({page})=>{
  await page.goto(route);await expect(page.locator('main h1')).toHaveCount(1);await accessible(page);
+});
+test('lightweight home, deferred reading and page-specific report',async({page},info)=>{
+ const scripts=[];page.on('response',r=>{if(new URL(r.url()).pathname.endsWith('.js'))scripts.push(r);});
+ await page.goto('/#home');await expect(page.locator('.site-problem-report')).toBeVisible();
+ expect(scripts.some(r=>r.url().includes('/chapters.js'))).toBe(false);const bytes=(await Promise.all(scripts.map(async r=>(await r.body()).length))).reduce((a,b)=>a+b,0);expect(bytes).toBeLessThan(30000);
+ await info.attach('initial-home-javascript.json',{body:JSON.stringify({requests:scripts.length,bytes}),contentType:'application/json'});
+ await page.locator('a[href="#start"]').first().click();await expect(page.locator('.student-journey')).toHaveCount(1);await expect(page.locator('main h1')).toContainText('Your first Python');
+ const link=page.locator('.site-problem-report a');await link.focus();expect(new URL(await link.getAttribute('href')).searchParams.get('body')).toContain('#start');
+ await page.locator('#search').fill('foreign key');await expect(page.locator('#results a').first()).toBeVisible();
+});
+test('ranked topic search excludes generic download labels',async({page})=>{
+ await page.goto('/resources/?query=SQL');await expect(page.locator('.resource-card:not([hidden])').first().locator('h2')).toContainText('SQL');expect(await page.locator('.resource-card:not([hidden])').count()).toBeLessThan(20);
+ await page.locator('#query').fill('subnetting');await expect(page.locator('.resource-card:not([hidden])')).toHaveCount(1);
+});
+test('checklist backup import merges and rejects unrelated files',async({page})=>{
+ await page.goto('/revision/');await page.locator('[data-check]').first().check();const second=page.locator('[data-check]').nth(1),id=await second.getAttribute('data-check');
+ const upload=value=>page.locator('#import-checks').setInputFiles({name:'backup.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(value))});
+ await upload({book:'cs-atar-textbook',kind:'revision-self-checks',version:1,checked:[id]});await expect(second).toBeChecked();await expect(page.locator('[data-check]').first()).toBeChecked();
+ await upload({version:99,checked:['unknown']});await expect(page.locator('#transfer-status')).toContainText('does not match');await expect(second).toBeChecked();
+ const download=page.waitForEvent('download');await page.locator('#backup-checks').click();expect((await download).suggestedFilename()).toBe('cs-atar-checklist-backup.json');
 });
 test('keyboard, chapter anchor, return to top and narrow-screen reflow',async({page})=>{
  await page.setViewportSize({width:375,height:812});await page.goto('/#start');

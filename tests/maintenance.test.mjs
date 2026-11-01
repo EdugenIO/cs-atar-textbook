@@ -1,0 +1,11 @@
+import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
+const read=p=>fs.readFileSync(p,'utf8');
+const c=vm.createContext({});vm.runInContext(read('dist/revision/revision-core.js'),c);
+const allowed=['one','two'];c.allowed=allowed;c.backup=JSON.stringify({book:'cs-atar-textbook',kind:'revision-self-checks',version:1,checked:['two']});assert.deepEqual([...vm.runInContext('RevisionCore.parseBackup(backup,allowed)',c)],['two']);
+for(const text of ['{',JSON.stringify({version:1,checked:['one']}),JSON.stringify({book:'cs-atar-textbook',kind:'revision-self-checks',version:1,checked:['unknown']}),'x'.repeat(256001)]){c.backup=text;assert.throws(()=>vm.runInContext('RevisionCore.parseBackup(backup,allowed)',c));}
+assert.equal(JSON.parse(vm.runInContext('RevisionCore.backup(new Set(["one"]))',c)).book,'cs-atar-textbook');
+const reports=vm.createContext({module:{exports:{}},URL,URLSearchParams});vm.runInContext(read('dist/report-problem.js'),reports);const report=new URL(reports.module.exports.issueURL('https://edugenio.github.io/cs-atar-textbook/resources/?query=PRIVATE#loops','Loops'));
+assert.ok(report.searchParams.get('body').includes('/resources/#loops'));assert.ok(!report.href.includes('PRIVATE'));assert.ok(report.pathname.endsWith('/issues/new'));
+const stats=JSON.parse(read('dist/resource-status.json'));assert.equal(stats.lessons.length,256);assert.equal(stats.summary.currentSlideSlots+stats.summary.replacementSlots+stats.summary.missingSlideSlots,256);assert.equal(stats.summary.glossaryTerms,191);assert.equal(stats.summary.slideFiles,84);assert.ok(read('README.md').includes('191 glossary terms'));
+const shell=read('dist/index.html').replace(/<template\b[\s\S]*?<\/template>/g,'');const scripts=[...shell.matchAll(/<script[^>]*src="([^"?]+)(?:\?[^"]*)?"/g)].map(m=>m[1]);const bytes=scripts.reduce((n,f)=>n+fs.statSync('dist/'+f).size,0);assert.ok(bytes<30000,'Initial home JavaScript budget');assert.ok(!scripts.includes('chapters.js'));assert.ok(shell.includes('Learn the ideas.'));assert.ok(!read('dist/search.js').includes('const textbookSearchIndex = buildSearchIndex()'));
+console.log('Static home budget, deferred search index, safe checklist backups, query-free issue drafts and reconciled slide counts passed.');

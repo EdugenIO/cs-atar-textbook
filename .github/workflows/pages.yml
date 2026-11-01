@@ -35,6 +35,8 @@ jobs:
           node scripts/build-revision.mjs
           node scripts/build-teacher-planning.mjs
           python scripts/build-technical-review.py
+          node scripts/build-resource-status.mjs
+          node scripts/build-reading-shell.mjs
           node scripts/build-offline-readers.mjs
           python scripts/build-offline-library.py
           node --test tests/*.test.mjs

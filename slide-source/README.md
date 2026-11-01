@@ -1,6 +1,8 @@
 # Lesson slide source
 
-Available: all 64 Unit 1 lessons across Weeks 1–16, plus twenty Unit 2 lessons across Weeks 1–5. Each lesson has eight slides and a suggested 55-minute sequence. Adapt timings to local classes.
+[Current slide availability](https://edugenio.github.io/cs-atar-textbook/resource-status.html) distinguishes 74 current lesson decks, 22 project replacement slots and 160 other missing slots. The 84 existing files include ten legacy project decks; do not treat their presence as current Pygame coverage.
+
+Existing files (including retained legacy project material): all 64 Unit 1 lessons across Weeks 1–16, plus twenty Unit 2 lessons across Weeks 1–5. Each lesson has eight slides and a suggested 55-minute sequence. Adapt timings to local classes.
 
 The `unit*-week*.json` files are the shared content sources: slide titles, editable code/tables, student prompts, teacher notes, preparation and timings. `node scripts/build-slide-web.mjs` rebuilds browser data, the availability registry and teacher-note pages using Node alone. PowerPoint files in `dist/slides/` are editable native presentations with speaker notes; they were generated from this JSON using the Codex presentation runtime. To revise the shared course, update this source and regenerate both formats; keep downloaded personal PowerPoint customisations separately. Browser regeneration alone does not update the PowerPoint files.
 

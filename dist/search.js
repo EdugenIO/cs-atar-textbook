@@ -63,7 +63,7 @@ function findSearchResults(input, index) {
   }).filter(entry => entry.score).sort((a, b) => b.score - a.score || a.label.localeCompare(b.label));
 }
 
-const textbookSearchIndex = buildSearchIndex();
+const textbookSearchIndex = []; // Build the detailed index only for an actual search.
 const searchPageSize = 12;
 let searchMatches = [];
 let visibleSearchCount = searchPageSize;
@@ -114,6 +114,7 @@ function renderSearchResults(focusNewResult = false) {
 }
 
 document.getElementById('search').addEventListener('input', event => {
+  if (event.target.value.trim() && !textbookSearchIndex.length) textbookSearchIndex.push(...buildSearchIndex());
   searchMatches = findSearchResults(event.target.value, textbookSearchIndex);
   visibleSearchCount = searchPageSize;
   renderSearchResults();
