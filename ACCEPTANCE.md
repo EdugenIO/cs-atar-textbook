@@ -46,6 +46,7 @@ Record the actual browser, assistive technology, date and result. Leave unperfor
 
 - All 50 chapter routes must highlight the correct chapter, expand the correct unit and expose valid This chapter destinations.
 - Previous/next controls at the top and bottom must agree and cross unit boundaries in canonical reading order.
+- Heading shortcuts within a chapter retain interactive inputs and quiz feedback; moving to a different chapter starts that page normally.
 - The desktop sidebar must remain within the viewport while long content scrolls. Its contents scroll independently without hiding focus indicators.
 - On mobile, the menu starts closed, identifies the current unit/chapter, closes after selection and returns focus to the selected reading. Escape closes it and returns focus to its summary.
 - Teacher resources start grouped separately; direct teacher routes expose their active link. The lightweight home budget still applies.

@@ -42,6 +42,10 @@ test('desktop sidebar stays available and feedback opens its target',async({page
  await page.locator('#this-chapter > summary').click();await page.locator('#chapter-shortcuts').getByRole('link',{name:'Feedback',exact:true}).click();await expect(page.locator('#chapter-feedback-guide')).toHaveAttribute('open','');await expect(page.locator('#chapter-feedback-guide')).toBeFocused();
  await page.locator('.course-primary a[href="#home"]').click();await expect.poll(()=>page.locator('.course-sidebar-scroll').evaluate(e=>e.scrollTop)).toBe(0);
 });
+test('chapter shortcuts preserve an interactive attempt',async({page})=>{
+ await page.goto('/#selection');await page.locator('#total').fill('35');await page.locator('#this-chapter > summary').click();await page.locator('#chapter-shortcuts').getByRole('link',{name:'Reading',exact:true}).click();await expect(page.locator('#total')).toHaveValue('35');
+ await page.goto('/#functions');await page.locator('#chapter-quiz button').first().click();const feedback=await page.locator('#chapter-feedback').textContent();expect(feedback.length).toBeGreaterThan(0);await page.locator('#this-chapter > summary').click();await page.locator('#chapter-shortcuts').getByRole('link',{name:'Worked example',exact:true}).click();await expect(page.locator('#chapter-feedback')).toHaveText(feedback);
+});
 test('lesson deep link, focused feedback and companion reading filter',async({page})=>{
  await page.goto('/lessons/#u2-l13');await expect(page.locator('#u2-l13')).toBeFocused();
  await page.locator('#u2-l13 summary').click();await expect(page.locator('#u2-l13 details')).toContainText('SELECT Name FROM Equipment ORDER BY EquipmentID');
