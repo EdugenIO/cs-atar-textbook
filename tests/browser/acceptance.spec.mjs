@@ -44,7 +44,7 @@ test('desktop sidebar stays available and feedback opens its target',async({page
 });
 test('chapter shortcuts preserve an interactive attempt',async({page})=>{
  await page.goto('/#selection');await page.locator('#total').fill('35');await page.locator('#this-chapter > summary').click();await page.locator('#chapter-shortcuts').getByRole('link',{name:'Reading',exact:true}).click();await expect(page.locator('#total')).toHaveValue('35');
- await page.goto('/#functions');await page.locator('#chapter-quiz button').first().click();const feedback=await page.locator('#chapter-feedback').textContent();expect(feedback.length).toBeGreaterThan(0);await page.locator('#this-chapter > summary').click();await page.locator('#chapter-shortcuts').getByRole('link',{name:'Worked example',exact:true}).click();await expect(page.locator('#chapter-feedback')).toHaveText(feedback);
+ await page.goto('/#functions');await page.locator('#chapter-quiz button').first().click();const feedback=await page.locator('#chapter-feedback').textContent();expect(feedback.length).toBeGreaterThan(0);if(await page.locator('#this-chapter').getAttribute('open')===null)await page.locator('#this-chapter > summary').click();await page.locator('#chapter-shortcuts').getByRole('link',{name:'Worked example',exact:true}).click();await expect(page.locator('#chapter-feedback')).toHaveText(feedback);
 });
 test('lesson deep link, focused feedback and companion reading filter',async({page})=>{
  await page.goto('/lessons/#u2-l13');await expect(page.locator('#u2-l13')).toBeFocused();
