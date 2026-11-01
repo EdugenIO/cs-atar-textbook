@@ -37,7 +37,7 @@ const hub=vm.runInContext('assessmentHubPage()',c);
 for(const match of hub.matchAll(/href="(assessments\/[^"#]+)"/g))assert.ok(fs.existsSync(new URL('dist/'+match[1],root)),match[1]);
 assert.ok(hub.includes('2027 manual'));
 const index=fs.readFileSync(new URL('dist/index.html',root),'utf8');
-assert.ok(index.includes('href="#assessments">Assessments</a>'));
+assert.ok(index.includes('href="#assessments">Assessment planning</a>'));
 assert.ok(index.indexOf('src="assessments.js"')<index.indexOf('src="reader.js"'));
 assert.equal(fs.readdirSync(new URL('dist/assessments/briefs/',root)).length,30);
 console.log('Two 100% outlines, 18 project choices, 12 standard assessments, twelve packs and all resource links passed.');

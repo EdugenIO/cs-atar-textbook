@@ -42,6 +42,14 @@ Record the actual browser, assistive technology, date and result. Leave unperfor
 - Checklist JSON imports validate book/schema/IDs and merge ticks; unrelated or oversized files leave existing progress unchanged. No quiz scores are imported.
 - Current glossary/slide counts and the availability register are generated from supplied resources; legacy project decks do not count as current project slides.
 
+## Student course navigation
+
+- All 50 chapter routes must highlight the correct chapter, expand the correct unit and expose valid This chapter destinations.
+- Previous/next controls at the top and bottom must agree and cross unit boundaries in canonical reading order.
+- The desktop sidebar must remain within the viewport while long content scrolls. Its contents scroll independently without hiding focus indicators.
+- On mobile, the menu starts closed, identifies the current unit/chapter, closes after selection and returns focus to the selected reading. Escape closes it and returns focus to its summary.
+- Teacher resources start grouped separately; direct teacher routes expose their active link. The lightweight home budget still applies.
+
 ## Editing routes
 
 `teaching-source/lesson-reading-sections.json` records explicit section choices in existing lesson order. It includes a companion licensing reading without moving the project allocation. `build-lesson-routes.mjs` validates the counts and builds the printable page and JSON. `build-student-journeys.mjs` retains the four detailed activity-pack journeys and adds the other 46 chapter pathways using existing tasks and explanations. Regenerate the offline readers/library after changes. Do not infer independent approval from these generated links.

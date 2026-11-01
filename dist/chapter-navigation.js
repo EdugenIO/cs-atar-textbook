@@ -9,6 +9,7 @@ function prepareChapterDestination(moveFocus = true) {
     usedIds.set(base, count);
     if (!heading.id) heading.id = count === 1 ? base : `${base}-${count}`;
   });
+  if (typeof window.dispatchEvent === 'function') window.dispatchEvent(new Event('textbook:chapter-ready'));
   if (!moveFocus) return;
   const heading = main.querySelector('h1');
   let anchor = location.hash.slice(1).split('/')[1];

@@ -13,7 +13,7 @@
    main.removeAttribute('aria-busy');const warning=document.createElement('p');warning.setAttribute('role','alert');warning.textContent='The textbook could not finish loading. ';const offline=document.createElement('a');offline.href='offline/';offline.textContent='Use offline downloads';const reload=document.createElement('button');reload.textContent='Reload textbook';reload.onclick=()=>location.reload();warning.append(offline,' or ',reload);main.prepend(warning);document.getElementById('book-loading')?.remove();
   });return pending;
  }
- window.addEventListener('hashchange',()=>{if(!ready){navigated=true;loadBook();}});
+ window.addEventListener('hashchange',()=>{if(!ready&&!['','home'].includes(location.hash.slice(1))){navigated=true;loadBook();}});
  input.addEventListener('focus',loadBook,{once:true});input.addEventListener('input',()=>{if(!ready)loadBook();});
  if(!['','home'].includes(location.hash.slice(1)))loadBook();
 })();

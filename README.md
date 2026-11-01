@@ -47,6 +47,12 @@ Fork the repository to adapt the book. Credit Brett Sullivan and contributors, l
 
 Corrections and improvements can be proposed through GitHub issues or pull requests. Include the affected chapter or glossary term and an explanation or source for the proposed correction. Contributions should be original or appropriately licensed and submitted under the applicable content/software licences above.
 
+## Course navigation
+
+The student sidebar groups all 50 chapters by year and unit, expands the current unit and highlights the current chapter. A separate This chapter panel links reading, worked examples, practice, feedback and revision; allocated lesson routes remain distinct from chapters. Previous/next controls at both ends follow the complete course order, including unit boundaries. Teacher planning and assessment resources are grouped separately.
+
+`node scripts/build-reading-shell.mjs` regenerates the sidebar from the catalogue and authored journey metadata through `scripts/course-navigation.mjs`. Behaviour and responsive styling live in `dist/course-navigation.js` and `dist/course-navigation.css`. The sidebar stays available on desktop; the mobile Course navigation disclosure closes after selection and supports Escape. Position indicators do not imply completion or mastery.
+
 ## Search, loading and maintenance
 
 The home page is generated as readable HTML by `node scripts/build-reading-shell.mjs`; its inert runtime template loads the full textbook on chapter navigation or search. The detailed search index is created only for an actual query. The first reading/search still loads the complete book; this change reduces the initial home download rather than claiming every chapter is a separate bundle.

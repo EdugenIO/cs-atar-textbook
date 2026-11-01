@@ -12,11 +12,34 @@ for(const chapter of chapters)test('chapter '+chapter.id,async({page},info)=>{
  await page.goto('/#'+chapter.id);
  await expect(page.locator('main h1')).toHaveCount(1);
  await expect(page.locator('.student-journey')).toHaveCount(1);
+ await expect(page.locator('.course-chapter[aria-current="page"]')).toHaveAttribute('data-chapter',chapter.id);
+ await expect(page.locator('.course-unit[data-unit="'+chapter.unit+'"]')).toHaveAttribute('open','');
+ await expect(page.locator('.chapter-route-controls')).toHaveCount(1);
+ await page.locator('#this-chapter > summary').click();
+ for(const href of await page.locator('#chapter-shortcuts a[href^="#"]').evaluateAll(links=>links.map(a=>a.getAttribute('href')))){const id=decodeURIComponent(href.split('/')[1]);await expect(page.locator('[id="'+id+'"]')).toHaveCount(1);}
  await expect(page.locator('main')).toContainText('Practice');
  const destinations=lessons.flatMap(l=>[l.readHref,l.workedHref,...(l.also||[]).map(a=>a.href)]).filter(h=>h.split('#')[1]?.split('/')[0]===chapter.id).map(h=>h.split('/').at(-1));
  for(const id of new Set(destinations))await expect(page.locator('[id="'+id+'"]')).toHaveCount(1);
  if(info.project.name==='chromium')await accessible(page);
  expect(errors).toEqual([]);
+});
+test('course tree, chapter boundaries and teacher separation',async({page})=>{
+ await page.goto('/#exam-preparation');await expect(page.locator('.course-chapter[aria-current="page"]')).toHaveAttribute('data-chapter','exam-preparation');
+ const next=page.locator('.chapter-navigation-top a[href="#database-foundations"]');await expect(next).toBeVisible();await next.click();await expect(page.locator('.course-chapter[aria-current="page"]')).toHaveAttribute('data-chapter','database-foundations');
+ await expect(page.locator('.chapter-nav a[href="#exam-preparation"]')).toBeVisible();await expect(page.locator('.teacher-tools')).not.toHaveAttribute('open','');
+ await page.locator('.teacher-tools > summary').click();await page.locator('.teacher-tools a[href="#assessments"]').click();await expect(page.locator('.teacher-tools a[aria-current="page"]')).toHaveAttribute('href','#assessments');
+});
+test('mobile course navigation, destination focus and Escape',async({page})=>{
+ await page.setViewportSize({width:375,height:812});await page.goto('/#loops');await expect(page.locator('.chapter-route-controls')).toBeVisible();
+ await expect(page.locator('.shelf-menu')).not.toHaveAttribute('open','');await expect(page.locator('#course-mobile-location')).toContainText('Unit 1');
+ await page.locator('.shelf-menu > summary').click();await page.locator('.course-chapter[data-chapter="functions"]').click();
+ await expect(page.locator('.shelf-menu')).not.toHaveAttribute('open','');await expect(page.locator('main h1')).toBeFocused();await expect(page.locator('.course-chapter[aria-current="page"]')).toHaveAttribute('data-chapter','functions');
+ await page.locator('.shelf-menu > summary').click();await page.locator('.course-sidebar-scroll').focus();await page.keyboard.press('Escape');await expect(page.locator('.shelf-menu')).not.toHaveAttribute('open','');await expect(page.locator('.shelf-menu > summary')).toBeFocused();
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);await accessible(page);
+});
+test('desktop sidebar stays available and feedback opens its target',async({page})=>{
+ await page.goto('/#functions');await page.evaluate(()=>window.scrollTo({top:2500,behavior:'instant'}));const box=await page.locator('.course-sidebar').boundingBox();expect(box.y).toBeGreaterThanOrEqual(0);expect(box.y).toBeLessThan(40);expect(box.height).toBeLessThanOrEqual(page.viewportSize().height);
+ await page.locator('#this-chapter > summary').click();await page.locator('#chapter-shortcuts').getByRole('link',{name:'Feedback',exact:true}).click();await expect(page.locator('#chapter-feedback-guide')).toHaveAttribute('open','');await expect(page.locator('#chapter-feedback-guide')).toBeFocused();
 });
 test('lesson deep link, focused feedback and companion reading filter',async({page})=>{
  await page.goto('/lessons/#u2-l13');await expect(page.locator('#u2-l13')).toBeFocused();
@@ -50,7 +73,7 @@ test('lightweight home, deferred reading and page-specific report',async({page},
  expect(scripts.some(r=>r.url().includes('/chapters.js'))).toBe(false);const bytes=(await Promise.all(scripts.map(async r=>(await r.body()).length))).reduce((a,b)=>a+b,0);expect(bytes).toBeLessThan(30000);
  console.log('Initial home JavaScript: '+bytes+' bytes in '+scripts.length+' requests');
  await info.attach('initial-home-javascript.json',{body:JSON.stringify({requests:scripts.length,bytes}),contentType:'application/json'});
- await page.locator('a[href="#start"]').first().click();await expect(page.locator('.student-journey')).toHaveCount(1);await expect(page.locator('main h1')).toContainText('Your first Python');
+ await page.locator('.home-unit[href="#start"]').click();await expect(page.locator('.student-journey')).toHaveCount(1);await expect(page.locator('main h1')).toContainText('Your first Python');
  await expect(page.locator('main h1')).toBeFocused();
  const link=page.locator('.site-problem-report a');await link.focus();expect(new URL(await link.getAttribute('href')).searchParams.get('body')).toContain('#start');
  await page.locator('#search').fill('foreign key');await expect(page.locator('#results a').first()).toBeVisible();

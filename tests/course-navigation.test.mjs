@@ -1,0 +1,11 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import vm from 'node:vm';
+import {courseNavigation} from '../scripts/course-navigation.mjs';
+const html=courseNavigation(),catalogue=JSON.parse(fs.readFileSync('dist/resources/catalogue.json','utf8'));
+const ids=[...html.matchAll(/data-chapter="([^"]+)"/g)].map(m=>m[1]);
+assert.equal(ids.length,50);assert.equal(new Set(ids).size,50);for(const c of catalogue)assert.ok(ids.includes(c.id));
+assert.equal((html.match(/class="course-year"/g)||[]).length,2);assert.equal((html.match(/class="course-unit"/g)||[]).length,4);
+assert.ok(html.includes('sidebar-section teacher-tools'));assert.ok(html.includes('id="this-chapter"'));assert.ok(!html.includes('Start reading ↗'));
+assert.ok(ids.indexOf('software-responsibility')<ids.indexOf('networks'));assert.equal(ids.at(-1),'unit4-exam');
+const index=fs.readFileSync('dist/index.html','utf8');assert.ok(index.includes('src="course-navigation.js"'));assert.ok(index.indexOf('src="course-navigation.js"')<index.indexOf('src="textbook-loader.js"'));assert.equal((index.match(/id="search"/g)||[]).length,1);
+const c=vm.createContext({});vm.runInContext(fs.readFileSync('dist/lesson-journeys.js','utf8'),c);const journeys=vm.runInContext('chapterJourneyRoutes',c);assert.equal(journeys.length,50);
+console.log('Course navigation: all 50 canonical chapters, two years/four units, distinct teacher tools, context panel, one search field and lightweight startup passed.');

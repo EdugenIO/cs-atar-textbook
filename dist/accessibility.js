@@ -1,7 +1,7 @@
 /* Native menu and text alternatives also work with keyboard navigation. */
 (function(){
   const menu=document.querySelector('.shelf-menu');
-  if(menu&&window.matchMedia){
+  if(menu&&!menu.dataset?.courseManaged&&window.matchMedia){
     const wide=window.matchMedia('(min-width:851px)');
     const update=()=>{menu.open=wide.matches;};update();
     wide.addEventListener('change',update);
