@@ -48,10 +48,15 @@ test('lightweight home, deferred reading and page-specific report',async({page},
  const scripts=[];page.on('response',r=>{if(new URL(r.url()).pathname.endsWith('.js'))scripts.push(r);});
  await page.goto('/#home');await expect(page.locator('.site-problem-report')).toBeVisible();
  expect(scripts.some(r=>r.url().includes('/chapters.js'))).toBe(false);const bytes=(await Promise.all(scripts.map(async r=>(await r.body()).length))).reduce((a,b)=>a+b,0);expect(bytes).toBeLessThan(30000);
+ console.log('Initial home JavaScript: '+bytes+' bytes in '+scripts.length+' requests');
  await info.attach('initial-home-javascript.json',{body:JSON.stringify({requests:scripts.length,bytes}),contentType:'application/json'});
  await page.locator('a[href="#start"]').first().click();await expect(page.locator('.student-journey')).toHaveCount(1);await expect(page.locator('main h1')).toContainText('Your first Python');
+ await expect(page.locator('main h1')).toBeFocused();
  const link=page.locator('.site-problem-report a');await link.focus();expect(new URL(await link.getAttribute('href')).searchParams.get('body')).toContain('#start');
  await page.locator('#search').fill('foreign key');await expect(page.locator('#results a').first()).toBeVisible();
+});
+test('interrupted textbook download offers recovery',async({page})=>{
+ await page.route('**/chapters.js*',route=>route.abort());await page.goto('/#start');await expect(page.getByRole('alert')).toContainText('could not finish loading');await expect(page.getByRole('alert').getByRole('link',{name:'Use offline downloads'})).toBeVisible();await expect(page.getByRole('button',{name:'Reload textbook'})).toBeVisible();
 });
 test('ranked topic search excludes generic download labels',async({page})=>{
  await page.goto('/resources/?query=SQL');await expect(page.locator('.resource-card:not([hidden])').first().locator('h2')).toContainText('SQL');expect(await page.locator('.resource-card:not([hidden])').count()).toBeLessThan(20);

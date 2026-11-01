@@ -33,6 +33,15 @@ Record the actual browser, assistive technology, date and result. Leave unperfor
 | Offline library | Extract on a clean device, disconnect, follow routes, open examples and print | Integrity checks exist; clean-device classroom trial pending |
 | Learning difficulty | Learner can complete the focused task within local lesson time and retry a changed case | Editorial sequencing only; teacher/learner trials pending |
 
+## Search, performance and maintenance gates
+
+- A cold home load requests less than 30 KB of decoded JavaScript; the browser report records the measured bytes and request count. The chapter catalogue, planner and detailed index wait for reading/search intent. This is a payload budget, not a Core Web Vitals certification or a claim that chapters are individually bundled.
+- First reading navigation preserves heading focus. A failed file download offers reload and offline-download options.
+- Resource search ranks meaningful titles/keywords ahead of incidental text and excludes common download labels. SQL and subnetting are acceptance examples; empty results and reset remain tested.
+- Issue links prepare page-specific drafts without submitting, omit search queries and avoid local filesystem paths.
+- Checklist JSON imports validate book/schema/IDs and merge ticks; unrelated or oversized files leave existing progress unchanged. No quiz scores are imported.
+- Current glossary/slide counts and the availability register are generated from supplied resources; legacy project decks do not count as current project slides.
+
 ## Editing routes
 
 `teaching-source/lesson-reading-sections.json` records explicit section choices in existing lesson order. It includes a companion licensing reading without moving the project allocation. `build-lesson-routes.mjs` validates the counts and builds the printable page and JSON. `build-student-journeys.mjs` retains the four detailed activity-pack journeys and adds the other 46 chapter pathways using existing tasks and explanations. Regenerate the offline readers/library after changes. Do not infer independent approval from these generated links.
