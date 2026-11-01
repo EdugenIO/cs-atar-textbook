@@ -58,6 +58,9 @@ test('lightweight home, deferred reading and page-specific report',async({page},
 test('interrupted textbook download offers recovery',async({page})=>{
  await page.route('**/chapters.js*',route=>route.abort());await page.goto('/#start');await expect(page.getByRole('alert')).toContainText('could not finish loading');await expect(page.getByRole('alert').getByRole('link',{name:'Use offline downloads'})).toBeVisible();await expect(page.getByRole('button',{name:'Reload textbook'})).toBeVisible();
 });
+test('issue draft retains the selected slide deck without search text',async({page})=>{
+ await page.goto('/slides/?lesson=u1-w01-l01&query=PRIVATE');const report=page.locator('.site-problem-report a');await report.focus();const body=new URL(await report.getAttribute('href')).searchParams.get('body');expect(body).toContain('lesson=u1-w01-l01');expect(body).not.toContain('PRIVATE');
+});
 test('ranked topic search excludes generic download labels',async({page})=>{
  await page.goto('/resources/?query=SQL');await expect(page.locator('.resource-card:not([hidden])').first().locator('h2')).toContainText('SQL');expect(await page.locator('.resource-card:not([hidden])').count()).toBeLessThan(20);
  await page.locator('#query').fill('subnetting');await expect(page.locator('.resource-card:not([hidden])')).toHaveCount(1);
