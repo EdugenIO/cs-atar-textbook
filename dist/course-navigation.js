@@ -24,6 +24,7 @@
   position.textContent=text;mobile.textContent=active?`Unit ${active.dataset.unit} · ${active.dataset.title}`:text;
   context.hidden=!active;
   if(changed&&active&&wide.matches){const top=active.offsetTop,bottom=top+active.offsetHeight;if(top<panel.scrollTop)panel.scrollTop=Math.max(0,top-12);else if(bottom>panel.scrollTop+panel.clientHeight)panel.scrollTop=bottom-panel.clientHeight+12;}
+  if(changed&&route()==='home')panel.scrollTop=0;
   if(previousRoute!==null&&changed)closeMobile();previousRoute=route();
  }
  function anchor(text,href){const a=document.createElement('a');a.textContent=text;a.href=href;return a;}

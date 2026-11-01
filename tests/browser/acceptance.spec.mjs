@@ -40,6 +40,7 @@ test('mobile course navigation, destination focus and Escape',async({page})=>{
 test('desktop sidebar stays available and feedback opens its target',async({page})=>{
  await page.goto('/#functions');await page.evaluate(()=>window.scrollTo({top:2500,behavior:'instant'}));const box=await page.locator('.course-sidebar').boundingBox();expect(box.y).toBeGreaterThanOrEqual(0);expect(box.y).toBeLessThan(40);expect(box.height).toBeLessThanOrEqual(page.viewportSize().height);
  await page.locator('#this-chapter > summary').click();await page.locator('#chapter-shortcuts').getByRole('link',{name:'Feedback',exact:true}).click();await expect(page.locator('#chapter-feedback-guide')).toHaveAttribute('open','');await expect(page.locator('#chapter-feedback-guide')).toBeFocused();
+ await page.locator('.course-primary a[href="#home"]').click();await expect.poll(()=>page.locator('.course-sidebar-scroll').evaluate(e=>e.scrollTop)).toBe(0);
 });
 test('lesson deep link, focused feedback and companion reading filter',async({page})=>{
  await page.goto('/lessons/#u2-l13');await expect(page.locator('#u2-l13')).toBeFocused();
