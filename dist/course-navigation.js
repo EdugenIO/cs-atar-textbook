@@ -31,7 +31,7 @@
  function adjacent(active){const index=links.indexOf(active);return {before:links[index-1],after:links[index+1]};}
  function chapterLinks(active){
   const {before,after}=adjacent(active),fragment=document.createDocumentFragment();
-  function neighbour(label,target){const a=anchor(label,target.getAttribute('href')),title=document.createElement('span');title.className='adjacent-title';title.textContent=target.dataset.title;a.setAttribute('aria-label',label+' · '+target.dataset.title);a.append(title);return a;}
+  function neighbour(label,target){const a=anchor(label,target.getAttribute('href')),title=document.createElement('span');title.className='adjacent-title';title.textContent=target.dataset.title;a.append(' ',title);return a;}
   fragment.append(before?neighbour('← Previous chapter',before):anchor('← Unit 1 overview','#contents/unit1'));
   fragment.append(after?neighbour('Next chapter →',after):anchor('Revision practice →','revision/'));
   return fragment;
