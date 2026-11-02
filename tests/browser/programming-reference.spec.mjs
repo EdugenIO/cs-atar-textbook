@@ -1,0 +1,31 @@
+import {test,expect} from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+for(const language of ['python','pseudocode'])test(language+' reference access, comparison and printing',async({page})=>{
+ await page.goto('/reference/'+language+'.html');
+ await expect(page.locator('article.entry')).toHaveCount(29);
+ await page.locator('.contents a[href="#binary-search"]').click();
+ await expect(page.locator('#binary-search h2')).toBeInViewport();
+ await page.locator('#binary-search summary').focus();await page.keyboard.press('Enter');
+ await expect(page.locator('#binary-search details')).toHaveAttribute('open','');
+ const other=language==='python'?'pseudocode':'python';
+ await page.locator('#binary-search a[href="'+other+'.html#binary-search"]').click();
+ await expect(page).toHaveURL(new RegExp(other+'\\.html#binary-search$'));
+ await expect(page.locator('#binary-search h2')).toBeInViewport();
+ const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
+ expect(result.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))).toEqual([]);
+ await page.setViewportSize({width:375,height:812});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.emulateMedia({media:'print'});
+ await expect(page.locator('.contents')).toBeHidden();
+ expect(await page.locator('#binary-search pre').first().evaluate(el=>getComputedStyle(el).whiteSpace)).toBe('pre-wrap');
+});
+test('reference print includes answers and restores disclosure state',async({page})=>{
+ await page.goto('/reference/python.html');
+ await page.locator('#values summary').click();
+ await page.evaluate(()=>{window.print=()=>{};});
+ await page.locator('[data-print]').click();
+ await expect(page.locator('details.answer[open]')).toHaveCount(29);
+ await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));
+ await expect(page.locator('details.answer[open]')).toHaveCount(1);
+ await expect(page.locator('#values details')).toHaveAttribute('open','');
+});

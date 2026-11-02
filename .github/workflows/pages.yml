@@ -31,6 +31,8 @@ jobs:
           node scripts/build-lesson-routes.mjs
           python scripts/build-extended-packs.py
           python scripts/build-sql-pathway.py
+          python scripts/build-programming-reference.py
+          python tests/programming-reference.test.py
           node scripts/build-resource-hub.mjs
           node scripts/build-revision.mjs
           node scripts/build-teacher-planning.mjs

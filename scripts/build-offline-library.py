@@ -9,6 +9,8 @@ readers=json.loads((O/'readers.json').read_text())
 reader_cards=''.join(link('offline/'+m['name'],f'Unit {m["unit"]} reader (HTML)',f'{m["chapters"]} chapters. Single file: text, diagrams and worked examples embedded. Open in any modern browser; no installation or internet needed for reading. Includes explained answers and student/answer print options.') for m in readers)
 small=''.join(link(f'activities/{slug}/student.pdf',label+' student sheets (PDF)','Printable student activities. Equipment-free options included; teacher answers are in the complete library and activity hub.') for slug,label in [('programming-foundations','Programming foundations'),('programming-next','Programming next steps'),('databases-sql','Databases and SQL'),('network-reasoning','Networks'),('computer-systems','Computer systems')])
 small+=link('sql/sql-student-pack.zip','SQL student pack (ZIP)','Database fixtures, exercises and expected-result files. Extract the ZIP; use SQLite-compatible software for queries. Reference solutions are a separate download in the SQL pathway.')
+small+=link('reference/python-examples.zip','Python reference examples (ZIP)','All 29 executable examples with expected outputs; extract and read README.txt. Python 3 is required to run them.')
+small+=link('reference/pseudocode-reference.md','Pseudocode programming reference (Markdown)','Conventions, implementations, practice and explained answers; opens as plain text. Both web guides are in the complete library.')
 small+=link('revision/student-workbook.md','Revision workbook (Markdown text)','Topic checklists and retrieval prompts. Open with a text editor; use the revision hub or complete library for cumulative quizzes and explained answers.')
 zip_path=O/'cs-atar-complete.zip'
 def page(zip_size):

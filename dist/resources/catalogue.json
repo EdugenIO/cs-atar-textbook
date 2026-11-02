@@ -19,6 +19,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-start",
         "type": "teacher"
@@ -65,6 +70,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-values",
         "type": "teacher"
@@ -109,6 +119,11 @@
         "label": "Revise this topic · checklist and closed-book retrieval",
         "href": "../revision/#topic-representation",
         "type": "activity"
+      },
+      {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
       },
       {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
@@ -187,6 +202,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-selection",
         "type": "teacher"
@@ -251,6 +271,11 @@
         "label": "Revise this topic · checklist and closed-book retrieval",
         "href": "../revision/#topic-loops",
         "type": "activity"
+      },
+      {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
       },
       {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
@@ -334,6 +359,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-functions",
         "type": "teacher"
@@ -413,6 +443,11 @@
         "label": "Revise this topic · checklist and closed-book retrieval",
         "href": "../revision/#topic-arrays",
         "type": "activity"
+      },
+      {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
       },
       {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
@@ -496,6 +531,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-files",
         "type": "teacher"
@@ -575,6 +615,11 @@
         "label": "Revise this topic · checklist and closed-book retrieval",
         "href": "../revision/#topic-design",
         "type": "activity"
+      },
+      {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
       },
       {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
@@ -718,6 +763,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-networks",
         "type": "teacher"
@@ -769,6 +819,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-addressing",
         "type": "teacher"
@@ -793,6 +848,11 @@
         "label": "Revise this topic · checklist and closed-book retrieval",
         "href": "../revision/#topic-network-design",
         "type": "activity"
+      },
+      {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
       },
       {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
@@ -841,6 +901,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-network-review",
         "type": "teacher"
@@ -865,6 +930,11 @@
         "label": "Revise this topic · checklist and closed-book retrieval",
         "href": "../revision/#topic-software-responsibility",
         "type": "activity"
+      },
+      {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
       },
       {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
@@ -893,6 +963,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-consolidation",
         "type": "teacher"
@@ -917,6 +992,11 @@
         "label": "Revise this topic · checklist and closed-book retrieval",
         "href": "../revision/#topic-exam-preparation",
         "type": "activity"
+      },
+      {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
       },
       {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
@@ -1700,6 +1780,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-unit3-fluency",
         "type": "teacher"
@@ -1781,6 +1866,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-unit3-structures",
         "type": "teacher"
@@ -1832,6 +1922,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-unit3-search",
         "type": "teacher"
@@ -1876,6 +1971,11 @@
         "label": "Revise this topic · checklist and closed-book retrieval",
         "href": "../revision/#topic-unit3-sort",
         "type": "activity"
+      },
+      {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
       },
       {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
@@ -1924,6 +2024,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-unit3-objects",
         "type": "teacher"
@@ -1968,6 +2073,11 @@
         "label": "Revise this topic · checklist and closed-book retrieval",
         "href": "../revision/#topic-unit3-inheritance",
         "type": "activity"
+      },
+      {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
       },
       {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
@@ -2019,6 +2129,11 @@
         "label": "Revise this topic · checklist and closed-book retrieval",
         "href": "../revision/#topic-unit3-project",
         "type": "activity"
+      },
+      {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
       },
       {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
@@ -2152,6 +2267,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-unit3-reliability",
         "type": "teacher"
@@ -2198,6 +2318,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-unit3-network-models",
         "type": "teacher"
@@ -2242,6 +2367,11 @@
         "label": "Revise this topic · checklist and closed-book retrieval",
         "href": "../revision/#topic-unit3-addressing",
         "type": "activity"
+      },
+      {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
       },
       {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
@@ -2310,6 +2440,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-unit3-secure-networks",
         "type": "teacher"
@@ -2354,6 +2489,11 @@
         "label": "Revise this topic · checklist and closed-book retrieval",
         "href": "../revision/#topic-unit3-review",
         "type": "activity"
+      },
+      {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
       },
       {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
@@ -2407,6 +2547,11 @@
         "type": "activity"
       },
       {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-unit3-consolidation",
         "type": "teacher"
@@ -2451,6 +2596,11 @@
         "label": "Revise this topic · checklist and closed-book retrieval",
         "href": "../revision/#topic-unit3-exam",
         "type": "activity"
+      },
+      {
+        "label": "Python and pseudocode programming reference guides",
+        "href": "../reference/",
+        "type": "reading"
       },
       {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",

@@ -18,6 +18,7 @@ const guided=new Set(JSON.parse(vm.runInContext('JSON.stringify(studentJourneys.
 const extra={start:'01',values:'02',design:'03',representation:'04',selection:'05'};
 const records=chapters.map(c=>{
  const resources=[{label:'Read chapter · practice and explained answers',href:'../#'+c.id,type:'reading'},{label:'Revise this topic · checklist and closed-book retrieval',href:'../revision/#topic-'+c.id,type:'activity'}];
+ if((c.unit||1)===1||c.unit===3)resources.push({label:'Python and pseudocode programming reference guides',href:'../reference/',type:'reading'});
  resources.push({label:'Teacher planning · curriculum, prerequisites, pacing and alternatives',href:'../teachers/#topic-'+c.id,type:'teacher'});
  const sqlSteps={'database-foundations':'01','entities-relationships':'05','normalisation':'05','sql-basics':'01','database-solution':'03','unit4-design':'15','unit4-sql':'09','unit4-project':'12'};
  if(sqlSteps[c.id])resources.push({label:'SQL learning pathway · sequenced lessons, fresh databases and expected results',href:'../sql/#step-'+sqlSteps[c.id],type:'activity'},{label:'SQL pathway · student databases and practice workbook',href:'../sql/sql-student-pack.zip',type:'download'},{label:'SQL pathway · expected results and reference queries',href:'../sql/sql-reference-pack.zip',type:'teacher'});
