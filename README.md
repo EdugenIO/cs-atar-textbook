@@ -195,4 +195,3 @@ Four extension packs are authored in `activity-source/extended-packs.json`: prog
 ## Programming reference guides
 
 `python scripts/build-programming-reference.py` builds separate Python and pseudocode pages at `dist/reference/`, with 29 paired topics, syntax lookups, explained practice and print layouts. It also generates standalone Python examples, a ZIP and a Markdown pseudocode guide. The course sidebar and programming resource cards link to the hub. `python tests/programming-reference.test.py` executes every example against its expected output and checks search/sort boundary cases. Browser acceptance covers keyboard disclosures, matching topic links, contrast, mobile reflow and print-state restoration. Optional idioms are explicitly marked; these guides support the item-level curriculum map rather than replacing it.
-
