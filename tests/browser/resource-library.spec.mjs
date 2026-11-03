@@ -1,0 +1,44 @@
+import {test,expect} from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+test('activity index resolves to the shared library with complete activity filters',async({page})=>{
+ await page.goto('/activities/');
+ await expect(page).toHaveURL(/\/resources\/\?view=activities$/);
+ await expect(page.getByRole('heading',{name:'Resource library',exact:true})).toBeVisible();
+ await expect(page.locator('#view')).toHaveValue('activities');
+ await expect(page.locator('.activity-card:visible')).toHaveCount(34);
+ await expect(page.locator('.resource-card:visible')).toHaveCount(0);
+ await page.locator('#query').fill('extension');
+ await expect(page.locator('#count')).toHaveText('3 of 34 activities');
+ await page.reload();
+ await expect(page.locator('#query')).toHaveValue('extension');
+ await expect(page.locator('.activity-card:visible')).toHaveCount(3);
+ await page.locator('#year').selectOption('12');
+ await expect(page.locator('#empty')).toBeVisible();
+ await page.locator('#reset').click();
+ await expect(page.locator('#count')).toHaveText('34 of 34 activities');
+ await expect(page.locator('#view')).toHaveValue('activities');
+ await page.locator('#type').selectOption('teacher');
+ await expect(page.locator('.activity-card:visible')).toHaveCount(34);
+ await expect(page.locator('.activity-card:visible .teacher-resources[open]')).toHaveCount(34);
+ await page.locator('#reset').click();
+ await page.setViewportSize({width:390,height:844});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
+ const scan=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
+ expect(scan.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))).toEqual([]);
+ await page.locator('#query').fill('unaffordable');
+ await page.locator('#activity-loops-bank-budget').getByRole('link',{name:'Open this extension activity',exact:true}).click();
+ await expect(page).toHaveURL(/lessons\/loops\/activities\/#budget$/);
+ await expect(page.locator('article.activity:visible')).toHaveCount(1);
+ await expect(page.getByRole('heading',{name:'Stop at the first unaffordable round',exact:true})).toBeVisible();
+});
+
+test('individual activity and answer bookmarks remain usable',async({page})=>{
+ await page.goto('/activities/programming-next/#lesson-01');
+ await expect(page.locator('#lesson-01')).toBeVisible();
+ await page.goto('/activities/programming-next/teacher.html#lesson-01');
+ await expect(page.locator('#lesson-01')).toBeVisible();
+ await page.goto('/resources/?view=activities&query=reinforcement');
+ await page.emulateMedia({media:'print'});
+ await expect(page.locator('.resource-card:visible')).toHaveCount(0);
+ await expect(page.locator('.activity-card:visible')).toHaveCount(5);
+});

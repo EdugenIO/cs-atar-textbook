@@ -1,0 +1,1118 @@
+[
+  {
+    "id": "activity-programming-foundations-01",
+    "title": "From a problem to a requirement",
+    "pack": "programming-foundations",
+    "chapter": "start",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Practice",
+    "intro": "Separate inputs, processing and outputs, then write a requirement you can test.",
+    "search": "From a problem to a requirement Separate inputs, processing and outputs, then write a requirement you can test. programming-foundations Your first Python program Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/programming-foundations/#lesson-01"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full eight-activity pack",
+        "href": "../activities/programming-foundations/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/programming-foundations/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/programming-foundations/teacher.html#lesson-01"
+      }
+    ]
+  },
+  {
+    "id": "activity-programming-foundations-02",
+    "title": "Values, types and a saved program",
+    "pack": "programming-foundations",
+    "chapter": "start",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Practice",
+    "intro": "Run a saved sequence, distinguish text from numbers and predict simple calculations.",
+    "search": "Values, types and a saved program Run a saved sequence, distinguish text from numbers and predict simple calculations. programming-foundations Your first Python program Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/programming-foundations/#lesson-02"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full eight-activity pack",
+        "href": "../activities/programming-foundations/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/programming-foundations/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/programming-foundations/teacher.html#lesson-02"
+      }
+    ]
+  },
+  {
+    "id": "activity-programming-foundations-03",
+    "title": "Requirements and a realistic schedule",
+    "pack": "programming-foundations",
+    "chapter": "design",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Practice",
+    "intro": "Translate a brief into measurable requirements and draw task durations with dependencies.",
+    "search": "Requirements and a realistic schedule Translate a brief into measurable requirements and draw task durations with dependencies. programming-foundations Designing and testing solutions Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/programming-foundations/#lesson-03"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full eight-activity pack",
+        "href": "../activities/programming-foundations/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/programming-foundations/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/programming-foundations/teacher.html#lesson-03"
+      }
+    ]
+  },
+  {
+    "id": "activity-programming-foundations-04",
+    "title": "Trace a sequence and represent a character",
+    "pack": "programming-foundations",
+    "chapter": "start",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Practice",
+    "intro": "Track changing values, distinguish an expected result from an observation, and convert one character code between bases.",
+    "search": "Trace a sequence and represent a character Track changing values, distinguish an expected result from an observation, and convert one character code between bases. programming-foundations Your first Python program Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/programming-foundations/#lesson-04"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full eight-activity pack",
+        "href": "../activities/programming-foundations/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/programming-foundations/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/programming-foundations/teacher.html#lesson-04"
+      }
+    ]
+  },
+  {
+    "id": "activity-programming-foundations-05",
+    "title": "Conditions and Boolean reasoning",
+    "pack": "programming-foundations",
+    "chapter": "selection",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Practice",
+    "intro": "Evaluate comparisons and combine Boolean conditions with and, or and not.",
+    "search": "Conditions and Boolean reasoning Evaluate comparisons and combine Boolean conditions with and, or and not. programming-foundations Making decisions with selection Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/programming-foundations/#lesson-05"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full eight-activity pack",
+        "href": "../activities/programming-foundations/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/programming-foundations/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/programming-foundations/teacher.html#lesson-05"
+      }
+    ]
+  },
+  {
+    "id": "activity-programming-foundations-06",
+    "title": "Choose exactly the intended branch",
+    "pack": "programming-foundations",
+    "chapter": "selection",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Practice",
+    "intro": "Use if/elif/else and trace a nested decision without executing both alternatives.",
+    "search": "Choose exactly the intended branch Use if/elif/else and trace a nested decision without executing both alternatives. programming-foundations Making decisions with selection Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/programming-foundations/#lesson-06"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full eight-activity pack",
+        "href": "../activities/programming-foundations/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/programming-foundations/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/programming-foundations/teacher.html#lesson-06"
+      }
+    ]
+  },
+  {
+    "id": "activity-programming-foundations-07",
+    "title": "A reliable text command menu",
+    "pack": "programming-foundations",
+    "chapter": "selection",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Practice",
+    "intro": "Normalise text deliberately and separate conversion, domain validation and permission.",
+    "search": "A reliable text command menu Normalise text deliberately and separate conversion, domain validation and permission. programming-foundations Making decisions with selection Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/programming-foundations/#lesson-07"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full eight-activity pack",
+        "href": "../activities/programming-foundations/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/programming-foundations/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/programming-foundations/teacher.html#lesson-07"
+      }
+    ]
+  },
+  {
+    "id": "activity-programming-foundations-08",
+    "title": "Test both sides of the boundary",
+    "pack": "programming-foundations",
+    "chapter": "selection",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Practice",
+    "intro": "Predict discriminating tests, find a boundary defect and retain failure/repair/retest evidence.",
+    "search": "Test both sides of the boundary Predict discriminating tests, find a boundary defect and retain failure/repair/retest evidence. programming-foundations Making decisions with selection Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/programming-foundations/#lesson-08"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full eight-activity pack",
+        "href": "../activities/programming-foundations/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/programming-foundations/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/programming-foundations/teacher.html#lesson-08"
+      }
+    ]
+  },
+  {
+    "id": "activity-programming-next-01",
+    "title": "Count and accumulate",
+    "pack": "programming-next",
+    "chapter": "loops",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Practice",
+    "intro": "Trace a counted loop and distinguish a counter from a running total.",
+    "search": "Count and accumulate Trace a counted loop and distinguish a counter from a running total. programming-next Repeating work with loops Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/programming-next/#lesson-01"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/programming-next/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/programming-next/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/programming-next/teacher.html#lesson-01"
+      }
+    ]
+  },
+  {
+    "id": "activity-programming-next-02",
+    "title": "Return a result from a function",
+    "pack": "programming-next",
+    "chapter": "functions",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Practice",
+    "intro": "Separate parameters, return values and printed output.",
+    "search": "Return a result from a function Separate parameters, return values and printed output. programming-next Functions and scope Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/programming-next/#lesson-02"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/programming-next/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/programming-next/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/programming-next/teacher.html#lesson-02"
+      }
+    ]
+  },
+  {
+    "id": "activity-programming-next-03",
+    "title": "Traverse a list and retain a position",
+    "pack": "programming-next",
+    "chapter": "arrays",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Practice",
+    "intro": "Use zero-based indices and handle empty input deliberately.",
+    "search": "Traverse a list and retain a position Use zero-based indices and handle empty input deliberately. programming-next Working with one-dimensional arrays Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/programming-next/#lesson-03"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/programming-next/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/programming-next/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/programming-next/teacher.html#lesson-03"
+      }
+    ]
+  },
+  {
+    "id": "activity-programming-next-04",
+    "title": "Read a file and test bad records",
+    "pack": "programming-next",
+    "chapter": "files",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Practice",
+    "intro": "Read sequential text, convert values and report unsuitable records.",
+    "search": "Read a file and test bad records Read sequential text, convert values and report unsuitable records. programming-next Text files and reliable input Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/programming-next/#lesson-04"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/programming-next/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/programming-next/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/programming-next/teacher.html#lesson-04"
+      }
+    ]
+  },
+  {
+    "id": "activity-databases-sql-01",
+    "title": "Model records before querying",
+    "pack": "databases-sql",
+    "chapter": "database-foundations",
+    "year": 11,
+    "unit": 2,
+    "topic": "Databases and SQL",
+    "level": "Practice",
+    "intro": "Identify keys, relationships and a reason to separate tables.",
+    "search": "Model records before querying Identify keys, relationships and a reason to separate tables. databases-sql Relational database foundations Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/databases-sql/#lesson-01"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/databases-sql/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/databases-sql/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/databases-sql/teacher.html#lesson-01"
+      }
+    ]
+  },
+  {
+    "id": "activity-databases-sql-02",
+    "title": "Select columns and specify order",
+    "pack": "databases-sql",
+    "chapter": "sql-basics",
+    "year": 11,
+    "unit": 2,
+    "topic": "Databases and SQL",
+    "level": "Practice",
+    "intro": "Read SELECT, FROM and ORDER BY before adding conditions.",
+    "search": "Select columns and specify order Read SELECT, FROM and ORDER BY before adding conditions. databases-sql Getting started with SQL Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/databases-sql/#lesson-02"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/databases-sql/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/databases-sql/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/databases-sql/teacher.html#lesson-02"
+      }
+    ]
+  },
+  {
+    "id": "activity-databases-sql-03",
+    "title": "Filter rows and test boundaries",
+    "pack": "databases-sql",
+    "chapter": "sql-basics",
+    "year": 11,
+    "unit": 2,
+    "topic": "Databases and SQL",
+    "level": "Practice",
+    "intro": "Apply WHERE with inclusive boundaries and explicit Boolean grouping.",
+    "search": "Filter rows and test boundaries Apply WHERE with inclusive boundaries and explicit Boolean grouping. databases-sql Getting started with SQL Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/databases-sql/#lesson-03"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/databases-sql/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/databases-sql/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/databases-sql/teacher.html#lesson-03"
+      }
+    ]
+  },
+  {
+    "id": "activity-databases-sql-04",
+    "title": "Join related records without losing meaning",
+    "pack": "databases-sql",
+    "chapter": "database-solution",
+    "year": 11,
+    "unit": 2,
+    "topic": "Databases and SQL",
+    "level": "Practice",
+    "intro": "Match keys in an INNER JOIN and predict missing matches.",
+    "search": "Join related records without losing meaning Match keys in an INNER JOIN and predict missing matches. databases-sql Building a database solution Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/databases-sql/#lesson-04"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/databases-sql/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/databases-sql/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/databases-sql/teacher.html#lesson-04"
+      }
+    ]
+  },
+  {
+    "id": "activity-databases-sql-05",
+    "title": "Aggregate first, then filter groups",
+    "pack": "databases-sql",
+    "chapter": "unit4-sql",
+    "year": 12,
+    "unit": 4,
+    "topic": "Databases and SQL",
+    "level": "Practice",
+    "intro": "Distinguish row filters, grouping and aggregate results.",
+    "search": "Aggregate first, then filter groups Distinguish row filters, grouping and aggregate results. databases-sql Advanced SQL queries Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/databases-sql/#lesson-05"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/databases-sql/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/databases-sql/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/databases-sql/teacher.html#lesson-05"
+      }
+    ]
+  },
+  {
+    "id": "activity-databases-sql-06",
+    "title": "Make controlled changes and prove the result",
+    "pack": "databases-sql",
+    "chapter": "database-solution",
+    "year": 11,
+    "unit": 2,
+    "topic": "Databases and SQL",
+    "level": "Practice",
+    "intro": "Use a fresh copy, specific conditions and rollback while practicing changes.",
+    "search": "Make controlled changes and prove the result Use a fresh copy, specific conditions and rollback while practicing changes. databases-sql Building a database solution Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/databases-sql/#lesson-06"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/databases-sql/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/databases-sql/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/databases-sql/teacher.html#lesson-06"
+      }
+    ]
+  },
+  {
+    "id": "activity-network-reasoning-01",
+    "title": "Follow a message through a network",
+    "pack": "network-reasoning",
+    "chapter": "networks",
+    "year": 11,
+    "unit": 1,
+    "topic": "Networks",
+    "level": "Practice",
+    "intro": "Separate local forwarding, routing and application responsibilities.",
+    "search": "Follow a message through a network Separate local forwarding, routing and application responsibilities. network-reasoning Network foundations Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/network-reasoning/#lesson-01"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/network-reasoning/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/network-reasoning/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/network-reasoning/teacher.html#lesson-01"
+      }
+    ]
+  },
+  {
+    "id": "activity-network-reasoning-02",
+    "title": "Compare transport using a supplied trace",
+    "pack": "network-reasoning",
+    "chapter": "networks",
+    "year": 11,
+    "unit": 1,
+    "topic": "Networks",
+    "level": "Practice",
+    "intro": "Explain reliability and latency trade-offs without treating protocols as guarantees.",
+    "search": "Compare transport using a supplied trace Explain reliability and latency trade-offs without treating protocols as guarantees. network-reasoning Network foundations Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/network-reasoning/#lesson-02"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/network-reasoning/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/network-reasoning/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/network-reasoning/teacher.html#lesson-02"
+      }
+    ]
+  },
+  {
+    "id": "activity-network-reasoning-03",
+    "title": "Design against capacity and access requirements",
+    "pack": "network-reasoning",
+    "chapter": "network-design",
+    "year": 11,
+    "unit": 1,
+    "topic": "Networks",
+    "level": "Practice",
+    "intro": "Calculate a lower-bound transfer time and justify a restricted network design.",
+    "search": "Design against capacity and access requirements Calculate a lower-bound transfer time and justify a restricted network design. network-reasoning Designing and protecting a network Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/network-reasoning/#lesson-03"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/network-reasoning/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/network-reasoning/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/network-reasoning/teacher.html#lesson-03"
+      }
+    ]
+  },
+  {
+    "id": "activity-network-reasoning-04",
+    "title": "Year 12 bridge: allocate a small subnet",
+    "pack": "network-reasoning",
+    "chapter": "unit3-addressing",
+    "year": 12,
+    "unit": 3,
+    "topic": "Networks",
+    "level": "Practice",
+    "intro": "Calculate an IPv4 subnet range and include every required interface.",
+    "search": "Year 12 bridge: allocate a small subnet Calculate an IPv4 subnet range and include every required interface. network-reasoning Addressing and subnetting Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/network-reasoning/#lesson-04"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/network-reasoning/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/network-reasoning/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/network-reasoning/teacher.html#lesson-04"
+      }
+    ]
+  },
+  {
+    "id": "activity-computer-systems-01",
+    "title": "Represent a value with bits",
+    "pack": "computer-systems",
+    "chapter": "representation",
+    "year": 11,
+    "unit": 1,
+    "topic": "Computer systems",
+    "level": "Practice",
+    "intro": "Convert between unsigned binary, decimal and hexadecimal with a declared width.",
+    "search": "Represent a value with bits Convert between unsigned binary, decimal and hexadecimal with a declared width. computer-systems Numbers and characters in a computer Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/computer-systems/#lesson-01"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/computer-systems/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/computer-systems/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/computer-systems/teacher.html#lesson-01"
+      }
+    ]
+  },
+  {
+    "id": "activity-computer-systems-02",
+    "title": "Separate characters from encoded bytes",
+    "pack": "computer-systems",
+    "chapter": "representation",
+    "year": 11,
+    "unit": 1,
+    "topic": "Computer systems",
+    "level": "Practice",
+    "intro": "Distinguish a code point, encoding and the number of stored bytes.",
+    "search": "Separate characters from encoded bytes Distinguish a code point, encoding and the number of stored bytes. computer-systems Numbers and characters in a computer Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/computer-systems/#lesson-02"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/computer-systems/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/computer-systems/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/computer-systems/teacher.html#lesson-02"
+      }
+    ]
+  },
+  {
+    "id": "activity-computer-systems-03",
+    "title": "Combine logic and evaluate a small system",
+    "pack": "computer-systems",
+    "chapter": "selection",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Practice",
+    "intro": "Construct a truth table and evaluate a declared access decision.",
+    "search": "Combine logic and evaluate a small system Construct a truth table and evaluate a declared access decision. computer-systems Making decisions with selection Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/computer-systems/#lesson-03"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/computer-systems/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/computer-systems/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/computer-systems/teacher.html#lesson-03"
+      }
+    ]
+  },
+  {
+    "id": "activity-computer-systems-04",
+    "title": "Explain processing and a performance bottleneck",
+    "pack": "computer-systems",
+    "chapter": "representation",
+    "year": 11,
+    "unit": 1,
+    "topic": "Computer systems",
+    "level": "Practice",
+    "intro": "Use a simplified processing model and distinguish capacity from transfer rate.",
+    "search": "Explain processing and a performance bottleneck Use a simplified processing model and distinguish capacity from transfer rate. computer-systems Numbers and characters in a computer Practice ",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this activity",
+        "href": "../activities/computer-systems/#lesson-04"
+      },
+      {
+        "type": "print",
+        "label": "Student PDF · full activity pack",
+        "href": "../activities/computer-systems/student.pdf"
+      },
+      {
+        "type": "download",
+        "label": "Student pack and files",
+        "href": "../activities/computer-systems/student-pack.zip"
+      },
+      {
+        "type": "teacher",
+        "label": "Explained answers for this activity",
+        "href": "../activities/computer-systems/teacher.html#lesson-04"
+      }
+    ]
+  },
+  {
+    "id": "activity-loops-bank-human-trace",
+    "title": "Be the computer",
+    "pack": "loops-bank",
+    "chapter": "loops",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Reinforcement",
+    "intro": "Explain how each iteration changes an accumulator.",
+    "search": "Be the computer Explain how each iteration changes an accumulator. loops-bank Repeating work with loops Reinforcement Paired tracing and explanation",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this reinforcement activity",
+        "href": "../lessons/loops/activities/#human-trace"
+      },
+      {
+        "type": "print",
+        "label": "Editable student activities · Markdown",
+        "href": "../lessons/loops/activities/student-activities.md"
+      },
+      {
+        "type": "teacher",
+        "label": "Editable teacher guidance and answers · Markdown",
+        "href": "../lessons/loops/activities/teacher-activities.md"
+      }
+    ]
+  },
+  {
+    "id": "activity-loops-bank-reorder",
+    "title": "Put the program in order",
+    "pack": "loops-bank",
+    "chapter": "loops",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Reinforcement",
+    "intro": "Place initialisation, repeated updates and output correctly.",
+    "search": "Put the program in order Place initialisation, repeated updates and output correctly. loops-bank Repeating work with loops Reinforcement Code ordering with individual justification",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this reinforcement activity",
+        "href": "../lessons/loops/activities/#reorder"
+      },
+      {
+        "type": "print",
+        "label": "Editable student activities · Markdown",
+        "href": "../lessons/loops/activities/student-activities.md"
+      },
+      {
+        "type": "teacher",
+        "label": "Editable teacher guidance and answers · Markdown",
+        "href": "../lessons/loops/activities/teacher-activities.md"
+      }
+    ]
+  },
+  {
+    "id": "activity-loops-bank-hinge",
+    "title": "Which explanation is correct?",
+    "pack": "loops-bank",
+    "chapter": "loops",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Reinforcement",
+    "intro": "Distinguish the number of updates from the sum of the values.",
+    "search": "Which explanation is correct? Distinguish the number of updates from the sum of the values. loops-bank Repeating work with loops Reinforcement Hinge question, individual vote, peer explanation, revote",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this reinforcement activity",
+        "href": "../lessons/loops/activities/#hinge"
+      },
+      {
+        "type": "print",
+        "label": "Editable student activities · Markdown",
+        "href": "../lessons/loops/activities/student-activities.md"
+      },
+      {
+        "type": "teacher",
+        "label": "Editable teacher guidance and answers · Markdown",
+        "href": "../lessons/loops/activities/teacher-activities.md"
+      }
+    ]
+  },
+  {
+    "id": "activity-loops-bank-bug-clinic",
+    "title": "Repair the missing point",
+    "pack": "loops-bank",
+    "chapter": "loops",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Reinforcement",
+    "intro": "Use a small boundary test to diagnose an off-by-one error.",
+    "search": "Repair the missing point Use a small boundary test to diagnose an off-by-one error. loops-bank Repeating work with loops Reinforcement Predict, run, investigate, modify and explain",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this reinforcement activity",
+        "href": "../lessons/loops/activities/#bug-clinic"
+      },
+      {
+        "type": "print",
+        "label": "Editable student activities · Markdown",
+        "href": "../lessons/loops/activities/student-activities.md"
+      },
+      {
+        "type": "teacher",
+        "label": "Editable teacher guidance and answers · Markdown",
+        "href": "../lessons/loops/activities/teacher-activities.md"
+      }
+    ]
+  },
+  {
+    "id": "activity-loops-bank-fade",
+    "title": "Complete, explain, then rebuild",
+    "pack": "loops-bank",
+    "chapter": "loops",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Reinforcement",
+    "intro": "Transfer the accumulator pattern to a changed scoring rule.",
+    "search": "Complete, explain, then rebuild Transfer the accumulator pattern to a changed scoring rule. loops-bank Repeating work with loops Reinforcement Faded example followed by independent retrieval",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this reinforcement activity",
+        "href": "../lessons/loops/activities/#fade"
+      },
+      {
+        "type": "print",
+        "label": "Editable student activities · Markdown",
+        "href": "../lessons/loops/activities/student-activities.md"
+      },
+      {
+        "type": "teacher",
+        "label": "Editable teacher guidance and answers · Markdown",
+        "href": "../lessons/loops/activities/teacher-activities.md"
+      }
+    ]
+  },
+  {
+    "id": "activity-loops-bank-filter",
+    "title": "Count and total qualifying scores",
+    "pack": "loops-bank",
+    "chapter": "loops",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Extension",
+    "intro": "Combine selection with a counter and accumulator without confusing their roles.",
+    "search": "Count and total qualifying scores Combine selection with a counter and accumulator without confusing their roles. loops-bank Repeating work with loops Extension Changed-case design and boundary testing",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this extension activity",
+        "href": "../lessons/loops/activities/#filter"
+      },
+      {
+        "type": "print",
+        "label": "Editable student activities · Markdown",
+        "href": "../lessons/loops/activities/student-activities.md"
+      },
+      {
+        "type": "teacher",
+        "label": "Editable teacher guidance and answers · Markdown",
+        "href": "../lessons/loops/activities/teacher-activities.md"
+      }
+    ]
+  },
+  {
+    "id": "activity-loops-bank-while-transfer",
+    "title": "Same result, different loop",
+    "pack": "loops-bank",
+    "chapter": "loops",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Extension",
+    "intro": "Show that two loop forms visit the same values and terminate.",
+    "search": "Same result, different loop Show that two loop forms visit the same values and terminate. loops-bank Repeating work with loops Extension Compare representations and explain termination",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this extension activity",
+        "href": "../lessons/loops/activities/#while-transfer"
+      },
+      {
+        "type": "print",
+        "label": "Editable student activities · Markdown",
+        "href": "../lessons/loops/activities/student-activities.md"
+      },
+      {
+        "type": "teacher",
+        "label": "Editable teacher guidance and answers · Markdown",
+        "href": "../lessons/loops/activities/teacher-activities.md"
+      }
+    ]
+  },
+  {
+    "id": "activity-loops-bank-budget",
+    "title": "Stop at the first unaffordable round",
+    "pack": "loops-bank",
+    "chapter": "loops",
+    "year": 11,
+    "unit": 1,
+    "topic": "Programming and design",
+    "level": "Extension",
+    "intro": "Reason about a stopping condition before changing the running total.",
+    "search": "Stop at the first unaffordable round Reason about a stopping condition before changing the running total. loops-bank Repeating work with loops Extension Constraint reasoning, prediction and test design",
+    "resources": [
+      {
+        "type": "activity",
+        "label": "Open this extension activity",
+        "href": "../lessons/loops/activities/#budget"
+      },
+      {
+        "type": "print",
+        "label": "Editable student activities · Markdown",
+        "href": "../lessons/loops/activities/student-activities.md"
+      },
+      {
+        "type": "teacher",
+        "label": "Editable teacher guidance and answers · Markdown",
+        "href": "../lessons/loops/activities/teacher-activities.md"
+      }
+    ]
+  }
+]
