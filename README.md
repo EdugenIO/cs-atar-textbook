@@ -211,3 +211,9 @@ Four extension packs are authored in `activity-source/extended-packs.json`: prog
 ## Unified teacher planning (cleanup C02)
 
 `teachers/` is the canonical planning hub with week-by-week and topic-support views. `scripts/teacher-hub.mjs` wraps the existing topic planning output and renders the first week using the shared `teaching-planner.js` renderer; the browser uses the same schedule and renderer for all 256 slots. Each weekly lesson links to topic prerequisites, misconceptions and alternatives with unit/week context in the URL. Existing `#teaching` links forward to the weekly view; `teachers/#topic-…` bookmarks still open their topic. The sidebar now has one planning entry. Existing downloads, project budgets, exam blocks and the separate specialist companion remain available. Print preparation includes visible weekly checks and restores disclosure state. Rebuild teacher planning, reading shell and offline packages after changes. The browser acceptance suite covers the old route, context retention, reload, topic bookmarks, printing and narrow-screen accessibility.
+
+## Cleanup register and shared traces
+
+The cleanup backlog is versioned in `audit-source/site-cleanup-2026-11-03.json`. It includes completed C01/C02/C03 and requested C13 for editable instructional visuals, beginning with an inventory and priority network diagrams. C13 is planned, not a claim that new images are supplied. Keep completion evidence separate from independent curriculum approval.
+
+For C03, the loops chapter owns its donation trace. Its learning guide uses `kind: recall` to refer to the existing table while retaining the original heading, prediction, concealed explanation and changed retry. Do not add another set of rows to that guide. Other guides retain their own distinct visuals. Rebuild the offline readers/library after changes; the existing learning-guide and browser checks cover the single trace, saved anchors and student printing.

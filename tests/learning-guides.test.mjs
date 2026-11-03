@@ -13,16 +13,16 @@ const after=JSON.parse(vm.runInContext('JSON.stringify(chapters)',ctx));
 assert.deepEqual(Object.keys(guides).sort(),[...before.map(c=>c.id),'selection'].sort());
 for(const[id,g]of Object.entries(guides)){
  for(const field of ['anchor','title','lead','caption','predict','answer','retry'])assert.ok(typeof g[field]==='string'&&g[field].trim(),id+':'+field);
- assert.ok(['flow','cards','trace','array'].includes(g.kind));
+ assert.ok(['flow','cards','trace','array','recall'].includes(g.kind));
  if(g.kind==='trace'){
   assert.ok(g.columns.length>=2&&g.rows.length>=2);
   g.rows.forEach(row=>assert.equal(row.length,g.columns.length,id+' table width'));
- }else{
+ }else if(g.kind!=='recall'){
   assert.ok(g.nodes.length>=2&&g.nodes.length<=6,id+' diagram size');
   g.nodes.forEach(n=>assert.ok(n.label&&n.detail));
  }
  const html=vm.runInContext(`renderLearningGuide(${JSON.stringify(id)})`,ctx);
- assert.ok(html.includes('<figure')&&html.includes('<figcaption>'),id+' visual text alternative');
+ if(g.kind==='recall'){assert.ok(!html.includes('<table')&&!html.includes('<figure'));assert.ok(html.includes('Use the trace above'));}else assert.ok(html.includes('<figure')&&html.includes('<figcaption>'),id+' visual text alternative');
  assert.ok(html.includes('<details')&&!/<details[^>]*\bopen\b/.test(html),id+' explanation starts closed');
  assert.ok(html.includes('print-answer-only'),id+' student print hides revealed answer');
  assert.ok(!/<form|<input|<button|<img/.test(html),id+' native ungraded text interaction');
@@ -39,6 +39,13 @@ for(const[id,g]of Object.entries(guides)){
  });
  assert.equal(updated.code,original.code);assert.equal(updated.solution,original.solution);
 }
+
+const loopTrace=after.find(c=>c.id==='loops').sections.find(s=>s[0]==='Trace the running total')[1];
+assert.equal((loopTrace.match(/<table\b/g)||[]).length,1,'One canonical donation trace remains');
+assert.ok(loopTrace.includes(guides.loops.predict)&&loopTrace.includes(guides.loops.retry));
+assert.ok(!('rows' in guides.loops),'No second source of donation trace rows');
+let running=0;assert.deepEqual([5,7,3].map(n=>running+=n),[5,12,15]);running=0;for(const n of [5,7,3]){running=0;running+=n;}assert.equal(running,3);
+assert.equal([2,0,4].reduce((sum,n)=>sum+n,0),6);
 
 // Independently trace the examples most likely to confuse a reader.
 const data=[4,9,9];
@@ -59,4 +66,4 @@ const index=fs.readFileSync(new URL('index.html',root),'utf8');
 assert.ok(index.indexOf('learning-support.js')<index.indexOf('src="app.js"'));
 assert.ok(index.includes('learning.css'));
 assert.ok(fs.readFileSync(new URL('app.js',root),'utf8').includes("${renderLearningGuide('selection')}"));
-console.log('50 anchored, ungraded visual guides; accessible markup, example traces and source preservation passed.');
+console.log('50 anchored, ungraded learning guides; accessible markup, example traces and source preservation passed.');

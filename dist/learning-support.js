@@ -4,6 +4,7 @@ function renderLearningGuide(id) {
   const guide = textbookLearningGuides[id];
   if (!guide) return '';
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  if (guide.kind === 'recall') return `<div class="learning-block" data-learning-guide="${escape(id)}"><p class="learning-label">Use the trace above</p><h3>${escape(guide.title)}</h3><p>${escape(guide.lead)}</p><p>${escape(guide.caption)}</p><div class="learning-recall"><p><strong>Pause and predict:</strong> ${escape(guide.predict)}</p><details class="learning-explanation print-answer-only"><summary>Show the explanation</summary><p>${escape(guide.answer)}</p></details><p><strong>Try a small change:</strong> ${escape(guide.retry)}</p></div></div>`;
   let visual;
   if (guide.kind === 'trace') {
     visual = `<table><thead><tr>${guide.columns.map(c=>`<th scope="col">${escape(c)}</th>`).join('')}</tr></thead><tbody>${guide.rows.map(row=>`<tr>${row.map(c=>`<td>${escape(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;

@@ -1,5 +1,24 @@
 import {test,expect} from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+test('loops retains one worked trace with its original heading, prediction and changed practice',async({page})=>{
+ await page.goto('/#loops/heading-watch-the-total-grow');
+ const guide=page.locator('[data-learning-guide="loops"]');
+ await expect(guide.getByRole('heading',{name:'Watch the total grow',exact:true})).toBeVisible();
+ await expect(guide.locator('table')).toHaveCount(0);
+ const traces=await page.locator('main table').evaluateAll(tables=>tables.map(table=>[...table.querySelectorAll('tr')].slice(1).map(row=>[...row.querySelectorAll('td')].map(cell=>cell.textContent.replace(/\$/g,'').trim()))).filter(rows=>JSON.stringify(rows)===JSON.stringify([['1','5','0','5'],['2','7','5','12'],['3','3','12','15']])).length);
+ expect(traces).toBe(1);
+ await expect(guide.getByText('Trace donations of $2, $0 and $4 without running code.',{exact:false})).toBeVisible();
+ await guide.locator('summary').click();
+ const answer=guide.getByText('$3, only the last donation.',{exact:false});
+ await expect(answer).toBeVisible();
+ await page.evaluate(()=>{window.print=()=>window.dispatchEvent(new Event('beforeprint'));});
+ await page.getByRole('button',{name:'Print student copy',exact:true}).click();
+ await page.emulateMedia({media:'print'});
+ await expect(answer).toBeHidden();
+ await page.emulateMedia({media:'screen'});
+ await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));
+ await expect(answer).toBeVisible();
+});
 test('model lesson keeps practice, disclosed feedback and student printing distinct',async({page})=>{
  await page.goto('/lessons/?unit=1#u1-l15');
  await page.getByRole('link',{name:'Start the focused lesson:'}).click();

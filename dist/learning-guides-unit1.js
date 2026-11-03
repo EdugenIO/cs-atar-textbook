@@ -114,34 +114,8 @@ const unit1LearningGuides = {
   "loops": {
     "anchor": "Trace the running total",
     "title": "Watch the total grow",
-    "lead": "The total starts once, before the loop. Each donation adds to the previous total.",
-    "kind": "trace",
-    "columns": [
-      "Pass",
-      "Donation",
-      "Total before",
-      "Total after"
-    ],
-    "rows": [
-      [
-        "1",
-        "$5",
-        "$0",
-        "$5"
-      ],
-      [
-        "2",
-        "$7",
-        "$5",
-        "$12"
-      ],
-      [
-        "3",
-        "$3",
-        "$12",
-        "$15"
-      ]
-    ],
+    "lead": "Use the trace table above to explain how the running total changes.",
+    "kind": "recall",
     "caption": "The total after one pass becomes the total before the next pass. This is accumulation.",
     "predict": "If total = 0 were inside the loop just before adding each donation, what final total would you get?",
     "answer": "$3, only the last donation. Resetting the total each time erases the earlier amounts.",

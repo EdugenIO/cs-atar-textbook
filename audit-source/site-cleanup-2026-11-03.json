@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-03",
+  "sourceCommit": "916a8b7",
+  "tasks": [
+    {
+      "id": "C01",
+      "priority": "P1",
+      "title": "Use one resource catalogue",
+      "status": "Complete",
+      "evidence": "**Confirmed overlap:** `resources/` indexes all chapters and their activities/downloads; `activities/` separately indexes five printable packs. Both are promoted in the open Learning tools menu. The new eight-activity loops bank appears in the resource catalogue and chapter journey but is absent from the five-pack activity index.",
+      "action": "make the resource catalogue the canonical library, with useful views for activities, examples, print copies and teacher resources. Fold the activity-pack index into that library instead of maintaining another competing catalogue. Include the new loops bank in the same taxonomy.",
+      "completeWhen": "every activity has one catalogue record and consistent labels; users can filter by year/unit/topic/type; existing activity index and pack links still resolve. Pack delivery pages and separate student/teacher files remain available.",
+      "completedDate": "2026-11-03",
+      "implementationCommit": "b70a0be",
+      "deployment": "https://github.com/EdugenIO/cs-atar-textbook/actions/runs/41562975097",
+      "verification": "34 unique activity records; 50 chapter records; old index redirects to the Activities view; retained activity and teacher bookmarks, filters, print, narrow-screen and accessibility checks passed in the release workflow."
+    },
+    {
+      "id": "C02",
+      "priority": "P1",
+      "title": "Bring teacher planning and the teaching sequence together",
+      "status": "Complete",
+      "evidence": "**Confirmed overlap:** `teachers/` supplies topic plans, pacing and lesson-plan exports; `#teaching` supplies the week-by-week planner from the same schedule. Both appear as separate teacher navigation choices. The teacher generator exports the same 256 allocations into four unit CSVs.",
+      "action": "retain one teacher entry with a week/lesson planning view and a topic-support view. Make their relationship explicit, rather than presenting them as different course plans. Keep assessment planning as a distinct teacher function within this hub.",
+      "completeWhen": "a teacher selects a week once and reaches lesson activities, notes, slides, misconceptions and downloads without reopening a second planner. All views use the same schedule and preserve the existing project allocations and exam blocks.",
+      "completedDate": "2026-11-03",
+      "implementationCommit": "6e7a281",
+      "deployment": "https://github.com/EdugenIO/cs-atar-textbook/actions/runs/41564729713",
+      "verification": "One sidebar planning entry; shared 256-slot renderer/schedule; unit/week retained across topic support and reload; legacy teaching and topic links, selected printing and accessibility checks passed; Pages deployed."
+    },
+    {
+      "id": "C03",
+      "priority": "P1",
+      "title": "Remove the duplicate loops trace",
+      "status": "Complete",
+      "evidence": "**Confirmed content duplication:** `#loops` → “Trace the running total” shows donations 5, 7, 3 with totals 0→5→12→15. Immediately afterwards, “Visual walkthrough / Watch the total grow” repeats the same rows with dollar signs. The browser preview confirmed both tables. The base explanation lives in `dist/chapters.js`; `dist/learning-support.js` adds the second walkthrough from the unit learning-guide data.",
+      "action": "present one trace table. Retain the prediction prompt, explanation and changed retry around that table. Review other learning-guide insertions for the same pattern; this audit does not claim all 50 are duplicated.",
+      "completeWhen": "the loops example has one authoritative trace, and the changed case still supplies independent practice. Chapter section anchors, offline output and learner/teacher print copies remain valid.",
+      "completedDate": "2026-11-03",
+      "verification": "The original donation trace remains the single source of table rows. The recall guide reuses that trace; original headings, prediction, explained answer and changed case are retained. All 33 local Node test files, curriculum-map and offline-package checks passed; the local browser confirmed no table in the recall guide and a working answer disclosure. Publication is gated by the release workflow."
+    },
+    {
+      "id": "C04",
+      "priority": "P1",
+      "title": "Consolidate chapter instructions into one learning path",
+      "status": "Proposed; unimplemented",
+      "evidence": "**Confirmed overlap:** the loops page contains “Before you start”, a five-step journey, chapter shortcuts, a Pygame preparation notice, “Check your reasoning…”, “Practice and explain”, “Your practical task”, “Check your understanding” and a “Suggested classroom sequence”. Several serve distinct purposes, but the hierarchy is unclear.",
+      "action": "use one top-of-chapter orientation block, a concise local contents list, and a main sequence of explanation → example → practice → check. Place additional checks and optional tasks under clearly labelled reinforcement/extension sections. Put teacher sequencing guidance behind a teacher disclosure. Link Pygame preparation from the lesson where it is allocated.",
+      "completeWhen": "a student can identify the assigned core task and its feedback without choosing among competing instructions. Distinct questions, explanatory scaffolds and delayed retries are preserved, with fewer repeated directions and links."
+    },
+    {
+      "id": "C05",
+      "priority": "P1",
+      "title": "Give each scheduled lesson one canonical destination",
+      "status": "Proposed; unimplemented",
+      "evidence": "**Confirmed overlap:** `lessons/#u1-l15` contains the generic allocated lesson card, and `lessons/loops/` contains the focused version of the same lesson. They share an objective/activity source and are linked, but appear as separate instructional surfaces. The generic route remains the destination used by existing scheduling links.",
+      "action": "let an allocation resolve to its focused page when one exists. Keep generic cards as the fallback for lessons without a focused page. The chapter remains a reference reading, not another copy of the assigned lesson.",
+      "completeWhen": "all links for Unit 1 Lesson 15 reach the focused lesson consistently; old allocation links work; the schedule still contains exactly 256 slots. Further lesson pages are added through a shared template and canonical route register."
+    },
+    {
+      "id": "C06",
+      "priority": "P2",
+      "title": "Consolidate the repeated exam-question presentation",
+      "status": "Proposed; unimplemented",
+      "evidence": "**Confirmed republishing:** `scripts/build-revision.mjs` reads `practiceSets` from `dist/practice/questions.js` and republishes the same **60 original questions** in Revision → “Explained exam-style answers”. The revision page identifies that provenance. This is a second presentation of one bank, not 60 extra questions or a separate maintained question source.",
+      "action": "give the bank one owner and entry within Revision, offering explicit “Study explained examples” and “Timed/untimed written practice” modes. Keep topic retrieval and cumulative quizzes distinct. A read-and-study mode can remain useful; it should not imply a different question set.",
+      "completeWhen": "students recognise when the same questions are reused, question IDs remain stable, and attempt drafts, resets, timers, locked responses and self-marking still work. Entering study mode must not silently modify or reveal answers inside an active attempt."
+    },
+    {
+      "id": "C07",
+      "priority": "P2",
+      "title": "Clarify review, consolidation and exam preparation",
+      "status": "Proposed; unimplemented",
+      "evidence": "**Confirmed naming overlap; deletion not justified:** there are 11 end-of-unit review/consolidation/exam-preparation chapter records, plus the separate network review chapter. For example, Unit 3 review diagnoses and integrates knowledge, consolidation targets identified gaps, and exam preparation practises timed responses. These are related but not identical teaching tasks.",
+      "action": "group the end-of-unit pages under “Review and exam preparation”, with descriptions such as “Diagnose”, “Repair and transfer” and “Timed practice”. Keep their separate allocated lessons and distinct exercises.",
+      "completeWhen": "students understand which stage to use and why. Existing chapter IDs and allocations are preserved; no content is removed solely because titles sound similar."
+    },
+    {
+      "id": "C08",
+      "priority": "P2",
+      "title": "Make SQL theory and SQL practice feel connected",
+      "status": "Proposed; unimplemented",
+      "evidence": "**Confirmed parallel pathways:** database/SQL chapters, the six-activity database pack and the sequenced `sql/` pathway each contain explanations and tasks. They have different purposes and, in places, different datasets. Earlier journey repairs explicitly identify the Member/Loan activity schema and distinguish it from chapter examples.",
+      "action": "keep chapter concepts and the executable SQL pathway, but make one lesson-level handoff name the exact activity, database, setup method and matching answer. Present the activity pack as a print/resource option within that route. Do not merge unrelated schemas or SQL files merely to reduce file count.",
+      "completeWhen": "a beginner can identify which database and table names a task uses, the expected prerequisites and the correct key without comparing three hubs."
+    },
+    {
+      "id": "C09",
+      "priority": "P2",
+      "title": "Put curriculum review into one teacher-facing workspace",
+      "status": "Proposed; unimplemented",
+      "evidence": "**Confirmed overlapping review surfaces:** `#audits`, `curriculum/`, `curriculum/editorial-review.html`, `curriculum/provision-review.html`, `curriculum/scope.html` and `technical-accuracy.html` all describe some aspect of provision, source scope, review evidence or gaps. They measure different things; the current matrix has 648 parent/nested references while the detailed provision review discusses 519 leaf items.",
+      "action": "one “Curriculum and quality” teacher workspace with labelled views: current source map, teaching provision, scope, technical checks and historical records. Use a short current overview and move detailed provenance to the relevant view. Preserve reviewer dates and the distinction between editorial checks and independent/school validation.",
+      "completeWhen": "a teacher can find the latest relevant review without comparing differently scoped totals or assuming a historical map is current sign-off."
+    },
+    {
+      "id": "C10",
+      "priority": "P2",
+      "title": "Show resources relevant to the topic first",
+      "status": "Proposed; unimplemented",
+      "evidence": "**Confirmed over-broad placement:** the resource generator attaches Python/pseudocode references to every Unit 1 and Unit 3 chapter, including network chapters. For every chapter linked to a programming pack it also lists all Python files in that pack. The loops resource card lists worked files for later functions, lists and files activities as well as its own loop file.",
+      "action": "promote the exact lesson/activity file and key; group pack-wide resources under an optional disclosure or pack download. Put cross-topic references in a secondary reference area. Deduplicate catalogue records by destination while retaining useful chapter associations.",
+      "completeWhen": "the loops card's primary downloads concern loops; unrelated worked files are reachable through the full pack. Reuse links are retained where helpful rather than deleted to hit an arbitrary count."
+    },
+    {
+      "id": "C11",
+      "priority": "P3",
+      "title": "Move historical material out of everyday journeys",
+      "status": "Proposed; unimplemented",
+      "evidence": "**Confirmed historical collections:** four older grouped coverage maps, their overview/ZIPs, legacy project examples and legacy project slide decks remain alongside newer material. They have provenance value and are already partly labelled.",
+      "action": "provide one clearly marked archive entry inside the teacher quality/resources area. Keep old URLs and downloadable records; ensure default resource lists promote the current version. Keep the specialist drone/VR/network-pod companion under optional teacher pathways rather than mixing its calendar with the general course.",
+      "completeWhen": "current resources are the default, old versions are clearly labelled, and historical references remain retrievable. Do not delete archives or re-date past review evidence."
+    },
+    {
+      "id": "C12",
+      "priority": "P2",
+      "title": "Default to a manageable selection rather than the whole course",
+      "status": "Proposed; unimplemented",
+      "evidence": "**Confirmed document breadth:** the generic lesson page contains 256 lesson cards and around 66,129 words of underlying HTML text; the teacher hub around 21,088; revision around 27,663. Filters and hidden views reduce some on-screen material, so these counts are not evidence that all text is visible at once. Lesson filters currently select unit/chapter rather than a specific week.",
+      "action": "default lesson selection to one unit/week, teacher planning to a selected week/topic, and revision to one selected unit/topic. Keep “Show all” and full-course print/export available. Avoid introducing another parallel “Find my lesson” page; improve the existing selector.",
+      "completeWhen": "a student reaches a specific lesson without scrolling an all-course listing, and teachers can still intentionally inspect or print the whole plan."
+    },
+    {
+      "id": "C13",
+      "priority": "P2",
+      "title": "Develop and integrate editable instructional diagrams and images",
+      "status": "Proposed; requested improvement",
+      "evidence": "Requested by the site owner on 3 November 2026. Existing diagrams need an inventory and quality review before deciding what to create or replace; this is not a finding that every topic lacks a visual.",
+      "action": "Inventory existing visuals and prioritise network topologies, packet paths, switch/router/gateway roles, protocol layers and subnet boundaries. Follow with ER relationships, normalisation changes, algorithm traces and class relationships where a visual explains the concept. Create accurate labelled editable diagrams (prefer SVG or another editable vector format for precise technical diagrams), pair them with a worked explanation, prediction and changed practice task, and reuse one source across the website, slides and printable resources. Replace redundant visuals rather than adding competing pages.",
+      "completeWhen": "A prioritised visual register records topic, teaching purpose, source asset, reuse rights, placement and technical review. Priority network diagrams have unambiguous labels, arrows, boundaries and legends; colour is supplementary. Each has a meaningful text alternative and nearby structured explanation, readable mobile/zoom presentation and a clear monochrome print version. Editable source and exports are retained, web/slide/print uses are consistent, and technical/layout review is recorded before release."
+    }
+  ],
+  "updatedDate": "2026-11-03"
+}
