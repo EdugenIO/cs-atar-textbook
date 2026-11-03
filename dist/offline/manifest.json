@@ -4,8 +4,8 @@
   "files": [
     {
       "name": "unit-1-reader.html",
-      "bytes": 391218,
-      "sha256": "9e9ac8dc58e46601a0c7eb8050ee597166aa60bf35f0bfc3ebba665ce0b0a99b"
+      "bytes": 391356,
+      "sha256": "41fe47e5b584c45820d8f1708039e7e3a2dfb674a198e6a13e2aad8ea002f3c3"
     },
     {
       "name": "unit-2-reader.html",
@@ -24,8 +24,8 @@
     },
     {
       "name": "cs-atar-complete.zip",
-      "bytes": 11453736,
-      "sha256": "8a14bf7bb8ad260e30a01d5b415b8eb5a2c3920c9d244829b145caa6dc135f16"
+      "bytes": 11469668,
+      "sha256": "152a301ad9d73a9400d6ce3a2bb5945c80add775ec74886e6e587f30d4ed3f69"
     }
   ]
 }

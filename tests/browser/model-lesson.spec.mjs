@@ -25,3 +25,33 @@ test('model lesson keeps practice, disclosed feedback and student printing disti
  const scan=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
  expect(scan.violations).toEqual([]);
 });
+
+test('optional activity bank supports selection, separate print copies and accessible code',async({page})=>{
+ await page.goto('/lessons/loops/activities/');
+ await expect(page.locator('article.activity')).toHaveCount(8);
+ await expect(page.locator('details[open]')).toHaveCount(0);
+ await page.getByLabel('Choose an activity').selectOption('budget');
+ await expect(page.locator('article.activity:visible')).toHaveCount(1);
+ await expect(page.getByRole('status')).toHaveText('1 of 8 activities shown');
+ await page.locator('#budget details').first().locator('summary').click();
+ await page.evaluate(()=>{window.print=()=>{};});
+ await page.getByRole('button',{name:'Print selected student activities',exact:true}).click();
+ await page.emulateMedia({media:'print'});
+ for(const answer of await page.locator('#budget details').all())await expect(answer).toBeHidden();
+ await expect(page.locator('#human-trace')).toBeHidden();
+ await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));
+ await page.emulateMedia({media:'screen'});
+ await expect(page.locator('#budget details[open]')).toHaveCount(1);
+ await page.getByRole('button',{name:'Print selected activities with teacher guidance and answers',exact:true}).click();
+ await page.emulateMedia({media:'print'});
+ for(const answer of await page.locator('#budget details').all())await expect(answer).toBeVisible();
+ await expect(page.locator('#budget details[open]')).toHaveCount(2);
+ await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));
+ await page.emulateMedia({media:'screen'});
+ await expect(page.locator('#budget details[open]')).toHaveCount(1);
+ await page.getByLabel('Choose an activity').selectOption('');
+ await page.setViewportSize({width:390,height:844});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
+ const scan=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
+ expect(scan.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))).toEqual([]);
+});

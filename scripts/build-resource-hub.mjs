@@ -13,11 +13,11 @@ const plain=s=>s.replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
 const topic=c=>c.id==='representation'?'Computer systems': /review|consolidation|exam/.test(c.id)?'Review and revision':/network|addressing/.test(c.id)?'Networks':/security|responsible-data|software-responsibility|unit4-(analysis|controls|crypto|ethics)/.test(c.id)?'Security and responsibility':(c.unit===2||c.unit===4)?'Databases and SQL':'Programming and design';
 const activityPacks=JSON.parse(fs.readFileSync(path.resolve(root,'../activity-source/extended-packs.json'),'utf8'));
 vm.runInContext(fs.readFileSync(path.join(root,'lesson-journeys.js'),'utf8'),ctx);
-const journeyHTML=id=>vm.runInContext('renderStudentJourney('+JSON.stringify(id)+')',ctx).replaceAll('href="#','href="../#').replaceAll('href="activities/','href="../activities/').replaceAll('href="revision/','href="../revision/').replaceAll('href="resources/','href="../resources/').replaceAll('href="offline/','href="../offline/');
+const journeyHTML=id=>vm.runInContext('renderStudentJourney('+JSON.stringify(id)+')',ctx).replaceAll('href="#','href="../#').replaceAll('href="activities/','href="../activities/').replaceAll('href="revision/','href="../revision/').replaceAll('href="resources/','href="../resources/').replaceAll('href="offline/','href="../offline/').replaceAll('href="lessons/','href="../lessons/');
 const guided=new Set(JSON.parse(vm.runInContext('JSON.stringify(studentJourneys.map(j=>j.id))',ctx)));
 const extra={start:'01',values:'02',design:'03',representation:'04',selection:'05'};
 const records=chapters.map(c=>{
- const resources=[{label:'Read chapter · practice and explained answers',href:'../#'+c.id,type:'reading'},{label:'Revise this topic · checklist and closed-book retrieval',href:'../revision/#topic-'+c.id,type:'activity'}];
+ const resources=[...(c.id==='loops'?[{label:'Optional loops reinforcement and extension bank · eight activities and editable copies',href:'../lessons/loops/activities/',type:'activity'}]:[]),{label:'Read chapter · practice and explained answers',href:'../#'+c.id,type:'reading'},{label:'Revise this topic · checklist and closed-book retrieval',href:'../revision/#topic-'+c.id,type:'activity'}];
  if((c.unit||1)===1||c.unit===3)resources.push({label:'Python and pseudocode programming reference guides',href:'../reference/',type:'reading'});
  resources.push({label:'Teacher planning · curriculum, prerequisites, pacing and alternatives',href:'../teachers/#topic-'+c.id,type:'teacher'});
  const sqlSteps={'database-foundations':'01','entities-relationships':'05','normalisation':'05','sql-basics':'01','database-solution':'03','unit4-design':'15','unit4-sql':'09','unit4-project':'12'};

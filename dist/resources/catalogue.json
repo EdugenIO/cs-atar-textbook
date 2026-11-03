@@ -263,6 +263,11 @@
     "search": "Repeating work with loops A loop repeats instructions. This repetition is called iteration. Decide what repeats, what changes, and what makes the loop stop. A fixed number of repetitions Trace the running total Repeat while a condition remains true From algorithm to implementation Test-first and test-last repetition Python iteration repetition for while range accumulator counter",
     "resources": [
       {
+        "label": "Optional loops reinforcement and extension bank · eight activities and editable copies",
+        "href": "../lessons/loops/activities/",
+        "type": "activity"
+      },
+      {
         "label": "Read chapter · practice and explained answers",
         "href": "../#loops",
         "type": "reading"
