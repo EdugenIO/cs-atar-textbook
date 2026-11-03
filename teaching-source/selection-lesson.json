@@ -1,0 +1,11 @@
+{
+  "id":"u1-l11",
+  "title":"Choose one branch with if, elif and else",
+  "worked":"age = 12\nif age < 0:\n    ticket = \"Invalid age\"\nelif age < 12:\n    ticket = \"Junior\"\nelse:\n    ticket = \"Standard\"\nprint(ticket)\n",
+  "workedCases":[[-1,"Invalid age"],[0,"Junior"],[11,"Junior"],[12,"Standard"],[13,"Standard"]],
+  "starter":"# Use one if / elif / else chain.\n# Change this value to test -1, 0, 1 and 2 separately.\nquantity = 0\n# Negative: Invalid quantity. Zero: Empty basket. Positive: Process order.\n# Write the decision here, then print its message.\n",
+  "solution":"quantity = 0\nif quantity < 0:\n    message = \"Invalid quantity\"\nelif quantity == 0:\n    message = \"Empty basket\"\nelse:\n    message = \"Process order\"\nprint(message)\n",
+  "practiceCases":[[-1,"Invalid quantity"],[0,"Empty basket"],[1,"Process order"],[2,"Process order"]],
+  "retry":"balance = -2\nif balance < 0:\n    status = \"Overdrawn\"\nelif balance == 0:\n    status = \"Zero balance\"\nelse:\n    status = \"In credit\"\nprint(status)\n",
+  "retryCases":[[-2,"Overdrawn"],[0,"Zero balance"],[3,"In credit"]]
+}

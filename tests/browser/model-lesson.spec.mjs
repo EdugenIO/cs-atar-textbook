@@ -43,7 +43,7 @@ test('loops retains one worked trace with its original heading, prediction and c
 });
 test('model lesson keeps practice, disclosed feedback and student printing distinct',async({page})=>{
  await page.goto('/lessons/?unit=1#u1-l15');
- await page.getByRole('link',{name:'Start the focused lesson:'}).click();
+ await expect(page).toHaveURL(/\/lessons\/loops\/$/);
  await expect(page.getByRole('heading',{name:'Trace counters and accumulators',exact:true})).toBeVisible();
  await expect(page.locator('details[open]')).toHaveCount(0);
  await page.getByText('Reveal the worked trace after predicting',{exact:true}).focus();

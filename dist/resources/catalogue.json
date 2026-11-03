@@ -192,6 +192,11 @@
     "search": "Making decisions with selection Compare values, choose branches and test boundary cases. Selection Python if else elif Boolean conditional boundary decision",
     "resources": [
       {
+        "label": "Focused allocated lesson · Choose one branch with if, elif and else",
+        "href": "../lessons/selection/",
+        "type": "activity"
+      },
+      {
         "label": "Read chapter · practice and explained answers",
         "href": "../#selection",
         "type": "reading"
@@ -277,6 +282,11 @@
     "topic": "Programming and design",
     "search": "Repeating work with loops A loop repeats instructions. This repetition is called iteration. Decide what repeats, what changes, and what makes the loop stop. A fixed number of repetitions Trace the running total Repeat while a condition remains true From algorithm to implementation Test-first and test-last repetition Python iteration repetition for while range accumulator counter",
     "resources": [
+      {
+        "label": "Focused allocated lesson · Trace counters and accumulators",
+        "href": "../lessons/loops/",
+        "type": "activity"
+      },
       {
         "label": "Optional loops reinforcement and extension bank · eight activities and editable copies",
         "href": "../lessons/loops/activities/",

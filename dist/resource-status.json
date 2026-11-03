@@ -129,7 +129,7 @@
       "status": "Available",
       "legacy": false,
       "files": true,
-      "route": "lessons/#u1-l11"
+      "route": "lessons/selection/"
     },
     {
       "id": "u1-w03-l04",
@@ -173,7 +173,7 @@
       "status": "Available",
       "legacy": false,
       "files": true,
-      "route": "lessons/#u1-l15"
+      "route": "lessons/loops/"
     },
     {
       "id": "u1-w04-l04",

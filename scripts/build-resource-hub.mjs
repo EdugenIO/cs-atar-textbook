@@ -1,3 +1,4 @@
+import {focusedLessons} from './lesson-destinations.mjs';
 import {activityRecords,retireActivityIndex} from './resource-activities.mjs';
 import fs from 'node:fs';
 import vm from 'node:vm';
@@ -19,6 +20,7 @@ const guided=new Set(JSON.parse(vm.runInContext('JSON.stringify(studentJourneys.
 const extra={start:'01',values:'02',design:'03',representation:'04',selection:'05'};
 const records=chapters.map(c=>{
  const resources=[...(c.id==='loops'?[{label:'Optional loops reinforcement and extension bank · eight activities and editable copies',href:'../lessons/loops/activities/',type:'activity'}]:[]),{label:'Read chapter · practice and explained answers',href:'../#'+c.id,type:'reading'},{label:'Revise this topic · checklist and closed-book retrieval',href:'../revision/#topic-'+c.id,type:'activity'}];
+ for(const lesson of focusedLessons.filter(l=>l.chapter===c.id))resources.unshift({label:'Focused allocated lesson · '+lesson.title,href:'../'+lesson.path,type:'activity'});
  if((c.unit||1)===1||c.unit===3)resources.push({label:'Python and pseudocode programming reference guides',href:'../reference/',type:'reading'});
  resources.push({label:'Teacher planning · curriculum, prerequisites, pacing and alternatives',href:'../teachers/#topic-'+c.id,type:'teacher'});
  const sqlSteps={'database-foundations':'01','entities-relationships':'05','normalisation':'05','sql-basics':'01','database-solution':'03','unit4-design':'15','unit4-sql':'09','unit4-project':'12'};

@@ -35,6 +35,7 @@ jobs:
           python scripts/build-programming-reference.py
           python tests/programming-reference.test.py
           python tests/loops-activities.test.py
+          python tests/focused-lessons.test.py
           node scripts/build-resource-hub.mjs
           node scripts/build-revision.mjs
           node scripts/build-teacher-planning.mjs

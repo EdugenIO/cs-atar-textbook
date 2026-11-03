@@ -54,10 +54,12 @@
       "id": "C05",
       "priority": "P1",
       "title": "Give each scheduled lesson one canonical destination",
-      "status": "Proposed; unimplemented",
+      "status": "Complete",
       "evidence": "**Confirmed overlap:** `lessons/#u1-l15` contains the generic allocated lesson card, and `lessons/loops/` contains the focused version of the same lesson. They share an objective/activity source and are linked, but appear as separate instructional surfaces. The generic route remains the destination used by existing scheduling links.",
       "action": "let an allocation resolve to its focused page when one exists. Keep generic cards as the fallback for lessons without a focused page. The chapter remains a reference reading, not another copy of the assigned lesson.",
-      "completeWhen": "all links for Unit 1 Lesson 15 reach the focused lesson consistently; old allocation links work; the schedule still contains exactly 256 slots. Further lesson pages are added through a shared template and canonical route register."
+      "completeWhen": "all links for Unit 1 Lesson 15 reach the focused lesson consistently; old allocation links work; the schedule still contains exactly 256 slots. Further lesson pages are added through a shared template and canonical route register.",
+      "completedDate": "2026-11-03",
+      "verification": "One authored focused-lesson register supplies timetable, selector, chapter, resource and slide-register destinations. Legacy allocation hashes replace the current history entry with the focused page; file-library navigation uses index.html. Unregistered lessons retain their existing cards and all 256 allocations remain. Loops and selection use a shared page shell; selection adds the existing Week 3 Lesson 3 task with original worked/independent/retry cases. Publication remains gated by regression, offline and browser acceptance checks."
     },
     {
       "id": "C06",
