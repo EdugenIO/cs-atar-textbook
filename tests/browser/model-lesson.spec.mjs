@@ -1,5 +1,27 @@
 import {test,expect} from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+test('chapter starting point, main application and teaching guidance stay distinct',async({page})=>{
+ await page.goto('/#loops');
+ await expect(page.locator('.lesson-preparation')).toHaveCount(1);
+ await expect(page.locator('.lesson-preparation').getByRole('link',{name:'Choose today’s lesson',exact:true})).toBeVisible();
+ await expect(page.locator('.chapter-route-controls').getByRole('link',{name:'Choose a lesson',exact:true})).toHaveCount(0);
+ await expect(page.locator('.chapter-teacher-guidance')).not.toHaveAttribute('open','');
+ const taskFirst=await page.locator('.chapter-application').evaluate(el=>!!(el.compareDocumentPosition(document.querySelector('.chapter-reinforcement'))&Node.DOCUMENT_POSITION_FOLLOWING));
+ expect(taskFirst).toBeTruthy();
+ await page.locator('.student-journey summary').click();
+ await expect(page.locator('.student-journey summary')).toContainText('Study this chapter independently');
+ await page.locator('.chapter-teacher-guidance > summary').click();
+ await expect(page.getByText('Pygame preparation before the project.',{exact:true})).toBeVisible();
+ await page.goto('/#loops/heading-check-your-understanding');
+ await expect(page.locator('#heading-check-your-understanding')).toBeInViewport();
+ await page.getByRole('button',{name:'Once before the loop',exact:true}).click();
+ await expect(page.locator('#chapter-feedback')).toContainText('Correct.');
+ await expect(page.locator('.student-journey')).toHaveAttribute('open','');
+ await page.locator('.student-journey a[href="#loops/heading-trace-the-running-total"]').first().click();
+ await expect(page.locator('#chapter-feedback')).toContainText('Correct.');
+ await page.setViewportSize({width:390,height:844});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
+});
 test('loops retains one worked trace with its original heading, prediction and changed practice',async({page})=>{
  await page.goto('/#loops/heading-watch-the-total-grow');
  const guide=page.locator('[data-learning-guide="loops"]');

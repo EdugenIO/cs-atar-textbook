@@ -487,16 +487,16 @@
           "kind": "section",
           "url": "../#selection/heading-practice",
           "label": "6. Practice",
-          "sha256": "7d9aa009d0d32e7b1b7af472372bed147231d29ecbd24dbb605b4bc919b514ea",
-          "excerpt": "Predict: what happens for an order worth $35? 35 >= 50 is false, so the else branch sets the charge to 5. The output is Delivery charge: $5.00 . Debug: a $50 order is charged deliv",
+          "sha256": "833a6eddd8b161e9c90717b589074399566a1431c3ad946e5443b0a53ecc56bf",
+          "excerpt": "Main application: attempt the museum ticket task before opening its illustrative answer. Apply: a museum charges $8 for ages under 16 and $12 otherwise. Design and test the decisio",
           "current": true
         },
         "feedback": {
           "kind": "section",
           "url": "../#selection/heading-practice",
           "label": "6. Practice",
-          "sha256": "7d9aa009d0d32e7b1b7af472372bed147231d29ecbd24dbb605b4bc919b514ea",
-          "excerpt": "Predict: what happens for an order worth $35? 35 >= 50 is false, so the else branch sets the charge to 5. The output is Delivery charge: $5.00 . Debug: a $50 order is charged deliv",
+          "sha256": "833a6eddd8b161e9c90717b589074399566a1431c3ad946e5443b0a53ecc56bf",
+          "excerpt": "Main application: attempt the museum ticket task before opening its illustrative answer. Apply: a museum charges $8 for ages under 16 and $12 otherwise. Design and test the decisio",
           "current": true
         },
         "status": "Written teaching and practice confirmed",
@@ -2807,16 +2807,16 @@
           "kind": "section",
           "url": "../#selection/heading-practice",
           "label": "6. Practice",
-          "sha256": "7d9aa009d0d32e7b1b7af472372bed147231d29ecbd24dbb605b4bc919b514ea",
-          "excerpt": "Predict: what happens for an order worth $35? 35 >= 50 is false, so the else branch sets the charge to 5. The output is Delivery charge: $5.00 . Debug: a $50 order is charged deliv",
+          "sha256": "833a6eddd8b161e9c90717b589074399566a1431c3ad946e5443b0a53ecc56bf",
+          "excerpt": "Main application: attempt the museum ticket task before opening its illustrative answer. Apply: a museum charges $8 for ages under 16 and $12 otherwise. Design and test the decisio",
           "current": true
         },
         "feedback": {
           "kind": "section",
           "url": "../#selection/heading-practice",
           "label": "6. Practice",
-          "sha256": "7d9aa009d0d32e7b1b7af472372bed147231d29ecbd24dbb605b4bc919b514ea",
-          "excerpt": "Predict: what happens for an order worth $35? 35 >= 50 is false, so the else branch sets the charge to 5. The output is Delivery charge: $5.00 . Debug: a $50 order is charged deliv",
+          "sha256": "833a6eddd8b161e9c90717b589074399566a1431c3ad946e5443b0a53ecc56bf",
+          "excerpt": "Main application: attempt the museum ticket task before opening its illustrative answer. Apply: a museum charges $8 for ages under 16 and $12 otherwise. Design and test the decisio",
           "current": true
         },
         "status": "Written teaching and practice confirmed",
@@ -15330,7 +15330,7 @@
           "kind": "section",
           "url": "../#selection/heading-test-the-boundary",
           "label": "5. Test the boundary",
-          "sha256": "aad8a419721c8f8d62ed18a2db8299e73ac6d6b2053eee08aae5241eb517d8c6",
+          "sha256": "bbe442cee0c4c2d7b90c77ba0a31a08ff0fa90b108d492ed0ed596f6a25021be",
           "excerpt": "Choose tests that exercise both branches, with special attention to the point where the result changes. Order total Condition result Expected charge $49.99 False $5.00 $50.00 True ",
           "current": true
         },
@@ -15338,7 +15338,7 @@
           "kind": "section",
           "url": "../#selection/heading-test-the-boundary",
           "label": "5. Test the boundary",
-          "sha256": "aad8a419721c8f8d62ed18a2db8299e73ac6d6b2053eee08aae5241eb517d8c6",
+          "sha256": "bbe442cee0c4c2d7b90c77ba0a31a08ff0fa90b108d492ed0ed596f6a25021be",
           "excerpt": "Choose tests that exercise both branches, with special attention to the point where the result changes. Order total Condition result Expected charge $49.99 False $5.00 $50.00 True ",
           "current": true
         },
@@ -15534,7 +15534,7 @@
           "kind": "section",
           "url": "../#selection/heading-test-the-boundary",
           "label": "5. Test the boundary",
-          "sha256": "aad8a419721c8f8d62ed18a2db8299e73ac6d6b2053eee08aae5241eb517d8c6",
+          "sha256": "bbe442cee0c4c2d7b90c77ba0a31a08ff0fa90b108d492ed0ed596f6a25021be",
           "excerpt": "Choose tests that exercise both branches, with special attention to the point where the result changes. Order total Condition result Expected charge $49.99 False $5.00 $50.00 True ",
           "current": true
         },
@@ -15542,7 +15542,7 @@
           "kind": "section",
           "url": "../#selection/heading-test-the-boundary",
           "label": "5. Test the boundary",
-          "sha256": "aad8a419721c8f8d62ed18a2db8299e73ac6d6b2053eee08aae5241eb517d8c6",
+          "sha256": "bbe442cee0c4c2d7b90c77ba0a31a08ff0fa90b108d492ed0ed596f6a25021be",
           "excerpt": "Choose tests that exercise both branches, with special attention to the point where the result changes. Order total Condition result Expected charge $49.99 False $5.00 $50.00 True ",
           "current": true
         },
@@ -15737,7 +15737,7 @@
           "kind": "section",
           "url": "../#selection/heading-test-the-boundary",
           "label": "5. Test the boundary",
-          "sha256": "aad8a419721c8f8d62ed18a2db8299e73ac6d6b2053eee08aae5241eb517d8c6",
+          "sha256": "bbe442cee0c4c2d7b90c77ba0a31a08ff0fa90b108d492ed0ed596f6a25021be",
           "excerpt": "Choose tests that exercise both branches, with special attention to the point where the result changes. Order total Condition result Expected charge $49.99 False $5.00 $50.00 True ",
           "current": true
         },
@@ -15745,7 +15745,7 @@
           "kind": "section",
           "url": "../#selection/heading-test-the-boundary",
           "label": "5. Test the boundary",
-          "sha256": "aad8a419721c8f8d62ed18a2db8299e73ac6d6b2053eee08aae5241eb517d8c6",
+          "sha256": "bbe442cee0c4c2d7b90c77ba0a31a08ff0fa90b108d492ed0ed596f6a25021be",
           "excerpt": "Choose tests that exercise both branches, with special attention to the point where the result changes. Order total Condition result Expected charge $49.99 False $5.00 $50.00 True ",
           "current": true
         },
@@ -15941,7 +15941,7 @@
           "kind": "section",
           "url": "../#selection/heading-test-the-boundary",
           "label": "5. Test the boundary",
-          "sha256": "aad8a419721c8f8d62ed18a2db8299e73ac6d6b2053eee08aae5241eb517d8c6",
+          "sha256": "bbe442cee0c4c2d7b90c77ba0a31a08ff0fa90b108d492ed0ed596f6a25021be",
           "excerpt": "Choose tests that exercise both branches, with special attention to the point where the result changes. Order total Condition result Expected charge $49.99 False $5.00 $50.00 True ",
           "current": true
         },
@@ -15949,7 +15949,7 @@
           "kind": "section",
           "url": "../#selection/heading-test-the-boundary",
           "label": "5. Test the boundary",
-          "sha256": "aad8a419721c8f8d62ed18a2db8299e73ac6d6b2053eee08aae5241eb517d8c6",
+          "sha256": "bbe442cee0c4c2d7b90c77ba0a31a08ff0fa90b108d492ed0ed596f6a25021be",
           "excerpt": "Choose tests that exercise both branches, with special attention to the point where the result changes. Order total Condition result Expected charge $49.99 False $5.00 $50.00 True ",
           "current": true
         },

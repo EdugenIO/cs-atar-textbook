@@ -250,6 +250,21 @@
         "label": "Computer systems: representation, logic and performance · explained teacher answers",
         "href": "../activities/computer-systems/teacher.html",
         "type": "teacher"
+      },
+      {
+        "label": "Teacher planning notes",
+        "href": "../teachers/#topic-selection",
+        "type": "teacher"
+      },
+      {
+        "label": "Required skills, support and enrichment",
+        "href": "../curriculum/scope.html",
+        "type": "teacher"
+      },
+      {
+        "label": "Reviewed teaching and practice",
+        "href": "../curriculum/provision-review.html",
+        "type": "teacher"
       }
     ]
   },

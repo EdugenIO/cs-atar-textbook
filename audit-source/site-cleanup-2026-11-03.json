@@ -43,10 +43,12 @@
       "id": "C04",
       "priority": "P1",
       "title": "Consolidate chapter instructions into one learning path",
-      "status": "Proposed; unimplemented",
+      "status": "Complete",
       "evidence": "**Confirmed overlap:** the loops page contains “Before you start”, a five-step journey, chapter shortcuts, a Pygame preparation notice, “Check your reasoning…”, “Practice and explain”, “Your practical task”, “Check your understanding” and a “Suggested classroom sequence”. Several serve distinct purposes, but the hierarchy is unclear.",
       "action": "use one top-of-chapter orientation block, a concise local contents list, and a main sequence of explanation → example → practice → check. Place additional checks and optional tasks under clearly labelled reinforcement/extension sections. Put teacher sequencing guidance behind a teacher disclosure. Link Pygame preparation from the lesson where it is allocated.",
-      "completeWhen": "a student can identify the assigned core task and its feedback without choosing among competing instructions. Distinct questions, explanatory scaffolds and delayed retries are preserved, with fewer repeated directions and links."
+      "completeWhen": "a student can identify the assigned core task and its feedback without choosing among competing instructions. Distinct questions, explanatory scaffolds and delayed retries are preserved, with fewer repeated directions and links.",
+      "completedDate": "2026-11-03",
+      "verification": "All 50 chapters have one starting block and an independently labelled chapter-study path. Main applications precede additional short checks; teacher preparation and classroom sequencing sit in teaching disclosures. Original questions, answers, code and section destinations are preserved. The selection evidence layout review covers exactly six changed role fingerprints in three groups; independent teacher sign-off remains pending. Publication is gated by content, offline and browser release checks."
     },
     {
       "id": "C05",

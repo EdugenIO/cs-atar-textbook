@@ -45,9 +45,9 @@
   const title=main.querySelector('h1');if(!title)return;
   const bar=document.createElement('div');bar.className='chapter-route-controls no-print';
   const label=document.createElement('p');label.className='chapter-position';label.textContent=position.textContent;
-  const meta=document.createElement('div');meta.className='chapter-route-meta';meta.append(label,anchor('Choose a lesson','lessons/?chapter='+id));
+  const meta=document.createElement('div');meta.className='chapter-route-meta';meta.append(label);
   const nav=document.createElement('nav');nav.className='chapter-navigation-top';nav.setAttribute('aria-label','Chapter navigation at top');nav.append(chapterLinks(active));bar.append(meta,nav);
-  const intro=title.nextElementSibling;((intro?.classList.contains('lede'))?intro:title).after(bar);
+  const intro=title.nextElementSibling;(main.querySelector('.lesson-preparation')||((intro?.classList.contains('lede'))?intro:title)).after(bar);
   const bottom=main.querySelector('.chapter-nav');if(bottom){bottom.setAttribute('aria-label','Chapter navigation at bottom');bottom.replaceChildren(chapterLinks(active));}
  }
  sidebar.addEventListener('click',event=>{const a=event.target.closest('a[href]');if(!a)return;closeMobile();const href=a.getAttribute('href');if(href.startsWith('#')){closeMobile();if(href===location.hash){event.preventDefault();if(typeof prepareChapterDestination==='function')prepareChapterDestination();else{const target=document.querySelector('main h1');if(target){target.tabIndex=-1;target.focus();target.scrollIntoView();}}}}});

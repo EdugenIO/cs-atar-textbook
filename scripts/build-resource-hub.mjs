@@ -38,7 +38,7 @@ const records=chapters.map(c=>{
   const href=m[1];if(/^(?:https?:|#|\/|javascript:)/.test(href)||href.includes('${'))continue;
   const file=href.split(/[?#]/)[0];if(!file||!fs.existsSync(path.join(root,file))||seen.has(href))continue;seen.add(href);
   let label=plain(m[2])||path.basename(file);if(/^(scenario brief|starter ZIP)$/i.test(label))label+=' · '+path.basename(file).replace(/\.(md|zip)$/,'').replaceAll('-',' ');
-  const type=/answer|solution|teacher|marking|reference|explained key/i.test(label+' '+file)?'teacher':/\.(py|sql)$/.test(file)?'code':/\.(pdf|md)$/.test(file)?'print':/\.zip$/.test(file)?'download':'activity';
+  const type=(/^(?:curriculum|teachers)\//.test(file)||/answer|solution|teacher|marking|reference|explained key/i.test(label+' '+file))?'teacher':/\.(py|sql)$/.test(file)?'code':/\.(pdf|md)$/.test(file)?'print':/\.zip$/.test(file)?'download':'activity';
   resources.push({label,href:'../'+href,type});
  }
  return {id:c.id,title:c.title,intro:c.intro,unit:c.unit||1,year:(c.unit||1)<3?11:12,topic:topic(c),search:[c.title,c.intro,...c.sections.map(s=>s[0]),searchKeywords[c.id]||''].join(' '),resources};

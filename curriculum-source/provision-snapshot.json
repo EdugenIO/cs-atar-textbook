@@ -14,8 +14,8 @@
   "Y11-R003": {
     "explanation": "83b40cbf06c317cd67f26a1e20fdf0ae554d06b762240bf9cc709c2400096ece",
     "example": "83b40cbf06c317cd67f26a1e20fdf0ae554d06b762240bf9cc709c2400096ece",
-    "independentTask": "7d9aa009d0d32e7b1b7af472372bed147231d29ecbd24dbb605b4bc919b514ea",
-    "feedback": "7d9aa009d0d32e7b1b7af472372bed147231d29ecbd24dbb605b4bc919b514ea"
+    "independentTask": "833a6eddd8b161e9c90717b589074399566a1431c3ad946e5443b0a53ecc56bf",
+    "feedback": "833a6eddd8b161e9c90717b589074399566a1431c3ad946e5443b0a53ecc56bf"
   },
   "Y11-R004": {
     "explanation": "64ea69a013c093b2e2566157b72c735acc3d9b514df9923a6883d30993108ab7",
@@ -56,8 +56,8 @@
   "Y11-R010": {
     "explanation": "0c2bebceb487086707c770089a16543e5466533c11662514fef88a0c6e3cb0ae",
     "example": "e4b758ebee18dd2f4b58ce50ee99ac9f4e4c5d57241b0697a7f36311fa8d5115",
-    "independentTask": "7d9aa009d0d32e7b1b7af472372bed147231d29ecbd24dbb605b4bc919b514ea",
-    "feedback": "7d9aa009d0d32e7b1b7af472372bed147231d29ecbd24dbb605b4bc919b514ea"
+    "independentTask": "833a6eddd8b161e9c90717b589074399566a1431c3ad946e5443b0a53ecc56bf",
+    "feedback": "833a6eddd8b161e9c90717b589074399566a1431c3ad946e5443b0a53ecc56bf"
   },
   "Y11-R011": {
     "explanation": "56c99c58dd470359fc15831520935d417373fa444f954debd3ccc18fbbcb2e33",
@@ -174,8 +174,8 @@
     "feedback": "8e993cb90da176d31974420dc366a31499f7f1f9f2a612da06db57a5336a465c"
   },
   "Y11-R030": {
-    "explanation": "aad8a419721c8f8d62ed18a2db8299e73ac6d6b2053eee08aae5241eb517d8c6",
-    "example": "aad8a419721c8f8d62ed18a2db8299e73ac6d6b2053eee08aae5241eb517d8c6",
+    "explanation": "bbe442cee0c4c2d7b90c77ba0a31a08ff0fa90b108d492ed0ed596f6a25021be",
+    "example": "bbe442cee0c4c2d7b90c77ba0a31a08ff0fa90b108d492ed0ed596f6a25021be",
     "independentTask": "ce88530950e7427a8cf0c848d0e104aea59c727e145808b3fed15246fc203bc3",
     "feedback": "9912e45a864ecd3acb48fa19536f41413bdd3c02d38a12715cc05ae5983ffd79"
   },
