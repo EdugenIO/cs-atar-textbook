@@ -1,0 +1,27 @@
+import {test,expect} from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+test('model lesson keeps practice, disclosed feedback and student printing distinct',async({page})=>{
+ await page.goto('/lessons/?unit=1#u1-l15');
+ await page.getByRole('link',{name:'Start the focused lesson:'}).click();
+ await expect(page.getByRole('heading',{name:'Trace counters and accumulators',exact:true})).toBeVisible();
+ await expect(page.locator('details[open]')).toHaveCount(0);
+ await page.getByText('Reveal the worked trace after predicting',{exact:true}).focus();
+ await page.keyboard.press('Enter');
+ await expect(page.getByText('The loop runs three times and prints 12.',{exact:false})).toBeVisible();
+ await page.getByRole('link',{name:'3 Practice',exact:true}).click();
+ await expect(page).toHaveURL(/#practice$/);
+ await expect(page.getByRole('heading',{name:'B. Independent program'})).toBeVisible();
+ await page.getByRole('link',{name:'I have attempted it — compare my work'}).click();
+ await page.getByText('Reveal the Activity 01 explained answers',{exact:true}).click();
+ await expect(page.getByText('Rounds 1,2,3,4 add 2,4,6,8;', {exact:false})).toBeVisible();
+ await page.emulateMedia({media:'print'});
+ await expect(page.locator('#check details')).toBeHidden();
+ await expect(page.locator('.teacher')).toBeHidden();
+ await expect(page.getByRole('heading',{name:'B. Independent program'})).toBeVisible();
+ await page.emulateMedia({media:'screen'});
+ await expect(page.locator('#check details')).toBeVisible();
+ await page.setViewportSize({width:390,height:844});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
+ const scan=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
+ expect(scan.violations).toEqual([]);
+});

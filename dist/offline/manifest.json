@@ -4,28 +4,28 @@
   "files": [
     {
       "name": "unit-1-reader.html",
-      "bytes": 390936,
-      "sha256": "db10448c2009929c181635c398e8082110ed422e1e73c75dfba645004d0b5e4a"
+      "bytes": 391218,
+      "sha256": "9e9ac8dc58e46601a0c7eb8050ee597166aa60bf35f0bfc3ebba665ce0b0a99b"
     },
     {
       "name": "unit-2-reader.html",
-      "bytes": 315053,
-      "sha256": "b43d492937e012d80ea73581ce1bdf6001c1aa817786f9c66257667fe4b06a36"
+      "bytes": 315202,
+      "sha256": "ed5df7e95692eb0d7ad1fc32706cbf2a44dc76393b5319beef9b54d49a8db932"
     },
     {
       "name": "unit-3-reader.html",
-      "bytes": 541679,
-      "sha256": "ed791bc4daaf0f048d44a3c6287b23bf9c2581fe9d56cc057b5bb578033383fc"
+      "bytes": 541812,
+      "sha256": "38382a3b980ef21f30574b3b018a3b4500bb621696dafa7f14e64fa94dfd8e94"
     },
     {
       "name": "unit-4-reader.html",
-      "bytes": 412061,
-      "sha256": "55a18ce4134666d1980dd1ea5f876b374f8d0bc1cd085ce5f463aceb6957fc61"
+      "bytes": 412194,
+      "sha256": "e280710241ddc1044083e8df1a77a630a2fd16ef16d892c2217dee7158964474"
     },
     {
       "name": "cs-atar-complete.zip",
-      "bytes": 11442112,
-      "sha256": "608265558492bbc49f1ef62abe0dfae384861ddda5fad4874f16e8d6642cd686"
+      "bytes": 11453725,
+      "sha256": "b62b79b4ae5ac83e2abc8425ecc36be99603dfbec272f684116fe5ea9b7c88cf"
     }
   ]
 }
