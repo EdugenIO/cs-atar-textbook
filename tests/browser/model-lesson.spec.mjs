@@ -15,11 +15,11 @@ test('model lesson keeps practice, disclosed feedback and student printing disti
  await page.getByText('Reveal the Activity 01 explained answers',{exact:true}).click();
  await expect(page.getByText('Rounds 1,2,3,4 add 2,4,6,8;', {exact:false})).toBeVisible();
  await page.emulateMedia({media:'print'});
- await expect(page.locator('#check details')).toBeHidden();
+ for(const answer of await page.locator('#check details').all())await expect(answer).toBeHidden();
  await expect(page.locator('.teacher')).toBeHidden();
  await expect(page.getByRole('heading',{name:'B. Independent program'})).toBeVisible();
  await page.emulateMedia({media:'screen'});
- await expect(page.locator('#check details')).toBeVisible();
+ for(const answer of await page.locator('#check details').all())await expect(answer).toBeVisible();
  await page.setViewportSize({width:390,height:844});
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
  const scan=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
