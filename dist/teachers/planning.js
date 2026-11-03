@@ -8,7 +8,7 @@
  function followHash(){const target=document.getElementById(location.hash.slice(1));if(target?.classList.contains('plan-card')){get('unit').value=target.dataset.unit;get('query').value='';filter();const detail=target.querySelector('details');if(detail)detail.open=true;target.scrollIntoView();}}
  window.addEventListener('hashchange',followHash);followHash();
  let snapshot=null;
- function prepare(){if(snapshot)return;snapshot=[...document.querySelectorAll('details')].map(d=>[d,d.open]);for(const [d] of snapshot){if(d.closest('.plan-card, .local-lesson')&&!d.closest('[hidden]'))d.open=true;}}
+ function prepare(){if(snapshot)return;snapshot=[...document.querySelectorAll('details')].map(d=>[d,d.open]);for(const [d] of snapshot){if(d.closest('.plan-card, .local-lesson, .lesson-plan')&&!d.closest('[hidden]'))d.open=true;}}
  function restore(){if(!snapshot)return;for(const [d,open] of snapshot)d.open=open;snapshot=null;}
  get('print-planning').addEventListener('click',()=>{prepare();try{window.print();}catch{restore();}});
  window.addEventListener('beforeprint',prepare);window.addEventListener('afterprint',restore);

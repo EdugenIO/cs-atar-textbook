@@ -9,11 +9,11 @@ for(const p of data.plans){visit(p.id);assert.ok(p.misconception.risk&&p.misconc
 const mapped=new Set(data.plans.flatMap(p=>p.items.map(i=>i.id)));assert.equal(mapped.size,519);
 const local=source.localUnit1;assert.equal(local.length,64);assert.equal(new Set(local.map(l=>l.week+'-'+l.lesson)).size,64);assert.equal(local.filter(l=>l.kind==='event checkpoint').length,4);assert.equal(local.filter(l=>l.kind==='exam block').length,3);assert.equal(local.filter(l=>!['event checkpoint','exam block'].includes(l.kind)).length,57);
 for(const key of ['unit2','unit4'])assert.equal(source.localSQL[key].length,16);
-for(const file of ['index.html','companion.html']){const html=read('dist/teachers/'+file);for(const m of html.matchAll(/href="([^"]+)"/g)){const href=m[1];if(href.startsWith('http')||href.startsWith('#'))continue;assert.ok(fs.existsSync(new URL('dist/teachers/'+href.split('#')[0],root)),href);}}
+for(const file of ['index.html','companion.html']){const html=read('dist/teachers/'+file);for(const m of html.matchAll(/href="([^"]+)"/g)){const href=m[1];if(href.startsWith('http')||href.startsWith('#'))continue;assert.ok(fs.existsSync(new URL('dist/teachers/'+href.split(/[?#]/)[0],root)),href);}}
 assert.ok(read('dist/teachers/companion.html').includes('not a completed 64-entry local lesson map'));assert.ok(read('dist/teachers/companion.html').includes('not four additional 55-minute periods'));
 // Budget, filters, deep links and temporary print expansion use the actual UI script.
 const handlers={},elements=Object.fromEntries(['unit','query','minutes','lost','plan-count','budget-result','print-planning'].map(id=>[id,{value:'',textContent:'',addEventListener:(event,fn)=>handlers[id+'-'+event]=fn}]));elements.unit.value='all';elements.minutes.value='55';elements.lost.value='0';
-const inCard=selector=>selector==='.plan-card, .local-lesson'?{}:null;
+const inCard=selector=>selector==='.plan-card, .local-lesson, .lesson-plan'?{}:null;
 const details=[{open:false,closest:inCard},{open:true,closest:inCard},{open:false,closest:()=>null}];
 const cards=[1,2].map((unit,i)=>({id:'topic-'+i,dataset:{unit:String(unit)},hidden:false,textContent:unit===1?'functions return':'SQL joins',classList:{contains:()=>true},querySelector:()=>details[i],scrollIntoView(){this.scrolled=true;}}));
 const ctx={document:{getElementById:id=>elements[id]||cards.find(c=>c.id===id)||null,querySelectorAll:selector=>selector==='.plan-card'?cards:selector==='details'?details:[]},location:{hash:''},window:{addEventListener:(event,fn)=>handlers[event]=fn,print(){handlers.beforeprint();}}};vm.runInNewContext(read('dist/teachers/planning.js'),ctx);

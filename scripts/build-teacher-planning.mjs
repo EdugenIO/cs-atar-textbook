@@ -1,6 +1,7 @@
+import {teacherHub} from './teacher-hub.mjs';
 import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
 const root=path.resolve(import.meta.dirname,'..'),dist=path.join(root,'dist'),out=path.join(dist,'teachers');fs.mkdirSync(out,{recursive:true});
-const read=p=>fs.readFileSync(path.join(root,p),'utf8'),write=(name,text)=>fs.writeFileSync(path.join(out,name),text.trimEnd()+'\n');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8'),write=(name,text)=>fs.writeFileSync(path.join(out,name),(name==='index.html'?teacherHub(text):text).trimEnd()+'\n');
 const data=JSON.parse(read('teaching-source/teacher-planning.json')),ctx=vm.createContext({});
 for(const f of ['app','chapters','project-chapter','network-chapters','audit-chapters','unit2-chapters','unit2-review-chapters','unit3-chapters','unit4-chapters','unit4-er-interpretation','unit4-data-quality','prerequisites','teaching-planner-data'])vm.runInContext(read('dist/'+f+'.js'),ctx);
 const chapters=JSON.parse(vm.runInContext('JSON.stringify(chapters)',ctx));chapters.splice(3,0,{id:'selection',unit:1,title:'Making decisions with selection'});

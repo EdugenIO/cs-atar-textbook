@@ -70,7 +70,7 @@ test('revision quiz unanswered feedback and checklist persistence',async({page})
  await page.locator('#quiz-form button[type="submit"]').click();await expect(page.locator('#quiz-status')).toContainText('unanswered');await accessible(page);
 });
 for(const route of ['/#home','/#teaching','/#assessments','/resources/','/activities/','/sql/','/revision/','/practice/','/teachers/','/offline/','/lessons/','/accessibility.html','/resource-status.html'])test('page '+route,async({page})=>{
- await page.goto(route);await expect(page.locator('main h1')).toHaveCount(1);await accessible(page);
+ await page.goto(route);if(route==='/#teaching')await expect(page).toHaveURL(/teachers\/\?view=week/);await expect(page.locator('main h1')).toHaveCount(1);await accessible(page);
 });
 test('lightweight home, deferred reading and page-specific report',async({page},info)=>{
  const scripts=[];page.on('response',r=>{if(new URL(r.url()).pathname.endsWith('.js'))scripts.push(r);});

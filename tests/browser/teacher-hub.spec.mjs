@@ -1,0 +1,45 @@
+import {test,expect} from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+test('one teacher hub preserves the selected unit and week through topic support',async({page})=>{
+ await page.goto('/#teaching');
+ await expect(page).toHaveURL(/teachers\/\?view=week/);
+ await expect(page.locator('#week-view')).toBeVisible();
+ await page.locator('[data-planner-unit="3"]').click();
+ await page.locator('#planner-week-select').selectOption('7');
+ await expect(page.locator('.lesson-plan')).toHaveCount(4);
+ await page.getByRole('link',{name:'Topic support & misconceptions',exact:true}).first().click();
+ await expect(page).toHaveURL(/view=topics&unit=3&week=7#topic-unit3-project$/);
+ await expect(page.locator('#topic-view')).toBeVisible();
+ await expect(page.locator('#week-view')).toBeHidden();
+ await expect(page.locator('#topic-unit3-project details')).toHaveAttribute('open','');
+ await expect(page.locator('#unit')).toHaveValue('3');
+ await page.getByRole('button',{name:'Return to the selected week',exact:true}).click();
+ await expect(page.locator('#planner-week-select')).toHaveValue('7');
+ await expect(page.locator('[data-planner-unit="3"]')).toHaveAttribute('aria-pressed','true');
+ await page.reload();
+ await expect(page.locator('#planner-week-select')).toHaveValue('7');
+ await expect(page.locator('.lesson-plan')).toHaveCount(4);
+ await page.evaluate(()=>{window.print=()=>{};});
+ await page.getByRole('button',{name:'Print selected plan with guidance',exact:true}).click();
+ await expect(page.locator('#week-view .lesson-check-guide[open]')).toHaveCount(4);
+ await page.emulateMedia({media:'print'});
+ await expect(page.locator('#topic-view')).toBeHidden();
+ await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));
+ await page.emulateMedia({media:'screen'});
+ await expect(page.locator('#week-view .lesson-check-guide[open]')).toHaveCount(0);
+ await page.setViewportSize({width:390,height:844});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
+ const scan=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
+ expect(scan.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))).toEqual([]);
+});
+
+test('existing topic bookmarks select topic support in the teacher hub',async({page})=>{
+ await page.goto('/teachers/#topic-loops');
+ await expect(page.locator('#topic-view')).toBeVisible();
+ await expect(page.locator('#topic-loops details')).toHaveAttribute('open','');
+ await expect(page.locator('#unit')).toHaveValue('1');
+ await expect(page.locator('#week-view')).toBeHidden();
+ await page.getByRole('button',{name:'Week-by-week plan',exact:true}).click();
+ await expect(page.locator('#week-view')).toBeVisible();
+ await expect(page).not.toHaveURL(/#topic-loops$/);
+});

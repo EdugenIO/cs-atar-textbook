@@ -1,5 +1,6 @@
 /* The reading home is static; the full book loads only for reading or search. */
 (() => {
+ if(location.hash.split('/')[0]==='#teaching'){location.replace((location.protocol==='file:'?'teachers/index.html':'teachers/')+'?view=week');return;}
  const input=document.getElementById('search'),main=document.getElementById('main');let pending=null,ready=false,navigated=false;
  function loadBook(){
   if(pending)return pending;
