@@ -3,3 +3,5 @@ main{max-width:1160px;margin:auto;padding:40px 5%}.practice-intro{max-width:760p
 .practice-setup label{display:block;margin:12px 0}.practice-setup h2{margin-top:0}.practice-toolbar .notice{flex-basis:100%;margin:8px 0}
 
 .practice-card h3{font:normal 26px/1.3 Georgia,serif;margin:12px 0}.practice-card{scroll-margin-top:20px}
+.mode-picker {margin:1.5rem 0}.mode-picker a{text-decoration:none;color:inherit}.mode-picker a:hover,.mode-picker a:focus-visible{outline:3px solid #287d70}.study-card:focus{outline:3px solid #287d70}.study-card details{margin:1rem 0}.study-card summary{cursor:pointer;font-weight:700;padding:.8rem;background:#edf4ef}.study-card pre{overflow:auto;max-width:100%}.study-card .scope{font-size:.9rem}.study-card li{margin-bottom:.6rem}
+@media print{#study-controls,.study-links,.mode-picker{display:none!important}.study-card[hidden]{display:none!important}.study-card{break-inside:auto}.study-card details{break-inside:auto}.study-card details:not([open]){display:none}.study-card pre{white-space:pre-wrap}}

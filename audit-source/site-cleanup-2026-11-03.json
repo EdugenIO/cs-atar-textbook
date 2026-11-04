@@ -65,10 +65,12 @@
       "id": "C06",
       "priority": "P2",
       "title": "Consolidate the repeated exam-question presentation",
-      "status": "Proposed; unimplemented",
+      "status": "Complete",
       "evidence": "**Confirmed republishing:** `scripts/build-revision.mjs` reads `practiceSets` from `dist/practice/questions.js` and republishes the same **60 original questions** in Revision → “Explained exam-style answers”. The revision page identifies that provenance. This is a second presentation of one bank, not 60 extra questions or a separate maintained question source.",
       "action": "give the bank one owner and entry within Revision, offering explicit “Study explained examples” and “Timed/untimed written practice” modes. Keep topic retrieval and cumulative quizzes distinct. A read-and-study mode can remain useful; it should not imply a different question set.",
-      "completeWhen": "students recognise when the same questions are reused, question IDs remain stable, and attempt drafts, resets, timers, locked responses and self-marking still work. Entering study mode must not silently modify or reveal answers inside an active attempt."
+      "completeWhen": "students recognise when the same questions are reused, question IDs remain stable, and attempt drafts, resets, timers, locked responses and self-marking still work. Entering study mode must not silently modify or reveal answers inside an active attempt.",
+      "completedDate": "2026-11-04",
+      "verification": "One 60-question bank at practice/ with explicit study and timed modes; repeated revision cards removed, legacy question bookmarks forwarded, offline formats retained. All 35 local regression files pass. Cross-browser state, filters, printing and accessibility acceptance is a publication gate."
     },
     {
       "id": "C07",
