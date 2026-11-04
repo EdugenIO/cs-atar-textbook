@@ -1,0 +1,81 @@
+[
+  {
+    "unit": 1,
+    "note": "Unit 1 has no separate whole-unit review chapter. Start consolidation with its short diagnostic, then repair a priority gap. Network scenarios and review checks networking only.",
+    "stages": [
+      {
+        "id": "consolidation",
+        "label": "Repair and transfer",
+        "purpose": "Use the opening diagnostic to choose a gap, repair it and try a changed example."
+      },
+      {
+        "id": "exam-preparation",
+        "label": "Timed practice",
+        "purpose": "Practice reading questions, pacing and explaining answers; use feedback to return to the relevant topic."
+      }
+    ]
+  },
+  {
+    "unit": 2,
+    "note": "Use evidence from each stage to choose the next task; return to repair whenever a timed response exposes a gap.",
+    "stages": [
+      {
+        "id": "unit2-review",
+        "label": "Diagnose",
+        "purpose": "Attempt the integrated scenario independently. Identify the first wrong step and record a specific gap."
+      },
+      {
+        "id": "unit2-consolidation",
+        "label": "Repair and transfer",
+        "purpose": "Target a diagnosed gap, use feedback and demonstrate the idea on a changed task."
+      },
+      {
+        "id": "unit2-exam",
+        "label": "Timed practice",
+        "purpose": "Practice reading, pacing and written reasoning. Self-check afterwards and turn missed points into a revision action."
+      }
+    ]
+  },
+  {
+    "unit": 3,
+    "note": "Use evidence from each stage to choose the next task; return to repair whenever a timed response exposes a gap.",
+    "stages": [
+      {
+        "id": "unit3-review",
+        "label": "Diagnose",
+        "purpose": "Attempt the integrated scenario independently. Identify the first wrong step and record a specific gap."
+      },
+      {
+        "id": "unit3-consolidation",
+        "label": "Repair and transfer",
+        "purpose": "Target a diagnosed gap, use feedback and demonstrate the idea on a changed task."
+      },
+      {
+        "id": "unit3-exam",
+        "label": "Timed practice",
+        "purpose": "Practice reading, pacing and written reasoning. Self-check afterwards and turn missed points into a revision action."
+      }
+    ]
+  },
+  {
+    "unit": 4,
+    "note": "Full-course consolidation and exam preparation revisit Units 1\u20134.",
+    "stages": [
+      {
+        "id": "unit4-review",
+        "label": "Diagnose",
+        "purpose": "Attempt the integrated scenario independently. Identify the first wrong step and record a specific gap."
+      },
+      {
+        "id": "unit4-consolidation",
+        "label": "Repair and transfer",
+        "purpose": "Target a diagnosed gap, use feedback and demonstrate the idea on a changed task."
+      },
+      {
+        "id": "unit4-exam",
+        "label": "Timed practice",
+        "purpose": "Practice reading, pacing and written reasoning. Self-check afterwards and turn missed points into a revision action."
+      }
+    ]
+  }
+]

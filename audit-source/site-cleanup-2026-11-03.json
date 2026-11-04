@@ -76,10 +76,12 @@
       "id": "C07",
       "priority": "P2",
       "title": "Clarify review, consolidation and exam preparation",
-      "status": "Proposed; unimplemented",
+      "status": "Complete",
       "evidence": "**Confirmed naming overlap; deletion not justified:** there are 11 end-of-unit review/consolidation/exam-preparation chapter records, plus the separate network review chapter. For example, Unit 3 review diagnoses and integrates knowledge, consolidation targets identified gaps, and exam preparation practises timed responses. These are related but not identical teaching tasks.",
       "action": "group the end-of-unit pages under “Review and exam preparation”, with descriptions such as “Diagnose”, “Repair and transfer” and “Timed practice”. Keep their separate allocated lessons and distinct exercises.",
-      "completeWhen": "students understand which stage to use and why. Existing chapter IDs and allocations are preserved; no content is removed solely because titles sound similar."
+      "completeWhen": "students understand which stage to use and why. Existing chapter IDs and allocations are preserved; no content is removed solely because titles sound similar.",
+      "completedDate": "2026-11-04",
+      "verification": "Four navigation groups and shared unit-specific stage guidance: Diagnose, Repair and transfer, Timed practice. All 11 end-of-unit pages and separate network review retained; Unit 1 diagnostic exception and Unit 4 full-course scope explicit. All 36 local regression files pass, offline readers rebuilt and stage navigation visually checked. Browser acceptance and deployment remain release gates."
     },
     {
       "id": "C08",
