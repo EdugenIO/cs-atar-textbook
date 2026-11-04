@@ -69,3 +69,24 @@ for href in re.findall(r'href="([^"]+)"',html):
  if href.startswith(('http','#')):continue
  assert (out/href.split('#')[0]).exists(),href
 print('SQL pathway: 54 downloaded references replayed; 10 databases; independent result cases; table counts; constraints; cascade/rollback; archives and readiness map passed.')
+# C08 handoffs preserve schemas and phase-specific reference destinations.
+handoffs=json.loads((ROOT/'teaching-source/sql-handoffs.json').read_text(encoding='utf-8'))
+assert html.count('class="sql-handoff"')==18
+assert html.count('Print/resource alternative: Activity ')==5
+for s in data['stages']:
+ for phase in ['model','guided','independent']:
+  assert 'id="step-'+s['id']+'-'+phase+'"' in html
+for activity in handoffs['printAlternatives'].values():
+ assert '../activities/databases-sql/teacher.html#lesson-'+activity in html
+assert '../activities/databases-sql/files/setup.sql' in html
+assert 'Worked: Device, Skill, DeviceSkill' in html
+assert 'Step 15 independent construction:' in html
+routes=json.loads((ROOT/'dist/lessons/routes.json').read_text(encoding='utf-8'))
+assert len(routes)==256
+for lesson,step in handoffs['lessons'].items():
+ route=next(r for r in routes if r['id']==lesson)
+ assert route['sqlPractice']['id']==step and not route['controlled']
+ assert route['sqlPractice']['fixture']==next(s for s in data['stages'] if s['id']==step)['fixture']
+pack=(ROOT/'dist/activities/databases-sql/index.html').read_text(encoding='utf-8')
+assert pack.count('This activity uses the Member/Loan schema.')==6
+print('C08: 18 database handoffs, 54 phase anchors, 19 lesson links and six distinct-schema print activities passed.')

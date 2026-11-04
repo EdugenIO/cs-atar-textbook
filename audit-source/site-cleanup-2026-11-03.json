@@ -87,10 +87,12 @@
       "id": "C08",
       "priority": "P2",
       "title": "Make SQL theory and SQL practice feel connected",
-      "status": "Proposed; unimplemented",
+      "status": "Complete",
       "evidence": "**Confirmed parallel pathways:** database/SQL chapters, the six-activity database pack and the sequenced `sql/` pathway each contain explanations and tasks. They have different purposes and, in places, different datasets. Earlier journey repairs explicitly identify the Member/Loan activity schema and distinguish it from chapter examples.",
       "action": "keep chapter concepts and the executable SQL pathway, but make one lesson-level handoff name the exact activity, database, setup method and matching answer. Present the activity pack as a print/resource option within that route. Do not merge unrelated schemas or SQL files merely to reduce file count.",
-      "completeWhen": "a beginner can identify which database and table names a task uses, the expected prerequisites and the correct key without comparing three hubs."
+      "completeWhen": "a beginner can identify which database and table names a task uses, the expected prerequisites and the correct key without comparing three hubs.",
+      "completedDate": "2026-11-04",
+      "verification": "18 step-level handoffs name tables, base/changed fixtures, direct database/setup downloads, prerequisites and phase-matched keys. 19 lesson cards and SQL chapters link to exact steps; six print activities retain their separate Member/Loan schema and matching answers. 54 SQL references replayed against 10 databases; 36 local regression files pass. Browser acceptance and deployment remain publication gates."
     },
     {
       "id": "C09",

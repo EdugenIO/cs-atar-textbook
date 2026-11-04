@@ -1,0 +1,37 @@
+{
+  "lessons": {
+    "u2-l13": "01",
+    "u2-l14": "02",
+    "u2-l15": "02",
+    "u2-l16": "02",
+    "u2-l17": "03",
+    "u2-l18": "03",
+    "u2-l19": "04",
+    "u2-l20": "03",
+    "u2-l21": "05",
+    "u2-l22": "06",
+    "u2-l23": "07",
+    "u4-l5": "09",
+    "u4-l6": "09",
+    "u4-l7": "10",
+    "u4-l8": "17",
+    "u4-l9": "11",
+    "u4-l10": "09",
+    "u4-l11": "10",
+    "u4-l12": "16"
+  },
+  "printAlternatives": {
+    "01": "02",
+    "02": "03",
+    "03": "04",
+    "07": "06",
+    "17": "05"
+  },
+  "fixtures": {
+    "y11": "Borrower, Category, Equipment, Loan",
+    "y12": "Instructor, Workshop, Session, Member, Booking, Attendance",
+    "durations": "Duration",
+    "staging": "Staging, Member",
+    "scratch": "Empty database; create only the tables requested by the task"
+  }
+}
