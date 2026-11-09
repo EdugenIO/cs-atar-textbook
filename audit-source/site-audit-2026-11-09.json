@@ -106,7 +106,9 @@
       "action": "Choose and label the purpose of each slot: teaching clinic, independent diagnostic, timed formative practice, or school-issued assessment. If an independent attempt is intended, use different worked values and reveal feedback after the attempt. Keep public practice distinct from school conditions.",
       "completeWhen": "Planner, slides, notes and question/answer reveal order agree. Prior exposure is acknowledged; supported scores are not presented as fresh independent evidence. Preserve the good Week 7 teacher-issued-task briefing.",
       "owner": "Course teacher",
-      "status": "Open"
+      "status": "Complete",
+      "completedDate": "2026-11-09",
+      "verification": "Three editable decks and all 24 final slides checked. School-issued task conditions retained; questions-only 5-minute reading and 40+15-minute working windows precede preserved originals and feedback. Prior exposure, assistance, actual timing and changed retries recorded separately. Planner, routes, notes and bundle aligned. Publication checks remain a release gate; classroom timings and independent teacher moderation remain pending."
     },
     {
       "id": "S07",

@@ -437,13 +437,13 @@ For a library client accessing a remote catalogue, trace client→AP/switch→ro
 
 **If not yet secure:** If remote traffic skips the router, mark the network boundary on the diagram.
 
-### Week 14 · Lesson 3 — Assess: teacher-selected theory questions under suitable conditions
+### Week 14 · Lesson 3 — School-issued theory task and conditions
 
-After the allocated theory task is collected, identify one question where the command required an explanation rather than a label.
+After collection and when feedback is released, identify one response needing a causal explanation rather than a label.
 
-**Expected reasoning:** Student cites their own response and the missing or present causal link; issued task conditions remain unchanged.
+**Expected reasoning:** Use the submitted original and released feedback; any later response is review, not an amendment to the task.
 
-**If not yet secure:** If only a definition is repeated, connect the concept to the question's scenario after collection.
+**If not yet secure:** If feedback is not released, defer question-specific discussion and follow school instructions.
 
 ### Week 14 · Lesson 4 — Respond: correct misconceptions and plan week 15 recovery
 
@@ -485,21 +485,21 @@ Solve a fresh boundary case for one programming and one networking weakness; rec
 
 **If not yet secure:** If plan says only 'revise everything', choose one observable skill per weakness.
 
-### Week 16 · Lesson 1 — Reading and first paper attempt
+### Week 16 · Lesson 1 — Questions-only timed practice: first session
 
-Before the practice paper, state its scope and choose a time budget; predict one trace without running code.
+With the attempt paused and key closed, record scope, actual time, prior exposure and any support; preserve the original for continuation.
 
-**Expected reasoning:** Distinguishes local practice from official exam; trace has ordered state changes and a planned checking allowance.
+**Expected reasoning:** Questions-only original preserved; no answers or hints discussed; prior-seen or helped work is labelled repeat/supported.
 
-**If not yet secure:** If an answer is inferred from running code, redo a changed trace on paper first.
+**If not yet secure:** If the key was opened, record exposure and use a changed version or label the continuation accordingly.
 
-### Week 16 · Lesson 2 — Finish the attempt, then self-mark with explanations
+### Week 16 · Lesson 2 — Finish and preserve the attempt, then review
 
-Compare one original response with its explanation and classify the error as content, interpretation, tracing or time.
+After the attempt is closed, explain one original error, then close the key and trace [4,9,9,-1] independently.
 
-**Expected reasoning:** Original remains visible; classification is supported by the mismatch and a specific repair.
+**Expected reasoning:** Original and correction remain separate; changed retry gives index 1, maximum 9 and sum 21; empty input checked before element zero.
 
-**If not yet secure:** If rewritten answers replace originals, preserve both to show the learning change.
+**If not yet secure:** If the worked answer is copied, explain the rule and use different values for a separately labelled retry.
 
 ### Week 16 · Lesson 3 — Fresh questions and teacher feedback on weak areas
 

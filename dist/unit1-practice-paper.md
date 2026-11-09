@@ -2,6 +2,8 @@
 
 Edition 0.5, 13 October 2026. Classroom draft. Suggested timing: 5 minutes reading + 55 working. This is a revision sample, not an official examination. Use written Python/pseudocode; attempt without answers. Teacher determines local conditions.
 
+Delivery note: Week 16 uses questions only before feedback. Suggested split: 5 minutes reading + 40 working minutes in Lesson 1, then 15 working minutes in Lesson 2 before stopping and preserving the original. This is not a continuous formal examination. Record actual timing, prior exposure and support in unit1-practice-record.md. Prior-seen questions are repeat practice; helped work is supported. Open explained answers only after the attempt is closed.
+
 ## Q1
 
 Character C has decimal code point 67. Write its binary and hexadecimal values, then explain whether a code point always occupies one byte.

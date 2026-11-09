@@ -216,8 +216,8 @@ chapters.push(...[
     "task": "Try the practice paper, then check the explanations and correct your mistakes. Choose three weak areas and try changed examples. Bring one question you can now explain and one you still want help with.",
     "solution": "Keep your first attempt, point-by-point corrections, a reason for each significant error and independently completed transfer questions. Teacher review is needed for diagrams and equivalent answers.",
     "lessons": [
-      "Lesson 1: reading and first paper attempt; continue in lesson 2 if needed.",
-      "Lesson 2: finish the attempt, then check using the explanations.",
+      "Lesson 1: questions-only timed formative practice; record exposure, use 5 minutes reading and 40 working minutes, then preserve for continuation.",
+      "Lesson 2: 15-minute independent continuation; stop and preserve originals before explanations, supported corrections and a separate changed retry.",
       "Lesson 3: fresh questions and teacher feedback on weak areas.",
       "Lesson 4: final retrieval, diagram/trace checks and a personal exam plan. Weeks 17–18 remain blocked for exams."
     ],

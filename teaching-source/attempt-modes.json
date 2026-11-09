@@ -1,0 +1,35 @@
+{
+  "u1-l55": {
+    "mode": "School-issued theory task",
+    "controlled": true,
+    "conditions": "The teacher supplies the task, duration, permitted resources, assistance, collection and feedback-release rules. This public deck is a briefing, not an assessment paper or marking key. Keep any supported clinic separate; it does not replace the school task.",
+    "plan": {
+      "kind": "School-issued assessment",
+      "title": "School-issued theory task and conditions",
+      "activity": "Use the teacher-issued theory task under its approved local conditions. Show only the briefing during the attempt; collect work before any released discussion. Public scenario practice is a separate supported clinic, not a replacement assessment.",
+      "objective": "Apply taught network reasoning under the school-issued task conditions."
+    }
+  },
+  "u1-l61": {
+    "mode": "Timed formative practice: attempt",
+    "controlled": true,
+    "conditions": "Public revision sample, not a secure assessment or grade predictor. Record prior exposure. Use questions only: no answers, examples, code execution or partner help during the independent window. If support is used, stop the independent clock and label that work supported. The two-session suggestion is 5 minutes reading plus 40 + 15 working minutes; record actual time and any interruption.",
+    "plan": {
+      "kind": "Timed formative practice",
+      "title": "Questions-only timed practice: first session",
+      "activity": "Brief conditions and record prior exposure; use unit1-practice-paper.md questions only. Allow 5 minutes reading and 40 working minutes in this session. Preserve work without feedback for the remaining 15 working minutes in Lesson 2. Prior-seen questions are repeat practice, not fresh evidence.",
+      "objective": "Attempt the public Unit 1 revision sample independently before seeing question-specific explanations."
+    }
+  },
+  "u1-l62": {
+    "mode": "Timed formative practice, then feedback",
+    "controlled": true,
+    "conditions": "Continue the preserved attempt for 15 working minutes before any question-specific model or key. Stop and preserve the original responses before revealing feedback. Record actual combined time and prior exposure. Later corrections are supported; a changed retry is separate evidence. This split classroom activity is not a continuous formal examination.",
+    "plan": {
+      "kind": "Timed practice then feedback",
+      "title": "Finish and preserve the attempt, then review",
+      "activity": "Resume questions only for 15 working minutes; stop and preserve all original responses. Then release explanations, identify causes, write supported corrections and try a changed example with the key closed. Do not finish the original as an independent attempt after feedback.",
+      "objective": "Separate the timed original response from explained correction and a changed independent retry."
+    }
+  }
+}

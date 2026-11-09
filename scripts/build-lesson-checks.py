@@ -14,6 +14,7 @@ with (ROOT/'teaching-source/exit-checks.tsv').open(encoding='utf-8',newline='') 
     records = list(csv.DictReader(stream,delimiter='\t'))
 checks = {(int(r['Unit']),int(r['Week']),int(r['Lesson'])):r for r in records}
 refinements = json.loads((ROOT/'teaching-source/lesson-reading-sections.json').read_text(encoding='utf-8'))['overrides']
+modes = json.loads((ROOT/'teaching-source/attempt-modes.json').read_text(encoding='utf-8'))
 assert len(checks) == len(records) == 256
 rows = [['Unit','Year','Week','Lesson','Semester lesson','Type','Objective','Class activity','Check','Chapter','Project requirements','Project workbook','Project pack','Pygame practice','Pygame teaching pack','Expected reasoning','Follow-up if not yet secure']]
 notes = ['# Lesson exit checks — teacher guide','',
@@ -28,6 +29,10 @@ for unit in schedule:
             refinement = refinements.get(f"u{unit['unit']}-l{lesson['number']}", {})
             if refinement.get('objective'):
                 lesson['objective'] = refinement['objective']
+            mode = modes.get(f"u{unit['unit']}-l{lesson['number']}")
+            if mode:
+                lesson.update(mode['plan'])
+                lesson.update(attemptMode=mode['mode'],attemptConditions=mode['conditions'],attemptControlled=mode['controlled'])
             rows.append([unit['unit'],unit['year'],week['week'],lesson['lesson'],lesson['number'],lesson['kind'],lesson['objective'],lesson['activity'],lesson['check'],'https://edugenio.github.io/cs-atar-textbook/#'+lesson['chapter'],lesson.get('gameContract',''),lesson.get('workbook') or '',lesson.get('gamePack',''),lesson.get('pygameBridge',''),'pygame/pygame-teaching-pack.zip' if lesson.get('pygamePractice') else '',lesson['checkExpected'],lesson['checkReteach']])
             notes += [f"### Week {week['week']} · Lesson {lesson['lesson']} — {lesson['title']}",'',lesson['check'],'',
                       '**Expected reasoning:** '+lesson['checkExpected'],'','**If not yet secure:** '+lesson['checkReteach'],'']

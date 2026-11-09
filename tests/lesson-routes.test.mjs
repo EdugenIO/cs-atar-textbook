@@ -8,7 +8,10 @@ for(const u of schedule)for(const w of u.weeks)for(const l of w.lessons){
  for(const key of ['objective','activity','check','checkExpected','checkReteach'])assert.equal(r[key],l[key]);
  const c=byId.get(r.readChapter),readIndex=c.sections.findIndex(s=>s[0]===r.read),workedIndex=c.sections.findIndex(s=>s[0]===r.worked);
  assert.ok(readIndex>=0&&workedIndex>=0&&workedIndex<=readIndex,'No forward jump: '+r.id);
- assert.ok(html.includes('id="'+r.id+'"'));assert.ok(html.includes(r.readHref));assert.ok(html.includes(r.workedHref));
+ assert.ok(html.includes('id="'+r.id+'"'));
+ const card=html.split('id="'+r.id+'"')[1].split('</article>')[0];
+ if(r.attemptMode){assert.ok(r.controlled);assert.ok(card.includes('class="notice attempt-mode"'));assert.ok(!card.includes('Study the worked walkthrough'));}
+ else {assert.ok(html.includes(r.readHref));assert.ok(html.includes(r.workedHref));}
  assert.ok(fs.readFileSync('dist/revision/index.html','utf8').includes('id="topic-'+r.chapter+'"'));
  if(r.workbook)assert.ok(fs.existsSync('dist/'+r.workbook));
  if(/assessment slot|controlled/.test(r.kind+' '+r.title))assert.ok(r.controlled);

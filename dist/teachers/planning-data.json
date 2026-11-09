@@ -1863,7 +1863,7 @@
           "week": 14,
           "lesson": 3,
           "number": 55,
-          "kind": "Independent practice"
+          "kind": "School-issued assessment"
         },
         {
           "week": 14,
@@ -2200,13 +2200,13 @@
           "week": 16,
           "lesson": 1,
           "number": 61,
-          "kind": "Teach & model"
+          "kind": "Timed formative practice"
         },
         {
           "week": 16,
           "lesson": 2,
           "number": 62,
-          "kind": "Guided practice"
+          "kind": "Timed practice then feedback"
         },
         {
           "week": 16,
@@ -2231,9 +2231,9 @@
         {
           "week": 16,
           "lesson": 1,
-          "prompt": "Before the practice paper, state its scope and choose a time budget; predict one trace without running code.",
-          "expected": "Distinguishes local practice from official exam; trace has ordered state changes and a planned checking allowance.",
-          "response": "If an answer is inferred from running code, redo a changed trace on paper first."
+          "prompt": "With the attempt paused and key closed, record scope, actual time, prior exposure and any support; preserve the original for continuation.",
+          "expected": "Questions-only original preserved; no answers or hints discussed; prior-seen or helped work is labelled repeat/supported.",
+          "response": "If the key was opened, record exposure and use a changed version or label the continuation accordingly."
         },
         {
           "week": 16,

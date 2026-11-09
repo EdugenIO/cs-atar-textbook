@@ -16,225 +16,197 @@
     {
       "id": "u1-w16-l01",
       "lesson": 1,
-      "title": "Written practice and clear reasoning",
+      "title": "Questions-only timed practice: first session",
       "chapter": "exam-preparation",
       "source": "https://edugenio.github.io/cs-atar-textbook/#exam-preparation",
-      "prepare": "Open the exam-preparation chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "prepare": "Public revision sample, not a secure assessment or grade predictor. Record prior exposure. Use questions only: no answers, examples, code execution or partner help during the independent window. If support is used, stop the independent clock and label that work supported. The two-session suggestion is 5 minutes reading plus 40 + 15 working minutes; record actual time and any interruption. For practice use unit1-practice-paper.md, unit1-practice-answers.md only after closure, and unit1-practice-record.md. For a school task use only the school-issued materials.",
       "slides": [
         {
-          "title": "Written practice and clear reasoning",
+          "title": "Questions-only timed practice",
           "body": [
             "Unit 1 · Week 16 · Lesson 1",
-            "Explain your method on an original revision sample."
+            "Public Unit 1 revision sample · first session"
           ],
+          "notes": "This is timed formative practice, not a school-issued assessment or a grade predictor. Record actual time and exposure. The public questions/answers can be accessed beforehand, so freshness is never assumed.",
           "minutes": 2,
-          "strategy": "Learning intention",
-          "notes": "Explain the goal and the expected independent outcome. Explain your method on an original revision sample. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+          "strategy": "Purpose and exposure check"
         },
         {
-          "title": "Retrieval and explanation",
+          "title": "Confirm the practice conditions",
           "body": [
-            "What do explain and trace ask you to show?",
-            "How can you predict an output before running code?"
+            "Record whether you have seen these questions or answers.",
+            "Use questions only during the independent window.",
+            "Label any helped work as supported."
           ],
+          "notes": "Use unit1-practice-record.md. If students have seen a question/model, record repeat practice or use a teacher-supplied changed version. No question-specific content is modelled in this deck. Support stops the independent clock for that work; do not combine supported and independent evidence.",
+          "minutes": 3,
+          "strategy": "Independent-attempt boundary"
+        },
+        {
+          "title": "Reading time: 5 minutes",
+          "body": [
+            "Open unit1-practice-paper.md only.",
+            "Read the instructions and plan your time.",
+            "Keep answers, examples and code execution closed."
+          ],
+          "notes": "Suggested reading allowance 5 minutes. The sample has 12 questions and suggests 55 working minutes. This split plan uses 40 working minutes today and 15 at the start of Lesson 2. Teachers may select a smaller section and record its scope/timing instead; do not imply a full paper was completed.",
           "minutes": 5,
-          "strategy": "Individual retrieval, then partner comparison",
-          "notes": "Explain links a mechanism to an outcome. Trace records changing state in order. Use the supplied task instructions and current course guidance. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+          "strategy": "Questions-only reading"
         },
         {
-          "title": "A written response plan",
-          "table": [
-            [
-              "Prompt",
-              "Useful response"
-            ],
-            [
-              "Predict",
-              "Expected output with assumptions"
-            ],
-            [
-              "Trace",
-              "Ordered variable states"
-            ],
-            [
-              "Explain",
-              "Mechanism and consequence"
-            ],
-            [
-              "Justify",
-              "Choice linked to requirements"
-            ]
-          ],
-          "minutes": 6,
-          "strategy": "Worked table and teacher explanation",
-          "notes": "Use the original Unit 1 practice paper as optional revision. It is not an official paper or a grade predictor. No marks need recording. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
-        },
-        {
-          "title": "The Q3 maximum trace",
+          "title": "Independent working time: first 20 minutes",
           "body": [
-            "Read [6, -2, 6].",
-            "Track first-maximum index, value and sum.",
-            "State what happens for empty input."
+            "Attempt the selected questions without help.",
+            "Show your reasoning and retain incomplete steps.",
+            "Keep the answer key closed."
           ],
-          "minutes": 10,
-          "strategy": "Predict, model and explain",
-          "notes": "Index 0, maximum 6 and total 10. Equality keeps the first maximum. Empty input requires checking before reading element zero. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+          "notes": "Start the independent working clock. Hold this neutral slide; do not discuss paper Q3, show a trace or reveal question-specific hints. Teacher clarifications must not solve questions; record support and interruptions.",
+          "minutes": 20,
+          "strategy": "Timed formative attempt"
         },
         {
-          "title": "Reading a compound question",
+          "title": "Independent working time: next 20 minutes",
           "body": [
-            "Underline each requested result.",
-            "Separate calculation, trace and explanation.",
-            "Predict the result before viewing the answer."
+            "Continue the same questions-only attempt.",
+            "Check your own working if time remains.",
+            "Keep corrections made now visible."
           ],
-          "minutes": 10,
-          "strategy": "Guided paired practice",
-          "notes": "Q3 requests more than a largest value. Model checking every requested part without implying a marking allocation. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+          "notes": "Continue to 40 working minutes in this session. This slide is a time cue, not a discussion break. No worked solution or compound-question model is shown before the attempt is preserved.",
+          "minutes": 20,
+          "strategy": "Timed formative continuation"
         },
         {
-          "title": "Independent practice",
+          "title": "Pause and preserve the original",
           "body": [
-            "Attempt a chosen section of the original practice paper.",
-            "Show reasoning and use the chapter examples if needed.",
-            "Keep unanswered steps visible for the next lesson."
+            "Save or hand in your attempted version.",
+            "Record actual working time and unfinished questions.",
+            "Keep the key closed until Lesson 2’s attempt ends."
           ],
-          "minutes": 12,
-          "strategy": "Independent application with optional support",
-          "notes": "Use questions-only file first and explained answers afterwards. Timing is optional and should fit class needs. No scoring or submission requirement. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+          "notes": "Pause the clock. Preserve the unedited response and note the stopping point. Follow the teacher’s storage/collection arrangement; do not complete questions at home before the continuation. A split session is not a continuous examination.",
+          "minutes": 2,
+          "strategy": "Attempt preservation"
         },
         {
-          "title": "A choice to explain",
+          "title": "Record exposure and support",
           "body": [
-            "A maximum value is correct but its position is missing.",
-            "A: Every part of a position question is answered.",
-            "B: The requested index still needs explaining."
+            "Record help, interruptions or prior question exposure.",
+            "Separate supported work from independent work."
           ],
-          "minutes": 5,
-          "strategy": "Whole-class response and justification",
-          "notes": "B. Answer the actual requirement. A value and its location are different outputs. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+          "notes": "The record is a learning aid, not a score or authentication certificate. Prior-seen answers remain repeat practice even when the current window had no help. If a learner opens the key between sessions, record that exposure before continuing.",
+          "minutes": 2,
+          "strategy": "Evidence labelling"
         },
         {
-          "title": "Exit explanation",
+          "title": "Next lesson: continue before feedback",
           "body": [
-            "Identify one response you can explain confidently.",
-            "Name one step you want to revisit."
+            "The next session starts with 15 working minutes.",
+            "No question-specific feedback is released yet."
           ],
-          "minutes": 5,
-          "strategy": "Individual reflection and fresh explanation",
-          "notes": "Use the specific question and missing reasoning step to plan feedback, not a numeric ranking. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+          "notes": "Do not run an answer discussion as an exit activity. Keep uncertain steps for the continuation and later feedback. School conditions supersede this suggested practice arrangement.",
+          "minutes": 1,
+          "strategy": "Continuation briefing"
         }
-      ]
+      ],
+      "attemptMode": "Timed formative practice: attempt",
+      "attemptConditions": "Public revision sample, not a secure assessment or grade predictor. Record prior exposure. Use questions only: no answers, examples, code execution or partner help during the independent window. If support is used, stop the independent clock and label that work supported. The two-session suggestion is 5 minutes reading plus 40 + 15 working minutes; record actual time and any interruption."
     },
     {
       "id": "u1-w16-l02",
       "lesson": 2,
-      "title": "Explained answers and corrections",
+      "title": "Finish and preserve the attempt, then review",
       "chapter": "exam-preparation",
       "source": "https://edugenio.github.io/cs-atar-textbook/#exam-preparation",
-      "prepare": "Open the exam-preparation chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "prepare": "Continue the preserved attempt for 15 working minutes before any question-specific model or key. Stop and preserve the original responses before revealing feedback. Record actual combined time and prior exposure. Later corrections are supported; a changed retry is separate evidence. This split classroom activity is not a continuous formal examination. For practice use unit1-practice-paper.md, unit1-practice-answers.md only after closure, and unit1-practice-record.md. For a school task use only the school-issued materials.",
       "slides": [
         {
-          "title": "Explained answers and corrections",
+          "title": "Finish the attempt before feedback",
           "body": [
             "Unit 1 · Week 16 · Lesson 2",
-            "Use explanations to identify why a response needs repair."
+            "Continue the preserved response with the key closed."
           ],
+          "notes": "Check any exposure or help since Lesson 1. If the key has been viewed, label affected work repeat/supported; do not present it as a fresh continuation. This is public formative practice.",
           "minutes": 2,
-          "strategy": "Learning intention",
-          "notes": "Explain the goal and the expected independent outcome. Use explanations to identify why a response needs repair. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+          "strategy": "Continuation and exposure check"
         },
         {
-          "title": "Retrieval and explanation",
+          "title": "Independent continuation: 15 minutes",
           "body": [
-            "How can a correct result have an unclear explanation?",
-            "Why should you preserve your first attempt?"
+            "Resume the chosen questions only.",
+            "Do not open answers or worked examples.",
+            "Stop when the teacher ends the window."
           ],
+          "notes": "Suggested remaining working allowance 15 minutes, giving 55 working minutes across the two sessions after 5 reading minutes. Record actual duration; if a smaller section was selected, record that scope. No answer demonstration precedes this window.",
+          "minutes": 15,
+          "strategy": "Timed formative continuation"
+        },
+        {
+          "title": "Stop and preserve all original responses",
+          "body": [
+            "Stop the clock and preserve the attempted version.",
+            "Record unanswered parts and actual combined time.",
+            "The independent attempt is now closed."
+          ],
+          "notes": "This is the reveal boundary. Before advancing, every learner must preserve the original; if some are still attempting, hold here and keep examples/keys closed. A teacher who extends time must record it before feedback. Work completed after seeing feedback is supported correction, not independent completion.",
+          "minutes": 3,
+          "strategy": "Attempt closure before reveal"
+        },
+        {
+          "title": "Feedback phase: compare, do not overwrite",
+          "body": [
+            "Now open unit1-practice-answers.md.",
+            "Keep originals alongside explained corrections.",
+            "Identify the first mismatch and its cause."
+          ],
+          "notes": "Feedback starts only after closure. The reference key is public and allows equivalent valid reasoning; diagrams require teacher judgement. Record any self-check as practice evidence, not an official mark or grade prediction.",
           "minutes": 5,
-          "strategy": "Individual retrieval, then partner comparison",
-          "notes": "A first attempt shows the original reasoning. A correction should identify what changed and why, not simply replace it with the answer. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+          "strategy": "Post-attempt feedback"
         },
         {
-          "title": "A correction record",
-          "table": [
-            [
-              "Record",
-              "Purpose"
-            ],
-            [
-              "Original reasoning",
-              "Shows the starting misconception"
-            ],
-            [
-              "Explained comparison",
-              "Locates the mistaken step"
-            ],
-            [
-              "Corrected rule",
-              "States the repair"
-            ],
-            [
-              "Fresh example",
-              "Checks independent transfer"
-            ]
-          ],
-          "minutes": 6,
-          "strategy": "Worked table and teacher explanation",
-          "notes": "Use the public explained answers. Equivalent valid reasoning is acceptable. Avoid scores and grade predictions. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
-        },
-        {
-          "title": "The boundary at 50",
+          "title": "Post-attempt Q3 trace",
           "body": [
-            "The rule gives free delivery for totals at least 50.",
-            "Compare > 50 with >= 50.",
-            "Test 49.99, 50 and 50.01."
+            "For [6, -2, 6], the first maximum stays at index 0.",
+            "The maximum is 6 and the total is 10.",
+            "Check for empty input before reading element zero."
           ],
+          "notes": "This same-paper worked example is intentionally after the closed attempt. At i=1 the best remains 0; at i=2 equality does not replace the first maximum. Any new original-paper response written now is supported. Do not reuse it as fresh diagnostic evidence.",
           "minutes": 10,
-          "strategy": "Predict, model and explain",
-          "notes": "Correct charges are 5, 0, 0. The strict greater-than version fails only the exact-boundary case among these three. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+          "strategy": "Post-attempt worked explanation"
         },
         {
-          "title": "A response with missing evidence",
+          "title": "Post-attempt Q9 explanation",
           "body": [
-            "Q9 asks for a layer and its role or example.",
-            "Compare a name-only response with a fuller explanation."
+            "Compare each layer name with its role or example.",
+            "A name-only response may miss part of the request."
           ],
-          "minutes": 10,
-          "strategy": "Guided paired practice",
-          "notes": "A suitable example pairs Application with a web protocol or service role. A label alone may leave part of the prompt unanswered. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+          "notes": "After closure, pair Application with HTTPS/web service, Transport with TCP, Internet with IP and Network with Ethernet/Wi-Fi. Accept coherent alternatives. Keep the explanation separate from the original response and identify whether the issue was knowledge or interpreting the prompt.",
+          "minutes": 8,
+          "strategy": "Explained comparison after closure"
         },
         {
-          "title": "Independent practice",
+          "title": "Changed retry: close the key",
           "body": [
-            "Finish the chosen practice questions.",
-            "Compare with the explained answers.",
-            "Correct two reasoning gaps and try changed examples."
+            "Trace the first maximum and total for [4, 9, 9, -1].",
+            "State the empty-input precaution in your own words.",
+            "Record this retry separately from the paper."
           ],
-          "minutes": 12,
-          "strategy": "Independent application with optional support",
-          "notes": "Use teacher feedback for course diagram symbols and coherent alternative designs. Self-checking cannot certify every drawing convention. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+          "notes": "Key closed: first-maximum index 1, maximum 9, total 21. Changed values provide a new attempt but immediate transfer after teaching is not proof of durable mastery. If support is needed, label it and schedule another later changed retry.",
+          "minutes": 7,
+          "strategy": "Changed independent retry"
         },
         {
-          "title": "A choice to explain",
+          "title": "Keep the evidence phases separate",
           "body": [
-            "A learner copies the full model answer.",
-            "A: A changed example can check understanding.",
-            "B: Copying alone proves the skill is secure."
+            "Original attempt: actual time, exposure and support.",
+            "Correction: explain the error and repaired rule.",
+            "Retry: show changed reasoning and a next step."
           ],
+          "notes": "Use unit1-practice-record.md. Do not finish original questions after explanations and call that independent. Schedule a delayed changed retry in the existing revision/support time; no new graded task or homework requirement is added.",
           "minutes": 5,
-          "strategy": "Whole-class response and justification",
-          "notes": "A. Ask the learner to explain the rule in their own words before trying fresh data. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
-        },
-        {
-          "title": "Exit explanation",
-          "body": [
-            "Explain one original error and the corrected rule.",
-            "Show a fresh example that uses the rule."
-          ],
-          "minutes": 5,
-          "strategy": "Individual reflection and fresh explanation",
-          "notes": "A good response identifies the cause and demonstrates the repair with changed values or conditions. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#exam-preparation. Use the current chapter and its linked resources."
+          "strategy": "Evidence review and next teaching step"
         }
-      ]
+      ],
+      "attemptMode": "Timed formative practice, then feedback",
+      "attemptConditions": "Continue the preserved attempt for 15 working minutes before any question-specific model or key. Stop and preserve the original responses before revealing feedback. Record actual combined time and prior exposure. Later corrections are supported; a changed retry is separate evidence. This split classroom activity is not a continuous formal examination."
     },
     {
       "id": "u1-w16-l03",
