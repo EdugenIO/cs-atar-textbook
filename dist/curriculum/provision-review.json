@@ -3443,15 +3443,15 @@
         "kind": "file",
         "url": "../database-project-workbook.md",
         "label": "dist/database-project-workbook.md Q1–12; dist/sql-workbook.md",
-        "sha256": "ded0439a3b43add6bb79c7eba3e5cd6be7dcde1ee5727941113ba823d15f77d2",
+        "sha256": "74f9669d53eb8b716bfdaf23e8ecc700f27ad6570491f6bda0b7f7528eb9689a",
         "excerpt": "# Database solution — practice workbook ## Core and optional scope Core Year 11 practice: taught key joins, whole-result COUNT/SUM/AVG/MIN/MAX, schema/constraints and controlled da"
       },
       "feedback": {
         "kind": "file",
         "url": "../database-project-answers.md",
         "label": "database-project-answers.md",
-        "sha256": "b7efa1f85a944d557909f5bb0d568ce5c68605155b80341c7e5a37ad16a3d017",
-        "excerpt": "# Database solution — explained answers and teacher checkpoints 1. L002 → B002 Learner B → E02 Tripod → C02 Support. Match Loan.BorrowerID to Borrower.BorrowerID, Loan.EquipmentID "
+        "sha256": "7bc1e0d629ecbd5e094ede864a74582bd90f00a19adbfb77b455709e2142c8ce",
+        "excerpt": "# Database solution — explained answers and teacher checkpoints ## 1. Key trace L002 → B002 Learner B → E02 Tripod → C02 Support. Match Loan.BorrowerID to Borrower.BorrowerID, Loan"
       },
       "otherTeaching": [
         {

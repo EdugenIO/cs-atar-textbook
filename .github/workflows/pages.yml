@@ -62,6 +62,7 @@ jobs:
           python tests/pygame-project-slides.test.py
           python tests/archived-slides.test.py
           python tests/sql-lesson-scope.test.py
+          python tests/sql-slide-handoffs.test.py
           python tests/teaching-depth-examples.test.py
       - name: Version runtime assets
         run: node scripts/prepare-pages.mjs

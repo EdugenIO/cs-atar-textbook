@@ -88,7 +88,9 @@
       "action": "For each SQL lesson select one primary task/schema and name its exact file, table/field contract, preparation, workbook question and matching key. Put alternative datasets in an explicit teacher choice. Include direct clickable setup/task/key links in notes and slides where useful.",
       "completeWhen": "Following the lesson, slides and answer key never requires guessing between sql-starter, database-project, pathway and print-pack schemas. All shown queries execute against the named file and changed-data expectations stay separate.",
       "owner": "SQL/slide editor",
-      "status": "Open"
+      "status": "Complete",
+      "completedDate": "2026-11-09",
+      "verification": "Eight SQL decks carry named primary file/task and native clickable setup/workbook/key links; all 64 speaker notes preserve exact schema and matching references. Shared handoff data drives notes and lesson routes, with pathway/print choices explicitly alternative and changed data separate. Q1b category-history task/key added for the existing lesson. Setup scripts replayed against named fixtures, shown SQL checked and all 64 rendered slides inspected. Release/browser/deployment checks gate publication."
     },
     {
       "id": "S06",

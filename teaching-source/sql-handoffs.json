@@ -33,5 +33,307 @@
     "durations": "Duration",
     "staging": "Staging, Member",
     "scratch": "Empty database; create only the tables requested by the task"
+  },
+  "deckLessons": {
+    "u2-w04-l01": {
+      "route": "u2-l13",
+      "database": "sql-starter.sqlite",
+      "setup": "sql-setup.sql",
+      "workbook": "sql-workbook.md",
+      "task": "Q1",
+      "prompt": "List borrower IDs and labels, sorted by ID.",
+      "answers": "sql-answers.md",
+      "answerSections": "Borrowers",
+      "queries": "sql-worked-queries.sql",
+      "results": "sql-expected-results.json",
+      "schema": {
+        "Borrower": [
+          "BorrowerID",
+          "BorrowerLabel"
+        ],
+        "Category": [
+          "CategoryID",
+          "CategoryName"
+        ],
+        "Equipment": [
+          "EquipmentID",
+          "EquipmentDescription",
+          "CategoryID"
+        ],
+        "Loan": [
+          "LoanID",
+          "BorrowerID",
+          "EquipmentID",
+          "DueDate",
+          "Returned"
+        ]
+      },
+      "prepare": "Open a fresh working copy of the named database OR run its setup once in a new empty database. Run one SELECT at a time. Use the original base records for these slide predictions; do not substitute pathway changed data.",
+      "alternativeStep": "01",
+      "alternativeNote": "Teacher choice only: the SQL pathway uses its own named base/changed fixtures and task/key. The print pack uses Member/Loan. Switch the complete task, setup and key together; never apply these slide predictions to an alternative schema."
+    },
+    "u2-w04-l02": {
+      "route": "u2-l14",
+      "database": "sql-starter.sqlite",
+      "setup": "sql-setup.sql",
+      "workbook": "sql-workbook.md",
+      "task": "Q2",
+      "prompt": "Filter CategoryID C03 and sort equipment IDs.",
+      "answers": "sql-answers.md",
+      "answerSections": "Audio items",
+      "queries": "sql-worked-queries.sql",
+      "results": "sql-expected-results.json",
+      "schema": {
+        "Borrower": [
+          "BorrowerID",
+          "BorrowerLabel"
+        ],
+        "Category": [
+          "CategoryID",
+          "CategoryName"
+        ],
+        "Equipment": [
+          "EquipmentID",
+          "EquipmentDescription",
+          "CategoryID"
+        ],
+        "Loan": [
+          "LoanID",
+          "BorrowerID",
+          "EquipmentID",
+          "DueDate",
+          "Returned"
+        ]
+      },
+      "prepare": "Open a fresh working copy of the named database OR run its setup once in a new empty database. Run one SELECT at a time. Use the original base records for these slide predictions; do not substitute pathway changed data.",
+      "alternativeStep": "02",
+      "alternativeNote": "Teacher choice only: the SQL pathway uses its own named base/changed fixtures and task/key. The print pack uses Member/Loan. Switch the complete task, setup and key together; never apply these slide predictions to an alternative schema."
+    },
+    "u2-w04-l03": {
+      "route": "u2-l15",
+      "database": "sql-starter.sqlite",
+      "setup": "sql-setup.sql",
+      "workbook": "sql-workbook.md",
+      "task": "Q3; supporting checks Q5/Q8/Q10",
+      "prompt": "Active LoanID/dates: DueDate DESC, LoanID ASC.",
+      "answers": "sql-answers.md",
+      "answerSections": "Active newest first",
+      "queries": "sql-worked-queries.sql",
+      "results": "sql-expected-results.json",
+      "schema": {
+        "Borrower": [
+          "BorrowerID",
+          "BorrowerLabel"
+        ],
+        "Category": [
+          "CategoryID",
+          "CategoryName"
+        ],
+        "Equipment": [
+          "EquipmentID",
+          "EquipmentDescription",
+          "CategoryID"
+        ],
+        "Loan": [
+          "LoanID",
+          "BorrowerID",
+          "EquipmentID",
+          "DueDate",
+          "Returned"
+        ]
+      },
+      "prepare": "Open a fresh working copy of the named database OR run its setup once in a new empty database. Run one SELECT at a time. Use the original base records for these slide predictions; do not substitute pathway changed data.",
+      "alternativeStep": "02",
+      "alternativeNote": "Teacher choice only: the SQL pathway uses its own named base/changed fixtures and task/key. The print pack uses Member/Loan. Switch the complete task, setup and key together; never apply these slide predictions to an alternative schema."
+    },
+    "u2-w04-l04": {
+      "route": "u2-l16",
+      "database": "sql-starter.sqlite",
+      "setup": "sql-setup.sql",
+      "workbook": "sql-workbook.md",
+      "task": "Q1–4; checks Q6–10",
+      "prompt": "Independent reports, then duplicate/empty/boundary checks.",
+      "answers": "sql-answers.md",
+      "answerSections": "Borrowers / Audio items / Active newest first / Active B002",
+      "queries": "sql-worked-queries.sql",
+      "results": "sql-expected-results.json",
+      "schema": {
+        "Borrower": [
+          "BorrowerID",
+          "BorrowerLabel"
+        ],
+        "Category": [
+          "CategoryID",
+          "CategoryName"
+        ],
+        "Equipment": [
+          "EquipmentID",
+          "EquipmentDescription",
+          "CategoryID"
+        ],
+        "Loan": [
+          "LoanID",
+          "BorrowerID",
+          "EquipmentID",
+          "DueDate",
+          "Returned"
+        ]
+      },
+      "prepare": "Open a fresh working copy of the named database OR run its setup once in a new empty database. Run one SELECT at a time. Use the original base records for these slide predictions; do not substitute pathway changed data.",
+      "alternativeStep": "02",
+      "alternativeNote": "Teacher choice only: the SQL pathway uses its own named base/changed fixtures and task/key. The print pack uses Member/Loan. Switch the complete task, setup and key together; never apply these slide predictions to an alternative schema."
+    },
+    "u2-w05-l01": {
+      "route": "u2-l17",
+      "database": "database-project.sqlite",
+      "setup": "database-project-setup.sql",
+      "workbook": "database-project-workbook.md",
+      "task": "Q1",
+      "prompt": "Trace L002 through borrower and equipment keys.",
+      "answers": "database-project-answers.md",
+      "answerSections": "1. Key trace",
+      "queries": "database-project-reports.sql",
+      "results": "database-project-results.json",
+      "schema": {
+        "Borrower": [
+          "BorrowerID",
+          "BorrowerLabel"
+        ],
+        "Category": [
+          "CategoryID",
+          "CategoryName"
+        ],
+        "Equipment": [
+          "EquipmentID",
+          "EquipmentDescription",
+          "CategoryID",
+          "ReplacementCost"
+        ],
+        "Loan": [
+          "LoanID",
+          "BorrowerID",
+          "EquipmentID",
+          "DueDate",
+          "Returned"
+        ]
+      },
+      "prepare": "Open a fresh working copy of the named database OR run its setup once in a new empty database. Run one SELECT at a time. Use the original base records for these slide predictions; do not substitute pathway changed data.",
+      "alternativeStep": "03",
+      "alternativeNote": "Teacher choice only: the SQL pathway uses its own named base/changed fixtures and task/key. The print pack uses Member/Loan. Switch the complete task, setup and key together; never apply these slide predictions to an alternative schema."
+    },
+    "u2-w05-l02": {
+      "route": "u2-l18",
+      "database": "database-project.sqlite",
+      "setup": "database-project-setup.sql",
+      "workbook": "database-project-workbook.md",
+      "task": "Q1b",
+      "prompt": "Trace L003 and predict all six category-history rows.",
+      "answers": "database-project-answers.md",
+      "answerSections": "1b. Category-history report",
+      "queries": "database-project-reports.sql",
+      "results": "database-project-results.json",
+      "schema": {
+        "Borrower": [
+          "BorrowerID",
+          "BorrowerLabel"
+        ],
+        "Category": [
+          "CategoryID",
+          "CategoryName"
+        ],
+        "Equipment": [
+          "EquipmentID",
+          "EquipmentDescription",
+          "CategoryID",
+          "ReplacementCost"
+        ],
+        "Loan": [
+          "LoanID",
+          "BorrowerID",
+          "EquipmentID",
+          "DueDate",
+          "Returned"
+        ]
+      },
+      "prepare": "Open a fresh working copy of the named database OR run its setup once in a new empty database. Run one SELECT at a time. Use the original base records for these slide predictions; do not substitute pathway changed data.",
+      "alternativeStep": "03",
+      "alternativeNote": "Teacher choice only: the SQL pathway uses its own named base/changed fixtures and task/key. The print pack uses Member/Loan. Switch the complete task, setup and key together; never apply these slide predictions to an alternative schema."
+    },
+    "u2-w05-l03": {
+      "route": "u2-l19",
+      "database": "database-project.sqlite",
+      "setup": "database-project-setup.sql",
+      "workbook": "database-project-workbook.md",
+      "task": "Q3 and Q10",
+      "prompt": "Inventory aggregates; predict empty C99 input.",
+      "answers": "database-project-answers.md",
+      "answerSections": "3. Inventory summary / 10. Empty aggregate input",
+      "queries": "database-project-reports.sql",
+      "results": "database-project-results.json",
+      "schema": {
+        "Borrower": [
+          "BorrowerID",
+          "BorrowerLabel"
+        ],
+        "Category": [
+          "CategoryID",
+          "CategoryName"
+        ],
+        "Equipment": [
+          "EquipmentID",
+          "EquipmentDescription",
+          "CategoryID",
+          "ReplacementCost"
+        ],
+        "Loan": [
+          "LoanID",
+          "BorrowerID",
+          "EquipmentID",
+          "DueDate",
+          "Returned"
+        ]
+      },
+      "prepare": "Open a fresh working copy of the named database OR run its setup once in a new empty database. Run one SELECT at a time. Use the original base records for these slide predictions; do not substitute pathway changed data.",
+      "alternativeStep": "04",
+      "alternativeNote": "Teacher choice only: the SQL pathway uses its own named base/changed fixtures and task/key. The print pack uses Member/Loan. Switch the complete task, setup and key together; never apply these slide predictions to an alternative schema."
+    },
+    "u2-w05-l04": {
+      "route": "u2-l20",
+      "database": "database-project.sqlite",
+      "setup": "database-project-setup.sql",
+      "workbook": "database-project-workbook.md",
+      "task": "Core Q2a/Q3; optional Q2b/Q4",
+      "prompt": "Complete the core before optional report extensions.",
+      "answers": "database-project-answers.md",
+      "answerSections": "2a. Core two-table report / 3. Inventory summary",
+      "queries": "database-project-reports.sql",
+      "results": "database-project-results.json",
+      "schema": {
+        "Borrower": [
+          "BorrowerID",
+          "BorrowerLabel"
+        ],
+        "Category": [
+          "CategoryID",
+          "CategoryName"
+        ],
+        "Equipment": [
+          "EquipmentID",
+          "EquipmentDescription",
+          "CategoryID",
+          "ReplacementCost"
+        ],
+        "Loan": [
+          "LoanID",
+          "BorrowerID",
+          "EquipmentID",
+          "DueDate",
+          "Returned"
+        ]
+      },
+      "prepare": "Open a fresh working copy of the named database OR run its setup once in a new empty database. Run one SELECT at a time. Use the original base records for these slide predictions; do not substitute pathway changed data.",
+      "alternativeStep": "03",
+      "alternativeNote": "Teacher choice only: the SQL pathway uses its own named base/changed fixtures and task/key. The print pack uses Member/Loan. Switch the complete task, setup and key together; never apply these slide predictions to an alternative schema."
+    }
   }
 }

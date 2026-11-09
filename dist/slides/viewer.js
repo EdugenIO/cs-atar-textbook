@@ -29,6 +29,16 @@ if (!deck) {
       }); table.append(head, body); article.append(table);
     }
     (slide.body || []).forEach(line => article.append(element('p', line, 'body-line')));
+    if(index===0 && deck.sqlHandoff){
+      const h=deck.sqlHandoff;
+      article.append(element('p','Primary: '+h.database+' · '+h.task,'body-line'));
+      const links=element('p');
+      for(const [file,label] of [[h.setup,'Matching setup SQL'],[h.workbook,'Primary workbook'],[h.answers,'Primary answer key']]){
+        const a=element('a',label);a.href='../'+file;links.append(a,document.createTextNode(' · '));
+      }
+      article.append(links);
+      const details=element('a','Exact schema and alternative choices');details.href='notes/'+deck.id+'.html#sql-primary';article.append(details);
+    }
     article.append(element('p', `${deck.id.toUpperCase()} · ${index + 1}/${deck.slides.length} · Content CC BY 4.0 / code MIT`, 'licence'));
     main.append(article);
   });

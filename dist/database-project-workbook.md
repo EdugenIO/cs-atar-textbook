@@ -9,6 +9,7 @@ Before question 1, follow L001 by hand: match its BorrowerID to Borrower, Equipm
 Use a fresh working copy of database-project.sqlite. Enable PRAGMA foreign_keys = ON before any transaction. Run each rehearsal separately. Report fixed date: 8 April 2026.
 
 1. Trace L002 through Loan, Borrower, Equipment and Category. State each join condition.
+1b. **Category-history practice (Week 5 Lesson 2):** trace L003 through its borrower, item and category. Write LoanID, EquipmentID and CategoryName for every loan event, ordered by LoanID. Predict all six rows before running. Use the matching category-history query and key, not the four-table Q2b extension.
 2a. **Core:** write an active-loan report using Loan and Equipment: LoanID, EquipmentID, EquipmentDescription; oldest due first, LoanID tie-break.
 2b. **Optional extension:** add BorrowerLabel and CategoryName using all four tables; show LoanID, BorrowerLabel, EquipmentID, CategoryName, DueDate in the same order.
 3. Calculate COUNT, SUM, AVG, MIN and MAX of equipment replacement estimates. Predict by hand before running.

@@ -1,6 +1,20 @@
 # Database solution — explained answers and teacher checkpoints
 
-1. L002 → B002 Learner B → E02 Tripod → C02 Support. Match Loan.BorrowerID to Borrower.BorrowerID, Loan.EquipmentID to Equipment.EquipmentID, Equipment.CategoryID to Category.CategoryID.
+## 1. Key trace
+
+L002 → B002 Learner B → E02 Tripod → C02 Support. Match Loan.BorrowerID to Borrower.BorrowerID, Loan.EquipmentID to Equipment.EquipmentID, Equipment.CategoryID to Category.CategoryID.
+
+## 1b. Category-history report
+
+```sql
+SELECT l.LoanID, e.EquipmentID, c.CategoryName
+FROM Loan AS l
+INNER JOIN Equipment AS e ON l.EquipmentID = e.EquipmentID
+INNER JOIN Category AS c ON e.CategoryID = c.CategoryID
+ORDER BY l.LoanID;
+```
+
+Rows: L001/E01/Imaging; L002/E02/Support; L003/E03/Audio; L004/E04/Imaging; L005/E02/Support; L006/E05/Audio. L003 also refers to B001/Learner A. Each result row is one loan event, including returned loans.
 
 ## 2a. Core two-table report
 
@@ -47,7 +61,9 @@ Columns: CategoryID, CategoryName, ItemCount, TotalCost.
 - C02, Support, 1, 80
 - C03, Audio, 2, 270
 
-3. Five items; sum 1400, mean 280, minimum 80, maximum 600. Use the inventory-summary worked query.
+## 3. Inventory summary
+
+Five items; sum 1400, mean 280, minimum 80, maximum 600. Use the inventory-summary worked query.
 
 5. All loan events sum to 1480: E02's 80 estimate is counted twice, because it has two loan events. This is a history total of repeated item estimates, not inventory value. DISTINCT cost is not a general fix: different items may legitimately have equal costs.
 
@@ -59,7 +75,9 @@ Columns: CategoryID, CategoryName, ItemCount, TotalCost.
 
 9. Duplicate PK, nonexistent FK, Returned outside 0/1 and negative cost must fail. FK checks require enforcement enabled before BEGIN. Use fresh/rolled-back copies and verify original rows remain. A failed statement need not undo earlier successful changes; explicitly end an active practice transaction.
 
-10. One ungrouped summary row: COUNT = 0; SUM, AVG, MIN, MAX = NULL. COUNT(field) ignores NULL values; COUNT(*) counts rows. Required ReplacementCost has no NULLs in this starter.
+## 10. Empty aggregate input
+
+One ungrouped summary row: COUNT = 0; SUM, AVG, MIN, MAX = NULL. COUNT(field) ignores NULL values; COUNT(*) counts rows. Required ReplacementCost has no NULLs in this starter.
 
 11. UPDATE without WHERE changes every row. Inner joins omit unmatched records. Missing join conditions can produce unrelated combinations. Deleting B001 fails because Loan still references it; routine returns preserve history.
 
