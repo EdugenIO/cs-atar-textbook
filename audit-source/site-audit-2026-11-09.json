@@ -53,7 +53,9 @@
       "action": "Add a visible archival cover label and speaker-note warning to each of the ten retained PPTXs, or remove standalone promotion until replacements exist. Keep historical files reachable through an archive.",
       "completeWhen": "Opening any retained standalone legacy deck makes its status and current replacement route clear without visiting the website. Keep the existing ZIP/viewer warnings.",
       "owner": "Slide editor",
-      "status": "Open"
+      "status": "Complete",
+      "completedDate": "2026-11-09",
+      "verification": "All ten retained console PPTXs carry a visible archival cover, ARCHIVED footer on each slide and a current lesson replacement URL plus scope warning in every speaker note. Eight original slides per deck retained; all 80 final slides visually inspected. Package, content-preservation and deployment checks are release gates."
     },
     {
       "id": "S04",

@@ -35,3 +35,5 @@ S01 update, 9 November 2026: Unit 1 W4 L2, W5 L2, W6 L2 and W7 L3 now deliver th
 
 
 S02 update, 9 November 2026: ten Unit 1 project presentations now match the ten milestone slots and common game contract. The two Week 9 API/debugging lessons use the current game context and workbook. Each workshop reserves 25 minutes for independent milestone work within the suggested 55-minute period. Earlier console presentations are archived under legacy-projects/slides/; their requirements are separate. Year 12 project slides, classroom workload trials and independent moderation remain pending.
+
+S03 update, 9 November 2026: all ten archived console PowerPoints carry a visible cover warning, ARCHIVED footer on every slide and a matching current Pygame replacement URL in every speaker note. Original eight-slide teaching examples remain editable historical practice. Current decks and the Unit 1 bundle continue to supply the Pygame sequence.
