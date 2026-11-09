@@ -47,7 +47,11 @@ with tempfile.TemporaryDirectory() as tmp:
  history=tmp/'history.txt';history.write_text('0\n2\nbad\n3\n');values,warnings=rules.load_history(history);assert values==[0,2] and len(warnings)==2
 with zipfile.ZipFile(R/'dist/slides/unit3-week1-lesson-slides.zip') as z:
  for l in d['lessons']:assert z.read(l['id']+'.pptx')==(R/'dist/slides'/f'{l["id"]}.pptx').read_bytes()
- assert z.read('unit3-week1-practice.zip')==(R/'dist/slides/practice/u3-week1/unit3-week1-practice.zip').read_bytes()
+ # ZIP compressors can differ across bundled Windows and CI runtimes.
+ # Check every extracted payload, so container metadata never masks stale content.
+ with zipfile.ZipFile(io.BytesIO(z.read('unit3-week1-practice.zip'))) as bundled,zipfile.ZipFile(R/'dist/slides/practice/u3-week1/unit3-week1-practice.zip') as published:
+  assert sorted(bundled.namelist())==sorted(published.namelist())
+  for name in published.namelist():assert bundled.read(name)==published.read(name),name
  assert z.read('pygame-teaching-pack.zip')==(R/'dist/pygame/pygame-teaching-pack.zip').read_bytes()
 status=json.loads((R/'dist/resource-status.json').read_text(encoding='utf8'))
 for n in range(1,5):assert next(l for l in status['lessons'] if l['id']==f'u3-w01-l0{n}')['status']=='Available'
