@@ -34,6 +34,7 @@ if (!deck) {
   });
   const downloads = document.getElementById('downloads');
   const resources = [[`${deck.id}.pptx`, deck.legacyProject ? 'Download legacy practice PowerPoint' : 'Download editable PowerPoint'], [`notes/${deck.id}.html`, 'Teacher notes']];
+  if (deck.pygameBridge) resources.push(['../'+deck.pygameBridge, 'Matching Pygame lab'], ['../pygame/workbook.md', 'Practice workbook'], ['../pygame/practice-tests.csv', 'Test record']);
   if (deck.id.startsWith('u1-')) resources.push(['unit1-all-lesson-slides.zip', 'Download all Unit 1 PowerPoints']);
   if (deck.id.startsWith('u2-w01-')) resources.push(['unit2-week1-lesson-slides.zip', 'Download Unit 2 Week 1 PowerPoints']);
   if (deck.id.startsWith('u2-w02-')) resources.push(['unit2-week2-lesson-slides.zip', 'Download Unit 2 Week 2 PowerPoints']);

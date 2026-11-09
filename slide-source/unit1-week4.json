@@ -8,7 +8,10 @@
   "references": [
     "https://docs.python.org/3/tutorial/controlflow.html",
     "https://docs.python.org/3/library/stdtypes.html#ranges",
-    "https://docs.python.org/3/reference/compound_stmts.html#while"
+    "https://docs.python.org/3/reference/compound_stmts.html#while",
+    "https://www.pygame.org/docs/ref/event.html",
+    "https://www.pygame.org/docs/ref/time.html",
+    "https://www.pygame.org/docs/ref/rect.html"
   ],
   "lessons": [
     {
@@ -137,141 +140,117 @@
     {
       "id": "u1-w04-l02",
       "lesson": 2,
-      "title": "Condition-controlled while loops",
+      "title": "Use a while loop to run an interactive window",
       "chapter": "loops",
-      "prepare": "Python editor, paper trace grids and a known school-editor Stop command. Discuss non-termination on paper before running.",
+      "prepare": "Before class verify the nominated editor uses a school-approved Python/Pygame installation. Extract the whole pygame-teaching-pack.zip into a writable disposable folder. Open https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-1 and workbook.md, faded_practice.py, practice-tests.csv and readiness.csv. Run python stage1_loop.py. Use supplied named state/runner infrastructure; no student-authored classes, paid media or assessed project code. Record device, interpreter and support. Paper traces support reasoning; live window/keyboard evidence remains necessary. The suggested 55-minute allocation is untrialled; use the supplied 50-minute adaptation when required.",
       "slides": [
         {
-          "title": "Condition-controlled while loops",
-          "strategy": "Learning intention",
-          "notes": "Success means trace a pre-test while loop, identify initialisation and update, and explain how the condition becomes False. Begin with a small bounded counter so learners can compare with for.",
+          "title": "A loop keeps a Pygame window responsive",
           "body": [
             "Unit 1 · Week 4 · Lesson 2",
-            "Repeat while a condition remains True."
+            "Run, trace and change the supplied window loop."
           ],
+          "notes": "Open stage1_loop.py from the whole extracted teaching pack. Success: quit with both Escape and X; explain input, update, draw; predict movement and count frames. This is ungraded preparation before the project. Use primitive shapes; no assets or student classes are required. Installation/interpreter checks happen before class. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-1; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Learning intention",
           "minutes": 2
         },
         {
-          "title": "Retrieval: the range boundary",
-          "strategy": "Individual retrieval and paired explanation",
-          "notes": "Expected range(1,4) produces 1,2,3 and excludes 4. A final print outside the loop runs once. Initialising a total inside the loop discards earlier accumulated values. Ask learners to retrieve before notes, then correct their explanation.",
+          "title": "Retrieve the stopping condition",
           "body": [
-            "List the values in range(1, 4).",
-            "Why does the value 4 stay out?",
-            "Which instruction normally prints the final total once?",
-            "Compare your answers with a partner."
+            "When is a while condition checked?",
+            "What changes running from True to False?",
+            "Does counting frames measure seconds?"
           ],
+          "notes": "Think alone before pair comparison. A while condition is checked before each pass, so the body can run zero times. running=False ends the next loop test; it does not instantly jump out of the current body. A frame counter counts loop passes, not elapsed seconds, because frame duration varies. Retain a trace of the final failed condition. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-1; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Individual retrieval and paired explanation",
           "minutes": 5
         },
         {
-          "title": "A condition checked before every pass",
-          "strategy": "Teacher modelling and guided prediction",
-          "notes": "Trace count=1, condition True, print 1, update to 2. Continue through 3 then update to 4. At 4 the condition is False, so the body stops and Finished prints. Output 1,2,3,Finished on separate lines. Check the condition before entry and after each update. Ask a learner to narrate the last failed check.",
+          "title": "Input, update and draw repeat each frame",
           "body": [
-            "Predict the output before running.",
-            "What value makes the condition False?"
+            "Read this excerpt inside the supplied setup.",
+            "Locate the event that changes running."
           ],
-          "code": "count = 1\nwhile count <= 3:\n    print(count)\n    count = count + 1\nprint(\"Finished\")",
+          "notes": "Run python stage1_loop.py. The complete supplied file initialises Pygame, creates the screen/clock, checks held keys, updates a bounded x and draws before flip. This seven-line excerpt focuses on X; the complete file also handles KEYDOWN Escape. Consume events every frame so the window remains responsive. Clock.tick(60) returns elapsed milliseconds and limits the target frame rate; it does not guarantee exactly 60 frames each second. Model the whole file without asking novices to recreate installation/setup code. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-1; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Teacher modelling and predict–run–explain",
+          "minutes": 10,
+          "code": "while running:\n    dt_ms = clock.tick(60)\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n    # Read held keys; update x; draw.\n    pygame.display.flip()"
+        },
+        {
+          "title": "Predict distance from elapsed time",
+          "notes": "The 640-pixel window and 24-pixel square give x bounds 0..616. In the supplied lab speed is 200 pixels/second: 250 ms gives 50 pixels from an interior start. For the changed speed 160: 250 ms gives 40 and 500 ms gives 80. Model first row, pairs complete the second before running. x=600 plus 40 clamps to 616, so actual change is 16. The screen origin is top-left; positive x moves right. Holding both arrows gives direction zero in the supplied expression. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-1; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Faded worked trace and paired prediction",
+          "minutes": 10,
+          "table": [
+            [
+              "Speed (px/s)",
+              "Elapsed (ms)",
+              "Unbounded change"
+            ],
+            [
+              "200",
+              "250",
+              "50 pixels"
+            ],
+            [
+              "160",
+              "250",
+              "Predict before running"
+            ],
+            [
+              "160",
+              "500",
+              "Predict before running"
+            ]
+          ]
+        },
+        {
+          "title": "Events and held keys have different jobs",
+          "body": [
+            "X and Escape are discrete events.",
+            "Held arrows are checked each frame.",
+            "Read elapsed time before updating position."
+          ],
+          "notes": "Use the full file to contrast a KEYDOWN event with pygame.key.get_pressed(). Hold right, release, then hold left; predict x before checking. Use x = max(0, min(616, x + direction * speed * dt_ms / 1000)). This supplied clamp keeps the square inside the display. Do not add a blocking sleep. Frame count increases once per pass; time increases by each returned dt_ms. Stop a non-responsive practice script with the approved editor Stop control. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-1; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Guided investigation with role changes",
           "minutes": 6
         },
         {
-          "title": "The final check belongs in the trace",
-          "strategy": "Worked trace with faded support",
-          "notes": "Model the first two rows, then learners complete rows for count 3 and 4. At 3, True prints 3 and updates to 4. At 4, False prints nothing inside the body and performs no update. Support: keep condition column headings. Stretch: explain why there are four condition checks but only three body executions.",
-          "table": [
-            [
-              "Count at check",
-              "count <= 3",
-              "Body and update"
-            ],
-            [
-              "1",
-              "True",
-              "Print 1, count becomes 2"
-            ],
-            [
-              "2",
-              "True",
-              "Print 2, count becomes 3"
-            ],
-            [
-              "3",
-              "Predict first",
-              "Complete the trace"
-            ],
-            [
-              "4",
-              "Predict first",
-              "Does the body run?"
-            ]
-          ],
-          "minutes": 10
-        },
-        {
-          "title": "A while loop may run zero times",
-          "strategy": "Guided variation and peer explanation",
-          "notes": "Change the start value to 4. The first condition is False, so only Finished prints. For starts 3 and 1, outputs are 3 then Finished, and 1,2,3 then Finished. Ask learners to write predictions before editing. A pre-test loop can have zero body executions; reaching the while line does not guarantee a pass.",
+          "title": "Change the loop independently",
           "body": [
-            "Keep while count <= 3.",
-            "Predict when count starts at 4, then at 3.",
-            "Run each version and compare.",
-            "Explain why reaching a loop can produce no passes."
+            "Copy stage1_loop.py into your practice folder.",
+            "Complete movement at 160 pixels per second.",
+            "Add a frame counter and test both exit controls."
           ],
-          "minutes": 10
-        },
-        {
-          "title": "Zero, one and several passes",
-          "strategy": "Paired investigation and role changes",
-          "notes": "Pairs run the same bounded loop with starts 4,3,1 after individual predictions. Driver enters the starting value in source, navigator checks the condition trace, then swap roles. Every learner records number of passes: 0,1,3. Support: circle the start and update. Stretch: choose a new upper limit and design zero/one/several-pass tests without adding input validation.",
-          "table": [
-            [
-              "Starting count",
-              "Expected passes",
-              "Actual passes"
-            ],
-            [
-              "4",
-              "Predict first",
-              "Record after run"
-            ],
-            [
-              "3",
-              "Predict first",
-              "Record after run"
-            ],
-            [
-              "1",
-              "Predict first",
-              "Record after run"
-            ]
-          ],
+          "notes": "Fade the movement expression in a COPY; keep setup and event handling supplied. Use a separate speed variable 160 or replace the original speed constant deliberately. Predict 40 pixels at 250 ms and 80 at 500 ms from an interior position. Add frames=0 before the loop and frames+=1 inside; display/print the count without treating it as seconds. A teacher checks X and Escape on a visible desktop. At x=600, moving right for 250 ms ends at 616. If installation fails, use a labelled paper trace and record live keyboard/window evidence pending, then schedule reteaching before project issue. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-1; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Independent changed task with optional scaffold",
           "minutes": 12
         },
         {
-          "title": "What would stop this repetition?",
-          "strategy": "Paper debugging and all-student check",
-          "notes": "Discuss without executing an unbounded loop. If count starts at 1 and while count <= 3 has no update, printing count never changes the condition. It remains True. Expected repair: count = count + 1 inside the body. Model the school editor Stop control before learners experiment, then run only the corrected bounded version. Recheck termination by tracing count=4.",
+          "title": "Choose the correct time conversion",
           "body": [
-            "On paper: count starts at 1.",
-            "The body prints count but never changes it.",
-            "Will while count <= 3 ever become False?",
-            "Write an update that makes this example finish."
+            "speed is pixels per second; dt_ms is milliseconds.",
+            "A: direction * speed * dt_ms",
+            "B: direction * speed * dt_ms / 1000"
           ],
+          "notes": "Collect simultaneous answers and reasons. B converts milliseconds to seconds. With speed 160 and dt_ms 250, A suggests 40000 pixels and B gives 40 before bounds. Do not let clamping hide the unit error: inspect an interior unbounded calculation. Revisit units if learners choose A. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-1; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "All-student hinge question",
           "minutes": 5
         },
         {
-          "title": "Exit ticket: the stopping check",
-          "strategy": "Independent exit ticket",
-          "notes": "For count=1, while count < 3 prints and increments, output is 1 and 2. Last update makes count 3, then condition False. Start at 3 gives zero passes. Ask for the final failed condition check rather than only the printed sequence. Use errors to revisit < versus <= next lesson.",
+          "title": "Show the loop working",
           "body": [
-            "Start count at 1 and use while count < 3.",
-            "Print count, then add 1 on each pass.",
-            "State the output and the value at the stopping check.",
-            "What happens if count starts at 3?"
+            "Close the window using X, then Escape.",
+            "Predict movement at 250 and 500 milliseconds.",
+            "Explain a frame count and the final loop check."
           ],
+          "notes": "Record expected/actual, code version and support in the y11-1 workbook/readiness row. Require a short independent explanation of input→update→draw and a changed movement test. Do not award readiness from copying the worked program. Failed exit checks trigger targeted practice before the assessed project; do not silently add project workshops. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-1; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Independent exit check and feedback",
           "minutes": 5
         }
-      ]
+      ],
+      "pygameBridge": "pygame/index.html#y11-1",
+      "alignmentReview": "2026-11-09 S01"
     },
     {
       "id": "u1-w04-l03",

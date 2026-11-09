@@ -1,0 +1,211 @@
+{
+  "date": "2026-11-09",
+  "sourceCommit": "1bf7e9bee7eb0e208929cbde06bc6cfaeac1cced",
+  "tasks": [
+    {
+      "id": "S01",
+      "priority": "P1",
+      "title": "Align the four Pygame preparation decks",
+      "classification": "Confirmed partial lesson mismatch",
+      "evidence": [
+        "u1-w04-l02",
+        "u1-w05-l02",
+        "u1-w06-l02",
+        "u1-w07-l03"
+      ],
+      "detail": "The allocated routes explicitly teach a window loop, game-rule functions, collect-once list traversal, and game tests/history. The current decks retain bounded console loops, badge calculations, list totals and file parsing. Transferable foundations are useful, but no authored deck contains Pygame content.",
+      "action": "Retain short foundation retrieval, then teach the exact existing Pygame bridge lab, its worked run, faded task, expected tests and exit check.",
+      "completeWhen": "Each deck delivers its allocated bridge before the project; a learner can run, change and test that lab without needing untaught project features. JSON, browser, PPTX and notes match.",
+      "owner": "Teaching/slide editor",
+      "status": "Complete",
+      "completedDate": "2026-11-09",
+      "verification": "Four allocated decks rebuilt from shared JSON, editable PowerPoints validated and all 32 final slides visually inspected. Code excerpts and lab outcomes checked; browser and publication remain release gates. Classroom readiness/timings remain pending."
+    },
+    {
+      "id": "S02",
+      "priority": "P1",
+      "title": "Replace the ten legacy Unit 1 project decks",
+      "classification": "Confirmed known gap",
+      "evidence": [
+        "u1-w08-l01 to u1-w08-l04",
+        "u1-w09-l03 to u1-w09-l04",
+        "u1-w10-l01 to u1-w10-l04"
+      ],
+      "detail": "These ten decks are flagged legacyProject and teach a club-order console manager. The allocated workshops teach a Pygame game.",
+      "action": "Build the existing ten-workshop game sequence: shared FR/NFR brief; design; state/controls; movement/collision; score/lives/time; HUD/history; integration; tests; player trial; demonstration/evaluation. Preserve equivalent student scenario choice and primitive/AI asset allowance. Refresh Week 9 Lessons 1–2 API/debugging examples and workbook links alongside it.",
+      "completeWhen": "All ten workshop decks match the current game brief and marking guide; the two transferable API/debugging decks refer to the current workbook rather than stale order-manager modules. No new project hours or requirements.",
+      "owner": "Teaching/slide editor",
+      "status": "Open"
+    },
+    {
+      "id": "S03",
+      "priority": "P1",
+      "title": "Carry the legacy warning into each downloaded PowerPoint",
+      "classification": "Confirmed distribution gap",
+      "evidence": [
+        "dist/slides/u1-w08-l01.pptx",
+        "dist/slides/viewer.js",
+        "dist/slides/unit1-all-lesson-slides.zip"
+      ],
+      "detail": "The live viewer correctly warns about legacy console material and the Unit 1 ZIP includes a legacy note. All ten legacy standalone PPTXs lack a legacy/current-Pygame warning in their slide or note text. The warning can be lost when a single deck is forwarded.",
+      "action": "Add a visible archival cover label and speaker-note warning to each of the ten retained PPTXs, or remove standalone promotion until replacements exist. Keep historical files reachable through an archive.",
+      "completeWhen": "Opening any retained standalone legacy deck makes its status and current replacement route clear without visiting the website. Keep the existing ZIP/viewer warnings.",
+      "owner": "Slide editor",
+      "status": "Open"
+    },
+    {
+      "id": "S04",
+      "priority": "P1",
+      "title": "Clarify the Year 11 SQL extension and join depth",
+      "classification": "Confirmed scope-label mismatch; school task scope requires teacher judgement",
+      "evidence": [
+        "u2-w05-l04 slides 2–6",
+        "teaching-source/sql-pathway.json steps 04/09/10/17"
+      ],
+      "detail": "Week 5 Lesson 4 teaches GROUP BY and an independent four-table active-loan report as ordinary Year 11 practice without an extension label. The current pathway separates Year 11 whole-result aggregates from Year 12 grouping/four-table joins. The worked results are correct; this is a scope/pacing issue, not invalid SQL.",
+      "action": "Keep the core Year 11 rehearsal at its taught depth. Label and separate grouped/four-table transfer as supporting extension, or reschedule it into the Year 12 sequence. Reconcile the chapter/workbook/lesson expectations at the same time.",
+      "completeWhen": "A teacher can identify the required Year 11 attempt and optional extension on slides and in notes. Extension success is not silently required for the core task; teaching and local assessment scope agree.",
+      "owner": "Curriculum/SQL teacher",
+      "status": "Open"
+    },
+    {
+      "id": "S05",
+      "priority": "P1",
+      "title": "Extend exact SQL database handoffs into the slide decks",
+      "classification": "Confirmed cross-format omission",
+      "evidence": [
+        "u2-w04-l01 to u2-w05-l04",
+        "dist/lessons/routes.json sqlPractice",
+        "dist/sql/index.html"
+      ],
+      "detail": "The slides correctly use sql-starter.sqlite in Week 4 and database-project.sqlite in Week 5, including ReplacementCost. C08 lesson options use pathway y11/durations fixtures, and print alternatives use Member/Loan. These are valid separate schemas, but the newer route choice is not carried into the decks.",
+      "action": "For each SQL lesson select one primary task/schema and name its exact file, table/field contract, preparation, workbook question and matching key. Put alternative datasets in an explicit teacher choice. Include direct clickable setup/task/key links in notes and slides where useful.",
+      "completeWhen": "Following the lesson, slides and answer key never requires guessing between sql-starter, database-project, pathway and print-pack schemas. All shown queries execute against the named file and changed-data expectations stay separate.",
+      "owner": "SQL/slide editor",
+      "status": "Open"
+    },
+    {
+      "id": "S06",
+      "priority": "P2",
+      "title": "Reconcile supported clinics and independent/timed attempts",
+      "classification": "Confirmed planner/slide differences; intent needs teacher decision",
+      "evidence": [
+        "u1-w14-l03",
+        "u1-w16-l01",
+        "u1-w16-l02"
+      ],
+      "detail": "Week 14 Lesson 3 planner names teacher-selected theory conditions while the slide notes explicitly replace the old assessment slot with ungraded scenario practice. Week 16 Lesson 1 models the same paper Q3 trace before a short supported attempt, while the plan says first paper attempt. Week 16 Lesson 2 offers an answer demonstration before finishing questions.",
+      "action": "Choose and label the purpose of each slot: teaching clinic, independent diagnostic, timed formative practice, or school-issued assessment. If an independent attempt is intended, use different worked values and reveal feedback after the attempt. Keep public practice distinct from school conditions.",
+      "completeWhen": "Planner, slides, notes and question/answer reveal order agree. Prior exposure is acknowledged; supported scores are not presented as fresh independent evidence. Preserve the good Week 7 teacher-issued-task briefing.",
+      "owner": "Course teacher",
+      "status": "Open"
+    },
+    {
+      "id": "S07",
+      "priority": "P1",
+      "title": "Author Year 12 slides in prerequisite order",
+      "classification": "Confirmed missing provision",
+      "evidence": [
+        "Units 3 and 4: all 128 allocated lessons"
+      ],
+      "detail": "No Unit 3 or Unit 4 decks exist. The register categorises 12 Unit 3 project slots as replacement pending, but these are missing authored decks rather than existing files to revise.",
+      "action": "Use the current 2027 lesson routes: Unit 3 Python retrieval/Pygame bridge, structures, algorithms, OOP, project, reliability, networks, review; Unit 4 design, SQL, data cleaning/constraints, project, security/cryptography/ethics and review. Agree which year is taught first, then author small reviewed batches in actual lesson order.",
+      "completeWhen": "Each released batch includes editable PPTX, browser view, notes, exact practical resources, an unaided check and a matching allocation. Do not describe 128 unbuilt decks as completed.",
+      "owner": "Teaching/slide author",
+      "status": "Open"
+    },
+    {
+      "id": "S08",
+      "priority": "P1",
+      "title": "Finish Unit 2 from Week 6 onwards",
+      "classification": "Confirmed missing provision",
+      "evidence": [
+        "Unit 2 Weeks 6–16: 44 lessons"
+      ],
+      "detail": "Unit 2 stops after Week 5, directly before creation/constraints, controlled data changes and the later project/security/review lessons.",
+      "action": "Continue from the current lesson routes, not an old generic SQL outline. Teach construction, INSERT/UPDATE/DELETE, integrity and recovery before the issued practical/project demands them. Preserve the allocation and use named fixtures.",
+      "completeWhen": "All 44 slots have appropriate resources or an explicit non-slide delivery plan; each assessed operation has teaching, independent practice and feedback before use.",
+      "owner": "Teaching/slide author",
+      "status": "Open"
+    },
+    {
+      "id": "S09",
+      "priority": "P2",
+      "title": "Make slide availability evidence-based and regeneration repeatable",
+      "classification": "Confirmed metadata/test limitation; maintenance improvement",
+      "evidence": [
+        "scripts/build-resource-status.mjs",
+        "tests/lesson-slides.test.mjs",
+        "scripts/build-slide-web.mjs",
+        "slide-source/README.md"
+      ],
+      "detail": "Available currently means registry/PPTX/notes files exist and the slot is not tagged as a game project. Tests verify internal format agreement and 55-minute/eight-slide structure, not learning-outcome alignment. Browser rebuild does not rebuild PowerPoint.",
+      "action": "Track file existence, sequence review date/edition, semantic review and classroom trial separately. Bind each deck to the allocated lesson ID/objective/resource choice. Document a reproducible native PPTX export command and require matching browser/notes/PPTX outputs and archive fingerprints.",
+      "completeWhen": "A changed lesson objective/resource invalidates alignment review. The register does not imply pedagogical sign-off from file presence; contributors can reproduce all formats and detect stale exports.",
+      "owner": "Site/build maintainer",
+      "status": "Open"
+    },
+    {
+      "id": "S10",
+      "priority": "P2",
+      "title": "Add shared diagrams to visual computing topics",
+      "classification": "Confirmed provision opportunity; continuation of C13",
+      "evidence": [
+        "u1-w11-l02",
+        "u1-w12-l02",
+        "u1-w13-l02",
+        "u1-w14-l01",
+        "C13"
+      ],
+      "detail": "Only one of 672 authored slides has a diagram object: the four-table ER model. Network paths, layers, gateway decisions and topology drawing are predominantly text/tables despite being visual skills.",
+      "action": "Prioritise editable four-layer stack, local/remote packet path, switch/router/gateway roles and a course-symbol logical topology. Use the same reviewed vector source in chapter, slides and print activities, with text alternatives and monochrome versions.",
+      "completeWhen": "Visuals are technically checked, legible at projection/mobile/print sizes and editable. Text alternatives teach the same relationships. This extends C13 rather than creating a competing image backlog.",
+      "owner": "Technical/visual editor",
+      "status": "Open"
+    },
+    {
+      "id": "S11",
+      "priority": "P2",
+      "title": "Add full slide-viewer and presentation accessibility checks",
+      "classification": "Confirmed test coverage gap; manual sign-off pending",
+      "evidence": [
+        "tests/browser/acceptance.spec.mjs:89",
+        "dist/slides/viewer.js",
+        "dist/slides/viewer.css",
+        "dist/slides/index.html"
+      ],
+      "detail": "The browser suite visits a slide page for the issue-link test, but does not specifically exercise slide navigation, continuous reading, printing, legacy notices or slide accessibility. Manual samples showed navigation, read-all, ER alt text and a narrow SQL slide working. XML bounds checks found no shapes outside the slide canvas, but cannot establish text fit or projection readability.",
+      "action": "Add keyboard/focus, previous/next boundaries, all-slides, invalid lesson, legacy warning, mobile code/table/diagram and print tests. Add a skip link and correct Australian language metadata. Visually render all PPTXs and check dense code/table pages, projection, screen-reader order and contrast in the intended tools.",
+      "completeWhen": "Automated viewer cases pass and a recorded visual review covers all changed decks. Keep desktop PowerPoint and assistive-technology trials explicitly pending until performed.",
+      "owner": "Accessibility/build maintainer",
+      "status": "Open"
+    },
+    {
+      "id": "S12",
+      "priority": "P2",
+      "title": "Trial lesson pacing and moderate assessment readiness",
+      "classification": "Confirmed evidence gap; continuation of A03",
+      "evidence": [
+        "all 84 decks",
+        "dist/project-trial/trial-summary.csv",
+        "A03"
+      ],
+      "detail": "Every existing deck uses eight slides and totals exactly 55 minutes. Many later lessons allocate 12 minutes to independent work. Trial-summary rows for Years 11/12 are blank, so actual setup/debugging/independent completion time and moderation are not established. A fixed template is not itself proof of overload.",
+      "action": "Trial representative foundation, Pygame, SQL and written-practice lessons. Record setup/transition time, support, unfinished work and independent outcomes. Allow lesson-specific slide count/timing and moderate varied project scenarios against the same rubric.",
+      "completeWhen": "Observed classroom timings and independent teacher moderation are recorded. Revise only where evidence warrants it; preserve exam blocks and the existing workshop budget. Do not fill trial records with invented results.",
+      "owner": "Classroom teacher/moderator",
+      "status": "Open"
+    }
+  ],
+  "retainedCleanup": [
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13"
+  ],
+  "reusedExistingWork": [
+    "S10 continues C13",
+    "S12 continues A03"
+  ]
+}

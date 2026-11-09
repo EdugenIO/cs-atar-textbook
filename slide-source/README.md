@@ -29,3 +29,6 @@ Unit 2 Week 3: [four editable PowerPoints](https://edugenio.github.io/cs-atar-te
 Unit 2 Week 4: [four editable PowerPoints](https://edugenio.github.io/cs-atar-textbook/slides/unit2-week4-lesson-slides.zip) for SELECT, WHERE, Boolean conditions, ordering, duplicates and empty results. Includes the SQLite starter, setup/worked SQL, expected results, workbook and explained answers. Worked slide queries are executed against the read-only starter in the package checks.
 
 Unit 2 Week 5: [four editable PowerPoints](https://edugenio.github.io/cs-atar-textbook/slides/unit2-week5-lesson-slides.zip) covering inner joins, key matches, inventory aggregates and grouped category reports. Includes the separate project starter, setup/reports, workbook and explained answers. The queryDatabase lesson field selects the correct read-only fixture for worked-query checks.
+
+
+S01 update, 9 November 2026: Unit 1 W4 L2, W5 L2, W6 L2 and W7 L3 now deliver the existing Pygame preparation labs. Each retains its Python foundation, names the exact worked files, provides faded/changed practice, expected tests and an independent exit. Browser, PPTX and teacher notes must be regenerated together. Classroom timing and school-machine readiness remain unverified; ten legacy project decks and Year 12 decks are separate pending work.

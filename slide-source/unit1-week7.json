@@ -7,7 +7,10 @@
   "source": "https://edugenio.github.io/cs-atar-textbook/#files",
   "references": [
     "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files",
-    "https://docs.python.org/3/tutorial/errors.html#handling-exceptions"
+    "https://docs.python.org/3/tutorial/errors.html#handling-exceptions",
+    "https://www.pygame.org/docs/ref/event.html",
+    "https://www.pygame.org/docs/ref/time.html",
+    "https://www.pygame.org/docs/ref/rect.html"
   ],
   "lessons": [
     {
@@ -251,119 +254,115 @@
     {
       "id": "u1-w07-l03",
       "lesson": 3,
-      "title": "Sequential file processing and tests",
+      "title": "Combine game tests with reading and appending results",
       "chapter": "files",
-      "prepare": "Python editor, disposable quantities.txt copies and a test table. Main format: one non-negative integer on each line.",
+      "prepare": "Before class verify the nominated editor uses a school-approved Python/Pygame installation. Extract the whole pygame-teaching-pack.zip into a writable disposable folder. Open https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-4 and workbook.md, faded_practice.py, practice-tests.csv and readiness.csv. Run python lab_runner.py 4. Use supplied named state/runner infrastructure; no student-authored classes, paid media or assessed project code. Record device, interpreter and support. Paper traces support reasoning; live window/keyboard evidence remains necessary. The suggested 55-minute allocation is untrialled; use the supplied 50-minute adaptation when required.",
       "slides": [
         {
-          "title": "Sequential file processing and tests",
-          "strategy": "Learning intention",
-          "notes": "Success means read records sequentially, calculate a total and test stated assumptions. Learners distinguish empty, missing and malformed files. The first model assumes all records are suitable; later activities add an explicit rejection policy.",
+          "title": "Test the game and preserve its history",
           "body": [
             "Unit 1 · Week 7 · Lesson 3",
-            "Test file contents as well as program calculations."
+            "Read valid scores and append one finished result."
           ],
+          "notes": "Run python lab_runner.py 4 in a disposable extracted folder. The worked lab accepts integer history scores0..2; the changed lab accepts0,2,4,6. Success: distinguish missing/empty/malformed data, append once after finished, show a visible failed write and retry, and retain pause/reset/timeout evidence. Stage4 uses the same two-station lab; Week7 Lesson4 controlled practical stays unchanged. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-4; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Learning intention",
           "minutes": 2
         },
         {
-          "title": "Retrieval: two checks on each record",
-          "strategy": "Individual retrieval and paired correction",
-          "notes": "A line is text; strip removes whitespace; int converts suitable integer text; >=0 checks range. Invalid integer text raises ValueError. Ask learners to recall these steps individually then pair-check before processing multiple records.",
+          "title": "Retrieve modes and validation",
           "body": [
-            "A record contains \"-3\\n\".",
-            "What do strip and int do to it?",
-            "Which check still rejects the resulting quantity?",
-            "Compare the steps with a partner."
+            "Which mode preserves earlier scores: a or w?",
+            "How does a missing file differ from an empty one?",
+            "Does int conversion alone enforce a score range?"
           ],
+          "notes": "Append a retains prior text; w truncates an existing file. An empty file opens and traverses zero records; missing raises FileNotFoundError unless handled. int(\"3\") converts but3 is invalid for the worked0..2 score policy. Missing history is intentionally treated as no previous scores here; it is a stated lab policy, not a universal rule. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-4; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Individual retrieval and paired correction",
           "minutes": 5
         },
         {
-          "title": "A total from valid records",
-          "strategy": "Teacher think-aloud and guided trace",
-          "notes": "Assume file exists and every line is a suitable non-negative integer. With lines 2,0,5, total moves 0,2,2,7 and output Total:7. Empty file body runs zero times, output 0. with handles closing. This model intentionally does not yet handle missing/malformed files, so state its assumptions before running.",
+          "title": "Read each score and check its domain",
           "body": [
-            "Assume every record is suitable.",
-            "Trace lines 2, 0 and 5, then an empty file."
+            "The complete loader returns scores and warnings."
           ],
-          "code": "total = 0\nwith open(\"quantities.txt\", \"r\", encoding=\"utf-8\") as file:\n    for line in file:\n        quantity = int(line.strip())\n        total = total + quantity\nprint(\"Total:\", total)",
-          "minutes": 6
+          "notes": "Excerpt from rules.load_history; the omitted surrounding try handles missing as empty and other read/encoding errors with a warning. int strips/converts, then the domain check rejects out-of-range integers. Worked policy accepts0,1,2. Malformed or out-of-range lines are skipped with their line number in warnings; valid later lines are still processed. Model a file containing 2,three,1,9: valid[2,1], warnings for lines2 and4. Empty and missing both yield[] with no warnings under this lab policy. Do not reuse the previous chapter’s whole-file-rejection policy without stating the difference. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-4; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Teacher model and worked record trace",
+          "minutes": 10,
+          "code": "for line_number, line in enumerate(source, 1):\n    try:\n        value = int(line.strip())\n        if not 0 <= value <= 2:\n            raise ValueError(\"out of range\")\n        values.append(value)\n    except ValueError:\n        warnings.append(f\"Skipped line {line_number}\")"
         },
         {
-          "title": "A test table from the file contract",
-          "strategy": "Independent prediction and paired review",
-          "notes": "Expected one-record 5 total 5;2,0,5 total 7; empty total 0. Missing file raises FileNotFoundError. Under a reject-file policy, a negative or malformed record rejects whole file and no successful total is displayed. Learners distinguish expectations of the initial assumed-valid model from required behaviour of an improved version. Support: separate calculation and invalid-file tests.",
+          "title": "Append only after a successful finish",
+          "body": [
+            "Predict repeated calls for the same finished state."
+          ],
+          "notes": "Focused success-path excerpt of save_result. The complete supplied function wraps the open/write in try/except OSError and returns a visible Not saved message while leaving saved=False. Only after the with block succeeds is saved=True. The runner attempts automatically once when finished and S explicitly retries a failed write. Reset creates a fresh unsaved state for the next run while keeping old file records. Test full supplied function, not this excerpt alone. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-4; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Predict, model and inspect file state",
+          "minutes": 10,
+          "code": "if state[\"mode\"] != \"finished\" or state[\"saved\"]:\n    return \"\"\nwith Path(path).open(\"a\", encoding=\"utf-8\") as target:\n    target.write(str(state[\"score\"]) + \"\\n\")\nstate[\"saved\"] = True"
+        },
+        {
+          "title": "Specify expected results before testing",
+          "notes": "Model pause and timeout with rule tests, then observe live transitions in the runner. Paused95000 ms update leaves x and remaining unchanged. Starting/resuming/resetting discards that frame’s delta. An update with remaining50 and dt50 finishes with remaining0 before movement/collection, so an overlapping station earns no late point. Two successful saves on the same finished state append one row. A failed target (use an existing disposable directory as the path) returns Not saved and leaves saved=False; retry with a writable file. Never change real school permissions to simulate failure. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-4; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Guided test design and paired reasoning",
+          "minutes": 6,
           "table": [
             [
-              "File case",
-              "Expected under stated policy"
+              "Case",
+              "Expected observation"
             ],
             [
-              "One valid record: 5",
-              "Total 5"
+              "Paused update",
+              "No movement or active-time loss"
             ],
             [
-              "Valid records: 2, 0, 5",
-              "Predict total"
+              "Timeout and overlap",
+              "Finish; no late collection"
             ],
             [
-              "Existing empty file",
-              "Predict total"
+              "Repeated save",
+              "One appended result"
             ],
             [
-              "Malformed or negative record",
-              "Reject file and report"
+              "Write failure",
+              "Visible message; saved stays False"
             ]
-          ],
-          "minutes": 10
+          ]
         },
         {
-          "title": "A helper checks one record",
-          "strategy": "Worked example and guided prediction",
-          "notes": "This helper returns an integer 0 or more for a suitable record, otherwise None. Predict parse_quantity(\" 5\\n\")=5, \"-3\"=None, \"three\"=None and blank line=None. None is a distinct rejection signal because zero is valid. It does not itself read a file or decide how the caller reports failure. Strip/conversion/range combine Week 5 functions with Week 7 checks.",
+          "title": "Complete the changed history policy",
           "body": [
-            "Predict for \"5\", \"-3\" and \"three\".",
-            "Why is None a better rejection signal than 0 here?"
+            "In faded_practice.py accept only 0, 2, 4 and 6.",
+            "Finish append-once saving and test a failed retry.",
+            "Run changed rule tests, then the adapted runner."
           ],
-          "code": "def parse_quantity(text):\n    try:\n        quantity = int(text.strip())\n    except ValueError:\n        return None\n    if quantity < 0:\n        return None\n    return quantity",
-          "minutes": 10
-        },
-        {
-          "title": "An explicit policy for unsuitable records",
-          "strategy": "Independent coding with optional scaffolds",
-          "notes": "Policy for this exercise: stop at first unsuitable record, report file rejected and do not display a partial total as successful. Reference structure: initialise total 0 and file_valid=True; read each line; call parse_quantity; if value is None set file_valid=False and break, else accumulate; after traversal display total only if file_valid. Handle FileNotFoundError separately with a missing-file message. Support: provide this scaffold. Test valid, empty, malformed, negative and missing cases. Stretch: track and report the rejected line number. Partners review evidence after independent work.",
-          "body": [
-            "Use parse_quantity while reading each line.",
-            "Reject the file on the first unsuitable record.",
-            "Report failure instead of a successful partial total.",
-            "Run valid, empty, malformed, negative and missing cases."
-          ],
+          "notes": "Use a COPY; complete load_history and save_result without importing lab_rules. Prediction file 2,three,3,6,0 gives[2,6,0] and warnings for lines2 and3; missing/empty gives[]. A finished score6 appends once; a second call leaves file unchanged. Reject odd scores in the changed history policy, even though int conversion succeeds. The save contract assumes a valid score from the game; the loader validates external records. For a failed save, target a disposable directory, check saved=False, then retry with a writable file. Complete practice-tests.csv expected/actual/build evidence. After rule checks use the previously adapted runner; drawing and file I/O remain separate from scoring. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-4; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Independent faded task and changed tests",
           "minutes": 12
         },
         {
-          "title": "Empty and missing are different",
-          "strategy": "All-student hinge question",
-          "notes": "Correct B: an existing empty file opens and produces total 0 in the model; a missing file raises FileNotFoundError. FileNotFoundError differs from conversion ValueError. If several choose A, use two practice paths, one to an empty file and one absent. Do not replace a missing input with a new empty file silently.",
+          "title": "When should saved become True?",
           "body": [
-            "One path refers to an empty file; another has no file.",
-            "“Reading both gives an empty traversal.”",
-            "A: agree     B: disagree",
-            "Choose and identify the missing-file exception."
+            "The append raises OSError.",
+            "A: Set saved=True before trying to write.",
+            "B: Set it only after the write succeeds."
           ],
+          "notes": "B. A prevents a legitimate retry and falsely claims persistence. Ask learners to distinguish an expected result from an observed file change. The worked runner avoids automatic repeated failures each frame: it attempts once and S retries explicitly. Record the error message without exposing real file paths or student data. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-4; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "All-student hinge question",
           "minutes": 5
         },
         {
-          "title": "Exit ticket: evidence for the policy",
-          "strategy": "Independent exit ticket",
-          "notes": "For lines 2,three,5, improved policy rejects on second line and displays no successful total; initial model would raise ValueError. Existing empty file total 0. Negative text converts but fails range. Ask learners to name a specific observed result for each policy test and retain it before controlled practical.",
+          "title": "Demonstrate and record readiness",
           "body": [
-            "Predict the required response to lines 2, three, 5.",
-            "Should a partial total count as a successful result?",
-            "Explain empty versus missing-file behaviour.",
-            "Save a test record with an expected and actual result."
+            "Show missing, empty and malformed-history cases.",
+            "Verify pause, reset, timeout and append-once.",
+            "Explain one fresh change without the reference."
           ],
+          "notes": "Use readiness.csv y11-4 plus the practice test table. Teacher observes one changed rule or test after the independent attempt; copying check_worked_lab output is not evidence of the learner’s own work. Record support, code version, expected/actual, first mismatch, repair and retest. Keep formal practical conditions separate next lesson; this preparation is ungraded. If evidence is incomplete, record targeted reteaching and re-plan before project issue rather than quietly adding workshops. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-4; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Independent exit demonstration and feedback",
           "minutes": 5
         }
-      ]
+      ],
+      "pygameBridge": "pygame/index.html#y11-4",
+      "alignmentReview": "2026-11-09 S01"
     },
     {
       "id": "u1-w07-l04",

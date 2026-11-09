@@ -7,7 +7,10 @@
   "source": "https://edugenio.github.io/cs-atar-textbook/#arrays",
   "references": [
     "https://docs.python.org/3/tutorial/datastructures.html",
-    "https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range"
+    "https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range",
+    "https://www.pygame.org/docs/ref/event.html",
+    "https://www.pygame.org/docs/ref/time.html",
+    "https://www.pygame.org/docs/ref/rect.html"
   ],
   "lessons": [
     {
@@ -122,119 +125,121 @@
     {
       "id": "u1-w06-l02",
       "lesson": 2,
-      "title": "Totals with list traversal",
+      "title": "Traverse a list to collect stations once",
       "chapter": "arrays",
-      "prepare": "Python editor, paper accumulator traces and suitable integer lists.",
+      "prepare": "Before class verify the nominated editor uses a school-approved Python/Pygame installation. Extract the whole pygame-teaching-pack.zip into a writable disposable folder. Open https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-3 and workbook.md, faded_practice.py, practice-tests.csv and readiness.csv. Run python lab_runner.py 3. Use supplied named state/runner infrastructure; no student-authored classes, paid media or assessed project code. Record device, interpreter and support. Paper traces support reasoning; live window/keyboard evidence remains necessary. The suggested 55-minute allocation is untrialled; use the supplied 50-minute adaptation when required.",
       "slides": [
         {
-          "title": "Totals with list traversal",
-          "strategy": "Learning intention",
-          "notes": "Success means initialise an accumulator, add every list value once and test empty, negative and ordinary cases. Link to Week 4 running totals, now processing retained values.",
+          "title": "Collect each station once",
           "body": [
             "Unit 1 · Week 6 · Lesson 2",
-            "Accumulate a total by visiting every stored value."
+            "Traverse active flags and accumulate the score."
           ],
+          "notes": "Run python lab_runner.py 3. Two stationary stations are at x80 and520 on y180, each24×24. The moving player is24×24; score is one per station once. This is a short bridge lab, not the assessed game or a new weighted task. Success: trace list indices, inactive flags, overlap and score, then transfer to three changed stations. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-3; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Learning intention",
           "minutes": 2
         },
         {
-          "title": "Retrieval: index or value?",
-          "strategy": "Individual retrieval and paired correction",
-          "notes": "For values=[4,-2,6], values[1]=-2, len 3 and non-negative indices 0,1,2. Ask learners to retrieve individually then compare. Revisit position versus value before a loop adds values rather than indices.",
+          "title": "Retrieve traversal and accumulation",
           "body": [
-            "values = [4, -2, 6]",
-            "Find values[1] and len(values).",
-            "List its non-negative indices.",
-            "Compare your answers with a partner."
+            "For [True, True], which indices are valid?",
+            "Where should score be initialised?",
+            "Why can an empty traversal keep its initial total?"
           ],
+          "notes": "Indices0,1; initialise score once in the fresh state before collecting, not inside the traversal or draw function. An empty traversal performs zero additions. Keep this short retrieval from list totals, then connect each index to a station and its active flag. Treat list position and station x as different values. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-3; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Individual retrieval and paired explanation",
           "minutes": 5
         },
         {
-          "title": "A running total through the values",
-          "strategy": "Teacher think-aloud and guided prediction",
-          "notes": "Trace total 0, then 4, then 2, then 8. for value in values supplies each stored value, not each index. += in the chapter is shorthand for total=total+value; use expanded form here. Final print outside loop runs once. Ask learners to explain why total starts before traversal.",
+          "title": "An active flag prevents a second score",
           "body": [
-            "Predict total after each pass.",
-            "Which name receives a stored value?"
+            "Trace a second contact with station 0."
           ],
-          "code": "values = [4, -2, 6]\ntotal = 0\nfor value in values:\n    total = total + value\nprint(total)",
+          "notes": "This focused excerpt uses the supplied rules.overlaps strict predicate and list flags; overlaps matches the edge convention of pygame.Rect.colliderect. The full update constructs player=(int(state[\"x\"]),180,24,24), checks timeout first and does this loop only in playing mode. enumerate supplies indices0,1 and positions80,520. On contact set the corresponding flag False before incrementing. Do not delete elements during traversal or add score in drawing code. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-3; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Teacher modelling and predicted trace",
+          "minutes": 10,
+          "code": "for index, x in enumerate([80, 520]):\n    station = (x, 180, 24, 24)\n    if state[\"active\"][index] and rules.overlaps(\n            player, station):\n        state[\"active\"][index] = False\n        state[\"score\"] += 1"
+        },
+        {
+          "title": "Trace flags and score together",
+          "notes": "Start [True,True], score0. Touch station0: [False,True],1. Repeat same contact: unchanged. Touch station1: [False,False],2; full worked update changes mode to finished. Model first contact; pairs predict repeat and second station before running. The display may outline an inactive station, but that drawing must not alter scoring. A flag belongs to the same index as its station. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-3; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Faded worked table and paired trace",
+          "minutes": 10,
+          "table": [
+            [
+              "Contact",
+              "Active flags afterwards",
+              "Score"
+            ],
+            [
+              "Start",
+              "[True, True]",
+              "0"
+            ],
+            [
+              "Station 0",
+              "[False, True]",
+              "1"
+            ],
+            [
+              "Station 0 again",
+              "Predict",
+              "Predict"
+            ],
+            [
+              "Station 1",
+              "Predict",
+              "Predict"
+            ]
+          ]
+        },
+        {
+          "title": "Touching edges is not overlap",
+          "body": [
+            "Player x=56, width=24; station starts at x=80.",
+            "Compare x=56 with x=57 at the same y.",
+            "Predict, then check Rect.colliderect."
+          ],
+          "notes": "At x56 the right edge is80, so edge-touch is False. At x57 the right edge is81 and there is a one-pixel overlap, so True. Use pygame.Rect(56,180,24,24).colliderect(pygame.Rect(80,180,24,24)) and then57. Strict overlap also requires vertical intersection; an x-only comparison is insufficient. This simple frame-end test can miss a fast crossing during a very large step; do not promise continuous collision physics. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-3; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Predict–run comparison and counterexample",
           "minutes": 6
         },
         {
-          "title": "The accumulator trace",
-          "strategy": "Guided practice with faded support",
-          "notes": "Model first row 0+4=4, learners complete total before/after:4 and 2 for -2, then 2 and 8 for 6. Pair explanations should identify negative addition reducing the running total. Support: give one completed row. Stretch: write an indexed traversal yielding the same total and explain why adding index would give a different result.",
-          "table": [
-            [
-              "Value",
-              "Total before",
-              "Total after"
-            ],
-            [
-              "4",
-              "0",
-              "4"
-            ],
-            [
-              "-2",
-              "Complete",
-              "Complete"
-            ],
-            [
-              "6",
-              "Complete",
-              "Complete"
-            ]
-          ],
-          "minutes": 10
-        },
-        {
-          "title": "An empty traversal still has a total",
-          "strategy": "Guided variation and peer explanation",
-          "notes": "With values=[], body runs zero times and initial total 0 prints. With[-8,-3], total becomes-8 then-11. With[5], one pass gives 5. Learners predict before running. This total algorithm safely handles an empty list because it does not read values[0]. Distinguish this from finding an empty list’s maximum next lesson.",
+          "title": "Change to three two-point stations",
           "body": [
-            "Keep the same total algorithm.",
-            "Predict for [], [-8, -3] and [5].",
-            "Run each case and compare.",
-            "Explain why an empty list needs no index access here."
+            "Complete collection in faded_practice.py.",
+            "Use x=120, 300 and 500; each scores 2 once.",
+            "Test repeated contact and a maximum score of 6."
           ],
-          "minutes": 10
-        },
-        {
-          "title": "Repairing a reset inside the loop",
-          "strategy": "Paired debugging and role changes",
-          "notes": "This deliberately faulty code outputs 6 rather than intended 8 for[4,-2,6]. Each pass resets total, discarding previous values. Move total=0 before the loop. Swap roles and test[],[5],[-8,-3],[4,-2,6], expecting 0,5,-11,8. Faulty version with empty list would have no total binding in a fresh run; repair before testing it. Support: mark indentation. Stretch: explain why[0,0] alone hides the reset fault.",
-          "body": [
-            "Predict this version’s output.",
-            "Repair it and test empty, single and negative cases."
-          ],
-          "code": "values = [4, -2, 6]\nfor value in values:\n    total = 0\n    total = total + value\nprint(total)",
+          "notes": "Use the changed scaffold: active=[True,True,True], duration15000 ms, speed160, initial x40. Complete strict overlaps and the collection portion of update; retain the movement-only guard from last lab. Do not import lab_rules as a solution. Keep stationary flags in a one-dimensional list. First test rule functions without graphics; then copy the runner and adapt its rules import, station positions/list length, score denominator and labels. That runner adaptation is supplied/teacher-guided infrastructure, not a demand to build a complete game. Each station once yields2,4,6; repeated contact gives no increment. Do not remove elements while traversing. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-3; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Independent changed task with optional support",
           "minutes": 12
         },
         {
-          "title": "Does the loop add values or indices?",
-          "strategy": "All-student misconception check",
-          "notes": "For values=[10,20,30], summing indices 0+1+2 gives 3. Correct B. The required value total is 60. Collect simultaneous responses; if several choose A, place index and value columns side by side. range(len(values)) supplies indices, so an indexed accumulator must add values[index].",
+          "title": "Which guard prevents repeated scoring?",
           "body": [
-            "values = [10, 20, 30]",
-            "A loop adds index for index in range(len(values)).",
-            "Its total is A: 60     B: 3",
-            "Choose and explain how to total the stored values."
+            "The player overlaps the same station on many frames.",
+            "A: Score whenever rectangles overlap.",
+            "B: Score only while its active flag is True."
           ],
+          "notes": "B. A would add once per overlapping update. Require both active and overlap, then immediately make the flag False. Ask for the trace after ten repeated contacts, not just the letter. If learners confuse inactive with invisible, show that drawing and rule state are separate responsibilities. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-3; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "All-student hinge question",
           "minutes": 5
         },
         {
-          "title": "Exit ticket: totals and evidence",
-          "strategy": "Independent exit ticket",
-          "notes": "For[3,-1,2], running totals 3,2,4. Empty list total 0. Initialising before loop preserves earlier values. An unequal nonzero list exposes a reset error better than all zeros. Collect a trace and one justified test; use errors for a short accumulator refresher next lesson.",
+          "title": "Show once-only collection",
           "body": [
-            "Trace the total for [3, -1, 2].",
-            "State the expected total for an empty list.",
-            "Explain where initialisation belongs.",
-            "Choose a test that exposes a reset inside the loop."
+            "Demonstrate edge-touch and one-pixel overlap.",
+            "Trace repeated contacts and three station flags.",
+            "Show two new states have independent lists."
           ],
+          "notes": "Record a fresh case after feedback. In the changed lab touching x96 against station120 is False, x97 is True. Repeated contact with station0 keeps score2; all three gives6 and finished. Create two states, mutate one flag, show the other is unaffected. Record expected/actual and support in y11-3 readiness. If only a paper trace was possible, label live collision/keyboard evidence pending. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-3; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Independent exit check and explanation",
           "minutes": 5
         }
-      ]
+      ],
+      "pygameBridge": "pygame/index.html#y11-3",
+      "alignmentReview": "2026-11-09 S01"
     },
     {
       "id": "u1-w06-l03",

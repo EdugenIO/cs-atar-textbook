@@ -7,7 +7,10 @@
   "source": "https://edugenio.github.io/cs-atar-textbook/#functions",
   "references": [
     "https://docs.python.org/3/tutorial/controlflow.html#defining-functions",
-    "https://docs.python.org/3/tutorial/classes.html#python-scopes-and-namespaces"
+    "https://docs.python.org/3/tutorial/classes.html#python-scopes-and-namespaces",
+    "https://www.pygame.org/docs/ref/event.html",
+    "https://www.pygame.org/docs/ref/time.html",
+    "https://www.pygame.org/docs/ref/rect.html"
   ],
   "lessons": [
     {
@@ -147,119 +150,127 @@
     {
       "id": "u1-w05-l02",
       "lesson": 2,
-      "title": "Parameters, arguments and returns",
+      "title": "Use parameters and returns to separate game rules",
       "chapter": "functions",
-      "prepare": "Python editor, badge_cost definition and a paper call-trace template.",
+      "prepare": "Before class verify the nominated editor uses a school-approved Python/Pygame installation. Extract the whole pygame-teaching-pack.zip into a writable disposable folder. Open https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-2 and workbook.md, faded_practice.py, practice-tests.csv and readiness.csv. Run python lab_runner.py 2. Use supplied named state/runner infrastructure; no student-authored classes, paid media or assessed project code. Record device, interpreter and support. Paper traces support reasoning; live window/keyboard evidence remains necessary. The suggested 55-minute allocation is untrialled; use the supplied 50-minute adaptation when required.",
       "slides": [
         {
-          "title": "Parameters, arguments and returns",
-          "strategy": "Learning intention",
-          "notes": "Success means map arguments to parameters, use a return value and distinguish returned results from displayed output.",
+          "title": "Functions separate the game rules",
           "body": [
             "Unit 1 · Week 5 · Lesson 2",
-            "Trace values into a function and back to its caller."
+            "Trace parameters, returns and deliberate state changes."
           ],
+          "notes": "Run python lab_runner.py 2. This stage has movement and an active timer, with no station scoring. Success: explain new_state, command and update, restore reset values and show that a paused update changes neither x nor remaining time. Read state[\"mode\"] as a supplied named slot. Dictionary infrastructure is provided; authoring dictionaries/classes is not a new Year 11 assessment requirement. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-2; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Learning intention",
           "minutes": 2
         },
         {
-          "title": "Retrieval: the first call",
-          "strategy": "Individual retrieval and peer explanation",
-          "notes": "Expected badge_cost(4,3) returns 12. The body runs on a call. A caller can assign its returned result to cost. Allow individual retrieval then pair comparison. Retrace the call if learners think def immediately computes a numeric result.",
+          "title": "Retrieve a call and its result",
           "body": [
-            "Predict badge_cost(4, 3).",
-            "When does the indented function body run?",
-            "How can the caller keep the returned result?",
-            "Compare one answer with a partner."
+            "Which names are parameters in def area(w, h)?",
+            "Which values are arguments in area(7, 2)?",
+            "How do print and return differ?"
           ],
+          "notes": "Give silent thinking time. w and h are parameters; 7 and 2 are arguments; return w*h gives 14 to the caller. print displays text and a function without an explicit return value returns None on normal completion. Use one brief foundation trace, then transfer to the supplied lab functions. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-2; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Individual retrieval and partner explanation",
           "minutes": 5
         },
         {
-          "title": "Parameters and arguments",
-          "strategy": "Worked mapping and guided practice",
-          "notes": "Parameters width,height appear in def area(width,height). Arguments 5,2 appear in area(5,2). Positional binding maps first to first, second to second. Product 10 returns. Learners then map badge_cost(6,4): quantity 6, price 4, result 24. Support: align columns. Keyword and default arguments come later.",
+          "title": "One function returns a fresh state",
+          "body": [
+            "Each call creates a separate active list.",
+            "Trace values returning to the caller."
+          ],
+          "notes": "Excerpt from lab_rules.new_state. Run the supplied stage before tracing. The caller receives a state store; field meanings are mode, horizontal position, active milliseconds, score, active station flags and whether a result was saved. Values are supplied infrastructure. Calling new_state twice creates separate dictionaries/lists. Show that changing a local scalar name does not rebind the caller variable, whereas updating a shared state slot is deliberately visible to the caller. Keep the distinction concrete rather than adding dictionary theory. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-2; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Teacher think-aloud and call trace",
+          "minutes": 10,
+          "code": "def new_state():\n    return {\"mode\": \"ready\", \"x\": 308.0,\n            \"remaining\": 20000, \"score\": 0,\n            \"active\": [True, True],\n            \"saved\": False}\n\nstate = new_state()"
+        },
+        {
+          "title": "Trace the start, pause and reset rules",
+          "notes": "Run stage 2 using Space to start/pause/resume and R to reset. command(state, action) receives a supplied mutable state and deliberately changes it; its normal return value is None. The runner processes transitions before update and discards the delta on a start/resume/reset frame, so paused wall time is not charged on resuming. Reset restores x=308, 20000 ms, score 0, fresh active flags and saved=False. Teacher models ready→playing; pairs predict later rows. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-2; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Guided state trace with faded support",
+          "minutes": 10,
           "table": [
             [
-              "Definition or call",
-              "What to identify"
+              "Before",
+              "Action",
+              "After"
             ],
             [
-              "def area(width, height):",
-              "Parameters: width and height"
+              "ready",
+              "Space",
+              "playing"
             ],
             [
-              "area(5, 2)",
-              "Arguments: 5 and 2"
+              "playing",
+              "Space",
+              "paused"
             ],
             [
-              "Inside this call",
-              "width = 5, height = 2"
+              "paused",
+              "Space",
+              "Predict"
             ],
             [
-              "Returned product",
-              "10"
+              "finished",
+              "Space",
+              "finished"
+            ],
+            [
+              "any mode",
+              "R",
+              "ready; initial values restored"
             ]
-          ],
-          "minutes": 6
+          ]
         },
         {
-          "title": "The caller can use the result",
-          "strategy": "Teacher think-aloud and guided prediction",
-          "notes": "cost is 12, payable 14 and output 14. Trace entry into the function, return to assignment, then caller addition. Packaging is a separate caller calculation. Ask learners to predict badge_cost(2,5) plus 2:12. A result can be stored, displayed or combined.",
+          "title": "A function can change its argument",
           "body": [
-            "Track cost, then payable.",
-            "Which calculation happens in the caller?"
+            "Predict which values the caller sees.",
+            "Which function returns a new value?"
           ],
-          "code": "def badge_cost(quantity, unit_price):\n    return quantity * unit_price\n\ncost = badge_cost(4, 3)\npayable = cost + 2\nprint(payable)",
-          "minutes": 10
+          "notes": "Call rules.update(state,1,250,collect=False) from a playing interior state: x 308→358, remaining 20000→19750. With mode paused, the same call changes neither value. new_state returns a value; update deliberately mutates its argument and returns None. Its direction, dt_ms and collect parameters receive 1,250,False here. Assigning x=999 to an unrelated local name has no effect on state[\"x\"]. Drawing reads state but must not call update. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-2; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Predict, investigate and explain",
+          "minutes": 6,
+          "code": "state = rules.new_state()\nrules.command(state, \"space\")\nrules.update(state, 1, 250, collect=False)\nprint(state[\"x\"], state[\"remaining\"])"
         },
         {
-          "title": "Displaying and returning differ",
-          "strategy": "Predict, run, investigate",
-          "notes": "This deliberately faulty calculation prints 12 inside the function, then caller prints None. Normal completion without an explicit return value returns None. Learners predict both lines, run and explain. Replace inner print with return quantity * unit_price. Corrected caller prints 12 once. A later numeric calculation needs a numeric returned result.",
+          "title": "Complete the changed state transitions",
           "body": [
-            "Predict both lines of output.",
-            "What value does the caller store in cost?"
+            "In faded_practice.py, complete command().",
+            "Reset must restore every changed initial value.",
+            "Test a paused update for 95000 milliseconds."
           ],
-          "code": "def badge_cost(quantity, unit_price):\n    print(quantity * unit_price)\n\ncost = badge_cost(4, 3)\nprint(cost)",
-          "minutes": 10
-        },
-        {
-          "title": "A result the caller can reuse",
-          "strategy": "Paired debugging with role changes",
-          "notes": "Repair print to return. Test (0,3)->0, (4,3)->12, (4,5)->20. The last result plus caller packaging 2 gives 22. Driver repairs while navigator traces the return, then swap. Input and printing stay outside. Support: annotate return-to-assignment. Stretch: explain how an extra print inside would add output without changing a numeric return.",
-          "body": [
-            "Repair the function so it returns the product.",
-            "Test calls with (0, 3), (4, 3) and (4, 5).",
-            "Use the last result in a caller calculation that adds 2.",
-            "Swap roles and explain the path back to the caller."
-          ],
+          "notes": "Use a COPY of faded_practice.py. Changed initial values are x=40, remaining=15000, active=[True,True,True], score=0 and saved=False. Complete Space transitions and reset using new_state; keep the runner and collision/file code supplied or temporarily out of scope. For movement-only practice, complete only the paused/ready/finished guard and bounded movement/timer part of update with collect=False. Keep stations and persistence for later lessons. Make a fresh state per test. A paused 95000 ms update must leave position and remaining unchanged. For playing x=40, direction1,250 ms at speed160 gives x80 and14750 ms. Do not import the worked solution into the independent rules file. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-2; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Independent faded task and test record",
           "minutes": 12
         },
         {
-          "title": "What does the call return?",
-          "strategy": "All-student misconception check",
-          "notes": "Correct B: normal completion with no explicit return value gives None. Displaying 12 does not return 12. Take responses before discussion. If several choose A, assign a call result and inspect it separately. return ends that call; print displays output.",
+          "title": "Does a local name explain mutation?",
           "body": [
-            "A function prints 12 and reaches the end.",
-            "It has no explicit return statement.",
-            "What does the call return? A: 12     B: None",
-            "Choose alone and explain the difference."
+            "command(state, \"reset\") changes the supplied state.",
+            "A: A function can never affect its caller’s data.",
+            "B: Changing a shared state slot is caller-visible."
           ],
+          "notes": "B. Local parameter names refer to objects; deliberately changing shared contents is visible. Rebinding a local parameter to a new object is different. Use an actual reset trace, not an assertion that every function changes globals. If learners choose A, compare one local scalar assignment with state[\"mode\"]=\"paused\". Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-2; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "All-student misconception check",
           "minutes": 5
         },
         {
-          "title": "Exit ticket: map and use the values",
-          "strategy": "Independent exit ticket",
-          "notes": "Parameters width,height receive arguments 7,2 and product 14 returns. Adding 3 in caller gives 17. Collect a labelled mapping and result. Revisit vocabulary or return/None according to errors.",
+          "title": "Explain a return and a reset",
           "body": [
-            "For def area(width, height) and area(7, 2):",
-            "Name the parameters and arguments.",
-            "Predict the returned product.",
-            "If the caller adds 3, what is its new result?"
+            "Identify parameters and arguments in one call.",
+            "Show reset restores a fresh active list.",
+            "Explain why paused time stays unchanged."
           ],
+          "notes": "Use two fresh states: mutate one active flag and show the other still True; after reset, the changed version restores all three flags. Ask for a new unseen action sequence without the reference open. Record expected/actual and support in y11-2 workbook/readiness. Missing evidence means reteach before project issue. No claim of classroom completion is made by this suggested timing. Teaching lab and matching workbook: https://edugenio.github.io/cs-atar-textbook/pygame/index.html#y11-2; https://edugenio.github.io/cs-atar-textbook/pygame/workbook.md. Worked files and changed scaffold are public formative resources. Relevant Pygame references: https://www.pygame.org/docs/ref/event.html ; https://www.pygame.org/docs/ref/time.html ; https://www.pygame.org/docs/ref/rect.html .",
+          "strategy": "Independent exit explanation",
           "minutes": 5
         }
-      ]
+      ],
+      "pygameBridge": "pygame/index.html#y11-2",
+      "alignmentReview": "2026-11-09 S01"
     },
     {
       "id": "u1-w05-l03",
