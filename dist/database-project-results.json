@@ -1,5 +1,37 @@
 [
   {
+    "title": "Core Q2a two-table active-loan report",
+    "scope": "Core Year 11 checkpoint",
+    "sql": "-- CORE Q2a: two-table active-loan report for the Week 5 Lesson 4 checkpoint\nSELECT l.LoanID, e.EquipmentID, e.EquipmentDescription\nFROM Loan AS l\nINNER JOIN Equipment AS e ON l.EquipmentID = e.EquipmentID\nWHERE l.Returned = 0\nORDER BY l.DueDate, l.LoanID;",
+    "columns": [
+      "LoanID",
+      "EquipmentID",
+      "EquipmentDescription"
+    ],
+    "rows": [
+      [
+        "L001",
+        "E01",
+        "Camera"
+      ],
+      [
+        "L006",
+        "E05",
+        "Microphone"
+      ],
+      [
+        "L002",
+        "E02",
+        "Tripod"
+      ],
+      [
+        "L004",
+        "E04",
+        "Camera"
+      ]
+    ]
+  },
+  {
     "title": "Readable active loans",
     "sql": "SELECT l.LoanID, b.BorrowerLabel, e.EquipmentDescription, l.DueDate\nFROM Loan AS l\nINNER JOIN Borrower AS b ON l.BorrowerID = b.BorrowerID\nINNER JOIN Equipment AS e ON l.EquipmentID = e.EquipmentID\nWHERE l.Returned = 0\nORDER BY l.DueDate, l.LoanID;",
     "columns": [
@@ -125,7 +157,8 @@
         "Learner D",
         1
       ]
-    ]
+    ],
+    "scope": "Optional supporting extension for the Year 11 checkpoint"
   },
   {
     "title": "Empty aggregate input",
@@ -171,6 +204,7 @@
         "B004",
         1
       ]
-    ]
+    ],
+    "scope": "Optional supporting extension for the Year 11 checkpoint"
   }
 ]

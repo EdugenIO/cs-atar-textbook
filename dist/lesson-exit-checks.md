@@ -671,13 +671,13 @@ Count equipment per CategoryID. Explain COUNT(*) and GROUP BY in this report.
 
 **If not yet secure:** If only one grand total appears, add grouping and predict each category count.
 
-### Week 5 · Lesson 4 — Independent joined/category reports and feedback
+### Week 5 · Lesson 4 — Core SQL reports and optional extensions
 
-Two equipment rows cost 10 and 15 in C1. Predict SUM and AVG grouped by category, then add a C2 row.
+Two equipment items cost 10 and 15. Predict whole-inventory COUNT, SUM, AVG, MIN and MAX; explain why a loan-history join can inflate the inventory total.
 
-**Expected reasoning:** C1 sum 25/mean 12.5; C2 forms its own group; results depend on the added value.
+**Expected reasoning:** One result row: 2, 25, 12.5, 10, 15. Repeated loan events can repeat one item cost; optional GROUP BY/four-table transfer is not needed.
 
-**If not yet secure:** If averages are added, recompute from the individual rows and count.
+**If not yet secure:** If insecure, trace the two inventory rows and retry costs 8 and 12: 2, 20, 10, 8, 12. Revisit the taught join before any optional extension.
 
 ### Week 6 · Lesson 1 — Inspect creation SQL
 

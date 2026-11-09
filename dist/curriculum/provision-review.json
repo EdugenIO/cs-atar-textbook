@@ -3443,14 +3443,14 @@
         "kind": "file",
         "url": "../database-project-workbook.md",
         "label": "dist/database-project-workbook.md Q1–12; dist/sql-workbook.md",
-        "sha256": "df608e10e1c96b4b87708588e4d7d69a0022613b871fda5493bf1acd6bf8ae8e",
-        "excerpt": "# Database solution — practice workbook Before question 1, follow L001 by hand: match its BorrowerID to Borrower, EquipmentID to Equipment, then CategoryID to Category. Explain why"
+        "sha256": "ded0439a3b43add6bb79c7eba3e5cd6be7dcde1ee5727941113ba823d15f77d2",
+        "excerpt": "# Database solution — practice workbook ## Core and optional scope Core Year 11 practice: taught key joins, whole-result COUNT/SUM/AVG/MIN/MAX, schema/constraints and controlled da"
       },
       "feedback": {
         "kind": "file",
         "url": "../database-project-answers.md",
         "label": "database-project-answers.md",
-        "sha256": "b1521624d8542543bac1eaca71a6429e5877ac30d2eb6cb4d9e5ddcecd39d1ef",
+        "sha256": "b7efa1f85a944d557909f5bb0d568ce5c68605155b80341c7e5a37ad16a3d017",
         "excerpt": "# Database solution — explained answers and teacher checkpoints 1. L002 → B002 Learner B → E02 Tripod → C02 Support. Match Loan.BorrowerID to Borrower.BorrowerID, Loan.EquipmentID "
       },
       "otherTeaching": [
@@ -3458,7 +3458,7 @@
           "kind": "section",
           "url": "../#database-solution/heading-summarise-the-right-records",
           "label": "Summarise the right records",
-          "sha256": "f50c5c51e4f27dbdc393a8e7366cb72f2bb7f5f8cc51dc1309d7205950326765",
+          "sha256": "fc1aa15e8f80cbcd36f4ceee9ad5fb32b1c9f34fe94881301ce49b84583f1068",
           "excerpt": "Before you calculate a total, ask what one input row represents. For inventory value, you need one row per equipment item, so calculate from Equipment. If you join equipment to loa"
         },
         {

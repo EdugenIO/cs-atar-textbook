@@ -7,13 +7,15 @@ Build a four-table equipment-loan database using synthetic data. Each loan is on
 
 ## Acceptance criteria
 1. Creation SQL runs in a new SQLite database; PK, FK, required-field and cost/Returned checks are explained.
-2. Active-loan report shows LoanID, borrower label, equipment ID, category name and due date, ordered oldest first with LoanID breaking ties.
-3. Inventory summary uses COUNT, SUM, AVG, MIN, MAX directly on inventory rows; category report groups items by category.
+2. Core active-loan report uses the taught Loan/Equipment join and shows LoanID, equipment ID and description, ordered oldest due first with LoanID breaking ties. Adding borrower and category labels through all four tables is optional supporting extension.
+3. Inventory summary uses COUNT, SUM, AVG, MIN, MAX directly on inventory rows. A grouped category report is optional supporting extension and is not a core completion requirement.
 4. Demonstrate INSERT of a new synthetic borrower, UPDATE of one confirmed return and DELETE of an unused disposable record. Preview targets and check before/after results.
 5. Reject a duplicate ID, invalid FK, negative cost and invalid Returned value. Explain calendar-date and overlapping-loan limits.
 6. Demonstrate rollback and restoration of a known-good closed database copy.
 7. Supply original/revised ER diagram, data dictionary, saved SQL, test evidence and evaluation.
 8. After security lessons, justify limited access, minimal collected data and backup/recovery decisions. Document which controls were actually implemented versus proposed.
+
+Optional extensions add no required criteria, lesson slots or compulsory home development. Confirm the school-issued assessment scope separately; this public learning project is not a prescribed SCSA task.
 
 ## Allocation: 14 project lessons within the semester
 Week 7: four lessons for requirements, design, initial creation/build and checkpoint.

@@ -398,6 +398,16 @@
           "section": "Filter rows and groups deliberately"
         }
       ]
+    },
+    "u2-l20": {
+      "objective": "Explain and independently check taught inner joins and whole-result aggregates; distinguish optional supporting extensions.",
+      "section": "Test against requirements, then transfer",
+      "also": [
+        {
+          "chapter": "database-solution",
+          "section": "Summarise the right records"
+        }
+      ]
     }
   }
 }

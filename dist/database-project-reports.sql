@@ -1,3 +1,10 @@
+-- CORE Q2a: two-table active-loan report for the Week 5 Lesson 4 checkpoint
+SELECT l.LoanID, e.EquipmentID, e.EquipmentDescription
+FROM Loan AS l
+INNER JOIN Equipment AS e ON l.EquipmentID = e.EquipmentID
+WHERE l.Returned = 0
+ORDER BY l.DueDate, l.LoanID;
+
 -- Readable active loans
 SELECT l.LoanID, b.BorrowerLabel, e.EquipmentDescription, l.DueDate
 FROM Loan AS l
@@ -19,6 +26,7 @@ SELECT COUNT(*) AS ItemCount, SUM(ReplacementCost) AS TotalCost,
        MAX(ReplacementCost) AS HighestCost
 FROM Equipment;
 
+-- OPTIONAL SUPPORTING EXTENSION: GROUP BY, after the core checkpoint.
 -- Borrowers represented in loan history
 SELECT b.BorrowerID, b.BorrowerLabel, COUNT(*) AS LoanCount
 FROM Borrower AS b
@@ -32,7 +40,7 @@ SELECT COUNT(*) AS ItemCount, SUM(ReplacementCost) AS TotalCost,
        MAX(ReplacementCost) AS HighestCost
 FROM Equipment WHERE CategoryID = 'C99';
 
--- Active history per borrower
+-- OPTIONAL SUPPORTING EXTENSION: grouped active history per borrower
 SELECT BorrowerID, COUNT(*) AS ActiveCount
 FROM Loan WHERE Returned = 0
 GROUP BY BorrowerID ORDER BY BorrowerID;

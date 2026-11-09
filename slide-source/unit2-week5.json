@@ -458,38 +458,95 @@
     {
       "id": "u2-w05-l04",
       "lesson": 4,
-      "title": "Independent joins and grouped reports",
+      "title": "Core SQL reports and optional extensions",
       "chapter": "database-solution",
       "source": "https://edugenio.github.io/cs-atar-textbook/#database-solution",
       "queryDatabase": "database-project.sqlite",
-      "prepare": "Open a fresh working copy of database-project.sqlite in a school-approved SQLite tool. Keep sql-starter.sqlite unchanged. The project edition adds Equipment.ReplacementCost. Review database-project-setup.sql and use database-project-workbook.md, database-project-answers.md and database-project-reports.sql. Use fictional data and public explained answers. No cloud account is required. These 55-minute timings are flexible.",
+      "prepare": "Open a fresh working copy of database-project.sqlite in a school-approved SQLite tool. Keep sql-starter.sqlite unchanged. The project edition adds Equipment.ReplacementCost. Review database-project-setup.sql and use database-project-workbook.md, database-project-answers.md and database-project-reports.sql. Use fictional data and public explained answers. No cloud account is required. These 55-minute timings are flexible. Core checkpoint: Q2a two-table report and Q3 whole-inventory aggregates. Q2b four-table transfer and Q4 grouped category summaries are optional supporting extensions; use that time for another core attempt if needed. No additional lesson time or assessment requirement.",
       "slides": [
         {
-          "title": "Independent joins and grouped reports",
+          "title": "Core SQL reports and optional extensions",
           "body": [
             "Unit 2 · Week 5 · Lesson 4",
-            "Check joined reports and summaries against clear requirements."
+            "Core: a taught join and all five whole-result aggregates.",
+            "Optional: grouped summaries and four-table transfer."
           ],
-          "notes": "Use the separate database-project.sqlite edition of the equipment desk. ReplacementCost contains fictional whole-dollar teaching estimates, not current prices. Activities are ungraded. This week practices joins and summaries; controlled changes follow in Week 6. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "notes": "Use database-project.sqlite, a fresh working copy of the project edition. Core: workbook Q2a and Q3; optional extension: Q2b and Q4. Extension success is not a core checkpoint or an added assessment requirement. Teach a retained extension before any locally issued assessment includes it. Year 11 inner joins and all five aggregates remain core; the syllabus sets no maximum join count. This lesson limits independent join depth for pacing. Source: https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF printed p18. Start with the core. Slides 6–7 are optional after a successful independent attempt; otherwise use their 12 minutes for a changed core attempt and feedback.",
           "minutes": 2,
-          "strategy": "Learning intention"
+          "strategy": "Learning intention and scope"
         },
         {
-          "title": "The report requirement comes first",
+          "title": "Core: follow one taught key match",
           "body": [
-            "An active report needs labels, item ID, category and due date.",
-            "Which tables provide those facts?"
+            "Q2a: show active LoanID, EquipmentID and description.",
+            "Match Loan.EquipmentID to Equipment.EquipmentID.",
+            "Sort by DueDate, then LoanID; keep one row per loan."
           ],
-          "notes": "Loan provides LoanID, DueDate and Returned; Borrower provides BorrowerLabel; Equipment provides EquipmentID and CategoryID; Category provides CategoryName. Four tables are needed. Use matching keys, filter Returned=0 and sort oldest due date first, then LoanID. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "notes": "Use database-project.sqlite, a fresh working copy of the project edition. Core: workbook Q2a and Q3; optional extension: Q2b and Q4. Extension success is not a core checkpoint or an added assessment requirement. Teach a retained extension before any locally issued assessment includes it. Year 11 inner joins and all five aggregates remain core; the syllabus sets no maximum join count. This lesson limits independent join depth for pacing. Source: https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF printed p18. Predict L001 E01 Camera; L006 E05 Microphone; L002 E02 Tripod; L004 E04 Camera. Use the two-table Loan/Equipment join. Four stored tables do not require four tables in every query. Earlier three-table models remain valid taught examples.",
           "minutes": 5,
-          "strategy": "Recall and prediction"
+          "strategy": "Retrieval and key tracing"
         },
         {
-          "title": "A summary for each category",
+          "title": "Core: summarise inventory rows",
           "body": [
-            "GROUP BY creates one summary for each category represented."
+            "Predict all five results before running."
           ],
-          "notes": "GROUP BY lists both displayed non-aggregate category fields. This inner join summarises categories having matching items. A category with no Equipment rows is absent. Source rows represent items, not loan events. Expected C01 Imaging 2 1050; C02 Support 1 80; C03 Audio 2 270. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "notes": "Use database-project.sqlite, a fresh working copy of the project edition. Core: workbook Q2a and Q3; optional extension: Q2b and Q4. Extension success is not a core checkpoint or an added assessment requirement. Teach a retained extension before any locally issued assessment includes it. Year 11 inner joins and all five aggregates remain core; the syllabus sets no maximum join count. This lesson limits independent join depth for pacing. Source: https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF printed p18. There are five Equipment records. Execute against the project fixture: one row [5,1400,280.0,80,600]. Joining to loan history first repeats E02. COUNT(*) counts rows; the other functions summarise numeric values. No GROUP BY is needed for one whole-inventory result.",
+          "minutes": 8,
+          "strategy": "Worked prediction",
+          "code": "SELECT COUNT(*) AS ItemCount, SUM(ReplacementCost) AS TotalCost,\nAVG(ReplacementCost) AS MeanCost, MIN(ReplacementCost) AS LowestCost,\nMAX(ReplacementCost) AS HighestCost\nFROM Equipment;",
+          "expectedRows": [
+            [
+              5,
+              1400,
+              280.0,
+              80,
+              600
+            ]
+          ]
+        },
+        {
+          "title": "Core: check the complete summary",
+          "body": [],
+          "notes": "Use database-project.sqlite, a fresh working copy of the project edition. Core: workbook Q2a and Q3; optional extension: Q2b and Q4. Extension success is not a core checkpoint or an added assessment requirement. Teach a retained extension before any locally issued assessment includes it. Year 11 inner joins and all five aggregates remain core; the syllabus sets no maximum join count. This lesson limits independent join depth for pacing. Source: https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF printed p18. Costs are 600,80,150,450,120. Count=5; sum=1400; mean=1400/5=280; minimum=80; maximum=600. For CategoryID C99 the filtered input is empty: COUNT is 0; SUM/AVG/MIN/MAX are NULL. Ask students to explain input row meaning, not simply copy totals.",
+          "minutes": 8,
+          "strategy": "Guided explanation",
+          "table": [
+            [
+              "ItemCount",
+              "TotalCost",
+              "MeanCost",
+              "LowestCost",
+              "HighestCost"
+            ],
+            [
+              "5",
+              "1400",
+              "280.0",
+              "80",
+              "600"
+            ]
+          ]
+        },
+        {
+          "title": "Core: attempt, compare and retry",
+          "body": [
+            "Complete Q2a and Q3 before revealing the answers.",
+            "Predict rows, values and ordering; then run both queries.",
+            "Explain one mismatch and retry with changed input."
+          ],
+          "notes": "Use database-project.sqlite, a fresh working copy of the project edition. Core: workbook Q2a and Q3; optional extension: Q2b and Q4. Extension success is not a core checkpoint or an added assessment requirement. Teach a retained extension before any locally issued assessment includes it. Year 11 inner joins and all five aggregates remain core; the syllabus sets no maximum join count. This lesson limits independent join depth for pacing. Source: https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF printed p18. Use the public answers only after the independent attempt. Q2a returns the four rows traced on slide 2. Q3 uses the summary on slides 3–4. A changed core retry filters Equipment to C01: count 2, sum 1050, mean 525, min 450, max 600. The core exit does not require either optional extension. This lesson is formative, not an assessment event.",
+          "minutes": 15,
+          "strategy": "Independent application and feedback"
+        },
+        {
+          "title": "Optional extension: group by category",
+          "body": [
+            "Continue only after the core; otherwise retry Q2a/Q3."
+          ],
+          "notes": "Use database-project.sqlite, a fresh working copy of the project edition. Core: workbook Q2a and Q3; optional extension: Q2b and Q4. Extension success is not a core checkpoint or an added assessment requirement. Teach a retained extension before any locally issued assessment includes it. Year 11 inner joins and all five aggregates remain core; the syllabus sets no maximum join count. This lesson limits independent join depth for pacing. Source: https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF printed p18. Q4 is optional supporting extension for this Year 11 lesson. Explain how GROUP BY forms one aggregate result per represented category. Every selected non-aggregate field is grouped. Inner join omits categories with no items. Expected C01 Imaging 2 1050; C02 Support 1 80; C03 Audio 2 270. Year 12 pathway Step 10 develops grouping. Do not treat this result as a compulsory core achievement.",
+          "minutes": 6,
+          "strategy": "Optional worked transfer",
           "code": "SELECT c.CategoryID, c.CategoryName, COUNT(*) AS Items,\nSUM(e.ReplacementCost) AS TotalCost\nFROM Category AS c\nINNER JOIN Equipment AS e ON c.CategoryID = e.CategoryID\nGROUP BY c.CategoryID, c.CategoryName\nORDER BY c.CategoryID;",
           "expectedRows": [
             [
@@ -510,18 +567,20 @@
               2,
               270
             ]
-          ],
-          "minutes": 6,
-          "strategy": "Worked example"
+          ]
         },
         {
-          "title": "The complete category summary",
+          "title": "Optional extension: check grouped totals",
+          "body": [],
+          "notes": "Use database-project.sqlite, a fresh working copy of the project edition. Core: workbook Q2a and Q3; optional extension: Q2b and Q4. Extension success is not a core checkpoint or an added assessment requirement. Teach a retained extension before any locally issued assessment includes it. Year 11 inner joins and all five aggregates remain core; the syllabus sets no maximum join count. This lesson limits independent join depth for pacing. Source: https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF printed p18. Q4 grouped counts sum to 5 and totals to 1400, matching the core inventory result. Optional Q2b adds borrower and category labels through a four-table join; full SQL and all four expected rows are in the explained answers. It extends independent join depth for this lesson, not a syllabus prohibition on four-table queries. Do not add it to core completion criteria or compulsory homework. If time is short, defer it; Year 12 pathway Step 09 provides four-table teaching.",
+          "minutes": 6,
+          "strategy": "Optional result comparison",
           "table": [
             [
               "CategoryID",
               "CategoryName",
               "Items",
-              "TotalCost ($)"
+              "TotalCost"
             ],
             [
               "C01",
@@ -541,71 +600,21 @@
               "2",
               "270"
             ]
-          ],
-          "notes": "Cross-check 2+1+2=5 items and 1050+80+270=1400 dollars. These totals match the ungrouped inventory report. The input is Category joined to Equipment, not Loan. This result does not establish the count of active loans. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
-          "minutes": 10,
-          "strategy": "Teacher model with predictions"
+          ]
         },
         {
-          "title": "Checks for joined and summary reports",
-          "table": [
-            [
-              "Report",
-              "What one input row represents",
-              "Useful check"
-            ],
-            [
-              "Active loan report",
-              "A loan event",
-              "Four rows and correct labels"
-            ],
-            [
-              "Inventory summary",
-              "An equipment item",
-              "Five items and total 1400"
-            ],
-            [
-              "Category summary",
-              "An item within a category",
-              "Counts/totals agree with inventory"
-            ]
-          ],
-          "notes": "Ask partners to explain the row meaning before checking totals. A plausible result can use the wrong input grain. Acceptance criteria are conditions you can check against requirements. These are ungraded self-review checks; no assessment score or tracking is added. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
-          "minutes": 10,
-          "strategy": "Guided paired practice"
-        },
-        {
-          "title": "Two reports to build independently",
+          "title": "Core exit: explain a fresh result",
           "body": [
-            "Complete workbook questions 2 and 4.",
-            "Predict the rows, columns and order before running.",
-            "Compare the results, explain differences and correct the SQL."
+            "Costs 10 and 15: predict COUNT, SUM, AVG, MIN and MAX.",
+            "Why can loan history give the wrong inventory total?",
+            "Optional extension success is not needed for this check."
           ],
-          "notes": "Question 2: SELECT l.LoanID, b.BorrowerLabel, e.EquipmentID, c.CategoryName, l.DueDate FROM Loan AS l INNER JOIN Borrower AS b ON l.BorrowerID=b.BorrowerID INNER JOIN Equipment AS e ON l.EquipmentID=e.EquipmentID INNER JOIN Category AS c ON e.CategoryID=c.CategoryID WHERE l.Returned=0 ORDER BY l.DueDate,l.LoanID; rows L001 Learner A E01 Imaging 2026-04-06; L006 Learner D E05 Audio 2026-04-07; L002 Learner B E02 Support 2026-04-08; L004 Learner C E04 Imaging 2026-04-10. Question 4 uses the category summary shown. Inspect creation SQL to identify PK, FK, NOT NULL and CHECK; creating/testing it and controlled data changes are taught next week. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
-          "minutes": 12,
-          "strategy": "Independent application"
-        },
-        {
-          "title": "A category with no items",
-          "body": [
-            "A new category has no Equipment rows.",
-            "Will the shown inner-join category summary display a zero for it?"
-          ],
-          "notes": "No. INNER JOIN supplies no input rows for that category, so it has no group in this query. Reporting all categories with zero counts needs a different query design. Do not confuse this with an ungrouped aggregate over empty input, which produces one summary row. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
+          "notes": "Use database-project.sqlite, a fresh working copy of the project edition. Core: workbook Q2a and Q3; optional extension: Q2b and Q4. Extension success is not a core checkpoint or an added assessment requirement. Teach a retained extension before any locally issued assessment includes it. Year 11 inner joins and all five aggregates remain core; the syllabus sets no maximum join count. This lesson limits independent join depth for pacing. Source: https://senior-secondary.scsa.wa.edu.au/__data/assets/pdf_file/0020/1232507/Computer-Science-ATAR-Year-11-Syllabus-for-teaching-from-2026.PDF printed p18. Without notes: [2,25,12.5,10,15]. One equipment item may appear in several loan events, duplicating its cost if history rows are summed as inventory. If insecure, trace the two original equipment rows and retry using 8 and 12: [2,20,10,8,12]. Week 6 teaches creation, constraints and controlled changes; those are not this lesson’s objective.",
           "minutes": 5,
-          "strategy": "Misconception check with reasons"
-        },
-        {
-          "title": "A corrected report to explain",
-          "body": [
-            "Name one incorrect join or summary choice you corrected.",
-            "Give a new case that would expose the same mistake."
-          ],
-          "notes": "Examples: two items with the same description expose description matching; a repeated loan for one item exposes duplicated inventory costs; an unused parent exposes inner-join omission. Record expected and actual results for self-review. Week 6 continues creation/constraints and controlled INSERT, UPDATE and DELETE practice with recovery. Teaching source: https://edugenio.github.io/cs-atar-textbook/#database-solution.",
-          "minutes": 5,
-          "strategy": "Reflection and a fresh example"
+          "strategy": "Independent exit and planned retry"
         }
-      ]
+      ],
+      "scopeReview": "S04 · 9 November 2026"
     }
   ]
 }

@@ -274,7 +274,7 @@ Feedback and fresh retry:
 
 ## Step 08 - Independent rehearsal before the Year 11 checkpoint
 
-Use the changed four-table database and the separate three-table schema task from Step 05. Make an independent attempt before revealing reference SQL. Retain predicted results, actual results and a short explanation of the first mismatch. After feedback, retry using the other data variant or a teacher-supplied changed requirement. This public rehearsal is formative, not a secure assessment or a compulsory assessment date.
+Use the changed four-table database and the separate three-table schema task from Step 05. Make an independent attempt before revealing reference SQL. Retain predicted results, actual results and a short explanation of the first mismatch. After feedback, retry using the other data variant or a teacher-supplied changed requirement. This public rehearsal is formative, not a secure assessment or a compulsory assessment date. For Week 5 Lesson 4, database-project-workbook.md Q2a/Q3 are the core checkpoint. Q2b four-table transfer and Q4 grouping in that separate project workbook are optional supporting extensions, not required to complete this Year 11 checkpoint. Four stored tables do not require every query to join all four; the syllabus does not set a maximum join count.
 
 Textbook: https://edugenio.github.io/cs-atar-textbook/#database-solution
 

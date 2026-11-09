@@ -1524,6 +1524,16 @@
         "type": "code"
       },
       {
+        "label": "Step 09",
+        "href": "../sql/index.html#step-09",
+        "type": "activity"
+      },
+      {
+        "label": "Step 10",
+        "href": "../sql/index.html#step-10",
+        "type": "activity"
+      },
+      {
         "label": "Download database project pack",
         "href": "../database-project-pack.zip",
         "type": "download"

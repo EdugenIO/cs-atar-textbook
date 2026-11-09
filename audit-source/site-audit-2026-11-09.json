@@ -70,7 +70,9 @@
       "action": "Keep the core Year 11 rehearsal at its taught depth. Label and separate grouped/four-table transfer as supporting extension, or reschedule it into the Year 12 sequence. Reconcile the chapter/workbook/lesson expectations at the same time.",
       "completeWhen": "A teacher can identify the required Year 11 attempt and optional extension on slides and in notes. Extension success is not silently required for the core task; teaching and local assessment scope agree.",
       "owner": "Curriculum/SQL teacher",
-      "status": "Open"
+      "status": "Complete",
+      "completedDate": "2026-11-09",
+      "verification": "Week 5 Lesson 4 rebuilt around core Q2a/Q3 with optional Q2b/Q4. Core exit, planner objective/activity, chapter, workbook, brief, answers and download packs aligned. Eight final slides visually inspected; SQL outputs executed against the named fixture. Local pacing choice is explicitly separate from syllabus join-count limits. Classroom timing and school assessment scope remain teacher decisions; release checks gate publication."
     },
     {
       "id": "S05",

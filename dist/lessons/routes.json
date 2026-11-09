@@ -2550,15 +2550,15 @@
     "lesson": 4,
     "number": 20,
     "kind": "Review & transfer",
-    "title": "Independent joined/category reports and feedback",
-    "activity": "independent joined/category reports and feedback.",
-    "objective": "Use INSERT, UPDATE and DELETE with checks and recovery.",
-    "check": "Two equipment rows cost 10 and 15 in C1. Predict SUM and AVG grouped by category, then add a C2 row.",
+    "title": "Core SQL reports and optional extensions",
+    "activity": "Independently attempt workbook Q2a taught join and Q3 whole-result aggregates, compare results and retry. Optional Q2b four-table transfer/Q4 grouping only after core feedback; otherwise use that time for core practice.",
+    "objective": "Explain and independently check taught inner joins and whole-result aggregates; distinguish optional supporting extensions.",
+    "check": "Two equipment items cost 10 and 15. Predict whole-inventory COUNT, SUM, AVG, MIN and MAX; explain why a loan-history join can inflate the inventory total.",
     "chapter": "database-solution",
     "chapterTitle": "Building a database solution",
     "workbook": "database-project-workbook.md",
-    "checkExpected": "C1 sum 25/mean 12.5; C2 forms its own group; results depend on the added value.",
-    "checkReteach": "If averages are added, recompute from the individual rows and count.",
+    "checkExpected": "One result row: 2, 25, 12.5, 10, 15. Repeated loan events can repeat one item cost; optional GROUP BY/four-table transfer is not needed.",
+    "checkReteach": "If insecure, trace the two inventory rows and retry costs 8 and 12: 2, 20, 10, 8, 12. Revisit the taught join before any optional extension.",
     "sqlPractice": {
       "id": "03",
       "title": "Match a known key in an INNER JOIN",
@@ -2574,7 +2574,13 @@
     "readChapter": "database-solution",
     "read": "Test against requirements, then transfer",
     "readHref": "../#database-solution/heading-test-against-requirements-then-transfer",
-    "also": [],
+    "also": [
+      {
+        "chapter": "database-solution",
+        "title": "Summarise the right records",
+        "href": "../#database-solution/heading-summarise-the-right-records"
+      }
+    ],
     "worked": "Summarise the right records",
     "workedHref": "../#database-solution/heading-summarise-the-right-records",
     "ready": "Write SELECT queries and explain table keys and dependencies.",

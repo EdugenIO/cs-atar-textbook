@@ -4,7 +4,7 @@ chapters.push({
   "week": 1,
   "title": "Relational database foundations",
   "badge": "DATA MANAGEMENT",
-  "next": "#plan-2-1",
+  "next": "#entities-relationships",
   "intro": "Find out what a school equipment desk needs to know, then use its loan records to answer a question. You will compare a simple register with related database tables.",
   "objectives": [
     "Distinguish data from information in a stated context.",
@@ -102,7 +102,7 @@ chapters.push({
   "week": 2,
   "title": "Modelling entities and relationships",
   "badge": "DATABASE DESIGN",
-  "next": "#plan-2-2",
+  "next": "#normalisation",
   "intro": "Decide what each table should store before you build it. You will identify borrowers, equipment and loan events, then connect them with keys and clear relationship rules.",
   "objectives": [
     "Distinguish entity types, attributes, records and fields.",
@@ -198,15 +198,13 @@ chapters.push({
   }
 });
 
-chapters.find(c=>c.id==='database-foundations').next='#entities-relationships';
-
 chapters.push({
   "id": "normalisation",
   "unit": 2,
   "week": 3,
   "title": "Normalisation",
   "badge": "DATABASE DESIGN",
-  "next": "#plan-2-3",
+  "next": "#sql-basics",
   "intro": "Find out why repeated facts make a register hard to maintain. You will reorganise reservation records into related tables while keeping every original event. This process is called normalisation.",
   "objectives": [
     "Recognise insert, update and delete anomalies.",
@@ -305,7 +303,6 @@ chapters.push({
     "explanation": "CategoryID determines CategoryName. Give category facts their own keyed table while preserving the link from Equipment."
   }
 });
-chapters.find(c=>c.id==='entities-relationships').next='#normalisation';
 
 chapters.push({
   "id": "sql-basics",
@@ -392,7 +389,7 @@ chapters.push({
   ],
   "reference": "https://www.sqlite.org/lang_select.html",
   "refTitle": "SQLite SELECT reference",
-  "next": "#plan-2-4",
+  "next": "#database-solution",
   "quiz": {
     "q": "Which condition matches an unreturned loan due before 8 April 2026?",
     "options": [
@@ -404,7 +401,6 @@ chapters.push({
     "explanation": "Both conditions must hold: unreturned and earlier than the fixed reporting date. OR also admits returned old loans or active loans that are not overdue."
   }
 });
-chapters.find(c=>c.id==='normalisation').next='#sql-basics';
 
 chapters.push({
   "id": "database-solution",
@@ -423,7 +419,7 @@ chapters.push({
   "sections": [
     [
       "Define the equipment-desk solution",
-      "<p>Start with what the desk needs to do:</p><ul><li>Show active loans with readable borrower and item labels.</li><li>Report loan history by category.</li><li>Summarise inventory value and count each borrower’s loans.</li><li>Maintain records without losing valid history.</li></ul><p>Turn each need into an <strong>acceptance criterion</strong>: a condition you can check to decide whether your solution works as intended.</p><p>The solution retains Borrower, Category, Equipment and Loan. Each loan records one item. LoanID identifies the event; BorrowerID and EquipmentID reference existing records. The project starter adds ReplacementCost to Equipment: fictional non-negative whole-dollar estimates of 600, 80, 150, 450 and 120 for E01–E05. These are teaching data, not current prices. No personal details are needed.</p><p>Weeks 5–6 teach and practice the required SQL. Week 7 launches the project; ten further build/testing lessons are embedded in weeks 8–12 while security teaching continues. Total project allocation: 14 lessons, including the four week-7 lessons.</p>"
+      "<p class=\"notice\"><strong>Core and optional scope:</strong> Year 11 core practice here uses taught key joins and whole-result COUNT, SUM, AVG, MIN and MAX. Week 5 Lesson 4 checks workbook Q2a and Q3. Q2b four-table transfer and Q4 grouped summaries are optional supporting extensions; success is not a core completion gate. Use extension time for another core attempt when needed. This is a local pacing choice, not a syllabus maximum on joined tables. Confirm and teach any extension retained in a school-issued assessment. Year 12 <a href=\"sql/index.html#step-09\">Step 09</a> and <a href=\"sql/index.html#step-10\">Step 10</a> develop four-table reports and grouping.</p><p>Start with what the desk needs to do:</p><ul><li>Show active loans with readable borrower and item labels.</li><li>Report loan history by category.</li><li>Summarise inventory value and count each borrower’s loans.</li><li>Maintain records without losing valid history.</li></ul><p>Turn each need into an <strong>acceptance criterion</strong>: a condition you can check to decide whether your solution works as intended.</p><p>The solution retains Borrower, Category, Equipment and Loan. Each loan records one item. LoanID identifies the event; BorrowerID and EquipmentID reference existing records. The project starter adds ReplacementCost to Equipment: fictional non-negative whole-dollar estimates of 600, 80, 150, 450 and 120 for E01–E05. These are teaching data, not current prices. No personal details are needed.</p><p>Weeks 5–6 teach and practice the required SQL. Week 7 launches the project; ten further build/testing lessons are embedded in weeks 8–12 while security teaching continues. Total project allocation: 14 lessons, including the four week-7 lessons.</p>"
     ],
     [
       "Create and inspect four related tables",
@@ -435,7 +431,7 @@ chapters.push({
     ],
     [
       "Summarise the right records",
-      "<p>Before you calculate a total, ask what one input row represents. For inventory value, you need one row per equipment item, so calculate from Equipment.</p><p>If you join equipment to loan history first, E02 appears in two loan events. Adding both rows would count the same item twice. This is a row-level mistake even when the SQL runs successfully.</p><pre><code>SELECT COUNT(*) AS ItemCount, SUM(ReplacementCost) AS TotalCost,\n       AVG(ReplacementCost) AS MeanCost, MIN(ReplacementCost) AS LowestCost,\n       MAX(ReplacementCost) AS HighestCost\nFROM Equipment;</code></pre><div class=\"table-scroll\"><table><tr><th>ItemCount</th><th>TotalCost</th><th>MeanCost</th><th>LowestCost</th><th>HighestCost</th></tr><tr><td>5</td><td>1400</td><td>280.0</td><td>80</td><td>600</td></tr></table></div><p>These five costs total 1400; the mean is 280, with minimum 80 and maximum 600. COUNT(*) counts rows; COUNT(field) counts non-NULL values. SUM, AVG, MIN and MAX ignore NULL values. Keep numeric data numeric; averaging IDs has no useful interpretation.</p><pre><code>SELECT b.BorrowerID, b.BorrowerLabel, COUNT(*) AS LoanCount\nFROM Borrower AS b\nINNER JOIN Loan AS l ON b.BorrowerID = l.BorrowerID\nGROUP BY b.BorrowerID, b.BorrowerLabel\nORDER BY b.BorrowerID;</code></pre><div class=\"table-scroll\"><table><tr><th>BorrowerID</th><th>BorrowerLabel</th><th>LoanCount</th></tr><tr><td>B001</td><td>Learner A</td><td>2</td></tr><tr><td>B002</td><td>Learner B</td><td>2</td></tr><tr><td>B003</td><td>Learner C</td><td>1</td></tr><tr><td>B004</td><td>Learner D</td><td>1</td></tr></table></div><p>GROUP BY makes a separate summary for each borrower represented in loan history. List both displayed non-aggregate borrower fields in GROUP BY. It is an extension to support the report, not a reason to select arbitrary ungrouped fields.</p><pre><code>SELECT COUNT(*) AS ItemCount, SUM(ReplacementCost) AS TotalCost,\n       AVG(ReplacementCost) AS MeanCost, MIN(ReplacementCost) AS LowestCost,\n       MAX(ReplacementCost) AS HighestCost\nFROM Equipment WHERE CategoryID = &#x27;C99&#x27;;</code></pre><div class=\"table-scroll\"><table><tr><th>ItemCount</th><th>TotalCost</th><th>MeanCost</th><th>LowestCost</th><th>HighestCost</th></tr><tr><td>0</td><td>NULL</td><td>NULL</td><td>NULL</td><td>NULL</td></tr></table></div><p>An ungrouped aggregate still produces one summary row for empty input: COUNT is 0 and these other aggregates are NULL. NULL is not automatically zero. A GROUP BY query with no input groups returns no rows.</p>"
+      "<p>Before you calculate a total, ask what one input row represents. For inventory value, you need one row per equipment item, so calculate from Equipment.</p><p>If you join equipment to loan history first, E02 appears in two loan events. Adding both rows would count the same item twice. This is a row-level mistake even when the SQL runs successfully.</p><pre><code>SELECT COUNT(*) AS ItemCount, SUM(ReplacementCost) AS TotalCost,\n       AVG(ReplacementCost) AS MeanCost, MIN(ReplacementCost) AS LowestCost,\n       MAX(ReplacementCost) AS HighestCost\nFROM Equipment;</code></pre><div class=\"table-scroll\"><table><tr><th>ItemCount</th><th>TotalCost</th><th>MeanCost</th><th>LowestCost</th><th>HighestCost</th></tr><tr><td>5</td><td>1400</td><td>280.0</td><td>80</td><td>600</td></tr></table></div><p>These five costs total 1400; the mean is 280, with minimum 80 and maximum 600. COUNT(*) counts rows; COUNT(field) counts non-NULL values. SUM, AVG, MIN and MAX ignore NULL values. Keep numeric data numeric; averaging IDs has no useful interpretation.</p><p><strong>Optional supporting extension: grouped borrower counts.</strong> Complete the whole-inventory core result first; the grouped report below is not a Year 11 lesson checkpoint.</p><pre><code>SELECT b.BorrowerID, b.BorrowerLabel, COUNT(*) AS LoanCount\nFROM Borrower AS b\nINNER JOIN Loan AS l ON b.BorrowerID = l.BorrowerID\nGROUP BY b.BorrowerID, b.BorrowerLabel\nORDER BY b.BorrowerID;</code></pre><div class=\"table-scroll\"><table><tr><th>BorrowerID</th><th>BorrowerLabel</th><th>LoanCount</th></tr><tr><td>B001</td><td>Learner A</td><td>2</td></tr><tr><td>B002</td><td>Learner B</td><td>2</td></tr><tr><td>B003</td><td>Learner C</td><td>1</td></tr><tr><td>B004</td><td>Learner D</td><td>1</td></tr></table></div><p>GROUP BY makes a separate summary for each borrower represented in loan history. List both displayed non-aggregate borrower fields in GROUP BY. It is an extension to support the report, not a reason to select arbitrary ungrouped fields.</p><pre><code>SELECT COUNT(*) AS ItemCount, SUM(ReplacementCost) AS TotalCost,\n       AVG(ReplacementCost) AS MeanCost, MIN(ReplacementCost) AS LowestCost,\n       MAX(ReplacementCost) AS HighestCost\nFROM Equipment WHERE CategoryID = &#x27;C99&#x27;;</code></pre><div class=\"table-scroll\"><table><tr><th>ItemCount</th><th>TotalCost</th><th>MeanCost</th><th>LowestCost</th><th>HighestCost</th></tr><tr><td>0</td><td>NULL</td><td>NULL</td><td>NULL</td><td>NULL</td></tr></table></div><p>An ungrouped aggregate still produces one summary row for empty input: COUNT is 0 and these other aggregates are NULL. NULL is not automatically zero. A GROUP BY query with no input groups returns no rows.</p>"
     ],
     [
       "Insert a new record deliberately",
@@ -455,7 +451,7 @@ chapters.push({
     ],
     [
       "Test against requirements, then transfer",
-      "<p>For each requirement, decide how you will check it before running the test. Record the requirement, input or action, expected outcome, actual evidence and pass/fail result in a <strong>test log</strong>.</p><p>Include ordinary cases, boundaries, invalid references, duplicate IDs, negative costs, an empty report and recovery. Use fresh copies or roll back between tests so an earlier change cannot silently alter the next test’s starting state.</p><p>Independent report: list active loans with LoanID, BorrowerLabel, EquipmentID, CategoryName and DueDate, oldest first; then show inventory totals for each category. Explain why the inventory summary must not count loan events.</p><p>Transfer: add an unused synthetic borrower in a transaction. Predict whether the inner-join borrower count report will display them, check the prediction, then roll back. It will omit them because no Loan row matches. Reporting every borrower including zero-loan borrowers would require a different query design.</p>"
+      "<p class=\"notice\"><strong>Core and optional scope:</strong> Year 11 core practice here uses taught key joins and whole-result COUNT, SUM, AVG, MIN and MAX. Week 5 Lesson 4 checks workbook Q2a and Q3. Q2b four-table transfer and Q4 grouped summaries are optional supporting extensions; success is not a core completion gate. Use extension time for another core attempt when needed. This is a local pacing choice, not a syllabus maximum on joined tables. Confirm and teach any extension retained in a school-issued assessment. Year 12 <a href=\"sql/index.html#step-09\">Step 09</a> and <a href=\"sql/index.html#step-10\">Step 10</a> develop four-table reports and grouping.</p><p>For each requirement, decide how you will check it before running the test. Record the requirement, input or action, expected outcome, actual evidence and pass/fail result in a <strong>test log</strong>.</p><p>Include ordinary cases, boundaries, invalid references, duplicate IDs, negative costs, an empty report and recovery. Use fresh copies or roll back between tests so an earlier change cannot silently alter the next test’s starting state.</p><p>Independent report: list active loans with LoanID, BorrowerLabel, EquipmentID, CategoryName and DueDate, oldest first; then show inventory totals for each category. Explain why the inventory summary must not count loan events.</p><p>Transfer: add an unused synthetic borrower in a transaction. Predict whether the inner-join borrower count report will display them, check the prediction, then roll back. It will omit them because no Loan row matches. Reporting every borrower including zero-loan borrowers would require a different query design.</p>"
     ],
     [
       "Launch, document and evaluate the project",
@@ -489,14 +485,14 @@ chapters.push({
       "No. Stop, inspect the transaction state and roll back an active practice transaction. The rehearsal explicitly ends with ROLLBACK."
     ]
   ],
-  "task": "Complete the workbook, then launch the project using the brief. Demonstrate a joined report, an inventory summary, checked modifications and recovery. Supply ER/data dictionary documentation and a test log with actual evidence.",
+  "task": "Complete the core workbook tasks after their teaching, then launch the core project brief. Week 5 Lesson 4 uses Q2a (taught Loan/Equipment join) and Q3 (whole-result aggregates). Q2b four-table transfer and Q4 GROUP BY are optional supporting extensions. Later demonstrate checked modifications, schema/constraints and recovery after explicit instruction. Supply ER/data dictionary documentation and actual test evidence.",
   "solution": "The original active report has four rows. Inventory summary is five items, total 1400, mean 280, minimum 80 and maximum 600. Updating L001 to Returned = 1 leaves three active loans. The B005 insert/delete rehearsal ends with rollback, restoring four borrowers and L001 Returned = 0. Keep report evidence and project changes separate from the untouched starter.",
   "recap": "Start with a requirement you can check. Join records using the intended identifiers and calculate summaries from the right rows. Preview a change, make it, then check the result. Use transactions for controlled practice and test a restored backup for recovery.",
   "lessons": [
     "Week 5, lesson 1: trace key matches; build the active-loan inner join.",
     "Week 5, lesson 2: join categories; diagnose missing/wrong matches.",
     "Week 5, lesson 3: aggregate inventory; distinguish row counts and numeric summaries.",
-    "Week 5, lesson 4: independent joined/category reports and feedback.",
+    "Week 5, lesson 4: independently check a taught join and whole-result aggregates (Q2a/Q3); optional grouping/four-table transfer (Q4/Q2b) after core feedback.",
     "Week 6, lesson 1: inspect creation SQL; run it in a new database; test keys/checks.",
     "Week 6, lesson 2: INSERT and UPDATE with before/after evidence.",
     "Week 6, lesson 3: DELETE disposable records; transaction/recovery rehearsal.",
@@ -508,7 +504,7 @@ chapters.push({
   ],
   "reference": "https://www.sqlite.org/lang_select.html",
   "refTitle": "SQLite SELECT and join reference",
-  "next": "#plan-2-5",
+  "next": "#security-threats",
   "quiz": {
     "q": "Where should the total replacement cost of the five inventory items be calculated?",
     "options": [
@@ -520,7 +516,6 @@ chapters.push({
     "explanation": "Inventory value concerns equipment items. Loan history can repeat an item, so summing after that join can count it more than once."
   }
 });
-chapters.find(c=>c.id==='sql-basics').next='#database-solution';
 
 chapters.push({
   "id": "security-threats",
@@ -636,7 +631,7 @@ chapters.push({
   ],
   "reference": "https://www.cyber.gov.au/guidance/learn-about-ransomware",
   "refTitle": "ASD ransomware guidance",
-  "next": "#plan-2-6",
+  "next": "#responsible-data",
   "quiz": {
     "q": "An authorised account reads reports but is blocked from changing loans. Which AAA component determines that restriction?",
     "options": [
@@ -648,7 +643,6 @@ chapters.push({
     "explanation": "Authorisation defines permitted actions. Authentication checks identity and accounting records activity."
   }
 });
-chapters.find(c=>c.id==='database-solution').next='#security-threats';
 
 chapters.push({
   "id": "responsible-data",
@@ -755,4 +749,3 @@ chapters.push({
     "explanation": "A checked restoration demonstrates recovery in the tested conditions. File existence or a proposed policy alone does not."
   }
 });
-chapters.find(c=>c.id==='security-threats').next='#responsible-data';

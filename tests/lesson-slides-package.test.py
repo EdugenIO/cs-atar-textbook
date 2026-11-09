@@ -88,8 +88,8 @@ for lesson in data["lessons"]:
             assert actual==slide["expectedRows"], lesson["id"]+": "+slide["title"]
             checked+=1
 for connection in connections.values(): connection.close()
-assert checked==11
-print("Unit 2 Week 4 pack matches four decks; all eleven worked SQL results across Weeks 4–5 verified.")
+assert checked==12
+print("Unit 2 Week 4 pack matches four decks; all twelve worked SQL results across Weeks 4–5 verified.")
 
 with zipfile.ZipFile(root / "dist/slides/unit2-week5-lesson-slides.zip") as bundle:
     assert bundle.testzip() is None
