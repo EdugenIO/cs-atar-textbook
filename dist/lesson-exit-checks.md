@@ -617,11 +617,11 @@ ClubID determines ClubName; MemberID determines MemberName; each member joins ma
 
 ### Week 4 · Lesson 1 — Retrieve keys/table roles
 
-For Equipment(EquipmentID,Name), write a query returning only Name in EquipmentID order.
+For the named Equipment table, return EquipmentDescription in EquipmentID order.
 
-**Expected reasoning:** SELECT Name FROM Equipment ORDER BY EquipmentID; selected fields and order have separate roles.
+**Expected reasoning:** SELECT EquipmentDescription FROM Equipment ORDER BY EquipmentID; selected fields and order have separate roles.
 
-**If not yet secure:** If all columns are returned, distinguish SELECT projection from row filtering.
+**If not yet secure:** If the identifier is returned instead, separate the SELECT column from the ORDER BY field and retry.
 
 ### Week 4 · Lesson 2 — Filter text and Returned values
 
@@ -633,19 +633,19 @@ Write SQL for Loan rows with Returned=0; explain why a text name literal needs q
 
 ### Week 4 · Lesson 3 — Combine conditions
 
-Write a condition for Returned=0 and (CategoryID='C1' or CategoryID='C2'). Why parentheses?
+Write a condition for Returned=0 and (BorrowerID='B001' or BorrowerID='B002') on Loan. Why parentheses?
 
-**Expected reasoning:** AND applies to either category; parentheses preserve the intended grouped alternatives.
+**Expected reasoning:** WHERE Returned=0 AND (BorrowerID='B001' OR BorrowerID='B002'); AND applies to either borrower; parentheses preserve the intended alternatives.
 
-**If not yet secure:** If returned C2 loans slip through, evaluate the condition with and without grouping.
+**If not yet secure:** If a returned loan is included, trace each Boolean condition for L005 and add the intended parentheses.
 
 ### Week 4 · Lesson 4 — Complete the independent reports
 
-Create a report of names beginning 'Cam', sorted by Name; predict an empty result when none match.
+Using Equipment, report descriptions beginning 'Cam', sorted by EquipmentDescription. Explain a valid empty result.
 
-**Expected reasoning:** WHERE Name LIKE 'Cam%' ORDER BY Name; empty result is not necessarily an error.
+**Expected reasoning:** SELECT EquipmentDescription FROM Equipment WHERE EquipmentDescription LIKE 'Cam%' ORDER BY EquipmentDescription; no matching rows can be a valid result.
 
-**If not yet secure:** If % is placed at the front too, compare begins-with with contains.
+**If not yet secure:** If Name is used, inspect the actual fields and replace it with EquipmentDescription; retry a prefix with no match.
 
 ### Week 5 · Lesson 1 — Trace key matches
 
@@ -665,11 +665,11 @@ Write the key link between Equipment e and Category c when e.CategoryID referenc
 
 ### Week 5 · Lesson 3 — Aggregate inventory
 
-Count equipment per CategoryID. Explain COUNT(*) and GROUP BY in this report.
+Using Equipment inventory rows, predict COUNT, SUM, AVG, MIN and MAX of ReplacementCost. Why not sum Loan history?
 
-**Expected reasoning:** SELECT CategoryID,COUNT(*) FROM Equipment GROUP BY CategoryID; one group per identifier.
+**Expected reasoning:** Count 5, sum 1400, mean 280, min 80, max 600. Loan history repeats E02, inflating its cost contribution. GROUP BY is optional here.
 
-**If not yet secure:** If only one grand total appears, add grouping and predict each category count.
+**If not yet secure:** If input rows are confused, trace the five inventory records and the repeated E02 event; retry filtered category C01.
 
 ### Week 5 · Lesson 4 — Core SQL reports and optional extensions
 

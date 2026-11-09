@@ -48,7 +48,7 @@ test('chapter shortcuts preserve an interactive attempt',async({page})=>{
 });
 test('lesson deep link, focused feedback and companion reading filter',async({page})=>{
  await page.goto('/lessons/#u2-l13');await expect(page.locator('#u2-l13')).toBeFocused();
- await page.locator('#u2-l13 .print-answer summary').click();await expect(page.locator('#u2-l13 details.print-answer')).toContainText('SELECT Name FROM Equipment ORDER BY EquipmentID');
+ await page.locator('#u2-l13 .print-answer summary').click();await expect(page.locator('#u2-l13 details.print-answer')).toContainText('SELECT EquipmentDescription FROM Equipment ORDER BY EquipmentID');
  await page.evaluate(()=>{window.print=()=>window.dispatchEvent(new Event('beforeprint'));});
  await page.locator('#print').click();await page.emulateMedia({media:'print'});await expect(page.locator('#u2-l13 details.print-answer p').first()).toBeHidden();
  await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));await page.emulateMedia({media:'screen'});await expect(page.locator('#u2-l13 details.print-answer')).toHaveAttribute('open','');

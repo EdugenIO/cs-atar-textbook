@@ -2891,16 +2891,16 @@
         {
           "week": 4,
           "lesson": 1,
-          "prompt": "For Equipment(EquipmentID,Name), write a query returning only Name in EquipmentID order.",
-          "expected": "SELECT Name FROM Equipment ORDER BY EquipmentID; selected fields and order have separate roles.",
-          "response": "If all columns are returned, distinguish SELECT projection from row filtering."
+          "prompt": "For the named Equipment table, return EquipmentDescription in EquipmentID order.",
+          "expected": "SELECT EquipmentDescription FROM Equipment ORDER BY EquipmentID; selected fields and order have separate roles.",
+          "response": "If the identifier is returned instead, separate the SELECT column from the ORDER BY field and retry."
         },
         {
           "week": 4,
           "lesson": 4,
-          "prompt": "Create a report of names beginning 'Cam', sorted by Name; predict an empty result when none match.",
-          "expected": "WHERE Name LIKE 'Cam%' ORDER BY Name; empty result is not necessarily an error.",
-          "response": "If % is placed at the front too, compare begins-with with contains."
+          "prompt": "Using Equipment, report descriptions beginning 'Cam', sorted by EquipmentDescription. Explain a valid empty result.",
+          "expected": "SELECT EquipmentDescription FROM Equipment WHERE EquipmentDescription LIKE 'Cam%' ORDER BY EquipmentDescription; no matching rows can be a valid result.",
+          "response": "If Name is used, inspect the actual fields and replace it with EquipmentDescription; retry a prefix with no match."
         }
       ]
     },
