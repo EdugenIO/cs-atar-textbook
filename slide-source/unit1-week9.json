@@ -14,460 +14,463 @@
     {
       "id": "u1-w09-l01",
       "lesson": 1,
-      "title": "API contracts and source attribution",
+      "title": "API contracts and source attribution for the game",
       "chapter": "design",
-      "prepare": "Official Python open/csv documentation, Python editor, disposable practice folder, week 8 module design and project-workbook.md section 7. Use synthetic data only.",
+      "prepare": "Open the current Year 11 project brief, project-workbook.md, project-milestones.csv, project-test-log.csv and the selected scenario starter in project-pack.zip. Check the four S01 preparation exits first. Use the shared FR/NFR contract at https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Keep school-issued support, assessment and submission conditions visible. Use a disposable local folder, synthetic labels, primitive shapes and permitted static assets. Suggested times are untrialled; record actual completion/support and re-plan openly if needed.",
       "slides": [
         {
-          "title": "API contracts and source attribution",
+          "title": "Use an API and explain your contribution",
+          "notes": "This is the allocated API/attribution theory lesson between project workshops, not an extra workshop. Use workbook sections3 and7. Follow school-issued support rules; do not supply a finished assessed solution. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
           "strategy": "Learning intention",
-          "notes": "Success means explain an API beyond web services, identify inputs, outputs, side effects and likely errors from documentation, then record a reused source and the learner’s own contribution. This is the scheduled API/attribution lesson, before two project build workshops later in week 9.",
+          "minutes": 2,
           "body": [
             "Unit 1 · Week 9 · Lesson 1",
-            "Use a documented interface and explain reused work."
-          ],
-          "minutes": 2
+            "Read a Pygame contract and keep a source/assistance log."
+          ]
         },
         {
-          "title": "Retrieval: module agreements",
+          "title": "Retrieve a function contract",
+          "notes": "Use one learner-owned function interface, then compare with a documented library call. APIs include local libraries; they do not always need a web service, account or key. Distinguish consulting a reference from copying a code example. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
           "strategy": "Individual retrieval and paired explanation",
-          "notes": "Allow silent recall, then compare with the week 8 design. order_cost takes a valid quantity and returns integer cents. save_order changes persistent storage and needs an agreed failure signal. An unfinished stub deliberately raises NotImplementedError. Use responses to connect student-defined interfaces to library interfaces.",
+          "minutes": 5,
           "body": [
-            "What does order_cost receive and return?",
-            "Which module changes the saved file?",
-            "How should the caller learn that saving failed?",
-            "Compare your module contracts with a partner."
-          ],
-          "minutes": 5
+            "What does the caller supply?",
+            "What value or side effect comes back?",
+            "Which errors or assumptions matter?"
+          ]
         },
         {
-          "title": "An API is a software interface",
-          "strategy": "Worked comparison and classification",
-          "notes": "API means application programming interface. Programs use documented operations supplied by another component. Python’s open and the csv library are local examples. A web API adds remote communication, but this project needs no account, key or network service. The operation contract describes allowed inputs, results, side effects and errors. Ask learners to classify their own function contract and a library call without assuming all APIs use the internet.",
+          "title": "Read the documented operation",
+          "notes": "Use official pygame.Rect.colliderect, pygame.time.Clock.tick and Python open documentation. colliderect expects a rectangle-like value and returns a Boolean using strict edge overlap. tick(60) returns elapsed milliseconds and limits a target rate; it does not prove fixed FPS or responsiveness. open returns a file object or raises an error; append changes persistent storage. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Documentation comparison",
+          "minutes": 6,
           "table": [
             [
-              "Interface",
+              "Operation",
               "Caller supplies",
-              "Result or effect"
+              "Result/effect"
             ],
             [
-              "order_cost(quantity)",
-              "Valid quantity",
-              "Returns integer cents"
+              "Rect.colliderect(other)",
+              "Another rectangle",
+              "Boolean overlap"
             ],
             [
-              "open(path, mode)",
-              "Path and file options",
-              "File object or exception"
+              "Clock.tick(60)",
+              "Target frame-rate limit",
+              "Elapsed milliseconds"
             ],
             [
-              "csv.writer(file)",
-              "Writable file object",
-              "CSV writer object"
+              "open(path, \"a\")",
+              "Path and mode",
+              "Writable file or error"
             ]
-          ],
-          "minutes": 6
+          ]
         },
         {
-          "title": "Documentation detective",
-          "strategy": "Paired documentation reading and jigsaw explanation",
-          "notes": "Open the official open and csv.writer documentation linked in the teacher notes. One partner finds file mode, encoding and errors, the other finds writer creation, writerow and newline guidance. Partners explain and complete a four-part contract. Expected: append mode retains existing records, newline=\"\" lets csv control record newlines, encoding=\"utf-8\" makes encoding explicit, writerow receives a row sequence and writes it. Creation of a writer alone does not write a row. open can raise OSError, including PermissionError. Do not copy the entire documentation or memorise every optional parameter. Sources: https://docs.python.org/3/library/functions.html#open and https://docs.python.org/3/library/csv.html#csv.writer",
+          "title": "Predict an API result before running",
+          "notes": "Use this separate practice snippet in a disposable editor, not as an assessed game solution. First call False: player right edge equals station left edge. Moving1 gives True. Learners should identify returned values and document the assumption that the y ranges overlap. Cite the Pygame Rect documentation. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Predict–run–investigate",
+          "minutes": 10,
           "body": [
-            "Find the required input and a useful option.",
-            "Identify the returned object and the file side effect.",
-            "Find a documented error or failure to handle.",
-            "Explain your findings to your partner."
+            "Which call reports edge contact?",
+            "Explain the returned Boolean."
           ],
-          "minutes": 10
+          "code": "import pygame\nplayer = pygame.Rect(0, 0, 24, 24)\nstation = pygame.Rect(24, 0, 24, 24)\nprint(player.colliderect(station))\nplayer.move_ip(1, 0)\nprint(player.colliderect(station))"
         },
         {
-          "title": "A local API in use",
-          "strategy": "Predict, run, investigate and change",
-          "notes": "Use only a disposable practice folder. This original demonstration appends A01,2,600 as one CSV row. Predict before running, inspect the text file, then change the ID to A02 and quantity/cost to 0 and 0. Both rows should remain. Re-running the unchanged snippet appends a duplicate, so discuss who controls repeated calls. csv writes the record separator, so do not add a separate newline field. The API can quote commas, but the agreed project ID restrictions still apply. The snippet assumes valid values and a writable folder; it is not a complete save_order implementation and has no failure handler. Explain that validation, caller policy and exception handling remain project responsibilities. Sources: official csv and open documentation.",
+          "title": "Build a source entry you can verify",
+          "notes": "Model a consultation entry for the Rect API. If reusing this original teaching snippet, identify CS ATAR and the MIT code notice. Record AI/static assets with tool/source/date and relevant conditions; do not assume generated work has no third-party rights. Asset permission does not settle code-assistance permission. Use synthetic labels. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Worked log and guided review",
+          "minutes": 10,
           "body": [
-            "Predict the saved row, then inspect the file.",
-            "Change the synthetic order and check both rows remain."
-          ],
-          "code": "import csv\nwith open(\"api-practice.csv\", \"a\",\n          newline=\"\", encoding=\"utf-8\") as file:\n    writer = csv.writer(file)\n    writer.writerow([\"A01\", 2, 600])",
-          "minutes": 10
+            "Record author/tool, URL or prompt and access date.",
+            "Name what you reused and its permission conditions.",
+            "Separate your changes and your own reasoning."
+          ]
         },
         {
-          "title": "A useful source log",
-          "strategy": "Worked example and independent source review",
-          "notes": "Model a real log entry for this lesson: Source: CS ATAR textbook, Unit 1 Week 9 Lesson 1, site URL and access date. Reused section: original csv practice snippet. Code licence: MIT, retaining the linked copyright/permission notice when distributing reused code. Changes: A01 to A02 and quantity/cost to zero. Own contribution: prediction, run evidence and interface explanation. Then record official Python documentation separately as a consulted reference, with URL, section, access date and what it informed; distinguish consulting documentation from copying its examples. Students audit one actual source from their work and record borrowed section, relevant permission/conditions, changes, own work and permitted assistance in workbook section 7. Follow school rules if used for assessment. If permission is unclear, use an approved source or ask the teacher before reusing. Crediting a source alone does not establish reuse permission.",
+          "title": "Investigate one interface independently",
+          "notes": "Do not copy an entire documentation page. Identify what the operation does not validate for your game, such as once-only collection or the final score range. Explain how a missing history file or failed write must be handled by the learner’s stated policy. Teacher chooses permitted sources/assistance conditions. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Independent documentation task",
+          "minutes": 12,
           "body": [
-            "Record the author/title, URL and date accessed.",
-            "Identify what you used and its licence or permission.",
-            "Describe your changes and your own contribution.",
-            "Log one real source in workbook section 7."
-          ],
-          "minutes": 12
+            "Read one documented operation your game uses.",
+            "Record input, result/effect, assumptions and a failure.",
+            "Complete workbook section 7 for a real source."
+          ]
         },
         {
-          "title": "Credit and permission",
-          "strategy": "All-student hinge question and scenario discussion",
-          "notes": "Correct B. Being publicly visible does not itself establish permission to copy and distribute. Naming the author is attribution, while the licence/permission sets conditions. Avoid a blanket judgement about all classroom copyright exceptions: here the question concerns publishing copied code in the shared textbook/project. Students should use an approved licensed alternative or seek guidance, then record required credit. This is a practical source review, not a new legal or assessment policy.",
+          "title": "Does credit settle permission?",
+          "notes": "A. Attribution and permission are separate. Seek an approved licensed alternative or teacher guidance when terms are unclear. This practical source decision does not create a new legal or school assessment policy. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Hinge question with reasons",
+          "minutes": 5,
           "body": [
-            "You want to publish copied code with your project.",
-            "The page names its author but gives no reuse terms.",
-            "A: Naming the author alone settles permission.",
-            "B: Check permission and conditions before reuse."
-          ],
-          "minutes": 5
+            "A page is public and names its author.",
+            "A: Check reuse terms and school support rules.",
+            "B: Naming the author makes any reuse acceptable."
+          ]
         },
         {
-          "title": "Exit ticket: an interface you can justify",
-          "strategy": "Independent exit ticket",
-          "notes": "Collect a short contract for csv.writer/ writerow or open: supplied input, result/effect and a relevant failure. Students explain why csv does not enforce the project’s non-negative quantity rule or determine its save-failure policy. Check a completed source entry distinguishes reused material from original work. Next lesson is error classification and debugging; leave full project storage implementation to the scheduled build workshop.",
+          "title": "Explain the API and your own work",
+          "notes": "Check learner explanation, not just a pasted URL. Retain the source record for the project handover. No change to the common project requirements or workshop count. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Independent exit explanation",
+          "minutes": 5,
           "body": [
-            "Describe one API call’s input and result or effect.",
-            "Name a failure your program must respond to.",
-            "Explain one rule the project must still enforce.",
-            "Submit your source entry and own contribution."
-          ],
-          "minutes": 5
+            "Show one documented interface contract.",
+            "Explain a limitation the game must handle.",
+            "Keep your source and assistance entry."
+          ]
         }
-      ]
+      ],
+      "projectWorkbook": "project-workbook.md",
+      "alignmentReview": "2026-11-09 S02"
     },
     {
       "id": "u1-w09-l02",
       "lesson": 2,
-      "title": "Error classification and debugging",
+      "title": "Classify errors and debug game rules",
       "chapter": "design",
-      "prepare": "Python editor, project workbook test table and week 8 predicted tests. Use the original small faulty snippets in the slides; no changes to live assessment tasks or important data.",
+      "prepare": "Open the current Year 11 project brief, project-workbook.md, project-milestones.csv, project-test-log.csv and the selected scenario starter in project-pack.zip. Check the four S01 preparation exits first. Use the shared FR/NFR contract at https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Keep school-issued support, assessment and submission conditions visible. Use a disposable local folder, synthetic labels, primitive shapes and permitted static assets. Suggested times are untrialled; record actual completion/support and re-plan openly if needed.",
       "slides": [
         {
-          "title": "Error classification and debugging",
+          "title": "Find a fault and verify the repair",
+          "notes": "Theory/debugging practice before the next two build workshops. Use small disposable examples; do not alter important data or supply a complete assessed-game repair. Keep workbook section5 expected/actual evidence. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
           "strategy": "Learning intention",
-          "notes": "Success means distinguish syntax errors, execution exceptions and incorrect logic, reproduce a fault with a small case, find the first incorrect state and verify a correction with retests. This is a guided debugging lesson before the week 9 project build workshops.",
+          "minutes": 2,
           "body": [
             "Unit 1 · Week 9 · Lesson 2",
-            "Find the cause of a failure and verify the repair."
-          ],
-          "minutes": 2
+            "Classify errors and locate the first wrong state."
+          ]
         },
         {
-          "title": "Retrieval: a contract predicts behaviour",
-          "strategy": "Individual retrieval and partner explanation",
-          "notes": "Allow silent answers before comparison. A contract describes inputs, results/effects and errors. A successful run may still calculate the wrong result. Expected results must come from the requirement and independent calculation. A broad handler does not repair an incorrect algorithm. Connect this lesson to last lesson’s API contracts and the existing project tests.",
+          "title": "Retrieve a testable requirement",
+          "notes": "A successful run can violate a requirement. Derive expected states from the common contract and independent reasoning. Rerunning earlier cases after a repair checks for regressions. Retain failed evidence. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Individual retrieval and explanation",
+          "minutes": 5,
           "body": [
-            "What should an operation’s contract tell its caller?",
-            "Can a program finish and still give a wrong answer?",
+            "Can code run and still be wrong?",
             "Where should an expected result come from?",
-            "Compare one example with a partner."
-          ],
-          "minutes": 5
+            "What makes a test a regression check?"
+          ]
         },
         {
-          "title": "Three kinds of failure",
+          "title": "Classify the failure before guessing",
+          "notes": "SyntaxError is itself a Python exception class; here distinguish parsing from exceptions during ordinary execution. A wrong score may produce no exception. Use a missing colon, a bad list index and an accumulator replacement as separate practice examples. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
           "strategy": "Classification sort and teacher modelling",
-          "notes": "Give three original examples verbally or in the editor: if quantity >= 0 with no colon causes SyntaxError; [2,0,5][3] causes IndexError during execution; quantity + 300 instead of quantity * 300 produces a wrong cost without necessarily raising an exception. Learners classify independently, then justify with when and how the fault appears. SyntaxError is a Python exception class too, but distinguish parsing failure from exceptions during ordinary execution for this teaching classification. Source: https://docs.python.org/3/tutorial/errors.html",
+          "minutes": 6,
           "table": [
             [
               "Failure",
-              "What happens",
-              "Useful evidence"
+              "Evidence",
+              "Useful next check"
             ],
             [
               "Syntax",
-              "Python cannot parse the code",
-              "Message and indicated location"
+              "Python cannot parse",
+              "Indicated line/context"
             ],
             [
               "Execution exception",
-              "An operation raises an exception",
-              "Exception type and traceback"
+              "Exception and traceback",
+              "Operation and valid inputs"
             ],
             [
               "Logic",
-              "Behaviour violates the requirement",
-              "Expected versus actual results"
+              "Expected/actual mismatch",
+              "First wrong state"
             ]
-          ],
-          "minutes": 6
+          ]
         },
         {
-          "title": "A traceback narrows the search",
+          "title": "Use the traceback to narrow the cause",
+          "notes": "There are five entries with indices0..4; active[5] raises IndexError. Read the actual editor traceback, whose wording can vary by version. Do not mask the fault with a blanket handler. Decide the operation’s contract before choosing a corrected index; an empty list needs separate handling. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
           "strategy": "Predict, run and inspect",
-          "notes": "Before running, ask for valid list indices: 0, 1 and 2. The call raises IndexError at quantities[3]. In the actual editor show the traceback’s final exception type and the source line, noting wording can vary by Python version. Do not fix the index by guessing or hide the fault with a blanket except. For a required final element, len(quantities)-1 or -1 is valid only after deciding how empty data should behave. Students reproduce with three items, then discuss the empty case. Source: Python errors tutorial.",
+          "minutes": 10,
           "body": [
-            "Predict the valid indices, then run.",
-            "Read the exception type and the source line."
+            "Predict valid indices before running.",
+            "Which operation fails and why?"
           ],
-          "code": "quantities = [2, 0, 5]\nprint(quantities[3])",
-          "minutes": 10
+          "code": "active = [True, True, True, True, True]\nprint(active[5])"
         },
         {
-          "title": "The first incorrect state",
+          "title": "Trace the first wrong score",
+          "notes": "The faulty snippet prints10 after each pass, while the independent expected totals are10 then20. total=10 replaces rather than accumulates. This is an isolated accumulator fault; it does not implement the game’s once-only guard or full scoring contract. Learners explain the cause before proposing a correction and rerun empty/one/two-collection cases. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
           "strategy": "Teacher think-aloud and paired trace",
-          "notes": "The requirement is total quantity 7 for [2,0,5]. This faulty loop prints 5. Trace after each iteration: expected totals 2,2,7 versus actual 2,0,5. The first divergence is after quantity 0. total = quantity replaces the total rather than accumulating. Change only the cause to total += quantity, then rerun. Retest [], [0], [4] and [2,0,5] expecting 0,0,4,7. Learners predict before executing and retain the failed trace as evidence.",
+          "minutes": 10,
           "body": [
-            "Expected total: 7. Trace every iteration.",
-            "At which iteration does the total first go wrong?"
+            "Two separate first collections should total 20.",
+            "Find the first divergence in this faulty practice code."
           ],
-          "code": "quantities = [2, 0, 5]\ntotal = 0\nfor quantity in quantities:\n    total = quantity\nprint(total)",
-          "minutes": 10
+          "code": "score = 0\nfor item in [\"A\", \"B\"]:\n    score = 10\n    print(score)"
         },
         {
-          "title": "Paired debugging clinic",
-          "strategy": "Driver/navigator debugging with role change",
-          "notes": "Assume the function receives a validated non-negative integer. It should return quantity times 300 cents. This original faulty version adds 300. Predict results for 0,1,4 before running: expected 0,300,1200 and faulty 300,301,304. Navigator identifies the first mismatch and proposes one change; driver edits to quantity * 300, runs all cases and records results. Swap roles, then reuse the previous loop tests including empty data. Record symptom, smallest failing case, cause, correction and retest in the workbook. Support: supply a two-column expected/actual table. Extension: explain how a negative-input contract would need a separate explicit decision; do not silently expand this exercise’s assumptions.",
+          "title": "Repair one cause and keep the evidence",
+          "notes": "Use disposable code for the guided clinic. In the project, each student makes their own permitted change and records support. Retest repeated collection, first/last item, empty history, pause/reset and previously passing cases as relevant. Do not infer the whole game is correct from one repaired output. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Independent debugging clinic",
+          "minutes": 12,
           "body": [
-            "Expected cents for quantities 0, 1, 4: 0, 300, 1200.",
-            "Predict, reproduce, isolate, repair and retest."
-          ],
-          "code": "def order_cost(quantity):\n    return quantity + 300",
-          "minutes": 12
+            "Reproduce a smallest failing practice case.",
+            "Record symptom, cause, correction and retest.",
+            "Apply the method to your own permitted test."
+          ]
         },
         {
-          "title": "A repair needs regression checks",
-          "strategy": "All-student hinge question",
-          "notes": "Correct B. The failed case must now pass, and earlier cases should still pass after the change. Re-running previous tests checks for regressions, though a finite set does not prove every possible input. Ask for an empty or zero case that could fail after an apparently sensible change. If students choose A, demonstrate a special-case patch returning 0 for every quantity: it passes quantity zero but fails quantities 1 and 4.",
+          "title": "What counts as a useful repair?",
+          "notes": "B. Suppressing a symptom can leave data/state wrong and hide errors. Ask learners for an observable expected result and a regression case, not just the option letter. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Hinge question and counterexample",
+          "minutes": 5,
           "body": [
-            "You fixed the zero-quantity cost case. What next?",
-            "A: Submit because that case now passes.",
-            "B: Rerun it and the earlier ordinary/boundary tests.",
-            "Choose and justify the evidence a repair needs."
-          ],
-          "minutes": 5
+            "A: Silence every exception with except: pass.",
+            "B: Explain the cause and rerun relevant cases."
+          ]
         },
         {
-          "title": "Exit ticket: explain a fresh fault",
-          "strategy": "Independent transfer and exit ticket",
-          "notes": "Requirement: accept every whole-number quantity >= 0. The condition > 0 wrongly rejects zero, so this is a logic error. >= 0 is the correction for this isolated range fragment, which assumes successful integer conversion. Tests -1,0,1 should reject, accept, accept. Ask students to distinguish this from int(\"three\") raising ValueError. Collect a precise cause and retest plan, not just a category name. Use gaps to plan support in the calculation/input workshop next lesson.",
+          "title": "Explain a fresh fault",
+          "notes": "Use a teacher-selected fresh practice example; record reasoning and next action. Next lesson resumes score/lives/timing implementation under the existing project conditions. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Independent exit and next step",
+          "minutes": 5,
           "body": [
-            "Requirement: accept whole quantities of zero or more.",
-            "Classify the fault, correct it and propose three tests."
-          ],
-          "code": "quantity = 0\nif quantity > 0:\n    print(\"Accepted\")\nelse:\n    print(\"Rejected\")",
-          "minutes": 5
+            "Classify one unseen error.",
+            "Identify the first wrong state or failing operation.",
+            "Choose a revealing test and an expected outcome."
+          ]
         }
-      ]
+      ],
+      "projectWorkbook": "project-workbook.md",
+      "alignmentReview": "2026-11-09 S02"
     },
     {
       "id": "u1-w09-l03",
       "lesson": 3,
-      "title": "Calculation and input workshop",
+      "title": "Implement score, lives and active-play timing",
       "chapter": "design",
       "source": "https://edugenio.github.io/cs-atar-textbook/#design",
-      "prepare": "Open the design chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "prepare": "Open the current Year 11 project brief, project-workbook.md, project-milestones.csv, project-test-log.csv and the selected scenario starter in project-pack.zip. Check the four S01 preparation exits first. Use the shared FR/NFR contract at https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Keep school-issued support, assessment and submission conditions visible. Use a disposable local folder, synthetic labels, primitive shapes and permitted static assets. Suggested times are untrialled; record actual completion/support and re-plan openly if needed.",
       "slides": [
         {
-          "title": "Calculation and input workshop",
+          "title": "Integrate lives and active-play timing",
+          "notes": "Contract FR4/FR5: zero lives or zero remaining time causes loss; loss is resolved before win if conditions coincide in one update. No score changes after a result. The displayed hit times assume a consistent elapsed hit clock and first accepted hit at1000 ms; state your implementation’s time base and pause policy. The shared pause contract freezes gameplay time/movement. Do not use blocking sleeps for protection. The expected table is a plan until observed in the student build. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Milestone and learning intention",
+          "minutes": 2,
           "body": [
             "Unit 1 · Week 9 · Lesson 3",
-            "Connect validated input to a tested cost calculation."
-          ],
-          "minutes": 2,
-          "strategy": "Learning intention",
-          "notes": "Explain the goal and the expected independent outcome. Connect validated input to a tested cost calculation. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+            "Workshop 5 of 10: Build"
+          ]
         },
         {
-          "title": "Retrieval and explanation",
+          "title": "Retrieve before building",
+          "notes": "Think individually, then explain one response if the issued support conditions allow discussion. Use evidence from the preparation labs or previous version. Diagnose a gap before building; do not treat confident copying as readiness. Contract FR4/FR5: zero lives or zero remaining time causes loss; loss is resolved before win if conditions coincide in one update. No score changes after a result. The displayed hit times assume a consistent elapsed hit clock and first accepted hit at1000 ms; state your implementation’s time base and pause policy. The shared pause contract freezes gameplay time/movement. Do not use blocking sleeps for protection. The expected table is a plan until observed in the student build. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Individual retrieval and explanation",
+          "minutes": 3,
           "body": [
-            "What should quantity zero mean?",
-            "Where should input conversion happen?"
-          ],
-          "minutes": 5,
-          "strategy": "Individual retrieval, then partner comparison",
-          "notes": "Zero is valid and costs zero cents. Conversion and range checks belong at the input boundary. A calculation function receives a validated quantity. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+            "What makes time active rather than wall-clock?",
+            "Which terminal condition takes precedence?"
+          ]
         },
         {
-          "title": "The order contract",
+          "title": "Keep this milestone within the brief",
+          "notes": "Requirement focus: FR3–FR5; FR7. Read the exact common contract alongside this summary. Contract FR4/FR5: zero lives or zero remaining time causes loss; loss is resolved before win if conditions coincide in one update. No score changes after a result. The displayed hit times assume a consistent elapsed hit clock and first accepted hit at1000 ms; state your implementation’s time base and pause policy. The shared pause contract freezes gameplay time/movement. Do not use blocking sleeps for protection. The expected table is a plan until observed in the student build. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Contract reading and teacher questioning",
+          "minutes": 5,
+          "body": [
+            "Five collectibles yield at most 50 points.",
+            "Start with 3 lives and 90 active seconds.",
+            "A hazard hit respawns and protects for 1000 ms."
+          ]
+        },
+        {
+          "title": "Predict the required behaviour",
+          "notes": "Contract FR4/FR5: zero lives or zero remaining time causes loss; loss is resolved before win if conditions coincide in one update. No score changes after a result. The displayed hit times assume a consistent elapsed hit clock and first accepted hit at1000 ms; state your implementation’s time base and pause policy. The shared pause contract freezes gameplay time/movement. Do not use blocking sleeps for protection. The expected table is a plan until observed in the student build. Model the first row as a prediction; learners justify a changed or boundary case before running. Expected evidence is public guidance, not proof that a learner has completed it. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Worked case with faded support",
+          "minutes": 5,
           "table": [
             [
-              "Part",
-              "Expected behaviour"
+              "Elapsed hit clock",
+              "Expected lives",
+              "Reason"
             ],
             [
-              "Input",
-              "Whole quantity of zero or more"
+              "1000 ms: first hit",
+              "2",
+              "Hit accepted"
             ],
             [
-              "Calculation",
-              "quantity × 300 cents"
+              "1500 ms: another overlap",
+              "2",
+              "Still protected"
             ],
             [
-              "Rejected input",
-              "Explain and ask again"
-            ],
-            [
-              "Accepted input",
-              "Return the validated quantity"
+              "2000 ms: another overlap",
+              "May become 1",
+              "Protection boundary reached"
             ]
-          ],
-          "minutes": 6,
-          "strategy": "Worked table and teacher explanation",
-          "notes": "Use the project requirements. Keep prices in integer cents. No need to add accounts or a new interface. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+          ]
         },
         {
-          "title": "Predicted costs",
-          "body": [
-            "Predict costs for quantities 0, 1 and 4.",
-            "Identify the input and returned result."
-          ],
-          "code": "def order_cost(quantity):\n    return quantity * 300",
-          "minutes": 10,
-          "strategy": "Predict, model and explain",
-          "notes": "Expected costs are 0, 300 and 1200 cents. Ask learners to predict before running. The calculation assumes successful validation. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
-        },
-        {
-          "title": "Retry trace",
-          "body": [
-            "Trace inputs \"three\", \"-1\", \"0\".",
-            "Which input reaches the calculation?"
-          ],
-          "minutes": 10,
-          "strategy": "Guided paired practice",
-          "notes": "Conversion fails for three. Negative one converts but fails the range rule. Zero is accepted and costs zero. Use driver/navigator roles, then swap. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
-        },
-        {
-          "title": "Independent practice",
-          "body": [
-            "Complete the input and calculation modules.",
-            "Test invalid text, a negative value, zero and four.",
-            "Record predicted and actual results."
-          ],
-          "minutes": 12,
-          "strategy": "Independent application with optional support",
-          "notes": "Use a separate project copy. Accept equivalent function names. Check the retry loop actually continues and the calculation returns a value. Support with the chapter example, then ask for an independent changed input. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
-        },
-        {
-          "title": "A choice to explain",
-          "body": [
-            "The function prints 1200 but returns no value.",
-            "A: The caller receives 1200.",
-            "B: The caller receives None."
-          ],
+          "title": "Check a plan before changing code",
+          "notes": "Use a short dry-run, role explanation or peer critique only where school conditions permit it. Each student retains their own design, code and observations. Ask for the first expected state and evidence source rather than supplying a complete assessed solution. Contract FR4/FR5: zero lives or zero remaining time causes loss; loss is resolved before win if conditions coincide in one update. No score changes after a result. The displayed hit times assume a consistent elapsed hit clock and first accepted hit at1000 ms; state your implementation’s time base and pause policy. The shared pause contract freezes gameplay time/movement. Do not use blocking sleeps for protection. The expected table is a plan until observed in the student build. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Guided plan/trace clinic",
           "minutes": 5,
-          "strategy": "Whole-class response and justification",
-          "notes": "B. Printing displays text. A normally completed call without an explicit returned value gives None. Ask what cost = order_cost(4) would store. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+          "body": [
+            "Trace simultaneous final-item, exit and timeout.",
+            "Explain the time base used by your protection rule."
+          ]
         },
         {
-          "title": "Exit explanation",
+          "title": "Independent workshop",
+          "notes": "Reserve this 25-minute block for the learner’s own milestone. Support by returning to one preparation example or asking a diagnostic question; record help received. Do not add optional features or imply homework completes the workshop budget. Follow school conditions for collaboration, tools, AI and permitted code. Contract FR4/FR5: zero lives or zero remaining time causes loss; loss is resolved before win if conditions coincide in one update. No score changes after a result. The displayed hit times assume a consistent elapsed hit clock and first accepted hit at1000 ms; state your implementation’s time base and pause policy. The shared pause contract freezes gameplay time/movement. Do not use blocking sleeps for protection. The expected table is a plan until observed in the student build. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Independent milestone with optional scaffold",
+          "minutes": 25,
           "body": [
-            "Explain how zero travels through your modules.",
-            "Name one failed test and its correction."
-          ],
+            "Integrate deterministic hazards and safe respawn.",
+            "Preserve pause, reset and once-only scoring.",
+            "Test life/protection boundaries and loss-before-win."
+          ]
+        },
+        {
+          "title": "Checkpoint against the requirement",
+          "notes": "Record predicted and actual results separately. Use this checkpoint to choose a targeted next step; it is part of the existing project, not a separate mark allocation. Contract FR4/FR5: zero lives or zero remaining time causes loss; loss is resolved before win if conditions coincide in one update. No score changes after a result. The displayed hit times assume a consistent elapsed hit clock and first accepted hit at1000 ms; state your implementation’s time base and pause policy. The shared pause contract freezes gameplay time/movement. Do not use blocking sleeps for protection. The expected table is a plan until observed in the student build. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Evidence-based checkpoint",
           "minutes": 5,
-          "strategy": "Individual reflection and fresh explanation",
-          "notes": "Look for successful conversion, accepted range, returned zero cost and actual retest evidence. Keep storage integration for the next workshop. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+          "body": [
+            "Does zero time prevent a late win?",
+            "Does a paused interval change gameplay state?"
+          ]
+        },
+        {
+          "title": "Save the version and next action",
+          "notes": "Record build ID, changed requirement/function, tests actually run, support and next action in the milestone/version log. Contract FR4/FR5: zero lives or zero remaining time causes loss; loss is resolved before win if conditions coincide in one update. No score changes after a result. The displayed hit times assume a consistent elapsed hit clock and first accepted hit at1000 ms; state your implementation’s time base and pause policy. The shared pause contract freezes gameplay time/movement. Do not use blocking sleeps for protection. The expected table is a plan until observed in the student build. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Individual exit and version record",
+          "minutes": 5,
+          "body": [
+            "Show the protection-boundary trace.",
+            "Record a terminal-order test and its actual result."
+          ]
         }
       ],
-      "legacyProject": true,
-      "currentProject": "design"
+      "currentProject": "design",
+      "projectSlideEdition": "pygame-2027",
+      "projectWorkshop": 5,
+      "projectRequirements": "FR3–FR5; FR7",
+      "projectWorkbook": "project-workbook.md",
+      "alignmentReview": "2026-11-09 S02"
     },
     {
       "id": "u1-w09-l04",
       "lesson": 4,
-      "title": "Storage and recovery workshop",
+      "title": "Implement the HUD and score-history functions",
       "chapter": "design",
       "source": "https://edugenio.github.io/cs-atar-textbook/#design",
-      "prepare": "Open the design chapter and its learning resources. Use paper or a local editor as appropriate, with fictional data and disposable practice copies. The suggested 55-minute lesson is flexible.",
+      "prepare": "Open the current Year 11 project brief, project-workbook.md, project-milestones.csv, project-test-log.csv and the selected scenario starter in project-pack.zip. Check the four S01 preparation exits first. Use the shared FR/NFR contract at https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Keep school-issued support, assessment and submission conditions visible. Use a disposable local folder, synthetic labels, primitive shapes and permitted static assets. Suggested times are untrialled; record actual completion/support and re-plan openly if needed.",
       "slides": [
         {
-          "title": "Storage and recovery workshop",
+          "title": "Build the HUD and score history",
+          "notes": "FR8 accepts final integer scores in the game range0..50. Do not silently narrow this to preparation values0..2 or0/2/4/6. Preserve old records; show an empty message; skip malformed/out-of-range lines with a warning. For [20,0,50,50], first maximum is zero-based index2. On failed save, report it and keep gameplay usable; any retry follows the student’s stated policy without falsely claiming success. Simulate failure only with disposable paths. Log actual observations and build ID. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Milestone and learning intention",
+          "minutes": 2,
           "body": [
             "Unit 1 · Week 9 · Lesson 4",
-            "Save accepted orders and preserve earlier records."
-          ],
-          "minutes": 2,
-          "strategy": "Learning intention",
-          "notes": "Explain the goal and the expected independent outcome. Save accepted orders and preserve earlier records. This is ungraded textbook learning. Suggested times can be adjusted to the class. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+            "Workshop 6 of 10: Build"
+          ]
         },
         {
-          "title": "Retrieval and explanation",
+          "title": "Retrieve before building",
+          "notes": "Think individually, then explain one response if the issued support conditions allow discussion. Use evidence from the preparation labs or previous version. Diagnose a gap before building; do not treat confident copying as readiness. FR8 accepts final integer scores in the game range0..50. Do not silently narrow this to preparation values0..2 or0/2/4/6. Preserve old records; show an empty message; skip malformed/out-of-range lines with a warning. For [20,0,50,50], first maximum is zero-based index2. On failed save, report it and keep gameplay usable; any retry follows the student’s stated policy without falsely claiming success. Simulate failure only with disposable paths. Log actual observations and build ID. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Individual retrieval and explanation",
+          "minutes": 3,
           "body": [
-            "What does append mode retain?",
-            "When should an order enter the session list?"
-          ],
-          "minutes": 5,
-          "strategy": "Individual retrieval, then partner comparison",
-          "notes": "Append retains earlier file text. Follow the project contract: successful saving precedes adding the accepted order to the session list. Allow silent thinking before discussion. Ask a learner to justify an answer before revealing the explanation. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+            "How does append differ from overwrite?",
+            "Why should a result be saved once?"
+          ]
         },
         {
-          "title": "Storage checks",
+          "title": "Keep this milestone within the brief",
+          "notes": "Requirement focus: FR6–FR8; NFR1; NFR5. Read the exact common contract alongside this summary. FR8 accepts final integer scores in the game range0..50. Do not silently narrow this to preparation values0..2 or0/2/4/6. Preserve old records; show an empty message; skip malformed/out-of-range lines with a warning. For [20,0,50,50], first maximum is zero-based index2. On failed save, report it and keep gameplay usable; any retry follows the student’s stated policy without falsely claiming success. Simulate failure only with disposable paths. Log actual observations and build ID. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Contract reading and teacher questioning",
+          "minutes": 5,
+          "body": [
+            "Show score, lives, time, controls and result.",
+            "Use shapes/text alongside colour and optional audio.",
+            "Read valid history and append a final score once."
+          ]
+        },
+        {
+          "title": "Predict the required behaviour",
+          "notes": "FR8 accepts final integer scores in the game range0..50. Do not silently narrow this to preparation values0..2 or0/2/4/6. Preserve old records; show an empty message; skip malformed/out-of-range lines with a warning. For [20,0,50,50], first maximum is zero-based index2. On failed save, report it and keep gameplay usable; any retry follows the student’s stated policy without falsely claiming success. Simulate failure only with disposable paths. Log actual observations and build ID. Model the first row as a prediction; learners justify a changed or boundary case before running. Expected evidence is public guidance, not proof that a learner has completed it. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Worked case with faded support",
+          "minutes": 5,
           "table": [
             [
-              "Case",
-              "Expected result"
+              "History case",
+              "Expected report",
+              "Extra check"
             ],
             [
-              "First successful save",
-              "One complete record"
+              "[20, 0, 50, 50]",
+              "Count 4; total 120",
+              "First maximum index 2"
             ],
             [
-              "Second run and save",
-              "Earlier record remains"
+              "Missing/empty file",
+              "Empty-history message",
+              "No index access"
             ],
             [
-              "Write failure",
-              "Clear failure and no false success"
-            ],
-            [
-              "Empty session",
-              "No maximum-index access"
+              "Malformed/out-of-range",
+              "Skip with warning",
+              "Keep valid later records"
             ]
-          ],
-          "minutes": 6,
-          "strategy": "Worked table and teacher explanation",
-          "notes": "Use only disposable synthetic files. Check the agreed CSV fields and record separator in the starter. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+          ]
         },
         {
-          "title": "Two runs, two records",
-          "body": [
-            "Predict the file after saving quantities 2 and 5.",
-            "Compare append with write mode."
-          ],
-          "minutes": 10,
-          "strategy": "Predict, model and explain",
-          "notes": "With the agreed newline format, append gives two records. Opening in w truncates existing contents. Demonstrate only in a disposable folder. Pause for predictions before discussing the expected result. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
-        },
-        {
-          "title": "A failed save",
-          "body": [
-            "A save function reports failure.",
-            "Trace whether the session list should change."
-          ],
-          "minutes": 10,
-          "strategy": "Guided paired practice",
-          "notes": "It should remain unchanged under this project contract. Do not claim success or create a summary entry for an unsaved order. Swap explaining and checking roles so both learners articulate the reasoning. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
-        },
-        {
-          "title": "Independent practice",
-          "body": [
-            "Connect storage to your accepted-order workflow.",
-            "Test two runs and a simulated save failure.",
-            "Keep a safe copy before changing files."
-          ],
-          "minutes": 12,
-          "strategy": "Independent application with optional support",
-          "notes": "Use a stub returning False or the supplied controlled failure fixture. Do not change OS permissions on important files. Check before/after session state and file contents. Offer the relevant worked example if needed, then use a changed case to check independent understanding. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
-        },
-        {
-          "title": "A choice to explain",
-          "body": [
-            "Only the newest order survives the second run.",
-            "A: Inspect the file mode and record-writing path.",
-            "B: Add more input prompts."
-          ],
+          "title": "Check a plan before changing code",
+          "notes": "Use a short dry-run, role explanation or peer critique only where school conditions permit it. Each student retains their own design, code and observations. Ask for the first expected state and evidence source rather than supplying a complete assessed solution. FR8 accepts final integer scores in the game range0..50. Do not silently narrow this to preparation values0..2 or0/2/4/6. Preserve old records; show an empty message; skip malformed/out-of-range lines with a warning. For [20,0,50,50], first maximum is zero-based index2. On failed save, report it and keep gameplay usable; any retry follows the student’s stated policy without falsely claiming success. Simulate failure only with disposable paths. Log actual observations and build ID. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Guided plan/trace clinic",
           "minutes": 5,
-          "strategy": "Whole-class response and justification",
-          "notes": "A addresses the reported storage failure. Verify a correction with two runs rather than changing unrelated interface behaviour. Give thinking time and collect reasons, without recording scores. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+          "body": [
+            "Predict two result updates and a failed write.",
+            "Check a HUD with colour or audio unavailable."
+          ]
         },
         {
-          "title": "Exit explanation",
+          "title": "Independent workshop",
+          "notes": "Reserve this 25-minute block for the learner’s own milestone. Support by returning to one preparation example or asking a diagnostic question; record help received. Do not add optional features or imply homework completes the workshop budget. Follow school conditions for collaboration, tools, AI and permitted code. FR8 accepts final integer scores in the game range0..50. Do not silently narrow this to preparation values0..2 or0/2/4/6. Preserve old records; show an empty message; skip malformed/out-of-range lines with a warning. For [20,0,50,50], first maximum is zero-based index2. On failed save, report it and keep gameplay usable; any retry follows the student’s stated policy without falsely claiming success. Simulate failure only with disposable paths. Log actual observations and build ID. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Independent milestone with optional scaffold",
+          "minutes": 25,
           "body": [
-            "Show the retained records from two runs.",
-            "Explain the outcome when saving fails."
-          ],
+            "Implement the HUD and required history functions.",
+            "Test missing, empty, tied and malformed records.",
+            "Verify append-once and a visible write-failure policy."
+          ]
+        },
+        {
+          "title": "Checkpoint against the requirement",
+          "notes": "Record predicted and actual results separately. Use this checkpoint to choose a targeted next step; it is part of the existing project, not a separate mark allocation. FR8 accepts final integer scores in the game range0..50. Do not silently narrow this to preparation values0..2 or0/2/4/6. Preserve old records; show an empty message; skip malformed/out-of-range lines with a warning. For [20,0,50,50], first maximum is zero-based index2. On failed save, report it and keep gameplay usable; any retry follows the student’s stated policy without falsely claiming success. Simulate failure only with disposable paths. Log actual observations and build ID. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Evidence-based checkpoint",
           "minutes": 5,
-          "strategy": "Individual reflection and fresh explanation",
-          "notes": "Expected: both valid records remain and a failed save does not falsely enter session data. Unfinished work becomes a specific next action. Use the response to select the next explanation or practice activity. Teaching reference: https://edugenio.github.io/cs-atar-textbook/#design. Use the current chapter and its linked resources."
+          "body": [
+            "Does a failed write falsely set saved=True?",
+            "Does drawing mutate score, lives or time?"
+          ]
+        },
+        {
+          "title": "Save the version and next action",
+          "notes": "Record build ID, changed requirement/function, tests actually run, support and next action in the milestone/version log. FR8 accepts final integer scores in the game range0..50. Do not silently narrow this to preparation values0..2 or0/2/4/6. Preserve old records; show an empty message; skip malformed/out-of-range lines with a warning. For [20,0,50,50], first maximum is zero-based index2. On failed save, report it and keep gameplay usable; any retry follows the student’s stated policy without falsely claiming success. Simulate failure only with disposable paths. Log actual observations and build ID. Current chapter: https://edugenio.github.io/cs-atar-textbook/#design . Workbook: https://edugenio.github.io/cs-atar-textbook/project-workbook.md . Contract: https://edugenio.github.io/cs-atar-textbook/assessments/games/year11-requirements.md . Code/API references: https://www.pygame.org/docs/ref/rect.html ; https://www.pygame.org/docs/ref/time.html ; https://docs.python.org/3/tutorial/errors.html . Original formative teaching text CC BY 4.0; code MIT. Do not treat predicted tests as observed results.",
+          "strategy": "Individual exit and version record",
+          "minutes": 5,
+          "body": [
+            "Show one history summary and a repeated-save test.",
+            "Record one accessibility improvement."
+          ]
         }
       ],
-      "legacyProject": true,
-      "currentProject": "design"
+      "currentProject": "design",
+      "projectSlideEdition": "pygame-2027",
+      "projectWorkshop": 6,
+      "projectRequirements": "FR6–FR8; NFR1; NFR5",
+      "projectWorkbook": "project-workbook.md",
+      "alignmentReview": "2026-11-09 S02"
     }
   ]
 }

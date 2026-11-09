@@ -1,6 +1,6 @@
 # Lesson slide source
 
-[Current slide availability](https://edugenio.github.io/cs-atar-textbook/resource-status.html) distinguishes 74 current lesson decks, 22 project replacement slots and 160 other missing slots. The 84 existing files include ten legacy project decks; do not treat their presence as current Pygame coverage.
+[Current slide availability](https://edugenio.github.io/cs-atar-textbook/resource-status.html) distinguishes 84 current lesson decks, 12 Year 12 project replacement slots and 160 other missing slots. The 84 indexed files now include ten aligned Year 11 Pygame workshop decks. Ten older console decks remain in the separate archive.
 
 Existing files (including retained legacy project material): all 64 Unit 1 lessons across Weeks 1–16, plus twenty Unit 2 lessons across Weeks 1–5. Each lesson has eight slides and a suggested 55-minute sequence. Adapt timings to local classes.
 
@@ -32,3 +32,6 @@ Unit 2 Week 5: [four editable PowerPoints](https://edugenio.github.io/cs-atar-te
 
 
 S01 update, 9 November 2026: Unit 1 W4 L2, W5 L2, W6 L2 and W7 L3 now deliver the existing Pygame preparation labs. Each retains its Python foundation, names the exact worked files, provides faded/changed practice, expected tests and an independent exit. Browser, PPTX and teacher notes must be regenerated together. Classroom timing and school-machine readiness remain unverified; ten legacy project decks and Year 12 decks are separate pending work.
+
+
+S02 update, 9 November 2026: ten Unit 1 project presentations now match the ten milestone slots and common game contract. The two Week 9 API/debugging lessons use the current game context and workbook. Each workshop reserves 25 minutes for independent milestone work within the suggested 55-minute period. Earlier console presentations are archived under legacy-projects/slides/; their requirements are separate. Year 12 project slides, classroom workload trials and independent moderation remain pending.

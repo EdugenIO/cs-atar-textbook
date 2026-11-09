@@ -32,10 +32,12 @@
         "u1-w10-l01 to u1-w10-l04"
       ],
       "detail": "These ten decks are flagged legacyProject and teach a club-order console manager. The allocated workshops teach a Pygame game.",
-      "action": "Build the existing ten-workshop game sequence: shared FR/NFR brief; design; state/controls; movement/collision; score/lives/time; HUD/history; integration; tests; player trial; demonstration/evaluation. Preserve equivalent student scenario choice and primitive/AI asset allowance. Refresh Week 9 Lessons 1–2 API/debugging examples and workbook links alongside it.",
+      "action": "Build the existing ten-workshop game sequence: shared FR/NFR brief; design; state/controls; movement/collision; score/lives/time; HUD/history; integration; tests; player trial; demonstration/evaluation. Preserve equivalent student scenario choice and primitive/AI asset allowance. Refresh Week 9 Lessons 1â€“2 API/debugging examples and workbook links alongside it.",
       "completeWhen": "All ten workshop decks match the current game brief and marking guide; the two transferable API/debugging decks refer to the current workbook rather than stale order-manager modules. No new project hours or requirements.",
       "owner": "Teaching/slide editor",
-      "status": "Open"
+      "status": "Complete",
+      "completedDate": "2026-11-09",
+      "verification": "Ten existing Pygame milestones and two API/debugging theory lessons rebuilt in JSON, browser slides, notes and editable PowerPoints. All 96 final slides visually inspected; workshop timing remains a suggested allocation pending classroom trial. Automated/browser/deployment checks are release gates."
     },
     {
       "id": "S03",
@@ -59,7 +61,7 @@
       "title": "Clarify the Year 11 SQL extension and join depth",
       "classification": "Confirmed scope-label mismatch; school task scope requires teacher judgement",
       "evidence": [
-        "u2-w05-l04 slides 2–6",
+        "u2-w05-l04 slides 2â€“6",
         "teaching-source/sql-pathway.json steps 04/09/10/17"
       ],
       "detail": "Week 5 Lesson 4 teaches GROUP BY and an independent four-table active-loan report as ordinary Year 11 practice without an extension label. The current pathway separates Year 11 whole-result aggregates from Year 12 grouping/four-table joins. The worked results are correct; this is a scope/pacing issue, not invalid SQL.",
@@ -120,7 +122,7 @@
       "title": "Finish Unit 2 from Week 6 onwards",
       "classification": "Confirmed missing provision",
       "evidence": [
-        "Unit 2 Weeks 6–16: 44 lessons"
+        "Unit 2 Weeks 6â€“16: 44 lessons"
       ],
       "detail": "Unit 2 stops after Week 5, directly before creation/constraints, controlled data changes and the later project/security/review lessons.",
       "action": "Continue from the current lesson routes, not an old generic SQL outline. Teach construction, INSERT/UPDATE/DELETE, integrity and recovery before the issued practical/project demands them. Preserve the allocation and use named fixtures.",

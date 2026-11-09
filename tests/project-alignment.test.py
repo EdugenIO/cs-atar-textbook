@@ -37,9 +37,12 @@ for contract in contracts['years']:
 assert sum(bool(l.get('gameProjectYear')) for u in schedule for w in u['weeks'] for l in w['lessons'])==22
 assert len(list(csv.DictReader((dist/'teaching-lessons.csv').read_text(encoding='utf-8').splitlines())))==256
 planner=(dist/'teaching-planner.js').read_text(encoding='utf-8')
-assert planner.index('if (lesson.gameProjectYear)')<planner.index('if (!lessonSlideResources[key])')
+assert 'lesson.gameProjectYear && !lessonSlideResources[key]?.projectSlideEdition' in planner
+assert len(manifest['currentProjectSlideIds'])==10
 for id in manifest['legacySlideIds']:
-    assert 'Legacy console practice' in (dist/f'slides/notes/{id}.html').read_text(encoding='utf-8')
+    assert (dist/f'legacy-projects/slides/{id}.pptx').exists()
+    assert 'Legacy console practice' in (dist/f'legacy-projects/slides/{id}-notes.html').read_text(encoding='utf-8')
+    assert 'Legacy console practice' not in (dist/f'slides/notes/{id}.html').read_text(encoding='utf-8')
 assert len(manifest['legacySlideIds'])==10
 assert 'legacy-project-notice' in (dist/'slides/viewer.js').read_text(encoding='utf-8')
 for year in [11,12]:assert (dist/f'legacy-projects/year{year}/README.md').exists()

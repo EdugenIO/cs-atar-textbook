@@ -21,7 +21,7 @@ A free, open textbook for WA Computer Science ATAR Units 1–4, using Python and
 This is a learning resource: the website does not grade, collect submissions or track students. Revision and exam-style questions are optional practice. The book is independent and does not imply SCSA or Department endorsement.
 
 <!-- current-resource-counts -->
-50 chapters · 191 glossary terms · 256 lesson allocations · 84 existing slide decks. 74 allocated lessons have current slide files; 22 project slots need replacement decks; 160 other slots have no supplied deck.
+50 chapters · 191 glossary terms · 256 lesson allocations · 84 existing slide decks. 84 allocated lessons have current slide files; 12 project slots need replacement decks; 160 other slots have no supplied deck.
 <!-- /current-resource-counts -->
 
 [Current slide availability](https://edugenio.github.io/cs-atar-textbook/resource-status.html) lists every lesson, including legacy and missing decks.
@@ -105,7 +105,7 @@ The Teaching sequence page uses dist/teaching-planner-data.js for 256 allocated 
 
 ## Lesson slides
 
-There are 84 existing eight-slide decks: Unit 1 Weeks 1–16 and Unit 2 Weeks 1–5. The availability register distinguishes current lesson resources from legacy project decks. Each planner lesson links to browser presentation, editable PowerPoint and teacher notes. Shared content lives in the slide-source/unit*-week*.json files; see slide-source/README.md for editing and regeneration. Run node scripts/build-slide-web.mjs after content changes; PowerPoint regeneration is separate. Later lesson buttons appear only when files exist.
+There are 84 existing eight-slide decks: Unit 1 Weeks 1–16 and Unit 2 Weeks 1–5. The availability register distinguishes current lesson resources from missing decks. Earlier console project presentations are kept in a separate archive. Each planner lesson links to browser presentation, editable PowerPoint and teacher notes. Shared content lives in the slide-source/unit*-week*.json files; see slide-source/README.md for editing and regeneration. Run node scripts/build-slide-web.mjs after content changes; PowerPoint regeneration is separate. Later lesson buttons appear only when files exist.
 
 
 

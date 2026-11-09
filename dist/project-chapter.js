@@ -39,7 +39,7 @@ chapters.push({
     ],
     [
       "Project pack and checkpoints",
-      "<p><a class=\"button\" href=\"project-brief.md\" download>Current game brief</a><a class=\"button secondary\" href=\"project-workbook.md\" download>Aligned project workbook</a><a class=\"button secondary\" href=\"project-pack.zip\" download>All five theme starters and teaching pack</a></p><p><a href=\"project-milestones.csv\" download>Workshop milestone CSV</a> · <a href=\"project-teacher-guide.md\" download>Teacher delivery notes</a> · <a href=\"legacy-projects/index.html\">Optional legacy console practice</a></p><p>Current workshop cards use this workbook and game contract. Old console-project slides are labelled legacy and are not linked as the current project presentation; replacement project slides belong to A06.</p>"
+      "<p><a class=\"button\" href=\"project-brief.md\" download>Current game brief</a><a class=\"button secondary\" href=\"project-workbook.md\" download>Aligned project workbook</a><a class=\"button secondary\" href=\"project-pack.zip\" download>All five theme starters and teaching pack</a></p><p><a href=\"project-milestones.csv\" download>Workshop milestone CSV</a> · <a href=\"project-teacher-guide.md\" download>Teacher delivery notes</a> · <a href=\"legacy-projects/index.html\">Optional legacy console practice</a></p><p>Current workshop cards use this workbook and game contract. Use the planner for current game presentations where supplied. Earlier console decks are archived separately; remaining Year 12 project presentations belong to A06.</p>"
     ]
   ],
   "practice": [
