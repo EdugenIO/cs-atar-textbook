@@ -862,7 +862,7 @@
         "kind": "file",
         "url": "../project-teacher-guide.md",
         "label": "project-teacher-guide.md",
-        "sha256": "11b55522a741da2c88cea9545a58d9291cabd3f4d765b27725c2209c554b0a68",
+        "sha256": "aefbeb165d68b3b44008f8714d5af5479c3fbb452620c6930f1d4efe6560b7df",
         "excerpt": "# Year 11 Pygame project · teacher delivery notes A01 alignment, 30 October 2026. Use 10 workshops with phase allocation: 1 investigate, 1 design, 5 build, 2 test/acceptance, 1 eva"
       },
       "otherTeaching": [
@@ -965,7 +965,7 @@
         "kind": "file",
         "url": "../project-teacher-guide.md",
         "label": "project-teacher-guide.md",
-        "sha256": "11b55522a741da2c88cea9545a58d9291cabd3f4d765b27725c2209c554b0a68",
+        "sha256": "aefbeb165d68b3b44008f8714d5af5479c3fbb452620c6930f1d4efe6560b7df",
         "excerpt": "# Year 11 Pygame project · teacher delivery notes A01 alignment, 30 October 2026. Use 10 workshops with phase allocation: 1 investigate, 1 design, 5 build, 2 test/acceptance, 1 eva"
       },
       "otherTeaching": [
@@ -1084,7 +1084,7 @@
         "kind": "file",
         "url": "../project-teacher-guide.md",
         "label": "project-teacher-guide.md",
-        "sha256": "11b55522a741da2c88cea9545a58d9291cabd3f4d765b27725c2209c554b0a68",
+        "sha256": "aefbeb165d68b3b44008f8714d5af5479c3fbb452620c6930f1d4efe6560b7df",
         "excerpt": "# Year 11 Pygame project · teacher delivery notes A01 alignment, 30 October 2026. Use 10 workshops with phase allocation: 1 investigate, 1 design, 5 build, 2 test/acceptance, 1 eva"
       },
       "otherTeaching": [
@@ -1203,7 +1203,7 @@
         "kind": "file",
         "url": "../project-teacher-guide.md",
         "label": "project-teacher-guide.md",
-        "sha256": "11b55522a741da2c88cea9545a58d9291cabd3f4d765b27725c2209c554b0a68",
+        "sha256": "aefbeb165d68b3b44008f8714d5af5479c3fbb452620c6930f1d4efe6560b7df",
         "excerpt": "# Year 11 Pygame project · teacher delivery notes A01 alignment, 30 October 2026. Use 10 workshops with phase allocation: 1 investigate, 1 design, 5 build, 2 test/acceptance, 1 eva"
       },
       "otherTeaching": [
@@ -3904,7 +3904,7 @@
         "kind": "file",
         "url": "../unit3-project-teacher-guide.md",
         "label": "unit3-project-teacher-guide.md",
-        "sha256": "df99ecfb97c2c2eab70fb227141188f1f636ae78f2aa42213987e6b876eed1f6",
+        "sha256": "d1ee91cd7278a12d045f069dc4d654afb1d33477845fe4aa6d34ac4f24156446",
         "excerpt": "# Year 12 Pygame project · teacher delivery notes A01 alignment, 30 October 2026. Use 12 workshops with phase allocation: 1 investigate, 2 design, 6 build/integrate, 2 test/accepta"
       },
       "otherTeaching": [
@@ -3926,7 +3926,7 @@
           "kind": "section",
           "url": "../#unit3-project/heading-worked-gantt-schedule-and-dependencies",
           "label": "Worked Gantt schedule and dependencies",
-          "sha256": "3b3da847859d4daa17301fb9501c36ff9b0d7e2ce318b04a11e308f2dee4eafc",
+          "sha256": "1148f92884316c17c0a3ec89220d60dc94bebf6ba268d6ef274a3b7ea662120b",
           "excerpt": "Current game brief Aligned project workbook All five theme starters and teaching pack Workshop milestone CSV · Teacher delivery notes · Optional legacy console practice Current wor"
         }
       ],
