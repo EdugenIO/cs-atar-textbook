@@ -5,3 +5,5 @@
 
 .legacy-project-notice { padding: 1rem; margin: 1rem; border: 2px solid #785c16; background: #fff5d8; color: #30260f; font: 1rem/1.5 sans-serif; }
 .legacy-project-notice a { color: inherit; text-decoration: underline; }
+
+.notes,.sql-primary-handoff{overflow-wrap:anywhere}
