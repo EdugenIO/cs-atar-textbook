@@ -21,7 +21,7 @@ A free, open textbook for WA Computer Science ATAR Units 1–4, using Python and
 This is a learning resource: the website does not grade, collect submissions or track students. Revision and exam-style questions are optional practice. The book is independent and does not imply SCSA or Department endorsement.
 
 <!-- current-resource-counts -->
-50 chapters · 191 glossary terms · 256 lesson allocations · 84 existing slide decks. 84 allocated lessons have current slide files; 12 project slots need replacement decks; 160 other slots have no supplied deck.
+50 chapters · 191 glossary terms · 256 lesson allocations · 88 existing slide decks. 88 allocated lessons have current slide files; 12 project slots need replacement decks; 156 other slots have no supplied deck.
 <!-- /current-resource-counts -->
 
 [Current slide availability](https://edugenio.github.io/cs-atar-textbook/resource-status.html) lists every lesson, including legacy and missing decks.
@@ -105,7 +105,7 @@ The Teaching sequence page uses dist/teaching-planner-data.js for 256 allocated 
 
 ## Lesson slides
 
-There are 84 existing eight-slide decks: Unit 1 Weeks 1–16 and Unit 2 Weeks 1–5. The availability register distinguishes current lesson resources from missing decks. Earlier console project presentations are kept in a separate archive. Each planner lesson links to browser presentation, editable PowerPoint and teacher notes. Shared content lives in the slide-source/unit*-week*.json files; see slide-source/README.md for editing and regeneration. Run node scripts/build-slide-web.mjs after content changes; PowerPoint regeneration is separate. Later lesson buttons appear only when files exist.
+There are 88 existing eight-slide decks: Unit 1 Weeks 1–16, Unit 2 Weeks 1–5 and Unit 3 Week 1. The availability register distinguishes current lesson resources from missing decks. Earlier console project presentations are kept in a separate archive. Each planner lesson links to browser presentation, editable PowerPoint and teacher notes. Shared content lives in the slide-source/unit*-week*.json files; see slide-source/README.md for editing and regeneration. Run node scripts/build-slide-web.mjs after content changes; PowerPoint regeneration is separate. Later lesson buttons appear only when files exist.
 
 
 
@@ -230,3 +230,6 @@ Both focused pages use `scripts/focused-lesson-page.mjs` and `dist/lessons/focus
 
 
 S06 attempt modes are authored in `teaching-source/attempt-modes.json` and applied by `build-lesson-checks.py`. The three Unit 1 routes distinguish a school-issued theory task from timed formative practice. Week 16 closes the original attempt before Q3/Q9 feedback; retain actual timing, exposure and support using `unit1-practice-record.md`. The public paper is not secure assessment evidence. Suggested timings remain untrialled. Rebuild lesson routes and slide web pages after edits; run `tests/attempt-modes.test.py`.
+
+
+S07 first batch: `slide-source/unit3-week1.json` authors four Year 12 2027 re-entry lessons. Companion source is `teaching-source/unit3-week1-practice/`; rebuild with `python scripts/build-unit3-week1-practice.py`, then the slide web, lesson routes and resource/offline builders. The Week 1 bundle includes all four editable decks, the separate workbook/key/recovery files and existing Pygame pack. Preserve original diagnostic responses before feedback. Suggested timings and independent teacher moderation remain pending. Run `tests/unit3-week1-slides.test.py` for code, actual separate restore/retest, resource and bundle checks. S07 remains in progress; 124 Year 12 lesson decks are still unbuilt.

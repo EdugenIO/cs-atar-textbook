@@ -1,0 +1,2 @@
+Version 1: inclusive minimum 5. Fictional teaching baseline.
+Record your actual test outcome and snapshot location; no student result is supplied.

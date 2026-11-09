@@ -1,6 +1,6 @@
 # Lesson slide source
 
-[Current slide availability](https://edugenio.github.io/cs-atar-textbook/resource-status.html) distinguishes 84 current lesson decks, 12 Year 12 project replacement slots and 160 other missing slots. The 84 indexed files now include ten aligned Year 11 Pygame workshop decks. Ten older console decks remain in the separate archive.
+[Current slide availability](https://edugenio.github.io/cs-atar-textbook/resource-status.html) distinguishes 88 current lesson decks, 12 Year 12 project replacement slots and 156 other missing slots. The 88 indexed files now include ten aligned Year 11 Pygame workshop decks. Ten older console decks remain in the separate archive.
 
 Existing files (including retained legacy project material): all 64 Unit 1 lessons across Weeks 1–16, plus twenty Unit 2 lessons across Weeks 1–5. Each lesson has eight slides and a suggested 55-minute sequence. Adapt timings to local classes.
 
@@ -41,3 +41,5 @@ S03 update, 9 November 2026: all ten archived console PowerPoints carry a visibl
 S04 update, 9 November 2026: Unit 2 Week 5 Lesson 4 checks core Q2a/Q3 before optional Q2b/Q4. The core exit uses ungrouped aggregates; grouped summaries and four-table independent transfer are supporting extensions for this lesson. The Year 11 syllabus does not set a maximum join count. Core readiness, local assessment scope and suggested timing still require teacher judgement.
 
 S05 update, 9 November 2026: Unit 2 Weeks 4–5 use shared sqlHandoff metadata from teaching-source/sql-handoffs.json. Each deck cover names its primary file/task and links to setup/workbook/key; every speaker note includes exact fields and references. Browser covers, teacher notes and lesson routes use the same contract. Pathway base/changed tasks and Member/Loan print activities remain teacher-selected alternatives, not interchangeable fixtures. Rebuild decks and bundles when metadata changes.
+
+S07 first batch: Unit 3 Week 1 now has four eight-slide 2027 lessons, a companion workbook/key and executable recovery seed. [Download the four decks and practical resources](https://edugenio.github.io/cs-atar-textbook/slides/unit3-week1-lesson-slides.zip). Year 12 authoring remains in progress; later decks are not yet supplied.

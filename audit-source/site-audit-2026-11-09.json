@@ -122,7 +122,8 @@
       "action": "Use the current 2027 lesson routes: Unit 3 Python retrieval/Pygame bridge, structures, algorithms, OOP, project, reliability, networks, review; Unit 4 design, SQL, data cleaning/constraints, project, security/cryptography/ethics and review. Agree which year is taught first, then author small reviewed batches in actual lesson order.",
       "completeWhen": "Each released batch includes editable PPTX, browser view, notes, exact practical resources, an unaided check and a matching allocation. Do not describe 128 unbuilt decks as completed.",
       "owner": "Teaching/slide author",
-      "status": "Open"
+      "status": "In progress",
+      "progress": "Unit 3 Week 1: four editable eight-slide decks with matching browser view, teacher notes, companion workbook/key and runnable recovery seed. All 32 slides visually inspected; actual practical cases checked. Remaining Year 12 decks are not yet authored. Classroom timing and independent moderation pending."
     },
     {
       "id": "S08",

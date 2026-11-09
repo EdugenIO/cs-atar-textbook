@@ -4,10 +4,10 @@
     "chapters": 50,
     "glossaryTerms": 191,
     "lessonSlots": 256,
-    "slideFiles": 84,
-    "currentSlideSlots": 84,
+    "slideFiles": 88,
+    "currentSlideSlots": 88,
     "replacementSlots": 12,
-    "missingSlideSlots": 160
+    "missingSlideSlots": 156
   },
   "lessons": [
     {
@@ -609,7 +609,7 @@
       "unit": 1,
       "week": 14,
       "lesson": 3,
-      "title": "Assess: teacher-selected theory questions under suitable conditions",
+      "title": "School-issued theory task and conditions",
       "status": "Available",
       "legacy": false,
       "files": true,
@@ -675,7 +675,7 @@
       "unit": 1,
       "week": 16,
       "lesson": 1,
-      "title": "Reading and first paper attempt",
+      "title": "Questions-only timed practice: first session",
       "status": "Available",
       "legacy": false,
       "files": true,
@@ -686,7 +686,7 @@
       "unit": 1,
       "week": 16,
       "lesson": 2,
-      "title": "Finish the attempt, then self-mark with explanations",
+      "title": "Finish and preserve the attempt, then review",
       "status": "Available",
       "legacy": false,
       "files": true,
@@ -928,7 +928,7 @@
       "unit": 2,
       "week": 5,
       "lesson": 4,
-      "title": "Independent joined/category reports and feedback",
+      "title": "Core SQL reports and optional extensions",
       "status": "Available",
       "legacy": false,
       "files": true,
@@ -1424,9 +1424,9 @@
       "week": 1,
       "lesson": 1,
       "title": "Independent diagnostic, item-level feedback and count trace",
-      "status": "Not yet supplied",
+      "status": "Available",
       "legacy": false,
-      "files": false,
+      "files": true,
       "route": "lessons/#u3-l1"
     },
     {
@@ -1435,9 +1435,9 @@
       "week": 1,
       "lesson": 2,
       "title": "Repair Python skills through a Pygame loop",
-      "status": "Not yet supplied",
+      "status": "Available",
       "legacy": false,
-      "files": false,
+      "files": true,
       "route": "lessons/#u3-l2"
     },
     {
@@ -1446,9 +1446,9 @@
       "week": 1,
       "lesson": 3,
       "title": "Linear/iterative comparison, requirement change and transfer test",
-      "status": "Not yet supplied",
+      "status": "Available",
       "legacy": false,
-      "files": false,
+      "files": true,
       "route": "lessons/#u3-l3"
     },
     {
@@ -1457,9 +1457,9 @@
       "week": 1,
       "lesson": 4,
       "title": "Version record, separate restore/retest and exit explanation",
-      "status": "Not yet supplied",
+      "status": "Available",
       "legacy": false,
-      "files": false,
+      "files": true,
       "route": "lessons/#u3-l4"
     },
     {

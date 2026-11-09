@@ -1825,6 +1825,21 @@
         "type": "reading"
       },
       {
+        "label": "Unit 3 Week 1 · student workbook and independent checks",
+        "href": "../slides/practice/u3-week1/student-workbook.md",
+        "type": "activity"
+      },
+      {
+        "label": "Unit 3 Week 1 · practical files and recovery seed",
+        "href": "../slides/practice/u3-week1/unit3-week1-practice.zip",
+        "type": "download"
+      },
+      {
+        "label": "Unit 3 Week 1 · separate public teacher guidance",
+        "href": "../slides/practice/u3-week1/teacher-key.md",
+        "type": "teacher"
+      },
+      {
         "label": "Teacher planning · curriculum, prerequisites, pacing and alternatives",
         "href": "../teachers/#topic-unit3-fluency",
         "type": "teacher"

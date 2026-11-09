@@ -1,0 +1,402 @@
+{
+  "unit": 3,
+  "week": 1,
+  "chapter": "unit3-fluency",
+  "licence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "source": "https://edugenio.github.io/cs-atar-textbook/#unit3-fluency",
+  "references": [
+    "https://docs.python.org/3/tutorial/controlflow.html",
+    "https://docs.python.org/3/tutorial/errors.html",
+    "https://www.pygame.org/docs/ref/event.html",
+    "https://www.pygame.org/docs/ref/time.html"
+  ],
+  "teachingEdition": "2027",
+  "lessons": [
+    {
+      "id": "u3-w01-l01",
+      "lesson": 1,
+      "title": "Python diagnosis and targeted repair",
+      "chapter": "unit3-fluency",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#unit3-fluency",
+      "prepare": "Use the Unit 3 Week 1 student workbook and separate public teacher key at slides/practice/u3-week1/. Download the companion ZIP; extract before running. Python 3; Lesson 2 additionally uses the existing pygame/pygame-teaching-pack.zip and its pinned requirements. Read the unit3-fluency chapter and foundations workbook. Use fictional values and disposable history files only. No extra assessment or homework. Suggested 55-minute plans are untrialled; select one repair rather than completing every extension.",
+      "practicePack": "slides/practice/u3-week1/",
+      "slides": [
+        {
+          "title": "Python diagnosis and targeted repair",
+          "body": [
+            "Unit 3 · Week 1 · Lesson 1",
+            "Trace first, then choose one skill to repair."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "2027 teaching edition; retrieval of Year 11 prerequisites, not a new assessment. Keep diagnostic responses separate from later corrections. All resources and keys are public; record prior exposure."
+        },
+        {
+          "title": "An independent starting point",
+          "body": [
+            "Predict the result for [3, 5, 8] and [].",
+            "Explain the boundary and one possible fault."
+          ],
+          "minutes": 10,
+          "strategy": "Independent diagnostic",
+          "notes": "Use workbook D1–D4 without running code or opening the key. D1 uses this code; D2 checks a returned result, D3 classifies three faults, D4 selects boundary/empty tests. Record unaided, supported or previously seen. Stop and preserve responses before the next slide. Do not infer a grade from this short sample.",
+          "code": "def count_ready(values):\n    count = 0\n    for value in values:\n        if value >= 5:\n            count += 1\n    return count"
+        },
+        {
+          "title": "Feedback after the diagnostic",
+          "body": [
+            "The counts are 2 and 0.",
+            "The value 5 belongs in the count.",
+            "Keep corrections beside the original responses."
+          ],
+          "minutes": 8,
+          "strategy": "Item-level feedback",
+          "notes": "Only reveal after original work is preserved. D2 returns 2 while caller count remains 10. D3 missing colon: SyntaxError; int(\"two\"): ValueError at runtime; >5 in an inclusive rule: logic fault. An empty list does not execute the loop. Ask students to explain a mismatch before giving the next step; use teacher key D1–D4."
+        },
+        {
+          "title": "A count changes at the condition",
+          "body": [
+            "Trace the running count after each value.",
+            "Explain why initialisation is outside the loop."
+          ],
+          "minutes": 10,
+          "strategy": "Worked example with prediction pauses",
+          "notes": "Trace [4,5,7]: start0; after4=0, after5=1, after7=2. Hide the final row until students predict it. Resetting count inside the loop loses earlier matches. Connect to the allocated exit check. Use a paper trace if Python is unavailable.",
+          "code": "values = [4, 5, 7]\ncount = 0\nfor value in values:\n    if value >= 5:\n        count += 1\nprint(count)"
+        },
+        {
+          "title": "One repair, with less support",
+          "body": [
+            "Choose boundary, return value or error diagnosis.",
+            "Predict, run, explain, then change one input.",
+            "A partner asks for reasons before offering a fix."
+          ],
+          "minutes": 10,
+          "strategy": "Faded support and peer explanation",
+          "notes": "Use workbook R1/R2/R3; choose the weakest diagnostic item, not all three. R1 remove the suggested predicate; R2 repair a missing return; R3 isolate a runtime conversion from a logic comparison. Retain expected/actual and smallest failing example. Secure students may compare local rebinding with list mutation using foundations workbook D; this is optional."
+        },
+        {
+          "title": "A changed unaided check",
+          "body": [
+            "Count values >= 6 in [6, 2, 9, 6].",
+            "Also predict the empty-list result.",
+            "Close the worked trace and explain your rule."
+          ],
+          "minutes": 8,
+          "strategy": "Independent transfer",
+          "notes": "Fresh values and threshold: expected3 and0. Ask students to write or trace a function without the model; record any help. An immediate retry is formative evidence, not proof of lasting mastery. If boundary fails, compare >= and > using exactly6 before another changed retry."
+        },
+        {
+          "title": "Evidence for the next repair",
+          "body": [
+            "Compare original, correction and changed retry.",
+            "Name the first incorrect step and its cause."
+          ],
+          "minutes": 5,
+          "strategy": "Error analysis",
+          "notes": "Use workbook record: item, expected, actual, explanation, help, next step. Avoid only writing careless mistake. Group students for Lesson2 by observed needs. A student with no previous Pygame experience starts with stage1 and teacher modelling; do not assume prior use."
+        },
+        {
+          "title": "Exit: count and empty input",
+          "body": [
+            "Trace values >= 5 in [4, 5, 7], then [].",
+            "Explain where the counter is initialised."
+          ],
+          "minutes": 2,
+          "strategy": "Exit ticket",
+          "notes": "Allocated check u3-l1:2 and0; initialise before iteration; include exact boundary. Collect an unaided explanation. Revisit a changed count during later retrieval within existing lessons; no added homework."
+        }
+      ]
+    },
+    {
+      "id": "u3-w01-l02",
+      "lesson": 2,
+      "title": "Pygame re-entry and one focused repair",
+      "chapter": "unit3-fluency",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#unit3-fluency",
+      "prepare": "Use the Unit 3 Week 1 student workbook and separate public teacher key at slides/practice/u3-week1/. Download the companion ZIP; extract before running. Python 3; Lesson 2 additionally uses the existing pygame/pygame-teaching-pack.zip and its pinned requirements. Read the unit3-fluency chapter and foundations workbook. Use fictional values and disposable history files only. No extra assessment or homework. Suggested 55-minute plans are untrialled; select one repair rather than completing every extension.",
+      "practicePack": "slides/practice/u3-week1/",
+      "slides": [
+        {
+          "title": "Pygame re-entry and one focused repair",
+          "body": [
+            "Unit 3 · Week 1 · Lesson 2",
+            "Retrieve Python skills through the existing lab.",
+            "Record experience; choose one repair target."
+          ],
+          "minutes": 5,
+          "strategy": "Retrieval and readiness check",
+          "notes": "Use existing y12-1 bridge: stages1–4 are a rapid re-entry menu, not four full labs to finish today. Match the existing 5/10/15/15/5/5 phase budget. Ask about prior Pygame use. Newcomers start with stage1; secure learners inspect function/list/history evidence. Use paper tracing provisionally if install fails, then schedule actual execution in existing support time."
+        },
+        {
+          "title": "One frame, in the supplied runner",
+          "body": [
+            "Run stage1_loop.py, then lab_runner.py 2.",
+            "Trace events, held keys, update and draw.",
+            "Predict before moving or pausing the player."
+          ],
+          "minutes": 10,
+          "strategy": "Teacher modelling and predict–run–investigate",
+          "notes": "Extract the existing Pygame pack together in a writable folder. Install its requirements using school-approved procedures. Stage1 is the smallest window/movement loop. Stage2 connects new_state(), command() and update(). The supplied dictionary is infrastructure; do not start classes or the Year12 project. Events are discrete messages; held-key state is sampled after processing events. X/Escape quit. Sources: https://www.pygame.org/docs/ref/event.html and https://www.pygame.org/docs/ref/time.html"
+        },
+        {
+          "title": "Milliseconds become movement",
+          "body": [
+            "Predict the displacement before running.",
+            "200 pixels/second × 250 ms / 1000 = 50 pixels."
+          ],
+          "minutes": 8,
+          "strategy": "Worked numerical trace",
+          "notes": "Use lab_rules.SPEED=200. Fresh worked state starts x308, ready, remaining20000. command(state,\"space\") then update(state,1,250,collect=False) gives x358 and19750ms. This direct rule call is a test after the start transition, not the runner transition frame. Compare with the runner, which discards elapsed time on start/pause/resume/reset frames. Do not confuse pixels/frame with pixels/second.",
+          "code": "displacement = direction * SPEED * dt_ms / 1000\n# direction=1, SPEED=200, dt_ms=250\n# displacement=50 pixels"
+        },
+        {
+          "title": "Pairs explain a fault before editing",
+          "body": [
+            "Syntax: a missing colon.",
+            "Runtime: int(\"two\").",
+            "Logic: using milliseconds as seconds."
+          ],
+          "minutes": 7,
+          "strategy": "Paired debugging and teach-back",
+          "notes": "Use copies or the workbook snippets; leave the known-good lab untouched. Predictor names expected behaviour; driver reproduces and changes one cause, then swap. Missing colon prevents parsing; ValueError occurs when conversion executes; removing /1000 gives wrong displacement without necessarily raising an exception. Some wrong units may clamp x at the boundary and hide the original error. Inspect raw displacement as well as screen output."
+        },
+        {
+          "title": "A small rule with faded support",
+          "body": [
+            "In a copy, complete movement/time in update().",
+            "Use direction 1, 250 ms and collect=False.",
+            "Preserve bounds, timeout and paused behaviour."
+          ],
+          "minutes": 10,
+          "strategy": "Faded practice",
+          "notes": "Use faded_practice.py:160pixels/second, x40, remaining15000. Complete only the teacher-selected movement/time branch, not every TODO. Set a fresh state to playing for the rule test. With collect=False expect x80,14750ms. Validate direction/dt and return unchanged unless playing. Timeout before movement/collection; bound0..616. The full graphical runner still has worked two-station display assumptions: do not claim the changed three-station game is integrated. Newcomers can complete the smaller worksheet predicate with teacher support then take a changed unaided trace."
+        },
+        {
+          "title": "A fresh explanation without the model",
+          "body": [
+            "Predict 500 ms movement at 160 pixels/second.",
+            "Explain paused time and reset after a long gap."
+          ],
+          "minutes": 5,
+          "strategy": "Independent transfer",
+          "notes": "Hide the worked calculation and close the key. New fresh state, playing,collect=False: x120 and14500ms;80pixels displacement. For paused calls update returns unchanged; runner pause/resume/reset events discard that frame delta. R creates ready state, x308 in worked lab or40 in faded, fresh active flags and full duration. Teacher checks one changed case rather than assigning all stages."
+        },
+        {
+          "title": "Targeted list or file inspection",
+          "body": [
+            "Choose one: collect-once flags or valid history.",
+            "Predict, run and record expected versus actual."
+          ],
+          "minutes": 5,
+          "strategy": "Differentiated retrieval",
+          "notes": "Use stage3/4 only as the selected repair. Stage3: repeated contact with inactive station adds no score; do not remove entries during traversal. Stage4: temporary history 0,2,bad,3 accepts0/2 and warns twice; missing/empty valid. Save only after finished, append once, mark saved after success. Use disposable paths. If time is needed for beginner repair, keep this as teacher demonstration and record follow-up rather than inventing extra time."
+        },
+        {
+          "title": "Exit: events, held keys and elapsed time",
+          "body": [
+            "Explain a key event versus held-key state.",
+            "Verify pause/reset after a long elapsed interval."
+          ],
+          "minutes": 5,
+          "strategy": "Exit explanation and readiness record",
+          "notes": "Allocated u3-l2 check. Demonstrate actual run where available and record exact case in practice-tests.csv/readiness.csv. Paused gameplay unchanged; reset fresh under lab rules; transition frame ignored. If frames are treated as seconds, trace dt_ms explicitly. This is a diagnostic bridge, not evidence that the whole project is ready."
+        }
+      ],
+      "pygameBridge": "pygame/index.html#y12-1"
+    },
+    {
+      "id": "u3-w01-l03",
+      "lesson": 3,
+      "title": "Requirement changes and regression tests",
+      "chapter": "unit3-fluency",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#unit3-fluency",
+      "prepare": "Use the Unit 3 Week 1 student workbook and separate public teacher key at slides/practice/u3-week1/. Download the companion ZIP; extract before running. Python 3; Lesson 2 additionally uses the existing pygame/pygame-teaching-pack.zip and its pinned requirements. Read the unit3-fluency chapter and foundations workbook. Use fictional values and disposable history files only. No extra assessment or homework. Suggested 55-minute plans are untrialled; select one repair rather than completing every extension.",
+      "practicePack": "slides/practice/u3-week1/",
+      "slides": [
+        {
+          "title": "Requirement changes and regression tests",
+          "body": [
+            "Unit 3 · Week 1 · Lesson 3",
+            "Revise a rule and justify the tests to rerun."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Retain existing lesson scope: linear/iterative comparison, requirement change and transfer test. Consolidate syntax/runtime/logic diagnosis while revising a small Python rule. No new assessment or project features."
+        },
+        {
+          "title": "Retrieval: three kinds of fault",
+          "body": [
+            "Classify a missing colon and int(\"two\").",
+            "A rule uses > 5 when the boundary is inclusive.",
+            "Give evidence for each classification."
+          ],
+          "minutes": 5,
+          "strategy": "Closed-note retrieval",
+          "notes": "Ask for predictions first. SyntaxError at parsing; ValueError when executed; logic fault produces wrong result. Use fresh small examples if these have already been seen. Students identify stage, cause and minimal failing input; avoid equating all exceptions with syntax errors."
+        },
+        {
+          "title": "Two ways to organise development",
+          "body": [
+            "Linear: plan successive stages and their hand-offs.",
+            "Iterative: build, test, review and revise a version.",
+            "Both need requirements, records and testing."
+          ],
+          "minutes": 8,
+          "strategy": "Explicit comparison and discussion",
+          "notes": "Explain investigate/analyse/design/develop/implement/evaluate in the chapter’s terms. A linear process can authorise a documented return when requirements change; it is not incapable of change. Iteration still needs a plan and acceptance criteria. Ask pairs which approach suits stable versus evolving rules, and what the cost of rework is. Do not claim one process is universally best."
+        },
+        {
+          "title": "The changed requirement is precise",
+          "body": [
+            "Old rule: count values >= 5.",
+            "New rule: count values >= 6.",
+            "For [5, 6, 7], predict the new count."
+          ],
+          "minutes": 10,
+          "strategy": "Worked requirement-to-test model",
+          "notes": "Record change C01,reason,boundary and affected predicate. Old expected3; new expected2. Update requirement/design/implementation/test expectations together. Show the parameterised function in the workbook after predictions. A syntax fault, runtime conversion or wrong > predicate needs different evidence, not random edits."
+        },
+        {
+          "title": "Guided repair and regression",
+          "body": [
+            "Test below, at and above the new threshold.",
+            "Retest empty and duplicate values.",
+            "Record expected, actual and version."
+          ],
+          "minutes": 10,
+          "strategy": "Guided test design",
+          "notes": "Use workbook C01. For threshold6: [5]=0,[6]=1,[7]=1,[]=0,[6,6]=2. Recheck threshold5 call [4,5,7]=2 in parameterised function: previously valid behaviour remains supported. If restoring old logic simply to pass old expectations, distinguish changed requirements from regression. Teacher models one test then fades the remaining expected column."
+        },
+        {
+          "title": "A fresh requirement, independently",
+          "body": [
+            "Change the minimum to 8.",
+            "Write tests before changing or running the code.",
+            "Explain one retained regression case."
+          ],
+          "minutes": 12,
+          "strategy": "Independent transfer and optional extension",
+          "notes": "Close model. [7,8,9,8]=>3,[]=0,[8,8]=>2. Write count_at_least(values,minimum), then run checks, record help and retain original attempt. Optional secure-learner extension: specify a policy for nonnumeric input and justify where validation belongs; do not silently add it to common requirements."
+        },
+        {
+          "title": "Peer moderation of the explanation",
+          "body": [
+            "Check the boundary, not just the final total.",
+            "Explain how the chosen process handles C01."
+          ],
+          "minutes": 5,
+          "strategy": "Peer critique",
+          "notes": "Use key only after preserving the independent solution. Partner asks which evidence establishes the boundary and which case protects unchanged behaviour. Explain iterative revisit of design/build/test and controlled linear return with updated documents. A passing sample is not proof of absence of faults."
+        },
+        {
+          "title": "Exit: a client changes the threshold",
+          "body": [
+            "Compare linear and iterative responses.",
+            "Give a regression case and its expected result."
+          ],
+          "minutes": 3,
+          "strategy": "Exit ticket",
+          "notes": "Allocated u3-l3. Expected: iteration revisits design/build/test; linear may need a controlled return; retest previously valid behaviour. If iterative is described as no planning, ask for documented revision and acceptance criteria. Record an unresolved fault for later retrieval."
+        }
+      ]
+    },
+    {
+      "id": "u3-w01-l04",
+      "lesson": 4,
+      "title": "Versions, restoration and retesting",
+      "chapter": "unit3-fluency",
+      "source": "https://edugenio.github.io/cs-atar-textbook/#unit3-fluency",
+      "prepare": "Use the Unit 3 Week 1 student workbook and separate public teacher key at slides/practice/u3-week1/. Download the companion ZIP; extract before running. Python 3; Lesson 2 additionally uses the existing pygame/pygame-teaching-pack.zip and its pinned requirements. Read the unit3-fluency chapter and foundations workbook. Use fictional values and disposable history files only. No extra assessment or homework. Suggested 55-minute plans are untrialled; select one repair rather than completing every extension.",
+      "practicePack": "slides/practice/u3-week1/",
+      "slides": [
+        {
+          "title": "Versions, restoration and retesting",
+          "body": [
+            "Unit 3 · Week 1 · Lesson 4",
+            "Restore an earlier version without losing current work."
+          ],
+          "minutes": 2,
+          "strategy": "Learning intention",
+          "notes": "Use companion version exercise; all files are small fictional counter examples. This is hands-on recovery evidence, not a claim that a filename alone proves a backup. No Git account needed."
+        },
+        {
+          "title": "Retrieval: what is recovery evidence?",
+          "body": [
+            "A filename says v1. Does that prove restoration?",
+            "What would you run and record to check?"
+          ],
+          "minutes": 5,
+          "strategy": "Think–pair–share",
+          "notes": "Elicit contents/location/version/test evidence. A copied filename or screenshot alone cannot establish that runnable earlier code was restored. Discuss separate destination and preserving working-v2 before the model."
+        },
+        {
+          "title": "A known baseline and a changed working copy",
+          "body": [
+            "Run seed-v1/check.py before saving a snapshot.",
+            "Copy seed-v1 to snapshot-v1 and working-v2.",
+            "Change only the working copy to minimum 6."
+          ],
+          "minutes": 10,
+          "strategy": "Teacher model and prediction",
+          "notes": "Extract pack. seed-v1 contains rules.py,check.py,VERSION.txt. Run from that folder: python check.py prints source path,version1,expected2,actual2,PASS for[4,5,7]. Copy all three files to separate folders; leave snapshot-v1 unchanged. In working-v2 set MINIMUM=6,VERSION=2, expected=1 in check.py and VERSION.txt to2 with reason. Run current v2: expected1,actual1. Use school-approved file manager or shell; no destructive commands."
+        },
+        {
+          "title": "A usable version record",
+          "body": [
+            "Record version, purpose, paths and test result.",
+            "Keep planned and actual changes distinct.",
+            "Retain the unchanged snapshot of version 1."
+          ],
+          "minutes": 8,
+          "strategy": "Guided documentation",
+          "notes": "Use version-log.csv. Record actual date/time,changed files,why,expected/actual,working/snapshot path. A filename v1 with edited contents is not the preserved v1. Teacher models one honest record; never supply fabricated classroom results. Optional hash or version control can supplement, not replace, actual restore/run evidence."
+        },
+        {
+          "title": "Restore to a separate folder",
+          "body": [
+            "Copy snapshot-v1 into a new restored-v1 folder.",
+            "Run restored-v1/check.py from that folder.",
+            "Confirm the source path and version used."
+          ],
+          "minutes": 12,
+          "strategy": "Independent practical recovery",
+          "notes": "Close model. Students perform actual restoration, not a written plan. Do not overwrite working-v2. Restored v1 should report VERSION1,MINIMUM5,expected2,actual2,PASS. Check printed rules.__file__ points to restored-v1. If it points elsewhere investigate working directory/import path. If no computer available, plan on paper and mark actual restoration pending; it needs a later device check in existing support time."
+        },
+        {
+          "title": "Retest the preserved current version",
+          "body": [
+            "Run working-v2/check.py again.",
+            "Explain why v1 gives 2 while v2 gives 1.",
+            "Check that current files remain intact."
+          ],
+          "minutes": 8,
+          "strategy": "Regression check and explanation",
+          "notes": "Currentv2 threshold6 counts only7 from[4,5,7],so1; restoredv1threshold5 counts5and7,so2. A discrepancy must be investigated; do not edit the restored baseline to force a pass. Verify empty input0 for both and threshold boundary5(v1)/6(v2). Record separateactualresults and paths."
+        },
+        {
+          "title": "A partner checks the evidence",
+          "body": [
+            "Show the restored folder and actual test output.",
+            "Show the separate current version still working.",
+            "Identify one limit of this recovery test."
+          ],
+          "minutes": 7,
+          "strategy": "Peer audit and optional extension",
+          "notes": "Partner checks log against files/run evidence,not just filename. This verifies the small example,not backup of an entire device or project. Optional extension: copy a snapshot to an approved separate storage location and retest; avoid assuming same-disk copies protect against drive failure. No mandatory cloud account."
+        },
+        {
+          "title": "Exit: restore, run and identify",
+          "body": [
+            "Show the separately restored version.",
+            "Rerun a known test and identify its source path."
+          ],
+          "minutes": 3,
+          "strategy": "Practical exit demonstration",
+          "notes": "Allocated u3-l4: actual restoration and expected/reasoned result recorded; filename alone is insufficient. If working files overwritten, repeat safely into a separate destination with original preserved. Explain how documented versions support controlled returns in linear work and iterations. Use remaining issues to choose next retrieval."
+        }
+      ]
+    }
+  ]
+}
