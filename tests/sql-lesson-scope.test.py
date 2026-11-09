@@ -2,6 +2,9 @@
 from pathlib import Path
 import json,re,sqlite3,zipfile
 R=Path(__file__).resolve().parents[1]
+def same_text(packaged, path):
+ # Git checkouts may use CRLF on Windows; compare full text across platforms.
+ assert packaged.decode('utf-8').replace('\r\n','\n')==path.read_text(encoding='utf-8')
 lesson=json.loads((R/'slide-source/unit2-week5.json').read_text(encoding='utf-8'))['lessons'][3]
 assert sum(s['minutes'] for s in lesson['slides'])==55
 assert len(lesson['slides'])==8
@@ -23,10 +26,10 @@ brief=(R/'dist/database-project-brief.md').read_text(encoding='utf-8')
 assert 'not a core completion requirement' in brief and 'four-table' in brief
 with zipfile.ZipFile(R/'dist/database-project-pack.zip') as z:
  for name in ['database-project-workbook.md','database-project-answers.md','database-project-brief.md','database-project-reports.sql']:
-  assert z.read(name)==(R/'dist'/name).read_bytes()
+  same_text(z.read(name),R/'dist'/name)
 with zipfile.ZipFile(R/'dist/slides/unit2-week5-lesson-slides.zip') as z:
  assert z.read('u2-w05-l04.pptx')==(R/'dist/slides/u2-w05-l04.pptx').read_bytes()
  for name in ['database-project-workbook.md','database-project-answers.md','database-project-reports.sql']:
-  assert z.read('classroom-resources/'+name)==(R/'dist'/name).read_bytes()
+  same_text(z.read('classroom-resources/'+name),R/'dist'/name)
 assert 'Core: attempt, compare and retry' in (R/'dist/slides/notes/u2-w05-l04.html').read_text(encoding='utf-8')
 print('S04: eight-slide/55-minute scope, independent core join and all five aggregates, retained optional results and synchronised downloads passed.')
